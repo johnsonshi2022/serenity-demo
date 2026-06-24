@@ -1,0 +1,1390 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$WOLF 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$WOLF 历史推文</h1>
+      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>19</b></div>
+        <div class="stat-card"><span>历史推文</span><b>19</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-01-18</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-06-15</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 7</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 3</span><span class="chip blue">信念分层、仓位与时点 2</span><span class="chip blue">对手方 / 融资质量谱系 2</span><span class="chip blue">稀释 / ATM 日历否决项 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>已匹配 6 个 A 股链条映射；重点看业务环节和订单传导，不把概念相似当作直接竞争。代表项：中船特气、兴发集团、雅克科技、华特气体。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-06-15 11:21</span>
+          <span><span class="chip red">$LITE</span><span class="chip red">$SPCX</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">Yep, very stupid to be a bear.
+
+When Trump is doing everything to boost markets before Midterms. 
+
+On top, your $WOLF power semi basket should go brrr from 800 VDC acceleration.
+
+$LITE optical basket should go brrr from InP easing.  
+
+$SPCX successful IPO gives more appetite to risk on themes/IPOs (eg. Space sector).  ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yep, very stupid to be a bear.
+
+When Trump is doing everything to boost markets before Midterms. 
+
+On top, your $WOLF power semi basket should go brrr from 800 VDC acceleration.
+
+$LITE optical basket should go brrr from InP easing.  
+
+$SPCX successful IPO gives more appetite to risk on themes/IPOs (eg. Space sector).  
+
+And overall macro go brr from War/Strait peace deals.
+
+It’s already kind of showing, since 2026 rate hike odds also crashed from 65% -&gt; 35% following the news. Along with crude futures dropping. 
+
+I&#x27;ve actually found Europe to be the most price sensitive to Iran tensions, so EU markets would probably be the most bullish overall… 
+
+(South Korea/TW was originally with Sk Hynix moving directly in correlation to crude oil futures, but stopped caring after awhile).
+
+But basically: Murica go brrrr.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2066360345774764496" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是的，当一只熊真是太愚蠢了。
+
+当特朗普在中期选举前竭尽全力提振市场时。 
+
+最重要的是，您的 $WOLF 电源半篮应该从 800 VDC 加速到 brrr。
+
+$LITE 光学篮子应该会因 InP 宽松而消失。  
+
+$SPCX 成功的 IPO 增强了对主题/IPO（例如太空领域）的风险偏好。  
+
+战争/海峡和平协议的整体宏观经济前景良好。
+
+这已经表明了这一点，因为消息传出后，2026 年加息的可能性也从 65% 骤降至 35%。随着原油期货下跌。 
+
+实际上，我发现欧洲对伊朗紧张局势的价格最为敏感，因此欧盟市场总体上可能是最乐观的…… 
+
+（韩国/台湾最初与 Sk Hynix 直接与原油期货相关，但一段时间后不再关心）。
+
+但基本上：穆里卡去吧。</div>
+        <div class="tweet-foot">
+          <span>likes 1659 / retweets 110 / replies 221 / views 635364</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-06-12 00:13</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$MU</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">Markets should be cheering on domestic champions like $AAOI. 
+
+Since it&#x27;s ideal to support critical AI infra from laser fab to production in the US, rather than being a bear.
+
+Feels like everyone just outsources transceivers to Asia like Malaysia or Thailand...
+
+With $INTC, $IQE, $XFAB, $MU, $WOLF, $SOI, $SIVE, and oth...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Markets should be cheering on domestic champions like $AAOI. 
+
+Since it&#x27;s ideal to support critical AI infra from laser fab to production in the US, rather than being a bear.
+
+Feels like everyone just outsources transceivers to Asia like Malaysia or Thailand...
+
+With $INTC, $IQE, $XFAB, $MU, $WOLF, $SOI, $SIVE, and others... 
+
+If you haven&#x27;t noticed by now, they&#x27;re all critical to US supply chains. And every one of them are getting subsidies for securing Western supply chains. 
+
+Before a major trade was to short developing US/Western equities, then hedge with subsidized foreign ones. 
+
+As seen with the energy/solar firms that went bankrupt, this backfired a lot on US AI infrastructure years later with the power grid. 
+
+I wanted to help change this mindset, since I believe it&#x27;s very positive sum to invest in building up critical Western supply chains like photonics today. 
+
+Especially if $AAOI hits their $471m/month projections after reshoring their production to America. 
+
+Instead of hoping they fail and calling critical nodes in the supply chains memestocks/bubbles, maybe it&#x27;s good to change mindsets a bit so we don&#x27;t see a repeat of the US Solar sector years later. 
+
+US/EU don&#x27;t just hand out subsidies or CHIPS act grants to anyone.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2065105141238489398" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>市场应该为 $AAOI 这样的国内冠军企业欢呼。 
+
+因为它是支持从激光工厂到美国生产的关键人工智能基础设施的理想选择，而不是成为一只熊。
+
+感觉每个人都只是将收发器外包给马来西亚或泰国等亚洲......
+
+与 $INTC、$IQE、$XFAB、$MU、$WOLF、$SOI、$SIVE 等... 
+
+如果您现在还没有注意到，它们对美国供应链都至关重要。他们每个人都在获得补贴以确保西方供应链的安全。 
+
+之前的主要交易是做空美国/西方发展中国家股票，然后用受补贴的外国股票进行对冲。 
+
+正如破产的能源/太阳能公司所见，这对多年后的美国人工智能基础设施和电网产生了很大的反作用。 
+
+我想帮助改变这种心态，因为我相信投资建立当今光子学等关键的西方供应链是非常积极的。 
+
+特别是如果 $AAOI 在将生产转移到美国后达到每月 4.71 亿美元的预测。 
+
+与其寄希望于它们失败，并将供应链中的关键节点称为模因股/泡沫，不如稍微改变一下心态，这样我们就不会在几年后看到美国太阳能行业的重演。 
+
+美国/欧盟不只是向任何人提供补贴或 CHIPS 法案拨款。</div>
+        <div class="tweet-foot">
+          <span>likes 1669 / retweets 106 / replies 225 / views 687072</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-06-08 14:51</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$AMSC</span><span class="chip red">$AOSL</span><span class="chip red">$ASYS</span><span class="chip red">$BDC</span><span class="chip red">$CWR.L</span><span class="chip red">$ENPH</span><span class="chip red">$EOSE</span><span class="chip red">$FCEL</span><span class="chip red">$HYLN</span><span class="chip red">$IFNNY</span><span class="chip red">$IPWR</span><span class="chip red">$IQE.L</span><span class="chip red">$LFUS</span><span class="chip red">$NVTS</span><span class="chip red">$ON</span><span class="chip red">$PAY.BR</span><span class="chip red">$POET</span><span class="chip red">$POWI</span><span class="chip red">$RELL</span><span class="chip red">$SEDG</span><span class="chip red">$VICR</span><span class="chip red">$VSH</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">????
+
+大家都知道这只是个众包名单吧？
+
+300376怎么涨了20%啊哈哈 https://t.co/OdmqmIYB6V</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">????
+
+大家都知道这只是个众包名单吧？
+
+300376怎么涨了20%啊哈哈 https://t.co/OdmqmIYB6V</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2063876472419533110" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>????
+
+大家都知道这只是个众包名单吧？
+
+300376怎么涨了20%啊哈哈 https://t.co/OdmqmIYB6V</div>
+        <div class="tweet-foot">
+          <span>likes 485 / retweets 14 / replies 457 / views 343367</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-06-08 14:22</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$AMSC</span><span class="chip red">$AOSL</span><span class="chip red">$ASYS</span><span class="chip red">$BDC</span><span class="chip red">$CWR.L</span><span class="chip red">$ENPH</span><span class="chip red">$EOSE</span><span class="chip red">$FCEL</span><span class="chip red">$HYLN</span><span class="chip red">$IFNNY</span><span class="chip red">$IPWR</span><span class="chip red">$IQE.L</span><span class="chip red">$LFUS</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$ON</span><span class="chip red">$PAY.BR</span><span class="chip red">$POET</span><span class="chip red">$POWI</span><span class="chip red">$RELL</span><span class="chip red">$SEDG</span><span class="chip red">$VICR</span><span class="chip red">$VSH</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">Okay chat, here&#x27;s your compiled list chat of your favorite 800V DC related ideas. 
+
+1. $IFNNY - $115.8B 
+2. $ON - $46.2B
+3. Lite-On (2301) - $16.03B
+4. 6504.T - $14.1B 
+5. $VICR - $12.8B 
+6. $LFUS - $11.57B
+7. https://t.co/1unM4FPf65 - $8.34B 
+8. $VSH - $7.86B
+9. $ENPH - $7.36B 
+10. $NVTS - $5.77B 
+11. $POWI - $4.30B 
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Okay chat, here&#x27;s your compiled list chat of your favorite 800V DC related ideas. 
+
+1. $IFNNY - $115.8B 
+2. $ON - $46.2B
+3. Lite-On (2301) - $16.03B
+4. 6504.T - $14.1B 
+5. $VICR - $12.8B 
+6. $LFUS - $11.57B
+7. https://t.co/1unM4FPf65 - $8.34B 
+8. $VSH - $7.86B
+9. $ENPH - $7.36B 
+10. $NVTS - $5.77B 
+11. $POWI - $4.30B 
+12. $BDC - $4.18B 
+13. $EOSE - $3.86B 
+14. $SEDG - $3.82B 
+15. $AEHR - $3.1B
+16. 6890.T - $2.66B 
+17. $WOLF - $2.16B 
+18. $CWR.L - $1.75B 
+19. $AMSC - $1.68B 
+20. https://t.co/43OXU9tx65 - $1.68B 
+21. $XFAB - $1.54B 
+22. $AOSL - $1.25B 
+23. $HYLN - $1.23B 
+24. $FCEL - $835M 
+25. $IQE.L - $780M 
+26. $ASYS - $276M 
+27. $RELL - $239M 
+28. 6844.T - $222M 
+29. 4973.T - $207M 
+30. $PAY.BR - $189M 
+31. 6616.T - $186M 
+32. 6882.T - $124M 
+33. $IPWR - $96m
+
+Also included some adjacent ones you all mentioned like $FCEL or $EOSE anyway, tho idk it&#x27;s great exposure. Ignored the clearer irrelevant stuff like $POET that people mentioned tho. 
+
+There&#x27;s like 500 comments, but I guess X limits everything I can see. 
+
+We&#x27;ll see how your highest conviction ideas do.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2063869376542192013" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>好了，朋友们，这是你们喜欢的 800V DC 相关想法的汇总名单。
+
+后面列出的是相关公司/代码及大致市值，供大家继续研究。</div>
+        <div class="tweet-foot">
+          <span>likes 837 / retweets 110 / replies 266 / views 741879</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-05-28 00:35</span>
+          <span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$POWI</span><span class="chip red">$RPI</span><span class="chip red">$SOI</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">Bro media… how is $XFAB a meme stock? 
+
+Can you not repeat the same mistake with $RPI this time?
+
+They’re literally getting CHIPS ACT funding from the EU because of how critical they are. 
+
+And have $NVDA / $NOK evaluating their SiPH side of things, while they traded at a low ~1.28 P/B.
+
+This just reminded me of $SOI l...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Bro media… how is $XFAB a meme stock? 
+
+Can you not repeat the same mistake with $RPI this time?
+
+They’re literally getting CHIPS ACT funding from the EU because of how critical they are. 
+
+And have $NVDA / $NOK evaluating their SiPH side of things, while they traded at a low ~1.28 P/B.
+
+This just reminded me of $SOI low p/b but high growth verticals out of legacy segment drag.
+
+$XFAB was literally mentioned for CHIPS ACT 2 next week in the blueprints… Which focuses around photonics. 
+
+The main revenue ramp was around power semis with $NVDA pushing 800 vdc.
+
+So $NVTS, $POWI, $WOLF and everyone have been taking off recently.
+
+Markets just missed $XFAB, because they’re a lesser known foundry in power semis…But US Dpt. Of commerce pointed them out as the only high volume SiC foundry in the US 2Y ago. 
+
+ I just happened to point out the connections.
+
+Just because you don’t understand something, don’t just go call it a “meme stock” with price detached from fundamentals.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2059674880761860125" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>媒体兄弟……$XFAB 为何是模因股票？ 
+
+这次你能不能不要在 $RPI 上重蹈覆辙吗？
+
+他们确实从欧盟获得了 CHIPS ACT 资金，因为它们非常重要。 
+
+并让 $NVDA / $NOK 评估他们的 SiPH 方面，而他们的市盈率较低，约为 1.28。
+
+这让我想起了 $SOI 的市盈率较低，但由于传统细分市场的拖累，垂直行业的增长却很高。
+
+下周的 CHIPS ACT 2 蓝图中确实提到了 $XFAB……该蓝图主要围绕光子学。 
+
+主要收入增长围绕功率半导体，$NVDA 推出 800 vdc。
+
+所以 $NVTS、$POWI、$WOLF 和每个人最近都在起飞。
+
+市场刚刚错过了 $XFAB，因为他们是功率半导体领域鲜为人知的代工厂……但是美国 Dpt。商务部指出，他们是两年前美国唯一一家高产量碳化硅代工厂。 
+
+ 我只是碰巧指出了其中的联系。
+
+不要仅仅因为你不理解某些东西，就将其称为价格脱离基本面的“模因股票”。</div>
+        <div class="tweet-foot">
+          <span>likes 377 / retweets 23 / replies 304 / views 37008</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-05-27 10:24</span>
+          <span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">There’s one very compelling name someone called out.
+
+That I ended up taking positions in for power semi exposure. 
+
+Heavily tied to $NVDA but not directly mentioned like $NVTS.
+
+Can anyone guess?</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">There’s one very compelling name someone called out.
+
+That I ended up taking positions in for power semi exposure. 
+
+Heavily tied to $NVDA but not directly mentioned like $NVTS.
+
+Can anyone guess?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2059460622895751387" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>有人喊出了一个非常引人注目的名字。
+
+我最终在功率半曝光中占据了位置。 
+
+与 $NVDA 密切相关，但不像 $NVTS 那样直接提及。
+
+有人能猜到吗？</div>
+        <div class="tweet-foot">
+          <span>likes 58 / retweets 3 / replies 39 / views 6911</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-05-25 19:54</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$LPK</span><span class="chip red">$LPKFF</span><span class="chip red">$LPTH</span><span class="chip red">$MTRN</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">$LPK turned out pretty well. https://t.co/mZlTyd4oUO</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$LPK turned out pretty well. https://t.co/mZlTyd4oUO</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058879435726836152" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$LPK 结果相当不错。 https://t.co/mZlTyd4oUO</div>
+        <div class="tweet-foot">
+          <span>likes 305 / retweets 14 / replies 51 / views 48424</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-05-24 23:56</span>
+          <span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">All right chat, crowdsourcing your #1 highest conviction (10x only) stock long for the Power Semi trade.
+
+Especially given $NVDA pushing shift to 800 VDC. 
+
+Stuff like $NVTS or $WOLF, but high-beta, 10x potential only.  Anywhere around the world. 
+
+What&#x27;s your pick? https://t.co/Y10KR6HLVC</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">All right chat, crowdsourcing your #1 highest conviction (10x only) stock long for the Power Semi trade.
+
+Especially given $NVDA pushing shift to 800 VDC. 
+
+Stuff like $NVTS or $WOLF, but high-beta, 10x potential only.  Anywhere around the world. 
+
+What&#x27;s your pick? https://t.co/Y10KR6HLVC</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058577885754163382" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>好吧，聊聊，众包您排名第一的最高信念（仅限 10 倍）股票多头 Power Semi 交易。
+
+特别是考虑到 NVDA 正在推动转变至 800 VDC。 
+
+像 $NVTS 或 $WOLF 这样的东西，但 beta 值高，潜力只有 10 倍。  世界各地。 
+
+你的选择是什么？ https://t.co/Y10KR6HLVC</div>
+        <div class="tweet-foot">
+          <span>likes 2175 / retweets 156 / replies 489 / views 638468</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-04-21 12:43</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$GLW</span><span class="chip red">$INTC</span><span class="chip red">$LPK</span><span class="chip red">$LPKFF</span><span class="chip red">$LPKK</span><span class="chip red">$LPTH</span><span class="chip red">$MTRN</span><span class="chip red">$ONTO</span><span class="chip red">$SHMD</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">People nonstop ask me about $LPKK / $LPK for my opinion
+
+Yes, I mentioned they&#x27;re like a chokepoint for glass core substrates for LIDE (laser induced deep etching) way back when. 
+
+Biggest known partner is $ONTO (LIDE with Onto metrology for glass core mass production).
+
+Then as for market share: &quot;more than 80% of cust...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">People nonstop ask me about $LPKK / $LPK for my opinion
+
+Yes, I mentioned they&#x27;re like a chokepoint for glass core substrates for LIDE (laser induced deep etching) way back when. 
+
+Biggest known partner is $ONTO (LIDE with Onto metrology for glass core mass production).
+
+Then as for market share: &quot;more than 80% of customers among major global players have selected LPKF equipment&quot; for process validation.
+
+So that probably includes:
+- Samsung Electronics/Electro-Mechanics
+- $INTC (Receives a Major Order from a Leading Chip Manufacturer... installed a first LIDE system at the beginning of 2020... now ordered further LIDE systems to start volume production)
+- SKC (Absolics)
+- $GLW, AGC, Schott. 
+- Nippon electric glass. 
+
+Of course this is evaluation, so that 80% could be lower in actual ramp. 
+
+As for some personal FWD P/E calculations:
+
+- 2027: ~11-12.5x and ~7.8x for 2028, which looks very compelling. 
+- Total Cash: ~€10.0M, debt was around ~€3.0M. debt to equity: ~3.8%
+
+So very clean-asset light balance sheet, no dilution overhang like $SHMD. 
+
+~$362m MC, conclusion: great upside long imo, hard to see institutions not buying this name down the road. 
+
+Even if the 80% of players managed to design another way, even a fraction would probably be very material to the MC. 
+
+It was probably a bit early few months ago, but glass core roadmaps have been speeding up like CPO. 
+
+Disclosure: I do have positions. This are just my thoughts. 
+
+People on X did their homework.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046449839626670369" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>人们不停地问我关于 $LPKK / $LPK 的意见
+
+是的，我提到过它们就像是 LIDE（激光诱导深蚀刻）玻璃芯基板的一个咽喉要道。 
+
+最大的知名合作伙伴是 $ONTO（LIDE 与 Onto 计量技术，用于玻璃芯批量生产）。
+
+至于市场份额：“全球主要企业中超过80%的客户都选择了LPKF设备”进行工艺验证。
+
+所以这可能包括：
+- 三星电子/机电
+- $INTC（收到领先芯片制造商的大订单...在 2020 年初安装了第一个 LIDE 系统...现在订购了更多 LIDE 系统以开始批量生产）
+- SKC（绝对）
+- $GLW、AGC、肖特。 
+- 日本电玻璃。 
+
+当然，这是评估，因此实际斜坡中 80% 可能会更低。 
+
+至于一些个人FWD P/E计算：
+
+- 2027 年：~11-12.5 倍，2028 年~7.8 倍，看起来非常引人注目。 
+- 现金总额：约 1000 万欧元，债务约为 300 万欧元。债务股本比：~3.8%
+
+因此，资产负债表非常清洁，没有像 $SHMD 那样的稀释悬而未决。 
+
+~$3.62 亿美元的 MC，结论：在我看来，长期的上涨空间很大，很难看到机构会不买这个名字。 
+
+即使 80% 的玩家设法设计出另一种方式，即使是一小部分对 MC 来说也可能非常重要。 
+
+几个月前可能有点早，但玻璃芯路线图一直在像 CPO 一样加速发展。 
+
+披露：我确实有职位。这只是我的想法。 
+
+X 上的人们做了他们的功课。</div>
+        <div class="tweet-foot">
+          <span>likes 721 / retweets 57 / replies 46 / views 667135</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-03-24 11:51</span>
+          <span><span class="chip red">$ACLS</span><span class="chip red">$AKTS</span><span class="chip red">$ALMU</span><span class="chip red">$AMZN</span><span class="chip red">$ATOM</span><span class="chip red">$BA</span><span class="chip red">$BLG</span><span class="chip red">$ERIC</span><span class="chip red">$INFN</span><span class="chip red">$META</span><span class="chip red">$MRAM</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NVTS</span><span class="chip red">$ORCL</span><span class="chip red">$PDFS</span><span class="chip red">$QUBT</span><span class="chip red">$RGTI</span><span class="chip red">$RTX</span><span class="chip red">$SIVE</span><span class="chip red">$SKYT</span><span class="chip red">$SLVC</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">If you didn&#x27;t know by now $SIVE is important to US national security via CHIPS act. 
+
+But especially, as the light source for hyperscaler AI supply chains.
+
+They got two CHIPS acts grants ~$11.6M so far:
+
+1. FR3 beamformer ICs with $ERIC and Raytheon $RTX.
+2. EW Tech with $BA (LSE) BAE Systems
+
+With more coming funding...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you didn&#x27;t know by now $SIVE is important to US national security via CHIPS act. 
+
+But especially, as the light source for hyperscaler AI supply chains.
+
+They got two CHIPS acts grants ~$11.6M so far:
+
+1. FR3 beamformer ICs with $ERIC and Raytheon $RTX.
+2. EW Tech with $BA (LSE) BAE Systems
+
+With more coming funding from CHIPS in 2026 hinted by the CEO.
+
+Small caps almost never get this sort of support from the US government.
+
+You have a company sitting at $330M:
+
+That&#x27;s critical to US National Security for their Semi arm.
+
+and
+
+Critical to Hyperscaler supply chains ( $MSFT, $META, $AMZN, $ORCL, etc) for Photonics through $MRVL Celestial, Ayar, Jabil, ONet, and others...
+
+The main question regarding scale vs. capex is now answered by Win Semi partnership. 
+
+And the question regarding &quot;CPO waiting&quot; opportunity cost is now answered by the Jabil 1.6T pluggable ramp from OFC.
+
+$SIVE of the most unknown gems in the photonics space and I personally think this company should be $2B+ today.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036289688227684729" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>如果您现在还不知道 $SIVE 通过 CHIPS 法案对美国国家安全很重要。 
+
+但尤其是作为超大规模人工智能供应链的光源。
+
+到目前为止，他们获得了两项 CHIPS 法案拨款约 1160 万美元：
+
+1. FR3 波束形成器 IC 与 $ERIC 和 Raytheon $RTX。
+2. EW Tech 与 $BA (LSE) BAE Systems
+
+首席执行官暗示，2026 年 CHIPS 将提供更多资金。
+
+小盘股几乎从未获得美国政府的此类支持。
+
+您有一家价值 3.3 亿美元的公司：
+
+这对于他们的 Semi 部门的美国国家安全至关重要。
+
+和
+
+通过 $MRVL Celestial、Ayar、Jabil、ONet 等对光子学的超大规模供应链（$MSFT、$META、$AMZN、$ORCL 等）至关重要...
+
+关于规模与资本支出的主要问题现在由 Win Semi 合作伙伴回答。 
+
+关于“CPO 等待”机会成本的问题现在由 OFC 的捷普 1.6T 可插拔坡道得到解答。
+
+光子学领域最不为人知的瑰宝，我个人认为这家公司今天的股价应该达到 20 亿美元以上。</div>
+        <div class="tweet-foot">
+          <span>likes 427 / retweets 42 / replies 22 / views 89494</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-03-24 10:09</span>
+          <span><span class="chip red">$ACLS</span><span class="chip red">$AKTS</span><span class="chip red">$ALMU</span><span class="chip red">$ATOM</span><span class="chip red">$BLG</span><span class="chip red">$INFN</span><span class="chip red">$MRAM</span><span class="chip red">$NVTS</span><span class="chip red">$PDFS</span><span class="chip red">$QUBT</span><span class="chip red">$RGTI</span><span class="chip red">$SIVE</span><span class="chip red">$SKYT</span><span class="chip red">$SLVC</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">US Chip ACT Funding is one of the largest signals.
+
+For importance to America National Security.
+
+Lesser known list:
+1. $SIVE ($330m)
+2. $AKTS ($920m)
+3. $BLG ($34m)
+4. $QUBT ($1.65B)
+5. $RGTI ($5.27B)
+6. $MRAM ($210m)
+7. $SKYT (Acquired)
+8. $PDFS ($1.35B)
+9. $ATOM ($177M)
+10. $SLVC ($227M)
+11. $NVTS ($2.12B)
+12. $WOLF...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">US Chip ACT Funding is one of the largest signals.
+
+For importance to America National Security.
+
+Lesser known list:
+1. $SIVE ($330m)
+2. $AKTS ($920m)
+3. $BLG ($34m)
+4. $QUBT ($1.65B)
+5. $RGTI ($5.27B)
+6. $MRAM ($210m)
+7. $SKYT (Acquired)
+8. $PDFS ($1.35B)
+9. $ATOM ($177M)
+10. $SLVC ($227M)
+11. $NVTS ($2.12B)
+12. $WOLF ($750m)
+13. $ALMU ($234m)
+14. $ACLS ($2.6B)
+
+DIRECT FUNDING | DoC CHIPS PMTs:
+1. $WOLF (Wolfspeed): $750 Million
+2. $INFN (Infinera): $93 Million (DoC PMT) - Bought by Nokia
+3. $SKYT (SkyWater Technology): $16 Million (DoC PMT) - Bought by IonQ
+
+DIRECT FUNDING | Federal R&amp;D Contracts:
+4. $RGTI (Rigetti Computing): $11.28M (AFRL/quantum networking and AFOSR Chip fab)
+5. $QUBT - Direct DoC/NIST contract for TFLN PICs
+
+DoD Microelectronics / Sub-Contractors
+6. $SIVE: $11.6 Million (NEMC Hub)
+7. $MRAM - $8.7 Million project partner (&quot;CHEETA&quot; project via SCMC Hub)
+8. $ACLS - $7.8M partner project (Led by GE Aerospace via CLAWS)
+9. $BLG - $6.5M (DoD sub-contracts secured to date via CLAWS Hub)
+10. $AKTS - $4 Million (Lead grant for the &quot;LADDER&quot; project via NEMC)
+
+Adjacents:
+11. $ATOM: Member of the SWAP Hub
+12. $NVTS: Embedded partner in the SCMC Hub
+13. $PDFS: industry partner in the CA DREAMS Hub
+14: $ALMU: affiliate member in the CA DREAMS and MMEC Hubs
+
+-&gt; Electromagnetic Warfare (EW): $51 million allocated across 6 projects.
+-&gt; Artificial Intelligence (AI) Hardware: $42 million allocated across 7 projects.
+-&gt; 5G/6G Wireless Communications: $42 million allocated across 5 projects.
+-&gt; Commercial Leap-Ahead Technologies: $38 million allocated across 7 projects.
+-&gt; Quantum Technology: $32 million allocated across 4 projects.
+-&gt; Secure Edge Computing / IoT: $25 million allocated across 4 projects.
+
+Just a warning: 
+
+Being important to US technology (eg. Wolfspeed) does not translate to being a good investment. 
+
+Was just doing research into $SIVE CHIPS act funding and decided to see what other lesser known companies got grants or were beneficaries too.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036264013370368378" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>美国芯片ACT融资是最大的信号之一。
+
+因为对美国国家安全的重要性。
+
+鲜为人知的名单：
+1. $SIVE（3.3 亿美元）
+2. $AKTS（9.2 亿美元）
+3.$BLG（3400万美元）
+4.$QUBT ($1.65B)
+5.$RGTI ($5.27B)
+6. $MRAM（2.1 亿美元）
+7.$SKYT（已收购）
+8. $PDFS ($1.35B)
+9.$ATOM（1.77 亿美元）
+10.$SLVC（2.27 亿美元）
+11.$NVTS ($2.12B)
+12.$WOLF（7.5亿美元）
+13.$ALMU（2.34 亿美元）
+14.$ACLS ($2.6B)
+
+直接资助| DoC CHIPS PMT：
+1. $WOLF（Wolfspeed）：7.5亿美元
+2. $INFN (Infinera)：9300万美元 (DoC PMT) - 被诺基亚收购
+3. $SKYT（SkyWater Technology）：1600万美元（DoC PMT）——由 IonQ 购买
+
+直接资助|联邦研发合同：
+4.$RGTI（RigettiComputing）：1128万美元（AFRL/量子网络和AFOSR芯片工厂）
+5. $QUBT - TFLN PIC 的直接 DoC/NIST 合同
+
+国防部微电子/分包商
+6. $SIVE：1160 万美元（NEMC 中心）
+7. $MRAM - 870 万美元项目合作伙伴（通过 SCMC Hub 的“CHEETA”项目）
+8. $ACLS - 780 万美元的合作伙伴项目（由 GE Aerospace 通过 CLAWS 领导）
+9. $BLG - 650 万美元（迄今为止通过 CLAWS Hub 获得的国防部分包合同）
+10. $AKTS - 400 万美元（通过 NEMC 资助“LADDER”项目）
+
+邻接：
+11. $ATOM：SWAP 中心成员
+12. $NVTS：SCMC 中心的嵌入式合作伙伴
+13. $PDFS：CA DREAMS Hub 的行业合作伙伴
+14：$ALMU：CA DREAMS 和 MMEC 中心的附属成员
+
+-&gt; 电磁战 (EW)：为 6 个项目分配 5100 万美元。
+-&gt; 人工智能 (AI) 硬件：为 7 个项目分配 4200 万美元。
+-&gt; 5G/6G 无线通信：为 5 个项目分配 4200 万美元。
+-&gt; 商业跨越式技术：为 7 个项目分配 3800 万美元。
+-&gt; 量子技术：为 4 个项目分配 3200 万美元。
+-&gt; 安全边缘计算/物联网：为 4 个项目分配 2500 万美元。
+
+只是一个警告： 
+
+对美国技术的重要性（例如 Wolfspeed）并不意味着是一项好的投资。 
+
+当时只是对 $SIVE CHIPS 法案资助进行研究，并决定看看其他哪些不太知名的公司也获得了资助或成为受益者。</div>
+        <div class="tweet-foot">
+          <span>likes 1016 / retweets 110 / replies 48 / views 174358</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-01-28 04:37</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$CODA</span><span class="chip red">$CPSH</span><span class="chip red">$CVV</span><span class="chip red">$ESE</span><span class="chip red">$FEIM</span><span class="chip red">$GHM</span><span class="chip red">$GSM</span><span class="chip red">$HALEU</span><span class="chip red">$INTT</span><span class="chip red">$IQE</span><span class="chip red">$KULR</span><span class="chip red">$LPKFF</span><span class="chip red">$LPTH</span><span class="chip red">$MKSI</span><span class="chip red">$MTRN</span><span class="chip red">$NTI</span><span class="chip red">$NVDA</span><span class="chip red">$OPXS</span><span class="chip red">$PDFS</span><span class="chip red">$PESI</span><span class="chip red">$PKE</span><span class="chip red">$PLAB</span><span class="chip red">$RDW</span><span class="chip red">$RELL</span><span class="chip red">$TAYD</span><span class="chip red">$TDY</span><span class="chip red">$VNP.TO</span><span class="chip red">$VREX</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">There&#x27;s an interesting company on here that happens to own ~25-30% of this semi-grade material supply chain in the world.
+
+Thermal is probably an issue, so might be a potential material composite chokepoint with $NVDA architectures in 2027.
+
+There was no issue with H200s (&lt;1000W) but as you get higher to 2000w with Rub...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">There&#x27;s an interesting company on here that happens to own ~25-30% of this semi-grade material supply chain in the world.
+
+Thermal is probably an issue, so might be a potential material composite chokepoint with $NVDA architectures in 2027.
+
+There was no issue with H200s (&lt;1000W) but as you get higher to 2000w with Rubin deployments, might be a hidden beneficiary of material transitions.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2016249140855156962" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>这里有一家有趣的公司，恰好拥有世界上半级材料供应链的约 25-30%。
+
+散热可能是一个问题，因此可能成为 2027 年 $NVDA 架构的潜在材料复合瓶颈。
+
+H200（&lt;1000W）没有问题，但当您通过 Rubin 部署将功率提高到 2000w 时，可能是材料转换的隐藏受益者。</div>
+        <div class="tweet-foot">
+          <span>likes 196 / retweets 11 / replies 19 / views 192910</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-01-25 06:18</span>
+          <span><span class="chip red">$COHR</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">@Zlack00 SICC had a showcase in 2024, $COHR has its own 300mm milestone in December 2025. 
+
+$WOLF claimed to be first 300mm &quot;single crystal&quot; wafer. Others were claimed to be poly-crystal or low-quality substrates. So wording is nuanced. https://t.co/fH2GCc2G5c</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Zlack00 SICC had a showcase in 2024, $COHR has its own 300mm milestone in December 2025. 
+
+$WOLF claimed to be first 300mm &quot;single crystal&quot; wafer. Others were claimed to be poly-crystal or low-quality substrates. So wording is nuanced. https://t.co/fH2GCc2G5c</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015187515825951112" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Zlack00 SICC 在 2024 年有一个展示，$COHR 在 2025 年 12 月有自己的 300mm 里程碑。 
+
+$WOLF 声称是第一个 300mm“单晶”晶圆。其他则声称是多晶或低质量基板。所以措辞是微妙的。 https://t.co/fH2GCc2G5c</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3428</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-01-25 04:46</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$AMAT</span><span class="chip red">$AMKR</span><span class="chip red">$ASX</span><span class="chip red">$BESI</span><span class="chip red">$COHR</span><span class="chip red">$ENTG</span><span class="chip red">$KLAC</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$TSM</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">The potential SiC (Silicon Carbide) Interposer bottleneck stack for $NVDA Rubin and Hyperscaler ASICs (if you didn&#x27;t like $WOLF): 
+
+Downstream SiC:
+$TSM - SiC for CoWoS interposers
+$AMKR - S-SWIFT packaging for SiC integration
+$ASX- VIPack platform and optical integration.
+
+SiC Midstream:
+$KLAC - SiC defect inspection
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The potential SiC (Silicon Carbide) Interposer bottleneck stack for $NVDA Rubin and Hyperscaler ASICs (if you didn&#x27;t like $WOLF): 
+
+Downstream SiC:
+$TSM - SiC for CoWoS interposers
+$AMKR - S-SWIFT packaging for SiC integration
+$ASX- VIPack platform and optical integration.
+
+SiC Midstream:
+$KLAC - SiC defect inspection
+$ONTO - Panel-level packaging + inspection
+$AMAT - SiC deposition
+$AEHR - SiC inspection
+$ENTG -  CMP
+$BESI (AS) - Hybrid Bonding equipment
+Disco - 70-80% marketshare precision cutting
+
+SiC Wafers:
+$WOLF - 300mm SiC wafers.
+$COHR - 150mm and 200mm SiC, still developing
+SK Siltron CSS (KRX: 034730) - Building to 200mm
+Resonac (4004 TYSE) - SmartSiC bonding
+NGK Insulators - Crystal growth
+Kyocera - SiC and ceramic packaging
+
+These are all early supply chain + active research. 
+
+So when does this timeline hit?
+
+2025-2026 (Blackwell Ultra): Continued reliance on Silicon Interposers
+
+2027 (Rubin / Rubin Ultra): Introduction of SiC interposers in the highest-end AI SKUs. 
+
+2028+: Glass Substrates/SiC/Diamond Interposers?
+
+Disclosure: I own $AMKR, $AEHR, $ONTO, $COHR and $TSM above.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015164232795627975" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$NVDA Rubin 和 Hyperscaler ASIC 的潜在 SiC（碳化硅）中介层瓶颈堆栈（如果您不喜欢 $WOLF）： 
+
+下游碳化硅：
+$TSM - 用于 CoWoS 中介层的 SiC
+$AMKR - 用于 SiC 集成的 S-SWIFT 封装
+$ASX-VIPack 平台和光学集成。
+
+碳化硅中游：
+$KLAC - SiC 缺陷检测
+$ONTO - 面板级封装+检验
+$AMAT - 碳化硅沉积
+$AEHR - SiC 检验
+$ENTG-CMP
+$BESI (AS) - 混合键合设备
+迪斯科 - 70-80% 市场份额精密切割
+
+碳化硅晶圆：
+$WOLF - 300mm SiC 晶圆。
+$COHR - 150mm 和 200mm SiC，仍在开发中
+SK Siltron CSS (KRX: 034730) - 构建至 200mm
+Resonac (4004 TYSE) - SmartSiC 键合
+NGK 绝缘子 - 晶体生长
+京瓷 - SiC 和陶瓷封装
+
+这些都是早期的供应链+积极的研究。 
+
+那么这个时间线什么时候到来呢？
+
+2025-2026 (Blackwell Ultra)：继续依赖硅中介层
+
+2027 年（Rubin / Rubin Ultra）：在最高端的 AI SKU 中引入 SiC 中介层。 
+
+2028+：玻璃基板/SiC/金刚石中介层？
+
+披露：我拥有上述 $AMKR、$AEHR、$ONTO、$COHR 和 $TSM。</div>
+        <div class="tweet-foot">
+          <span>likes 225 / retweets 15 / replies 18 / views 73308</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-01-25 04:35</span>
+          <span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">@foogleman1234 That&#x27;s probably convertible note arbitrage with $WOLF</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@foogleman1234 That&#x27;s probably convertible note arbitrage with $WOLF</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015161610676158794" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@foogleman1234 这可能是与 $WOLF 的可转换票据套利</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4171</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-01-25 04:02</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$CODA</span><span class="chip red">$CPSH</span><span class="chip red">$CVV</span><span class="chip red">$ESE</span><span class="chip red">$FEIM</span><span class="chip red">$GHM</span><span class="chip red">$GSM</span><span class="chip red">$HALEU</span><span class="chip red">$INTT</span><span class="chip red">$IQE</span><span class="chip red">$KULR</span><span class="chip red">$LPKFF</span><span class="chip red">$LPTH</span><span class="chip red">$MKSI</span><span class="chip red">$MTRN</span><span class="chip red">$NTI</span><span class="chip red">$OPXS</span><span class="chip red">$PDFS</span><span class="chip red">$PESI</span><span class="chip red">$PKE</span><span class="chip red">$PLAB</span><span class="chip red">$RDW</span><span class="chip red">$RELL</span><span class="chip red">$TAYD</span><span class="chip red">$TDY</span><span class="chip red">$VNP.TO</span><span class="chip red">$VREX</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">@__EthanHunt__ I listed $WOLF in my list of potential bottlenecks, and the company genuinely is interesting. 
+
+But there&#x27;s a difference between &quot;bottleneck&quot; and good investment. 
+
+Felt my the DD I did would go to waste, so ended up just posting it. 
+
+https://t.co/XCICxxODXQ</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@__EthanHunt__ I listed $WOLF in my list of potential bottlenecks, and the company genuinely is interesting. 
+
+But there&#x27;s a difference between &quot;bottleneck&quot; and good investment. 
+
+Felt my the DD I did would go to waste, so ended up just posting it. 
+
+https://t.co/XCICxxODXQ</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015153348287381771" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@__EthanHunt__ 我在潜在瓶颈列表中列出了 $WOLF，该公司确实很有趣。 
+
+但“瓶颈”和良好的投资是有区别的。 
+
+觉得我做的DD会浪费，所以最后只是发布它。 
+
+https://t.co/XCICxxODXQ</div>
+        <div class="tweet-foot">
+          <span>likes 21 / retweets 0 / replies 2 / views 9103</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-01-25 03:58</span>
+          <span><span class="chip red">$BKKT</span><span class="chip red">$NVDA</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">$WOLF ($464M) is the paradigm of the &quot;Bear-Bull&quot; Paradox.
+
+Wolfspeed is the holy grail of AI with SiC wafers.
+
+And this foundry just made the world’s first 300mm single-crystal SiC wafer last week.
+
+$NVDA Rubin + architectures likely need 300mm SiC interposers and Wolfspeed is the only company in the world currently th...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$WOLF ($464M) is the paradigm of the &quot;Bear-Bull&quot; Paradox.
+
+Wolfspeed is the holy grail of AI with SiC wafers.
+
+And this foundry just made the world’s first 300mm single-crystal SiC wafer last week.
+
+$NVDA Rubin + architectures likely need 300mm SiC interposers and Wolfspeed is the only company in the world currently that can do it.
+
+They&#x27;re critical to US national security with $750M+ in chips act grants.
+
+I listed this as a bottleneck but here&#x27;s the catch:
+
+This is a negative EV trap:
+
+- $926M cash, $2.1B debt, $465m MC
+
+Ev would be roughly ~$1.6B.
+
+Then you have
+
+-&gt; Convertible Notes #1
+~$331.4 Million. Convertible into New Common Stock based on an implied equity value of $1.0 Billion.
+
+-&gt; Renesas Convertible Notes #2
+~ $204 Million. (13.6% of the total shares)
+
+December 15, 2025, Wolfspeed filed a prospectus to register 11.3 million shares for &quot;selling stockholders&quot;
+
+These are the former creditors who took equity instead of cash during the bankruptcy.
+
+So...
+
+Wolfspeed is central to the SiC Interposer thesis for 2027 as they&#x27;re made in America and are have a massive moat.
+
+But this just looks like a trap right unless they can get this to massive scale and overshadow any convertibles, debt, and dilution.
+
+This is on paper the holy grail of AI moonshots since they have the world&#x27;s first 300mm SiC wafer and are a monopoly in as a US company.
+
+But financially this is a landmine.
+
+Disclosure: I own no positions, just wanted to post my findings.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015152332821217305" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$WOLF ($464M) 是“熊牛”悖论的范例。
+
+Wolfspeed 是 SiC 晶圆人工智能的圣杯。
+
+而这家代工厂上周刚刚制造出了全球首个300mm单晶SiC晶圆。
+
+$NVDA Rubin + 架构可能需要 300mm SiC 中介层，而 Wolfspeed 是目前世界上唯一一家能够做到这一点的公司。
+
+它们对美国国家安全至关重要，其芯片法案拨款超过 7.5 亿美元。
+
+我将其列为瓶颈，但问题是：
+
+这是一个负 EV 陷阱：
+
+- 9.26 亿美元现金，2.1B 美元债务，4.65 亿美元MC
+
+Ev 大约为 ~$1.6B。
+
+那么你就有了
+
+-&gt; 可转换票据#1
+约 3.314 亿美元。可根据 10 亿美元的隐含股权价值转换为新普通股。
+
+-&gt; 瑞萨可转换票据 #2
+~ 2.04 亿美元。 （占总股本的13.6%）
+
+2025年12月15日，Wolfspeed提交招股书，登记“出售股东”1130万股
+
+这些是在破产期间获得股权而不是现金的前债权人。
+
+所以...
+
+Wolfspeed 是 2027 年 SiC 中介层论文的核心，因为它们是美国制造的，并且拥有巨大的护城河。
+
+但这看起来就像是一个陷阱，除非他们能够大规模实施并掩盖任何可转换债券、债务和稀释。
+
+这在纸面上是人工智能登月计划的圣杯，因为他们拥有世界上第一个 300 毫米碳化硅晶圆，并且是美国公司的垄断者。
+
+但从经济上来说，这是一个地雷。
+
+披露：我没有任何职位，只是想发布我的发现。</div>
+        <div class="tweet-foot">
+          <span>likes 283 / retweets 12 / replies 21 / views 141365</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-01-19 02:52</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$LPKFF</span><span class="chip red">$LPTH</span><span class="chip red">$MTRN</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">$WOLF was probably the most interesting one up there after restructuring. 
+
+$LPKFF also for glass substrates and they own the laser induced deep etching at a $169m MC, so possibly most explosive 10x upside. 
+
+$MTRN is probably the most stable one up there with decently high upside given it owns the mountain for ~65% of...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$WOLF was probably the most interesting one up there after restructuring. 
+
+$LPKFF also for glass substrates and they own the laser induced deep etching at a $169m MC, so possibly most explosive 10x upside. 
+
+$MTRN is probably the most stable one up there with decently high upside given it owns the mountain for ~65% of the world&#x27;s Beryllium.   
+
+There were a few others but just the fundamentals were either really bad or their bottleneck was too niche.  
+
+$LPTH&#x27;s bottleneck for example spreads across both defense, AI, drones, etc.  
+
+$AXTI&#x27;s bottleneck was so big and AI is such a big sector so it doesn&#x27;t need to be spread across (but InP is used in a lot of other sectors too).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012961292966117410" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$WOLF 可能是重组后最有趣的一个。 
+
+LPKFF 也适用于玻璃基板，他们拥有激光诱导深度蚀刻，MC 价格为 1.69 亿美元，因此可能是最具爆炸性的 10 倍上涨空间。 
+
+$MTRN 可能是其中最稳定的一个，并且具有相当高的上涨空间，因为它拥有这座山，蕴藏着世界上约 65% 的铍。   
+
+还有其他一些，但只是基本面非常糟糕，或者它们的瓶颈太小众。  
+
+例如，$LPTH 的瓶颈遍及国防、人工智能、无人机等领域。  
+
+$AXTI 的瓶颈是如此之大，而人工智能是一个如此大的部门，因此不需要分散（但 InP 也用于许多其他部门）。</div>
+        <div class="tweet-foot">
+          <span>likes 103 / retweets 16 / replies 4 / views 238232</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-01-19 02:38</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$CODA</span><span class="chip red">$CPSH</span><span class="chip red">$CVV</span><span class="chip red">$ESE</span><span class="chip red">$FEIM</span><span class="chip red">$GHM</span><span class="chip red">$GSM</span><span class="chip red">$HALEU</span><span class="chip red">$INTT</span><span class="chip red">$IQE</span><span class="chip red">$KULR</span><span class="chip red">$LPKFF</span><span class="chip red">$LPTH</span><span class="chip red">$MKSI</span><span class="chip red">$MTRN</span><span class="chip red">$NTI</span><span class="chip red">$OPXS</span><span class="chip red">$PDFS</span><span class="chip red">$PESI</span><span class="chip red">$PKE</span><span class="chip red">$PLAB</span><span class="chip red">$RDW</span><span class="chip red">$RELL</span><span class="chip red">$TAYD</span><span class="chip red">$TDY</span><span class="chip red">$VNP.TO</span><span class="chip red">$VREX</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">Personal TLDR research. 
+ 
+Western supply chain bottlenecks like $LPTH and $AXTI:  
+
+$MTRN - Beryllium (Spor Mountain) 
+$HALEU - Uranium | SMRs 
+$ESE - Space fuel tanks (through Vacco) 
+$GHM - Vacuum Ejectors &amp; Surface Condensers | U.S. Navy 
+$FEIM - Atomic Clocks  
+$OPXS - Light Laser Periscopes  
+$TAYD - Vibration  
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Personal TLDR research. 
+ 
+Western supply chain bottlenecks like $LPTH and $AXTI:  
+
+$MTRN - Beryllium (Spor Mountain) 
+$HALEU - Uranium | SMRs 
+$ESE - Space fuel tanks (through Vacco) 
+$GHM - Vacuum Ejectors &amp; Surface Condensers | U.S. Navy 
+$FEIM - Atomic Clocks  
+$OPXS - Light Laser Periscopes  
+$TAYD - Vibration  
+$PKE - Heat 
+$VNP.TO - Western gallium  
+$TDY - Rad-Hard Image Sensors  $RDW - Roll-Out Solar Arrays 
+$PDFS - Exensio Yield for Intel 18A  
+$WOLF - Silicon Carbide  
+$RELL - Ultracapacitors &amp; Magnetrons  
+$CPSH - Thermal / Aluminum Silicon Carbide  
+$VREX - X-Ray Tubes  
+$GSM - Western Silicon Metal  
+$INTT - Extreme Thermal Cycling  
+$CODA - Turbidity (Murkiness)  
+$NTI - Corrosion  $PLAB - Photomask  
+$MKSI - Plasma Control 
+$KULR - Explosive Heat  
+$PESI - Radioactive mixed waste.  
+$CVV - Gas-to-Solid Deposition.  
+$LPKFF - Laser Induced Deep Etching/  Glass Substrates    
+
+These are just more of the &quot;under the radar&quot; small caps I was researching -&gt; ended up choosing $AXTI and $LPTH if people were interested.   
+
+ Lot of them have terrible fundamentals despite being vital eg: $IQE (already pretty known), so it&#x27;s not a good idea to just blindly buy a bottleneck.     
+
+There were a lot more out there I haven&#x27;t finished researching (so didn&#x27;t include), and it&#x27;s a lot harder to pinpoint ones that haven&#x27;t been priced in.     
+
+But wouldn&#x27;t be surprised if a lot of these went up 5x over the next year.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012957864026087525" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>个人 TLDR 研究。 
+ 
+$LPTH 和 $AXTI 等西方供应链瓶颈：  
+
+$MTRN - 铍（Spor Mountain） 
+$HALEU - 铀 |小型反应堆 
+$ESE - 太空燃料箱（通过 Vacco） 
+$GHM - 真空喷射器和表面冷凝器|美国海军 
+$FEIM - 原子钟  
+$OPXS - 光激光潜望镜  
+$TAYD - 振动  
+$PKE - 热火 
+$VNP.TO - 西方镓  
+$TDY - 抗辐射图像传感器 $RDW - 卷出式太阳能电池阵列 
+$PDFS - Intel 18A 的 Exensio 产量  
+$WOLF - 碳化硅  
+$RELL - 超级电容器和磁控管  
+$CPSH - 导热/碳化硅铝  
+$VREX - X 射线管  
+$GSM - 西方金属硅  
+$INTT - 极限热循环  
+$CODA - 浊度（浑浊度）  
+$NTI - 腐蚀 $PLAB - 光掩模  
+$MKSI - 等离子控制 
+$KULR - 爆炸热  
+$PESI - 放射性混合废物。  
+$CVV - 气固沉积。  
+$LPKFF - 激光诱导深蚀刻/玻璃基板    
+
+这些只是我正在研究的更多“雷达下”小盘股 -&gt; 如果人们感兴趣的话，最终会选择 $AXTI 和 $LPTH。   
+
+ 尽管很重要，但他们中的很多人的基本面都很糟糕，例如：$IQE（已经众所周知），所以盲目购买瓶颈并不是一个好主意。     
+
+还有很多东西我还没有完成研究（所以没有包括在内），而且要找出那些还没有被定价的东西要困难得多。     
+
+但如果其中很多在明年上涨了 5 倍，也不会感到惊讶。</div>
+        <div class="tweet-foot">
+          <span>likes 857 / retweets 87 / replies 49 / views 159781</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=WOLF">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

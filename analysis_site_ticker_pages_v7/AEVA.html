@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$AEVA 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$AEVA 历史推文</h1>
+      <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>15</b></div>
+        <div class="stat-card"><span>历史推文</span><b>15</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-02-09</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-05-24</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">认证周期 vs TTM 营收 3</span><span class="chip blue">瓶颈狩猎（核心透镜） 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-05-25 04:21</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$INTC</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">Fun fact: Lot of the same companies are often used across different supply chains.
+
+One likely example is: $SIVE as the upstream laser supplier to Boston Dynamics via: 
+
+Sivers -&gt; $AEVA FMCW (CW DFB lasers) -&gt; LG Innotek -&gt; Boston Dynamics.
+
+I actually personally liked Aeva for 4D AI first. 
+
+Just so happened to find o...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Fun fact: Lot of the same companies are often used across different supply chains.
+
+One likely example is: $SIVE as the upstream laser supplier to Boston Dynamics via: 
+
+Sivers -&gt; $AEVA FMCW (CW DFB lasers) -&gt; LG Innotek -&gt; Boston Dynamics.
+
+I actually personally liked Aeva for 4D AI first. 
+
+Just so happened to find out Sivers was their high confidence laser supplier for 4D FMCW lidar.  
+
+So you actually get robotics exposure with photonics while the same CW lasers used for hyperscaler AI DCs. 
+
+Near term revenue ramp though it&#x27;s probably $SIVE supplying laser volume ramp for $NVDA self-driving car related architectures though Aeva. 
+
+Humanoids are probably later in 2028? 
+
+You can always get more indirect exposure like MU with memory or $INTC with edge CPUs, but of course there&#x27;s  more direct exposure out there. 
+
+Think I&#x27;ve already covered a lot of names in the past like $VPG or Harmonic Drive. But hilariously enough CPO players like $SIVE are a core part of frontier physical AI development.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058644487224848654" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>有趣的事实：许多相同的公司经常在不同的供应链中使用。
+
+一个可能的例子是：$SIVE 作为波士顿动力公司的上游激光供应商，通过： 
+
+Sivers -&gt; $AEVA FMCW（CW DFB 激光器）-&gt; LG Innotek -&gt; 波士顿动力。
+
+事实上，我个人首先喜欢 Aeva 的 4D AI。 
+
+碰巧发现 Sivers 是他们高度信任的 4D FMCW 激光雷达激光供应商。  
+
+因此，您实际上可以通过光子学获得机器人技术，同时将相同的连续激光器用于超大规模人工智能 DC。 
+
+近期收入增长，尽管它可能通过 Aeva 为 $NVDA 自动驾驶汽车相关架构提供激光产量增长。 
+
+类人生物可能会在 2028 年晚些时候出现？ 
+
+您总是可以获得更多间接曝光，例如带有内存的 MU 或带有边缘 CPU 的 $INTC，但当然还有更直接的曝光。 
+
+我想我过去已经介绍过很多名字，比如 $VPG 或 Harmonic Drive。但有趣的是，像 $SIVE 这样的 CPO 玩家是前沿物理 AI 开发的核​​心部分。</div>
+        <div class="tweet-foot">
+          <span>likes 901 / retweets 55 / replies 132 / views 270354</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-05-19 15:37</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AEVA</span><span class="chip red">$AMD</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Just putting it out there:
+
+$SIVE short interest is probably higher than 17%+ now.
+
+As lot of local Swedish hedge funds are very underwater, shorting Sivers. 
+
+They&#x27;re about to meet US institutions through: 
+
+&gt; MSCI inflow in 2 weeks. 
+&gt; NASDAQ Listing. 
+&gt; US CHIPS Act backstop. 
+
+alongside core revenue driver from the...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just putting it out there:
+
+$SIVE short interest is probably higher than 17%+ now.
+
+As lot of local Swedish hedge funds are very underwater, shorting Sivers. 
+
+They&#x27;re about to meet US institutions through: 
+
+&gt; MSCI inflow in 2 weeks. 
+&gt; NASDAQ Listing. 
+&gt; US CHIPS Act backstop. 
+
+alongside core revenue driver from the optical supercycle revenue ramp from likely $AAPL, $JBL, $POET, Ayar, Onet/Enablence, Lightium, $AEVA, $MRVL, Lightmatter, Lightelligence, and $AMD over the next year or two. 
+
+I personally don&#x27;t think it&#x27;s going to end well for the Swedish locals shorting (and some random algos) at this early stage. 
+
+And the popular saying is every one stock short turns into a long eventually.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2056640420008878330" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>只是把它放在那里：
+
+$SIVE 空头利息现在可能高于 17%+。
+
+由于许多瑞典当地对冲基金都处于水下状态，因此做空Sivers。 
+
+他们将通过以下方式与美国机构会面： 
+
+&gt; 两周内 MSCI 资金流入。 
+&gt; 纳斯达克上市。 
+&gt; 美国芯片法案支持。 
+
+未来一两年内，光学超级周期收入增长的核心收入驱动因素可能来自 $AAPL、$JBL、$POET、Ayar、Onet/Enablence、Lightium、$AEVA、$MRVL、Lightmatter、Lightelligence 和 $AMD。 
+
+我个人认为瑞典当地人在这个早期阶段做空（以及一些随机算法）不会有好结果。 
+
+流行的说法是，每一只股票最终都会由空头变成多头。</div>
+        <div class="tweet-foot">
+          <span>likes 1149 / retweets 68 / replies 184 / views 319691</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">轧空设置（盈利成长股变体）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-05-15 15:04</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$AMZN</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$NOK</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Just to add to the very positive $SIVE news amid MSCI likely tens of millions of inflow in 2 weeks:
+
+$AMZN has a new private placement with AlChip. 
+
+Probably implying design wins with future Trainium.
+
+If you don’t remember… AlChip was Ayar’s lead customer. And $SIVE is the primary laser supplier to Ayar.
+
+So implicat...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just to add to the very positive $SIVE news amid MSCI likely tens of millions of inflow in 2 weeks:
+
+$AMZN has a new private placement with AlChip. 
+
+Probably implying design wins with future Trainium.
+
+If you don’t remember… AlChip was Ayar’s lead customer. And $SIVE is the primary laser supplier to Ayar.
+
+So implications for $SIVE, is enormous piggybacking off of Amazon’s ecosystem growth.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2055182601158074769" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>在 MSCI 可能在两周内流入数千万美元的情况下，仅补充一下非常积极的 $SIVE 消息：
+
+$AMZN 与 AlChip 进行了新的私募。 
+
+可能意味着未来 Trainium 的设计获胜。
+
+如果您不记得的话……AlChip 是 Ayar 的主要客户。 $SIVE 是 Ayar 的主要激光供应商。
+
+因此，对 $SIVE 的影响是亚马逊生态系统增长的巨大助力。</div>
+        <div class="tweet-foot">
+          <span>likes 1288 / retweets 88 / replies 102 / views 296285</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-05-14 18:17</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$NOK</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">$SIVE 2025 annual report analysis. 
+
+TLDR: Extremely Bullish. 
+
+Sivers main growth vector is CPO, but they&#x27;ve TAM expansioned to pluggable transcivers + multiple new qualifications/development. 
+
+1. &quot;We are currently seeing great interest...  testing our DFB lasers across multiple manufacturers in pluggable transceiver...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SIVE 2025 annual report analysis. 
+
+TLDR: Extremely Bullish. 
+
+Sivers main growth vector is CPO, but they&#x27;ve TAM expansioned to pluggable transcivers + multiple new qualifications/development. 
+
+1. &quot;We are currently seeing great interest...  testing our DFB lasers across multiple manufacturers in pluggable transceivers&quot;
+
+For pluggable angle, we&#x27;ve seen this with $JBL 1.6T LRO already, but annual report hinted they&#x27;re developing/qualifying with more hyperscaler suppliers.
+
+&quot;Our serviceable markets have now been expanded to include pluggable optical interconnects as well as scale-up and scale-out architectures for co-packaged&quot; (TAM expansion)
+
+2. &quot;Discussions with hyperscalers and pluggable transceiver suppliers indicate a shortage of CW lasers in the coming years&quot; 
+
+$LITE already signaled CW laser bottlenecks, and they had to buy externally from competitors. So we kinda guessed CW Laser was a bottleneck. 
+
+And this confirmed it, so was wondering about Win semi. 
+
+&quot;The partnership announced with high-volume supplier Win Semiconductor in March 2025 now gives us a strong position to meet growing demand&quot;
+
+$SIVE likely has capacity locked in with Win from this nuance, which is exactly what I wanted to know. 
+
+This positions Sivers in the CW laser as both a bottleneck and CPO laser architectural leader. 
+
+VOLUME PRODUCTION H2 INDICATIONS (BULLISH): 
+
+3. &quot;The collaboration positions both companies to address the rapidly growing market for optical AI connectivity, with prototypes to be demonstrated to customers during the first half of 2026 and with the goal of scaling up production by the end of 2026&quot;
+
+H1 is more preproduction, H2 production signaled starting with names like $POET. 
+
+4. &quot;We are pleased that our largest LIDAR customer will increase production starting in the fourth quarter of 2026&quot; 
+
+$AEVA start of volume production Q4 with $SIVE = bullish for both. 
+
+Revenue floor from LIDAR as their CPO scales. 
+
+5. Sivers announced a partnership with LIGHTIUM AG to integrate their CW lasers directly onto TFLN wafers. 3.2T+ cycle. (future proofing)
+ 
+FYI no decent investor cares about last year&#x27;s 2025 financials from development contracts aside from Swedish Media/Locals. 
+
+Especially when you&#x27;re forward looking for the 2027-2028 CPO supercycle. 
+
+But the hint from you can take away from financials + geography that is $NOK is now the high confidence customer of $SIVE. 
+
+TLDR:
+
+-&gt; Win Semi implied capacity lock in during CW laser bottleneck 
+-&gt; Hints of new group of hyperscaler suppliers testing/qualification for pluggable transcivers, which is massive TAM expansion. 
+-&gt; New customers for CW lasers 
+-&gt; Volume production scaling starting H2 for both photonics and lidar.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2054868760629272850" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE 2025 年年度报告分析。 
+
+TLDR：非常看涨。 
+
+Sivers 的主要增长媒介是 CPO，但他们已将 TAM 扩展到可插拔收发器 + 多个新的资格/开发。 
+
+1.“我们目前看到了极大的兴趣......在多个制造商的可插拔收发器中测试我们的 DFB 激光器”
+
+对于可插拔角度，我们已经在 $JBL 1.6T LRO 中看到了这一点，但年度报告暗示他们正在与更多超大规模供应商一起开发/认证。
+
+“我们的服务市场现已扩展到包括可插拔光学互连以及用于共同封装的纵向扩展和横向扩展架构”（TAM 扩展）
+
+2.“与超大规模厂商和可插拔收发器供应商的讨论表明，未来几年连续激光器将出现短缺” 
+
+$LITE 已经表明了 CW 激光器的瓶颈，他们不得不从竞争对手那里购买。所以我们猜测 CW 激光是一个瓶颈。 
+
+这证实了这一点，所以对 Win semi 感到好奇。 
+
+“2025 年 3 月宣布与大批量供应商 Win Semiconductor 建立合作伙伴关系，现在使我们在满足不断增长的需求方面处于有利地位”
+
+从这个细微差别来看，$SIVE 可能已经锁定了 Win 的容量，这正是我想知道的。 
+
+这使得 Sivers 在 CW 激光器中既是瓶颈，又是 CPO 激光器架构的领导者。 
+
+H2 产量指标（看涨）： 
+
+3.“此次合作使两家公司能够应对快速增长的光学人工智能连接市场，原型将于 2026 年上半年向客户展示，目标是到 2026 年底扩大生产规模”
+
+H1 更多的是预制作，H2 制作以 $POET 等名称开头。 
+
+4.“我们很高兴我们最大的激光雷达客户将从 2026 年第四季度开始增加产量” 
+
+$AEVA 第四季度开始量产，$SIVE = 对两者都看涨。 
+
+LIDAR 的收入下限与其 CPO 的规模有关。 
+
+5. Sivers 宣布与 LIGHTIUM AG 建立合作伙伴关系，将其 CW 激光器直接集成到 TFLN 晶圆上。 3.2T+循环。 （未来打样）
+ 
+仅供参考，除了瑞典媒体/当地人之外，没有哪位正派投资者关心去年开发合同的 2025 年财务状况。 
+
+尤其是当您展望 2027-2028 年 CPO 超级周期时。 
+
+但您可以从财务+地理中得到的提示是，$NOK 现在是 $SIVE 的高度信任客户。 
+
+总而言之：
+
+-&gt; Win Semi 暗示在 CW 激光器瓶颈期间产能锁定 
+-&gt; 新一批超大规模供应商对可插拔收发器进行测试/资格认证的提示，这是大规模的 TAM 扩展。 
+-&gt; 连续激光器的新客户 
+-&gt; 光子学和激光雷达的量产规模从 H2 开始。</div>
+        <div class="tweet-foot">
+          <span>likes 1992 / retweets 186 / replies 153 / views 638928</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-05-13 07:00</span>
+          <span><span class="chip red">$ABB</span><span class="chip red">$ACUVI</span><span class="chip red">$AEVA</span><span class="chip red">$ALNT</span><span class="chip red">$AMBA</span><span class="chip red">$AMBQ</span><span class="chip red">$ARBE</span><span class="chip red">$ATOM</span><span class="chip red">$AUR</span><span class="chip red">$BAM</span><span class="chip red">$BOT</span><span class="chip red">$BSL</span><span class="chip red">$CATL</span><span class="chip red">$CGNX</span><span class="chip red">$CTH.V</span><span class="chip red">$HG</span><span class="chip red">$HLIT</span><span class="chip red">$HSYDF</span><span class="chip red">$IMSR</span><span class="chip red">$INDI</span><span class="chip red">$ISRG</span><span class="chip red">$KDK</span><span class="chip red">$KITT</span><span class="chip red">$KLIC</span><span class="chip red">$LSCC</span><span class="chip red">$MBLY</span><span class="chip red">$MKA</span><span class="chip red">$MRAM</span><span class="chip red">$MRLN</span><span class="chip red">$NEO</span><span class="chip red">$NOVT</span><span class="chip red">$OUST</span><span class="chip red">$PDY</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SERV</span><span class="chip red">$SHA.DE</span><span class="chip red">$SYM</span><span class="chip red">$TSLA</span><span class="chip red">$VPG</span><span class="chip red">$XBOT</span><span class="chip red">$XPEV</span><span class="chip red">$ZBRA</span></span>
+        </div>
+        <div class="tweet-text">Here&#x27;s the humanoid exposure crowdsourced list:
+
+- $OUST 
+- Rainbow Robotics (277810)
+- $AMBA 
+- Ubtech Robotics
+- $MKA
+- Nextronics
+- $SYM
+- Harmonic Drive (6324)
+- $VPG 
+- Beijing Geekplus
+- $MBLY
+- $ARBE 
+- Nabtesco (6268)
+- $SERV
+- $HSYDF
+- Robotstrategy
+- $ZBRA
+- $CATL
+- $ABB 
+- $BOT
+- Unitree (not public yet)
+- $...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Here&#x27;s the humanoid exposure crowdsourced list:
+
+- $OUST 
+- Rainbow Robotics (277810)
+- $AMBA 
+- Ubtech Robotics
+- $MKA
+- Nextronics
+- $SYM
+- Harmonic Drive (6324)
+- $VPG 
+- Beijing Geekplus
+- $MBLY
+- $ARBE 
+- Nabtesco (6268)
+- $SERV
+- $HSYDF
+- Robotstrategy
+- $ZBRA
+- $CATL
+- $ABB 
+- $BOT
+- Unitree (not public yet)
+- $LSCC 
+- Esunny Robot (300024)
+- $NOVT
+- $RR
+- $PDY 
+- Hesai (2525)
+- $SHA.DE
+- $XBOT
+- $XPEV
+- $BAM
+- $ALNT
+- 6268.T
+- $AMBQ
+- $ATOM
+- $MRAM
+- $ISRG
+- $HLIT
+- Robosense (2498)
+- $HG
+- $ACUVI
+- $CGNX
+- $KLIC
+- $BSL
+- $AEVA
+- $AUR
+- $CTH.V
+- $IMSR
+- $NEO
+- $KDK
+- $MRLN 
+- $KITT
+- $INDI
+- $NOVT 
+
+Off the top of my head:
+
+Harmonic Drive, $OUST, $BOT, $VPG, $MBLY, and Ubtech showed up the most. 
+
+Will start doing DD into mentions.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2054335940026573222" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>以下是人形暴露众包列表：
+
+- $OUST 
+- 彩虹机器人 (277810)
+- $AMBA 
+- 优必选机器人
+- $MKA
+- Nexttronics
+- $SYM
+- 谐波传动 (6324)
+- $VPG 
+- 北京极客加
+- $MBLY
+- $ARBE 
+- 纳博特斯克 (6268)
+- $服务
+- $HSYDF
+- 机器人策略
+- $ZBRA
+- $宁德时代
+- $ABB 
+- $BOT
+- Unitree（尚未公开）
+- $LSCC 
+- 易盛机器人（300024）
+- $NOVT
+- $RR
+- $PDY 
+- 贺赛 (2525)
+- $SHA.DE
+- $XBOT
+- $XPEV
+- $BAM
+- $ALNT
+- 6268.T
+- $AMBQ
+- $原子
+- $MRAM
+- $ISRG
+- $HLIT
+- 速腾传感 (2498)
+- $HG
+- $ACUVI
+- $CGNX
+- $KLIC
+- $BSL
+- $AEVA
+- $AUR
+- $CTH.V
+- $IMSR
+- $NEO
+- $KDK
+- $MRLN 
+- $基特
+- $印度
+- $NOVT 
+
+我的头顶上浮现出：
+
+Harmonic Drive、$OUST、$BOT、$VPG、$MBLY 和 Ubtech 出现最多。 
+
+将开始对提及进行DD。</div>
+        <div class="tweet-foot">
+          <span>likes 3544 / retweets 339 / replies 235 / views 705130</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-05-08 15:42</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AEVA</span><span class="chip red">$AMD</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">$SIVE supplies lasers to likely $JBL, Ayar, Lightmatter, $POET, $MRVL Celestial, Lightelligence, $AMD, O-Net/Enablence, and others. 
+
+Not including silicon photonics programs with $AAPL or $AEVA or their other CHIPS act related work. 
+
+The amount of hyperscaler they feed into is pretty crazy at that valuation.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SIVE supplies lasers to likely $JBL, Ayar, Lightmatter, $POET, $MRVL Celestial, Lightelligence, $AMD, O-Net/Enablence, and others. 
+
+Not including silicon photonics programs with $AAPL or $AEVA or their other CHIPS act related work. 
+
+The amount of hyperscaler they feed into is pretty crazy at that valuation.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052655255012409624" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE 向可能的 $JBL、Ayar、Lightmatter、$POET、$MRVL Celestial、Lightelligence、$AMD、O-Net/Enablence 等供应激光器。 
+
+不包括 $AAPL 或 $AEVA 的硅光子项目或其其他 CHIPS 法案相关工作。 
+
+按照这个估值，他们投入的超大规模企业数量相当疯狂。</div>
+        <div class="tweet-foot">
+          <span>likes 200 / retweets 10 / replies 13 / views 15005</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-05-05 15:36</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AEVA</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ERIC</span><span class="chip red">$GFS</span><span class="chip red">$GOOGL</span><span class="chip red">$JBL</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$POET</span><span class="chip red">$RTX</span><span class="chip red">$SIVE</span><span class="chip red">$YSS</span></span>
+        </div>
+        <div class="tweet-text">Just a recap of recent information discovery + likely mapping with $SIVE:
+ 
+-&gt; $JBL 1.6T
+-&gt; Lightmatter
+-&gt; Ayar
+-&gt; $MRVL Celestial
+-&gt; Lightelligence 
+-&gt; $POET 
+-&gt; $GFS ecosystem
+-&gt; $AMD CPO
+-&gt; O-Net / Enablence
+-&gt; $AAPL Silicon Photonics
+_
+-&gt; $YSS Golden Dome/DoD
+-&gt; $RTX / $ERIC (Space)
+-&gt; Bae Systems
+-&gt; $AEVA 
+
+With $...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a recap of recent information discovery + likely mapping with $SIVE:
+ 
+-&gt; $JBL 1.6T
+-&gt; Lightmatter
+-&gt; Ayar
+-&gt; $MRVL Celestial
+-&gt; Lightelligence 
+-&gt; $POET 
+-&gt; $GFS ecosystem
+-&gt; $AMD CPO
+-&gt; O-Net / Enablence
+-&gt; $AAPL Silicon Photonics
+_
+-&gt; $YSS Golden Dome/DoD
+-&gt; $RTX / $ERIC (Space)
+-&gt; Bae Systems
+-&gt; $AEVA 
+
+With $JBL to Ayar feeding into hyperscalers like $MSFT, $GOOGL, $AMZN, $META.
+
+With likely Lightelligence to O-Net feeding into Asian Hyperscalers like Tencent, Bytedance, and Baidu.
+
+On top of that... the overarching TAM with CPO from the GS report goes from 0 -&gt;  $91B. 
+
+And Sivers happens to be the bleeding edge for CPO (also starting from 0). 
+
+This is definitely high-beta and volatile. 
+
+But if Win volume ramps alongside $SIVE, I see them both becoming $10B+ companies next year. 
+
+This is just extremely early on (H1) before the CPO supercycle starts H2 2026.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051566667009073315" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>只是回顾一下最近的信息发现 + 可能与 $SIVE 的映射：
+ 
+-&gt; $JBL 1.6T
+-&gt; 光物质
+-&gt; 阿亚尔
+-&gt; $MRVL 天体
+-&gt; 灯光智能 
+-&gt; $诗人 
+-&gt; $GFS 生态系统
+-&gt; $AMD CPO
+-&gt; 昂纳/Enablence
+-&gt; $AAPL 硅光子学
+_
+-&gt; $YSS 金顶/国防部
+-&gt; $RTX / $ERIC（空格）
+-&gt; 裴系统公司
+-&gt; $AEVA 
+
+通过 $JBL 到 Ayar 为 $MSFT、$GOOGL、$AMZN、$META 等超大规模提供商提供服务。
+
+Lightelligence 和 O-Net 可能会进入腾讯、字节跳动和百度等亚洲超大规模企业。
+
+最重要的是... GS 报告中的总体 TAM 和 CPO 从 0 -&gt; $91B。 
+
+而 Sivers 恰好是 CPO 的前沿（也是从 0 开始）。 
+
+这绝对是高贝塔值且不稳定。 
+
+但如果 Win 的销量与 $SIVE 一起增长，我预计它们明年都会成为 $10B+ 公司。 
+
+这只是 CPO 超级周期在 2026 年下半年开始之前的极早时间 (上半年)。</div>
+        <div class="tweet-foot">
+          <span>likes 1424 / retweets 105 / replies 94 / views 218999</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-04-28 15:45</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AEVA</span><span class="chip red">$AMD</span><span class="chip red">$COHR</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;m happy Japanese communities started positions in $SIVE after doing research!
+
+A stronger international shareholder base is always positive.
+
+As for some thoughts, my read on the market looks like:
+
+1. $NVDA bought out allocation from $LITE / $COHR
+2. $AMD CPO went with $GFS + $SIVE / Win for remaining laser supply m...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;m happy Japanese communities started positions in $SIVE after doing research!
+
+A stronger international shareholder base is always positive.
+
+As for some thoughts, my read on the market looks like:
+
+1. $NVDA bought out allocation from $LITE / $COHR
+2. $AMD CPO went with $GFS + $SIVE / Win for remaining laser supply maybe $LITE if there’s still allocation.
+3. And… $MRVL CPO will need lasers regardless.
+
+$SIVE looks like one of the last remaining pure play merchant laser suppliers. 
+
+So Marvell will go with $SIVE (fits Celestial specs already) directly with multi-source down the road (maybe $MTSI). After they vertically integrate away interposer packaging process IP that feeds into Celestial. 
+
+Just some interesting things to back that up: 
+
+-&gt; Ayar removed $MTSI and $LITE from their website and went with $SIVE as primary. Ayar’s connected to AlChip/GUC and others. 
+
+-&gt; If look at the $GFS slide there&#x27;s only two public players with $SIVE and $LITE after $AMD went with Globalfoundries for their CPO program. 
+
+-&gt; $SIVE likely has agreements with Win since last year for laser capacity scaling. 
+
+$NVDA likely hasn&#x27;t fully allocated that laser supply, so the remaining companies like $JBL, $AMD, and others go to Sivers for overflow. 
+
+Since $LITE signaled they were already fully allocated for 2028.
+
+I could be wrong, but just based on public information that’s what it looks like.
+
+As for why I think it&#x27;s a good long: 
+
+-&gt; Sivers also basically had no exposure to 800G or previous generations.
+-&gt; European markets price in previous 12 months revenue... hence previous depressed valuations
+-&gt; they get all the hyperscaler overflow created by market panic from $NVDA
+
+But they also happen to be in the bleeding edge of CPO and even for gen-2 1.6T ( $JBL LRO) scaling next year in 2027.
+
+Then for H2 2027 or 2028, they scale in adjacent areas like Silicon Photonics for likely $AAPL consumer devices. 
+
+Or FMCW 4D AI companies like $AEVA.
+
+Many many years of development, finally coming to fruition next year.
+
+I personally think markets are missing something big here, that the public uncovers over time with mapping hyperscaler relationships, website digging, or presentation slides. 
+
+Hyperscalers suppliers don&#x27;t randomly choose a $1B Swedish laser company for no reason. 
+
+The direct contract with $JBL was the biggest signal of that. 
+
+And it’s my high conviction long moving forward.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049032343974007088" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我很高兴日本社区在进行研究后开始在 $SIVE 中任职！
+
+更强大的国际股东基础总是积极的。
+
+至于一些想法，我对市场的了解如下：
+
+1. $NVDA 从 $LITE / $COHR 买断分配
+2. $AMD CPO 与 $GFS + $SIVE / Win 一起获得剩余的激光供应，如果仍有分配的话，可能是 $LITE。
+3. 而且……无论如何，$MRVL CPO 都需要激光。
+
+$SIVE 看起来像是最后仅存的纯商用激光供应商之一。 
+
+因此，Marvell 将直接使用 $SIVE（已经符合 Celestial 规格）和多源（可能是 $MTSI）。在他们垂直集成中介层封装工艺 IP 后，将其输入到 Celestial 中。 
+
+只是一些有趣的事情来支持这一点： 
+
+-&gt; Ayar 从他们的网站上删除了 $MTSI 和 $LITE，并以 $SIVE 作为主要。 Ayar 连接到 AlChip/GUC 等。 
+
+-&gt; 如果看一下 $GFS 幻灯片，在 $AMD 与 Globalfoundries 合作实施其 CPO 计划之后，只有两家公开的参与者拥有 $SIVE 和 $LITE。 
+
+-&gt; $SIVE 可能自去年以来就与 Win 就激光容量扩展达成协议。 
+
+$NVDA 可能尚未完全分配激光供应，因此 $JBL、$AMD 等剩余公司将向 Sivers 寻求溢出。 
+
+由于 $LITE 表示 2028 年的分配已全部完成。
+
+我可能是错的，但仅基于公开信息，情况就是这样。
+
+至于为什么我认为这是一个很好的长篇： 
+
+-&gt; Sivers也基本上没有接触过800G或者前几代。
+-&gt; 欧洲市场定价前 12 个月的收入...因此之前的估值低迷
+-&gt; 他们从 NVDA 获得了市场恐慌造成的所有超大规模溢出
+
+但它们也恰好处于 CPO 的前沿，甚至是明年 2027 年第 2 代 1.6T ($JBL LRO) 扩展的前沿。
+
+然后，到 2027 年下半年或 2028 年，他们将在相邻领域进行扩展，例如硅光子学，用于可能的 AAPL 消费设备。 
+
+或者像 $AEVA 这样的 FMCW 4D AI 公司。
+
+多年的发展，明年终于开花结果。
+
+我个人认为市场在这里遗漏了一些重要的东西，随着时间的推移，公众通过绘制超大规模的关系、网站挖掘或演示幻灯片来发现这些东西。 
+
+超大规模供应商不会无缘无故地随机选择一家 10 亿美元的瑞典激光公司。 
+
+与 $JBL 的直接合同是其中最大的信号。 
+
+这是我长期前进的坚定信念。</div>
+        <div class="tweet-foot">
+          <span>likes 994 / retweets 81 / replies 71 / views 237243</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-03-23 11:10</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@JuhongH $SIVE -&amp;gt; $AEVA is already well known. 
+
+People often cite $AEVA for more industrial stuff like trucking and maybe defense.
+
+But I like it for humanoids in specific. And I don&#x27;t think anyone mapped $SIVE to possible Boston Dynamics Atlas supply chains at all yet.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@JuhongH $SIVE -&amp;gt; $AEVA is already well known. 
+
+People often cite $AEVA for more industrial stuff like trucking and maybe defense.
+
+But I like it for humanoids in specific. And I don&#x27;t think anyone mapped $SIVE to possible Boston Dynamics Atlas supply chains at all yet.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2035917034824126916" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@JuhongH $SIVE -&gt; $AEVA 已经众所周知。 
+
+人们经常引用 $AEVA 来表示更多的工业产品，例如卡车运输，也许还有国防。
+
+但我特别喜欢人形机器人。我认为还没有人将 $SIVE 映射到可能的 Boston Dynamics Atlas 供应链。</div>
+        <div class="tweet-foot">
+          <span>likes 27 / retweets 1 / replies 1 / views 6477</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-03-23 10:17</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@AscendingLife3 I just find it interesting when I’m already invested in a frontier tech company like $AEVA.
+
+The other one in $SIVE happens to be their likely upstream supplier as well.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@AscendingLife3 I just find it interesting when I’m already invested in a frontier tech company like $AEVA.
+
+The other one in $SIVE happens to be their likely upstream supplier as well.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2035903801849499931" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@AscendingLife3 当我已经投资了像 $AEVA 这样的前沿科技公司时，我觉得这很有趣。
+
+$SIVE 中的另一家恰好也是他们可能的上游供应商。</div>
+        <div class="tweet-foot">
+          <span>likes 38 / retweets 0 / replies 1 / views 7275</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-03-23 09:52</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$JBL</span><span class="chip red">$LG</span><span class="chip red">$MRVL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">If you don&#x27;t remember:
+
+$AEVA was my long for 4D Physical AI + World Models.
+
+-&gt; LG $50m in $AEVA to co-develop FMCW 4D LiDAR, explicitly citing Humanoids
+-&gt; LG (Boston Dynamics vision spuplier).
+
+But... 
+
+Guess who makes those CW lasers for FM-CW Lidar?
+
+The very same company for scaling photonics with 1.6T+ pluggable...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you don&#x27;t remember:
+
+$AEVA was my long for 4D Physical AI + World Models.
+
+-&gt; LG $50m in $AEVA to co-develop FMCW 4D LiDAR, explicitly citing Humanoids
+-&gt; LG (Boston Dynamics vision spuplier).
+
+But... 
+
+Guess who makes those CW lasers for FM-CW Lidar?
+
+The very same company for scaling photonics with 1.6T+ pluggables with $JBL to CPO in $MRVL Celestial.
+
+Is the likely 4D AI CW laser supplier for humanoids and 4D physical AI.
+
+One highly possible mapping: 
+
+-&gt; $SIVE -&gt; $AEVA -&gt; $LG -&gt; Boston Dynamics.
+
+Both $SIVE and $AEVA were my two longs, but frontier sectors in 4D Physical AI to photonics tend to overlap.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2035897562025410927" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>如果你不记得了：
+
+$AEVA 是我对 4D 物理 AI + 世界模型的渴望。
+
+-&gt; LG 在 $AEVA 中投资 5000 万美元，共同开发 FMCW 4D LiDAR，明确引用了 Humanoids
+-&gt; LG（波士顿动力视觉供应商）。
+
+但是... 
+
+猜猜谁为 FM-CW 激光雷达制造了这些 CW 激光器？
+
+这家公司在 $MRVL Celestial 中使用 1.6T+ 可插拔器件扩展光子学，并使用 $JBL 到 CPO。
+
+可能是用于类人机器人和 4D 物理 AI 的 4D AI CW 激光器供应商。
+
+一种极有可能的映射： 
+
+-&gt; $SIVE -&gt; $AEVA -&gt; $LG -&gt; 波士顿动力。
+
+$SIVE 和 $AEVA 都是我的两个多头，但 4D 物理 AI 到光子学的前沿领域往往会重叠。</div>
+        <div class="tweet-foot">
+          <span>likes 443 / retweets 24 / replies 35 / views 77596</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-02-10 03:21</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$RDDT</span></span>
+        </div>
+        <div class="tweet-text">~$14.1. So basically where prices are now.
+
+That being said this is a small position since $AEVA company is inherently a venture bet on 4D AI. They also made a breakthrough for CPO using the same technology apparently.
+
+It’s not generating massive FCF like $RDDT, but decided it was worth the risk.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">~$14.1. So basically where prices are now.
+
+That being said this is a small position since $AEVA company is inherently a venture bet on 4D AI. They also made a breakthrough for CPO using the same technology apparently.
+
+It’s not generating massive FCF like $RDDT, but decided it was worth the risk.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2020941147636728186" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>~14.1 美元。所以基本上现在的价格是多少。
+
+话虽这么说，这是一个很小的头寸，因为 $AEVA 公司本质上是对 4D AI 的风险投资。他们显然也使用相同的技术在 CPO 方面取得了突破。
+
+它不像 $RDDT 那样产生大量 FCF，但认为值得冒险。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3878</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-02-10 03:07</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$OUST</span></span>
+        </div>
+        <div class="tweet-text">World* models.
+
+Apparently if the world&#x27;s most advanced World Models require Doppler-level precision, $AEVA is one of the only companies that can do it compared to companies to $OUST here?
+
+If you give Cosmos &quot;probabilistic&quot; depth data (from $OUST ) the model has to spend massive amounts of compute cycles calculating w...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">World* models.
+
+Apparently if the world&#x27;s most advanced World Models require Doppler-level precision, $AEVA is one of the only companies that can do it compared to companies to $OUST here?
+
+If you give Cosmos &quot;probabilistic&quot; depth data (from $OUST ) the model has to spend massive amounts of compute cycles calculating where things are moving. $AEVA just feeds in deterministic velocity data. “If a model has to infer motion from sequential depth frames, that’s additional computation versus receiving velocity as a direct input”</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2020937642867818529" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>世界*模型。
+
+显然，如果世界上最先进的世界模型需要多普勒级精度，那么与 $OUST 的公司相比，$AEVA 是唯一能够做到这一点的公司之一？
+
+如果您为 Cosmos 提供“概率”深度数据（来自 $OUST ），则模型必须花费大量计算周期来计算事物的移动位置。 $AEVA 仅输入确定性速度数据。 “如果模型必须从连续的深度帧推断运动，那么与接收速度作为直接输入相比，这需要额外的计算”</div>
+        <div class="tweet-foot">
+          <span>likes 24 / retweets 1 / replies 1 / views 12301</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-02-10 02:55</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$OUST</span></span>
+        </div>
+        <div class="tweet-text">Apparently $OUST sits more in “Probabilistic AI”while $AEVA FMCW solves the Deterministic Physical AI that word models need
+
+“FMCW gives velocity as a direct physical measurement (Doppler shift) versus ToF requiring computational derivation across frames”. 
+
+Maybe you can help articulate the nuance with $OUST and why y...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Apparently $OUST sits more in “Probabilistic AI”while $AEVA FMCW solves the Deterministic Physical AI that word models need
+
+“FMCW gives velocity as a direct physical measurement (Doppler shift) versus ToF requiring computational derivation across frames”. 
+
+Maybe you can help articulate the nuance with $OUST and why you think it’s better exposure to 4D AI</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2020934660986110264" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>显然，$OUST 更多地位于“概率人工智能”，而 $AEVA FMCW 解决了单词模型所需的确定性物理人工智能
+
+“FMCW 将速度作为直接物理测量（多普勒频移）提供，而 ToF 需要跨帧计算推导”。 
+
+也许您可以帮助阐明 $OUST 的细微差别以及为什么您认为接触 4D AI 更好</div>
+        <div class="tweet-foot">
+          <span>likes 29 / retweets 3 / replies 4 / views 19430</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-02-10 02:24</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$AMBA</span><span class="chip red">$AXTI</span><span class="chip red">$GOOGL</span><span class="chip red">$NVDA</span><span class="chip red">$OUST</span><span class="chip red">$TER</span><span class="chip red">$U</span></span>
+        </div>
+        <div class="tweet-text">Speaking of other bottlenecks like $AXTI.
+
+I’ve been looking into 4D AI.
+
+Convos with industry insiders leads me to believe it’s an upcoming trend eg. “World Models” for physical AI and humanoids post $NVDA Jensen’s conference.
+
+So took positions into $AEVA which is 4D LiDAR.
+
+Looks like the clearest functional midstre...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Speaking of other bottlenecks like $AXTI.
+
+I’ve been looking into 4D AI.
+
+Convos with industry insiders leads me to believe it’s an upcoming trend eg. “World Models” for physical AI and humanoids post $NVDA Jensen’s conference.
+
+So took positions into $AEVA which is 4D LiDAR.
+
+Looks like the clearest functional midstream bottleneck exposure to the trend, from my research? 
+
+Unless someone has others they’d like to mention.
+
+There’s stuff like $AMBA, $U (yes the games software), $TER, and $OUST but they’re larger companies without the clearest exposure.
+
+That being said it’s still a new space so still doing research. Also, fundamentals are shaky, so this is more of a venture bet for the industry growth. 
+
+Disclosure: I have long shares only of $AEVA, as speculative exposure to 4D AI + World Models for physical AI.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2020926882624176300" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>说到其他瓶颈，例如 $AXTI。
+
+我一直在研究 4D AI。
+
+与业内人士的交流让我相信这是一个即将到来的趋势，例如。 $NVDA Jensen 会议后的物理人工智能和类人机器人的“世界模型”。
+
+因此，我们买入了 $AEVA，即 4D LiDAR。
+
+从我的研究来看，这似乎是趋势中最明显的功能性中游瓶颈？ 
+
+除非有人想提及其他人。
+
+有 $AMBA、$U（是的，游戏软件）、$TER 和 $OUST 之类的公司，但它们都是较大的公司，没有最明显的曝光度。
+
+话虽这么说，这仍然是一个新领域，所以仍在进行研究。此外，基本面不稳定，因此这更像是对行业增长的风险押注。 
+
+披露：我只持有 $AEVA 的多头股票，作为对 4D AI + 物理 AI 世界模型的投机敞口。</div>
+        <div class="tweet-foot">
+          <span>likes 345 / retweets 39 / replies 27 / views 79596</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=AEVA">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

@@ -1,0 +1,4096 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$FN 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$FN 历史推文</h1>
+      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>51</b></div>
+        <div class="stat-card"><span>历史推文</span><b>51</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-02-25</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-06-09</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射 16</span><span class="chip blue">瓶颈狩猎（核心透镜） 13</span><span class="chip blue">签约 ARR vs 市值错配 7</span><span class="chip blue">稀释 / ATM 日历否决项 6</span><span class="chip blue">认证周期 vs TTM 营收 5</span><span class="chip blue">信念分层、仓位与时点 3</span><span class="chip blue">对手方 / 融资质量谱系 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-06-09 19:52</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMKR</span><span class="chip red">$ARM</span><span class="chip red">$ASX</span><span class="chip red">$CLS</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NBIS</span><span class="chip red">$NOK</span><span class="chip red">$TSEM</span><span class="chip red">$VICR</span></span>
+        </div>
+        <div class="tweet-text">Names like:
+
+- $ASX
+- Sumitomo Electric
+- $JBL
+- $VICR
+- $GFS 
+- $AAOI 
+- AlChip 
+- $TSEM
+- $FN
+- Furukawa Electric
+- $CLS
+- $NBIS
+- $NOK
+- $AMKR
+- $LITE
+- $COHR
+
+Off the top of my head.
+
+So basically, AI exposure trading in the $10-100B range.
+
+Likely have compelling ROI right now compared to indexes or $ARM to $MRVL ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Names like:
+
+- $ASX
+- Sumitomo Electric
+- $JBL
+- $VICR
+- $GFS 
+- $AAOI 
+- AlChip 
+- $TSEM
+- $FN
+- Furukawa Electric
+- $CLS
+- $NBIS
+- $NOK
+- $AMKR
+- $LITE
+- $COHR
+
+Off the top of my head.
+
+So basically, AI exposure trading in the $10-100B range.
+
+Likely have compelling ROI right now compared to indexes or $ARM to $MRVL that ran quite a bit? 
+
+(Just a disclosure, only have financial interest in NBIS/TSEM/AAOI above)
+
+I mention a lot of smaller ideas, but that’s just to chase outsized returns.
+
+Still feels like many of these have room to go.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2064314680521507114" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>名字如：
+
+- 澳大利亚证券交易所
+- 住友电工
+- $JBL
+- $VICR
+- $GFS 
+- $AAOI 
+- 阿尔芯片 
+- $TSEM
+- $FN
+- 古河电工
+- $CLS
+- $NBIS
+- 挪威克朗美元
+- $AMKR
+- $精简版
+- $COHR
+
+从我的头顶掉下来。
+
+所以基本上，人工智能风险敞口交易在 $10-100B 范围内。
+
+与运行相当多的指数或 $ARM 到 $MRVL 相比，现在可能具有引人注目的投资回报率？ 
+
+（仅供披露，仅在上述 NBIS/TSEM/AAOI 中拥有经济利益）
+
+我提到了很多较小的想法，但这只是为了追求巨大的回报。
+
+仍然感觉其中许多还有空间。</div>
+        <div class="tweet-foot">
+          <span>likes 1758 / retweets 190 / replies 372 / views 732701</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-05-22 22:09</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">People keep asking:
+
+Hey why do have new longs with Taiwan/EU stocks recently like $LPK or Foci?
+
+And not much with new US ones?
+
+It&#x27;s partly because the list of US stocks I&#x27;ve liked from $INTC to $NBIS hasn&#x27;t changed. 
+
+You can always just let the ones you like grow. https://t.co/ostZWjOAAm</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">People keep asking:
+
+Hey why do have new longs with Taiwan/EU stocks recently like $LPK or Foci?
+
+And not much with new US ones?
+
+It&#x27;s partly because the list of US stocks I&#x27;ve liked from $INTC to $NBIS hasn&#x27;t changed. 
+
+You can always just let the ones you like grow. https://t.co/ostZWjOAAm</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057826212257685733" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>人们不断地问：
+
+嘿，为什么最近有台湾/欧盟股票的新多头，例如$LPK或Foci？
+
+美国的新产品不多吗？
+
+部分原因是我喜欢的美国股票列表从 $INTC 到 $NBIS 没有改变。 
+
+你总是可以让你喜欢的人成长。 https://t.co/ostZWjOAAm</div>
+        <div class="tweet-foot">
+          <span>likes 1136 / retweets 66 / replies 134 / views 422462</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-05-20 21:00</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$FN</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">If people don’t realize why I’m so interested in $SIVE M&amp;A.
+
+Sivers likely customers were:
+
+Lightmatter when they were tiny -&gt; became $4B+ company.
+
+Lightelligence when they were tiny -&gt; became $10B+ company.
+
+Ayar when they were tiny -&gt; now funded by $NVDA, $AMD, and others.
+
+Celestial when they were tiny -&gt; bought by...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If people don’t realize why I’m so interested in $SIVE M&amp;A.
+
+Sivers likely customers were:
+
+Lightmatter when they were tiny -&gt; became $4B+ company.
+
+Lightelligence when they were tiny -&gt; became $10B+ company.
+
+Ayar when they were tiny -&gt; now funded by $NVDA, $AMD, and others.
+
+Celestial when they were tiny -&gt; bought by $MRVL and became their growth vector. Probably would be valued $10B+ standalone.
+
+I’m extremely sure Sivers knows what to acquire for optical IP. 
+
+They were just stuck in a catch-22 and lacked the funding to do so originally, despite owning one of the most valuable laser chokepoints.
+
+Future NASDAQ listing and recent growth unlocked downstream IP acquisition potential now.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057084047466414107" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>如果人们没有意识到为什么我对 $SIVE 并购如此感兴趣。
+
+Sivers 的可能客户是：
+
+Lightmatter 当他们还很小的时候 -&gt; 成为价值 4B+ 的公司。
+
+Lightelligence 在他们还很小的时候 -&gt; 成为了 10B+ 美元的公司。
+
+Ayar 当他们还很小的时候 -&gt; 现在由 $NVDA、$AMD 和其他人资助。
+
+当它们很小的时候是天上的 -&gt; 被 $MRVL 购买并成为它们的成长载体。独立估值可能会超过 10B+。
+
+我非常确信 Sivers 知道要获得什么光学 IP。 
+
+尽管拥有最有价值的激光阻塞点之一，但他们只是陷入了第 22 条军规，而且最初缺乏资金来做到这一点。
+
+未来的纳斯达克上市和近期的增长现在释放了下游知识产权收购的潜力。</div>
+        <div class="tweet-foot">
+          <span>likes 1006 / retweets 53 / replies 287 / views 189604</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-05-20 19:23</span>
+          <span><span class="chip red">$FN</span><span class="chip red">$LITE</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">$SIVE is nominating two new board members today. 
+
+It&#x27;s very highly telling since the newcomers have acquisition backgrounds from:
+
+-&gt; Head of M&amp;A at Ericsson / Advisor at Verdane, focusing on M&amp;A / Deutsche Bank. 
+
+ -&gt; CFO from HMS / Axholmen and Celerant Consulting around M&amp;A/strategy. 
+
+The bull case with $SIVE was ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SIVE is nominating two new board members today. 
+
+It&#x27;s very highly telling since the newcomers have acquisition backgrounds from:
+
+-&gt; Head of M&amp;A at Ericsson / Advisor at Verdane, focusing on M&amp;A / Deutsche Bank. 
+
+ -&gt; CFO from HMS / Axholmen and Celerant Consulting around M&amp;A/strategy. 
+
+The bull case with $SIVE was to start from the laser source:
+
+Then speedrun TAM expansion down the pluggable/CPO stack through IP acquisitions, and use $FN + others for final assembly to keep things capex light. 
+
+If they want to capture more overall revenue during the CPO/Photonics supercycle, following the $LITE playbook. 
+
+So, it&#x27;s a healthy indicator they&#x27;re heading down the right track nominating two M&amp;A focused people. 
+
+Only idea to float out is to capital raise with private placement or convertibles with US institutions after NASDAQ listing. 
+
+Since Swedish markets are still very thin and Sivers can get better terms for larger acquisitions... 
+
+after new US liquidity reprices of MC/shares on listing. (Sivers has that recent bridge round in the meantime)
+
+Larger US institutions are likely interested in entering new very material $SIVE positions as well once Sivers passes some US institutions listing mandates.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057059745429901334" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE 今天提名两名新董事会成员。 
+
+这是非常有说服力的，因为新来者具有以下收购背景：
+
+-&gt; 爱立信并购主管/Verdane 顾问，专注于并购/德意志银行。 
+
+ -&gt; HMS / Axholmen 和 Celerant Consulting 的首席财务官，负责并购/战略。 
+
+$SIVE 的牛市是从激光源开始的：
+
+然后通过 IP 收购加速 TAM 扩展可插拔/CPO 堆栈，并使用 $FN + 其他进行最终组装，以保持资本支出轻松。 
+
+如果他们想在 CPO/光子学超级周期中获得更多总体收入，请遵循 $LITE 策略。 
+
+因此，这是一个健康的指标，他们正在走上正确的道路，提名了两名专注于并购的人员。 
+
+唯一的出路是在纳斯达克上市后通过私募或向美国机构转股的方式筹集资金。 
+
+由于瑞典市场仍然非常薄弱，Sivers 可以为更大规模的收购获得更好的条件...... 
+
+在 MC/股票上市时新的美国流动性重新定价之后。 （西弗斯同时进行了最近的桥牌比赛）
+
+一旦 Sivers 通过了一些美国机构的上市授权，较大的美国机构也可能有兴趣进入新的非常重要的 $SIVE 头寸。</div>
+        <div class="tweet-foot">
+          <span>likes 858 / retweets 47 / replies 304 / views 373808</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-05-17 09:28</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMD</span><span class="chip red">$ASML</span><span class="chip red">$COHR</span><span class="chip red">$DGXX</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$KOPN</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$PENG</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">When I see comments like this (and there are a lot) from retail investors:
+
+I immediately think they lack the technical depth. 
+
+I&#x27;ll walk through each one from $SIVE to $LPK: 
+
+1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling past 2030 as it&#x27;s the next generation a...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">When I see comments like this (and there are a lot) from retail investors:
+
+I immediately think they lack the technical depth. 
+
+I&#x27;ll walk through each one from $SIVE to $LPK: 
+
+1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling past 2030 as it&#x27;s the next generation architecture of choice.
+
+It&#x27;s not going away in 1 year. It&#x27;s not going away in 3 years, which is why $LITE premiums keep going higher since they&#x27;re backlogged into 2028.
+
+$SIVE supplies CW lasers and is highly tethered to CPO and now pluggable transcivers for 1.6T and 3.2...
+
+For expected companies like $JBL, Ayar, Lightmatter, Lightelligence, $POET, $MRVL Celestial, and $AMD. 
+
+This isn&#x27;t a &quot;trade&quot;, it&#x27;s the core chokepoint and IP holder for the next generation of photonics. 
+
+And it&#x27;s a comfortable hold for the next few years as they scale to become the next $LITE.
+
+The risk I personally see (since they&#x27;re already qualified with so many players), it&#x27;s mainly how much TAM they can capture of the overall optical supercycle. (And potential risks with Win Semi volume ramp, but Win is massive so I can sleep tightly there). 
+
+As just supplying lasers isn&#x27;t enough to justify valuation.
+
+It&#x27;s TAM expansion downward into making the entire ELS or entire pluggable transceiver that makes these laser companies so valuable.  
+
+Then afterward, they can vertically integrating upward for gross margin expansion upward like $COHR into doing the laser fabs or even substrate level.  
+
+And that in my view is a very asymmetric risk/reward ratio as we&#x27;ve already seen this done with $LITE as they went from $2B to $80B. 
+
+ 2. $LPK - Is the purest exposure, without the messy financials of SKC Absolics, as the next advanced packaging shift for glass substrates.
+
+Almost every single major semi company from $INTC to Samsung are adopting glass substrates. 
+
+$LPK is basically $ASML of this chokepoint, since they supply to ~80% of the global players currently. 
+
+Yes, there&#x27;s &quot;trade cycles&quot; for equipment suppliers like $ASML, where if there&#x27;s more foundry capex, ASML scales up. But if there&#x27;s downturns, these tend to perform poorly, and don&#x27;t capture all the volume ramp that happens after. 
+
+However, if the MC is $650m and they&#x27;re making $100-200M, revenue per costumer volume ramped, the amount they make from the glass substrate cycle will likely exceed current valuations.
+
+And they&#x27;ll have baseline fundamentals (as more companies adopt the packaging shift), that keeps their valuation up. 
+
+It&#x27;s just a waiting game for volume ramp at this point. 
+
+3. $AAOI - This is literally $INTC but for America + Photonics. It&#x27;s like saying Intel is not a long term investment.
+
+Guess where all your optical transcivers are made?
+
+China. Thailand. Malaysia. If you look at Innolight, Eoptolink, $FN, and others.  
+
+AOI is building the largest Made in America supply chains for both CW laser fab, as well as 800g, 1.6T assembly. 
+
+Yes, there are pluggable cycle ups and downs to this as well. There&#x27;s going to be a wave for 1.6T next year, then CPO cannibalizes pluggables down the road.
+
+But since they make the entire supply chain in house, they have extreme optionality for other segments. And like $NVDA older gen-GPUs, there&#x27;s going to be sovereign DC requirements for older gen pluggables from names like $AAOI.  
+
+It&#x27;s likely going to keep rising as it hits that $400m+/month revenue target H2 2026. 
+
+There&#x27;s just a lot of different short term volatility along the way like the $600m dilution. 
+
+4. $IQE - ??? It&#x27;s one of the most important players in the Western word for epiwafers.
+
+$MTSI went out of their way to pay off IQE&#x27;s debt because they can&#x27;t have them going under. $IQE is also supplying to $LITE. 
+
+The world is currently bottlenecked both on the epiwafer level from Landmark comments and InP substrate levels. 
+
+Their financials were track but the raw book value, and value they hold to the entire Western supply chain... completely justifies their valuation. And other optical companies will not let their core upstream supply chain go under.
+
+As these tens of millions worth of materials would screw up tens of billions worth of downstream products. 
+
+Again photonics is the next generation architecture required to scale AI. It&#x27;s not Quantum where it&#x27;s just &quot;In development&quot;.
+
+It&#x27;s literally here and the architecture of choice by $NVDA. 
+
+I would not be surprised if all of these are a lot higher in 3-4 years time. 
+
+People who think it&#x27;s one and done in 3 months time  &quot;only because I mentioned it&quot; don&#x27;t know what they&#x27;re talking about.
+
+Institutions would have bought up the name eventually (like Point 72 on $IQE) and retail would only find out after their valuations are 600% higher.
+
+Should really do the research before adding comments like these:
+
+These are all forward growth companies that require in-depth supply chain knowledge.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2055822766600016238" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>当我看到散户投资者这样的评论（而且有很多）时：
+
+我立即认为他们缺乏技术深度。 
+
+我将从 $SIVE 到 $LPK 逐一介绍： 
+
+1. 光子学 TAM 在短短两年内从 $14B -&gt; $154B 增长，并且它很可能会在 2030 年之后继续扩展，因为它是下一代架构的选择。
+
+它不会在 1 年内消失。这种情况不会在 3 年内消失，这就是 $LITE 保费持续走高的原因，因为它们积压到了 2028 年。
+
+$SIVE 供应 CW 激光器，与 CPO 高度相关，现在可插拔收发器用于 1.6T 和 3.2...
+
+对于 $JBL、Ayar、Lightmatter、Lightelligence、$POET、$MRVL Celestial 和 $AMD 等预期公司。 
+
+这不是“交易”，而是下一代光子学的核心瓶颈和知识产权持有者。 
+
+在接下来的几年里，随着他们规模扩大成为下一个 $LITE，这是一个舒适的选择。
+
+我个人看到的风险（因为他们已经有这么多玩家晋级），主要是他们可以捕获整个光学超级周期的 TAM 量。 （还有 Win Semi 销量增加的潜在风险，但 Win 很大，所以我可以在那里睡得很香）。 
+
+因为仅仅提供激光器并不足以证明估值合理。
+
+正是 TAM 向下扩展，制造整个 ELS 或整个可插拔收发器，使这些激光公司变得如此有价值。  
+
+然后，他们可以垂直向上整合，以实现毛利率向上扩张，就像 $COHR 进入激光工厂甚至基板层面。  
+
+在我看来，这是一个非常不对称的风险/回报比，因为我们已经看到 $LITE 做到了这一点，因为它们从 $2B 到 $80B。 
+
+ 2. $LPK - 是最纯粹的曝光，没有 SKC Absolics 混乱的财务状况，作为玻璃基板的下一个先进封装转变。
+
+从 $INTC 到三星，几乎每家大型半导体公司都在采用玻璃基板。 
+
+$LPK 基本上是这个瓶颈的 $ASML，因为它们目前为全球约 80% 的参与者供货。 
+
+是的，像 $ASML 这样的设备供应商存在“贸易周期”，如果代工资本支出更多，ASML 就会扩大规模。但如果出现经济低迷，这些产品往往表现不佳，并且无法捕捉到随后发生的所有销量增长。 
+
+然而，如果 MC 的成本为 6.5 亿美元，而他们的收入为 100-2 亿美元，单位客户数量的收入大幅增加，那么他们从玻璃基板周期中获得的收入可能会超过当前的估值。
+
+他们将拥有基线基本面（随着越来越多的公司采用包装转变），这可以保持他们的估值上升。 
+
+此时，这只是一场等待音量提升的游戏。 
+
+3. $AAOI - 这实际上是 $INTC，但适用于 America + Photonics。这就像说英特尔不是一项长期投资。
+
+猜猜你们所有的光收发器都是哪里制造的？
+
+中国。泰国。马来西亚。如果你看看旭创科技、新易盛、$FN 等。  
+
+AOI 正在为 CW 激光晶圆厂以及 800g、1.6T 装配建立最大的美国制造供应链。 
+
+是的，这也存在可插入循环的起伏。明年将会出现 1.6T 的浪潮，然后 CPO 会蚕食可插拔的产品。
+
+但由于他们在内部生产整个供应链，因此他们对其他细分市场拥有极大的选择权。与 $NVDA 老一代 GPU 一样，$AAOI 等老一代可插拔设备也将面临主权 DC 要求。  
+
+随着 2026 年下半年达到 4 亿美元以上/月的收入目标，它可能会继续增长。 
+
+在此过程中会出现很多不同的短期波动，例如 6 亿美元的稀释。 
+
+4. $IQE - ???它是西方外延片领域最重要的参与者之一。
+
+$MTSI 竭尽全力偿还 IQE 的债务，因为他们不能让它们破产。 $IQE 还向 $LITE 供货。 
+
+目前，世界在 Landmark 评论的外延片水平和 InP 衬底水平上都面临着瓶颈。 
+
+他们的财务状况良好，但原始账面价值以及他们对整个西方供应链的价值……完全证明了他们的估值是合理的。而其他光学企业不会让自己的核心上游供应链垮掉。
+
+因为这几千万的材料，会搞砸价值几百亿的下游产品。 
+
+同样，光子学是扩展人工智能所需的下一代架构。这不是 Quantum，它只是“正在开发中”。
+
+它确实在这里，也是 $NVDA 选择的架构。 
+
+如果所有这些在 3 到 4 年内都会更高，我不会感到惊讶。 
+
+“仅仅因为我提到过”，那些认为这是一件在 3 个月内完成的人并不知道他们在说什么。
+
+机构最终会买下这个名字（就像 $IQE 上的 Point 72），而散户只有在估值高出 600% 后才会发现这一点。
+
+在添加这样的评论之前应该真正进行研究：
+
+这些都是向前发展的公司，需要深入的供应链知识。</div>
+        <div class="tweet-foot">
+          <span>likes 2730 / retweets 260 / replies 153 / views 622835</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">认证周期 vs TTM 营收</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 08:25</span>
+          <span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$TOWA</span><span class="chip red">$TOWCF</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">Yeah... the more I look into things, $TOWA / $TOWCF (6315) at ~$1.34b looks like a sleeper beneficiary for HBM4 spend from SK Hynix, Samsung, $MU.
+
+It’s hyper cyclical with spending cycles. 
+
+But we’re seeing hikes in capex spend across the board from memory makers.
+
+Not exactly a 4x type play... 
+
+But my guess is that...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yeah... the more I look into things, $TOWA / $TOWCF (6315) at ~$1.34b looks like a sleeper beneficiary for HBM4 spend from SK Hynix, Samsung, $MU.
+
+It’s hyper cyclical with spending cycles. 
+
+But we’re seeing hikes in capex spend across the board from memory makers.
+
+Not exactly a 4x type play... 
+
+But my guess is that it should get materially re-rated from a spike in unavoidable inflows for the start of the new HBM4 memory cycle anyway.
+
+And they appear to be a largely forgotten beneficiary for this new cycle despite their monopoly in compression modeling processes. 
+
+Hybrid bonding just removes one step in the process but requires Towa anyway (monopolies tend to get higher premiums)
+
+I also don&#x27;t think this cycle is like the last due to how much memory companies have been printing recently?
+
+Just my thoughts, but if my guess is right... it should show up in earnings on the Monday 11th (Tokyo Time) as everyone’s building out HBM4 lines?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049646205039522009" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是的...我越深入研究，$TOWA / $TOWCF (6315) 的价格约为 1.34b 美元，看起来像是 SK 海力士、三星、$MU 的 HBM4 支出的卧铺受益者。
+
+支出周期具有超周期性。 
+
+但我们看到内存制造商的资本支出全面增加。
+
+不完全是4x类型的游戏...... 
+
+但我的猜测是，无论如何，在新的 HBM4 内存周期开始时，由于不可避免的资金流入激增，它应该得到实质性的重新评级。
+
+尽管他们在压缩建模过程中处于垄断地位，但他们似乎是这个新周期的很大程度上被遗忘的受益者。 
+
+混合粘合仅消除了该过程中的一个步骤，但无论如何都需要 Towa（垄断企业往往会获得更高的保费）
+
+我也不认为这个周期与上一个周期相似，因为最近内存公司印刷了多少？
+
+只是我的想法，但如果我的猜测是正确的……它应该会出现在 11 日星期一（东京时间）的收益中，因为每个人都在构建 HBM4 生产线？</div>
+        <div class="tweet-foot">
+          <span>likes 577 / retweets 53 / replies 53 / views 209237</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 05:40</span>
+          <span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$ONTO</span><span class="chip red">$TOWA</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">Monitoring the situation for you (testing/yields edition):
+
+$VIAV and $FORM earnings: Extremely Bullish
+
+So what does this mean?
+
+Names like  $ONTO / $CAMT go brr. Throw in $TOWA (6315), since there&#x27;s indication of aggressive memory production ramp.
+
+Names like Msscorps / $KEYS should go brrr. 
+
+Broader upstream yields...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Monitoring the situation for you (testing/yields edition):
+
+$VIAV and $FORM earnings: Extremely Bullish
+
+So what does this mean?
+
+Names like  $ONTO / $CAMT go brr. Throw in $TOWA (6315), since there&#x27;s indication of aggressive memory production ramp.
+
+Names like Msscorps / $KEYS should go brrr. 
+
+Broader upstream yields, test, validation, and inspection for both memory + optical ecosystem go heavily BRRR. And it&#x27;s a leading indicator for $COHR, $FN, $LITE, and others if they&#x27;re ramping up production. 
+
+For $VIAV:
+-&gt; $406.8M vs. $393M (beat) 42.8% Y/Y growth.
+-&gt; $.27 EPS vs $0.2-$0.24
+Guidance was $427m-$437m, indicating acceleration.
+
+For $FORM:
+-&gt; $226M, 32% Y/Y, $.56  EPS vs. $.45
+-&gt; margins increased a TON to 49% (which indicates pricing power).
+-&gt; Guidance was $.61 EPS, midpoint ~$240m revenue. 
+
+&quot;Record demand for High Bandwidth Memory (HBM) and stronger &quot;Foundry &amp; Logic networking applications&quot;
+
+Basically the smaller yields/test ecosystem in general. BRRR.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049604721766494640" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>为您监控情况（测试/收益版）：
+
+$VIAV 和 $FORM 收益：极其看涨
+
+那么这意味着什么呢？
+
+像 $ONTO / $CAMT 这样的名字都很好。加上$TOWA (6315)，因为有迹象表明内存产量正在大幅增加。
+
+像 Msscorps / $KEYS 这样的名字应该是 brrr。 
+
+存储器 + 光学生态系统的更广泛的上游产量、测试、验证和检查都非常重视 BRRR。对于 $COHR、$FN、$LITE 和其他正在提高产量的公司来说，这是一个领先指标。 
+
+对于 $VIAV：
+-&gt; 4.068 亿美元 vs. 3.93 亿美元（超过）42.8% 的同比增长。
+-&gt; 每股收益 0.27 美元 vs 0.2-0.24 美元
+指导值为 4.27 亿至 4.37 亿美元，表明加速增长。
+
+对于 $FORM：
+-&gt; 2.26 亿美元，同比增长 32%，每股收益 0.56 美元 vs. 0.45 美元
+-&gt; 利润率增加一吨至 49%（这表明定价能力）。
+-&gt; 指导值为每股收益 0.61 美元，收入中值约为 2.4 亿美元。 
+
+“对高带宽内存 (HBM) 和更强大的“铸造和逻辑网络应用”的需求创历史新高
+
+基本上，总体上较小的产量/测试生态系统。 BRRR。</div>
+        <div class="tweet-foot">
+          <span>likes 1133 / retweets 104 / replies 78 / views 349851</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 11:38</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Just putting out there...
+
+Would have been +15.02% in 2W equal-weighted return.
+
+On 30 different stocks... mostly medium-large cap. 
+
+1. $INTC +29.62%
+2. $MRVL +40.95%
+3. $TSM +4.72%
+4. $COHR +18.9%
+5. $RKLB +26.76%
+6. $DRAM +12.29%
+7. $AVGO +18.32%
+8. $AMZN +9.17%
+9. $ARM +36.6%
+10. $TSEM -1.25%
+11. $IBIT +7.68%
+12. $...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just putting out there...
+
+Would have been +15.02% in 2W equal-weighted return.
+
+On 30 different stocks... mostly medium-large cap. 
+
+1. $INTC +29.62%
+2. $MRVL +40.95%
+3. $TSM +4.72%
+4. $COHR +18.9%
+5. $RKLB +26.76%
+6. $DRAM +12.29%
+7. $AVGO +18.32%
+8. $AMZN +9.17%
+9. $ARM +36.6%
+10. $TSEM -1.25%
+11. $IBIT +7.68%
+12. $NBIS +15.22%
+13. $GOOGL +6.41%
+14. $AMKR +32.25%
+15. $HOOD +19.14%
+16. $CRCL +17.58%
+17. $META +4.9%
+18. $LITE -5.28%
+19. $LPTH +20.23%
+20. $FN +11.54%
+21. $JBL +15.45%
+22. $MP +17.48%
+23. $HIMS +42.53%
+24. $SMTC +18.83%
+25. $POWL +9.26%
+26. $VPG +17.44%
+27. $MOG.A -3.96%
+28. $MSFT +11.44%
+29. $CVX -1.47%
+30. $XLU -2.29%
+
+Obviously short timeframe, but I expect many of these to keep going up more. 
+
+And probably would have been higher if you time the drop on specific names, rather than going long all at once. 
+
+Not too shabby?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047520460884353096" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>刚放在那里...
+
+2W 等权回报率为 +15.02%。
+
+30 种不同的股票......大部分是中型大盘股。 
+
+1.$INTC +29.62%
+2. MRVL 美元+40.95%
+3.$TSM +4.72%
+4. $COHR +18.9%
+5.$RKLB +26.76%
+6. DRAM美元+12.29%
+7.$AVGO +18.32%
+8.亚马逊+9.17%
+9. ARM +36.6%
+10. $TSEM -1.25%
+11. 息税前利润 +7.68%
+12.$NBIS +15.22%
+13.$GOOGL +6.41%
+14.$AMKR +32.25%
+15.$HOOD +19.14%
+16.$CRCL +17.58%
+17.$元+4.9%
+18.$LITE -5.28%
+19.$LPTH +20.23%
+20.$FN +11.54%
+21.$JBL +15.45%
+22.$MP +17.48%
+23. $HIMS +42.53%
+24.$SMTC +18.83%
+25.$POWL +9.26%
+26. $VPG +17.44%
+27.$MOG.A -3.96%
+28.$微软金融时报 +11.44%
+29. $CVX -1.47%
+30.$XLU -2.29%
+
+显然时间很短，但我预计其中许多会继续上升。 
+
+如果你根据特定的名字来计算下跌的时间，而不是一次性做多，那么价格可能会更高。 
+
+是不是太破烂了？</div>
+        <div class="tweet-foot">
+          <span>likes 1644 / retweets 101 / replies 66 / views 309386</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-04-21 07:01</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$ASX</span><span class="chip red">$ATEYY</span><span class="chip red">$FN</span><span class="chip red">$GFS</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">What a crazy timeline?
+
+Today, $AMD announced it&#x27;s pushing into CPO and collaborating with $GFS. 
+
+This is highly bullish for $SIVE since for CPO/SiPH, it requires external laser light source. 
+
+And... guess who are the two public laser suppliers in the GlobalFoundries CPO ecosystem?
+
+$SIVE (~$935m) and $LITE (~$64 bil...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">What a crazy timeline?
+
+Today, $AMD announced it&#x27;s pushing into CPO and collaborating with $GFS. 
+
+This is highly bullish for $SIVE since for CPO/SiPH, it requires external laser light source. 
+
+And... guess who are the two public laser suppliers in the GlobalFoundries CPO ecosystem?
+
+$SIVE (~$935m) and $LITE (~$64 billion)
+
+Sivers lasers feel like they could be everywhere now in upcoming hyperscaler CPO/1.6T deployments.
+
+So... if Sivers secures the spot to provide the laser arrays for the $AMD Instinct MI500&#x27;s CPO solution in 2027.
+
+(Which seems highly possible given there’s only three laser names listed + hyperscalers like to multi-source)
+
+This might represent massive, high volume production for Sivers that markets haven&#x27;t pricing in.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046363533471035793" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>多么疯狂的时间表？
+
+今天，$AMD 宣布将推进 CPO 并与 $GFS 合作。 
+
+这对 $SIVE 来说是非常有利的，因为对于 CPO/SiPH 来说，它需要外部激光光源。 
+
+还有……猜猜 GlobalFoundries CPO 生态系统中的两家公共激光器供应商是谁？
+
+$SIVE（约 9.35 亿美元）和 $LITE（约 640 亿美元）
+
+Sivers 激光器感觉它们现在可以在即将到来的超大规模 CPO/1.6T 部署中无处不在。
+
+那么...如果 Sivers 在 2027 年获得为 $AMD Instinct MI500 的 CPO 解决方案提供激光阵列的席位。
+
+（考虑到只列出了三个激光器名称+超大规模者喜欢多源，这似乎很有可能）
+
+这可能代表了西弗斯的大规模、高产量，而市场尚未定价。</div>
+        <div class="tweet-foot">
+          <span>likes 1121 / retweets 111 / replies 65 / views 381546</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-04-21 02:57</span>
+          <span><span class="chip red">$ASX</span><span class="chip red">$ATEYY</span><span class="chip red">$CDNS</span><span class="chip red">$FN</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$SEIGY</span><span class="chip red">$SIVE</span><span class="chip red">$SNPS</span></span>
+        </div>
+        <div class="tweet-text">Global Foundries photonics/CPO ecosystem list:
+
+1. $GFS - $30.5B
+2. $CDNS - $85.9B
+3. $SEIGY - $217.2B
+4. $SNPS - $84B
+5. $KEYS - $57.3B
+6. $ATEYY - $130.4B
+7.  RoboTechnik (ficonTEC) - $11.4B
+8. $GLW - $141.2B
+9. $LITE - $63.8B
+10. $SIVE - $950m
+11. $FN - $24.7B
+12. $ASX - $63.3B
+
+For publicly traded names.
+
+Equal wei...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Global Foundries photonics/CPO ecosystem list:
+
+1. $GFS - $30.5B
+2. $CDNS - $85.9B
+3. $SEIGY - $217.2B
+4. $SNPS - $84B
+5. $KEYS - $57.3B
+6. $ATEYY - $130.4B
+7.  RoboTechnik (ficonTEC) - $11.4B
+8. $GLW - $141.2B
+9. $LITE - $63.8B
+10. $SIVE - $950m
+11. $FN - $24.7B
+12. $ASX - $63.3B
+
+For publicly traded names.
+
+Equal weighted long on the ecosystem from their presentation might not be a bad idea? 
+
+I still find it funny how everything publicly listed is trading in the tens of billions.
+
+Then there&#x27;s some small Swedish laser company there next to $LITE.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046302180001673341" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Global Foundries 光子/CPO 生态系统列表：
+
+1. $GFS - $30.5B
+2. $CDNS - $85.9B
+3.$SEIGY - $217.2B
+4.$SNPS - $84B
+5.$KEYS - $57.3B
+6. $ATEYY - $130.4B
+7. RoboTechnik (ficonTEC) - $11.4B
+8. $GLW - $141.2B
+9. $LITE - $63.8B
+10. $SIVE - 9.5 亿美元
+11. $FN - $24.7B
+12.$ASX - $63.3B
+
+对于公开交易的名称。
+
+从他们的演讲中看，对生态系统进行同等加权的多头可能不是一个坏主意？ 
+
+我仍然觉得有趣的是，所有公开上市的股票的交易额都达到数百亿美元。
+
+$LITE 旁边还有一些小型瑞典激光公司。</div>
+        <div class="tweet-foot">
+          <span>likes 1134 / retweets 126 / replies 94 / views 197758</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-04-20 19:22</span>
+          <span><span class="chip red">$ASX</span><span class="chip red">$ATEYY</span><span class="chip red">$FN</span><span class="chip red">$GFS</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Did $GFS give the first direct confirmation about $SIVE...
+
+As the laser supplier for their CPO / photonics ecosystem? 
+
+This is explicit laser architectural inclusion vs. previous supply chain mapping with Ayar/Celestial. 
+
+You get a hint of the other major players here:
+- $FN / $ASX for assembly
+- $LITE / $SIVE for l...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Did $GFS give the first direct confirmation about $SIVE...
+
+As the laser supplier for their CPO / photonics ecosystem? 
+
+This is explicit laser architectural inclusion vs. previous supply chain mapping with Ayar/Celestial. 
+
+You get a hint of the other major players here:
+- $FN / $ASX for assembly
+- $LITE / $SIVE for lasers
+- $ATEYY / $KEYS for testing. 
+
+There&#x27;s no text-based news yet, since this was the $GFS March 2026 webinar image-based presentation.
+
+But having a &lt;$1B company on the tiny list of laser providers next to $LITE... 
+
+Quite special right?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046187732800782587" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$GFS 是否首次直接确认了 $SIVE...
+
+作为其 CPO/光子学生态系统的激光器供应商？ 
+
+这是明确的激光架构包容性与之前使用 Ayar/Celestial 进行供应链映射的对比。 
+
+您可以在这里了解其他主要参与者的提示：
+- $FN / $ASX 用于组装
+- $LITE / $SIVE 用于激光
+- $ATEYY / $KEYS 用于测试。 
+
+目前还没有基于文本的新闻，因为这是 $GFS 2026 年 3 月网络研讨会基于图像的演示。
+
+但是，在激光供应商的小名单上，除了 $LITE 之外，还有一家 &lt;10 亿美元的公司…… 
+
+很特别吧？</div>
+        <div class="tweet-foot">
+          <span>likes 796 / retweets 67 / replies 69 / views 362483</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-04-20 04:40</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Wow, majority of these 30 stocks I’ve liked are up a lot in just two weeks (just a recap to new folks)
+
+By the way, my long term opinion doesn’t change on any of them from $MRVL, $AMD, $ARM and others.
+
+Short term entry points do though with names like $AAOI to $AEHR. And they make the difference between +10-20%. 
+
+I f...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Wow, majority of these 30 stocks I’ve liked are up a lot in just two weeks (just a recap to new folks)
+
+By the way, my long term opinion doesn’t change on any of them from $MRVL, $AMD, $ARM and others.
+
+Short term entry points do though with names like $AAOI to $AEHR. And they make the difference between +10-20%. 
+
+I focus a lot about the “undiscovered” ones like Riber or $SIVE or $RPI or $IQE in analysis when I make a new entry -&gt; wait for it to play out.
+
+But the same thesis around $LITE or $NBIS or $AXTI from last year is still the same. 
+
+And I don’t need to post that same thesis multiple times, since it’s not new anymore.
+
+But the reason they’re not new is because markets have validated the thesis and are repricing the stocks live because of them.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2045965735386820934" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>哇，我喜欢的这 30 只股票中的大多数在短短两周内就上涨了很多（只是对新手的回顾）
+
+顺便说一句，我对 $MRVL、$AMD、$ARM 等的长期看法都没有改变。
+
+短期切入点的名称是 $AAOI 到 $AEHR。他们的差异在+10-20%之间。 
+
+当我创建新条目时，我会在分析中重点关注“未被发现”的内容，例如 Riber 或 $SIVE 或 $RPI 或 $IQE -&gt; 等待它发挥作用。
+
+但去年关于 $LITE 或 $NBIS 或 $AXTI 的相同论文仍然是相同的。 
+
+我不需要多次发表同一篇论文，因为它不再是新的了。
+
+但它们之所以不新鲜，是因为市场已经验证了这一论点，并因此而对股票进行了重新定价。</div>
+        <div class="tweet-foot">
+          <span>likes 1500 / retweets 82 / replies 87 / views 318889</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-04-17 09:57</span>
+          <span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$FN</span><span class="chip red">$NVDA</span></span>
+        </div>
+        <div class="tweet-text">I actually don’t have positions but gave some slight DD away for subscribers earlier.
+
+I expect PCL Technologies (4977) to double as well.
+
+Since they’re doing everything in $AVGO photonics ecosystem for assembly, optical, testing.
+
+Think I mentioned this around ~$450M MC? https://t.co/vmgilSKANV</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I actually don’t have positions but gave some slight DD away for subscribers earlier.
+
+I expect PCL Technologies (4977) to double as well.
+
+Since they’re doing everything in $AVGO photonics ecosystem for assembly, optical, testing.
+
+Think I mentioned this around ~$450M MC? https://t.co/vmgilSKANV</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2044958395485311178" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我实际上没有职位，但之前为订阅者提供了一些轻微的 DD。
+
+我预计 PCL Technologies (4977) 的股价也会翻一番。
+
+因为他们在 $AVGO 光子学生态系统中进行组装、光学、测试等所有工作。
+
+我记得我在大约 4.5 亿美元的 MC 左右提到过这个吗？ https://t.co/vmgilSKANV</div>
+        <div class="tweet-foot">
+          <span>likes 598 / retweets 44 / replies 44 / views 223751</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-04-17 09:43</span>
+          <span><span class="chip red">$ASX</span><span class="chip red">$FN</span><span class="chip red">$NVDA</span></span>
+        </div>
+        <div class="tweet-text">Shunsin (6451). Foxconn’s optical packaging/assembly arm.
+
+Previously 15-16% gross margins as OSAT but CPO/1.6T could be 30-35%, which brings blended up. 
+
+Since they’re doing harder FAU optical alignment in $NVDA CPO supply chains.
+
+Compared to $FN or $ASX that trades in the tens of billions?
+
+This trades at… $1.4B MC...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Shunsin (6451). Foxconn’s optical packaging/assembly arm.
+
+Previously 15-16% gross margins as OSAT but CPO/1.6T could be 30-35%, which brings blended up. 
+
+Since they’re doing harder FAU optical alignment in $NVDA CPO supply chains.
+
+Compared to $FN or $ASX that trades in the tens of billions?
+
+This trades at… $1.4B MC with, fwd 2028 p/e likely compresses to single digits from personal projections, as Foxconn passes orders to them.
+
+Foxconn is massive. And de-risks this company.
+
+Pretty high conviction this ends up doubling soon. 
+
+Just nobody knows about this company imo.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2044954792381030506" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>顺信（6451）。富士康的光学封装/组装部门。
+
+之前 OSAT 的毛利率为 15-16%，但 CPO/1.6T 的毛利率可能为 30-35%，这导致了混合。 
+
+因为他们在 NVDA CPO 供应链中进行了更严格的 FAU 光学对准。
+
+与交易量高达数百亿的 $FN 或 $ASX 相比？
+
+其交易价格为… $1.4B MC，随着富士康将订单传递给他们，根据个人预测，2028 年预期市盈率可能会压缩至个位数。
+
+富士康规模很大。并降低这家公司的风险。
+
+相当高的信念，这很快就会翻倍。 
+
+在我看来，只是没有人知道这家公司。</div>
+        <div class="tweet-foot">
+          <span>likes 446 / retweets 23 / replies 50 / views 370738</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-04-13 15:30</span>
+          <span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span></span>
+        </div>
+        <div class="tweet-text">Bro why are all the institutions copy trading some random on X with an anime PFP?
+
+Obviously all my followers frontran institutions with $IQE.
+
+But now it’s just going parabolic after Point72 and others started buying up the float at ATHs. https://t.co/mI4vsHe0f0</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Bro why are all the institutions copy trading some random on X with an anime PFP?
+
+Obviously all my followers frontran institutions with $IQE.
+
+But now it’s just going parabolic after Point72 and others started buying up the float at ATHs. https://t.co/mI4vsHe0f0</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2043592728270061741" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>兄弟，为什么所有机构都在 X 上用动漫 PFP 进行随机跟单交易？
+
+显然，我所有的追随者都用 $IQE 来对抗机构。
+
+但现在，在 Point72 和其他公司开始以 ATH 价格买入流通股后，它的走势正呈抛物线增长。 https://t.co/mI4vsHe0f0</div>
+        <div class="tweet-foot">
+          <span>likes 428 / retweets 21 / replies 50 / views 221485</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-04-12 00:37</span>
+          <span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MTSI</span><span class="chip red">$SIVE</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Didn’t I tell you all it’s possible retail can frontrun institutions anon??
+
+-&gt; Point72 is aggressively buying up $IQE 2 months later at ATHs... 
+
+After my latent InP reactor capacity + $LITE supplier thesis post.
+
+-&gt; Apollo literally bought out NSG, the $TSM COUPE glass provider I identified.
+
+-&gt; And I&#x27;ve identified m...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Didn’t I tell you all it’s possible retail can frontrun institutions anon??
+
+-&gt; Point72 is aggressively buying up $IQE 2 months later at ATHs... 
+
+After my latent InP reactor capacity + $LITE supplier thesis post.
+
+-&gt; Apollo literally bought out NSG, the $TSM COUPE glass provider I identified.
+
+-&gt; And I&#x27;ve identified many others like $SIVE, the $MRVL / $JBL supplier to Riber the unknown quantum supplier to $MSFT (with the help of a friend) recently. 
+
+I happen to like democratizing information discovery/synthesis to retail investors at the very beginning…
+
+Instead of selling analysis to institutions or behind $20000+ paywalls. 
+
+Stocks are genuinely positive sum where retail can get the lead for the first time.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2043005647424491596" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我不是告诉过你零售业有可能立即领先于机构吗？
+
+-&gt; 两个月后，Point72 在 ATH 积极买入 $IQE... 
+
+在我潜在的 InP 反应堆容量 + $LITE 供应商论文发表后。
+
+-&gt; Apollo 确实收购了我确定的 $TSM COUPE 玻璃供应商 NSG。
+
+-&gt; 我最近还确定了许多其他人，例如 $SIVE，Riber 的 $MRVL / $JBL 供应商，$MSFT 的未知量子供应商（在朋友的帮助下）。 
+
+我碰巧喜欢从一开始就向散户投资者民主化信息发现/合成......
+
+而不是向机构出售分析或以 20000 美元以上的付费墙出售分析。 
+
+股票是真正的正和，零售业首次取得领先地位。</div>
+        <div class="tweet-foot">
+          <span>likes 924 / retweets 40 / replies 51 / views 262765</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-04-10 18:24</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I cooked pretty hard finding $IQE? Another massive triple digit gain. 
+
+Up 23%+ today. 
+
+I said earlier that next $AXTI 10x would be either $AAOI, $IQE, or $SIVE.
+
+We&#x27;ll see which one ends up winning. https://t.co/v8rAHL8Wjk</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I cooked pretty hard finding $IQE? Another massive triple digit gain. 
+
+Up 23%+ today. 
+
+I said earlier that next $AXTI 10x would be either $AAOI, $IQE, or $SIVE.
+
+We&#x27;ll see which one ends up winning. https://t.co/v8rAHL8Wjk</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2042549185095045231" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我做饭很难找到$IQE？又一个三位数的大幅增长。 
+
+今天上涨 23% 以上。 
+
+我之前说过，下一个 $AXTI 10x 将是 $AAOI、$IQE 或 $SIVE。
+
+我们将看看哪一方最终获胜。 https://t.co/v8rAHL8Wjk</div>
+        <div class="tweet-foot">
+          <span>likes 787 / retweets 49 / replies 82 / views 162363</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-04-09 18:27</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$SIVE</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Here&#x27;s a bunch of random 30 US-available random stocks I like today and why:  
+
+1. $INTC - America&#x27;s hope for foundry, national security
+2. $MRVL - scales rev from future maia asics and add ons like cpo, they do everything lost count
+3. $TSM - backbone of semis/ai
+4. $COHR - They do everything vertically integrated + c...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Here&#x27;s a bunch of random 30 US-available random stocks I like today and why:  
+
+1. $INTC - America&#x27;s hope for foundry, national security
+2. $MRVL - scales rev from future maia asics and add ons like cpo, they do everything lost count
+3. $TSM - backbone of semis/ai
+4. $COHR - They do everything vertically integrated + captures optical cycle
+5. $RKLB - the final frontier of space will be around 5 years from now and 20 years from now. 
+6. $DRAM - memory exposure for samsung/sk hynix
+7. $AVGO - hyperscalers dont like nvidia gpu tax
+8. $AMZN - nobody can compete against the overnight shipping of toilet paper. robotics will lower opex over time
+9. $ARM - AGI CPUs scale revenue quite a bit over the next decade
+10. $TSEM - you&#x27;re going to need a foundry for light based stuff
+11. $IBIT - bitcoin, we all know by now
+12. $NBIS - i think it&#x27;s the next AWS. Also they do self-driving cars with uber, own scaling DB companies, data labeling. It&#x27;s almost like a mini Google. 
+13. $GOOGL - youtube is not going away, gemini is great. they&#x27;re vertically integrated with TPUs and fund buildout with operating income so i like it. 
+14. $AMKR - super facilities coming online in late 2027-2028. benefits from made in america
+15. $HOOD - i dont like short term, but long term i&#x27;m a fan of Robinhood since they captured retail + have more products like banking, etc that they&#x27;re scaling up. product innovation is wild.
+16. $CRCL - I happen to really like stablecoins and see them as the future for both payments/holding (depends on clarity act)
+17. $META - people aren&#x27;t going to stop using instagram or whatsapp, or others anytime soon. 
+18. $LITE - $GOOGL TPU exposure decently high part of BOM. As long as Google&#x27;s AI program keeps running I think $LITE will do well.
+19. $LPTH - Germanium and China export controls will always be an issue so US made engineered alternatives  will always be important
+20. $FN - Someone needs to assemble optical stuff
+21. $JBL - same as above, but added with ip from Intel&#x27;s SiPh acqusition so might end up like innolight?
+22. $MP - American rare earths program is extremely important, similar to $INTC national security risks
+23. $HIMS - Okay here me out they just acquired a ton of companies, and at $19 they have global DTC channel. short sellers really hate this company, but I think it&#x27;s actually promising as a contrarian long
+24. $SMTC - LRO/LPO transition
+25. $POWL - US alternative to hammond for switchgear DC type bottleneck
+26. $VPG - Humanoids will be a thing down the road maybe 2027-2028, this makes the sensors. 
+27. $MOG.A - Feels like i see them everywhere in robotics, to spacex supply chains
+28. $MSFT - At $375, one day we&#x27;ll look back and see this as a buying opportunity.
+29. $CVX - oil might crash after war but these oil companies are going to be extremely important, especially when Venezulea is a goldmine.
+30. $XLU - i think rate cuts might be back online, we need power/grid for AI so these names will always be improtant from $CEG to $NEE
+
+Just throwing out other thoughts aside from $AAOI and $AEHR.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2042187668931616964" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>以下是我今天喜欢的 30 只美国随机股票及其原因：  
+
+1. $INTC——美国对代工、国家安全的希望
+2. $MRVL - 从未来的 maia asics 和像 cpo 这样的附加组件中调整转速，他们做的一切都数不清了
+3. $TSM - semis/ai 的支柱
+4. $COHR - 他们做所有垂直整合+捕获光周期的事情
+5. $RKLB - 太空的最终边界将在 5 年后和 20 年后出现。 
+6. $DRAM - 三星/SK海力士内存曝光
+7. $AVGO - 超大规模企业不喜欢 nvidia gpu 税
+8. $AMZN - 没有人可以与卫生纸的隔夜运输竞争。随着时间的推移，机器人技术将降低运营成本
+9. $ARM - AGI CPU 在未来十年内大幅增加收入
+10. $TSEM - 你将需要一家铸造厂来生产基于光的东西
+11. $IBIT - 比特币，我们现在都知道了
+12. $NBIS - 我认为它是下一个 AWS。他们还与 Uber 合作开发自动驾驶汽车、自己的扩展数据库公司、数据标签。它几乎就像一个迷你谷歌。 
+13. $GOOGL - youtube 不会消失，Gemini 很棒。它们与 TPU 垂直整合，并通过运营收入进行基金建设，所以我喜欢它。 
+14. $AMKR - 超级设施将于 2027 年末至 2028 年上线。美国制造的好处
+15. $HOOD - 我不喜欢短期，但从长远来看，我是 Robinhood 的粉丝，因为他们抓住了零售业+拥有更多产品，例如银行业等，并且正在扩大规模。产品创新是疯狂的。
+16. $CRCL - 我碰巧真的很喜欢稳定币，并将它们视为支付/持有的未来（取决于澄清法案）
+17. $META - 人们不会很快停止使用 Instagram 或 Whatsapp 或其他应用程序。 
+18. $LITE - $GOOGL TPU 暴露在 BOM 中相当高的部分。只要谷歌的人工智能程序继续运行，我认为 $LITE 就会做得很好。
+19. $LPTH - 锗和中国的出口管制将始终是一个问题，因此美国制造的工程替代品将始终很重要
+20. $FN - 有人需要组装光学材料
+21. $JBL - 与上面相同，但添加了从英特尔收购的 SiPh 的 ip，所以最终可能会像旭创科技一样？
+22. $MP - 美国稀土计划极其重要，类似于$INTC国家安全风险
+23. $HIMS - 好吧，我在这里，他们刚刚收购了大量公司，并且以 19 美元的价格拥有全球 DTC 频道。卖空者真的很讨厌这家公司，但我认为作为逆向多头公司实际上很有前途
+24. $SMTC - LRO/LPO 过渡
+25. $POWL - 用于开关设备直流型瓶颈的美国 Hammond 替代品
+26. $VPG - 人形机器人可能会在 2027-2028 年出现，这使得传感器成为可能。 
+27. $MOG.A - 感觉我在机器人领域、SpaceX 供应链中随处可见它们
+28. $MSFT - 价格为 375 美元，有一天我们回头看时会发现这是一个买入机会。
+29. $CVX - 战后石油可能会崩溃，但这些石油公司将变得极其重要，特别是当委内瑞拉是一座金矿时。
+30. $XLU - 我认为降息可能会重新上线，我们需要人工智能的电力/电网，所以这些名字从 $CEG 到 $NEE 永远都是重要的
+
+只是抛弃除了 $AAOI 和 $AEHR 之外的其他想法。</div>
+        <div class="tweet-foot">
+          <span>likes 6390 / retweets 781 / replies 192 / views 2663060</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-04-09 17:09</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$MRVL</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">@NabQ321 Good question! $AAOI, $AEHR are two extremely high beta, fast growth stocks.
+
+Maybe some larger companies like $COHR, $TSEM, $SMTC, $MRVL, $INTC or $FN on the next drop? 
+
+Companies like AOI or AEHR are pretty rare to come by.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@NabQ321 Good question! $AAOI, $AEHR are two extremely high beta, fast growth stocks.
+
+Maybe some larger companies like $COHR, $TSEM, $SMTC, $MRVL, $INTC or $FN on the next drop? 
+
+Companies like AOI or AEHR are pretty rare to come by.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2042167898723242100" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@NabQ321 好问题！ $AAOI、$AEHR 是两只贝塔值极高、增长迅速的股票。
+
+也许下一次下跌时会出现一些较大的公司，例如 $COHR、$TSEM、$SMTC、$MRVL、$INTC 或 $FN？ 
+
+像 AOI 或 AEHR 这样的公司很少见。</div>
+        <div class="tweet-foot">
+          <span>likes 140 / retweets 8 / replies 8 / views 27573</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2026-03-31 08:35</span>
+          <span><span class="chip red">$AMKR</span><span class="chip red">$ANSS</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$CDNS</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SNPS</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">CPO Value Chain Summary from Mirae Asset:
+
+Laser Source:
+Coherent &lt; $COHR &gt;
+Lumentum &lt; $LITE &gt;
+Furukawa Electric (TYO: 5801)
+Yuanjie Semiconductor (SHA: 688498)
+Innolight Technology / Zhongji Innolight (SZSE: 300308)
+
+PIC Foundry:
+TSMC &lt; $TSM &gt;
+GlobalFoundries $GFS
+Samsung Electronics (KRX: 005930)
+Tower Semiconductor ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">CPO Value Chain Summary from Mirae Asset:
+
+Laser Source:
+Coherent &lt; $COHR &gt;
+Lumentum &lt; $LITE &gt;
+Furukawa Electric (TYO: 5801)
+Yuanjie Semiconductor (SHA: 688498)
+Innolight Technology / Zhongji Innolight (SZSE: 300308)
+
+PIC Foundry:
+TSMC &lt; $TSM &gt;
+GlobalFoundries $GFS
+Samsung Electronics (KRX: 005930)
+Tower Semiconductor &lt; $TSEM&gt;
+
+EIC, Driver IC:
+Broadcom &lt; $AVGO &gt; 
+Marvell &lt; $MRVL &gt;
+NVIDIA &lt; $NVDA &gt;
+
+ELS, Optical Engine
+Innolight / Zhongji Innolight (SZSE: 300308)
+TFC / Suzhou TFC Optical Communication (SZSE: 300394)
+O-Net Technologies 
+Eoptolink Technology (SZSE: 300502)
+
+FAU (Fiber Array Unit):
+Senko Advanced Components (Private)
+Sumitomo Electric (TYO: 5802)
+TFC (SZSE: 300394)
+FOCI Fiber Optic Communications (TWO: 3363)
+
+FAU, Align Tools:
+ficonTEC (Private)
+All Ring Tech (TWO: 6187)
+ADST (Private)
+
+FAU, Engine Assembly:
+Fabrinet &lt; $FN &gt;
+Hon Hai / Foxconn (TWSE: 2317)
+ASE Technology &lt; $ASX &gt; 
+FOCI (TWO: 3363)
+
+OSAT, Advanced Packaging:
+ASE Technology &lt; $ASX &gt;
+Amkor &lt; $AMKR &gt; 
+Kyocera (TYO: 6971)
+Powertech / PTI (TWSE: 6239)
+Shinko Electric (TYO: 6967)
+Fabrinet &lt; $FN &gt;
+
+Connector, Ferrule:
+Senko Advanced Components (Private)
+Sumitomo Electric (TYO: 5802)
+US Conec (Private)
+T&amp;S Communications (SZSE: 300570)
+Molex (Private)
+Browave (TWO: 3163)
+
+Fiber: 
+Corning &lt; $GLW &gt;
+Sumitomo Electric (TYO: 5802)
+Nittobo / Nitto Boseki (TYO: 3110)
+
+E/O Testing: 
+
+Keysight &lt; $KEYS &gt; 
+Teradyne &lt; $TER &gt;
+FormFactor &lt; $FORM &gt; 
+Chroma ATE (TWSE: 2360)
+Multilane (Private)
+
+Switch, System: 
+NVIDIA &lt; $NVDA &gt; 
+Broadcom &lt; $AVGO &gt; 
+Marvell &lt; $MRVL &gt; 
+Google &lt; $GOOGL&gt; 
+
+EDA: 
+Synopsys &lt; $SNPS &gt; 
+Cadence &lt; $CDNS &gt; 
+Ansys &lt; $ANSS &gt; 
+
+Confused by some of names of the list, they might have conflated a few names like Innolight with laser source like $MTSI, Sumitomo, $SIVE, Luxnet, with the actual end module (unless there&#x27;s something that&#x27;s not public material or I missed)? 
+
+But just for people interested in the landscape, this is a good high-level overview.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2038777289115345200" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Mirae Asset 的原棕油价值链摘要：
+
+激光源：
+连贯 &lt; $COHR &gt;
+Lumentum &lt; $LITE &gt;
+古河电工 (TYO: 5801)
+元杰半导体（SHA：688498）
+旭创科技/中际旭创（深交所：300308）
+
+PIC代工厂：
+台积电&lt;$TSM&gt;
+格罗方德 $GFS
+三星电子 (KRX: 005930)
+塔半导体&lt;$TSEM&gt;
+
+EIC、驱动IC：
+博通&lt;$AVGO&gt; 
+Marvell &lt; $MRVL &gt;
+英伟达&lt;$NVDA&gt;
+
+ELS，光学引擎
+旭创/中际旭创（深交所：300308）
+天金光/苏州天金光通信（深交所：300394）
+昂纳科技 
+新易盛科技（深交所：300502）
+
+FAU（光纤阵列单元）：
+Senko先进组件（私人）
+住友电工（TYO：5802）
+天金公司（深交所：300394）
+FOCI 光纤通信（二：3363）
+
+FAU，对齐工具：
+ficonTEC（私人）
+全环科技（二：6187）
+ADST（私人）
+
+FAU，发动机装配：
+法布里内特&lt;$FN&gt;
+鸿海/富士康（台湾证券交易所股票代码：2317）
+日月光科技 &lt; $ASX &gt; 
+焦点（二：3363）
+
+OSAT，先进封装：
+日月光科技 &lt; $ASX &gt;
+Amkor &lt; $AMKR &gt; 
+京瓷（TYO：6971）
+力成科技 / PTI (台湾证券交易所: 6239)
+新光电机 (TYO: 6967)
+法布里内特&lt;$FN&gt;
+
+连接器、套圈：
+Senko先进组件（私人）
+住友电工（TYO：5802）
+美国 Conec（私人）
+天盛通信（深交所：300570）
+莫仕（私人）
+布罗波（二：3163）
+
+纤维： 
+康宁&lt;$GLW&gt;
+住友电工（TYO：5802）
+Nittobo / Nitto Boseki (TYO: 3110)
+
+E/O 测试： 
+
+是德科技&lt;$KEYS&gt; 
+泰瑞达 &lt; $TER &gt;
+形状系数 &lt; $FORM &gt; 
+Chroma ATE（台湾证券交易所：2360）
+多车道（私人）
+
+开关、系统： 
+英伟达&lt;$NVDA&gt; 
+博通&lt;$AVGO&gt; 
+Marvell &lt; $MRVL &gt; 
+谷歌&lt;$GOOGL&gt; 
+
+电子设计自动化： 
+新思科技&lt;$SNPS&gt; 
+节奏&lt;$CDNS&gt; 
+Ansys &lt;$ANSS&gt; 
+
+他们对列表中的一些名称感到困惑，他们可能会将像 Innolight 这样的一些名称与激光源（例如 $MTSI、Sumitomo、$SIVE、Luxnet）与实际的最终模块混为一谈（除非有一些不是公开材料或我错过了）？ 
+
+但对于对景观感兴趣的人来说，这是一个很好的高层次概述。</div>
+        <div class="tweet-foot">
+          <span>likes 337 / retweets 51 / replies 20 / views 80341</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2026-03-29 11:15</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Can&#x27;t $SIVE just pull a $LITE and TAM expansion down the ELS stack?
+
+I&#x27;m getting early stage $LITE flashbacks (Oclaro, NeoPhotonics, Cloud Light)... 
+
+Here&#x27;s my thesis/idea: 
+
+on how Sivers can capture the ~$300-$400 ELS (from $50-100 arrays) and become a $10B+ company. 
+
+How this plays out:
+-&gt; Sivers is needs funding....</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Can&#x27;t $SIVE just pull a $LITE and TAM expansion down the ELS stack?
+
+I&#x27;m getting early stage $LITE flashbacks (Oclaro, NeoPhotonics, Cloud Light)... 
+
+Here&#x27;s my thesis/idea: 
+
+on how Sivers can capture the ~$300-$400 ELS (from $50-100 arrays) and become a $10B+ company. 
+
+How this plays out:
+-&gt; Sivers is needs funding.
+-&gt; Get NRE prepay or PIPE (eg. $AXTI/Northland)
+
+-&gt; Say &quot;Hey, $AVGO and $LITE are going to choke your custom AI cluster margins&quot;.
+
+----&gt;  get $META / $AMZN / $MSFT capital injection for multi-source supply for next ASIC clusters cause they&#x27;re scared. 
+
+Esp. with $NVDA funding $4B to securing supply from $LITE and $COHR... then PTSD from the current EML capacity bottleneck. 
+
+It&#x27;s easier than people think. 
+
+-&gt; US spinoff of photonics arm (markets don&#x27;t like investing in legacy companies).
+
+- - - - - &gt; This will likely work in 2026, bc CPO/photonics is hot, now and not like 2024-early 2025.
+
+-&gt; Raise enough to automate wafer probers and fund the module NPI.
+
+-&gt; Fab-lite test model: develop probe cards and test inhouse, but push capex to OSATs.
+
+-&gt; Buy SiPh packaging IP (or just continue JDM with O-Net and $POET)
+
+-&gt; Keep their Glasgow InP fab for in-house testing for iteration/raw epitaxial.
+
+-&gt; Outsource lithography, etching, etc. stuff to Win Semi + others (don&#x27;t do capex heavy things yourself)
+
+-&gt; Then just $SIVE can just hand tested lasers and packaging IP to $FN
+
+And Poof. 
+
+You have a independent, mass producible, high margin, ELS module as ELSFP becomes standard.
+
+Then they can do other stuff like buying DSP designs and start consolidating the tech stack.
+
+Instead of cheap $10 laser dies x 6 for a $50-$100 laser array, you have $400 hot swappable modules.
+
+Basically their starting point is owning one of the chokepoints moat in photonics on the laser level...
+
+Then they can go downstream like what $LITE did with EML and optical transceivers.
+
+TLDR:
+
+Sivers ( $SIVE ) holds a rare, independent chokepoint in InP lasers at the exact moment the world is transitioning to CPO.
+
+There&#x27;s only a few independent companies in the world that can do this like $SIVE (eg. Sumitomo, $LITE, $COHR).
+
+But of course they need the funding to achieve TAM expansion and the right vision.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2038092601224831103" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE 不能直接将 $LITE 和 TAM 扩展拉到 ELS 堆栈中吗？
+
+我收到早期阶段的 $LITE 闪回（Oclaro、NeoPhotonics、Cloud Light）... 
+
+这是我的论文/想法： 
+
+关于 Sivers 如何捕获约 300-400 美元的 ELS（从 50-100 美元的阵列）并成为一家 10B+ 美元的公司。 
+
+这是如何进行的：
+-&gt; Sivers 需要资金。
+-&gt; 获取 NRE 预付款或 PIPE（例如 $AXTI/Northland）
+
+-&gt; 说“嘿，$AVGO 和 $LITE 将堵塞您的自定义 AI 集群利润”。
+
+----&gt; 获得 $META / $AMZN / $MSFT 资本注入，为下一个 ASIC 集群提供多源供应，因为他们感到害怕。 
+
+特别是。 $NVDA 资助 $4B 来确保 $LITE 和 $COHR 的供应...然后从当前的 EML 容量瓶颈中解决 PTSD。 
+
+这比人们想象的要容易。 
+
+-&gt; 美国光子学部门的分拆（市场不喜欢投资传统公司）。
+
+- - - - - &gt; 这可能会在 2026 年发挥作用，因为 CPO/光子学现在很热门，而不是像 2024 年至 2025 年初那样。
+
+-&gt; 筹集足够的资金来自动化晶圆探测器并为模块 NPI 提供资金。
+
+-&gt; Fab-lite 测试模型：开发探针卡并进行内部测试，但将资本支出推向 OSAT。
+
+-&gt; 购买 SiPh 封装 IP（或者继续使用昂纳和 $POET 进行 JDM）
+
+-&gt; 保留其格拉斯哥 InP 晶圆厂用于迭代/原始外延的内部测试。
+
+-&gt; 将光刻、蚀刻等外包给Win Semi +其他人（不要自己做资本支出繁重的事情）
+
+-&gt; 然后只需 $SIVE 即可手动测试激光器并将 IP 封装到 $FN
+
+还有噗。 
+
+随着 ELSFP 成为标准，您将拥有一个独立的、可批量生产的、高利润的 ELS 模块。
+
+然后他们可以做其他事情，例如购买 DSP 设计并开始整合技术堆栈。
+
+您拥有 400 美元的热插拔模块，而不是 50-100 美元激光阵列的 10 美元廉价激光芯片 x 6。
+
+基本上，他们的出发点是在激光水平上拥有光子学的瓶颈护城河之一......
+
+然后它们可以像 $LITE 对 EML 和光收发器所做的那样进入下游。
+
+总而言之：
+
+在世界向 CPO 过渡的同时，Sivers ($SIVE) 在 InP 激光器领域占据了罕见的独立瓶颈。
+
+世界上只有少数独立公司可以像 $SIVE 一样做到这一点（例如 Sumitomo、$LITE、$COHR）。
+
+但他们当然需要资金来实现 TAM 扩张和正确的愿景。</div>
+        <div class="tweet-foot">
+          <span>likes 420 / retweets 47 / replies 36 / views 64390</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2026-03-25 21:43</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">TFW institutions realize how important $SIVE is in the CW/EML laser bottleneck.
+
+But have no positions… 
+
+Sivers is up 220%+ so far, but I expect this to be my next personal 10x like $AXTI. https://t.co/DmqpkZ8Lqa</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">TFW institutions realize how important $SIVE is in the CW/EML laser bottleneck.
+
+But have no positions… 
+
+Sivers is up 220%+ so far, but I expect this to be my next personal 10x like $AXTI. https://t.co/DmqpkZ8Lqa</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036801199073382422" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>TFW 机构意识到 $SIVE 在 CW/EML 激光瓶颈中的重要性。
+
+但没有立场... 
+
+Sivers 到目前为止已经上涨了 220% 以上，但我预计这将是我个人的下一个 10 倍，就像 $AXTI 一样。 https://t.co/DmqpkZ8Lqa</div>
+        <div class="tweet-foot">
+          <span>likes 464 / retweets 50 / replies 45 / views 121972</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2026-03-25 12:59</span>
+          <span><span class="chip red">$FN</span><span class="chip red">$LITE</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@QuantumDom It’s like $NVDA, there’s a whole ecosystem but sometimes the largest beneficiary is the direct GPU or Laser supplier like $SIVE or $LITE.
+
+Instead of the $POET, $FN type companies.
+
+There’s some high margin exceptions like Eoptolink</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@QuantumDom It’s like $NVDA, there’s a whole ecosystem but sometimes the largest beneficiary is the direct GPU or Laser supplier like $SIVE or $LITE.
+
+Instead of the $POET, $FN type companies.
+
+There’s some high margin exceptions like Eoptolink</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036669268448960858" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@QuantumDom 就像 $NVDA，有一个完整的生态系统，但有时最大的受益者是直接 GPU 或激光供应商，如 $SIVE 或 $LITE。
+
+而不是$POET、$FN 类型的公司。
+
+有一些高利润的例外，例如新易盛</div>
+        <div class="tweet-foot">
+          <span>likes 43 / retweets 3 / replies 1 / views 5600</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2026-03-23 22:21</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">$SIVE is starting to play out like my $AXTI thesis round 10?
+
+Up triple digits now. 
+
+Really not sure how markets missed this one tbh?
+
+-&gt; Laser supplier to Jabil… for 1.6T pluggable transceivers in the current supercycle.
+
+-&gt; Laser supplier to Ayar / $MRVL celestial for CPO, in the upcoming supercycle.
+
+Literally all ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SIVE is starting to play out like my $AXTI thesis round 10?
+
+Up triple digits now. 
+
+Really not sure how markets missed this one tbh?
+
+-&gt; Laser supplier to Jabil… for 1.6T pluggable transceivers in the current supercycle.
+
+-&gt; Laser supplier to Ayar / $MRVL celestial for CPO, in the upcoming supercycle.
+
+Literally all your laser suppliers from $MTSI to $LITE are $17-45B companies.
+
+$SIVE?
+
+Now only at ~$310M. 
+
+High conviction long.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036085968319680677" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE 开始像我的 $AXTI 论文第 10 轮一样发挥作用吗？
+
+现在涨了三位数。 
+
+真的不知道市场是如何错过这一事件的？
+
+-&gt; Jabil 的激光供应商...当前超级周期中的 1.6T 可插拔收发器。
+
+-&gt; 在即将到来的超级周期中，Ayar 的激光供应商/CPO 的 $MRVL celestial。
+
+从字面上看，从 $MTSI 到 $LITE 的所有激光供应商都是 $17-45B 公司。
+
+$SIVE？
+
+现在仅售约 3.1 亿美元。 
+
+信念高长。</div>
+        <div class="tweet-foot">
+          <span>likes 455 / retweets 53 / replies 61 / views 225827</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2026-03-20 16:56</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AIXA</span><span class="chip red">$APH</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESI</span><span class="chip red">$CAMT</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$CSCO</span><span class="chip red">$FN</span><span class="chip red">$FOCI</span><span class="chip red">$FORM</span><span class="chip red">$GLW</span><span class="chip red">$HIMX</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$MXL</span><span class="chip red">$NOK</span><span class="chip red">$ONTO</span><span class="chip red">$OXINF</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SMHN</span><span class="chip red">$SMTC</span><span class="chip red">$SOI</span><span class="chip red">$TEL</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$UMC</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">The Serenity Silicon Photonics / CPO ETF.
+
+YTD Returns of Each Index Stock: 
+
+$IQE: +282.5%
+$AXTI: +246.6%
+Landmark: 167.54%
+$AAOI: +157.37%
+$SIVE: +113.08%
+$SOI: +103.54%
+$LITE: +100.27%
+$LWLG: +92.35%
+$VIAV: +88.71%
+$AIXA: +73.92%
+$AEHR: +70.4%
+$CIEN: +67.67%
+$FORM: +60.67%
+$FOCI: +60.44%
+$CAMT: +49.13%
+$GLW: +46.77%...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The Serenity Silicon Photonics / CPO ETF.
+
+YTD Returns of Each Index Stock: 
+
+$IQE: +282.5%
+$AXTI: +246.6%
+Landmark: 167.54%
+$AAOI: +157.37%
+$SIVE: +113.08%
+$SOI: +103.54%
+$LITE: +100.27%
+$LWLG: +92.35%
+$VIAV: +88.71%
+$AIXA: +73.92%
+$AEHR: +70.4%
+$CIEN: +67.67%
+$FORM: +60.67%
+$FOCI: +60.44%
+$CAMT: +49.13%
+$GLW: +46.77%
+$SMHN: +45.94%
+Fujikura: +43.89%
+$COHR: +41.81%
+$KEYS: +40.48%
+$TSEM: +36.42%
+$ASX: +29.89%
+$MTSI: +28.34%
+$NOK: +27.5%
+Shin-Etsu: +27.33%
+$ONTO: +26.28%
+$BESI: +24.71%
+$UMC: +18.11%
+$INTC: +17.27%
+$OXINF: 15.03%
+$FN: +12.79%
+Eoptolink: +11.82%
+$TSM: +6.00%
+$HIMX: +5.39%
+$SMTC: +4.11%
+Sumitomo: +3.67%
+$CSCO: +3.25%
+Innolight: +.33%
+$MRVL: +.16%
+$APH: -6.48%
+$MXL: -7.62%
+$AVGO: -7.99%
+$POET: -12.99%
+$TEL: -14.93%
+
+This is retrospectively, but as you&#x27;ve known I&#x27;ve been in a lot of the winners for awhile (eg. Top 6/7 like $AXTI or $LITE aside from Landmark). 
+
+However, if you were curious if you invested in the photonics trend as a whole at the start of the year.
+
+The equal weighted return? 
+
+50.033%
+
+I expect the Photonic Supercycle to last over the next several years, and many of these names to be large beneficaries going forward. 
+
+Especially as CPO is used to scale AI deployments. 
+
+Photonics is the new architectural paradigm for AI.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034916899021365725" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Serenity Silicon Photonics / CPO ETF。
+
+各指数股票的年初至今回报率： 
+
+IQE 美元：+282.5%
+$AXTI：+246.6%
+地标：167.54%
+$AAOI：+157.37%
+$SIVE：+113.08%
+$SOI：+103.54%
+精简版美元：+100.27%
+$LWLG：+92.35%
+$VIAV：+88.71%
+$艾莎：+73.92%
+$AEHR：+70.4%
+$CIEN：+67.67%
+美元形式：+60.67%
+FOCI 美元：+60.44%
+$CAMT：+49.13%
+GLW 美元：+46.77%
+$SMHN：+45.94%
+藤仓：+43.89%
+$COHR：+41.81%
+$钥匙：+40.48%
+$TSEM：+36.42%
+澳大利亚证券交易所：+29.89%
+MTSI 美元：+28.34%
+挪威克朗美元：+27.5%
+信越：+27.33%
+$ONTO：+26.28%
+$BESI：+24.71%
+联华电子：+18.11%
+$INTC：+17.27%
+$OXINF: 15.03%
+国民福利金：+12.79%
+新易盛：+11.82%
+$TSM：+6.00%
+$HIMX：+5.39%
+$SMTC：+4.11%
+住友商事：+3.67%
+$CSCO：+3.25%
+旭创科技：+.33%
+MRVL 美元：+.16%
+APH 美元：-6.48%
+$MXL：-7.62%
+AVGO 美元：-7.99%
+$POET：-12.99%
+$电话：-14.93%
+
+这是回顾性的，但正如您所知，我已经在很多获胜者中有一段时间了（例如，除了 Landmark 之外，像 $AXTI 或 $LITE 这样的前 6/7 名）。 
+
+然而，如果您想知道您是否在年初投资了整个光子学趋势。
+
+等权重回报？ 
+
+50.033%
+
+我预计光子超级周期将在未来几年持续下去，其中许多名字将成为未来的巨大受益者。 
+
+特别是当 CPO 用于扩展人工智能部署时。 
+
+光子学是人工智能的新架构范式。</div>
+        <div class="tweet-foot">
+          <span>likes 1002 / retweets 103 / replies 63 / views 136683</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2026-03-19 18:53</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SIVEF</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">$SIVE &lt;&gt; $SIVEF is now up 165% this week.
+
+Valuation? ~$300M MC.
+
+However; either I’m dumb or Sivers is one of the best opportunities in photonics today.
+
+You get the laser supplier for Jabil, Ayar, Poet ( $MRVL Celestial ), O-Net, and others:
+
+That end up in $GOOGL, $MSFT, $AMZN, $META AI datacenters.
+
+At ~$300M. 
+
+Th...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SIVE &lt;&gt; $SIVEF is now up 165% this week.
+
+Valuation? ~$300M MC.
+
+However; either I’m dumb or Sivers is one of the best opportunities in photonics today.
+
+You get the laser supplier for Jabil, Ayar, Poet ( $MRVL Celestial ), O-Net, and others:
+
+That end up in $GOOGL, $MSFT, $AMZN, $META AI datacenters.
+
+At ~$300M. 
+
+The EML laser suppliers today from $LITE to $COHR for reference are $45B+
+
+This is one of the most undiscovered yet critical bottlenecks for future upstream photonics supply chains.
+
+That markets have only starting to price in today.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034584155036828052" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE &lt;&gt; $SIVEF 本周已上涨 165%。
+
+估值？ ~$3 亿美元MC。
+
+然而;要么我很蠢，要么西弗斯是当今光子学领域最好的机会之一。
+
+您可以找到 Jabil、Ayar、Poet ($MRVL Celestial)、昂纳等公司的激光供应商：
+
+最终进入 $GOOGL、$MSFT、$AMZN、$META AI 数据中心。
+
+价格约为 3 亿美元。 
+
+今天的EML激光器供应商从$LITE到$COHR供参考都是$45B+
+
+这是未来上游光子供应链最未被发现但最关键的瓶颈之一。
+
+市场今天才开始体现这一点。</div>
+        <div class="tweet-foot">
+          <span>likes 431 / retweets 45 / replies 62 / views 161453</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="26">
+        <div class="tweet-head">
+          <span class="mono">2026-03-18 19:05</span>
+          <span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span></span>
+        </div>
+        <div class="tweet-text">Well that was a fast 100%+ return with $IQE in 1 month.
+
+Turns out when you map it to $LITE and the hyperscaler supply chain at the epiwafer level… 
+
+Markets start pricing it in with the new $LITE projections… https://t.co/TA3xbSGfbX</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Well that was a fast 100%+ return with $IQE in 1 month.
+
+Turns out when you map it to $LITE and the hyperscaler supply chain at the epiwafer level… 
+
+Markets start pricing it in with the new $LITE projections… https://t.co/TA3xbSGfbX</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034224630429630974" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>嗯，1 个月内 IQE 就实现了 100% 以上的快速回报。
+
+事实证明，当您将其映射到 $LITE 和外延片级别的超大规模供应链时…… 
+
+市场开始根据新的 $LITE 预测对其进行定价...... https://t.co/TA3xbSGfbX</div>
+        <div class="tweet-foot">
+          <span>likes 446 / retweets 35 / replies 32 / views 107505</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="27">
+        <div class="tweet-head">
+          <span class="mono">2026-03-18 16:46</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$FN</span><span class="chip red">$LITE</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">For design/assembly
+Eoptolink (China): ~$50B MC:  ~$5.3B revenue
+Innolight (China): ~$84B MC  ~$11B revenue
+
+$FN for low margin assembly ~$20B MC, ~$4B projected revenue.
+
+For lasers/transceiver:
+$LITE ~$47B MC: ~$3B+ EOY 2026. 
+
+Then you have $AAOI, $375M/month for laser/design/assembly supply chain, ~$4.5B ARR target...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">For design/assembly
+Eoptolink (China): ~$50B MC:  ~$5.3B revenue
+Innolight (China): ~$84B MC  ~$11B revenue
+
+$FN for low margin assembly ~$20B MC, ~$4B projected revenue.
+
+For lasers/transceiver:
+$LITE ~$47B MC: ~$3B+ EOY 2026. 
+
+Then you have $AAOI, $375M/month for laser/design/assembly supply chain, ~$4.5B ARR target + growth.
+
+Maybe ~$13B sounds reasonable since it hasn&#x27;t hit those numbers yet. It&#x27;s discretionary. 
+
+As for $SIVE, you can just look at CPO ramp and just take a guess. 
+
+Usually advanced packaging companies (at least in current cycles), have around the less valuation as their laser counterparts (Unless they do design).
+
+$SIVE supplies lasers to $POET/Ayar both of which are $1-$3B+ valuations. 
+
+So $SIVE at least should be ~$1B low end. 
+
+This is just comparing similar company valuation/revenue projections, then making an estimate.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034189736924033071" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>用于设计/组装
+新易盛（中国）：~$50B MC：~$5.3B 收入
+旭创科技（中国）：〜$84B MC〜$11B收入
+
+$FN 低利润组装 ~$20B MC，~$4B 预计收入。
+
+对于激光器/收发器：
+$LITE ~$47B MC：~$3B+ EOY 2026。 
+
+然后，您将获得 $AAOI、每月 3.75 亿美元的激光/设计/组装供应链、约 4.5B 美元的 ARR 目标 + 增长。
+
+也许 ~$13B 听起来很合理，因为它还没有达到这些数字。这是酌情决定的。 
+
+至于 $SIVE，你可以只看 CPO 坡度并猜测一下。 
+
+通常，先进的封装公司（至少在当前周期中）的估值低于激光同行（除非他们进行设计）。
+
+$SIVE 向 $POET/Ayar 供应激光器，两者估值均为 $1-$3B+。 
+
+所以 $SIVE 至少应该是 ~$1B 低端。 
+
+这只是比较类似公司的估值/收入预测，然后做出估计。</div>
+        <div class="tweet-foot">
+          <span>likes 83 / retweets 9 / replies 5 / views 14930</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="28">
+        <div class="tweet-head">
+          <span class="mono">2026-03-18 07:58</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$APH</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESI</span><span class="chip red">$CAMT</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$CSCO</span><span class="chip red">$FIT</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$HIMX</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$MXL</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SMHN</span><span class="chip red">$SMTC</span><span class="chip red">$SOI</span><span class="chip red">$TEL</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$UMC</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">The Photonics Supercycle is here.
+
+$NVDA is spearheading the next leap into CPO &amp; Silicon Photonics.
+
+And we’re only near the inflection point with chokepoints in the supply chains like Soitec ( $SOI ) or Sivers ( $SIVE ).
+
+“NVIDIA’s update on the Spectrum-X switch with co-packaged optics is an important moment, confir...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The Photonics Supercycle is here.
+
+$NVDA is spearheading the next leap into CPO &amp; Silicon Photonics.
+
+And we’re only near the inflection point with chokepoints in the supply chains like Soitec ( $SOI ) or Sivers ( $SIVE ).
+
+“NVIDIA’s update on the Spectrum-X switch with co-packaged optics is an important moment, confirming that silicon photonics is central to next-generation AI infrastructure.”
+
+Despite a long-standing reliance on copper-based interconnects for scale-up systems, the company is now placing photonics at the core of its future platforms, including Vera Rubin Ultra.
+
+This transition is expected to support increasingly complex configurations, such as NVL576 and future architectures like Kyber NVL1152.”
+
+“Nvidia is already in production with Spectrum-X Photonics, which is co-packaged optics (CPO) Ethernet switch. 
+
+The company also announced the Quantum-X Photonics InfiniBand switch, which delivers up to 800 Tb per second of scale-out throughput using its proprietary scale-out interconnect”
+
+Although copper is important, it can no longer alone can no longer handle AI-scale demands. 
+
+NVLink8 CPO is probably the biggest signal with $NVDA also bringing silicon photonics into its scale-up NVLink interconnect, not just scale-out networking. 
+
+CPO for scale-out is shipping now/2026, CPO for NVLink scale-up arrives soon.
+
+The paradigm has shifted, and the bottleneck of AI infrastructure is now officially being solved by light.
+
+It’s only a matter of time before markets find these chokepoints in the supply chains. 
+
+Then price them in.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034056688693875036" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>光子学超级周期就在这里。
+
+$NVDA 正在引领 CPO 和硅光子学的下一次飞跃。
+
+我们仅接近拐点，供应链中存在瓶颈，例如 Soitec ($SOI) 或 Sivers ($SIVE)。
+
+“NVIDIA 对具有共同封装光学器件的 Spectrum-X 交换机的更新是一个重要时刻，它证实了硅光子学是下一代 AI 基础设施的核心。”
+
+尽管放大系统长期依赖铜基互连，但该公司现在将光子学作为其未来平台的核心，包括 Vera Rubin Ultra。
+
+这一转变预计将支持日益复杂的配置，例如 NVL576 和 Kyber NVL1152 等未来架构。”
+
+“Nvidia 已经开始生产 Spectrum-X Photonics，这是一种共封装光学 (CPO) 以太网交换机。 
+
+该公司还发布了 Quantum-X Photonics InfiniBand 交换机，该交换机使用其专有的横向扩展互连可提供高达每秒 800 Tb 的横向扩展吞吐量”
+
+尽管铜很重要，但仅靠它已经无法满足人工智能规模的需求。 
+
+NVLink8 CPO 可能是 $NVDA 最大的信号，还将硅光子引入其纵向扩展 NVLink 互连，而不仅仅是横向扩展网络。 
+
+用于横向扩展的 CPO 现已发货/2026 年，用于 NVLink 纵向扩展的 CPO 即将到达。
+
+范式已经转变，人工智能基础设施的瓶颈现在正式被光解决。
+
+市场在供应链中发现这些瓶颈只是时间问题。 
+
+然后给它们定价。</div>
+        <div class="tweet-foot">
+          <span>likes 584 / retweets 46 / replies 48 / views 103411</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="29">
+        <div class="tweet-head">
+          <span class="mono">2026-03-17 20:38</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$APH</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESI</span><span class="chip red">$CAMT</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$CSCO</span><span class="chip red">$FIT</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$HIMX</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$MXL</span><span class="chip red">$NOK</span><span class="chip red">$ONTO</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SMHN</span><span class="chip red">$SMTC</span><span class="chip red">$SOI</span><span class="chip red">$TEL</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$UMC</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">The upcoming CPO / Silicon Photonics Bottleneck Cheat Sheet:
+
+$SIVE, Sumitomo, $LITE, $COHR, $AVGO, $MTSI, $AAOI - Light Source (CW DFB Lasers)
+$TSEM, $GFS, $UMC, $TSM, $INTC - SiPh foundry
+$NOK, $CIEN, $CSCO, $COHR - DCO  
+$HIMX, FOCI (3363.TWO) - Micro-lens + Fiber Arrays
+$POET - Optical Interposers
+$SOI, $AXTI, Shin...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The upcoming CPO / Silicon Photonics Bottleneck Cheat Sheet:
+
+$SIVE, Sumitomo, $LITE, $COHR, $AVGO, $MTSI, $AAOI - Light Source (CW DFB Lasers)
+$TSEM, $GFS, $UMC, $TSM, $INTC - SiPh foundry
+$NOK, $CIEN, $CSCO, $COHR - DCO  
+$HIMX, FOCI (3363.TWO) - Micro-lens + Fiber Arrays
+$POET - Optical Interposers
+$SOI, $AXTI, Shin-Etsu  - Substrates
+$FN, $ASX, Innolight, Eoptolink -  Optical Packaging and Assembly
+$MTSI, $SMTC, $MRVL, $MXL - Analog/Mixed-Signal ICs
+$LWLG - Speculative Modulator Materials. 
+$GLW, $APH, $TEL, $FIT, Fujikura - Connectors and Fibers
+$FORM, $KEYS, $VIAV, $AEHR- Test &amp; Measurement
+$BESI, $SMHN, $ONTO, $CAMT - Advanced Packaging &amp; Hybrid Bonding
+
+Many are private companies from Lightmatter, Ayar, Ranovus and others. 
+
+Now... Everyone is asking... How do you profit? 
+
+If you look at the forecast for CPO TAM, it&#x27;s a straight line up, and next year is inflection point for CPO mass deployment. 
+
+The alpha is capturing the rotation:
+
+From the current EML bottlenecks ( $LITE, $COHR type) to SiPh / CW DFB architectural winners for CPO.
+
+Highest upside potential are the ones that aren&#x27;t included in current cycles.
+
+But that are in the next. 
+
+Companies like $SOI, $SIVE, or $AEHR are perfect examples. 
+ 
+Ride the current pluggable bottleneck like $AAOI. 
+
+But the alpha is frontrunning institutions with the next CPO bottleneck. 
+
+The capital rotation is inevitable.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033885603423785170" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>即将推出的 CPO/硅光子瓶颈备忘单：
+
+$SIVE、Sumitomo、$LITE、$COHR、$AVGO、$MTSI、$AAOI - 光源（CW DFB 激光器）
+$TSEM、$GFS、$UMC、$TSM、$INTC - SiPh 代工厂
+$NOK、$CIEN、$CSCO、$COHR - DCO  
+$HIMX、FOCI (3363.TWO) - 微透镜 + 光纤阵列
+$POET - 光学中介层
+$SOI、$AXTI、信越 - 基板
+$FN、$ASX、旭创科技、新易盛 - 光学封装和组装
+$MTSI、$SMTC、$MRVL、$MXL - 模拟/混合信号 IC
+$LWLG - 投机调制器材料。 
+$GLW、$APH、$TEL、$FIT、Fujikura - 连接器和光纤
+$FORM、$KEYS、$VIAV、$AEHR- 测试与测量
+$BESI、$SMHN、$ONTO、$CAMT - 先进封装和混合接合
+
+其中许多是 Lightmatter、Ayar、Ranovus 等公司的私营公司。 
+
+现在...每个人都在问...您如何获利？ 
+
+如果你看一下 CPO TAM 的预测，它是直线上升的，明年是 CPO 大规模部署的拐点。 
+
+alpha 正在捕获旋转：
+
+从当前的 EML 瓶颈（$LITE、$COHR 类型）到 CPO 的 SiPh/CW DFB 架构获胜者。
+
+最大的上行潜力是当前周期中未包含的那些。
+
+但那是接下来的事了。 
+
+$SOI、$SIVE 或 $AEHR 等公司就是完美的例子。 
+ 
+克服当前的可插入瓶颈，例如 $AAOI。 
+
+但阿尔法正在领先于下一个 CPO 瓶颈的机构。 
+
+资本轮动是不可避免的。</div>
+        <div class="tweet-foot">
+          <span>likes 1684 / retweets 246 / replies 87 / views 338839</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="30">
+        <div class="tweet-head">
+          <span class="mono">2026-03-17 16:18</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AVGO</span><span class="chip red">$AYAR</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Just in: $SIVE announces major partnership with O-Net and Enablence for CPO.
+
+Sivers will be the laser array supplier for CPO. 
+
+This is thesis validation in effect as $SIVE becomes InP CW DFB supplier for silicon photonics. 
+
+In simpler terms, this is the $LITE -&gt; $FN relationship for current optical bottlenecks. 
+
+An...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just in: $SIVE announces major partnership with O-Net and Enablence for CPO.
+
+Sivers will be the laser array supplier for CPO. 
+
+This is thesis validation in effect as $SIVE becomes InP CW DFB supplier for silicon photonics. 
+
+In simpler terms, this is the $LITE -&gt; $FN relationship for current optical bottlenecks. 
+
+And mirrors the existing $POET -&gt; $MRVL Celestial CPO supply chain, but in Asia. 
+
+Enablence makes the &quot;Star Coupler&quot;, similar to $POET interposers. 
+
+O-Net is a massive assembler, that packages them for the finished module.
+
+O-Net in HK is a supplier to companies like Huawei, ZTE, Ciena, Nokia, Fujitsu, and more.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033820269358571800" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>最新消息：$SIVE 宣布与昂纳网络和 Enablence for CPO 建立重要合作伙伴关系。
+
+Sivers 将成为 CPO 的激光阵列供应商。 
+
+随着 $SIVE 成为硅光子学的 InP CW DFB 供应商，这是有效的论文验证。 
+
+简单来说，这就是当前光学瓶颈的 $LITE -&gt; $FN 关系。 
+
+并反映了现有的 $POET -&gt; $MRVL Celestial CPO 供应链，但位于亚洲。 
+
+Enablence 生产“星形耦合器”，类似于 $POET 插入器。 
+
+昂纳是一个大型汇编器，将它们打包为成品模块。
+
+香港昂纳是华为、中兴通讯、Ciena、诺基亚、富士通等公司的供应商。</div>
+        <div class="tweet-foot">
+          <span>likes 289 / retweets 21 / replies 37 / views 84601</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="31">
+        <div class="tweet-head">
+          <span class="mono">2026-03-17 09:43</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$ADBE</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$AYAR</span><span class="chip red">$COHR</span><span class="chip red">$ETOR</span><span class="chip red">$FN</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$PLTR</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Normally don’t respond to trolls, but the hypocrisy on this platform is pretty impressive. 
+
+Random X retail: 
+
+“Why didn’t you tell me about $LITE before it went up 1000% already?”
+
+Me: 
+
+“Posts my thesis about the next possible $LITE at the very beginning, without paywalls.”
+
+X retail: 
+
+😡, “I’m going to pay $400 for...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Normally don’t respond to trolls, but the hypocrisy on this platform is pretty impressive. 
+
+Random X retail: 
+
+“Why didn’t you tell me about $LITE before it went up 1000% already?”
+
+Me: 
+
+“Posts my thesis about the next possible $LITE at the very beginning, without paywalls.”
+
+X retail: 
+
+😡, “I’m going to pay $400 for a paywall to long $ADBE and short $PLTR instead”.
+
+Especially after my $AXTI thesis that already went from $12-&gt;$50 in 3 months... 
+
+I distribute all my thought processes for free. 
+
+And markets can price in any alpha immediately or however they want. (I get things wrong as well, especially with names like $ETOR that crashed from $65 to $33). 
+
+However, instead of the original model where analysts sell a thesis for $2000+ to other hedge funds to slowly accumulate.
+
+Then retail buys at $40 billion+ as seen with $LITE.
+
+My account’s been growing because I’m one of the few analysts to break that model. And I distribute novel information synthesis for free to everyone. 
+
+Stocks are a positive sum game where everyone benefits if a thesis is directionally correct.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033720895731339435" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>通常不会对巨魔做出回应，但这个平台上的虚伪令人印象深刻。 
+
+随机 X 零售： 
+
+“在 $LITE 已经上涨 1000% 之前，你为什么不告诉我有关它的事情？”
+
+我： 
+
+“从一开始就发布我关于下一个可能的 $LITE 的论文，没有付费墙。”
+
+X零售： 
+
+😡，“我将支付 400 美元购买付费专区，以做多 $ADBE 并做空 $PLTR”。
+
+尤其是在我的 AXTI 论文在 3 个月内从 12 美元涨到 50 美元之后…… 
+
+我免费分发我所有的思维过程。 
+
+市场可以立即或以他们想要的方式对任何阿尔法进行定价。 （我也搞错了，尤其是像 $ETOR 这样的名字从 65 美元跌到了 33 美元）。 
+
+然而，而不是最初的模型，即分析师将一篇论文以 2000 美元以上的价格出售给其他对冲基金来慢慢积累。
+
+然后零售购买额超过 400 亿美元，如 $LITE 所示。
+
+我的账户一直在增长，因为我是少数几个打破这一模式的分析师之一。并且我免费向大家分发新颖的信息合成。 
+
+股票是一个正和游戏，如果论文方向正确，每个人都会受益。</div>
+        <div class="tweet-foot">
+          <span>likes 942 / retweets 16 / replies 77 / views 126699</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="32">
+        <div class="tweet-head">
+          <span class="mono">2026-03-17 08:03</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$AYAR</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">$SIVE is now up +73.78% today ($231M MC). 
+
+As markets price in information synthesis of the next potential $LITE of photonics. 
+
+If I had to explain the difference: 
+
+One laser source in Lumentum primarily benefits from current optical bottlenecks.
+
+The other in $SIVE is for the upcoming CPO/Silicon Photonic bottlenec...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SIVE is now up +73.78% today ($231M MC). 
+
+As markets price in information synthesis of the next potential $LITE of photonics. 
+
+If I had to explain the difference: 
+
+One laser source in Lumentum primarily benefits from current optical bottlenecks.
+
+The other in $SIVE is for the upcoming CPO/Silicon Photonic bottleneck. 
+
+Lumentum is largely benefiting right now from $NVDA and hyperscalers securing capacity of EML lasers for current pluggable optical transceivers cycles. 
+
+As seen with the current EML bottleneck, hyperscalers are buying out any 800G/1.6T transceiver + upstream capacity from:
+
+- $AAOI (in-house)
+- $COHR, $LITE (EML lasers + design) -&gt; $FN (assembly)
+- $COHR, $LITE (EML lasers) -&gt; Innolight / Eoptolink
+
+What&#x27;s next? 
+
+Silicon Photonics and Co-Packaged Optics. 
+
+The architectural shift to CPO requires massive arrays of high-power CW DFB lasers. 
+
+And this would likely trigger a complete, sudden paradigm shift in volume demand.
+
+$SIVE benefits from InP CW DFB lasers for SiPh and CPO:
+
+The up and coming companies like:
+
+$AYAR, $POET source $SIVE lasers, but primarily do advanced packaging. 
+
+Then they feed up to larger companies like $MRVL Celestial (that buy $POET&#x27;s interposers). 
+
+However, if you go upstream, the light source is $SIVE. 
+
+CW DFB lasers are light engine ( $SIVE ); the silicon photonics package ( $POET and others) is how it gets transmitted.
+
+CPO scale is not there yet. But we know it&#x27;s coming. 
+
+And as seen with current optical transceiver cycles:
+
+- Light sources from $LITE and $COHR demand much higher valuations than companies like $FN that focus on advanced packaging. 
+
+Markets have been focusing on $POET, but missed where they get the actual $LITE type light source for Starlight.
+
+The risks are present including facing multi-source competition with $LITE, $COHR, $AVGO, and others. So again, make sure to do your own research. 
+
+But my argument against that:
+
+Sivers been early enough to tailor custom lasers to fit $POET, Ayar, and other specifications before they got popular (sort like the $POET to $MRVL Celestial analogy). 
+
+There&#x27;s volume risks as well:
+
+But the potential Win Semi qualification offsets that.
+
+Dilution risk to scale capacity, is always present with every early-stage company as well. 
+
+I did my thesis on $LITE last year and still love the stock for Google TPU ramp/OCS. 
+
+But this year, I&#x27;m focusing on: 
+
+$SIVE, as my personal CW DFB laser exposure for the new photonics architectural shift. 
+
+I’m sharing my own thoughts on capturing the rotation from the current EML cycle to the upcoming CW DFB/Silicon Photonics cycle.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033695716938551350" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE 今天上涨了 +73.78%（2.31 亿美元 MC）。 
+
+随着市场对下一代潜在的 $LITE 光子学的信息合成进行定价。 
+
+如果我必须解释其中的差异： 
+
+Lumentum 中的一种激光源主要受益于当前的光学瓶颈。
+
+$SIVE 中的另一个是针对即将到来的 CPO/硅光子瓶颈。 
+
+Lumentum 目前主要受益于 NVDA 和超大规模企业，确保了当前可插拔光收发器周期的 EML 激光器的容量。 
+
+从当前的 EML 瓶颈来看，超大规模企业正在从以下渠道购买任何 800G/1.6T 收发器 + 上游容量：
+
+- $AAOI（内部）
+- $COHR、$LITE（EML 激光器 + 设计）-&gt; $FN（组装）
+- $COHR、$LITE（EML 激光器）-&gt; 旭创 / 新易盛
+
+接下来怎么办？ 
+
+硅光子学和共封装光学器件。 
+
+向 CPO 的架构转变需要大量高功率 CW DFB 激光器阵列。 
+
+这可能会引发需求量发生彻底、突然的范式转变。
+
+$SIVE 受益于用于 SiPh 和 CPO 的 InP CW DFB 激光器：
+
+新兴公司如：
+
+$AYAR、$POET 采购 $SIVE 激光器，但主要从事先进封装。 
+
+然后它们会被提供给像 $MRVL Celestial 这样的大公司（购买 $POET 的中介层）。 
+
+然而，如果你向上游走，光源就是$SIVE。 
+
+CW DFB 激光器是光引擎 ( $SIVE )；硅光子学封装（$POET 等）是它的传输方式。
+
+CPO规模还没有达到。但我们知道它即将到来。 
+
+从当前的光收发器周期可以看出：
+
+- $LITE 和 $COHR 的光源要求的估值比 $FN 等专注于先进封装的公司高得多。 
+
+市场一直关注 $POET，但错过了他们从哪里获得真正的 Starlight $LITE 型光源。
+
+存在的风险包括面临与 $LITE、$COHR、$AVGO 等的多源竞争。再次强调，一定要进行自己的研究。 
+
+但我反对这一点：
+
+Sivers 很早就开始定制激光器，以适应 $POET、Ayar 和其他规格，然后才流行起来（类似于 $POET 与 $MRVL 天体的类比）。 
+
+也存在数量风险：
+
+但潜在的 Win Semi 资格抵消了这一点。
+
+产能扩张的稀释风险也始终存在于每个早期阶段的公司中。 
+
+我去年的论文是关于 $LITE 的，并且仍然喜欢 Google TPU Ramp/OCS 的股票。 
+
+但今年，我的重点是： 
+
+$SIVE，作为我个人针对新光子学架构转变的 CW DFB 激光曝光。 
+
+我正在分享我自己关于捕获从当前 EML 周期到即将到来的 CW DFB/硅光子周期的旋转的想法。</div>
+        <div class="tweet-foot">
+          <span>likes 408 / retweets 47 / replies 42 / views 304381</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="33">
+        <div class="tweet-head">
+          <span class="mono">2026-03-16 21:28</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">$SIVE is now up 50%+, to a $190 million USD MC (~1.8B SEK -&gt; USD).
+
+However, I genuinely believe this could be the next $LITE for silicon photonics/CPO. 
+
+And I’m holding shares, as my personal bull case scenario is $10 billion+.
+
+As Sivers sits in the silicon photonics CW DFB laser bottleneck of the next gen photonic ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SIVE is now up 50%+, to a $190 million USD MC (~1.8B SEK -&gt; USD).
+
+However, I genuinely believe this could be the next $LITE for silicon photonics/CPO. 
+
+And I’m holding shares, as my personal bull case scenario is $10 billion+.
+
+As Sivers sits in the silicon photonics CW DFB laser bottleneck of the next gen photonic architectures spearheaded by $NVDA. 
+
+This is compared to how $COHR / $LITE EML lasers are the current optical transceiver bottleneck.
+
+They’re already the laser supplier to Ayar, $POET (buys $SIVE lasers -&gt; advanced packaging into optical interposers), and likely other silicon photonics/cpo players
+
+The Win semi ongoing qualification is one of the biggest bull cases, as this allows them to scale up capacity.
+
+Time will tell if this thesis turns out to be correct but I personally think this name is widely undiscovered.
+
+This is my own personal thesis and I’m not recommending anyone to tag along.
+
+But if you DYOR, maybe you’ll come to the same conclusion I did that $SIVE looks like the next $LITE.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033535833085718996" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE 目前上涨 50% 以上，达到 1.9 亿美元 MC（约 1.8B 瑞典克朗 -&gt; 美元）。
+
+然而，我真诚地相信这可能是硅光子/CPO 的下一个 $LITE。 
+
+我持有股票，因为我个人的牛市情景是 100 亿美元以上。
+
+由于 Sivers 处于由 $NVDA 牵头的下一代光子架构的硅光子 CW DFB 激光器瓶颈。 
+
+这与 $COHR / $LITE EML 激光器是当前光收发器瓶颈的情况进行了比较。
+
+他们已经是 Ayar、$POET（购买 $SIVE 激光器 -&gt; 先进封装到光学中介层中）以及其他可能的硅光子/cpo 厂商的激光器供应商
+
+Win semi 正在进行的资格是最大的牛市之一，因为这使他们能够扩大产能。
+
+时间会证明这篇论文是否正确，但我个人认为这个名字还没有被广泛发现。
+
+这是我自己的个人论文，我不建议任何人跟随。
+
+但如果您 DYOR，也许您会得出与我相同的结论，即 $SIVE 看起来像是下一个 $LITE。</div>
+        <div class="tweet-foot">
+          <span>likes 520 / retweets 52 / replies 97 / views 183399</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="34">
+        <div class="tweet-head">
+          <span class="mono">2026-03-16 16:54</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">I’m long $SIVE at $140M. 
+
+I believe this is the next $LITE that markets and institutions missed.
+
+$SIVE makes InP CW DFB lasers. 
+
+Closest comparison is $LITE in the current EML laser bottleneck.
+
+But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles. 
+
+They supply the lasers to $POET...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I’m long $SIVE at $140M. 
+
+I believe this is the next $LITE that markets and institutions missed.
+
+$SIVE makes InP CW DFB lasers. 
+
+Closest comparison is $LITE in the current EML laser bottleneck.
+
+But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles. 
+
+They supply the lasers to $POET Starlight, Ayar SuperNova.
+
+And others for the future CPO/silicon photonics architectures spearheaded by $NVDA. 
+
+Current valuations make 0 sense to me personally.   
+
+$POET is advanced packaging for $SIVE type lasers… 
+
+But $POET commands worth 11x+ more than the company making the laser itself?  
+
+It’s feels like valuing a more advanced $FN (~$20B)  packaging at $400B when $LITE is valued at $40B.   
+
+So now at $130m:  -
+
+- You have a likely mini $LITE like laser supplier to Marvell Celestial + hyperscalers through $POET.   
+
+- Laser supplier to Ayar ( $NVDA, $INTC ), though they do multi source with $LITE, Sumitomo, $MTSI. 
+
+And other potential up and coming suppliers potentially like Lightmatter that they’ve name dropped (eg. Q2 2023 earnings). This is unconfirmed but supply chain BOM is confidential.   
+
+On top, for revenue, they expected $453M &quot;pipeline next few years”.
+
+  And, they have capacity expansion through WIN: “Win Semi foundry qualification in progress for volume production from Laser designs from Sivers.&quot;
+
+  Sivers feels the silicon photonics/CPO version of $LITE, with actual rapidly growing customers like Celestial through $POET, Ayar, with more to come. 
+
+  I wouldn’t have liked it last year, but just 3 weeks ago, they refinanced all their debt successfully to $12M convertible loan (10.85%) and a $5M term loan (12%), which cleans up debt.  
+
+It’s $17m total, which feels like nothing to US markets when $AAOI is doing a $500m ATMs every other week.
+
+Best of all, this is their pure play inp laser segment for silicon/photonics + cpo.   Their Lidar segment is ramping up and they have $53-138M projected revenue coming in. 
+
+  Downside risk: 
+ - execution (as always) 
+ - dilution to scale up capacity to compete with $LITE and others. 
+- $LITE, $COHR competition on scale after $NVDA just gave them $4B - CPO ramp gets delayed. 
+
+  I have no clue how, $LWLG, a pre-revenue science project with $TSEM, is valued at $1B+ MC. 
+
+  Or how $POET, is worth ~9-10x more than its laser supplier.   
+
+When $SIVE, the mini $LITE equivalent for CPO/Silicon photonics, is valued at $140M.
+
+I do believe this is largely undiscovered by institutions, since this is some random company in OMX Nordic Exchange (similar to micro $AXTI before I started posting about the inp substrate bottleneck).   
+
+But I do think it will get a lot of institutional attention as Celestial and Ayar scale up. 
+
+Especially if $POET and $SIVE gets qualified with other customers.   
+
+If CPO completely replaces pluggable transceivers in the next generation of hyperscaler architectures. 
+
+Sivers, with possible WIN Semi qualifcation and if they become the multi-source lasers for NVIDIA, Marvell, Intel, and Broadcom architectures, can be strongly rerated.
+
+Just as how $LITE did today going from $16 -&gt; $622. 
+
+This is just my personal thesis I&#x27;m sharing, DYOR/NFI.
+
+ TLDR: 
+
+InP Lasers are the current bottleneck in photonics as seen with $LITE valuations.   
+
+$SIVE looks like the mini $LITE for the upcoming CPO/Silicon Photonics ramp. 
+
+  I personally took long position in $SIVE, as I believe they’re a large beneficiary of the upcoming silicon photonic/CPO architectural changes by $NVDA (with GTC cataylst).   
+
+The upside here just way too compelling for me personally as the next possible $LITE.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033466880661606646" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我持有 1.4 亿美元的 SIVE 多头头寸。 
+
+我相信这是市场和机构错过的下一个 $LITE。
+
+$SIVE 制造 InP CW DFB 激光器。 
+
+最接近的比较是当前 EML 激光瓶颈中的 $LITE。
+
+但不是向旭创/新易盛供应当前的光模块周期。 
+
+他们为 $POET Starlight、Ayar SuperNova 提供激光器。
+
+以及由 $NVDA 牵头的未来 CPO/硅光子架构的其他内容。 
+
+目前的估值对我个人来说毫无意义。   
+
+$POET 是 $SIVE 型激光器的先进封装…… 
+
+但 $POET 的价值比制造激光器本身的公司高出 11 倍以上？  
+
+感觉就像更先进的 $FN (~$20B) 包装的估值为 $400B，而 $LITE 的估值为 $40B。   
+
+现在价格为 1.3 亿美元：-
+
+- 您可能有一个迷你 $LITE，例如通过 $POET 向 Marvell Celestial + 超大规模提供商提供激光供应商。   
+
+- Ayar 的激光供应商（$NVDA、$INTC），尽管他们与 $LITE、Sumitomo、$MTSI 进行多源合作。 
+
+其他潜在的新兴供应商可能喜欢 Lightmatter，但他们已经放弃了（例如 2023 年第二季度的收益）。这尚未得到证实，但供应链 BOM 是保密的。   
+
+最重要的是，对于收入，他们预计“未来几年的管道”将达到 4.53 亿美元。
+
+  而且，他们通过 WIN 进行了产能扩张：“Win Semi 代工厂资格正在进行中，可根据 Sivers 的激光设计进行批量生产。”
+
+  Sivers 感受到了 $LITE 的硅光子/CPO 版本，通过 $POET、Ayar 等实际快速增长的客户，例如 Celestial，以及更多的客户。 
+
+  去年我不会喜欢它，但就在三周前，他们成功地将所有债务再融资为 1200 万美元的可转换贷款 (10.85%) 和 500 万美元的定期贷款 (12%)，从而清理了债务。  
+
+总计 1700 万美元，当 $AAOI 每隔一周在 ATM 机上运行 5 亿美元时，这对美国市场来说根本不算什么。
+
+最重要的是，这是他们用于硅/光子 + CPO 的纯 inp 激光部分。   他们的激光雷达业务正在蓬勃发展，预计收入为 53-1.38 亿美元。 
+
+  下行风险： 
+ - 执行（一如既往） 
+ - 稀释以扩大与 $LITE 和其他公司竞争的能力。 
+- $LITE、$COHR 在 $NVDA 刚刚给了他们 $4B 后规模化竞争 - CPO 增长被推迟。 
+
+  我不知道 $LWLG（与 $TSEM 合作的一个未盈利科学项目）如何估值为 $1B+ MC。 
+
+  或者 $POET 的价值比其激光供应商高出约 9-10 倍。   
+
+$SIVE（相当于 CPO/硅光子学的迷你 $LITE）的价值为 1.4 亿美元。
+
+我确实相信这在很大程度上没有被机构发现，因为这是 OMX Nordic Exchange 中的一些随机公司（类似于我开始发布关于 inp 基板瓶颈的文章之前的微型 $AXTI）。   
+
+但我确实认为，随着 Celestial 和 Ayar 的规模扩大，它会引起机构的广泛关注。 
+
+特别是如果 $POET 和 $SIVE 获得其他客户的认可。   
+
+如果CPO完全取代下一代超大规模架构中的可插拔收发器。 
+
+Sivers 可能获得 WIN Semi 资格，并且如果它们成为 NVIDIA、Marvell、Intel 和 Broadcom 架构的多源激光器，则可以大力重新评价。
+
+就像 $LITE 今天的表现一样，从 16 美元到 622 美元。 
+
+这只是我分享的个人论文，DYOR/NFI。
+
+ 总而言之： 
+
+InP 激光器是当前光子学领域的瓶颈，从 $LITE 估值即可看出。   
+
+$SIVE 看起来像是即将推出的 CPO/Silicon Photonics 的迷你 $LITE。 
+
+  我个人在 $SIVE 上持有多头头寸，因为我相信他们是 $NVDA（使用 GTC 催化剂）即将推出的硅光子/CPO 架构变革的一大受益者。   
+
+作为下一个可能的 $LITE，这里的优势对我个人来说太引人注目了。</div>
+        <div class="tweet-foot">
+          <span>likes 1132 / retweets 108 / replies 109 / views 1273614</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="35">
+        <div class="tweet-head">
+          <span class="mono">2026-03-08 07:11</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$FN</span><span class="chip red">$IQE</span></span>
+        </div>
+        <div class="tweet-text">Only ones probably not priced in are the more niche ones like epitaxy process on top of the InP substrates or maybe new laser/transceiver players that hit their inflection point.  
+
+I mentioned $IQE was extremely early (but more high risk), given their peer Landmark was priced at $3.5-$4B. 
+
+This depends on restructuri...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Only ones probably not priced in are the more niche ones like epitaxy process on top of the InP substrates or maybe new laser/transceiver players that hit their inflection point.  
+
+I mentioned $IQE was extremely early (but more high risk), given their peer Landmark was priced at $3.5-$4B. 
+
+This depends on restructuring. 
+
+$AAOI is also very early, it&#x27;s more nuanced since they do end to end (laser -&gt; design -&gt; assembly). If they can execute across each layer and cut out $FN/Innolight type players and expand margins, could be a 10x. 
+
+This largely depends on execution though. 
+
+$AXTI maybe if Shkreli joins their board and teaches them how to hike prices.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2030420999234285624" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>唯一可能没有定价的是更利基的产品，例如 InP 基板顶部的外延工艺，或者可能达到拐点的新激光/收发器播放器。  
+
+我提到 $IQE 非常早（但风险更高），因为他们的同行 Landmark 的定价为 $3.5-$4B。 
+
+这取决于重组。 
+
+$AAOI 也很早，它更加细致，因为它们确实是端到端的（激光 -&gt; 设计 -&gt; 组装）。如果他们能够在每一层执行并淘汰 $FN/Innolight 类型的玩家并扩大利润，可能会是 10 倍。 
+
+但这很大程度上取决于执行力。 
+
+$AXTI 也许如果 Shkreli 加入他们的董事会并教他们如何提高价格。</div>
+        <div class="tweet-foot">
+          <span>likes 47 / retweets 1 / replies 4 / views 7055</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="36">
+        <div class="tweet-head">
+          <span class="mono">2026-03-08 00:09</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">Yeah if you go more upstream for optical transceivers for example, $AXTI is the end of the end materials bottleneck for photonics.
+
+They usually they supply to epiwafer companies like $IQE that supply to $LITE -&gt; $LITE cloudlite -&gt; $FN -&gt; $GOOGL. 
+
+And companies like $TSEM along the way + random European reactor seller...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yeah if you go more upstream for optical transceivers for example, $AXTI is the end of the end materials bottleneck for photonics.
+
+They usually they supply to epiwafer companies like $IQE that supply to $LITE -&gt; $LITE cloudlite -&gt; $FN -&gt; $GOOGL. 
+
+And companies like $TSEM along the way + random European reactor sellers to $IQE/Landmark.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2030314977886945367" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是的，例如，如果您向光收发器的上游发展，$AXTI 就是光子学最终材料瓶颈的终结。
+
+他们通常向 $IQE 等外延片公司供货，这些公司向 $LITE -&gt; $LITE cloudlite -&gt; $FN -&gt; $GOOGL 供货。 
+
+一路上还有像 $TSEM 这样的公司 + 随机欧洲反应堆卖家到 $IQE/Landmark。</div>
+        <div class="tweet-foot">
+          <span>likes 38 / retweets 5 / replies 2 / views 6445</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="37">
+        <div class="tweet-head">
+          <span class="mono">2026-03-07 00:00</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$COHR</span><span class="chip red">$CRDO</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span></span>
+        </div>
+        <div class="tweet-text">We&#x27;ve reached liftoff... $AAOI +11.26% despite the broader photonics names down. 
+
+Everyone is trying to find the next $LITE that went from $49 to $614. 
+
+Sometimes, it might just be sitting right in front of you? https://t.co/deBAD017ll</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">We&#x27;ve reached liftoff... $AAOI +11.26% despite the broader photonics names down. 
+
+Everyone is trying to find the next $LITE that went from $49 to $614. 
+
+Sometimes, it might just be sitting right in front of you? https://t.co/deBAD017ll</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2029950298492715170" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>尽管更广泛的光子学名称下跌，但我们已经达到了起飞... $AAOI + 11.26%。 
+
+每个人都在努力寻找下一个从 49 美元涨到 614 美元的 $LITE。 
+
+有时，它可能就坐在你面前？ https://t.co/deBAD017ll</div>
+        <div class="tweet-foot">
+          <span>likes 825 / retweets 62 / replies 52 / views 152544</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="38">
+        <div class="tweet-head">
+          <span class="mono">2026-03-06 04:45</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span></span>
+        </div>
+        <div class="tweet-text">$AAOI has exceptionally strong buying pressure.
+
+All major photonics names are down today: 
+
+$LITE down -4.74%
+$COHR down -8%
+$AXTI down -2.5%
+$IQE down -20%.
+$FN down -3.98.
+
+But $AAOI is the photonics name green. 
+
+There’s a raw, unadulterated upside when you look at $AAOI laser -&gt; design -&gt; assembly supply chain val...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AAOI has exceptionally strong buying pressure.
+
+All major photonics names are down today: 
+
+$LITE down -4.74%
+$COHR down -8%
+$AXTI down -2.5%
+$IQE down -20%.
+$FN down -3.98.
+
+But $AAOI is the photonics name green. 
+
+There’s a raw, unadulterated upside when you look at $AAOI laser -&gt; design -&gt; assembly supply chain valued at $7.5B.
+
+And compare it to their Asian or Western counterparts all valued at $50B+</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2029659552141246661" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AAOI 的购买压力异常强劲。
+
+所有主要光子学名称今天均已关闭： 
+
+$LITE 下跌 -4.74%
+$COHR 下降 -8%
+$AXTI 下跌 -2.5%
+$IQE 下降-20%。
+斐济元下降-3.98。
+
+但 $AAOI 是光子学的名字绿色。 
+
+当你观察价值 $7.5B 的 $AAOI 激光 -&gt; 设计 -&gt; 组装供应链时，你会发现一个原始的、纯粹的优势。
+
+并将其与价值 $50B+ 的亚洲或西方同行进行比较</div>
+        <div class="tweet-foot">
+          <span>likes 603 / retweets 41 / replies 36 / views 96304</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="39">
+        <div class="tweet-head">
+          <span class="mono">2026-03-05 07:26</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$COHR</span><span class="chip red">$CRDO</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span></span>
+        </div>
+        <div class="tweet-text">$AAOI is extraordinarily exciting. 
+
+There is a chance this re-rates to $35B+ or higher next year from $7B if they can execute. 
+
+I&#x27;ll give a TLDR of the landscape and a simple explanation why:
+
+Assembly:
+
+-&gt; Lasers from $LITE / $COHR -&gt; assembles from blueprints -&gt;  then sell the transceiver.  
+
+$FN (Asia) -&gt; ~$20B MC...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AAOI is extraordinarily exciting. 
+
+There is a chance this re-rates to $35B+ or higher next year from $7B if they can execute. 
+
+I&#x27;ll give a TLDR of the landscape and a simple explanation why:
+
+Assembly:
+
+-&gt; Lasers from $LITE / $COHR -&gt; assembles from blueprints -&gt;  then sell the transceiver.  
+
+$FN (Asia) -&gt; ~$20B MC.
+ ~$4B projected revenue, 12.4% gross margins. 
+
+Design + Assembly: 
+
+- Buys lasers from $LITE / $COHR, design the 800G and 1.6T -&gt; then sells the transceiver. 
+
+Innolight (China): ~$84B MC 
+~ 46.2% gross margins, ~$11B projected revenue
+
+Eoptolink (China): ~$50B MC:  
+~$5.3B projected revenue
+
+Lasers: 
+
+- Creates the Lasers to sell to Innolight + Eoptolink or creates the lasers + design to give to $FN to assemble for them/. 
+
+$LITE, $55B MC: 
+FY 2026 est. ~$2.91B (~40% margin)
+
+(they also do more than lasers, eg. $LITE with Cloudlite does design -&gt; $FN to assemble based on blueprints too, but not the entire process end-to-end). 
+( $COHR and $AVGO do this too)
+_ _ _ _ _ _ 
+
+Entire supply chain (laser chips, design, and assembly)
+
+$AAOI $7.5B MC:
+Midpoint 2027 est. ~4.5B ARR (40% margin)
+
+- $AAOI makes the laser (like $LITE), designs it from ground up (like Innolight), then assembles it like ( $FN ): 
+
+And it&#x27;s primarily made in the USA. 
+
+-&gt; $AAOI does the $LITE / $COHR lasers in-house 
+-&gt; $AAOI does Innolight/Eoptolink transceiver design.
+-&gt;  $AAOI does $FN&#x27;s assembly.
+
+This is possible margin expansion/optimization across the board. 
+
+Best of all they&#x27;re projected to leapfrogging $LITE&#x27;s FY2026 projected ~$2.91B revenue...
+
+By doing: ~4.5B ARR mid-year 2027
+
+When you look at $AAOI&#x27;s $7.5B Marketcap.
+
+And you look at each part of the photonics supply chain from $LITE at $55B to Eoptolink at $55B. 
+
+Anyone can see the raw, unadulterated upside if they execute.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2029337803369349293" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AAOI 非常令人兴奋。 
+
+如果他们能够执行，明年有可能从 $7B 重新定价到 $35B+ 或更高。 
+
+我将简要介绍一下情况并简单解释一下原因：
+
+组装：
+
+-&gt; 来自 $LITE / $COHR 的激光器 -&gt; 根据蓝图组装 -&gt; 然后出售收发器。  
+
+$FN（亚洲）-&gt; ~$20B MC。
+ 预计收入约为 40 亿美元，毛利率为 12.4%。 
+
+设计+组装： 
+
+- 从 $LITE / $COHR 购买激光器，设计 800G 和 1.6T -&gt; 然后出售收发器。 
+
+旭创科技（中国）：~$84B MC 
+毛利率约为 46.2%，预计收入约为 11B 美元
+
+新易盛（中国）：~$50B MC：  
+~$5.3B 预计收入
+
+激光： 
+
+- 创建激光器出售给旭创+新易联，或者创建激光器+设计给$FN为他们组装/。 
+
+$LITE，$55B MC： 
+2026 财年预计~$2.91B（~40% 利润率）
+
+（它们的作用也不仅仅是激光，例如，带有 Cloudlite 的 $LITE 也可以根据蓝图进行设计 -&gt; $FN 组装，但不是端到端的整个过程）。 
+（ $COHR 和 $AVGO 也这样做）
+_ _ _ _ _ _ 
+
+整个供应链（激光芯片、设计和组装）
+
+$AAOI $7.5B MC：
+2027 年中点预计约为 4.5B ARR（40% 利润率）
+
+- $AAOI 制造激光器（如 $LITE），从头开始设计（如旭创），然后组装它（如 $FN ）： 
+
+它主要是在美国制造的。 
+
+-&gt; $AAOI 内部生产 $LITE / $COHR 激光器 
+-&gt; $AAOI 做旭创/新易盛收发器设计。
+-&gt; $AAOI 进行 $FN 的汇编。
+
+这可能是全面的利润扩张/优化。 
+
+最重要的是，他们预计将超越 $LITE 2026 财年预计的约 $2.91B 收入......
+
+通过这样做：2027 年年中约 4.5B ARR
+
+当您查看 $AAOI 的 $7.5B 市值时。
+
+你会看到光子供应链的每个部分，从 $55B 的 $LITE 到 $55B 的新易盛 (Eoptolink)。 
+
+如果他们执行的话，任何人都可以看到原始的、纯粹的好处。</div>
+        <div class="tweet-foot">
+          <span>likes 984 / retweets 110 / replies 62 / views 240053</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="40">
+        <div class="tweet-head">
+          <span class="mono">2026-03-04 23:37</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$COHR</span><span class="chip red">$CRDO</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span></span>
+        </div>
+        <div class="tweet-text">High conviction long: $AAOI.   
+
+I genuinely think this could easily be a 3x by next year.  
+
+Nvidia funded $COHR, who does Malaysia manufacturing for 800G/1.6T.  
+
+$LITE uses FN in Thailand for volume production, and has it&#x27;s own manufacturing in Thailand. 
+
+I will keep hammering this home but Applied Optoelectronics ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">High conviction long: $AAOI.   
+
+I genuinely think this could easily be a 3x by next year.  
+
+Nvidia funded $COHR, who does Malaysia manufacturing for 800G/1.6T.  
+
+$LITE uses FN in Thailand for volume production, and has it&#x27;s own manufacturing in Thailand. 
+
+I will keep hammering this home but Applied Optoelectronics is only pure Made in America, optical transceiver play.
+
+Again, the two &quot;American&quot; optical companies outsourced it to Asia, while $AAOI spent the years building up capacity and fabs in Texas.   
+
+Nvidia funded both $COHR and $LITE just now to build out a US-version to  insulate its most critical supply chain from geopolitical risks. 
+
+But guess who already has the supply chain setup and is years ahead in that regard? $AAOI.
+
+$LITE ($55B) FY 2026 est. ~$2.91B   
+
+$AAOI ($7.1B MC) H2 2027: $4.35B ARR.  
+
+$AAOI will actually leapfrong Lite FY 2026 projections if management executes (and with ~40% gross margins).   
+
+Once again. $AAOI ($7B) will leapfrog $LITE ($55B MC) entire 2026 revenue projections if they deliver their projections. 
+
+$FN over in Asia, 2026 projections are actually around the exact same as AAOI. 
+
+~4.39B revenue off 12.4% gross margins. And it&#x27;s a $20B MC (with much lower margins)  
+
+Even if $AAOI hits 70% of their target, it&#x27;s likely to be heavily re-rated way past it&#x27;s current marketcap.  
+
+TLDR: Hard to see downside with $AAOI at these levels, especially with 3-4 hyperscalers (likely $GOOGL, $MSFT, $AMZN) wanting to buy up any capacity it can make for years out. And with $GOOGL not going the CPO route.  
+
+$AAOI leapfrogs $CRDO, $ALAB, $LITE, and others in growth + benefits from photonics theme vs. copper (from the first two). 
+
+$AAOI remains an asymmetrical 1Y high conviction as long as management delivers.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2029219794025644382" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>高信念多头：$AAOI。   
+
+我真的认为到明年这个数字很可能会增加 3 倍。  
+
+Nvidia 资助了 $COHR，该公司在马来西亚制造 800G/1.6T。  
+
+$LITE在泰国使用FN进行量产，并在泰国拥有自己的制造工厂。 
+
+我会继续锤击这个家，但应用光电只是纯粹的美国制造，光收发器游戏。
+
+两家“美国”光学公司再次将其外包给亚洲，而 $AAOI 则花了数年时间在德克萨斯州建设产能和晶圆厂。   
+
+Nvidia 刚刚资助了 $COHR 和 $LITE 来构建美国版本，以使其最关键的供应链免受地缘政治风险的影响。 
+
+但猜猜谁已经拥有供应链设置并且在这方面领先多年？ $AAOI。
+
+$LITE ($55B) 2026 财年预计 ~$2.91B   
+
+$AAOI ($7.1B MC) 2027 年下半年：$4.35B ARR。  
+
+如果管理层执行的话，$AAOI 实际上将超越 Lite 2026 财年的预测（毛利率约为 40%）。   
+
+再次。如果 $AAOI ($7B) 兑现其预测，他们将超越 $LITE ($55B MC) 整个 2026 年的收入预测。 
+
+在亚洲，2026 年的 FN 预测实际上与 AAOI 大致相同。 
+
+毛利率约为 4.39B，毛利率下降 12.4%。这是一个 $20B MC（利润率低得多）  
+
+即使 $AAOI 达到目标的 70%，它的评级也可能会大幅重新调整，远远超过当前的市值。  
+
+TLDR：在这些水平上，很难看出 $AAOI 有什么负面影响，特别是对于 3-4 个超大规模企业（可能是 $GOOGL、$MSFT、$AMZN）想要购买其在未来几年内可以生产的任何容量的情况。 $GOOGL 不走 CPO 路线。  
+
+$AAOI 在增长方面超越了 $CRDO、$ALAB、$LITE 和其他公司，并从光子主题与铜（前两者）中受益。 
+
+只要管理层兑现承诺，$AAOI 仍然是不对称的 1 年高点。</div>
+        <div class="tweet-foot">
+          <span>likes 1403 / retweets 165 / replies 100 / views 463631</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="41">
+        <div class="tweet-head">
+          <span class="mono">2026-03-04 21:36</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span></span>
+        </div>
+        <div class="tweet-text">Well… this was probably the fastest 100%+ rally since $AXTI?
+
+Feels like everything around me keeps going up 100%+ in short periods of time from $AAOI to $LITE. 
+
+Anyone suffering from this problem? https://t.co/ao8g3cey0t</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Well… this was probably the fastest 100%+ rally since $AXTI?
+
+Feels like everything around me keeps going up 100%+ in short periods of time from $AAOI to $LITE. 
+
+Anyone suffering from this problem? https://t.co/ao8g3cey0t</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2029189271572365661" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>嗯……这可能是自 $AXTI 以来最快的 100%+ 反弹？
+
+感觉我周围的一切都在短时间内从 $AAOI 上涨到 $LITE，涨幅超过 100%。 
+
+有人遇到这个问题吗？ https://t.co/ao8g3cey0t</div>
+        <div class="tweet-foot">
+          <span>likes 659 / retweets 47 / replies 82 / views 107097</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="42">
+        <div class="tweet-head">
+          <span class="mono">2026-03-04 19:44</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span></span>
+        </div>
+        <div class="tweet-text">$GOOGL rejecting CPO is a massive structural win for the entire pluggable optics ecosystem.  
+
+Most people missed this in the Needham analyst note on the $LITE $850 PT upgrade today:
+
+Large beneficiaries: $AAOI, $FN, Innolight, transceiver companies. 
+
+Secondary beneficiaries (epiwafers): $IQE, Landmark 
+
+Third Order B...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$GOOGL rejecting CPO is a massive structural win for the entire pluggable optics ecosystem.  
+
+Most people missed this in the Needham analyst note on the $LITE $850 PT upgrade today:
+
+Large beneficiaries: $AAOI, $FN, Innolight, transceiver companies. 
+
+Secondary beneficiaries (epiwafers): $IQE, Landmark 
+
+Third Order Beneficiaries (substrate): $AXTI, Sumitomo
+
+Downgrade (CPO): Soitec
+
+Quote:  &quot;LITE sees an unexpected bonus that its primary transceiver module customer (Google) currently has no plans to adopt CPO in its TPU architecture from what we have seen.&quot;</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2029160940604739625" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$GOOGL 拒绝 CPO 对于整个可插拔光学生态系统来说是一个巨大的结构性胜利。  
+
+大多数人在 Needham 分析师今天关于 $LITE $850 PT 升级的报告中忽略了这一点：
+
+大受益者：$AAOI、$FN、旭创科技、收发器公司。 
+
+第二受益者（外延片）：$IQE、Landmark 
+
+第三级受益人（底物）：$AXTI、Sumitomo
+
+降级（CPO）：Soitec
+
+引用：“LITE 看到了一个意想不到的好处，从我们所看到的情况来看，其主要收发器模块客户（Google）目前没有计划在其 TPU 架构中采用 CPO。”</div>
+        <div class="tweet-foot">
+          <span>likes 685 / retweets 58 / replies 48 / views 143574</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="43">
+        <div class="tweet-head">
+          <span class="mono">2026-03-02 16:04</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$CRDO</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">$AAOI does not concern itself with a war in Iran.
+
+The photonics stock with surprise ~900% revenue growth blowout projections to:
+
+$4.53B ARR by mid-2027, off ~40% margins.
+
+Coupled with double digit directional SI stuck. 
+
+Might not need to be. https://t.co/qKReNvBMYh</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AAOI does not concern itself with a war in Iran.
+
+The photonics stock with surprise ~900% revenue growth blowout projections to:
+
+$4.53B ARR by mid-2027, off ~40% margins.
+
+Coupled with double digit directional SI stuck. 
+
+Might not need to be. https://t.co/qKReNvBMYh</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028380960954413389" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AAOI 并不关心伊朗战争。
+
+光子学股票的收入增长令人惊讶地达到 900% 井喷，预计：
+
+到 2027 年中期，ARR 为 4.53B 美元，利润率下降约 40%。
+
+再加上两位数定向SI卡住。 
+
+可能不需要。 https://t.co/qKReNvBMYh</div>
+        <div class="tweet-foot">
+          <span>likes 434 / retweets 26 / replies 25 / views 158612</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="44">
+        <div class="tweet-head">
+          <span class="mono">2026-03-01 05:14</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$LITE</span></span>
+        </div>
+        <div class="tweet-text">- even if everyone produces 800g/1.6T there’s not enough. Demand far outstrips supply.
+
+It’s not quite the trio Samsung/sk Hynix/micron but $AAOI is probably the only one from made in America supply chains since $COHR does assembly in Malaysia and $LITE -&gt; $FN Thailand and other places in Asia. 
+
+- in their call they d...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">- even if everyone produces 800g/1.6T there’s not enough. Demand far outstrips supply.
+
+It’s not quite the trio Samsung/sk Hynix/micron but $AAOI is probably the only one from made in America supply chains since $COHR does assembly in Malaysia and $LITE -&gt; $FN Thailand and other places in Asia. 
+
+- in their call they detailed hyperscalers wanted to buy anything they can make. It’s moreso production ramp and just drives the first point home that demand &gt; supply across the board.
+
+Don’t think we’ll see flooding bc demand will eat up anything the players can make for the foreseeable future. And nonzero chance there’s export controls like cmxt/YMTC from memory on Chinese players</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027854978199785918" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>- 即使每个人生产 800g/1.6T 也不够。需求远远超过供应。
+
+它不完全是 Samsung/sk Hynix/micron 三巨头，但 $AAOI 可能是唯一一家来自美国制造供应链的公司，因为 $COHR 在马来西亚进行组装，而 $LITE -&gt; $FN 在泰国和亚洲其他地方进行组装。 
+
+- 在他们的电话中，他们详细说明了超大规模企业想要购买他们可以制造的任何东西。更重要的是产量的增加，并且只是推动了第一点：全面需求&gt;供应。
+
+不要以为我们会看到洪水泛滥，因为需求会耗尽玩家在可预见的未来所能制造的一切。记忆中中国玩家受到像 cmxt/YMTC 这样的出口管制的可能性非零</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 5290</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="45">
+        <div class="tweet-head">
+          <span class="mono">2026-03-01 04:14</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$CRDO</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">$AAOI feels like must-have photonics exposure to me. 
+
+Their earnings report is genuinely black magic.
+
+$LITE ($50B MC): FY 2026 est. ~$2.91B
+$AAOI ($5.6B MC) H2 2027: $4.35B ARR. 
+
+Their growth projections literally leapfrogged $LITE for 2026. 
+
+Not even kidding. 
+
+Gross margins are ~40% for $AAOI, maybe 45% for $LITE...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AAOI feels like must-have photonics exposure to me. 
+
+Their earnings report is genuinely black magic.
+
+$LITE ($50B MC): FY 2026 est. ~$2.91B
+$AAOI ($5.6B MC) H2 2027: $4.35B ARR. 
+
+Their growth projections literally leapfrogged $LITE for 2026. 
+
+Not even kidding. 
+
+Gross margins are ~40% for $AAOI, maybe 45% for $LITE with OCS monopoly. 
+
+&quot;-term objective of gross margins to around 40%,&quot;
+
+Don&#x27;t get me wrong, $LITE is an amazing long due to 8-12% BOM of $GOOGL TPU and Google capex spend... 
+
+But $AAOI top line growth for revenue is close to 10X revenue growth from last year&#x27;s revenue, which is just insane. 
+
+And if you go off napkin math modeling:
+
+&quot;By Q2 2027, management forecasts monthly transceiver revenue potential of $378 million&quot;
+
+~ $4.30B target, 40% margin (in-house), $1.72B gross profit, maybe ~$600m capex/opex:
+
+Net income ~$896M.
+
+Forward P/E (on 2027 NI): ~6.4x forward p/e off ~900%-ish Y/Y growth. 
+
+And if you look at photonics ramp, it&#x27;s expected to increase exponentially toward 2030. 
+
+From their management call hyperscalers likely ( $GOOGL, $MSFT, $AMZN ) are buying out all available capacity for transceivers. 
+
+Reminds me of a early $ALAB or $CRDO where all the hyperscalers are their customers. 
+
+And if you get to likely price hikes like NAND for $SNDK:
+
++15% ASP Price Hike: $1.41B net income 
+- (4.1x forward p/e)
++30% ASP Price Hike: $1.92B net income  
+- (3.0x forward p/e)
+
+This is why I got so excited about $AAOI post-earnings. 
+
+Not even including $AAOI &quot;Made in America&quot; transceiver supply chains that would give them a premium where $FN, Innolight, Eptolink, and others do theirs abroad.
+
+Kinda like $INTC to $TSM or $MU to SK Hynix premiums. 
+
+The ROI for this is just astronomical if they hit their projections and price hikes give them a 3 p/e rate off 800%+ growth in photonics segments. 
+
+Again, these are management projections, execution is the biggest the name of the game.
+
+Regardless, I&#x27;m making $AAOI one of my largest photonics positions because this looks like black magic and the beginning of the next $SNDK. 
+
+There&#x27;s a nonzero chance we might see this at a $50B $LITE valuation one and a half year from now if they can execute on their projections.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027839956765515961" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AAOI 对我来说就像是必备的光子学知识。 
+
+他们的收益报告确实是黑魔法。
+
+$LITE ($50B MC)：2026 财年预计 ~$2.91B
+$AAOI ($5.6B MC) 2027 年下半年：$4.35B ARR。 
+
+他们的增长预测实际上超越了 2026 年的 $LITE。 
+
+甚至不是开玩笑。 
+
+$AAOI 的毛利率约为 40%，OCS 垄断的 $LITE 的毛利率可能为 45%。 
+
+“毛利率的长期目标为40%左右，”
+
+不要误会我的意思，由于 $GOOGL TPU 的 BOM 为 8-12% 以及 Google 资本支出，$LITE 是一个惊人的多头...... 
+
+但 $AAOI 的收入增长接近去年收入增长的 10 倍，这实在是太疯狂了。 
+
+如果你不再餐巾纸数学建模：
+
+“到 2027 年第二季度，管理层预测每月收发器收入潜力将达到 3.78 亿美元”
+
+~ $4.30B 目标，40% 利润率（内部），$1.72B 毛利润，可能 ~$6 亿资本支出/运营支出：
+
+净利润约 8.96 亿美元。
+
+远期市盈率（2027 年新近）：约 6.4 倍的远期市盈率，同比增长约 900%。 
+
+如果你看看光子学的发展，预计到 2030 年它将呈指数级增长。 
+
+从他们的管理层看来，超大规模提供商（$GOOGL、$MSFT、$AMZN）可能正在买断收发器的所有可用容量。 
+
+让我想起早期的 $ALAB 或 $CRDO，其中所有超大规模企业都是他们的客户。 
+
+如果您发现 NAND 的价格可能会上涨，例如 $SNDK：
+
++15% ASP 价格上涨：净收入 $1.41B 
+-（4.1 倍远期市盈率）
++30% ASP 价格上涨：净收入 $1.92B  
+-（3.0 倍远期市盈率）
+
+这就是为什么我对 AAOI 财报后感到如此兴奋。 
+
+甚至不包括$AAOI“美国制造”收发器供应链，这会给他们带来溢价，而$FN、Innolight、Eptolink 和其他公司在国外则这样做。
+
+有点像 $INTC 到 $TSM 或 $MU 到 SK Hynix 保费。 
+
+如果他们达到预期，并且价格上涨使他们在光子学领域的增长率达到 800% 以上，那么其投资回报率将达到 3 倍市盈率。 
+
+再次强调，这些都是管理层的预测，执行力才是最重要的。
+
+无论如何，我正在将 $AAOI 作为我最大的光子学职位之一，因为这看起来像是黑魔法，也是下一个 $SNDK 的开始。 
+
+如果他们能够执行他们的预测，我们有可能在一年半后以 500 亿美元的 LITE 估值看到这一点。</div>
+        <div class="tweet-foot">
+          <span>likes 1065 / retweets 115 / replies 62 / views 232954</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="46">
+        <div class="tweet-head">
+          <span class="mono">2026-02-28 04:58</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">$AAOI looks like an early $SNDK. And is likely going much higher than a $5.5B MC over the next year. 
+
+On their earnings call:
+
+- 3 hyperscale customers (probably $GOOGL, $AMZN, $MSFT)
+
+- &quot;they would like to buy all the transceiver we can make for 800G and 1.6&quot;. - completely sold out, like memory.
+
+- 900%+ revenue grow...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AAOI looks like an early $SNDK. And is likely going much higher than a $5.5B MC over the next year. 
+
+On their earnings call:
+
+- 3 hyperscale customers (probably $GOOGL, $AMZN, $MSFT)
+
+- &quot;they would like to buy all the transceiver we can make for 800G and 1.6&quot;. - completely sold out, like memory.
+
+- 900%+ revenue growth forecast to $4.3B off $5.5B MC.
+
+There is unprecedented demand for photonics, and $AAOI just confirmed it. 
+
+And they can always begin price hikes to increase gross margins from 40%. Of course there are execution risks... 
+
+But this is one example where you look at fundamentals over chart.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027488567971443170" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AAOI 看起来像早期的 $SNDK。明年的价格可能会远高于 $5.5B MC。 
+
+在他们的财报电话会议上：
+
+- 3 个超大规模客户（可能是 $GOOGL、$AMZN、$MSFT）
+
+- “他们想购买我们为 800G 和 1.6 制造的所有收发器”。 - 完全卖完了，就像记忆一样。
+
+- 预计收入增长 900% 以上，将从 $5.5B MC 增加到 $4.3B。
+
+对光子学的需求前所未有，$AAOI 刚刚证实了这一点。 
+
+他们随时可以开始提价，将毛利率提高到 40%。当然还有执行风险…… 
+
+但这是一个例子，你可以通过图表来查看基本面。</div>
+        <div class="tweet-foot">
+          <span>likes 1308 / retweets 95 / replies 42 / views 312705</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="47">
+        <div class="tweet-head">
+          <span class="mono">2026-02-28 02:28</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$LITE</span></span>
+        </div>
+        <div class="tweet-text">Yeah $AAOI is the only true domestic player assembling in Sugar Texas for 800G and 1.6T transceivers. $COHR does their stuff in Malaysia/Vietnam, and $LITE uses $FN and others. 
+
+There&#x27;s likely going to be a huge geopolitical premium for American domestic manufacturing on top if they hit their $4.5B ARR/40% margin proj...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yeah $AAOI is the only true domestic player assembling in Sugar Texas for 800G and 1.6T transceivers. $COHR does their stuff in Malaysia/Vietnam, and $LITE uses $FN and others. 
+
+There&#x27;s likely going to be a huge geopolitical premium for American domestic manufacturing on top if they hit their $4.5B ARR/40% margin projections. 
+
+That being said:
+-&gt; execution risk is always present
+-&gt; $250m ATM overhang does impact short term stock pricing. 
+
+But long term value creation is understated.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027450758539710618" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是的，$AAOI 是唯一一家在 Sugar Texas 组装 800G 和 1.6T 收发器的真正国内厂商。 $COHR 在马来西亚/越南做他们的事情，$LITE 使用 $FN 和其他。 
+
+如果美国国内制造业达到 $4.5B ARR/40% 的利润率预测，那么他们可能会获得巨大的地缘政治溢价。 
+
+话虽这么说：
+-&gt; 执行风险始终存在
+-&gt; 2.5 亿美元的 ATM 过剩确实影响了短期股票定价。 
+
+但长期价值创造却被低估了。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4668</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="48">
+        <div class="tweet-head">
+          <span class="mono">2026-02-28 02:14</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">After earnings, $AAOI could easily be a $25B-$30B company next year from $5B if they hit their projections. 
+
+And they&#x27;re one of the only &quot;Made in America&quot;  (Sugarland, Texas) companies out of
+
+- $LITE (global)
+- $COHR (global)
+- $FN (Thai)
+- $AVGO (global)
+- Innolight (China), and Eoptolink (China). 
+
+So they likely g...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">After earnings, $AAOI could easily be a $25B-$30B company next year from $5B if they hit their projections. 
+
+And they&#x27;re one of the only &quot;Made in America&quot;  (Sugarland, Texas) companies out of
+
+- $LITE (global)
+- $COHR (global)
+- $FN (Thai)
+- $AVGO (global)
+- Innolight (China), and Eoptolink (China). 
+
+So they likely get that &quot;America&quot; premium like $INTC compared to $TSM and $MU compared to Sk Hynix. 
+
+But from revenue: 
+FY Revenue: $456 million
+2027 ARR by : $4.536B (~900%+ growth). 
+
+Off high 30&#x27;s - low 40% projected margins + hyperscaler qualifications. 
+
+This is wild. But there was a $250M ATM, but that&#x27;s typically pennies compared to the projection. 
+
+This part is extremely interesting: 
+
+-&gt; Management stated that demand and capacity for 800G, 1.6T modules could surge nearly 10x by mid-2027. 
+
+This is also a large tailwind for epiwafer companies too like $IQE and Landmark and more upstream like $AXTI. 
+
+$AAOI is a core hold over 2026-2027, but there&#x27;s always execution risks if they can deliver. 
+
+$25-30B MC projections sound surreal but that&#x27;s how wild the earnings was if they hit $4.35B ARR, off 900%+ growth (and photonics scale up is likely to continue even further into 2028-2029)</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027447224188473736" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>盈利后，如果 $AAOI 达到预期，明年他们很容易从 50 亿美元成为一家 25B-30B 美元的公司。 
+
+他们是美国仅有的“美国制造”（德克萨斯州舒格兰）公司之一
+
+- $LITE（全球）
+- $COHR（全球）
+- $FN（泰语）
+- $AVGO（全球）
+- 旭创科技（中国）和新易盛（中国）。 
+
+因此，他们可能会获得“美国”溢价，例如 $INTC 与 $TSM 相比，$MU 与 Sk Hynix 相比。 
+
+但从收入来看： 
+财年收入：4.56 亿美元
+2027 年 ARR：$4.536B（~900%+ 增长）。 
+
+高于 30% - 低 40% 的预计利润 + 超大规模资质。 
+
+这太疯狂了。虽然有一台价值 2.5 亿美元的 ATM，但与预测相比，这通常只是几美分。 
+
+这部分非常有趣： 
+
+-&gt; 管理层表示，到 2027 年中期，800G、1.6T 模块的需求和产能可能会激增近 10 倍。 
+
+对于 $IQE 和 Landmark 等外延片公司以及 $AXTI 等上游晶圆公司来说，这也是一个巨大的推动力。 
+
+$AAOI 是 2026-2027 年的核心持有，但如果它们能够兑现，总是存在执行风险。 
+
+$25-30B MC 预测听起来有些超现实，但如果 ARR 达到 $4.35B，则收益将达到 900% 以上（光子学规模扩大可能会持续到 2028-2029 年）</div>
+        <div class="tweet-foot">
+          <span>likes 819 / retweets 96 / replies 40 / views 448729</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="49">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 22:21</span>
+          <span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span></span>
+        </div>
+        <div class="tweet-text">-&gt; $LITE is a known $GOOGL supplier. 
+
+-&gt; $IQE is a known $LITE supplier. 
+
+-&gt; $AXTI is a known $IQE supplier. 
+
+Google TPU + Hyperscaler ASIC BOM are extremely confidential. 
+
+But you can kinda guess from relationship mapping even though nobody will say $AXTI or $IQE supplies to  X hyperscaler? 
+
+You&#x27;d be surprised ho...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">-&gt; $LITE is a known $GOOGL supplier. 
+
+-&gt; $IQE is a known $LITE supplier. 
+
+-&gt; $AXTI is a known $IQE supplier. 
+
+Google TPU + Hyperscaler ASIC BOM are extremely confidential. 
+
+But you can kinda guess from relationship mapping even though nobody will say $AXTI or $IQE supplies to  X hyperscaler? 
+
+You&#x27;d be surprised how multi-hop relationships are missed.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026663975145164937" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>-&gt; $LITE 是知名的 $GOOGL 供应商。 
+
+-&gt; $IQE 是知名的 $LITE 供应商。 
+
+-&gt; $AXTI 是知名的 $IQE 供应商。 
+
+Google TPU + Hyperscaler ASIC BOM 极其保密。 
+
+但你可以从关系映射中猜测，即使没有人会说 $AXTI 或 $IQE 向 X 超大规模提供供应？ 
+
+您会惊讶地发现多跳关系被遗漏了。</div>
+        <div class="tweet-foot">
+          <span>likes 1111 / retweets 96 / replies 43 / views 165475</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="50">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 20:41</span>
+          <span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span></span>
+        </div>
+        <div class="tweet-text">Was the first to talk about $AXTI in relation to photonics BOM/supply chains:
+
+$IQE is very interesting too as one of the only Western suppliers. 
+
+Basically if you look at photonics flow on $GOOGL TPU/hyperscaler ASICs kinda looks like this (very likely, but undisclosed): 
+
+Optical Transceivers (highest BOM):
+
+Lumentu...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Was the first to talk about $AXTI in relation to photonics BOM/supply chains:
+
+$IQE is very interesting too as one of the only Western suppliers. 
+
+Basically if you look at photonics flow on $GOOGL TPU/hyperscaler ASICs kinda looks like this (very likely, but undisclosed): 
+
+Optical Transceivers (highest BOM):
+
+Lumentum/Cloud Light:
+~ Vital / $AXTI-&gt; $AXTI/Sumitomo/JX -&gt; $IQE (Epi-Wafers) -&gt; $LITE / Cloud Light -&gt; $FN (Contract Manufacturing) -&gt; $GOOGL TPU
+
+Merhcant optical supply chain:
+
+~ Vital / $AXTI -&gt; $AXTI / Sumitomo / JX  -&gt; → $LITE / $AVGO / $COHR (EML) + $MRVL / $MTSI / Semtech -&gt; Innolight/Eoptolink -&gt; $GOOGL 
+
+So if you want moonshot-type photonics BOM / price-hikes stocks deeper upstream in the photonics BOM: $AXTI, $IQE and your way to go. 
+
+$AXTI had terrible fundamentals before but the recent Northland fundraising round cemented its run. 
+
+$IQE has terrible fundamentals now (Net debt £23.5 million) but is probably one of the most critical parts of the supply chain. If they manage to sell their Taiwan operations, wouldn&#x27;t be surprised if it went up quite a bit just from their inp business. 
+
+There&#x27;s £18m convertible notes (which is basically nothing), then there&#x27;s 120 to 154m new shares (~12% to 15%), which is also kinda nothing relative to current size. 
+
+On the other hand, others $LITE and Innolight are probably more established. 
+
+TLDR:
+
+$IQE -&gt; seems critical to Western supply chains, $130MC. Net debt, if they sell Taiwan business -&gt; strong re-rating or they might just dilute you anyway. 
+
+But if the Taiwan business fails to be sold, probably expect to be diluted to oblivion like Wolfspeed. So huge, huge, risk ad do you own research into risks. 
+
+But $AXTI and $IQE might are personally interesting to me (I do own $IQE).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026638711941902461" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是第一个谈论 $AXTI 与光子 BOM/供应链相关的人：
+
+作为仅有的西方供应商之一，$IQE 也非常有趣。 
+
+基本上，如果你看看 $GOOGL TPU/超大规模 ASIC 上的光子流，看起来就像这样（很可能，但未公开）： 
+
+光收发器（最高 BOM）：
+
+Lumentum/云光：
+~ Vital / $AXTI-&gt; $AXTI/Sumitomo/JX -&gt; $IQE（外延片）-&gt; $LITE / Cloud Light -&gt; $FN（合同制造）-&gt; $GOOGL TPU
+
+商家光学供应链：
+
+~ Vital / $AXTI -&gt; $AXTI / Sumitomo / JX -&gt; → $LITE / $AVGO / $COHR (EML) + $MRVL / $MTSI / Semtech -&gt; 旭创/新易联 -&gt; $GOOGL 
+
+因此，如果您想要登月型光子学 BOM/光子学 BOM 上游的股票价格上涨：$AXTI、$IQE 和您的出路。 
+
+$AXTI 之前的基本面很糟糕，但最近的 Northland 融资轮巩固了其发展势头。 
+
+$IQE 现在的基本面很糟糕（净债务 2350 万英镑），但可能是供应链中最关键的部分之一。如果他们设法出售台湾业务，那么如果他们的进口业务大幅增长，也不会感到惊讶。 
+
+其中有 1800 万英镑的可转换票据（基本上没什么），还有 120 至 1.54 亿股新股（约 12% 至 15%），相对于目前的规模来说也没什么。 
+
+另一方面，其他 $LITE 和 Innolight 可能更为成熟。 
+
+总而言之：
+
+$IQE -&gt; 似乎对西方供应链至关重要，$130MC。净债务，如果他们出售台湾业务 -&gt; 强力重估，否则他们可能会稀释你的股权。 
+
+但如果台湾业务未能出售，很可能会像Wolfspeed一样被稀释到被遗忘。如此巨大的风险广告，你自己对风险进行研究吗？ 
+
+但我个人可能对 $AXTI 和 $IQE 感兴趣（我确实拥有 $IQE）。</div>
+        <div class="tweet-foot">
+          <span>likes 909 / retweets 103 / replies 46 / views 915463</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=FN">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

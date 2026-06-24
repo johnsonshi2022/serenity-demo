@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$SSYS 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$SSYS 历史推文</h1>
+      <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>18</b></div>
+        <div class="stat-card"><span>历史推文</span><b>18</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-01-15</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-02-03</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射 3</span><span class="chip blue">瓶颈狩猎（核心透镜） 3</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-02-03 14:10</span>
+          <span><span class="chip red">$ASML</span><span class="chip red">$SSYS</span><span class="chip red">$TSLA</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">So made the mistake earlier with $SSYS regarding the fact they print the frames for the prototypes of the robotics.
+
+They&#x27;re more like an $ASML for robotics. 
+
+For the robotics ramp (each humanoid produced), I made a post switching $SSYS with $VPG and quoted @SigniaCapital&#x27;s analysis regarding applications for Optimus....</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So made the mistake earlier with $SSYS regarding the fact they print the frames for the prototypes of the robotics.
+
+They&#x27;re more like an $ASML for robotics. 
+
+For the robotics ramp (each humanoid produced), I made a post switching $SSYS with $VPG and quoted @SigniaCapital&#x27;s analysis regarding applications for Optimus.
+
+There was a quote that for each robot ( $TSLA Optimus) produced, they make est. ~$500-$1.2K per robot.
+
+That being said, I&#x27;m sure it&#x27;s a good long, there&#x27;s one famous politician that got everything right and has $SSYS in their portfolio. 
+
+But I&#x27;m not as bullish as I once was I wanted exposure to the direct robotics ramp with high BOM rather than initial prototyping.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2018567746846601627" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>因此，$SSYS 之前犯了一个错误，他们打印了机器人原型的框架。
+
+它们更像是机器人领域的 $ASML。 
+
+对于机器人坡道（生成的每个人形机器人），我使用 $VPG 进行了 $SSYS 后切换，并引用了 @SigniaCapital 关于 Optimus 的应用程序的分析。
+
+有报价称，每生产一个机器人 ($TSLA Optimus)，他们的收入预计约为 500-1200 美元。
+
+话虽这么说，我确信这是一个很好的多头，有一位著名的政治家一切都正确，并且在他们的投资组合中拥有 $SSYS。 
+
+但我不再像以前那样乐观，我想接触具有高 BOM 的直接机器人技术斜坡，而不是最初的原型设计。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3932</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-01-21 01:49</span>
+          <span><span class="chip red">$SSYS</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">I messed up on my $SSYS thesis regarding prototyping/ramp-up, so I wanted a robotics play directly tethered to the amount of robots produced with high % revenue for each robot.
+
+This is speculation but an est. 3-8% ~BOM value for each Tesla Optimus is incredible for $VPG given how small they are.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I messed up on my $SSYS thesis regarding prototyping/ramp-up, so I wanted a robotics play directly tethered to the amount of robots produced with high % revenue for each robot.
+
+This is speculation but an est. 3-8% ~BOM value for each Tesla Optimus is incredible for $VPG given how small they are.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013670172934971446" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我搞砸了关于原型设计/升级的 $SSYS 论文，所以我想要一个机器人游戏，直接与生产的机器人数量挂钩，每个机器人的收入百分比很高。
+
+这是猜测，但考虑到每辆 Tesla Optimus 的尺寸如此之小，对于 $VPG 来说，估计 3-8% ~BOM 价值是令人难以置信的。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3426</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-01-17 17:35</span>
+          <span><span class="chip red">$AIRO</span><span class="chip red">$AXTI</span><span class="chip red">$LPTH</span><span class="chip red">$OSS</span><span class="chip red">$SSYS</span><span class="chip red">$VLN</span></span>
+        </div>
+        <div class="tweet-text">@truncateit I actually believe in my thesis so I cost average up on stuff like $AIRO and $LPTH. 
+
+But if you&#x27;re curious yes I still have $OSS, $AIRO, $LPTH, $SSYS, $AXTI, $VLN, and others I do DD on since they&#x27;re meant to be 1 year holds, not 12 hour ones. https://t.co/uNvk2q5uYe</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@truncateit I actually believe in my thesis so I cost average up on stuff like $AIRO and $LPTH. 
+
+But if you&#x27;re curious yes I still have $OSS, $AIRO, $LPTH, $SSYS, $AXTI, $VLN, and others I do DD on since they&#x27;re meant to be 1 year holds, not 12 hour ones. https://t.co/uNvk2q5uYe</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012458647192994053" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@truncateit 我实际上相信我的论文，所以我在 $AIRO 和 $LPTH 等东西上的平均成本较高。 
+
+但如果你好奇的话，是的，我仍然有 $OSS、$AIRO、$LPTH、$SSYS、$AXTI、$VLN 和其他我做 DD 的东西，因为它们的有效期是 1 年，而不是 12 小时。 https://t.co/uNvk2q5uYe</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 6339</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-01-17 06:44</span>
+          <span><span class="chip red">$SSYS</span><span class="chip red">$TSLA</span><span class="chip red">$VGP</span></span>
+        </div>
+        <div class="tweet-text">@ifreebirdie Yeah forgot to include them, $VGP inferred to be $TSLA Optimus supplier per Citron.   
+
+I also worded things a bit strongly again like the original $SSYS piece, they&#x27;re all casual mapping. A lot of things aren&#x27;t public information. https://t.co/LBWGWbnySF</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@ifreebirdie Yeah forgot to include them, $VGP inferred to be $TSLA Optimus supplier per Citron.   
+
+I also worded things a bit strongly again like the original $SSYS piece, they&#x27;re all casual mapping. A lot of things aren&#x27;t public information. https://t.co/LBWGWbnySF</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012294901694681525" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@ifreebirdie 是的，忘了包括它们，$VGP 被推断为 Citron 的 $TSLA Optimus 供应商。   
+
+我还再次用了有点强烈的措辞，就像原来的 $SSYS 文章一样，它们都是随意的映射。很多事情都不是公开信息。 https://t.co/LBWGWbnySF</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1648</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-01-17 02:08</span>
+          <span><span class="chip red">$AIRO</span><span class="chip red">$AXTI</span><span class="chip red">$LPTH</span><span class="chip red">$OSS</span><span class="chip red">$SSYS</span><span class="chip red">$VLN</span></span>
+        </div>
+        <div class="tweet-text">Yes? $AIRO for drones, $OSS for edge, $SSYS for robotics, $AXTI for AI bottlenecks, $LPTH for defense bottlenecks and $VLN for mispricing were the most recent posts. 
+
+I’m holding my share positions for a year since re-rating doesn’t happen in a day or week. Might take months to play out.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yes? $AIRO for drones, $OSS for edge, $SSYS for robotics, $AXTI for AI bottlenecks, $LPTH for defense bottlenecks and $VLN for mispricing were the most recent posts. 
+
+I’m holding my share positions for a year since re-rating doesn’t happen in a day or week. Might take months to play out.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012225583741063567" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是吗？最新的帖子包括用于无人机的 $AIRO、用于边缘的 $OSS、用于机器人的 $SSYS、用于人工智能瓶颈的 $AXTI、用于防御瓶颈的 $LPTH 以及用于错误定价的 $VLN。 
+
+我持有股票头寸一年，因为重新评级不会在一天或一周内发生。可能需要几个月的时间才能发挥出来。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 5316</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 19:51</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">@ChiefLiquidity So I really really like Boston dynamics. However Hyundai is a massive company and you aren’t getting the most direct exposure to their robotics vertical.
+
+Hence why I opted with $SSYS. I do have indirect exposure to them through Korean ETFs though</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@ChiefLiquidity So I really really like Boston dynamics. However Hyundai is a massive company and you aren’t getting the most direct exposure to their robotics vertical.
+
+Hence why I opted with $SSYS. I do have indirect exposure to them through Korean ETFs though</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012130466367713552" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@ChiefLiquidity 所以我真的很喜欢波士顿动力。然而，现代是一家大公司，你无法最直接地接触到他们的机器人垂直领域。
+
+因此我选择了 $SSYS。不过，我确实通过韩国 ETF 间接接触了它们</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2432</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 19:44</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">@YaronKeren Yeah my bad, I typo a lot on mobile, it’s $SSYS thanks for the correction</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@YaronKeren Yeah my bad, I typo a lot on mobile, it’s $SSYS thanks for the correction</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012128738205696165" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@YaronKeren 是的，我的错，我在移动设备上打错了很多字，是 $SSYS 感谢您的更正</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1904</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 19:09</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">$SSYS は、ボストン・ダイナミクスの「Atlas」やMetaのヒューマノイドなど、あらゆる人型ロボットの**機体フレーム（骨格）**を担っているため、非常に興味深い銘柄です。
+今後の展開はロボティクスの普及（ランプアップ）次第であり、本格的な立ち上がりには時間がかかるかもしれませんが、あるいは今まさに始まっている可能性もあります！いずれにせよ、昨日のOpenAIに関するニュースは、絶好の**カタリスト（材料）**になったと考えています。</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SSYS は、ボストン・ダイナミクスの「Atlas」やMetaのヒューマノイドなど、あらゆる人型ロボットの**機体フレーム（骨格）**を担っているため、非常に興味深い銘柄です。
+今後の展開はロボティクスの普及（ランプアップ）次第であり、本格的な立ち上がりには時間がかかるかもしれませんが、あるいは今まさに始まっている可能性もあります！いずれにせよ、昨日のOpenAIに関するニュースは、絶好の**カタリスト（材料）**になったと考えています。</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012120051747635438" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SSYS は、ボストン・ダイナミクスの「Atlas」やMetaのヒューマノイドなど、あらゆる人型ロボットの**機体フレーム（骨格）**を担っているため、非常に興味深い銘柄です。
+今後の展開はロボティクスの普及（ランプアップ）次第であり、本格的な立ち上がりには時間がかかるかもしれませんが、あるいは今まさに始まっている可能性もあります！いずれにせよ、昨日のOpenAIに関するニュースは、絶好の**カタリスト（材料）**になったと考えています。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 5787</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 17:36</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">Definitely not lol. That’s HFT or institutional algorithms with $SSYS. I’ve noticed that they track my X posts nowadays
+
+Also I do post quite a lot of new information discovery/synthesis. This was priced as a dying hardware company but now they’re the likely frame of every humanoid robot.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Definitely not lol. That’s HFT or institutional algorithms with $SSYS. I’ve noticed that they track my X posts nowadays
+
+Also I do post quite a lot of new information discovery/synthesis. This was priced as a dying hardware company but now they’re the likely frame of every humanoid robot.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012096646994076025" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>绝对不是哈哈。这就是 HFT 或 $SSYS 的机构算法。我注意到他们现在跟踪我的 X 帖子
+
+我还发布了很多新的信息发现/合成。这被定价为一家垂死的硬件公司，但现在它们可能是每个人形机器人的框架。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1032</span>
+        </div>
+        <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 14:50</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">Amazing question! So here&#x27;s the timeline and what changed:
+
+-&gt; America first policies after Trump election 
+
+-&gt; China-US trade tensions, led to companies going to US supply chains ( $SSYS is certification monopoly) from companies like Bambu.
+
+-&gt; 2024-2025ish, Boston Dynamics pivoted from hydraulic Atlas to electric ver...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Amazing question! So here&#x27;s the timeline and what changed:
+
+-&gt; America first policies after Trump election 
+
+-&gt; China-US trade tensions, led to companies going to US supply chains ( $SSYS is certification monopoly) from companies like Bambu.
+
+-&gt; 2024-2025ish, Boston Dynamics pivoted from hydraulic Atlas to electric version -&gt; changed from heavy hydraulics to lightweight structural frames using $SSYS.
+
+-&gt; Other research prototypes from Meta Humanoids to others started following suit. 
+
+-&gt; There was no scale on humanoids/robotics in 2024-2025. 
+
+-&gt; ChatGPT announced their push into robotics today (they&#x27;re usually leading the charge, eg. securing memory capacity)
+
+-&gt;  We&#x27;ve now likely hit the inflection point for robotics, where all these companies formerly in the prototyping stage (with $SSYS as the lightweight structural frame) are now scaling.  
+
+-&gt; $SSYS benefits robotics at scale.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012054895684370533" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>惊人的问题！这是时间表和变化的内容：
+
+-&gt; 特朗普当选后的美国优先政策 
+
+-&gt; 中美贸易紧张，导致Bambu等公司转向美国供应链（$SSYS是认证垄断）。
+
+-&gt; 2024-2025 左右，波士顿动力公司从液压 Atlas 转向电动版本 -&gt; 使用 $SSYS 从重型液压系统改为轻型结构框架。
+
+-&gt; 从 Meta Humanoids 到其他人的其他研究原型也开始效仿。 
+
+-&gt; 2024-2025 年没有人形/机器人规模。 
+
+-&gt; ChatGPT 今天宣布进军机器人领域（他们通常处于领先地位，例如确保内存容量）
+
+-&gt; 我们现在可能已经达到了机器人技术的拐点，所有这些以前处于原型设计阶段（以 $SSYS 作为轻量级结构框架）的公司现在都在扩展。  
+
+-&gt; $SSYS 使机器人技术大规模受益。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1333</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 06:13</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">In general, if you&#x27;re waiting for Boston Dynamics Atlas to be at scale already, you&#x27;re probably a little late. 
+
+I like to post my thesis at the start before any moment happens like with $AXTI or in this case $SSYS, which is different than others who just react to movements or enter near the top.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">In general, if you&#x27;re waiting for Boston Dynamics Atlas to be at scale already, you&#x27;re probably a little late. 
+
+I like to post my thesis at the start before any moment happens like with $AXTI or in this case $SSYS, which is different than others who just react to movements or enter near the top.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011924749342089527" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>一般来说，如果您正在等待波士顿动力 Atlas 已经规模化，那么您可能有点晚了。 
+
+我喜欢在任何时刻发生之前就先发表我的论文，就像 $AXTI 或在本例中的 $SSYS 一样，这与其他仅对走势做出反应或进入顶部附近的人不同。</div>
+        <div class="tweet-foot">
+          <span>likes 11 / retweets 1 / replies 0 / views 2484</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 04:05</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">@pepemoonboy Yeah my AI bottleneck one in $AXTI has been doing well.
+
+Up 78% since posting and 20% today.
+
+AI bottlenecks are pretty obvious but robotics ones like $SSYS are very under the radar until humanoid production from Atlas to Optimus ramp up. https://t.co/tAgC1q7bss</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@pepemoonboy Yeah my AI bottleneck one in $AXTI has been doing well.
+
+Up 78% since posting and 20% today.
+
+AI bottlenecks are pretty obvious but robotics ones like $SSYS are very under the radar until humanoid production from Atlas to Optimus ramp up. https://t.co/tAgC1q7bss</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011892589109395927" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@pepemoonboy 是的，我在 $AXTI 中的 AI 瓶颈一一直表现良好。
+
+自发布以来上涨了 78%，今天上涨了 20%。
+
+人工智能的瓶颈非常明显，但在从 Atlas 到 Optimus 等类人机器人的生产增加之前，像 $SSYS 这样的机器人技术一直受到人们的关注。 https://t.co/tAgC1q7bss</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 8800</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 03:59</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">@FarmerJoe0x Yeah everything Debbie bought looks like it went up 300%-700% lol. The new Nancy. 
+
+$SSYS is so obscure in the robotics bottleneck so I’m extremely surprised a politician found it.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@FarmerJoe0x Yeah everything Debbie bought looks like it went up 300%-700% lol. The new Nancy. 
+
+$SSYS is so obscure in the robotics bottleneck so I’m extremely surprised a politician found it.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011890935727341766" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@FarmerJoe0x 是的，黛比买的所有东西看起来都上涨了 300%-700% 哈哈。新的南希. 
+
+$SSYS 在机器人技术瓶颈中是如此晦涩难懂，所以我对政客发现它感到非常惊讶。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4732</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 03:27</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">I don&#x27;t know. Don&#x27;t have one. 
+
+$SSYS basically the frame/skeleton of humanoid robots and revenue ramp depends on robotics scale up. 
+
+If Atlas from Boston Dynamics or Optimus or others achieves scale, then revenue increases exponentially.  
+
+No robotics player achieved anything at scale yet, hence why revenue&#x27;s been l...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I don&#x27;t know. Don&#x27;t have one. 
+
+$SSYS basically the frame/skeleton of humanoid robots and revenue ramp depends on robotics scale up. 
+
+If Atlas from Boston Dynamics or Optimus or others achieves scale, then revenue increases exponentially.  
+
+No robotics player achieved anything at scale yet, hence why revenue&#x27;s been lower so far. 
+
+But this is just my personal thought regarding getting the most asymmetry on the robotics ramp.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011882980541976885" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我不知道。没有一个。 
+
+$SSYS 基本上是人形机器人的框架/骨架，收入增长取决于机器人规模的扩大。 
+
+如果波士顿动力公司、Optimus 或其他公司的 Atlas 达到规模，那么收入就会呈指数级增长。  
+
+目前还没有机器人厂商取得任何规模的成就，因此到目前为止收入一直较低。 
+
+但这只是我个人关于在机器人坡道上获得最大不对称性的想法。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3613</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 03:17</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">@pepemoonboy Thanks! I&#x27;m just following public information after the OpenAI robotics push for $SSYS. 
+
+It was already up 6% since I posted. But this one is a great long as they&#x27;re the skeleton/frames of all the humanoid robots.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@pepemoonboy Thanks! I&#x27;m just following public information after the OpenAI robotics push for $SSYS. 
+
+It was already up 6% since I posted. But this one is a great long as they&#x27;re the skeleton/frames of all the humanoid robots.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011880439267672119" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@pepemoonboy 谢谢！我只是在 OpenAI 机器人推动 $SSYS 之后关注公开信息。 
+
+自从我发帖以来，它已经上涨了 6%。但这是一个伟大的长，因为它们是所有人形机器人的骨架/框架。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 7304</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 03:14</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">Yeah I was going down the supply chains of Boston Dynamics, Tesla Optimus, Meta Humanoids, and others.
+
+And $SSYS happened to be at the bottom of them all as the skeleton/frame of all the humanoids. 
+
+EG. Atlas abandoned metal frames for Stratasys Nylon 12CF (carbon fiber) for the limbs</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yeah I was going down the supply chains of Boston Dynamics, Tesla Optimus, Meta Humanoids, and others.
+
+And $SSYS happened to be at the bottom of them all as the skeleton/frame of all the humanoids. 
+
+EG. Atlas abandoned metal frames for Stratasys Nylon 12CF (carbon fiber) for the limbs</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011879749610815814" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是的，我沿着波士顿动力公司、特斯拉擎天柱、Meta Humanoids 等公司的供应链进行了调查。
+
+$SSYS 恰好位于它们的底部，作为所有类人生物的骨架/框架。 
+
+例如。 Atlas 放弃了四肢 Stratasys Nylon 12CF（碳纤维）的金属框架</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3538</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 02:58</span>
+          <span><span class="chip red">$SSYS</span></span>
+        </div>
+        <div class="tweet-text">@SlumberMD $SSYS was already up quite a decent amount since this news got published. 
+
+I&#x27;m just following public information, but I&#x27;m sure politicians know ahead of time. https://t.co/fRE8n2gyTU</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@SlumberMD $SSYS was already up quite a decent amount since this news got published. 
+
+I&#x27;m just following public information, but I&#x27;m sure politicians know ahead of time. https://t.co/fRE8n2gyTU</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011875689033818160" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>自此消息发布以来，@SlumberMD $SSYS 已经上涨了相当可观的金额。 
+
+我只是在关注公共信息，但我确信政客们提前知道了。 https://t.co/fRE8n2gyTU</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 6355</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 02:54</span>
+          <span><span class="chip red">$AMBA</span><span class="chip red">$MOG.A</span><span class="chip red">$SSYS</span><span class="chip red">$VICR</span></span>
+        </div>
+        <div class="tweet-text">$SSYS is basically the frames of humanoids like Boston Dynamics Atlas. Revenue was lower because nobody from Tesla to Figure achieved anything at scale yet.
+
+But markets were looking at bigger names like $MOG.A (actuators), $VICR (energy), $AMBA (Figure, Vision).
+
+However, this small company is kinda at the bottom of i...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SSYS is basically the frames of humanoids like Boston Dynamics Atlas. Revenue was lower because nobody from Tesla to Figure achieved anything at scale yet.
+
+But markets were looking at bigger names like $MOG.A (actuators), $VICR (energy), $AMBA (Figure, Vision).
+
+However, this small company is kinda at the bottom of it all. Everyone was diving into AI supply chain bottlenecks but nobody was doing Robotics or Defense.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011874634418045268" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SSYS 基本上是像 Boston Dynamics Atlas 这样的人形机器人的框架。收入较低，因为从特斯拉到Figure，还没有一家公司取得了大规模的成果。
+
+但市场正在关注更大的名字，例如 $MOG.A（执行器）、$VICR（能源）、$AMBA（图形、愿景）。
+
+然而，这家小公司却处于最底层。每个人都在研究人工智能供应链瓶颈，但没有人从事机器人或国防领域。</div>
+        <div class="tweet-foot">
+          <span>likes 19 / retweets 1 / replies 1 / views 9126</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=SSYS">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

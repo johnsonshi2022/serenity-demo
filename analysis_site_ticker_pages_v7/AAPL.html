@@ -1,0 +1,3774 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$AAPL 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$AAPL 历史推文</h1>
+      <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>69</b></div>
+        <div class="stat-card"><span>历史推文</span><b>69</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-02-17</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-06-18</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射 10</span><span class="chip blue">认证周期 vs TTM 营收 10</span><span class="chip blue">瓶颈狩猎（核心透镜） 9</span><span class="chip blue">信念分层、仓位与时点 3</span><span class="chip blue">机构滞后 / 暗池与资金流 3</span><span class="chip blue">Mag7 客户集中度过滤 2</span><span class="chip blue">对手方 / 融资质量谱系 2</span><span class="chip blue">轧空设置（盈利成长股变体） 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-06-18 23:06</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$INTC</span></span>
+        </div>
+        <div class="tweet-text">Trump announced Intel + Apple partnership, sending $INTC up 8% today. 
+
+Intel execs were reportedly surprised by the $AAPL announcement by Donald Trump.
+
+TBH, the President should lead Intel&#x27;s marketing team at this point.
+
+Feel&#x27;s like he&#x27;s hard carrying the stock. https://t.co/eCSS46U6eb</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Trump announced Intel + Apple partnership, sending $INTC up 8% today. 
+
+Intel execs were reportedly surprised by the $AAPL announcement by Donald Trump.
+
+TBH, the President should lead Intel&#x27;s marketing team at this point.
+
+Feel&#x27;s like he&#x27;s hard carrying the stock. https://t.co/eCSS46U6eb</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2067624913834549685" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>特朗普宣布英特尔与苹果合作，推动 $INTC 今天上涨 8%。 
+
+据报道，英特尔高管对唐纳德·特朗普宣布的 AAPL 计划感到惊讶。
+
+说实话，总统此时应该领导英特尔的营销团队。
+
+感觉他很难持有股票。 https://t.co/eCSS46U6eb</div>
+        <div class="tweet-foot">
+          <span>likes 1279 / retweets 62 / replies 199 / views 341778</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-05-31 00:09</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span></span>
+        </div>
+        <div class="tweet-text">Hot take: Given $MSFT laptops/PCs are now likely using $NVDA hardware. 
+
+They might have a shot of taking down $AAPL.
+
+Only if Windows OS UI weren’t a flaming pile of garbage compared to how clean Apple OS is.
+
+You would think a $3T company would know better UI design by now? https://t.co/OvysxCN21i</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Hot take: Given $MSFT laptops/PCs are now likely using $NVDA hardware. 
+
+They might have a shot of taking down $AAPL.
+
+Only if Windows OS UI weren’t a flaming pile of garbage compared to how clean Apple OS is.
+
+You would think a $3T company would know better UI design by now? https://t.co/OvysxCN21i</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2060755595515547753" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>热门观点：考虑到 $MSFT 笔记本电脑/PC 现在可能使用 $NVDA 硬件。 
+
+他们可能有机会拿下 AAPL。
+
+除非与干净的 Apple 操作系统相比，Windows 操作系统 UI 不是一堆燃烧的垃圾。
+
+你认为一家 3T 美元的公司现在会懂得更好的 UI 设计吗？ https://t.co/OvysxCN21i</div>
+        <div class="tweet-foot">
+          <span>likes 646 / retweets 31 / replies 150 / views 60575</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-05-30 14:52</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">&amp;gt; markets went from doubting $SIVE customers ($150m MC)
+
+Turns out it’s likely companies eg. $JBL, Ayar, $AAPL, Defense Primes, $MRVL celestial. 
+
+&amp;gt; to doubting their execution ($600m mc)
+
+Turns out you skip the capex if you go with Win Semi
+
+&amp;gt; to doubting what share they get vs</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">&amp;gt; markets went from doubting $SIVE customers ($150m MC)
+
+Turns out it’s likely companies eg. $JBL, Ayar, $AAPL, Defense Primes, $MRVL celestial. 
+
+&amp;gt; to doubting their execution ($600m mc)
+
+Turns out you skip the capex if you go with Win Semi
+
+&amp;gt; to doubting what share they get vs</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2060615296357196178" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>&gt; 市场从怀疑 $SIVE 客户开始（$1.5 亿 MC）
+
+事实证明，这可能是公司，例如。 $JBL、Ayar、$AAPL、Defense Primes、$MRVL celestial。 
+
+&gt; 怀疑他们的执行力（6 亿美元）
+
+事实证明，如果你选择 Win Semi，你就可以跳过资本支出
+
+&gt; 怀疑他们得到的份额 vs</div>
+        <div class="tweet-foot">
+          <span>likes 151 / retweets 12 / replies 82 / views 9644</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-05-28 22:15</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NOK</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$YSS</span></span>
+        </div>
+        <div class="tweet-text">$SIVE is the most compelling CPO/photonics exposure to me.
+
+Addressing the disinformation: I haven’t sold and don’t plan to sell a single share. 
+
+I do think this ends up the next $80B+ $LITE one day from ~$2.1B.
+
+And I personally have plans to acquire more ownership + support their M&amp;A prospects.
+
+I believe earnings t...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SIVE is the most compelling CPO/photonics exposure to me.
+
+Addressing the disinformation: I haven’t sold and don’t plan to sell a single share. 
+
+I do think this ends up the next $80B+ $LITE one day from ~$2.1B.
+
+And I personally have plans to acquire more ownership + support their M&amp;A prospects.
+
+I believe earnings transcripts will be strongly positive. 
+
+As in the part few months we’ve discovered:
+
+&gt; AlChip/Amazon private placements, which is positive for Ayar -&gt; $SIVE implying Trainium 4 design in
+
+&gt; Wiwynn + Ayar CPO scale up
+
+&gt; $JBL 1.6T optical transceiver ramp with Sivers incoming faster than markets expected (with relatively dramatic moat + demand as much as they can produce) 
+
+&gt; O-Net scaling up ELS efforts with $SIVE
+
+&gt; $YSS acquisition of $SIVE allspace lead partner, designing Sivers into Space defense primes
+
+&gt; New CHIPS ACT funding for $SIVE
+
+&gt; $POET H2 volume ramp and their new $50m -&gt; $500m order (with $SIVE as light source)
+
+&gt; information discovery around $AAPL using $SIVE lasers for next gen consumer devices
+
+&gt; information discovery around links to Lightelligence (went public $10B+ MC) + Lightmatter as likely customers. 
+
+&gt; Celestial volume ramp with $MRVL indicators.
+
+&gt; new customers working on TFLN with $SIVE like Lightium
+
+&gt; $AMD going with $GFS for CPO, and GFS listing sivers as one of two laser suppliers
+
+&gt; Ayar removing $MTSI / $LITE from their website and signaling $SIVE as primary source/sole source
+
+&gt; Ayar raising $500m for volume ramp (intel, Mediatek, Nvidia, amd etc)
+
+&gt; pluggable TAM expansion signaled from 2025 annual report
+
+&gt; Nasdaq listing expected soon
+
+&gt; MSCI small cap index / Nasdaq omx inclusion, making Blackrock, Vanguard and others passive buyers 
+
+&gt; M&amp;A signaled from 2025 annual report + 2 new board members that have experience in that area
+
+&gt; $NOK as likely customer from 2025 annual report.
+
+&gt; $LITE getting cw bottlenecked from EML contracts, $SIVE signaling capacity agreements in place with Win, making the a likely bottleneck owner + chokepoint in CPO sector. 
+
+All of this market research was done before earnings. 
+
+Any results is just confirmation of supply chain mapping done.
+
+I don’t think anyone cares about former quarter revenue since $SIVE is an exceptionally compelling 2027 long, especially H2 onward. 
+
+Only thing I’m looking at are:
+
+&gt; TAM expansion of the overall photonics supercycle (eg. optical engine, ELS, pluggables) either from M&amp;A or developments
+
+&gt; volume ramp expectations from existing companies 
+
+&gt; Nasdaq listing timelines for more liquidity to support their M&amp;A efforts 
+
+&gt; any new customers signaled for CPO/Pluggables</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2060002002994971046" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE 是对我来说最引人注目的 CPO/光子学领域。
+
+解决虚假信息：我没有出售也不打算出售任何股票。 
+
+我确实认为这最终会成为下一个 $80B+ $LITE 的一天，价格约为 $2.1B。
+
+我个人计划获得更多所有权+支持他们的并购前景。
+
+我相信盈利成绩将非常积极。 
+
+正如几个月来我们发现的那样：
+
+&gt; AlChip/Amazon 私募，这对 Ayar 有利 -&gt; $SIVE 暗示 Trainium 4 设计
+
+&gt; Wiwynn + Ayar CPO 规模扩大
+
+&gt; $JBL 1.6T 光收发器产能提升，Sivers 的进入速度快于市场预期（具有相对巨大的护城河 + 尽可能多的需求） 
+
+&gt; 昂纳集团与 $SIVE 一起扩大 ELS 工作
+
+&gt; $YSS 收购 $SIVE allspace 领先合作伙伴，将 Sivers 设计成太空防御素数
+
+&gt; $SIVE 获得新的 CHIPS ACT 资助
+
+&gt; $POET H2 销量提升及其新的 5000 万美元 -&gt; 5 亿美元订单（以 $SIVE 作为光源）
+
+&gt; 使用用于下一代消费设备的 $SIVE 激光器围绕 $AAPL 进行信息发现
+
+&gt; 围绕 Lightelligence（上市 $10B+ MC）+ Lightmatter 作为可能客户的链接进行信息发现。 
+
+&gt; 带有 $MRVL 指标的天体体积斜坡。
+
+&gt; 使用 Lightium 等 $SIVE 开发 TFLN 的新客户
+
+&gt; $AMD 与 $GFS 合作购买 CPO，GFS 将 sivers 列为两家激光器供应商之一
+
+&gt; Ayar 从其网站上删除了 $MTSI / $LITE 并表示 $SIVE 为主要来源/唯一来源
+
+&gt; Ayar 筹集了 5 亿美元用于销量提升（英特尔、联发科技、Nvidia、AMD 等）
+
+&gt; 2025 年年度报告表明可插拔 TAM 扩展
+
+&gt; 预计很快将在纳斯达克上市
+
+&gt; MSCI小盘股指数/纳斯达克omx纳入，使贝莱德、先锋等被动买家 
+
+&gt; 2025 年年报显示并购信号 + 2 位在该领域拥有经验的新董事会成员
+
+&gt; 2025 年年度报告中可能的客户为挪威克朗。
+
+&gt; $LITE 因 EML 合同而成为 CW 瓶颈，$SIVE 与 Win 签订了信令容量协议，这使得它成为 CPO 领域可能的瓶颈所有者 + 阻塞点。 
+
+所有这些市场研究都是在盈利之前完成的。 
+
+任何结果都只是对供应链映射完成的确认。
+
+我认为没有人关心前一季度的收入，因为 $SIVE 2027 年的长期收益非常引人注目，尤其是下半年之后。 
+
+我唯一在看的是：
+
+&gt; TAM 通过并购或开发扩展整个光子学超级循环（例如光学引擎、ELS、可插拔）
+
+&gt; 现有公司的销量增长预期 
+
+&gt; 纳斯达克上市时间表以获得更多流动性以支持其并购工作 
+
+&gt; 任何新客户已发出 CPO/Pluggables 信号</div>
+        <div class="tweet-foot">
+          <span>likes 304 / retweets 28 / replies 83 / views 14618</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-05-23 13:51</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$LITE</span><span class="chip red">$NOK</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I said this before but I have high conviction in $SIVE. 
+
+I&#x27;m confident their UC Berkeley + $LITE executive team knows what IP to acquire. Since they&#x27;ve worked with Ayar and others from the start. 
+
+Also helps that 22% of their company are PHDs so entire team is cracked. 
+
+CHIPS ACT, all these likely partnerships from ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I said this before but I have high conviction in $SIVE. 
+
+I&#x27;m confident their UC Berkeley + $LITE executive team knows what IP to acquire. Since they&#x27;ve worked with Ayar and others from the start. 
+
+Also helps that 22% of their company are PHDs so entire team is cracked. 
+
+CHIPS ACT, all these likely partnerships from $NOK to $AAPL also gives a ton of credibility to the IP moat they&#x27;ve built. 
+
+They just lacked the funding before the recent market interest in Sivers. But I&#x27;m very interested to see what they can do from here.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058063223992246638" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我之前说过这一点，但我对 $SIVE 充满信心。 
+
+我相信他们的加州大学伯克利分校 + $LITE 执行团队知道要收购哪些知识产权。因为他们从一开始就与阿亚尔和其他人合作。 
+
+另外，他们公司 22% 的员工都是博士，因此整个团队都充满活力。 
+
+CHIPS ACT，从挪威克朗到苹果的所有这些可能的合作伙伴关系也为他们建立的知识产权护城河提供了很大的可信度。 
+
+在最近市场对西弗斯产生兴趣之前，他们只是缺乏资金。但我很想看看他们能从这里做什么。</div>
+        <div class="tweet-foot">
+          <span>likes 203 / retweets 10 / replies 7 / views 14029</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-05-20 07:20</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">This is just confirmation on timelines:
+
+H2 2026 is the &quot;major redesign of high end Apple Watches&quot; for blood pressure related stuff using TASC photodiodes(2340).
+
+This next part is $SIVE likely project with $AAPL:
+
+&quot;After this, Apple&#x27;s next health monitoring capabilities are expected to focus on noninvasive blood-gluco...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">This is just confirmation on timelines:
+
+H2 2026 is the &quot;major redesign of high end Apple Watches&quot; for blood pressure related stuff using TASC photodiodes(2340).
+
+This next part is $SIVE likely project with $AAPL:
+
+&quot;After this, Apple&#x27;s next health monitoring capabilities are expected to focus on noninvasive blood-glucose monitoring.&quot;
+
+So.. the next cyle refresh is likely Sivers for hyper-customized lasers. Maybe H2 2027 or 2028. 
+
+Still a bit early, but if timeline/implications are in tact, markets might appreciate multi-year revenue visibility with Apple.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2056877645275820418" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>这只是对时间表的确认：
+
+H2 2026 是使用 TASC 光电二极管 (2340) 的“高端 Apple Watch 的重大重新设计”，用于与血压相关的产品。
+
+下一部分是 $SIVE 可能与 $AAPL 合作的项目：
+
+“在此之后，苹果的下一个健康监测功能预计将集中在无创血糖监测上。”
+
+所以..下一个周期更新可能是超定制激光器的Sivers。也许是 2027 年下半年或 2028 年。 
+
+虽然还为时过早，但如果时间表/影响完好，市场可能会欣赏苹果的多年收入可见性。</div>
+        <div class="tweet-foot">
+          <span>likes 937 / retweets 70 / replies 257 / views 142360</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-05-20 00:30</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">$500m $AAPL supplier likely primary source for their new high end apple watches:
+
+TASC (2340) if people wanted to take a look or were curious. I&#x27;m prob passing, but could be something interesting here https://t.co/lE6iyswXyT</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$500m $AAPL supplier likely primary source for their new high end apple watches:
+
+TASC (2340) if people wanted to take a look or were curious. I&#x27;m prob passing, but could be something interesting here https://t.co/lE6iyswXyT</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2056774589741720043" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>价值 5 亿美元的 AAPL 供应商可能是其新款高端苹果手表的主要来源：
+
+TASC (2340) 如果人们想看看或者好奇的话。我可能会通过，但这里可能会很有趣 https://t.co/lE6iyswXyT</div>
+        <div class="tweet-foot">
+          <span>likes 381 / retweets 4 / replies 21 / views 78347</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-05-19 15:37</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AEVA</span><span class="chip red">$AMD</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Just putting it out there:
+
+$SIVE short interest is probably higher than 17%+ now.
+
+As lot of local Swedish hedge funds are very underwater, shorting Sivers. 
+
+They&#x27;re about to meet US institutions through: 
+
+&gt; MSCI inflow in 2 weeks. 
+&gt; NASDAQ Listing. 
+&gt; US CHIPS Act backstop. 
+
+alongside core revenue driver from the...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just putting it out there:
+
+$SIVE short interest is probably higher than 17%+ now.
+
+As lot of local Swedish hedge funds are very underwater, shorting Sivers. 
+
+They&#x27;re about to meet US institutions through: 
+
+&gt; MSCI inflow in 2 weeks. 
+&gt; NASDAQ Listing. 
+&gt; US CHIPS Act backstop. 
+
+alongside core revenue driver from the optical supercycle revenue ramp from likely $AAPL, $JBL, $POET, Ayar, Onet/Enablence, Lightium, $AEVA, $MRVL, Lightmatter, Lightelligence, and $AMD over the next year or two. 
+
+I personally don&#x27;t think it&#x27;s going to end well for the Swedish locals shorting (and some random algos) at this early stage. 
+
+And the popular saying is every one stock short turns into a long eventually.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2056640420008878330" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>只是把它放在那里：
+
+$SIVE 空头利息现在可能高于 17%+。
+
+由于许多瑞典当地对冲基金都处于水下状态，因此做空Sivers。 
+
+他们将通过以下方式与美国机构会面： 
+
+&gt; 两周内 MSCI 资金流入。 
+&gt; 纳斯达克上市。 
+&gt; 美国芯片法案支持。 
+
+未来一两年内，光学超级周期收入增长的核心收入驱动因素可能来自 $AAPL、$JBL、$POET、Ayar、Onet/Enablence、Lightium、$AEVA、$MRVL、Lightmatter、Lightelligence 和 $AMD。 
+
+我个人认为瑞典当地人在这个早期阶段做空（以及一些随机算法）不会有好结果。 
+
+流行的说法是，每一只股票最终都会由空头变成多头。</div>
+        <div class="tweet-foot">
+          <span>likes 1149 / retweets 68 / replies 184 / views 319691</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">轧空设置（盈利成长股变体）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-05-18 07:20</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$KRUS</span></span>
+        </div>
+        <div class="tweet-text">@Mr_Derivatives I have no positions in $KRUS but it&#x27;s one of the better restaurant names hilariously enough.
+
+There&#x27;s always a 1 hour line in the Cupertino one near $AAPL HQ.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Mr_Derivatives I have no positions in $KRUS but it&#x27;s one of the better restaurant names hilariously enough.
+
+There&#x27;s always a 1 hour line in the Cupertino one near $AAPL HQ.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2056152808576233954" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Mr_Derivatives 我在 $KRUS 中没有职位，但它是更好的餐厅名称之一，足够搞笑了。
+
+在库比蒂诺 (Cupertino) 的 $AAPL 总部附近，总是要排 1 小时的队。</div>
+        <div class="tweet-foot">
+          <span>likes 74 / retweets 1 / replies 5 / views 19955</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-05-17 23:35</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">It&#x27;s really popular, I used to go to the CA Cupertino near $AAPL HQ and there was always a 1 hour line. 
+
+Heard they opened some up around Berkeley and others... so I do agree with Trump&#x27;s vision of it being a good dip buy around here. 
+
+Maybe after he retires, he wants to taken over and run a sushi restaurant?</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It&#x27;s really popular, I used to go to the CA Cupertino near $AAPL HQ and there was always a 1 hour line. 
+
+Heard they opened some up around Berkeley and others... so I do agree with Trump&#x27;s vision of it being a good dip buy around here. 
+
+Maybe after he retires, he wants to taken over and run a sushi restaurant?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2056035864812442003" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>它真的很受欢迎，我曾经去过 $AAPL 总部附近的 CA Cupertino，那里总是要排 1 小时的队。 
+
+听说他们在伯克利和其他地方开设了一些……所以我确实同意特朗普的愿景，即在这里这是一个很好的逢低买入。 
+
+也许退休后，他想接手经营一家寿司店？</div>
+        <div class="tweet-foot">
+          <span>likes 21 / retweets 0 / replies 4 / views 5669</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-05-14 20:29</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Fun read! Think you covered majority of the important points regarding the overall CPO growth curve and wrote a great bull case. 
+
+Especially how $SIVE feeds into Ayar, $JBL, and $POET + scales using capex light fab-lite model with Win.
+
+There&#x27;s actually a ton of supply chain mapping with $MRVL Celestial, Lightelligenc...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Fun read! Think you covered majority of the important points regarding the overall CPO growth curve and wrote a great bull case. 
+
+Especially how $SIVE feeds into Ayar, $JBL, and $POET + scales using capex light fab-lite model with Win.
+
+There&#x27;s actually a ton of supply chain mapping with $MRVL Celestial, Lightelligence, Lightmatter, and others of players like $AAPL for adjacent SiPH verticals. 
+
+But makes sense not to include more not 100% confirmed players. O-Net/enablence ELS for Asian hyperscalers was confirmed though (didnt see that there)
+
+But just goes to show many players Sivers maps to.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2054901944653656384" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>读起来很有趣！认为您涵盖了有关整体 CPO 增长曲线的大部分要点，并写了一个很棒的牛市案例。 
+
+特别是 $SIVE 如何使用带有 Win 的资本支出轻型 fab-lite 模型将数据输入到 Ayar、$JBL 和 $POET + 中。
+
+实际上，$MRVL Celestial、Lightelligence、Lightmatter 以及 $AAPL 等其他参与者针对相邻的 SiPH 垂直领域进行了大量的供应链映射。 
+
+但不包括更多非 100% 确认的球员也是有道理的。不过，O-Net/enablence ELS 对于亚洲超大规模企业的支持已得到确认（没有看到）
+
+但只是向许多球员展示西弗斯的地图。</div>
+        <div class="tweet-foot">
+          <span>likes 133 / retweets 4 / replies 4 / views 12127</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-05-11 20:15</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$COHR</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I didn’t say it should be valued at $10B+ today.
+
+I said I expected $SIVE to be around ~$3B if they were listed on US markets. And could be $10B+ next year
+
+Since they likely are the laser supplier to $JBL, $MRVL, $AMD, Ayar, onet(els), Lightmatter, $POET and many others for CPO or 1.6T optical transceivers.
+
+And high ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I didn’t say it should be valued at $10B+ today.
+
+I said I expected $SIVE to be around ~$3B if they were listed on US markets. And could be $10B+ next year
+
+Since they likely are the laser supplier to $JBL, $MRVL, $AMD, Ayar, onet(els), Lightmatter, $POET and many others for CPO or 1.6T optical transceivers.
+
+And high confidence work with $AAPL on SiPH for their consumer devices.
+
+CPO overall tam goes from 0 to $91B in the next two years from GS report.
+
+Sivers supplies to major players, and captures overflow from $LITE getting stalled out by capacity allocations from $NVDA and volume ramps over 2027.
+
+Then they just need to pull a $LITE $COHR then vertically integrate IP downstream by doing the full ELS by buying packaging IP or more optical engine IP.
+
+But that starts off by owning the laser chokepoint which they do now</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053811303622627649" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我并没有说它今天的估值应该是 $10B+。
+
+我说过，如果它们在美国市场上市，我预计 $SIVE 的价格约为 $3B 左右。明年可能会达到 $10B+
+
+因为他们很可能是 $JBL、$MRVL、$AMD、Ayar、onet(els)、Lightmatter、$POET 和许多其他 CPO 或 1.6T 光收发器的激光器供应商。
+
+并与 $AAPL 在 SiPH 上针对其消费设备进行高度信任合作。
+
+根据 GS 报告，未来两年 CPO 总体 tam 将从 0 升至 $91B。
+
+Sivers 向主要参与者供货，并捕获因 $LITE 因 $NVDA 的产能分配和 2027 年销量增长而停滞的溢出情况。
+
+然后他们只需要拉动 $LITE $COHR，然后通过购买封装 IP 或更多光学引擎 IP 来执行完整的 ELS，从而垂直整合下游 IP。
+
+但这是从拥有他们现在拥有的激光阻塞点开始的</div>
+        <div class="tweet-foot">
+          <span>likes 293 / retweets 14 / replies 14 / views 22700</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-05-10 04:07</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$INTC</span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Just a TLDR of recent semi developments:
+
+1. $TSM pushing hard CoPoS - VisEra/others might go brrr earlier than expected.
+
+2. $AAPL goes with $INTC for semi production, which is a major shift cause they normally go with TSM. Made in America go like Intel go brrr. 
+
+3. $NVDA Vera Rubin reportedly makes changes to coolin...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a TLDR of recent semi developments:
+
+1. $TSM pushing hard CoPoS - VisEra/others might go brrr earlier than expected.
+
+2. $AAPL goes with $INTC for semi production, which is a major shift cause they normally go with TSM. Made in America go like Intel go brrr. 
+
+3. $NVDA Vera Rubin reportedly makes changes to cooling architectures very recently. 
+
+&quot;Taiwan&#x27;s thermal management suppliers are emerging as one of the fastest-growing segments in the AI hardware ecosystem&quot; - From Last Month.
+
+&quot;Vera Rubin server architecture is expected to drive a fundamental shift in data center cooling and system design&quot;
+
+Will cover thermal ecosystem later, maybe it&#x27;s time to take a look?
+
+4. 2D NAND shortage spirals after Samsung, Micron, and rivals exit market 
+
+Macronix, Windbond go brrr. implications for GigaDevice and other niche players. 
+
+5. &quot;Big Tech reportedly offers to fund SK Hynix fabs and EUV&quot;
+
+- Memory that badly bottlenecked that mag7 wants to pay for it, so $MU, SK Hynix, Samsung go brr. 
+
+6. $TSM 2026 net revenue $12.6B for April 2026. Revenue up 30%, Semis keep going brr.
+
+7. Anthropic needs compute -&gt;  SpaceX.
+
+So implications for compute demand is extreme here which is BRRR $NBIS and others.
+
+But it&#x27;s very interesting they sidestepped Neoclouds and went with SpaceX. 
+
+8. &quot;SKC to Accelerate Mass Production of Glass Substrates for U.S. Clients by the End of the Year&quot;
+
+&quot;the end of the year, ahead of its original plan, it has been announced&quot;
+
+Glass Core substrates players like $LPK for mass production and other related players like SKC go brrr. 
+
+Glass timelines moved up. heavy brrr glass. 
+
+9. &quot;Power chip shortages deepen as AI server demand and GaN battles escalate&quot;
+
+Maybe time to look into the power chip bottleneck anon?
+
+10. &quot;Adata said DRAM and NAND flash contract prices will each climb more than 40% in the second quarter of 2026&quot; 
+
+Another positive for $MU, SK Hynix, Samsung, $SNDK, and others.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053205192980721797" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>只是最近半开发的 TLDR：
+
+1. $TSM 大力推动 CoPoS - VisEra/其他人可能会比预期更早出现。
+
+2. $AAPL 与 $INTC 一起进行半生产，这是一个重大转变，因为它们通常与 TSM 一起使用。美国制造就像英特尔一样。 
+
+3. 据报道，$NVDA Vera Rubin 最近对冷却架构进行了更改。 
+
+“台湾的热管理供应商正在成为人工智能硬件生态系统中增长最快的细分市场之一” - 上个月。
+
+“Vera Rubin 服务器架构预计将推动数据中心冷却和系统设计的根本转变”
+
+稍后会介绍热生态系统，也许是时候看看？
+
+4. 三星、美光及竞争对手退出市场后，2D NAND短缺加剧 
+
+Macronix、Windbond 继续前进。对 GigaDevice 和其他利基市场参与者的影响。 
+
+5.“据报道，大型科技公司愿意为 SK 海力士晶圆厂和 EUV 提供资金”
+
+- 内存严重瓶颈，mag7想要为此付出代价，所以$MU、SK Hynix、三星都去brr。 
+
+6. 2026 年 4 月 $TSM 2026 净收入 $12.6B。收入增长 30%，Semis 继续保持增长。
+
+7. 人类需要计算 -&gt; SpaceX。
+
+因此，这里对计算需求的影响是极端的，即 BRRR $NBIS 和其他。
+
+但非常有趣的是，他们避开了 Neoclouds，选择了 SpaceX。 
+
+8.《SKC将于年底加速为美国客户量产玻璃基板》
+
+“年底了，提前原定计划，已经公布了”
+
+玻璃芯基板厂商（例如用于大规模生产的 $LPK）和其他相关厂商（例如 SKC）将走向 brrr。 
+
+玻璃时间线提前了。厚重的玻璃。 
+
+9.“随着AI服务器需求和GaN之战升级，电源芯片短缺加剧”
+
+也许是时候立即研究电源芯片瓶颈了？
+
+10.“威刚表示，2026年第二季度DRAM和NAND闪存合约价格将分别上涨40%以上” 
+
+这对 $MU、SK 海力士、三星、$SNDK 等公司来说是另一个利好。</div>
+        <div class="tweet-foot">
+          <span>likes 2112 / retweets 153 / replies 147 / views 310854</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">Mag7 客户集中度过滤</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-05-08 15:42</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AEVA</span><span class="chip red">$AMD</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">$SIVE supplies lasers to likely $JBL, Ayar, Lightmatter, $POET, $MRVL Celestial, Lightelligence, $AMD, O-Net/Enablence, and others. 
+
+Not including silicon photonics programs with $AAPL or $AEVA or their other CHIPS act related work. 
+
+The amount of hyperscaler they feed into is pretty crazy at that valuation.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$SIVE supplies lasers to likely $JBL, Ayar, Lightmatter, $POET, $MRVL Celestial, Lightelligence, $AMD, O-Net/Enablence, and others. 
+
+Not including silicon photonics programs with $AAPL or $AEVA or their other CHIPS act related work. 
+
+The amount of hyperscaler they feed into is pretty crazy at that valuation.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052655255012409624" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$SIVE 向可能的 $JBL、Ayar、Lightmatter、$POET、$MRVL Celestial、Lightelligence、$AMD、O-Net/Enablence 等供应激光器。 
+
+不包括 $AAPL 或 $AEVA 的硅光子项目或其其他 CHIPS 法案相关工作。 
+
+按照这个估值，他们投入的超大规模企业数量相当疯狂。</div>
+        <div class="tweet-foot">
+          <span>likes 200 / retweets 10 / replies 13 / views 15005</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-05-06 13:27</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$INTC</span></span>
+        </div>
+        <div class="tweet-text">@DrNHJ Yep! Thanks for the news regarding $AAPL and $INTC.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@DrNHJ Yep! Thanks for the news regarding $AAPL and $INTC.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051896675913068620" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@DrNHJ 是的！感谢您提供有关 $AAPL 和 $INTC 的消息。</div>
+        <div class="tweet-foot">
+          <span>likes 65 / retweets 0 / replies 5 / views 21586</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-05-05 15:36</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AEVA</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ERIC</span><span class="chip red">$GFS</span><span class="chip red">$GOOGL</span><span class="chip red">$JBL</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$POET</span><span class="chip red">$RTX</span><span class="chip red">$SIVE</span><span class="chip red">$YSS</span></span>
+        </div>
+        <div class="tweet-text">Just a recap of recent information discovery + likely mapping with $SIVE:
+ 
+-&gt; $JBL 1.6T
+-&gt; Lightmatter
+-&gt; Ayar
+-&gt; $MRVL Celestial
+-&gt; Lightelligence 
+-&gt; $POET 
+-&gt; $GFS ecosystem
+-&gt; $AMD CPO
+-&gt; O-Net / Enablence
+-&gt; $AAPL Silicon Photonics
+_
+-&gt; $YSS Golden Dome/DoD
+-&gt; $RTX / $ERIC (Space)
+-&gt; Bae Systems
+-&gt; $AEVA 
+
+With $...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a recap of recent information discovery + likely mapping with $SIVE:
+ 
+-&gt; $JBL 1.6T
+-&gt; Lightmatter
+-&gt; Ayar
+-&gt; $MRVL Celestial
+-&gt; Lightelligence 
+-&gt; $POET 
+-&gt; $GFS ecosystem
+-&gt; $AMD CPO
+-&gt; O-Net / Enablence
+-&gt; $AAPL Silicon Photonics
+_
+-&gt; $YSS Golden Dome/DoD
+-&gt; $RTX / $ERIC (Space)
+-&gt; Bae Systems
+-&gt; $AEVA 
+
+With $JBL to Ayar feeding into hyperscalers like $MSFT, $GOOGL, $AMZN, $META.
+
+With likely Lightelligence to O-Net feeding into Asian Hyperscalers like Tencent, Bytedance, and Baidu.
+
+On top of that... the overarching TAM with CPO from the GS report goes from 0 -&gt;  $91B. 
+
+And Sivers happens to be the bleeding edge for CPO (also starting from 0). 
+
+This is definitely high-beta and volatile. 
+
+But if Win volume ramps alongside $SIVE, I see them both becoming $10B+ companies next year. 
+
+This is just extremely early on (H1) before the CPO supercycle starts H2 2026.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051566667009073315" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>只是回顾一下最近的信息发现 + 可能与 $SIVE 的映射：
+ 
+-&gt; $JBL 1.6T
+-&gt; 光物质
+-&gt; 阿亚尔
+-&gt; $MRVL 天体
+-&gt; 灯光智能 
+-&gt; $诗人 
+-&gt; $GFS 生态系统
+-&gt; $AMD CPO
+-&gt; 昂纳/Enablence
+-&gt; $AAPL 硅光子学
+_
+-&gt; $YSS 金顶/国防部
+-&gt; $RTX / $ERIC（空格）
+-&gt; 裴系统公司
+-&gt; $AEVA 
+
+通过 $JBL 到 Ayar 为 $MSFT、$GOOGL、$AMZN、$META 等超大规模提供商提供服务。
+
+Lightelligence 和 O-Net 可能会进入腾讯、字节跳动和百度等亚洲超大规模企业。
+
+最重要的是... GS 报告中的总体 TAM 和 CPO 从 0 -&gt; $91B。 
+
+而 Sivers 恰好是 CPO 的前沿（也是从 0 开始）。 
+
+这绝对是高贝塔值且不稳定。 
+
+但如果 Win 的销量与 $SIVE 一起增长，我预计它们明年都会成为 $10B+ 公司。 
+
+这只是 CPO 超级周期在 2026 年下半年开始之前的极早时间 (上半年)。</div>
+        <div class="tweet-foot">
+          <span>likes 1424 / retweets 105 / replies 94 / views 218999</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-05-04 15:39</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$JBL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@TheGreekEuler I personally think $SIVE should be $3B today and ends up $10B+ next year.
+
+Earnings don’t really matter. Just care about indication from management about laser volume ramp for both CPO programs / $JBL and likely $AAPL silicon photonics program.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@TheGreekEuler I personally think $SIVE should be $3B today and ends up $10B+ next year.
+
+Earnings don’t really matter. Just care about indication from management about laser volume ramp for both CPO programs / $JBL and likely $AAPL silicon photonics program.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051204959908368787" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@TheGreekEuler 我个人认为 $SIVE 今天应该是 $3B，明年最终会达到 $10B+。
+
+收入其实并不重要。只需关心管理层关于 CPO 计划/$JBL 和可能的 $AAPL 硅光子计划的激光产量增长的指示。</div>
+        <div class="tweet-foot">
+          <span>likes 220 / retweets 6 / replies 13 / views 20521</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-05-04 09:04</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMAT</span><span class="chip red">$AMSL</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$INTC</span><span class="chip red">$LRCX</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">I did say MSSCORP likely has a functional monopoly for CPO over inspection.
+
+Not really a way around it and it&#x27;s critical for $NVDA / $TSM yields as CPO ramps.
+
+They did say &quot;the company’s goal is to seize a 90 percent share of the CPO inspection market&quot;
+
+Should have been the biggest indicator.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I did say MSSCORP likely has a functional monopoly for CPO over inspection.
+
+Not really a way around it and it&#x27;s critical for $NVDA / $TSM yields as CPO ramps.
+
+They did say &quot;the company’s goal is to seize a 90 percent share of the CPO inspection market&quot;
+
+Should have been the biggest indicator.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051105661220774266" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我确实说过 MSSCORP 可能对 CPO 的检查具有功能垄断。
+
+这并不是真正解决这个问题的方法，而且随着 CPO 的增加，这对于 $NVDA / $TSM 收益率至关重要。
+
+他们确实说过“公司的目标是抢占原棕油检验市场 90% 的份额”
+
+应该是最大的指标。</div>
+        <div class="tweet-foot">
+          <span>likes 651 / retweets 36 / replies 38 / views 251671</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-05-01 14:02</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMAT</span><span class="chip red">$AMD</span><span class="chip red">$COHR</span><span class="chip red">$ERIC</span><span class="chip red">$INTC</span><span class="chip red">$JBL</span><span class="chip red">$KLA</span><span class="chip red">$LCRX</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$RTX</span><span class="chip red">$SIVE</span><span class="chip red">$TSM</span><span class="chip red">$YSS</span></span>
+        </div>
+        <div class="tweet-text">As for 3x brrrs these levels: 
+
+1. $SIVE
+2. MSSCORP (6830)
+3. Auros (322310)
+
+Are my best guesses. Here&#x27;s my thought process: 
+
+1. $SIVE: I genuinely do see them being $10B+ next year, they&#x27;re the literal bleeding edge for CPO lasers alongside $LITE and $COHR.
+
+At a $1.3B MC... For likely mapping: 
+
+Photonics: $AMD CPO...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">As for 3x brrrs these levels: 
+
+1. $SIVE
+2. MSSCORP (6830)
+3. Auros (322310)
+
+Are my best guesses. Here&#x27;s my thought process: 
+
+1. $SIVE: I genuinely do see them being $10B+ next year, they&#x27;re the literal bleeding edge for CPO lasers alongside $LITE and $COHR.
+
+At a $1.3B MC... For likely mapping: 
+
+Photonics: $AMD CPO, $MRVL Celestial CPO, $JBL 1.6T, Lightmatter, Ayar, ALChip, GUC, O-Net (ELS), $POET.
+
+For Space + Defense: Golden Dome via $YSS, $RTX / $ERIC / Bae Systems.
+
+Silicon Photonics: $AAPL (Apple Watches). 
+
+This is just a stupid amount of customers and it&#x27;s still increasing. 
+
+They can always TAM expansion downstream through IP acquisitions or vertically integrate to speedrun $LITE&#x27;s $60B MC one day once they get more funding. 
+
+2. MSSCORP (6830): CPO monopoly over inspection at ~$1.2B. 
+
+100% monopoly over CPO yields, $TSM, $AMAT, $NVDA, $LCRX, $INTC, and others are all likely customers. 
+
+&quot;The company’s goal is to seize a 90 percent share of the CPO inspection market&quot;
+
+This basically means 100%, they just don&#x27;t want antitrust.  If they defend their monopoly and CPO ramps, can easily see this worth ~$5B-$9B from $1.2B
+
+3. Auros (322310): Samsung / SK Hynix supplier at ~$210M for Hybrid Bonding Metrology.
+
+Basically pure play on two products: 
+-&gt; HBM4 / HBM4e / HBM5 cycles, that $KLA had a monoply over for IR metrology. 
+---&gt;  Getting qualified now likely in Samsung factories, H2 volume ramp est. Sk Hynix likely qualifying too when they upgrade to hybrid bonding.  
+-&gt; Thin-film thickness measurement.  
+---&gt; Getting qualified now, with &quot;major domestic chipmaker&quot; (either Samsung/Sk hynix), targets mass supply this year. 
+
+They&#x27;ve been developing for the past decade, only to volume ramp two products from years of qualification H2 this year.
+
+Seems extremely likely to 3x to $630M if they switch to volume ramp, feels like an undiscovered gem in the Korean market? 
+
+Of course, not sure how they play out and this is all speculative but high confidence supply chain mapping.
+
+But off the top of my head these three that I own are the most likely ones at this level.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2050093551313469467" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>至于 3x brrrs 这些级别： 
+
+1.$SIVE
+2.MSSCORP (6830)
+3.奥罗斯（322310）
+
+是我最好的猜测。这是我的思考过程： 
+
+1. $SIVE：我确实认为它们明年的价格将达到 $10B+，它们与 $LITE 和 $COHR 一起是 CPO 激光器的真正前沿。
+
+在 $1.3B MC...对于可能的映射： 
+
+光子学：$AMD CPO、$MRVL Celestial CPO、$JBL 1.6T、Lightmatter、Ayar、ALChip、GUC、昂纳 (ELS)、$POET。
+
+对于太空+国防：Golden Dome，通过 $YSS、$RTX / $ERIC / Bae Systems。
+
+硅光子学：$AAPL（苹果手表）。 
+
+这只是一个愚蠢的客户数量，而且还在增加。 
+
+一旦他们获得更多资金，他们总是可以通过 IP 收购向下游进行 TAM 扩张，或者垂直整合以加速 $LITE 的 $60B MC。 
+
+2. MSSCORP (6830)：CPO 对检验的垄断，价格约为 $1.2B。 
+
+对 CPO 收益率 100% 垄断，$TSM、$AMAT、$NVDA、$LCRX、$INTC 等都是可能的客户。 
+
+“公司的目标是抢占原棕油检验市场90%的份额”
+
+这基本上意味着100%，他们只是不想要反垄断。  如果他们捍卫自己的垄断和 CPO 坡道，可以很容易地看到它的价值从 $1.2B 到 $5B-$9B
+
+3. Auros (322310)：三星/SK Hynix 混合键合计量供应商，售价约 2.1 亿美元。
+
+基本上纯粹玩两种产品： 
+-&gt; HBM4 / HBM4e / HBM5 循环，$KLA 垄断了红外计量。 
+---&gt; 现在很可能在三星工厂获得资格，H2 销量预计将大幅增加。Sk Hynix 在升级到混合键合后也可能获得资格。  
+-&gt; 薄膜厚度测量。  
+---&gt; 现在已获得“国内主要芯片制造商”（三星/SK海力士）的资格，目标是今年大规模供货。 
+
+他们在过去十年里一直在开发，今年仅在多年的 H2 资格认证中增加了两款产品的产量。
+
+如果他们转向销量增长，似乎极有可能增加 3 倍至 6.3 亿美元，感觉就像韩国市场上一颗未被发现的宝石？ 
+
+当然，不确定它们如何发挥作用，这都是推测，但高度可信的供应链映射。
+
+但从我的角度来看，我拥有的这三个是这个级别最有可能的。</div>
+        <div class="tweet-foot">
+          <span>likes 1865 / retweets 178 / replies 131 / views 574445</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2026-05-01 03:56</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$COHR</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$SIVE</span><span class="chip red">$SIVEF</span></span>
+        </div>
+        <div class="tweet-text">Fun fact: don’t think any large US institution had positions in $SIVE / $SIVEF since it was a majority owned local Swedish retail stock.
+
+There’s also fund mandates preventing US funds from entering (eg. Nasdaq listing / $1B MC)
+
+That’s definitely changed now thanks to European media shaking out the local holders, Sive...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Fun fact: don’t think any large US institution had positions in $SIVE / $SIVEF since it was a majority owned local Swedish retail stock.
+
+There’s also fund mandates preventing US funds from entering (eg. Nasdaq listing / $1B MC)
+
+That’s definitely changed now thanks to European media shaking out the local holders, Sivers upcoming NASDAQ listing, and hitting $1B+ MC.
+
+Again $1.3B is literal spare change for hyperscalers and US institutions. 
+
+And I have high confidence many would want exposure to CPO, silicon photonics and lasers, since there’s only a few in the entire world like $LITE, $COHR, and $MTSI.
+
+Especially… a CHIPS Act laser supplier likely in $AMD, $MRVL, $AAPL, Lightmatter, Ayar, AlChip, GUC, O-Net and other supply chains like the Golden Dome.
+
+Part of it is game theory for share accumulation. 
+
+Since US/Western retail now owns a large part of the float (off of the Swedish sellers).
+
+And US institutions now want exposure.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049941088165892196" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>有趣的事实：认为没有任何大型美国机构持有 $SIVE / $SIVEF 的头寸，因为它是瑞典当地零售股票的多数股权。
+
+还有基金指令阻止美国资金进入（例如纳斯达克上市/10 亿美元 MC）
+
+由于欧洲媒体淘汰了当地持有人，Sivers 即将在纳斯达克上市，并达到 10 亿美元以上的 MC，现在情况肯定发生了变化。
+
+对于超大规模企业和美国机构来说，1.3B 美元再次是字面上的零钱。 
+
+我非常有信心许多人希望接触 CPO、硅光子学和激光器，因为全世界只有 $LITE、$COHR 和 $MTSI 等少数几个。
+
+特别是……CHIPS法案激光供应商可能在$AMD、$MRVL、$AAPL、Lightmatter、Ayar、AlChip、GUC、O-Net和其他供应链（如Golden Dome）。
+
+其中一部分是份额积累的博弈论。 
+
+由于美国/西方零售业现在拥有很大一部分流通量（来自瑞典卖家）。
+
+美国机构现在希望获得曝光。</div>
+        <div class="tweet-foot">
+          <span>likes 779 / retweets 52 / replies 67 / views 160586</span>
+        </div>
+        <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 16:11</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span></span>
+        </div>
+        <div class="tweet-text">@TVAFR786 $1.4B MC is tiny? 
+
+Especially if their lasers likely power $AMD CPO, $MRVL CPO, $JBL 1.6T LRO, $AAPL Silicon Photonics, Ayar (AlChip), Lightmatter, O-Net End users (Asian Hyperscalers), and others.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@TVAFR786 $1.4B MC is tiny? 
+
+Especially if their lasers likely power $AMD CPO, $MRVL CPO, $JBL 1.6T LRO, $AAPL Silicon Photonics, Ayar (AlChip), Lightmatter, O-Net End users (Asian Hyperscalers), and others.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049763657975026064" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@TVAFR786 $1.4B MC 很小？ 
+
+特别是如果他们的激光器可能为 $AMD CPO、$MRVL CPO、$JBL 1.6T LRO、$AAPL Silicon Photonics、Ayar (AlChip)、Lightmatter、O-Net 最终用户（亚洲超大规模企业）等提供动力。</div>
+        <div class="tweet-foot">
+          <span>likes 76 / retweets 0 / replies 3 / views 13203</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 09:00</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMAT</span><span class="chip red">$AMSL</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$INTC</span><span class="chip red">$LRCX</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">I am now long MSSCorps (6830) ~$1.4B MC
+
+This appears to be a functional monopoly in CPO for inspection. 
+
+But markets might have conflated that with Material/Failure Analysis with MA-tek and iST (oligopoly).
+
+For customers from mapping:
+1. $TSM 
+2. $NVDA
+3. $AAPL
+4. $AMAT
+5. $LRCX 
+6. $ASML 
+7. $INTC
+
+And high probabi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I am now long MSSCorps (6830) ~$1.4B MC
+
+This appears to be a functional monopoly in CPO for inspection. 
+
+But markets might have conflated that with Material/Failure Analysis with MA-tek and iST (oligopoly).
+
+For customers from mapping:
+1. $TSM 
+2. $NVDA
+3. $AAPL
+4. $AMAT
+5. $LRCX 
+6. $ASML 
+7. $INTC
+
+And high probability $AVGO, MediaTek, Samsung, $MRVL, and others (they did mention EU too). 
+
+If you&#x27;re curious:
+ - Taipei times names TSM as a client that Msscorps provides them with advanced material and failure analysis and name drops Apple, Nvidia, Lam, AMAT (also S/O to Latent for doing DD with me on this. there&#x27;s other supply chain relationships to Nvidia through things like linkedin)
+- For $AMSL, Taipei Times, Sept 10, 2024 &quot;ASML adopted Msscorps&#x27; ultra-sensitive materials analysis of photoresists&quot;
+
+For Intel -  Material analysis lab MSSCORPS has secured orders from major manufacturers such as Nvidia and Intel (Industrial Technology Research). 
+
+For inspection (non-destructive infrared (IR) leakage detection), they&#x27;re a monopoly. 
+
+And have aggressively used litigation (like the Enli Tech lawsuit) to lock out rivals, which I view as a positive thing. 
+
+This creates massive pricing power with yields and every major player goes through them.
+
+CPO inspection market is also extremely critical and like $AXTI in the InP substrate section, this massive chokepoint has pure pricing power with price hikes.
+
+The risk is the patent suit doesn&#x27;t go as plan, but Nvidia and other hyperscalers aren&#x27;t likely to go with other parties in case MSSCorps wins, so this creates a massive multi-year advantage anyway. Hyperscalers aren&#x27;t going to wait to see how an emerging competitor is going to win or not + take the risk. 
+
+I do see the massive re-rating potential with MSSCorp holding a critical yields chokepoint over CPO, so I went long (NFA, DYOR), this is just my thought process.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049655082250314014" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我现在做多 MSSCorps (6830) ~$1.4B MC
+
+这似乎是 CPO 检查的功能垄断。 
+
+但市场可能会将其与 MA-tek 和宜特（寡头垄断）的材料/失效分析混为一谈。
+
+对于来自测绘的客户：
+1.$TSM 
+2.$NVDA
+3.$AAPL
+4.$阿马特
+5.$LRCX 
+6.$ASML 
+7.$INTC
+
+很有可能是 $AVGO、联发科、三星、$MRVL 等（他们也提到了欧盟）。 
+
+如果你好奇：
+ - 《台北时报》将 TSM 列为客户，Msscorps 为他们提供先进的材料和故障分析，并点名 Apple、Nvidia、Lam、AMAT（也为 Latent 与我在这方面进行 DD 的 S/O。通过 linkedin 等方式与 Nvidia 建立了其他供应链关系）
+- $AMSL，台北时报，2024 年 9 月 10 日“ASML 采用 Msscorps 的光刻胶超敏感材料分析”
+
+对于英特尔 - 材料分析实验室 MSSCORPS 已获得 Nvidia 和英特尔（工业技术研究）等主要制造商的订单。 
+
+对于检查（非破坏性红外 (IR) 泄漏检测），它们处于垄断地位。 
+
+并积极利用诉讼（如恩利科技诉讼）来排除竞争对手，我认为这是一件积极的事情。 
+
+这创造了巨大的定价能力和收益率，每个主要参与者都会经历它们。
+
+CPO 检查市场也极其关键，就像 InP 衬底部分的 $AXTI 一样，这个巨大的瓶颈具有纯粹的定价能力，价格上涨。
+
+风险在于专利诉讼没有按计划进行，但如果 MSSCorps 获胜，Nvidia 和其他超大规模企业不太可能与其他方合作，因此无论如何，这都会创造巨大的多年优势。超大规模企业不会等着看新兴竞争对手如何获胜+冒险。 
+
+我确实看到了 MSSCorp 相对 CPO 的关键收益率瓶颈的巨大重新评级潜力，所以我做多（NFA、DYOR），这只是我的思考过程。</div>
+        <div class="tweet-foot">
+          <span>likes 864 / retweets 77 / replies 69 / views 449683</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 18:37</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$JBL</span><span class="chip red">$LWLG</span><span class="chip red">$MSFT</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">Fun fact, $SIVE just crossed the $1B MC threshold.
+
+So a select few US institutions are able to buy it now (fund mandates)
+
+However, the vast vast majority still can’t until they get listed on NASDAQ.
+
+Just an FYI:
+
+$1B valuations are spare change for institutional investors in US hyperscaler supply chains if they end ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Fun fact, $SIVE just crossed the $1B MC threshold.
+
+So a select few US institutions are able to buy it now (fund mandates)
+
+However, the vast vast majority still can’t until they get listed on NASDAQ.
+
+Just an FYI:
+
+$1B valuations are spare change for institutional investors in US hyperscaler supply chains if they end up powering $JBL, $AMD, $AAPL, $AMZN, $MSFT and others.
+
+Just look at $LWLG, $1.9B MC off 1 testing agreement with $TSEM.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049437962195055060" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>有趣的是，$SIVE 刚刚突破了 $1B MC 门槛。
+
+因此，少数美国机构现在可以购买它（基金授权）
+
+然而，绝大多数公司仍然无法在纳斯达克上市。
+
+仅供参考：
+
+对于美国超大规模供应链的机构投资者来说，如果最终为 JBL、AMD、AAPL、AMZN、MSFT 等公司提供动力，10 亿美元的估值只是零钱。
+
+只需看看 $LWLG，与 $TSEM 签订 1 个测试协议即可获得 $1.9B MC。</div>
+        <div class="tweet-foot">
+          <span>likes 1002 / retweets 79 / replies 71 / views 146050</span>
+        </div>
+        <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 06:50</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$COHR</span><span class="chip red">$LITE</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I mean $SIVE is a stock I don&#x27;t plan on selling.
+
+Photonics TAM is absolutely massive for AI, robotics, consumer hardware (eg. $AAPL), Space... 
+
+And Sivers happens to be in the bleeding edge for next-gen arhictectures and one of the few publicly traded leaders apart from $LITE and $COHR. 
+
+TAM expansion is also massiv...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I mean $SIVE is a stock I don&#x27;t plan on selling.
+
+Photonics TAM is absolutely massive for AI, robotics, consumer hardware (eg. $AAPL), Space... 
+
+And Sivers happens to be in the bleeding edge for next-gen arhictectures and one of the few publicly traded leaders apart from $LITE and $COHR. 
+
+TAM expansion is also massive, especially with IP acquisition downstream.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049260098191835418" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我的意思是 $SIVE 是我不打算出售的股票。
+
+光子学 TAM 对于人工智能、机器人、消费硬件（例如 $AAPL）、太空……来说绝对是巨大的。 
+
+Sivers 恰好处于下一代架构的前沿，也是除了 $LITE 和 $COHR 之外为数不多的上市领导者之一。 
+
+TAM 扩张也很大规模，尤其是在下游 IP 收购方面。</div>
+        <div class="tweet-foot">
+          <span>likes 94 / retweets 4 / replies 7 / views 12065</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2026-04-28 16:08</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AVGO</span><span class="chip red">$LITE</span><span class="chip red">$MTSI</span><span class="chip red">$NXPI</span><span class="chip red">$QCOM</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">So $SIVE doesn&#x27;t handle capacity scaling, Win Semi does volume ramp.
+
+Win is massive. $AVGO, $LITE, $QCOM, Mediatek, $MTSI, $NXPI, all use them. 
+
+They&#x27;re in $AAPL, SpaceX supply chains too. So volume scaling for hyperscalers is derisked if you secure allocation and do it through Win.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So $SIVE doesn&#x27;t handle capacity scaling, Win Semi does volume ramp.
+
+Win is massive. $AVGO, $LITE, $QCOM, Mediatek, $MTSI, $NXPI, all use them. 
+
+They&#x27;re in $AAPL, SpaceX supply chains too. So volume scaling for hyperscalers is derisked if you secure allocation and do it through Win.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049038014245175387" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>因此，$SIVE 不处理容量扩展，Win Semi 负责容量提升。
+
+胜利是巨大的。 $AVGO、$LITE、$QCOM、Mediatek、$MTSI、$NXPI，都使用它们。 
+
+它们也在 $AAPL、SpaceX 的供应链中。因此，如果您确保分配并通过 Win 进行，那么超大规模的卷扩展就不会存在风险。</div>
+        <div class="tweet-foot">
+          <span>likes 73 / retweets 2 / replies 3 / views 9925</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2026-04-28 15:45</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AEVA</span><span class="chip red">$AMD</span><span class="chip red">$COHR</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;m happy Japanese communities started positions in $SIVE after doing research!
+
+A stronger international shareholder base is always positive.
+
+As for some thoughts, my read on the market looks like:
+
+1. $NVDA bought out allocation from $LITE / $COHR
+2. $AMD CPO went with $GFS + $SIVE / Win for remaining laser supply m...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;m happy Japanese communities started positions in $SIVE after doing research!
+
+A stronger international shareholder base is always positive.
+
+As for some thoughts, my read on the market looks like:
+
+1. $NVDA bought out allocation from $LITE / $COHR
+2. $AMD CPO went with $GFS + $SIVE / Win for remaining laser supply maybe $LITE if there’s still allocation.
+3. And… $MRVL CPO will need lasers regardless.
+
+$SIVE looks like one of the last remaining pure play merchant laser suppliers. 
+
+So Marvell will go with $SIVE (fits Celestial specs already) directly with multi-source down the road (maybe $MTSI). After they vertically integrate away interposer packaging process IP that feeds into Celestial. 
+
+Just some interesting things to back that up: 
+
+-&gt; Ayar removed $MTSI and $LITE from their website and went with $SIVE as primary. Ayar’s connected to AlChip/GUC and others. 
+
+-&gt; If look at the $GFS slide there&#x27;s only two public players with $SIVE and $LITE after $AMD went with Globalfoundries for their CPO program. 
+
+-&gt; $SIVE likely has agreements with Win since last year for laser capacity scaling. 
+
+$NVDA likely hasn&#x27;t fully allocated that laser supply, so the remaining companies like $JBL, $AMD, and others go to Sivers for overflow. 
+
+Since $LITE signaled they were already fully allocated for 2028.
+
+I could be wrong, but just based on public information that’s what it looks like.
+
+As for why I think it&#x27;s a good long: 
+
+-&gt; Sivers also basically had no exposure to 800G or previous generations.
+-&gt; European markets price in previous 12 months revenue... hence previous depressed valuations
+-&gt; they get all the hyperscaler overflow created by market panic from $NVDA
+
+But they also happen to be in the bleeding edge of CPO and even for gen-2 1.6T ( $JBL LRO) scaling next year in 2027.
+
+Then for H2 2027 or 2028, they scale in adjacent areas like Silicon Photonics for likely $AAPL consumer devices. 
+
+Or FMCW 4D AI companies like $AEVA.
+
+Many many years of development, finally coming to fruition next year.
+
+I personally think markets are missing something big here, that the public uncovers over time with mapping hyperscaler relationships, website digging, or presentation slides. 
+
+Hyperscalers suppliers don&#x27;t randomly choose a $1B Swedish laser company for no reason. 
+
+The direct contract with $JBL was the biggest signal of that. 
+
+And it’s my high conviction long moving forward.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049032343974007088" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我很高兴日本社区在进行研究后开始在 $SIVE 中任职！
+
+更强大的国际股东基础总是积极的。
+
+至于一些想法，我对市场的了解如下：
+
+1. $NVDA 从 $LITE / $COHR 买断分配
+2. $AMD CPO 与 $GFS + $SIVE / Win 一起获得剩余的激光供应，如果仍有分配的话，可能是 $LITE。
+3. 而且……无论如何，$MRVL CPO 都需要激光。
+
+$SIVE 看起来像是最后仅存的纯商用激光供应商之一。 
+
+因此，Marvell 将直接使用 $SIVE（已经符合 Celestial 规格）和多源（可能是 $MTSI）。在他们垂直集成中介层封装工艺 IP 后，将其输入到 Celestial 中。 
+
+只是一些有趣的事情来支持这一点： 
+
+-&gt; Ayar 从他们的网站上删除了 $MTSI 和 $LITE，并以 $SIVE 作为主要。 Ayar 连接到 AlChip/GUC 等。 
+
+-&gt; 如果看一下 $GFS 幻灯片，在 $AMD 与 Globalfoundries 合作实施其 CPO 计划之后，只有两家公开的参与者拥有 $SIVE 和 $LITE。 
+
+-&gt; $SIVE 可能自去年以来就与 Win 就激光容量扩展达成协议。 
+
+$NVDA 可能尚未完全分配激光供应，因此 $JBL、$AMD 等剩余公司将向 Sivers 寻求溢出。 
+
+由于 $LITE 表示 2028 年的分配已全部完成。
+
+我可能是错的，但仅基于公开信息，情况就是这样。
+
+至于为什么我认为这是一个很好的长篇： 
+
+-&gt; Sivers也基本上没有接触过800G或者前几代。
+-&gt; 欧洲市场定价前 12 个月的收入...因此之前的估值低迷
+-&gt; 他们从 NVDA 获得了市场恐慌造成的所有超大规模溢出
+
+但它们也恰好处于 CPO 的前沿，甚至是明年 2027 年第 2 代 1.6T ($JBL LRO) 扩展的前沿。
+
+然后，到 2027 年下半年或 2028 年，他们将在相邻领域进行扩展，例如硅光子学，用于可能的 AAPL 消费设备。 
+
+或者像 $AEVA 这样的 FMCW 4D AI 公司。
+
+多年的发展，明年终于开花结果。
+
+我个人认为市场在这里遗漏了一些重要的东西，随着时间的推移，公众通过绘制超大规模的关系、网站挖掘或演示幻灯片来发现这些东西。 
+
+超大规模供应商不会无缘无故地随机选择一家 10 亿美元的瑞典激光公司。 
+
+与 $JBL 的直接合同是其中最大的信号。 
+
+这是我长期前进的坚定信念。</div>
+        <div class="tweet-foot">
+          <span>likes 994 / retweets 81 / replies 71 / views 237243</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="26">
+        <div class="tweet-head">
+          <span class="mono">2026-04-28 00:27</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Nope, $SIVE thesis is fully in-tact and I still think it&#x27;s undervalued.  
+
+Lot of it was based on $JBL 1.6T bridging the gap into CPO ramp.
+
+But having $AMD CPO go with $GFS de-risked the company quite a massive amount. Then there&#x27;s $AAPL SiPH markets don&#x27;t know about yet.
+
+I&#x27;m honestly expecting $MRVL to buy directly ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Nope, $SIVE thesis is fully in-tact and I still think it&#x27;s undervalued.  
+
+Lot of it was based on $JBL 1.6T bridging the gap into CPO ramp.
+
+But having $AMD CPO go with $GFS de-risked the company quite a massive amount. Then there&#x27;s $AAPL SiPH markets don&#x27;t know about yet.
+
+I&#x27;m honestly expecting $MRVL to buy directly from Sivers now like what $JBL did.  But just multi-source + vertically integrate the packaging IP side of thing after buying lasers.
+
+That actually might increase the valuations more long term (direct to T1 like Jabil, Marvell) than one-hop through a packaging partner.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048801270337831047" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>不，$SIVE 论文完全完整，但我仍然认为它被低估了。  
+
+其中很多是基于 $JBL 1.6T 弥补 CPO 坡道的差距。
+
+但是 $AMD CPO 与 $GFS 的结合极大地降低了公司的风险。还有 $AAPL SiPH 市场还不知道的事情。
+
+老实说，我希望 $MRVL 现在能像 $JBL 那样直接从 Sivers 购买。  但购买激光器后只需多源 + 垂直整合封装 IP 方面即可。
+
+实际上，从长远来看，这可能会比通过包装合作伙伴一站式提高估值（直接到 T1，如 Jabil、Marvell）。</div>
+        <div class="tweet-foot">
+          <span>likes 682 / retweets 42 / replies 74 / views 141037</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="27">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 23:37</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Oh $SIVE is definitely fine, since they&#x27;re vastly diversified. 
+
+They likely basically serve everyone:
+-&gt; $AAPL Silicon Photonics
+-&gt; $JBL (probably largest)
+-&gt;  $AMD CPO program with $GFS,
+-&gt; Ayar -&gt; Alchip/GUC and other ASIC designers
+-&gt; O-Net ELS
+
+amongst others. Though this does materially slow later 2028-2029 proje...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Oh $SIVE is definitely fine, since they&#x27;re vastly diversified. 
+
+They likely basically serve everyone:
+-&gt; $AAPL Silicon Photonics
+-&gt; $JBL (probably largest)
+-&gt;  $AMD CPO program with $GFS,
+-&gt; Ayar -&gt; Alchip/GUC and other ASIC designers
+-&gt; O-Net ELS
+
+amongst others. Though this does materially slow later 2028-2029 projections a bit (eg. $500m Q4 Celestial, $1B 2029). 
+
+But wouldn&#x27;t be surprised if their light source ends up in Marvell one way or another.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048788667284795711" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>噢，$SIVE 绝对没问题，因为它们非常多元化。 
+
+他们可能基本上为所有人服务：
+-&gt; $AAPL 硅光子学
+-&gt; $JBL（可能是最大的）
+-&gt; $AMD CPO 计划与 $GFS,
+-&gt; Ayar -&gt; Alchip/GUC 等 ASIC 设计商
+-&gt; 昂纳ELS
+
+除其他外。尽管这确实会稍微减缓 2028-2029 年后期的预测（例如，第 4 季度 Celestial 为 5 亿美元，2029 年为 1B 美元）。 
+
+但如果他们的光源最终以某种方式进入 Marvell，也不会感到惊讶。</div>
+        <div class="tweet-foot">
+          <span>likes 236 / retweets 15 / replies 10 / views 15978</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="28">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 16:40</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$AVGO</span><span class="chip red">$GFS</span><span class="chip red">$GOOGL</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I value $SIVE $2B+ today, and think they can hit $10B+ next year... and more in 2028.
+
+Their likely existing users before volume ramp:
+- $AMD CPO | $GFS
+- $MRVL CPO | $POET
+- $JBL 1.6T Optical Transcivers
+- $AAPL Silicon Photonics
+- $POET
+- Ayar
+- AlChip | Ayar
+- GUC | Ayar
+- O-Net ELS
+
+Not including other unconfirmed ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I value $SIVE $2B+ today, and think they can hit $10B+ next year... and more in 2028.
+
+Their likely existing users before volume ramp:
+- $AMD CPO | $GFS
+- $MRVL CPO | $POET
+- $JBL 1.6T Optical Transcivers
+- $AAPL Silicon Photonics
+- $POET
+- Ayar
+- AlChip | Ayar
+- GUC | Ayar
+- O-Net ELS
+
+Not including other unconfirmed ones. 
+
+This is unholy coming from a laser company at a $1.1B valuation. And not even considering TAM expansion like new hyperscaler customers or $GOOGL / Samsung following Apple. 
+
+Also... &quot;execution uncertainty&quot; is literally just passed along to Win Semi, the foundry for $AVGO, so this is chilling.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048683731637158387" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我今天的估值是 $SIVE $2B+，并认为明年它们可以达到 $10B+……甚至在 2028 年会更高。
+
+在销量增加之前，他们可能的现有用户：
+- $AMD CPO | $AMD $GFS
+- $MRVL CPO | $POET
+- $JBL 1.6T 光收发器
+- $AAPL 硅光子学
+- $POET
+- 阿亚尔
+- 阿尔芯片 |阿亚尔
+- GUC |阿亚尔
+- 昂纳ELS
+
+不包括其他未经证实的。 
+
+这来自一家估值为 1.1B 美元的激光公司，这是不神圣的。甚至没有考虑像新的超大规模客户或继苹果之后的 $GOOGL/三星那样的 TAM 扩张。 
+
+另外……“执行不确定性”实际上只是传递给了 $AVGO 的代工厂 Win Semi，所以这令人不寒而栗。</div>
+        <div class="tweet-foot">
+          <span>likes 157 / retweets 5 / replies 10 / views 16712</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="29">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 16:28</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">It&#x27;s pretty clear by now that $SIVE is the likely holy grail silicon photonics supplier for $AAPL...
+
+Markets just don&#x27;t know about it (this is called Alpha). 
+
+If you&#x27;re curious how to map Apple to Sivers:
+
+&gt; &quot;US Fortune 100&quot; customer.
+&gt; RFQ (request for quote) for 50 MILLION units a year.
+&gt; Apple sold roughly 53.9 mi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It&#x27;s pretty clear by now that $SIVE is the likely holy grail silicon photonics supplier for $AAPL...
+
+Markets just don&#x27;t know about it (this is called Alpha). 
+
+If you&#x27;re curious how to map Apple to Sivers:
+
+&gt; &quot;US Fortune 100&quot; customer.
+&gt; RFQ (request for quote) for 50 MILLION units a year.
+&gt; Apple sold roughly 53.9 million Apple Watches in 2022 and averages between 38m-50m units annually
+&gt; $SIVE / Carnegie research released 135 Wavelength arechitectures, which matches Apple application specifications. 
+
+literally... what other US Fortune 100 company in world can casually produce 50 million units of consumer wearables a year? Even Samsung does 10-15M units. 
+
+That coincidentally matches with the laser architecture and applications. 
+
+$SIVE on their X did tease volume ramp from development timelines, which I guessed was Apple (H2 2027 ramp or H1 2028), but could be Ayar or Jabil.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048680795586568237" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>现在很明显，$SIVE 可能是 $AAPL 的圣杯硅光子供应商......
+
+市场只是不知道这一点（这称为阿尔法）。 
+
+如果您好奇如何将 Apple 映射到 Sivers：
+
+&gt; “美国财富100强”客户。
+&gt; 每年 5000 万件的 RFQ（询价）。
+&gt; 苹果在 2022 年售出了约 5390 万块 Apple Watch，平均每年售出 3800 万至 5000 万块
+&gt; $SIVE / Carnegie Research 发布了 135 个 Wavelength 架构，符合 Apple 应用规范。 
+
+从字面上看...世界上还有哪家美国财富 100 强公司可以随意每年生产 5000 万台消费类可穿戴设备？甚至三星也生产 10-1500 万台。 
+
+这恰好与激光架构和应用相匹配。 
+
+$SIVE 在他们的 X 上确实从开发时间表中调侃了销量增长，我猜是 Apple（2027 年下半年增长或 2028 年上半年增长），但也可能是 Ayar 或 Jabil。</div>
+        <div class="tweet-foot">
+          <span>likes 1422 / retweets 88 / replies 74 / views 371291</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="30">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 15:32</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$LITE</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@piyush1337 Yeah $SIVE is like a mini $LITE.
+
+$AAPL Watch if/when it gets released is likely going to massive for Sivers revenue given they do ~50M units/year.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@piyush1337 Yeah $SIVE is like a mini $LITE.
+
+$AAPL Watch if/when it gets released is likely going to massive for Sivers revenue given they do ~50M units/year.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048666474739634662" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@piyush1337 是的，$SIVE 就像一个迷你 $LITE。
+
+$AAPL Watch 如果/当它发布时，它可能会给 Sivers 带来巨大的收入，因为他们每年生产约 5000 万台。</div>
+        <div class="tweet-foot">
+          <span>likes 83 / retweets 2 / replies 3 / views 9869</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="31">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 15:21</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Still think $SIVE is vastly undiscovered.
+
+Feels like markets are only slowly starting to realize the likely laser supplier for $AMD?
+
+The only two public laser companies were $SIVE and $LITE on the $GFS presentation by the way…. after AMD’s CPO program went the way with GFS.
+
+And $SIVE is the only one left alongside G...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Still think $SIVE is vastly undiscovered.
+
+Feels like markets are only slowly starting to realize the likely laser supplier for $AMD?
+
+The only two public laser companies were $SIVE and $LITE on the $GFS presentation by the way…. after AMD’s CPO program went the way with GFS.
+
+And $SIVE is the only one left alongside GFS on Ayar’s website after they silently removed $LITE and $MTSI from their partner section.
+
+AlChip and GUC also happen to be pretty big for hyperscaler suppliers too..
+
+Feels like Sivers lasers are going to end up everywhere next year.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048663719933333524" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>仍然认为 $SIVE 尚未被发现。
+
+感觉市场只是慢慢开始意识到 $AMD 可能的激光器供应商？
+
+顺便说一下，$GFS 演示中仅有的两家上市激光公司是 $SIVE 和 $LITE…… AMD的CPO计划走上了GFS的道路。
+
+在 Ayar 网站上默默地从合作伙伴部分删除了 $LITE 和 $MTSI 后，$SIVE 是与 GFS 一起留下的唯一一个。
+
+AlChip 和 GUC 对于超大规模供应商来说也相当大。
+
+感觉明年 Sivers 激光器将无处不在。</div>
+        <div class="tweet-foot">
+          <span>likes 997 / retweets 72 / replies 68 / views 331392</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="32">
+        <div class="tweet-head">
+          <span class="mono">2026-04-26 15:20</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Agreed, and glad DNB, one of Europe&#x27;s leading banks, went out to defend $SIVE valuations alongside me.
+
+I still think $SIVE can reach $10B MC in 1 year time as their laser growth scales proportionally to:
+
+- $AAPL Watches
+- $JBL 1.6T Volume
+- $MRVL CPO Volume
+- Ayar Volume
+- $POET Volume
+
+Depending on how their qualifi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Agreed, and glad DNB, one of Europe&#x27;s leading banks, went out to defend $SIVE valuations alongside me.
+
+I still think $SIVE can reach $10B MC in 1 year time as their laser growth scales proportionally to:
+
+- $AAPL Watches
+- $JBL 1.6T Volume
+- $MRVL CPO Volume
+- Ayar Volume
+- $POET Volume
+
+Depending on how their qualification plays out into volume ramp. 
+
+As Sivers supply lasers to all the next generation of 1.6T/CPO players in the space (into ~ $AMD, $NVDA, $AMZN, $MSFT type supply chains). 
+
+These are EXISTING players at a ~990M MC. Not even including TAM expansion or more partnerships coming up.
+
+Especially now with NASDAQ listing, US institutions are forward looking and price in ~12M ahead of time, compared local European valuations that mainly look at previous 12 months. 
+
+Banks usually provide very conservative targets (eg. 3 years for a 10x), but I do see potential for this company to be the next $LITE very soon. 
+
+Europe should embrace positive-sum growth of their own companies that supply to hyperscalers.
+
+As their frontier companies provide back to locals through taxes, economic growth, and job growth.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048301213943579012" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我同意，并且很高兴欧洲领先银行之一的 DNB 与我一起捍卫 SIVE 美元的估值。
+
+我仍然认为 $SIVE 可以在 1 年内达到 $10B MC，因为它们的激光增长按比例缩放：
+
+- $AAPL 手表
+- $JBL 1.6T 体积
+- $MRVL 原棕油数量
+- 阿亚尔卷
+- $POET 卷
+
+取决于他们的资格如何影响销量增长。 
+
+Sivers 向该领域所有下一代 1.6T/CPO 厂商供应激光器（进入 ~ $AMD、$NVDA、$AMZN、$MSFT 型供应链）。 
+
+这些是 ~990M MC 的现有玩家。甚至不包括 TAM 扩张或即将建立的更多合作伙伴关系。
+
+尤其是现在纳斯达克上市，美国机构前瞻性地提前定价约1200万，相比之下欧洲本土估值主要看前12个月。 
+
+银行通常会提供非常保守的目标（例如 10 倍为 3 年），但我确实看到这家公司很快就有可能成为下一个 $LITE。 
+
+欧洲应该拥抱为超大规模企业供货的本国公司的正和增长。
+
+他们的前沿公司通过税收、经济增长和就业增长回馈当地人。</div>
+        <div class="tweet-foot">
+          <span>likes 1102 / retweets 90 / replies 71 / views 426854</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="33">
+        <div class="tweet-head">
+          <span class="mono">2026-04-26 01:21</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$HOOD</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$RKLB</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I was long $RKLB in the 10&#x27;s, because of their reusable rocket success rate. Despite banks/analysts claiming it would crash.
+
+I was long $HOOD in the 10&#x27;s because of their massive consumer base and TAM expansion into other segments. 
+
+I&#x27;m long $SIVE because their lasers look designed into $AAPL, $MRVL, $JBL, and other ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I was long $RKLB in the 10&#x27;s, because of their reusable rocket success rate. Despite banks/analysts claiming it would crash.
+
+I was long $HOOD in the 10&#x27;s because of their massive consumer base and TAM expansion into other segments. 
+
+I&#x27;m long $SIVE because their lasers look designed into $AAPL, $MRVL, $JBL, and other sector leaders despite being so small. 
+
+Media was against all of them while they were small. But just need to look past that noise.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048090023925555240" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我在 10 年代就做多了 $RKLB，因为他们的可重复使用火箭的成功率很高。尽管银行/分析师声称它会崩溃。
+
+我在 10 年代长期持有 $HOOD，因为他们拥有庞大的消费者基础以及 TAM 向其他细分市场的扩张。 
+
+我看好 $SIVE，因为他们的激光器看起来是为 $AAPL、$MRVL、$JBL 和其他行业领导者设计的，尽管规模很小。 
+
+当他们还小的时候，媒体就反对他们所有人。但只需要忽略那些噪音。</div>
+        <div class="tweet-foot">
+          <span>likes 213 / retweets 13 / replies 9 / views 21549</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="34">
+        <div class="tweet-head">
+          <span class="mono">2026-04-25 05:30</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AXTI</span><span class="chip red">$JBL</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$SIVE</span><span class="chip red">$SIVEF</span></span>
+        </div>
+        <div class="tweet-text">Did you listen anon?
+
+The fact that $SIVE is up 600%+.
+
+But still can 10x from here in a year... once ~ $AAPL, $JBL, and $MRVL require mass production of their lasers in 2027.
+
+Is incredible.
+
+Probably my most legendary thesis post since $AXTI. https://t.co/8rOZNdV9bX</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Did you listen anon?
+
+The fact that $SIVE is up 600%+.
+
+But still can 10x from here in a year... once ~ $AAPL, $JBL, and $MRVL require mass production of their lasers in 2027.
+
+Is incredible.
+
+Probably my most legendary thesis post since $AXTI. https://t.co/8rOZNdV9bX</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047790368700445153" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>你立刻听了吗？
+
+事实上 $SIVE 上涨了 600% 以上。
+
+但一年内仍可实现 10 倍……一次 ~ $AAPL、$JBL 和 $MRVL 需要在 2027 年大规模生产其激光器。
+
+令人难以置信。
+
+可能是我自 $AXTI 以来最具传奇色彩的论文。 https://t.co/8rOZNdV9bX</div>
+        <div class="tweet-foot">
+          <span>likes 2066 / retweets 123 / replies 150 / views 486553</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="35">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 15:50</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@fredrikmob49943 Hi Swedish local. If it&#x27;s not $AAPL:
+
+Please name me another US Fortune 100 company (not Samsung by elimination) shipping 50M+ units yearly...
+
+That fits $SIVE R&amp;amp;D laser specs + applications then?</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@fredrikmob49943 Hi Swedish local. If it&#x27;s not $AAPL:
+
+Please name me another US Fortune 100 company (not Samsung by elimination) shipping 50M+ units yearly...
+
+That fits $SIVE R&amp;amp;D laser specs + applications then?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047584052451176687" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@fredrikmob49943 嗨，瑞典当地人。如果不是 $AAPL：
+
+请告诉我另一家美国财富 100 强公司（不是三星，被淘汰）每年出货量超过 5000 万台...
+
+这适合 $SIVE 研发激光规格 + 应用吗？</div>
+        <div class="tweet-foot">
+          <span>likes 86 / retweets 1 / replies 3 / views 12159</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="36">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 15:30</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">@sharion73 @veggiepoultry @StormDirac $AAPL won&#x27;t confirm BOM and upstream vendors in their supply chain. But almost 100% sure, maybe 99%. 
+
+Maybe you can name another consumer hardware company shipping 50M+ units yearly that fits their R&amp;amp;D laser specs + applications?</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@sharion73 @veggiepoultry @StormDirac $AAPL won&#x27;t confirm BOM and upstream vendors in their supply chain. But almost 100% sure, maybe 99%. 
+
+Maybe you can name another consumer hardware company shipping 50M+ units yearly that fits their R&amp;amp;D laser specs + applications?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047578859319840953" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@sharion73 @veggiepoultry @StormDirac $AAPL 不会确认其供应链中的 BOM 和上游供应商。但几乎 100% 确定，也许 99%。 
+
+也许您能说出另一家每年出货量超过 5000 万台、符合其研发激光规格和应用的消费类硬件公司的名字？</div>
+        <div class="tweet-foot">
+          <span>likes 59 / retweets 0 / replies 1 / views 5456</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="37">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 15:25</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@veggiepoultry @StormDirac Rockley went down, which is likely the reason why $SIVE became the $AAPL supplier.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@veggiepoultry @StormDirac Rockley went down, which is likely the reason why $SIVE became the $AAPL supplier.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047577584528162838" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@veggiepoultry @StormDirac Rockley 倒下了，这可能就是 $SIVE 成为 $AAPL 供应商的原因。</div>
+        <div class="tweet-foot">
+          <span>likes 49 / retweets 0 / replies 1 / views 4661</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="38">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 15:22</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">@Embezzl3r Yeah makes sense about seeing their reactions to $AAPL as their hinted hyperscaler customer for volume ramp.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Embezzl3r Yeah makes sense about seeing their reactions to $AAPL as their hinted hyperscaler customer for volume ramp.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047576877574103455" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Embezzl3r 是的，看到他们对 $AAPL 的反应是有道理的，因为他们暗示超大规模客户的数量增加。</div>
+        <div class="tweet-foot">
+          <span>likes 35 / retweets 0 / replies 0 / views 4144</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="39">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 15:03</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">@StormDirac Yeah, normally if a company in the US has $AAPL as a likely hyperscaler customer... Everyone would be cheering. 
+
+Yet most of the comments in a certain place were negative. Amusing indeed.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@StormDirac Yeah, normally if a company in the US has $AAPL as a likely hyperscaler customer... Everyone would be cheering. 
+
+Yet most of the comments in a certain place were negative. Amusing indeed.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047572243048460511" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@StormDirac 是的，通常情况下，如果美国一家公司拥有 AAPL 美元作为可能的超大规模客户……每个人都会欢呼。 
+
+但某个地方的评论大部分都是负面的。确实很有趣。</div>
+        <div class="tweet-foot">
+          <span>likes 94 / retweets 0 / replies 6 / views 7704</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="40">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 14:42</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;m amused by Swedish culture at this point.
+
+That their retail/journalists are crying every day when someone posts a supply chain mapping of $SIVE lasers to:
+
+-&gt; $MRVL CPO
+-&gt; $AMD CPO
+-&gt; $JBL 1.6T LRO
+-&gt; $NVDA
+-&gt; $AMZN, $META, $GOOGL, $MSFT
+-&gt; Tencent, Baidu, Alibaba for ELS.
+
+Then they go crying even further...
+
+When...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;m amused by Swedish culture at this point.
+
+That their retail/journalists are crying every day when someone posts a supply chain mapping of $SIVE lasers to:
+
+-&gt; $MRVL CPO
+-&gt; $AMD CPO
+-&gt; $JBL 1.6T LRO
+-&gt; $NVDA
+-&gt; $AMZN, $META, $GOOGL, $MSFT
+-&gt; Tencent, Baidu, Alibaba for ELS.
+
+Then they go crying even further...
+
+When someone shows $AAPL is secret hyperscaler customer of Sivers lasers for their next-gen Apple Watch development (which requires 50,000,000 units annually).
+
+Does supplying to hyperscalers... Hurt locals&#x27;s feelings that much to the point they try and self-destruct? 
+
+It&#x27;s hilarious that a &quot;Swedish professional&quot; went out and said CPO is nothing new and nothing special, so Sivers is nothing special. 
+
+Meanwhile $NVDA is just funding every CPO program $2B from $MRVL to $LITE to $COHR left and right. 
+
+Cool thing about X is you learn something new every day interacting with global audiences.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047566792294613248" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>此时我对瑞典文化感到很有趣。
+
+当有人将 $SIVE 激光器的供应链映射发布到以下位置时，他们的零售/记者每天都会哭泣：
+
+-&gt; $MRVL CPO
+-&gt; $AMD CPO
+-&gt; $JBL 1.6T LRO
+-&gt; $NVDA
+-&gt; $AMZN、$META、$GOOGL、$MSFT
+-&gt; 腾讯、百度、阿里巴巴的 ELS。
+
+然后他们哭得更厉害了……
+
+当有人表明 $AAPL 是 Sivers 激光器的秘密超大规模客户，用于其下一代 Apple Watch 开发（每年需要 50,000,000 块）。
+
+向超大规模企业供货是否会伤害当地人的感情，以至于他们试图自我毁灭？ 
+
+搞笑的是，一位“瑞典专业人士”出面说 CPO 不是什么新鲜事，也不是什么特别的，所以西弗斯也没什么特别的。 
+
+与此同时，$NVDA 只为从 $MRVL 到 $LITE 到 $COHR 的每个 CPO 计划提供 2B 美元的资助。 
+
+X 的一个很酷的事情是，您每天与全球观众互动都能学到新东西。</div>
+        <div class="tweet-foot">
+          <span>likes 1169 / retweets 99 / replies 111 / views 291946</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="41">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 13:45</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">@Matrix_B0SS $AAPL high certainty uses them too for next-gen apple watches, so that&#x27;s 7/7.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Matrix_B0SS $AAPL high certainty uses them too for next-gen apple watches, so that&#x27;s 7/7.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047552506700669157" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Matrix_B0SS $AAPL 高确定性也将它们用于下一代苹果手表，所以这是 7/7。</div>
+        <div class="tweet-foot">
+          <span>likes 153 / retweets 4 / replies 3 / views 14673</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="42">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 02:51</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span></span>
+        </div>
+        <div class="tweet-text">@centraly22 I wouldn’t have high conviction long on a $850m MC photonics company if they weren’t likely volume ramping to $AAPL, $MRVL, $JBL, Ayar, and others in a years time.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@centraly22 I wouldn’t have high conviction long on a $850m MC photonics company if they weren’t likely volume ramping to $AAPL, $MRVL, $JBL, Ayar, and others in a years time.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047387839789433134" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@centraly22 如果一家价值 8.5 亿美元的 MC 光子公司的销量不太可能在一年内飙升至 AAPL、$MRVL、$JBL、Ayar 和其他公司，那么我不会对他们抱有长期的信心。</div>
+        <div class="tweet-foot">
+          <span>likes 139 / retweets 3 / replies 3 / views 13993</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="43">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 02:47</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">@Photonix1337 That’s underselling TAM expansion with Samsung, Huawei, Google, and others all copying $AAPL.
+
+Alongside the same technology for other product lines Apple offers.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Photonix1337 That’s underselling TAM expansion with Samsung, Huawei, Google, and others all copying $AAPL.
+
+Alongside the same technology for other product lines Apple offers.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047386821764710812" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Photonix1337 这是对 TAM 扩展的低估，三星、华为、谷歌和其他公司都在抄袭 $AAPL。
+
+Apple 还为其他产品线提供相同的技术。</div>
+        <div class="tweet-foot">
+          <span>likes 55 / retweets 1 / replies 3 / views 6917</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="44">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 02:32</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">I had September 2027 or H1 2028 as my estimates. Graph provided by $SIVE might hint at earlier ramp than expected.
+
+I personally wouldn’t go long on a company if I had to wait 5 years for R&amp;D.
+
+But I went long to get the upside from all development for the past 5 years with Ayar, $AAPL, and other for 2027 volume ramp.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I had September 2027 or H1 2028 as my estimates. Graph provided by $SIVE might hint at earlier ramp than expected.
+
+I personally wouldn’t go long on a company if I had to wait 5 years for R&amp;D.
+
+But I went long to get the upside from all development for the past 5 years with Ayar, $AAPL, and other for 2027 volume ramp.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047383202453717415" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我的估计是 2027 年 9 月或 2028 年上半年。 $SIVE 提供的图表可能暗示斜坡比预期更早。
+
+如果我必须等待 5 年才能进行研发，我个人不会长期看好一家公司。
+
+但我花了很长的时间从过去 5 年 Ayar、$AAPL 和其他公司的所有开发中获得好处，以实现 2027 年的销量增长。</div>
+        <div class="tweet-foot">
+          <span>likes 85 / retweets 5 / replies 0 / views 10113</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="45">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 02:02</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$GOOGL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">The secret is that $AAPL 🍎 is using $SIVE InP laser arrays for mass production of consumer hardware (high confidence).
+
+Launch date around late H2 2027 from estimates and the graph provided.
+
+Imagine Apple mass producing consumer hardware with 50M+/units a year…
+
+Off a $850m MC laser supplier lol.  
+
+Then with whatever...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The secret is that $AAPL 🍎 is using $SIVE InP laser arrays for mass production of consumer hardware (high confidence).
+
+Launch date around late H2 2027 from estimates and the graph provided.
+
+Imagine Apple mass producing consumer hardware with 50M+/units a year…
+
+Off a $850m MC laser supplier lol.  
+
+Then with whatever Apple does, you’ll get $GOOGL, Samsung, and the others following along next.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047375576894452068" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>秘密在于 $AAPL 🍎 正在使用 $SIVE InP 激光阵列大规模生产消费类硬件（高可信度）。
+
+根据估计和提供的图表，发布日期约为 2027 年下半年。
+
+想象一下 Apple 每年大规模生产 5000 万台以上的消费类硬件……
+
+与价值 8.5 亿美元的 MC 激光器供应商合作，哈哈。  
+
+然后，无论苹果做什么，你都会得到 $GOOGL、三星和其他公司的追随。</div>
+        <div class="tweet-foot">
+          <span>likes 1253 / retweets 106 / replies 135 / views 599030</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="46">
+        <div class="tweet-head">
+          <span class="mono">2026-04-23 15:09</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@ashmyro I&#x27;m already aware $SIVE is the next likely $AAPL supplier, which is huge. 
+
+I&#x27;ve been focusing on their DFB lasers going to AI datacenters the most personally, since that&#x27;s their core revenue drivers in the future.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@ashmyro I&#x27;m already aware $SIVE is the next likely $AAPL supplier, which is huge. 
+
+I&#x27;ve been focusing on their DFB lasers going to AI datacenters the most personally, since that&#x27;s their core revenue drivers in the future.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047211122424717768" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@ashmyro 我已经知道 $SIVE 是下一个可能的 $AAPL 供应商，规模很大。 
+
+我个人最关注他们的 DFB 激光器进入人工智能数据中心，因为这是他们未来的核心收入驱动力。</div>
+        <div class="tweet-foot">
+          <span>likes 166 / retweets 9 / replies 2 / views 33678</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="47">
+        <div class="tweet-head">
+          <span class="mono">2026-04-16 10:02</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AVGO</span><span class="chip red">$COHR</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">This is exactly why I long the $SIVE laser ecosystem with Win Semi (3105).
+
+The beneficiaries of the next architectural supercycle for laser mass production?
+
+Sivers + Win.
+
+Especially with the announcement yesterday that Sivers is powering $JBL 1.6T optical transceivers. https://t.co/05wYF3fR0U</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">This is exactly why I long the $SIVE laser ecosystem with Win Semi (3105).
+
+The beneficiaries of the next architectural supercycle for laser mass production?
+
+Sivers + Win.
+
+Especially with the announcement yesterday that Sivers is powering $JBL 1.6T optical transceivers. https://t.co/05wYF3fR0U</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2044597208860016877" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>这正是我看好 Win Semi (3105) 的 $SIVE 激光生态系统的原因。
+
+激光大规模生产的下一个建筑超级周期的受益者？
+
+西弗斯+胜利。
+
+特别是昨天宣布 Sivers 正在为 $JBL 1.6T 光纤收发器提供动力。 https://t.co/05wYF3fR0U</div>
+        <div class="tweet-foot">
+          <span>likes 543 / retweets 37 / replies 38 / views 148139</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="48">
+        <div class="tweet-head">
+          <span class="mono">2026-04-08 10:14</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AVGO</span><span class="chip red">$LITE</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Win Semi (3105) just keeps going in a vertical line up.
+
+Might be a signal it’s undervalued? https://t.co/Xoh4N5bQON</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Win Semi (3105) just keeps going in a vertical line up.
+
+Might be a signal it’s undervalued? https://t.co/Xoh4N5bQON</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2041701156771262789" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Win Semi (3105) 一直保持垂直排列。
+
+可能是一个被低估的信号？ https://t.co/Xoh4N5bQON</div>
+        <div class="tweet-foot">
+          <span>likes 196 / retweets 19 / replies 14 / views 61370</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="49">
+        <div class="tweet-head">
+          <span class="mono">2026-04-07 11:53</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AVGO</span><span class="chip red">$COHR</span><span class="chip red">$LITE</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">What a sleeper OP pick. 
+
+Still almost nobody talks about Win Semi ($3105.TWO)…
+
+From $LITE to $SIVE. And $AAPL to $AVGO to SpaceX.
+
+Feels like everyone uses them? 
+
+$5.4B price tag is underselling its importance to robotics, space, and AI hyperscaler supply chains imo. https://t.co/lMg92KzufM</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">What a sleeper OP pick. 
+
+Still almost nobody talks about Win Semi ($3105.TWO)…
+
+From $LITE to $SIVE. And $AAPL to $AVGO to SpaceX.
+
+Feels like everyone uses them? 
+
+$5.4B price tag is underselling its importance to robotics, space, and AI hyperscaler supply chains imo. https://t.co/lMg92KzufM</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2041363738327204264" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>真是一个沉睡的OP选择。 
+
+仍然几乎没有人谈论 Win Semi（$3105.TWO）......
+
+从 $LITE 到 $SIVE。 AAPL 到 AVGO 到 SpaceX。
+
+感觉大家都用过？ 
+
+在我看来，5.4B 美元的价格标签低估了它对机器人、太空和人工智能超大规模供应链的重要性。 https://t.co/lMg92KzufM</div>
+        <div class="tweet-foot">
+          <span>likes 434 / retweets 39 / replies 31 / views 195395</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="50">
+        <div class="tweet-head">
+          <span class="mono">2026-03-31 08:23</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMZN</span><span class="chip red">$AXTI</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$ORCL</span><span class="chip red">$TSLA</span><span class="chip red">$USAR</span></span>
+        </div>
+        <div class="tweet-text">Hi Ron, so there&#x27;s two different parts to it:
+
+1. Hyperscalers ( $ORCL, $META, $AMZN): They&#x27;re spending more than they have with profit ( $GOOGL is the rare exception, and $AAPL isn&#x27;t really spending much relatively). 
+
+So markets are worried less worried it&#x27;s translating into material revenue.
+
+Especially with compani...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Hi Ron, so there&#x27;s two different parts to it:
+
+1. Hyperscalers ( $ORCL, $META, $AMZN): They&#x27;re spending more than they have with profit ( $GOOGL is the rare exception, and $AAPL isn&#x27;t really spending much relatively). 
+
+So markets are worried less worried it&#x27;s translating into material revenue.
+
+Especially with companies like Oracle taking on immense amounts of debt, rate cuts were a large driving factor in why it&#x27;s slightly more sustainable (if you look at debt interest, it&#x27;s massive), and cutting rates drives both forward expansion and material amounts of savings. 
+
+Due to the War in Iran, rising crude, former projections with cutting rates in 2026 are now gone. 
+
+This is compounded that there are worries that their AI buildout supply chain gets disrupted. 
+
+If you look at where their AI datacenter parts are made:
+- it comes from Taiwan
+- it comes from Korea
+- it comes from Japan
+
+It&#x27;s global.
+
+While the US might look like it&#x27;s fine, since it&#x27;s insulated to Oil, LNG, helium, and others needed for the semiconductor supply chain.
+
+Our Asian partners are not in a long drawn out conflict. 
+
+So when you look at companies in Asia that are more small and niche they are struggling. 
+
+And this gets compounded tens of times until it reaches all the way down to the end Amazon Web Services AI datacenter (increased costs, lack of supply). 
+
+2. AI as a whole: Investors are very bullish on it.
+
+It&#x27;s just how we get there, and America looks strangled by China optically. 
+
+- America is spending way too much on it, with China and others distilling our latest models (need KYC endpoints), and reaping all the benefits.
+
+- As we scale our AI programs, it&#x27;s becoming increasingly reliant on Chinese companies. 
+
+I&#x27;d argue it&#x27;s because America lacks the rare earths, which should be our #1 national security priority. 
+
+This is needed to make new generations of AI hardware, robotic supply chains, and Space. 
+
+They&#x27;re all controlled by China and Russia. Even the leading &quot;Western&quot; companies, I&#x27;ve identified they&#x27;re mainly relying on China/Russia still.
+
+And this is one of the biggest vulnerabilities in securing our frontier programs. 
+
+If you look at photonics (how AI hardware is sped up by light), we no Western supply chain to fulfill our needs. It&#x27;s $AXTI (in China), and Vital (in China) as the two main sources of materials needed to make them, that gets passed down to Japan, or other companies before they end up in US. 
+
+If you look at our humanoid program (how we move AI to the real world), all the bodies of $TSLA Optimus are made in China.
+
+American supply chains lack the rare earths needed to make the components because it gets too expensive. 
+
+3. Disruption in the Middle East
+
+A large part of the recent drop is mainly due to liquidity. Our partners in the UAE, Middle East are largely funding private markets (think OpenAI) and a lot of their spend going to AI markets. 
+
+They&#x27;re also one of the biggest investors in Mag7 from Meta to Microsoft. 
+
+If their oil fields continue getting disrupted they may have to pull out liquidity from US markets.
+
+This impacts both the amount of money these companies can spend on AI. As well as causing a drop in American markets from selling. 
+
+If there&#x27;s any takeway: Please make Rare Earths Amercia&#x27;s #1 national security priority. President Trump already invested in $USAR, $MP, and a few individual names. 
+
+But there are many more extremely critical, yet unprofitable companies that are needed to make AI, to self driving cars, to robotics. And we need to break our reliance on China / Russia.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2038774210601074790" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>嗨罗恩，所以它有两个不同的部分：
+
+1. 超大规模企业（$ORCL、$META、$AMZN）：他们的支出超过了利润（$GOOGL 是罕见的例外，而 $AAPL 相对来说支出并不算多）。 
+
+因此，市场不再担心它会转化为物质收入。
+
+尤其是像甲骨文这样背负巨额债务的公司，降息是其可持续性稍微更强的一个重要驱动因素（如果你看看债务利息，它是巨大的），降息既能推动向前扩张，又能推动大量储蓄。 
+
+由于伊朗战争，原油价格上涨，之前 2026 年降息的预测现已不复存在。 
+
+更糟糕的是，人们担心他们的人工智能构建供应链会受到干扰。 
+
+如果你看看他们的人工智能数据中心部件是在哪里制造的：
+- 它来自台湾
+- 它来自韩国
+- 它来自日本
+
+这是全球性的。
+
+虽然美国可能看起来没什么问题，因为它不受石油、液化天然气、氦气和半导体供应链所需的其他物质的影响。
+
+我们的亚洲伙伴并没有陷入旷日持久的冲突。 
+
+因此，当你观察亚洲规模较小且利基市场的公司时，他们都在苦苦挣扎。 
+
+这种情况会复杂化数十倍，直到一直到达最终的 Amazon Web Services AI 数据中心（成本增加、供应不足）。 
+
+2. 人工智能整体：投资者非常看好。
+
+这就是我们到达那里的方式，美国看起来被中国勒死了。 
+
+- 美国在这方面投入太多，中国和其他国家提炼出我们的最新模型（需要 KYC 端点），并获得所有好处。
+
+- 随着我们扩大人工智能项目，它越来越依赖中国公司。 
+
+我认为这是因为美国缺乏稀土，而稀土应该是我们国家安全的第一要务。 
+
+这是制造新一代人工智能硬件、机器人供应链和太空所必需的。 
+
+它们都由中国和俄罗斯控制。即使是领先的“西方”公司，我也发现他们仍然主要依赖中国/俄罗斯。
+
+这是保护我们前沿项目的最大漏洞之一。 
+
+如果你看看光子学（人工智能硬件如何通过光加速），我们没有西方供应链来满足我们的需求。 $AXTI（在中国）和 Vital（在中国）是制造它们所需的两个主要材料来源，这些材料在最终到达美国之前会被传递到日本或其他公司。 
+
+如果你看看我们的人形程序（我们如何将人工智能转移到现实世界），TSLA Optimus 的所有车身都是中国制造的。
+
+美国供应链缺乏制造零部件所需的稀土，因为它太贵了。 
+
+3. 中东局势的混乱
+
+近期下跌很大一部分主要是流动性造成的。我们在阿联酋和中东的合作伙伴主要为私人市场（想想 OpenAI）提供资金，他们的大部分支出都流向了人工智能市场。 
+
+他们也是 Mag7 的最大投资者之一，从 Meta 到微软。 
+
+如果他们的油田继续受到干扰，他们可能不得不从美国市场撤出流动性。
+
+这会影响这些公司在人工智能上花费的资金量。以及导致美国市场销售下降。 
+
+如果有什么建议的话：请把美国稀土公司的国家安全放在第一位。特朗普总统已经投资了 $USAR、$MP 和一些个人名字。 
+
+但制造人工智能、自动驾驶汽车和机器人技术还需要许多更为关键但尚未盈利的公司。我们需要打破对中国/俄罗斯的依赖。</div>
+        <div class="tweet-foot">
+          <span>likes 280 / retweets 10 / replies 4 / views 30834</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="51">
+        <div class="tweet-head">
+          <span class="mono">2026-03-30 12:56</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AAPL</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">There’s clearly some market outperformers despite index’s and mega caps from $META / $MSFT crashing.
+
+This probably signals institutions rotation or an extremely strong up and coming sector.
+
+The obvious one is into CPO/ELS supply chains. 
+
+My personal picks were: 
+
+$TSEM / Win Semi- TSM of photonics 
+$AAOI / $SIVE / $...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">There’s clearly some market outperformers despite index’s and mega caps from $META / $MSFT crashing.
+
+This probably signals institutions rotation or an extremely strong up and coming sector.
+
+The obvious one is into CPO/ELS supply chains. 
+
+My personal picks were: 
+
+$TSEM / Win Semi- TSM of photonics 
+$AAOI / $SIVE / $COHR / $LITE- Light Sources
+$SOI / $AXTI - Substrates 
+$IQE - Epiwafers
+
+But of course there are larger names out there like $MRVL, Sumitomo, $AVGO.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2038480499425923375" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>尽管 $META / $MSFT 的指数和大型股崩盘，但显然有一些市场表现优于大盘。
+
+这可能标志着机构轮换或一个极其强劲的新兴行业。
+
+显而易见的是 CPO/ELS 供应链。 
+
+我个人的选择是： 
+
+$TSEM / Win Semi- 光子学 TSM 
+$AAOI / $SIVE / $COHR / $LITE- 光源
+$SOI / $AXTI - 基板 
+$IQE - 外延片
+
+当然，还有一些更大的名字，例如 $MRVL、Sumitomo、$AVGO。</div>
+        <div class="tweet-foot">
+          <span>likes 387 / retweets 47 / replies 20 / views 94841</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="52">
+        <div class="tweet-head">
+          <span class="mono">2026-03-30 11:13</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AAPL</span><span class="chip red">$LITE</span><span class="chip red">$NVDA</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;m still long on markets (now 85% long, now 15% cash/hedges).
+
+Even during wartime, I expect many names from $AAOI to $LITE to outperform. 
+
+However... 
+
+The World is largely interconnected now.
+
+The current administration might not realize the severity/fragility of upstream supply chains. 
+
+They might look at $AAPL &quot;...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;m still long on markets (now 85% long, now 15% cash/hedges).
+
+Even during wartime, I expect many names from $AAOI to $LITE to outperform. 
+
+However... 
+
+The World is largely interconnected now.
+
+The current administration might not realize the severity/fragility of upstream supply chains. 
+
+They might look at $AAPL &quot;Made in America&quot;.
+
+or  $TSLA &quot;Made in America&quot; but if you look at the source for Tesla Humanoids:
+
+-&gt; It&#x27;s in China. Actuator materials stem from Russia feedstock. Materials come from partners in Canada. 
+
+-&gt; For Starlink, massive amount of supply chains stem from Win Semi Taiwan to companies in Korea. 
+
+For where the funding from OpenAI, private equities, megacap, and others come from:
+
+-&gt; Large part of it comes from UAE, Middle East, and others (that might need to pull out liquidity) as their oil fields get blown up. 
+
+Extended disruptions (US ground invasion) for spanning multiple months, is very bearish. 
+
+I was initially expecting the &quot;Shock and Awe&quot; and US to claim victory and for short term War shock to be bought back. 
+
+But I would not encourage US to head toward a drawn out War. 
+
+This especially is not good for Asian partners (SK, Japan) or our allies in Europe either.
+
+The main beneficiaries of War are:
+#1: Israel
+#2: Russia
+
+The rest of the World, including the US, are getting dragged down from War. 
+
+It looks like &quot;Oil/Energy prices going up is good for US&quot;: 
+
+But it takes down a lot of supply chains that the hyperscalers from $NVDA to even $AAPL relies on.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2038454646902272155" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我仍然做多市场（现在做多 85%，现在做多 15% 现金/对冲）。
+
+即使在战时，我预计从 $AAOI 到 $LITE 等许多公司的表现也会优于大盘。 
+
+然而... 
+
+世界现在基本上是相互联系的。
+
+现任政府可能没有意识到上游供应链的严重性/脆弱性。 
+
+他们可能会关注 $AAPL“美国制造”。
+
+或 $TSLA“美国制造”，但如果你查看 Tesla Humanoids 的来源：
+
+-&gt; 这是在中国。执行器材料源自俄罗斯原料。材料来自加拿大的合作伙伴。 
+
+-&gt; 对于Starlink来说，大量的供应链来自台湾Win Semi到韩国的公司。 
+
+OpenAI、私募股权、大型资本等的资金来源：
+
+-&gt; 其中很大一部分来自阿联酋、中东和其他国家（可能需要撤出流动性），因为他们的油田被炸毁了。 
+
+持续数月的长期中断（美国地面入侵）非常悲观。 
+
+我最初预计“震撼与敬畏”和美国会宣布胜利，并会回购短期的战争冲击。 
+
+但我不会鼓励美国走向一场旷日持久的战争。 
+
+这对于亚洲合作伙伴（SK、日本）或我们在欧洲的盟友来说尤其不利。
+
+战争的主要受益者是：
+＃1：以色列
+#2：俄罗斯
+
+包括美国在内的世界其他地区正受到战争的拖累。 
+
+看起来“石油/能源价格上涨对美国有利”： 
+
+但这会破坏从 NVDA 到 AAPL 等超大规模企业所依赖的许多供应链。</div>
+        <div class="tweet-foot">
+          <span>likes 492 / retweets 15 / replies 36 / views 97579</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="53">
+        <div class="tweet-head">
+          <span class="mono">2026-03-27 16:11</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AVGO</span><span class="chip red">$COHR</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">You cant spell Winner without Win.
+
+Because of that: I’m bullish on $SIVE supply chain. 
+
+$SIVE -&gt; WIN (TPE:3105) -&gt; Ayar SuperNova -&gt; $JBL -&gt; Hyperscalers, as one flow. 
+
+If you compare to $LITE and others that’s also in the same CPO CW WDM space. 
+
+There’s a reason why:
+
+-&gt; $POET / $MRVL Celestial.
+-&gt; Ayar / $JBL and...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">You cant spell Winner without Win.
+
+Because of that: I’m bullish on $SIVE supply chain. 
+
+$SIVE -&gt; WIN (TPE:3105) -&gt; Ayar SuperNova -&gt; $JBL -&gt; Hyperscalers, as one flow. 
+
+If you compare to $LITE and others that’s also in the same CPO CW WDM space. 
+
+There’s a reason why:
+
+-&gt; $POET / $MRVL Celestial.
+-&gt; Ayar / $JBL and O-Net use $SIVE.
+
+It’s designed in as the light source for the next-gen photonics architecture for hyperscalers. 
+
+At a ~$300M valuation. 
+
+And I do think WDM DFB arrays are the superior architecture for scale up. And are incredibly hard to develop. 
+
+It&#x27;s not a zero-sum architectural game and will likely be split with how you handle scale out with single emitters like $LITE and $COHR. 
+
+As well as captive suppliers like $MRVL and how they design their architectures. 
+
+But if you look at the MC difference (~$300m with $SIVE, $55B with $LITE). 
+
+Anyone can see how clear how valuable the $330M incoming disruptor in $SIVE is to the photonics space. 
+
+And especially with the $4B foundry in Win Semi that captures fabless laser production from $SIVE, $AVGO, $MTSI and other players at scale.
+
+It’s highly asymmetrical to long both the supply chain as exposure to where photonics and hyperscalers architecture are heading.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2037442444367974907" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>没有Win，你就无法拼写Winner。
+
+正因为如此：我看好 $SIVE 供应链。 
+
+$SIVE -&gt; WIN (TPE:3105) -&gt; Ayar SuperNova -&gt; $JBL -&gt; Hyperscalers，作为一个流程。 
+
+如果您与 $LITE 和其他也在相同 CPO CW WDM 空间中的产品进行比较。 
+
+这是有原因的：
+
+-&gt; $POET / $MRVL 天体。
+-&gt; Ayar / $JBL 和昂纳使用 $SIVE。
+
+它被设计为超大规模的下一代光子学架构的光源。 
+
+估值约为 3 亿美元。 
+
+我确实认为 WDM DFB 阵列是用于扩展的卓越架构。并且开发起来非常困难。 
+
+这不是一个零和架构游戏，并且可能会因您如何使用 $LITE 和 $COHR 等单个发射器处理横向扩展而分裂。 
+
+以及像 $MRVL 这样的专属供应商以及他们如何设计架构。 
+
+但如果你看看 MC 的差异（$SIVE 约 3 亿美元，$LITE 约 55B 美元）。 
+
+任何人都可以清楚地看到 $SIVE 中价值 3.3 亿美元的颠覆性器件对光子学领域的价值有多大。 
+
+尤其是 Win Semi 的 4B 美元代工厂，它大规模地捕获了 $SIVE、$AVGO、$MTSI 和其他参与者的无晶圆厂激光器生产。
+
+延长供应链与光子学和超大规模架构的发展方向是高度不对称的。</div>
+        <div class="tweet-foot">
+          <span>likes 322 / retweets 52 / replies 30 / views 87177</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="54">
+        <div class="tweet-head">
+          <span class="mono">2026-03-27 12:34</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AVGO</span><span class="chip red">$COHR</span><span class="chip red">$LITE</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">I am long Win Semi (3105.TWO) at $4.1B MC.
+
+I believe markets are sleeping on of the most important foundries in the world (aside from $TSM).
+
+IMO their strategic positioning exceeds far beyond $4B MC. 
+
+They sit in almost every major chokepoints:
+
+-&gt; In the SpaceX Starlink LEO supply chain.
+-&gt; As $AVGO, $LITE, $MTSI, ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I am long Win Semi (3105.TWO) at $4.1B MC.
+
+I believe markets are sleeping on of the most important foundries in the world (aside from $TSM).
+
+IMO their strategic positioning exceeds far beyond $4B MC. 
+
+They sit in almost every major chokepoints:
+
+-&gt; In the SpaceX Starlink LEO supply chain.
+-&gt; As $AVGO, $LITE, $MTSI, $SIVE InP foundries for optical transceivers
+-&gt; then as the body/eyes of humanoids as the GaAs foundry for TOF lasers possibly mapping to Boston Dynamic Atlas
+-&gt; With legacy from MediaTek / Qualcomm / $AAPL from their previous business. 
+
+But Win appears to be bottom of the legacy drag (like with $SOI), with optical as one of their largest growth vectors. 
+
+Then... Win has the largest TAM expansion/revenue acceleration out of almost any foundry: 
+
+With: LEO, humanoids / CW laser, 800g, 1.6t, 3.2t optical transceiver massive ramp up over the next few years. 
+
+Especially with Broadcom as their anchor client ( $AVGO owns ~5% of Win). 
+
+$NVDA doesn&#x27;t care who makes the lasers, whether it&#x27;s $LITE or $COHR. 
+
+They just care if there&#x27;s enough.
+
+There&#x27;s not enough. 
+
+-&gt; Demand for CW lasers will likely go parabolic. (they make the lasers that companies like $SIVE designs)
+
+-&gt; Demand for LEO satellites (SpaceX Starlink) will likely go parabolic.
+
+-&gt; Demand for humanoids will likely go parabolic.
+
+As, Win Semi sits as a semi-monopoly chokepoint in the three most frontier and fastest growing industries for photonics/AI, robotics/humanoids, and space. 
+
+Especially with Optical TAM explosion:
+
+Win fwd earnings for 2027 roughly in ~35x range, I do think this is sandbagging it and forward multiples will end up dirt cheap. 
+
+Win will largely benefit from TAM expansion and accelerated revenue growth.
+
+Of course: Win will win. So I am long Win.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2037387801285841118" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我在 $4.1B MC 处做多 Win Semi (3105.TWO)。
+
+我相信市场正在沉睡于世界上最重要的代工厂（除了 $TSM）。
+
+在我看来，他们的战略定位远远超出了 $4B MC。 
+
+它们几乎位于每个主要的阻塞点：
+
+-&gt; 在 SpaceX Starlink LEO 供应链中。
+-&gt; 作为 $AVGO、$LITE、$MTSI、$SIVE InP 光收发器代工厂
+-&gt; 然后作为类人生物的身体/眼睛作为 TOF 激光器的 GaAs 铸造厂，可能映射到波士顿动态地图集
+-&gt; 拥有 MediaTek / Qualcomm / $AAPL 之前业务的遗产。 
+
+但 Win 似乎处于传统拖累的底部（就像 $SOI 一样），光学是其最大的增长向量之一。 
+
+然后...Win 在几乎所有代工厂中拥有最大的 TAM 扩张/收入加速： 
+
+包括：LEO、类人机器人/CW 激光器、800g、1.6t、3.2t 光学收发器在未来几年内大幅增加。 
+
+尤其是 Broadcom 作为他们的主要客户（$AVGO 拥有 Win 约 5% 的股份）。 
+
+$NVDA 并不关心谁制造了激光器，无论是 $LITE 还是 $COHR。 
+
+他们只关心是否足够。
+
+还不够。 
+
+-&gt; 对连续激光器的需求可能会呈抛物线增长。 （他们制造 $SIVE 等公司设计的激光器）
+
+-&gt; 对 LEO 卫星（SpaceX Starlink）的需求可能会呈抛物线增长。
+
+-&gt; 对人形机器人的需求可能会呈抛物线增长。
+
+因为，Win Semi 是光子/人工智能、机器人/类人机器人和太空这三个最前沿、增长最快的行业的半垄断咽喉要道。 
+
+尤其是光学 TAM 爆炸：
+
+赢得 2027 年的远期收益大约在 35 倍范围内，我确实认为这是在沙袋，远期市盈率最终会非常便宜。 
+
+Win 将在很大程度上受益于 TAM 扩张和收入加速增长。
+
+当然：赢了就赢了。所以我看好Win。</div>
+        <div class="tweet-foot">
+          <span>likes 550 / retweets 63 / replies 32 / views 660556</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="55">
+        <div class="tweet-head">
+          <span class="mono">2026-03-19 02:44</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$LITE</span></span>
+        </div>
+        <div class="tweet-text">You&#x27;re correct in saying downstream players typically have more pricing power. $AAPL for example, makes the most for selling the IPhone than Foxconn that assembles it.
+
+However, in photonics, lasers are the bottleneck currently and are extremely, extremely valuable. 
+
+Especially EML capacity right now, since other play...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">You&#x27;re correct in saying downstream players typically have more pricing power. $AAPL for example, makes the most for selling the IPhone than Foxconn that assembles it.
+
+However, in photonics, lasers are the bottleneck currently and are extremely, extremely valuable. 
+
+Especially EML capacity right now, since other players like Innolight/Eoptolink cannot do that. 
+
+That&#x27;s where most of $LITE&#x27;s premiums come from actually + using their own lasers for captive vertical integration with OCS and 1.6T.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034340113707360487" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>您的说法是正确的，下游企业通常拥有更大的定价权。例如，AAPL 销售 iPhone 的收入高于组装 iPhone 的富士康。
+
+然而，在光子学领域，激光器是目前的瓶颈，并且非常非常有价值。 
+
+尤其是目前的EML容量，因为旭创/新易盛等其他厂商无法做到这一点。 
+
+这就是 $LITE 的大部分溢价实际上来自于 + 使用他们自己的激光器与 OCS 和 1.6T 进行自备垂直集成。</div>
+        <div class="tweet-foot">
+          <span>likes 15 / retweets 0 / replies 2 / views 2470</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="56">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 02:36</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">I like to tell all the people who draw charts that stocks are more about fundamentals and catalysts. 
+
+I&#x27;m still buying into SK Hynix for example even after the 300% 1Y rise at $500B because their operating income (~$156B) is projected to surpass $AAPL ($3.8T) next year.  
+
+Obviously hyperscaler revenues are more persi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I like to tell all the people who draw charts that stocks are more about fundamentals and catalysts. 
+
+I&#x27;m still buying into SK Hynix for example even after the 300% 1Y rise at $500B because their operating income (~$156B) is projected to surpass $AAPL ($3.8T) next year.  
+
+Obviously hyperscaler revenues are more persistent vs. memory (unless it becomes structural). 
+
+But just given the sheer amount of money printing, can just be confident to buy even after a 10% increase the previous day.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026365675133088228" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我想告诉所有画图表的人，股票更多的是基本面和催化剂。 
+
+例如，即使在 1 年上涨 300% 至 $500B 之后，我仍然买入 SK Hynix，因为他们的营业收入 (~$156B) 预计明年将超过 $AAPL ($3.8T)。  
+
+显然，超大规模的收入比内存更持久（除非它变成结构性的）。 
+
+但考虑到印钞量巨大，即使在前一天上涨 10% 后，也可以放心买入。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 7505</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="57">
+        <div class="tweet-head">
+          <span class="mono">2026-02-24 17:24</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">@arstr9876 Yeah it’s forward p/e is like 4 at a $500b mc. sk hynix is projected to do $160B operating income next year, which is more than $AAPL ($3.8T company)</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@arstr9876 Yeah it’s forward p/e is like 4 at a $500b mc. sk hynix is projected to do $160B operating income next year, which is more than $AAPL ($3.8T company)</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026226744701931525" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@arstr9876 是的，在 500 亿美元的 mc 下，其远期市盈率约为 4。 sk hynix预计明年营业收入为$160B，超过$AAPL（$3.8T公司）</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3522</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="58">
+        <div class="tweet-head">
+          <span class="mono">2026-02-24 15:03</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span></span>
+        </div>
+        <div class="tweet-text">The media labeled “Meme Stock” $RPI has held its gains, and is up 46.12% this month. 
+
+Ever stop to wonder if there’s something structural with OpenClaw demand if everyone in Silicon Valley is dressing up in Lobster Costumes? https://t.co/IkR5BXn2dd</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The media labeled “Meme Stock” $RPI has held its gains, and is up 46.12% this month. 
+
+Ever stop to wonder if there’s something structural with OpenClaw demand if everyone in Silicon Valley is dressing up in Lobster Costumes? https://t.co/IkR5BXn2dd</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026191160411382010" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>被媒体贴上“Meme Stock”标签的$RPI守住了涨幅，本月上涨了46.12%。 
+
+有没有想过，如果硅谷的每个人都穿着龙虾服装，OpenClaw 的需求是否存在结构性问题？ https://t.co/IkR5BXn2dd</div>
+        <div class="tweet-foot">
+          <span>likes 174 / retweets 12 / replies 10 / views 70179</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="59">
+        <div class="tweet-head">
+          <span class="mono">2026-02-23 19:33</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">@AntoineLavenant It’s the South Korea index not some random meme stock. 
+
+SK Hynix was a $400B company last week and projected to make more than $AAPL next year. So I think there’s some ways to go. 
+
+More important to look at fundamentals over the chart</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@AntoineLavenant It’s the South Korea index not some random meme stock. 
+
+SK Hynix was a $400B company last week and projected to make more than $AAPL next year. So I think there’s some ways to go. 
+
+More important to look at fundamentals over the chart</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025896767687110958" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@AntoineLavenant 这是韩国指数，而不是一些随机的模因股票。 
+
+SK 海力士上周是一家价值 400B 美元的公司，预计明年的盈利将超过 AAPL。所以我认为还有一些方法可以走。 
+
+更重要的是查看图表的基本面</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3101</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="60">
+        <div class="tweet-head">
+          <span class="mono">2026-02-22 11:36</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">Not really, Gemini is just very confidently wrong. I tried asking it similar questions just now and they were super off. 
+
+Basically reason it&#x27;s a straight line up is because analyst projections (which LLMs haven&#x27;t trained on), projects that Sk Hynix makes more net income than $AAPL next year.  
+
+SK Hynix is still a ~$...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Not really, Gemini is just very confidently wrong. I tried asking it similar questions just now and they were super off. 
+
+Basically reason it&#x27;s a straight line up is because analyst projections (which LLMs haven&#x27;t trained on), projects that Sk Hynix makes more net income than $AAPL next year.  
+
+SK Hynix is still a ~$430B company compared to $3.7T. Then Samsung net income is just astronomical. 
+
+There&#x27;s likely a long way to go for repricing. 
+
+Fundamentals &gt; TA.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025414357434478905" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>并非如此，双子座只是非常自信地错了。我刚才尝试问类似的问题，他们非常满意。 
+
+其呈直线上升的根本原因是分析师预测（法学硕士尚未接受过培训），预计 Sk Hynix 明年的净利润将超过 AAPL。  
+
+SK Hynix 仍然是一家 ~$430B 的公司，而 $3.7T 则为 $3.7T。那么三星的净利润简直就是天文数字。 
+
+重新定价可能还有很长的路要走。 
+
+基础知识 &gt; TA。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4341</span>
+        </div>
+        <div class="chips"><span class="chip blue">反模式清单（他明确反对的）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="61">
+        <div class="tweet-head">
+          <span class="mono">2026-02-22 02:19</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$GME</span><span class="chip red">$RPI</span></span>
+        </div>
+        <div class="tweet-text">The Telegraph put out a new piece today about Raspberry Pi ( $RPI )
+
+While I appreciate being called an &quot;AI Nerd&quot;...
+
+I don&#x27;t understand why they all in common try and frame  Raspberry Pi as a &quot;Meme stock?&quot;
+
+The whole thesis was around TAM expansion from OpenClaw variants as the hardware of choice. 
+
+For financials, it...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The Telegraph put out a new piece today about Raspberry Pi ( $RPI )
+
+While I appreciate being called an &quot;AI Nerd&quot;...
+
+I don&#x27;t understand why they all in common try and frame  Raspberry Pi as a &quot;Meme stock?&quot;
+
+The whole thesis was around TAM expansion from OpenClaw variants as the hardware of choice. 
+
+For financials, it was how revenue numbers could increase beyond projected numbers from &quot;14% growth to a modest 48-55% if hoarding continues.&quot; 
+
+Direct quote from my original thesis: this would be a &quot;tailwind for a reversal&quot; and &quot;revenue should benefit from increased demand&quot;.
+
+This was verbatim. 
+
+I don&#x27;t understand how media outlets like Financial Times can go from that -&gt; into fake commentary that was never said.
+
+For FT: they inserted false commentary about &quot;big shorts that can be frame as opposition&quot; 
+
+For The Telegraph: they inserted false commentary like &quot;fondness for the company itself rather than financial performance or potential&quot;. 
+
+I&#x27;m not sure how large media outlets aren&#x27;t held to higher standards and are able to just make up commentary? 
+
+Once again, $AAPL Mac Mini as AI orchestration hardware hoarding wouldn&#x27;t make a dent on Apple revenue (as it&#x27;s a $3.7T company). 
+
+However, it&#x27;s material to a company like $RPI. 
+
+That&#x27;s the core thesis. 
+
+OpenClaw and AI agents/swarms drives an increase in sales of Raspberry PI (and better yet, as a long term cataylst), which would likely cause revenue projection beats + re-rating. 
+
+Extremely disingenuous framing by multiple outlets, including adding made-up commentary. 
+
+This was a fundamental, highly-specific argument, but multiple media outlets just decided to make up something completely random to paint Raspberry Pi as a Meme Stock.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025274299746251190" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>《每日电讯报》今天发布了一篇有关 Raspberry Pi ($RPI) 的新文章
+
+虽然我很高兴被称为“AI 书呆子”……
+
+我不明白为什么他们都共同尝试将 Raspberry Pi 定义为“Meme stock”？
+
+整个论文围绕 OpenClaw 变体的 TAM 扩展作为所选硬件。 
+
+对于金融业来说，这是收入数字如何能够超出预期数字的方式，“如果囤积行为继续存在，则从 14% 增长到适度的 48-55%”。 
+
+直接引用我原来的论文：这将是“逆转的顺风”和“收入应该受益于需求的增加”。
+
+这是逐字逐句的。 
+
+我不明白像《金融时报》这样的媒体怎么会从那到变成从未说过的虚假评论。
+
+英国《金融时报》：他们插入了关于“可以被视为反对派的大空头”的虚假评论 
+
+对于《电讯报》：他们插入了虚假评论，例如“喜欢公司本身，而不是财务表现或潜力”。 
+
+不知道有多大的媒体不以更高的标准来胡编乱造评论？ 
+
+再说一遍，作为 AI 编排硬件囤积的 AAPL Mac Mini 不会对苹果的收入产生影响（因为它是一家 3.7T 美元的公司）。 
+
+然而，这对于像 $RPI 这样的公司来说很重要。 
+
+这就是核心论点。 
+
+OpenClaw 和 AI 代理/群体推动了 Raspberry PI 销量的增长（更好的是，作为长期催化剂），这可能会导致收入预测超出 + 重新评级。 
+
+多家媒体极其不诚实的框架，包括添加虚构的评论。 
+
+这是一个基本的、高度具体的论点，但多家媒体决定编造一些完全随机的东西，将 Raspberry Pi 描绘成 Meme Stock。</div>
+        <div class="tweet-foot">
+          <span>likes 249 / retweets 12 / replies 31 / views 116858</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="62">
+        <div class="tweet-head">
+          <span class="mono">2026-02-19 16:57</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$GME</span><span class="chip red">$RPI</span></span>
+        </div>
+        <div class="tweet-text">The Financial Times piece on $RPI seems disingenuous.
+
+Especially the framing of &quot;Raspberry Pi&quot; as a Meme stock.   
+
+1. There&#x27;s been 0 mentions about shorts
+
+2. It&#x27;s completely unrelated to $GME&#x27;s short squeeze + hold &quot;meme-stock&quot; narratives. 
+
+This is informed flow from material revenue changes.
+
+Especially when Raspb...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The Financial Times piece on $RPI seems disingenuous.
+
+Especially the framing of &quot;Raspberry Pi&quot; as a Meme stock.   
+
+1. There&#x27;s been 0 mentions about shorts
+
+2. It&#x27;s completely unrelated to $GME&#x27;s short squeeze + hold &quot;meme-stock&quot; narratives. 
+
+This is informed flow from material revenue changes.
+
+Especially when Raspberry Pi is an already profitable company.  
+
+My exact quote verbatim: 
+
+ &quot; 
+- ~$280M- $300M revenue  
+- ~$75M+ Gross Profit  
+- ~25% Gross Margin  
+- Net income: ~$10M - $15M  
+- Net Cash: $28M&quot;
+
+Analysts currently project revenue growth closer to 14–17%.    
+
+But if the demand influx continues, we might see revenue numbers might hit increase from 14% growth to a modest 48-55% if hoarding continues.
+ &quot;  
+
+$AAPL mac minis has been known to be hoarded for OpenClaw deployments. But Apple devices purchases have little material impact on a $3.7T company.  
+
+$RPI is the other leading hardware of choice for OpenClaw agentic orchestration, causing a surge of demand. 
+
+But due to the market cap, a surge in demand increase does have a material impact.   
+
+This is purely fundamental revenue increases and a new addressable market.
+
+Framing it as $GME-type rally around squeezing opposition shorts, when there&#x27;s been 0 mentions of shorts whatsoever is disingenuous.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024408036203516182" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>《金融时报》关于 RPI 的文章似乎不诚实。
+
+尤其是“Raspberry Pi”作为模因股票的框架。   
+
+1. 已有 0 次提及短裤
+
+2. 这与 $GME 的空头挤压 + 持有“meme-stock”叙事完全无关。 
+
+这是来自物质收入变化的知情流。
+
+尤其是当 Raspberry Pi 已经是一家盈利的公司时。  
+
+我的原话原话： 
+
+ ” 
+- 约 2.8 亿美元- 3 亿美元收入  
+- 毛利润约 7500 万美元以上  
+- ~25% 毛利率  
+- 净收入：约 1000 万美元 - 1500 万美元  
+- 净现金：2800 万美元”
+
+分析师目前预计收入增长接近 14-17%。    
+
+但如果需求继续涌入，我们可能会看到收入增长可能会从 14% 增长到适度的 48-55%（如果囤积继续）。
+ ”  
+
+已知 $AAPL mac mini 被囤积用于 OpenClaw 部署。但苹果设备的采购对一家价值 3.7T 的公司影响不大。  
+
+$RPI 是 OpenClaw 代理编排选择的另一个领先硬件，导致需求激增。 
+
+但由于市值的原因，需求的激增确实产生了实质性影响。   
+
+这纯粹是根本性的收入增长和新的潜在市场。
+
+将其描述为围绕挤压反对派空头的 $GME 型反弹，而实际上没有提到空头，这是不诚实的。</div>
+        <div class="tweet-foot">
+          <span>likes 145 / retweets 6 / replies 26 / views 81495</span>
+        </div>
+        <div class="chips"><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">轧空设置（盈利成长股变体）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="63">
+        <div class="tweet-head">
+          <span class="mono">2026-02-18 21:09</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span></span>
+        </div>
+        <div class="tweet-text">It’s cool “The Guardian” cited my thesis on Raspberry Pi.
+
+First Reuters, then Bloomberg, Economic Times, and now The Guardian!
+
+OpenClaw🦞 really went viral and transformed the narrative on Raspberry Pi ( $RPI ) and Minimax (HKG: 0100).
+
+Following the OpenAI acquisition, it looks like agentic AI and local orchestration...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It’s cool “The Guardian” cited my thesis on Raspberry Pi.
+
+First Reuters, then Bloomberg, Economic Times, and now The Guardian!
+
+OpenClaw🦞 really went viral and transformed the narrative on Raspberry Pi ( $RPI ) and Minimax (HKG: 0100).
+
+Following the OpenAI acquisition, it looks like agentic AI and local orchestration hardware is only growing from here.
+
+I’m just commentating on structural shifts people miss in plain sight, as we enter a new frontier in AI applications.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024108923658084577" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>《卫报》引用了我关于 Raspberry Pi 的论文，这很酷。
+
+首先是路透社，然后是彭博社，经济时报，现在是卫报！
+
+OpenClaw🦞 确实像病毒一样传播开来，并改变了 Raspberry Pi ($RPI) 和 Minimax (HKG: 0100) 的叙述方式。
+
+收购 OpenAI 后，代理 AI 和本地编排硬件似乎只会从这里开始增长。
+
+我只是在评论人们在我们进入人工智能应用的新领域时所忽视的结构性转变。</div>
+        <div class="tweet-foot">
+          <span>likes 217 / retweets 8 / replies 24 / views 112764</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="64">
+        <div class="tweet-head">
+          <span class="mono">2026-02-18 08:50</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span><span class="chip red">$S</span><span class="chip red">$TWLO</span></span>
+        </div>
+        <div class="tweet-text">@Baltachi_com I&#x27;d say the two biggest beneficiaries of the OpenClaw trade is actually Minimax (HKG: 0100) and $RPI, which are both up ~60% together.  
+
+The rest like $AAPL are a bit too big (and probably $TWLO ) to make a material impact. 
+
+Will need to take a look into $S.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Baltachi_com I&#x27;d say the two biggest beneficiaries of the OpenClaw trade is actually Minimax (HKG: 0100) and $RPI, which are both up ~60% together.  
+
+The rest like $AAPL are a bit too big (and probably $TWLO ) to make a material impact. 
+
+Will need to take a look into $S.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023923131459723342" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Baltachi_com 我想说 OpenClaw 交易的两个最大受益者实际上是 Minimax (HKG: 0100) 和 $RPI，两者合计上涨约 60%。  
+
+其余的像 $AAPL 有点太大（可能还有 $TWLO ），无法产生实质性影响。 
+
+需要查看 $S。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2261</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="65">
+        <div class="tweet-head">
+          <span class="mono">2026-02-18 08:43</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span></span>
+        </div>
+        <div class="tweet-text">Bloomberg on the Raspberry Pi ( $RPI ) and the OpenClaw / PicoClaw / NanoClaw thesis:
+
+In their interview with Adam Montanaro, a fund manager at Montanaro Asset Management:
+
+&quot;Thematically the evolution of a Raspberry Pi from hobbyist board into a core piece of AI infrastructure is correct&quot; 
+
+Henry Ren from Bloomberg al...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Bloomberg on the Raspberry Pi ( $RPI ) and the OpenClaw / PicoClaw / NanoClaw thesis:
+
+In their interview with Adam Montanaro, a fund manager at Montanaro Asset Management:
+
+&quot;Thematically the evolution of a Raspberry Pi from hobbyist board into a core piece of AI infrastructure is correct&quot; 
+
+Henry Ren from Bloomberg also stated:
+
+&quot;Another positive for Raspberry Pi has been a rash of share purchases by founder and Chief Executive Officer Eben Upton, who has bought stock on five  separate occasions since late January, filings show.&quot;
+
+It&#x27;s great to see institutional validation of Raspberry Pi&#x27;s transition from educational hobbyist boards into core infrastructure for AI hardware orchestration. 
+
+That being said, the rest depends on the company&#x27;s execution to grow into their new TAM with AI agents.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023921191652933900" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Bloomberg 关于 Raspberry Pi ( $RPI ) 和 OpenClaw / PicoClaw / NanoClaw 论文：
+
+在蒙塔纳罗资产管理公司基金经理亚当·蒙塔纳罗的采访中：
+
+“从主题上讲，Raspberry Pi 从业余爱好者板演变为人工智能基础设施的核心部分是正确的” 
+
+彭博社的亨利·任也表示：
+
+文件显示，Raspberry Pi 的另一个积极因素是创始人兼首席执行官 Eben Upton 大量购买股票，自 1 月底以来，他已在不同场合五次购买股票。
+
+很高兴看到 Raspberry Pi 从教育爱好者委员会转变为 AI 硬件编排的核心基础设施的机构验证。 
+
+话虽这么说，剩下的取决于公司的执行力，以成长为具有人工智能代理的新 TAM。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 36063</span>
+        </div>
+        <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="66">
+        <div class="tweet-head">
+          <span class="mono">2026-02-18 07:37</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">Glad my $RPI x OpenClaw 🦞thesis made it to Reuters.
+
+Raspberry Pi’s cheap educational boards had a TAM expansion overnight.
+
+As they’ve become the cheaper standard for AI Agent Orchestration + AI Swarms alongside the $AAPL Mac Mini.
+
+Raspberry Pi has a de facto monopoly in the cheap board space as they were targeting e...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Glad my $RPI x OpenClaw 🦞thesis made it to Reuters.
+
+Raspberry Pi’s cheap educational boards had a TAM expansion overnight.
+
+As they’ve become the cheaper standard for AI Agent Orchestration + AI Swarms alongside the $AAPL Mac Mini.
+
+Raspberry Pi has a de facto monopoly in the cheap board space as they were targeting educational use purposes. 
+
+And almost no company had a need (or incentive) to compete in that space. 
+
+Markets are currently rerating an education company that used to sell 1-2 boards for testing.
+
+Into an AI hardware company that sells mass producible boards for AI Agent Orchestration.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023904689637699910" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>很高兴我的 $RPI x OpenClaw 🦞论文到达了路透社。
+
+Raspberry Pi 的廉价教育板一夜之间完成了 TAM 扩展。
+
+因为它们已经成为 AI Agent Orchestration + AI Swarms 与 AAPL Mac Mini 一起的更便宜的标准。
+
+Raspberry Pi 在廉价主板领域拥有事实上的垄断地位，因为它们的目标是教育用途。 
+
+几乎没有公司有必要（或动机）在该领域竞争。 
+
+市场目前正在重新评估一家曾经销售 1-2 个测试板的教育公司。
+
+进入一家人工智能硬件公司，销售用于人工智能代理编排的大规模生产板。</div>
+        <div class="tweet-foot">
+          <span>likes 253 / retweets 11 / replies 26 / views 112961</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="67">
+        <div class="tweet-head">
+          <span class="mono">2026-02-17 18:09</span>
+          <span><span class="chip red">$AAPL</span></span>
+        </div>
+        <div class="tweet-text">@AlwaysBeThinkin Going back to this post you were the closest by guessing $AAPL!</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@AlwaysBeThinkin Going back to this post you were the closest by guessing $AAPL!</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023701386165362828" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@AlwaysBeThinkin 回到这篇文章，你是最接近猜测 $AAPL 的！</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1923</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="68">
+        <div class="tweet-head">
+          <span class="mono">2026-02-17 17:20</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span></span>
+        </div>
+        <div class="tweet-text">@Cheva28789724 Appreciate it! It&#x27;s only been one day with $RPI but we&#x27;ll see how my thesis regarding Raspberry Pi hoarding for OpenClaw use cases gets priced in. 
+
+My guess is that it should have a material impact on revenue compared to the mac mini shortage with $AAPL.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Cheva28789724 Appreciate it! It&#x27;s only been one day with $RPI but we&#x27;ll see how my thesis regarding Raspberry Pi hoarding for OpenClaw use cases gets priced in. 
+
+My guess is that it should have a material impact on revenue compared to the mac mini shortage with $AAPL.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023689059319902396" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Cheva28789724 欣赏它！ $RPI 才上线一天，但我们将会看到我关于 OpenClaw 用例的 Raspberry Pi 囤积的论文如何定价。 
+
+我的猜测是，与 AAPL 的 mac mini 短缺相比，这应该会对收入产生重大影响。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1493</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=AAPL">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

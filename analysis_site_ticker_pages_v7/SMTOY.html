@@ -1,0 +1,1508 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$SMTOY 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$SMTOY 历史推文</h1>
+      <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>26</b></div>
+        <div class="stat-card"><span>历史推文</span><b>26</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2025-12-26</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-05-23</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 12</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 9</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-05-23 09:52</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">5 months ago. I gave a PT of $150 with $AXTI.
+
+Over 10x that current values from a $500M MC.
+
+It’s now a $9.2B MC and $140. $10 away. 
+
+New $SIVE longs are starting to realize what’s it’s like to be in AXT.
+
+And that I’m pretty good at guessing intrinsic valuations of companies. https://t.co/HXAoKmXmaV</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">5 months ago. I gave a PT of $150 with $AXTI.
+
+Over 10x that current values from a $500M MC.
+
+It’s now a $9.2B MC and $140. $10 away. 
+
+New $SIVE longs are starting to realize what’s it’s like to be in AXT.
+
+And that I’m pretty good at guessing intrinsic valuations of companies. https://t.co/HXAoKmXmaV</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058002991886844357" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>5个月前。我用 $AXTI 支付了 150 美元的 PT。
+
+价值 5 亿美元的 MC 的当前价值超过 10 倍。
+
+现在是 $9.2B MC 和 $140。 10 美元。 
+
+新的 $SIVE 多头开始意识到 AXT 的感觉。
+
+而且我非常擅长猜测公司的内在估值。 https://t.co/HXAoKmXmaV</div>
+        <div class="tweet-foot">
+          <span>likes 1807 / retweets 68 / replies 158 / views 493635</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-05-22 01:47</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">People are really out there saying, don’t doubt me off 10% returns.
+
+I present to you: $AXTI https://t.co/1i5iXfWhz2</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">People are really out there saying, don’t doubt me off 10% returns.
+
+I present to you: $AXTI https://t.co/1i5iXfWhz2</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057518759968190581" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>人们真的在说，不要怀疑我的 10% 回报。
+
+我向您介绍：$AXTI https://t.co/1i5iXfWhz2</div>
+        <div class="tweet-foot">
+          <span>likes 1605 / retweets 68 / replies 127 / views 732762</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-05-18 07:39</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">I literally called out a national vulnerability in the AI supply chain.
+
+Then went long on the quasi-monopoly in $AXTI. 
+
+While everyone was doubting me.
+
+Guess what anon: it’s on the White House shortage list and one of the major talking points of US-China trade talks 6M later. https://t.co/mVX0vJ5EuD</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I literally called out a national vulnerability in the AI supply chain.
+
+Then went long on the quasi-monopoly in $AXTI. 
+
+While everyone was doubting me.
+
+Guess what anon: it’s on the White House shortage list and one of the major talking points of US-China trade talks 6M later. https://t.co/mVX0vJ5EuD</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2056157639760126294" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我确实指出了人工智能供应链中的国家漏洞。
+
+然后做多$AXTI的准垄断。 
+
+当大家都在怀疑我的时候。
+
+猜猜看：它被列入白宫短缺清单，也是 600 万年后美中贸易谈判的主要话题之一。 https://t.co/mVX0vJ5EuD</div>
+        <div class="tweet-foot">
+          <span>likes 1505 / retweets 62 / replies 182 / views 368331</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-05-16 04:07</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">LOL chat no way... Can&#x27;t believe $AXTI / InP substrates really a major part of the China-US Donald Trump&#x27;s trade talks with Xi?
+
+I got this thesis completely right.
+
+But really, Japan should start to cut off upstream machine supply like Ulvac for humanoids. And red phosphorus like Rasa/NCI to China, if they&#x27;re not ship...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">LOL chat no way... Can&#x27;t believe $AXTI / InP substrates really a major part of the China-US Donald Trump&#x27;s trade talks with Xi?
+
+I got this thesis completely right.
+
+But really, Japan should start to cut off upstream machine supply like Ulvac for humanoids. And red phosphorus like Rasa/NCI to China, if they&#x27;re not shipping.  
+
+And US should pressure EU to take back their their photonic monopolies like ficonTEC that Chinese companies like Robotechnik managed to buy.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2055379668195561657" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>哈哈，没办法聊天...不敢相信 $AXTI / InP 基材真的是中美唐纳德·特朗普与习近平贸易谈判的主要部分？
+
+我的这篇论文完全正确。
+
+但实际上，日本应该开始切断 Ulvac 等人形机器人的上游机器供应。还有像 Rasa/NCI 这样的红磷运往中国，如果他们不发货的话。  
+
+美国应该向欧盟施压，要求其收回其光子垄断地位，例如 Robotechnik 等中国公司成功购买的 ficonTEC。</div>
+        <div class="tweet-foot">
+          <span>likes 883 / retweets 57 / replies 47 / views 267939</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-05-09 01:55</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">I’m just going to leave this here with $AXTI.
+
+100% of the comments were negative when I posted at ~$13. 
+
+And I got banned later after it went up 10 times. https://t.co/6FrSXod6s8</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I’m just going to leave this here with $AXTI.
+
+100% of the comments were negative when I posted at ~$13. 
+
+And I got banned later after it went up 10 times. https://t.co/6FrSXod6s8</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052809650127708563" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我将把它留给$AXTI。
+
+当我以大约 13 美元的价格发帖时，100% 的评论都是负面的。 
+
+后来我涨了10倍之后就被封了。 https://t.co/6FrSXod6s8</div>
+        <div class="tweet-foot">
+          <span>likes 1654 / retweets 55 / replies 189 / views 388186</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-05-07 03:18</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">And... $AXTI is now over $100, even on a -10% drop. 
+
+Cool to see this thesis play out so well. 
+
+I think it&#x27;s my proudest one... calling both the 2026 photonics supercycle as well as the most upstream bottleneck. https://t.co/eiYElTtWsE</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">And... $AXTI is now over $100, even on a -10% drop. 
+
+Cool to see this thesis play out so well. 
+
+I think it&#x27;s my proudest one... calling both the 2026 photonics supercycle as well as the most upstream bottleneck. https://t.co/eiYElTtWsE</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052105838396084622" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>而且...$AXTI 现在已经超过 100 美元，即使下跌了 -10%。 
+
+很高兴看到这篇论文表现得这么好。 
+
+我认为这是我最自豪的一个……既称为 2026 年光子学超级周期，又称为最上游的瓶颈。 https://t.co/eiYElTtWsE</div>
+        <div class="tweet-foot">
+          <span>likes 1051 / retweets 44 / replies 84 / views 214726</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-05-04 23:25</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">Still think $AXTI was my most legendary thesis.
+
+Don’t think this will get beat by anything, now that it’s near ~$5.3B MC. https://t.co/eM3UCYsQAR</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Still think $AXTI was my most legendary thesis.
+
+Don’t think this will get beat by anything, now that it’s near ~$5.3B MC. https://t.co/eM3UCYsQAR</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051322315649290619" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>仍然认为 $AXTI 是我最具传奇色彩的论文。
+
+现在它已经接近 ~$5.3B MC，不要认为这会被任何东西击败。 https://t.co/eM3UCYsQAR</div>
+        <div class="tweet-foot">
+          <span>likes 2023 / retweets 75 / replies 160 / views 424606</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-03-23 22:35</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">Everyone thought I was crazy when I gave $AXTI a $150 PT from $12-15.
+
+All the doubters suddenly disappeared?
+
+Reason my YTD is over 600%+ is because I identify the biggest chokepoints in hyperscaler supply chains before anyone else.
+
+Then go long. https://t.co/lgmu8p7F5a</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Everyone thought I was crazy when I gave $AXTI a $150 PT from $12-15.
+
+All the doubters suddenly disappeared?
+
+Reason my YTD is over 600%+ is because I identify the biggest chokepoints in hyperscaler supply chains before anyone else.
+
+Then go long. https://t.co/lgmu8p7F5a</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036089423990042630" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>当我给 $AXTI 12-15 美元的 150 美元 PT 时，每个人都认为我疯了。
+
+所有的质疑者突然消失了？
+
+我的年初至今超过 600%+ 的原因是我比其他人先发现了超大规模供应链中最大的瓶颈。
+
+然后走长。 https://t.co/lgmu8p7F5a</div>
+        <div class="tweet-foot">
+          <span>likes 1079 / retweets 56 / replies 64 / views 187331</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-03-20 05:26</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">Holy ****, my $AXTI thesis was legendary?
+
+AXT is up another 20% today to ATHs at $58.
+
+Happy I got this right, gains in a short time blew away holding $NVDA over the years. https://t.co/xEJ7DtgFaP</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Holy ****, my $AXTI thesis was legendary?
+
+AXT is up another 20% today to ATHs at $58.
+
+Happy I got this right, gains in a short time blew away holding $NVDA over the years. https://t.co/xEJ7DtgFaP</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034743349337628803" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>天哪，我的 $AXTI 论文很传奇？
+
+今天 AXT 又上涨 20%，至 58 美元。
+
+很高兴我做对了，短时间内的收益就抵消了多年来持有的 NVDA 美元。 https://t.co/xEJ7DtgFaP</div>
+        <div class="tweet-foot">
+          <span>likes 1193 / retweets 57 / replies 97 / views 214422</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-03-16 19:10</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">$AXTI is now above $50+.
+
+I was the first to identify it as the next major bottleneck for the AI buildout with photonics. 
+
+Did you listen anon? https://t.co/pPkFqZXmuC</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AXTI is now above $50+.
+
+I was the first to identify it as the next major bottleneck for the AI buildout with photonics. 
+
+Did you listen anon? https://t.co/pPkFqZXmuC</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033501241758949863" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AXTI 现在超过 50 美元以上。
+
+我是第一个将其确定为光子学人工智能构建的下一个主要瓶颈的人。 
+
+你立刻听了吗？ https://t.co/pPkFqZXmuC</div>
+        <div class="tweet-foot">
+          <span>likes 879 / retweets 50 / replies 51 / views 176148</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-03-13 07:35</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">As expected from my original $AXTI thesis:
+
+InP substrates is a massive bottleneck for photonics. 
+
+And:
+ 
+7N Indium High Purity Indium (non standard) has reached all time highs on SMM, recently. 
+
+$AXTI is very. highly. correlated. 
+
+Tracking derivatives on SMM and other markets is likely the best insight you&#x27;ll get i...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">As expected from my original $AXTI thesis:
+
+InP substrates is a massive bottleneck for photonics. 
+
+And:
+ 
+7N Indium High Purity Indium (non standard) has reached all time highs on SMM, recently. 
+
+$AXTI is very. highly. correlated. 
+
+Tracking derivatives on SMM and other markets is likely the best insight you&#x27;ll get into performance. 
+
+Demand does not seem to be slowing down anytime soon. We haven&#x27;t gotten to the point of NAND-style price hikes yet either.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2032239138980905334" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>正如我最初的 $AXTI 论文所预期的那样：
+
+InP 衬底是光子学的一个巨大瓶颈。 
+
+并且：
+ 
+近期，7N铟高纯铟（非标）在SMM上创下历史新高。 
+
+$AXTI 非常。高度。相关的。 
+
+跟踪 SMM 和其他市场上的衍生品可能是您获得绩效的最佳洞察。 
+
+需求似乎不会很快放缓。我们还没有达到 NAND 式的价格上涨的地步。</div>
+        <div class="tweet-foot">
+          <span>likes 378 / retweets 30 / replies 24 / views 81891</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-03-11 01:04</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">Hope you listened to my $AXTI thesis anon? https://t.co/d5eg0BIhlG</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Hope you listened to my $AXTI thesis anon? https://t.co/d5eg0BIhlG</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031415909336887682" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>希望您能立即听听我的 $AXTI 论文吗？ https://t.co/d5eg0BIhlG</div>
+        <div class="tweet-foot">
+          <span>likes 1015 / retweets 56 / replies 77 / views 164995</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-03-03 05:21</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">Holy ****, this thesis was perhaps the most legendary one on X this year. 
+
+$AXTI is now at $46.7 after Nvidia funneled $4B into photonics players $LITE and $COHR today.
+
+Guess who controls all the materials?
+
+Did you listen anon? https://t.co/7Sm08hOQPA</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Holy ****, this thesis was perhaps the most legendary one on X this year. 
+
+$AXTI is now at $46.7 after Nvidia funneled $4B into photonics players $LITE and $COHR today.
+
+Guess who controls all the materials?
+
+Did you listen anon? https://t.co/7Sm08hOQPA</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028581366510870627" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>天啊，这篇论文可能是今年X上最传奇的一篇了。 
+
+在 Nvidia 今天向光子厂商 $LITE 和 $COHR 注入 4B 美元后，$AXTI 目前价格为 46.7 美元。
+
+猜猜谁控制着所有的材料？
+
+你立刻听了吗？ https://t.co/7Sm08hOQPA</div>
+        <div class="tweet-foot">
+          <span>likes 1620 / retweets 100 / replies 99 / views 262542</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-02-26 04:23</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">$AXTI has now reached the Moon if you listened anon? 
+
+Markets are scrambling to get exposure to photonics supply chains following $GOOGL record capex numbers.
+
+If you ask an AI: “Is AXT or IQE part of Google TPU supply chains”:
+
+- It will say no due to obscured multi-hop connections.
+
+But if you map the flow from:
+
+$A...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AXTI has now reached the Moon if you listened anon? 
+
+Markets are scrambling to get exposure to photonics supply chains following $GOOGL record capex numbers.
+
+If you ask an AI: “Is AXT or IQE part of Google TPU supply chains”:
+
+- It will say no due to obscured multi-hop connections.
+
+But if you map the flow from:
+
+$AXTI ($2.1B) -&gt; $IQE ($150M) -&gt; $LITE -&gt; Hyperscaler ASICs…
+
+You might discover something early that markets haven’t priced in.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026755002514157818" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>如果您不久后听到的话，$AXTI 现在已经到达月球了？ 
+
+在 $GOOGL 资本支出创下纪录之后，市场正争先恐后地涉足光子供应链。
+
+如果你问 AI：“AXT 或 IQE 是 Google TPU 供应链的一部分吗”：
+
+- 由于多跳连接模糊，它会拒绝。
+
+但如果您将流量映射为：
+
+$AXTI ($2.1B) -&gt; $IQE ($150M) -&gt; $LITE -&gt; 超大规模 ASIC...
+
+你可能会提早发现一些市场尚未定价的东西。</div>
+        <div class="tweet-foot">
+          <span>likes 775 / retweets 42 / replies 84 / views 152939</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-02-20 22:45</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">Did you listen anon? - $AXTI https://t.co/Pcuu4M3muO</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Did you listen anon? - $AXTI https://t.co/Pcuu4M3muO</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024858041078911142" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>你立刻听了吗？ - $AXTI https://t.co/Pcuu4M3muO</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 363761</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-02-07 09:30</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">It’s been 6 weeks since I made the initial $AXTI post.
+
+It’s now up another 60%.
+
+Almost nobody talked about this tiny $700M stock on X.
+
+Especially not from angles of InP supply chains with photonics.
+
+And now it’s a $1.4B company on institution and gov radars.
+
+Since then:
+
+- China export control banned precursors to...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It’s been 6 weeks since I made the initial $AXTI post.
+
+It’s now up another 60%.
+
+Almost nobody talked about this tiny $700M stock on X.
+
+Especially not from angles of InP supply chains with photonics.
+
+And now it’s a $1.4B company on institution and gov radars.
+
+Since then:
+
+- China export control banned precursors to their competitors
+
+- 7n InP prices hit all time highs week after week
+
+- They raised $100M from Northland to double their capacity
+
+- $LITE blows out earnings with expectations of optical demand outstripping supply
+
+- Every hyperscaler blew out expectations of capex
+
+- Trump signed executive orders to seize InP supply chains from foreign owned companies in the US.
+
+It’s been 6 weeks. And I expect photonics to ramp up the most over the next two years onwards.
+
+Every stock has volatility (this one moves 20%+ up and down daily) so it’s important to develop conviction by yourself before entering a trade. 
+
+But $AXTI is of my most interesting bottleneck longs starting from a tiny $700M MC.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2019946788233617526" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>距离我首次发布 $AXTI 帖子已经过去 6 周了。
+
+现在又上涨了 60%。
+
+X 上几乎没有人谈论这只价值 7 亿美元的小股票。
+
+尤其是从 InP 光子学供应链的角度来看。
+
+现在它是一家机构和政府雷达上价值 1.4B 美元的公司。
+
+从那时起：
+
+- 中国出口管制禁止其竞争对手的前体
+
+- 7n InP 价格一周又一周创下历史新高
+
+- 他们从 Northland 筹集了 1 亿美元，将产能翻倍
+
+- 由于光学需求超过供应的预期，$LITE 的盈利大幅增长
+
+- 每个超大规模企业的资本支出都超出了预期
+
+- 特朗普签署行政命令，从美国外资企业手中夺取 InP 供应链。
+
+已经六个星期了。我预计光子学将在未来两年内得到最大发展。
+
+每只股票都有波动性（这只股票每天的波动幅度超过 20%），因此在进入交易之前树立自己的信念非常重要。 
+
+但 $AXTI 是我最有趣的瓶颈多头，从 7 亿美元的 MC 开始。</div>
+        <div class="tweet-foot">
+          <span>likes 497 / retweets 26 / replies 42 / views 115451</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-01-07 01:32</span>
+          <span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">@thgstar2 $SMTOY as a stock would likely be fine since it&#x27;s an extremely large Japanese giant and InP substrate production is just a small part of their business. 
+
+But China sent a nuke over to the InP supply chain in Japan with the export control today. https://t.co/Cq2wssDTA3</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@thgstar2 $SMTOY as a stock would likely be fine since it&#x27;s an extremely large Japanese giant and InP substrate production is just a small part of their business. 
+
+But China sent a nuke over to the InP supply chain in Japan with the export control today. https://t.co/Cq2wssDTA3</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2008592416421601528" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@thgstar2 $SMTOY 作为股票可能会很好，因为它是一家非常大的日本巨头，而 InP 衬底生产只是其业务的一小部分。 
+
+但中国今天通过出口管制向日本的 InP 供应链发送了一枚核武器。 https://t.co/Cq2wssDTA3</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 9776</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-01-07 00:52</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">If you’re wondering why $AXTI is up 14%, China probably read this and sent an export control nuke to its only other competitor. 
+
+AXT just became the monopoly of the InP substrates. https://t.co/i8FSYPscfx</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you’re wondering why $AXTI is up 14%, China probably read this and sent an export control nuke to its only other competitor. 
+
+AXT just became the monopoly of the InP substrates. https://t.co/i8FSYPscfx</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2008582578186678307" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>如果您想知道为什么 $AXTI 上涨了 14%，中国可能会读到这篇文章，并向其唯一的另一个竞争对手发送了出口管制核武器。 
+
+AXT刚刚成为InP衬底的垄断者。 https://t.co/i8FSYPscfx</div>
+        <div class="tweet-foot">
+          <span>likes 479 / retweets 32 / replies 31 / views 393051</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2025-12-29 22:58</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$DOWA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">$AXTI CEO - “We are 40% of the Indium Phosphide supply chain”
+
+Has there ever been a company this small ($700M) that controlled a critical bottleneck for a multi-trillion dollar industry? https://t.co/tn7EOMPgas</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AXTI CEO - “We are 40% of the Indium Phosphide supply chain”
+
+Has there ever been a company this small ($700M) that controlled a critical bottleneck for a multi-trillion dollar industry? https://t.co/tn7EOMPgas</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2005654662616387783" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AXTI 首席执行官 - “我们占磷化铟供应链的 40%”
+
+曾经有过一家如此小（7 亿美元）的公司控制了价值数万亿美元的行业的关键瓶颈吗？ https://t.co/tn7EOMPgas</div>
+        <div class="tweet-foot">
+          <span>likes 282 / retweets 23 / replies 16 / views 96792</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2025-12-29 11:44</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$DOWA</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">&quot;Bottleneck within a Bottleneck&quot;: Indium Phosphide
+
+$AXTI | $SMTOY is a duopoly. 
+
+They control 60%+ of the world&#x27;s InP substrates as the bottleneck of the AI buildout. 
+
+What&#x27;s even more alarming? This is dependent on: Indium Phosphide.
+
+InP is a Monopoly. 78% control by $AXTI / China. 
+
+Here&#x27;s the bottleneck within a...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">&quot;Bottleneck within a Bottleneck&quot;: Indium Phosphide
+
+$AXTI | $SMTOY is a duopoly. 
+
+They control 60%+ of the world&#x27;s InP substrates as the bottleneck of the AI buildout. 
+
+What&#x27;s even more alarming? This is dependent on: Indium Phosphide.
+
+InP is a Monopoly. 78% control by $AXTI / China. 
+
+Here&#x27;s the bottleneck within a bottleneck:
+
+The InP substrates is already a duopoly between Japanese and Chinese entities. However, upstream production of laser-grade feedstock required by companies like Sumitomo is dominated by $AXTI (again) and  Chinese companies. 
+
+Here&#x27;s the major issue:
+
+The AI industry is extremely reliant on photonics to scale. Whether,  transceivers are &quot;InP-based&quot; or &quot;Silicon-based&quot; the photon source remains: Indium Phosphide. 
+
+As AI clusters move from 10,000 to 100,000+ GPUs, the &quot;copper bottleneck&quot; is forcing a total shift to optical interconnects. This makes InP more critical to AI scaling than almost any other single material.
+
+On top of that, laser-grade feedstock must be at least 6N (99.9999%) pure. Even trace amounts of impurities (Silicon, Sulfur, Zinc), cannot be used like they do in other segments like LED. And most research probably confuses laser-grade feedstock with regular InP outputs.  
+
+Sumitomo is arguably the most famous name in the InP substrate market. They hold a massive market share in the high-end laser substrate segment. Yet trade data suggest they are increasingly reliant on external feedstock for Indium Phosphide from companies like $DOWA and from China. (They&#x27;re likely still included in feedstock ownership lists bc of captive recycling and reserves)
+
+So if the entire Western AI buildout feels safe regarding a Japanese company as a duopoly, think again. 
+
+The source of the bottleneck is bottlenecked by Chinese suppliers like $AXTI and Chinese companies. 
+
+If we look at production there&#x27;s are estimates from deep research breakdown of estimate controls:
+
+Vital Materials - 35% (Merchant)
+- Vital acquired Fanya Metal Exchange inventory (3,600 tonnes of Indium) in 2020 gave them large control over the global Indium market. They have leveraged this to become the largest producer of InP polycrystal. Dominant cost leader; controls raw Indium supply (Fanya stocks).
+
+$AXTI - 25% (Beijing Tongmei Xtal Technology)
+- Primarily Captive.  Most of their polycrystal production is consumed by their own crystal  growth furnaces to make wafers. However, they also sell raw materials  and compounds to the merchant market, making them a hybrid player.
+
+They&#x27;re the only company in the world that goes from mines, refineries -&gt; InP substrate output, which is an absolutely crazy bottleneck given they own both the raw materials into InP substrate controls. Feeds own wafer production; key non-Japan source.
+
+Zhuzhou Keneng New Material - 18%
+
+- Keneng has achieved &quot;mass production of polycrystalline indium phosphide&quot; and possesses &quot;highly integrated automatic polycrystalline production  capacity&quot;. They are a key recipient of China&#x27;s export quotas for Indium.  Pure-play synthesis specialist; major exporter.
+
+Then Outside:
+
+$DOWA - 12%
+
+- The biggest supplier out of any Western company (yeah Japanese). Deep roots in mining (Akita Zinc), so they&#x27;re the leading  supplier of high-purity metal organics and compounds.
+
+The &quot;source&quot; for Japan Inc. (Sumitomo, JX)
+
+Wafer Technology Ltd - 5%
+- A subsidiary of IQE plc. Critical strategic asset for NATO-aligned supply chains that require non-Chinese feedstock, even though they&#x27;re going through asset liquidations right now. 
+
+InPACT (France) - 3%
+
+- InPACT states they produce polycrystalline ingots via Horizontal Gradient Freeze (HGF) using high-pressure synthesis so they meet requirements from (Nokia, Ericsson) and some European defense sectors.
+
+Rest of World - 2%
+
+This includes major substrate makers (Coherent, Sumitomo), small-scale research production, and emerging players in Korea or Taiwan who are attempting  to break the monopoly.
+
+The reality is that 78% of the global capacity for laser-grade InP feedstock is located in China.
+
+The demand for optical components already exceeds supply/production by multiple factors. This is pre-ramp too. The entire AI buildout is bottlenecked by two companies. 
+
+But 1/4th of the materials comes from: $AXTI. And ~1/3rd of InP Substrate outputs again comes from laser-grade feedstock.
+
+The entire AI buildout is dependent on some random $700m company that serves as both the bottleneck of a bottleneck and the bottleneck. 
+
+It&#x27;s both national security issue to scale up InP production both for substrate and laser-grade feedstock.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2005485130958430440" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>“瓶颈中的瓶颈”：磷化铟
+
+$AXTI | $SMTOY 是双头垄断。 
+
+他们控制着全球 60% 以上的 InP 衬底，这是 AI 建设的瓶颈。 
+
+更令人担忧的是什么呢？这取决于：磷化铟。
+
+InP 是一种垄断。 78%由$AXTI/中国控制。 
+
+这是瓶颈中的瓶颈：
+
+InP 衬底已经是日本和中国企业之间的双寡头垄断。然而，住友等公司所需的激光级原料的上游生产仍由$AXTI 和中国公司主导。 
+
+这是主要问题：
+
+人工智能行业的规模化极其依赖光子学。无论收发器是“InP 基”还是“硅基”，光子源仍然是：磷化铟。 
+
+随着 AI 集群从 10,000 个 GPU 增加到 100,000 多个 GPU，“铜瓶颈”正在迫使其全面转向光学互连。这使得 InP 对于 AI 扩展来说比几乎任何其他单一材料都更加重要。
+
+最重要的是，激光级原料的纯度必须至少为 6N (99.9999%)。即使是微量的杂质（硅、硫、锌），也不能像 LED 等其他领域那样使用。大多数研究可能会将激光级原料与常规 InP 输出混淆。  
+
+Sumitomo 可以说是 InP 衬底市场上最著名的品牌。他们在高端激光基板领域占有巨大的市场份额。然而贸易数据显示，他们越来越依赖来自 $DOWA 等公司和中国的磷化铟外部原料。 （它们可能仍包含在自有回收和储备的原料所有权清单中）
+
+因此，如果整个西方人工智能建设都认为一家日本公司是双头垄断是安全的，那么请再想一想。 
+
+瓶颈的根源在于$AXTI这样的中国供应商和中国企业。 
+
+如果我们看一下生产，就会发现来自估算控制的深入研究细分的估算：
+
+重要材料 - 35%（商人）
+- Vital 于 2020 年收购了 Fanya Metal Exchange 库存（3,600 吨铟），这使他们对全球铟市场拥有巨大控制权。他们利用这一点成为最大的 InP 多晶生产商。成本主导者；控制原料铟供应（泛亚库存）。
+
+$AXTI - 25%（北京同美晶达科技）
+- 主要是俘虏。  他们的大部分多晶产量都被他们自己的晶体生长炉消耗以制造晶圆。然而，他们也向商业市场出售原材料和化合物，这使他们成为一个混合型参与者。
+
+他们是世界上唯一一家从矿山、精炼厂到 InP 衬底输出的公司，这绝对是一个疯狂的瓶颈，因为他们拥有 InP 衬底控制的两种原材料。满足自己的晶圆生产需求；主要非日本来源。
+
+株洲科能新材料 - 18%
+
+- 科能已实现“多晶磷化铟量产”，并拥有“高度集成的自动化多晶生产能力”。他们是中国铟出口配额的主要接受者。  纯粹的合成专家；主要出口国。
+
+然后是外面：
+
+$同和 - 12%
+
+- 西方公司（是的，日本公司）中最大的供应商。深深植根于采矿业（秋田锌），因此他们是高纯度金属有机物和化合物的领先供应商。
+
+日本株式会社（Sumitomo，JX）的“来源”
+
+威发科技有限公司 - 5%
+- IQE plc 的子公司。对于需要非中国原料的北约供应链来说，这是至关重要的战略资产，尽管它们目前正在经历资产清算。 
+
+InPACT（法国）- 3%
+
+- InPACT 表示，他们使用高压合成通过水平梯度冻结 (HGF) 生产多晶锭，因此满足（诺基亚、爱立信）和一些欧洲国防部门的要求。
+
+世界其他地区 - 2%
+
+这包括主要的基板制造商（相干公司、住友）、小规模研究生产以及韩国或台湾试图打破垄断的新兴企业。
+
+现实情况是，全球78%的激光级InP原料产能位于中国。
+
+由于多种因素，光学元件的需求已经超过供应/生产。这也是预斜坡。整个人工智能建设面临两家公司的瓶颈。 
+
+但1/4的材料来自：$AXTI。大约 1/3 的 InP 衬底产量再次来自激光级原料。
+
+整个人工智能的建设依赖于某个随机的价值​​ 7 亿美元的公司，这些公司既是瓶颈中的瓶颈，也是瓶颈。 
+
+扩大 InP 衬底和激光级原料的生产规模都是国家安全问题。</div>
+        <div class="tweet-foot">
+          <span>likes 478 / retweets 50 / replies 14 / views 139028</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2025-12-28 08:13</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">There is a lot risk with $AXTI for sure. That’s why it’s valued like a penny stock at $700m and not $30B+ like $SMTOY despite being both vertically integrated and one of the most important suppliers.
+
+And when you combine with the fact the AI supply chain is extremely reliant on this company for raw materials -&gt; inp su...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">There is a lot risk with $AXTI for sure. That’s why it’s valued like a penny stock at $700m and not $30B+ like $SMTOY despite being both vertically integrated and one of the most important suppliers.
+
+And when you combine with the fact the AI supply chain is extremely reliant on this company for raw materials -&gt; inp substrates they provide for photonics in order to ramp, that’s even a greater risk to the already fragile AI buildout.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2005069537142866204" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AXTI 肯定存在很大的风险。这就是为什么它的估值为 7 亿美元，而不是像 $SMTOY 那样的 30B+ 美元，尽管它既是垂直整合的，也是最重要的供应商之一。
+
+考虑到人工智能供应链极其依赖这家公司的原材料 -&gt; 他们为光子学提供的 inp 基板以实现增长，这对本已脆弱的人工智能建设来说甚至是更大的风险。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2510</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2025-12-27 23:24</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">The &quot;InP Chokepoint&quot;: The Bottleneck of the AI Buildout explanation:
+
+The future of $NVDA Blackwell, $META MTAI, $GOOGL TPU, and $MSFT Maia ramp is tied to:
+
+A $700M small cap $AXTI and $SMTOY. 
+
+The AI &quot;Growth&quot; story ends in 2026 if there&#x27;s no solution to InP. 
+
+Here&#x27;s why:
+
+The AI industry started its migrating to ph...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The &quot;InP Chokepoint&quot;: The Bottleneck of the AI Buildout explanation:
+
+The future of $NVDA Blackwell, $META MTAI, $GOOGL TPU, and $MSFT Maia ramp is tied to:
+
+A $700M small cap $AXTI and $SMTOY. 
+
+The AI &quot;Growth&quot; story ends in 2026 if there&#x27;s no solution to InP. 
+
+Here&#x27;s why:
+
+The AI industry started its migrating to photonics for future ASIC/GPU deployments, because copper is hitting a physical limit. 
+
+However, in doing so, hyperscalers traded the common material for InP (Indium Phosphide), when there&#x27;s only a few factories capable of producing 6-inch InP wafers at the purity levels required for lasers.
+
+Let&#x27;s take for example Google and their TPU v7 Ironwood program:
+
+Google uses Optical Circuit Switching (OCS), in simpler terms, switchboards made of light. For every one of those TPUs in the pod to talk, they require InP-based lasers. $LITE, which works with Google on this, largely depends on InP substrate (eg. AXT/Sumitomo) to make them.  
+
+If they don&#x27;t have it Google&#x27;s entire Ironwood program doesn&#x27;t just &quot;slow down&quot;, it hits the wall.
+
+Modern ASICs/GPUs from  $NVDA GB series, $AMZN Trainium, $MSFT Maia, $META MTAI have all made the same bet: Light is the way forward.
+
+Now, here&#x27;s the issue. 
+
+The entire Western AI roadmap is currently tethered to a $700M small-cap and a single Japanese company that produce majority of the world&#x27;s InP substrates required for photonics. 
+
+It&#x27;s currently a duopoly (rough estimates majority supply ~60% between AXT + Sumitomo), with recent estimates of ~70%+ coming from Sumitomo Electric, AXT, Freiberger, JX, and Visual Photonics Epitaxy (filling in the gaps). 
+
+Regardless, the entire future AI supply chain is thinner than a needle:
+
+- Moomoo Research: InP market is in a state of &quot;global scramble&quot; and &quot;serious supply shortage&quot; NVIDIA GB200 rollout (scale-out still requires tons of InP, not NVL72 within-the-rack comm). 
+
+- Demand for high-speed transceivers today probably exceeds the supply by almost a factor of two (LightCounting)
+
+- Seeing record booking, but explicitly &quot;supply-constrained by InP lasers&quot; ( $COHR CEO Q3 ER)
+
+- McKinsey: 40% to 60% shortfall for 800G modules and a 30% to 40% shortfall for 1.6T modules.
+
+And these reports are likely understanding + very conserative given the demand ramp. Even going off Microsoft&#x27;s projections on Maia ramp, ( est. 1M+ Maia by 2027 on UBS $MRVL note), with 2 million+ units of 1.6T transceivers over the next year, this volume is so large it represents a double-digit percentage of global substrate output.
+
+The projected &quot;exponential growth&quot; of AI is about to collide with the reality of critical material production. So, the &quot;Ironwood&quot;, &quot;MTIA&quot; and &quot;Maia&quot; ramps aren&#x27;t just ambitious, they may be impossible under current material constraints. 
+
+Even if $COHR, JX Nippon, Sumitomo, $AXTI, and others, ramp up at maximum capacity (eg. $COHR / JX -&gt; 6-inch InP wafers for 4x capacity), they still might not be able to meet the increasing demand from hyperscalers. Especailly with demand spikes occurring, eg. just for $NVDA alone (GB200/GB300 revisions). 
+
+There are technical solutions like silicon photonics is one solution to bridge the gap, but this still largely requires an external InP laser as the light source. TFLN or quantum dot lasers are many many years away. 
+
+There&#x27;s probably no escaping the InP requirements for the next few years. 
+
+So, the mismatch between chip design and material availability has created a strategic chokepoint, where if you go to the very bottom of the supply chain, very few companies control a majority of allocations, pricing, and supply. This is especially dangerous when compounded with geopolitical risks on US/China relations + export controls. 
+
+That being said, here&#x27;s what&#x27;s probably what&#x27;s going to happen:
+
+- Price Spikes: Prices from $AXTI, JX, Sumitomo will spike significantly -&gt; $LITE, $COHR, Innolight (also increases prices from pass down)
+
+- Hyperscalers will directly stockpile materials, bypassing traditional component procurement and buying InP substrate inventory from $AXTI, JX Nippon, Sumitomo, and directly to consign to transceiver manufacturers like $LITE.  
+
+(eg. Meta would bypass transceiver companies and go directly to AXT or Sumitomo)
+
+- Hyperscalers will buy out production allocation ( like $NVDA that has already aggressively &quot;locked in&quot; EML capacity (manufactured on InP substrates). 
+
+Buying a substrate manufacturer or production allocation would become a necessity to so others like $NVDA or $GOOGL doesn&#x27;t starve them out.
+
+As TPU v7 and and as other hyperscalers ramp up in 2026-2027, we will likely enter a &quot;hunger games&quot; phase for substrates where only each hyperscaler will be cannibalizing each other&#x27;s growth for resource allocation. 
+
+Companies like $NVDA (with record amounts of pre-allocation), might ramp be okay for the time being, but others programs would likely face major delays. 
+
+Thoughts:
+
+1. Some hyperscalers might be fine ( $NVDA). Others like $GOOGL and $MSFT will need to buy out materials + allocation before others do. 
+
+2. Industry needs to double down on engineering shifts like copper life extension and more material efficient ways like SiPh.
+
+3. Move to 6-inch wafers for yields (eases things, but still not enough to meet demand)
+
+So the way things are now, the multi-trillion dollar AI scaling are tethered to some obscure $700m company $AXTI and $SMTOY. It seems inevitable that AI will hit the physical ceiling because of InP substrate capacity unless architectures change. 
+
+In 2024, the bottleneck was GPUs. In 2025, it was HBM. In 2026, the primary constraint will likely be the optical interconnect, and specifically, the InP substrates that power them. 
+
+This has now become the hidden bottleneck of the AI buildout.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2004936335702753729" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>“InP 瓶颈”：AI 构建的瓶颈解释：
+
+$NVDA Blackwell、$META MTAI、$GOOGL TPU 和 $MSFT Maia Ramp 的未来与：
+
+价值 7 亿美元的小盘股 $AXTI 和 $SMTOY。 
+
+如果没有 InP 的解决方案，人工智能“增长”的故事将在 2026 年结束。 
+
+原因如下：
+
+由于铜已达到物理极限，人工智能行业开始向光子学迁移以用于未来的 ASIC/GPU 部署。 
+
+然而，在这样做的过程中，超大规模企业将普通材料换成了 InP（磷化铟），而只有少数工厂能够生产达到激光器所需纯度水平的 6 英寸 InP 晶圆。
+
+让我们以 Google 及其 TPU v7 Ironwood 程序为例：
+
+谷歌使用光电路交换（OCS），简单来说，就是用光制成的交换机。为了使吊舱中的每一个 TPU 能够说话，它们都需要基于 InP 的激光器。 $LITE 与 Google 就此合作，很大程度上依赖 InP 衬底（例如 AXT/Sumitomo）来制造它们。  
+
+如果他们没有，谷歌的整个 Ironwood 计划不仅会“放慢速度”，还会碰壁。
+
+$NVDA GB 系列、$AMZN Trainium、$MSFT Maia、$META MTAI 的现代 ASIC/GPU 都做出了相同的赌注：光是前进的方向。
+
+现在，问题来了。 
+
+目前，整个西方人工智能路线图都与一家价值 7 亿美元的小盘股和一家日本公司挂钩，该公司生产世界上大部分光子学所需的 InP 衬底。 
+
+目前是双寡头垄断（粗略估计 AXT + Sumitomo 提供约 60% 的大部分供应），最近估计约 70% 以上来自 Sumitomo Electric、AXT、Freiberger、JX 和 Visual Photonics Epitaxy（填补空白）。 
+
+不管怎样，未来整个AI供应链比针还细：
+
+- Moomoo Research：InP 市场正处于“全球争夺”和“供应严重短缺”的状态 NVIDIA GB200 推出（横向扩展仍然需要大量 InP，而不是 NVL72 机架内通信）。 
+
+- 如今对高速收发器的需求可能超过供应量几乎两倍 (LightCounting)
+
+- 看到预订记录，但明确“供应受到 InP 激光器的限制”（$COHR CEO Q3 ER）
+
+- 麦肯锡：800G模块缺口40%至60%，1.6T模块缺口30%至40%。
+
+考虑到需求的增长，这些报告可能是理解+非常保守的。即使不考虑微软对 Maia 产量的预测（瑞银 $MRVL 票据上预计到 2027 年 Maia 数量将超过 100 万台），明年 1.6T 收发器的产量将超过 200 万台，这一产量仍然如此之大，占全球基板产量的两位数百分比。
+
+预计人工智能的“指数增长”即将与关键材料生产的现实发生冲突。因此，“Ironwood”、“MTIA”和“Maia”坡道不仅雄心勃勃，而且在当前的材料限制下它们可能是不可能的。 
+
+即使 $COHR、JX Nippon、Sumitomo、$AXTI 等公司以最大产能提升（例如 $COHR / JX -&gt; 6 英寸 InP 晶圆达到 4 倍产能），它们仍然可能无法满足超大规模企业不断增长的需求。特别是在需求激增的情况下，例如。仅适用于 $NVDA（GB200/GB300 修订版）。 
+
+有一些技术解决方案，例如硅光子学是弥补这一差距的一种解决方案，但这仍然在很大程度上需要外部 InP 激光器作为光源。 TFLN 或量子点激光器还需要很多年的时间。 
+
+未来几年可能无法逃避 InP 要求。 
+
+因此，芯片设计和材料可用性之间的不匹配造成了一个战略瓶颈，如果你深入到供应链的最底层，很少有公司控制着大部分分配、定价和供应。当与中美关系的地缘政治风险和出口管制相结合时，这一点尤其危险。 
+
+话虽这么说，这可能是会发生的事情：
+
+- 价格飙升：$AXTI、JX、Sumitomo 的价格将大幅上涨 -&gt; $LITE、$COHR、Innolight（也会提高传递价格）
+
+- 超大规模企业将直接储存材料，绕过传统的组件采购，从 $AXTI、JX Nippon、Sumitomo 购买 InP 基板库存，并直接委托给 $LITE 等收发器制造商。  
+
+（例如，Meta 将绕过收发器公司并直接前往 AXT 或 Sumitomo）
+
+- 超大规模企业将买断生产分配（例如 $NVDA 已经积极“锁定”EML 产能（在 InP 基板上制造）。 
+
+购买基板制造商或生产分配将成为必要，这样 $NVDA 或 $GOOGL 等其他公司就不会挨饿。
+
+随着 TPU v7 和其他超大规模企业在 2026-2027 年的崛起，我们可能会进入基板的“饥饿游戏”阶段，其中只有每个超大规模企业将蚕食彼此的增长以进行资源分配。 
+
+像 $NVDA（预分配金额创历史新高）这样的公司暂时可能还不错，但其他项目可能会面临重大延误。 
+
+想法：
+
+1. 一些超大规模可能没问题（$NVDA）。 $GOOGL 和 $MSFT 等其他公司将需要先于其他公司购买材料 + 分配。 
+
+2. 行业需要加倍努力进行工程变革，例如延长铜的寿命和提高材料效率的方法（例如 SiPh）。
+
+3.转向6英寸晶圆以提高良率（缓解了一些情况，但仍不足以满足需求）
+
+所以现在的情况是，价值数万亿美元的人工智能扩展与一些默默无闻的价值 7 亿美元的公司 $AXTI 和 $SMTOY 挂钩。由于 InP 衬底容量的原因，除非架构发生改变，人工智能似乎不可避免地会触及物理天花板。 
+
+2024 年，瓶颈是 GPU。 2025年，是HBM。到 2026 年，主要限制可能是光学互连，特别是为其供电的 InP 衬底。 
+
+这现已成为人工智能建设的隐藏瓶颈。</div>
+        <div class="tweet-foot">
+          <span>likes 650 / retweets 64 / replies 26 / views 106315</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2025-12-27 14:28</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">Exactly. You just out why I&#x27;m sounding all the alarm bells to @sama, @sundarpichai, @satyanadella and Western AI leaders about huge InP substrate shortages/bottlenecks limiting future TPU/ASIC deployment involving photonics. 
+
+Demand FAR exceeds supply for InP-based transceivers/lasers by multiple factors (source: Ligh...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Exactly. You just out why I&#x27;m sounding all the alarm bells to @sama, @sundarpichai, @satyanadella and Western AI leaders about huge InP substrate shortages/bottlenecks limiting future TPU/ASIC deployment involving photonics. 
+
+Demand FAR exceeds supply for InP-based transceivers/lasers by multiple factors (source: LightCounting + McKinsey). 
+
+We&#x27;ve only started the AI ramp with the TPU and the InP substrate industry is already bottlenecked -&gt; held at chokepoint by two players: $AXTI, $SMTOY
+
+If trade wars affect $AXTI, there&#x27;s just a complete void of available materials to scale AI clusters. There&#x27;s just incredible importance on these two companies, stock price aside.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2004801510736068809" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>正是如此。你刚刚明白了为什么我要向@sama、@sundarpichai、@satyanadella 和西方人工智能领导者敲响警钟，警告 InP 基板的巨大短缺/瓶颈限制了未来涉及光子学的 TPU/ASIC 部署。 
+
+基于 InP 的收发器/激光器的 FAR 需求因多种因素而超过供应（来源：LightCounting + McKinsey）。 
+
+我们刚刚通过 TPU 开始了 AI 的发展，InP 衬底行业已经遇到瓶颈 -&gt; 被两个参与者所控制：$AXTI、$SMTOY
+
+如果贸易战影响 $AXTI，则完全没有可用材料来扩展 AI 集群。抛开股价不谈，这两家公司的重要性令人难以置信。</div>
+        <div class="tweet-foot">
+          <span>likes 68 / retweets 3 / replies 2 / views 37423</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2025-12-27 09:47</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$LITE</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">That’s what’s so incredibly alarming, that the Western AI buildout might be held at choke point by an obscure $700m company like $AXTI and $SMTOY.
+
+InP substrates were incredibly niche for telecom, but it’s suddenly a national security emergency as it became the material used for the world’s lasers and optional interco...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">That’s what’s so incredibly alarming, that the Western AI buildout might be held at choke point by an obscure $700m company like $AXTI and $SMTOY.
+
+InP substrates were incredibly niche for telecom, but it’s suddenly a national security emergency as it became the material used for the world’s lasers and optional interconnects. 
+
+I’m not quite sure the top level vendors realized this or at least didn’t realize the scale of this issue (eg. Signing agreements with $LITE without going deeper into the material suppliers for Lite), as the supply chain is incredibly becoming choke pointed by two companies. 
+
+Google’s TPU v7 ramp for example placed an unprecedented strain/dependency on the InP supply chain that simply didn&#x27;t exist a few months ago, since they use OCS for their chip pods, which is almost all in on photonics. 
+
+As we’ve hit the upper limits with copper, the AI industry&#x27;s reliance on AXTI is essentially a &quot;single point of failure” on some small cap that supplies the materials for everything.
+
+I’m not looking at revenue numbers here, this dependency is just absurd, the 1.6T networking just breaks.
+
+I’m not sure where companies go from here, I’m sure they’ll try and hoard materials or secure multi-year agreements but either way two companies hold all the cards.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2004730915747217784" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>令人难以置信的是，西方的人工智能建设可能会被 $AXTI 和 $SMTOY 这样一家默默无闻的 7 亿美元公司所阻碍。
+
+InP 基板对于电信来说是极其利基的，但它突然成为国家安全紧急情况，因为它成为世界激光器和可选互连的材料。 
+
+我不太确定顶级供应商是否意识到了这一点，或者至少没有意识到这个问题的严重性（例如，与 $LITE 签署协议，而没有深入了解 Lite 的材料供应商），因为供应链正令人难以置信地成为两家公司的瓶颈。 
+
+例如，谷歌的 TPU v7 升级对 InP 供应链造成了前所未有的压力/依赖，而几个月前这种供应链根本不存在，因为他们的芯片舱使用 OCS，而这几乎全部用于光子学。 
+
+随着铜的使用量达到上限，人工智能行业对 AXTI 的依赖本质上是一些为所有产品提供材料的小盘股的“单点故障”。
+
+我在这里不看收入数字，这种依赖是荒谬的，1.6T 网络就这样崩溃了。
+
+我不确定公司接下来会走向何方，我确信他们会尝试囤积材料或获得多年协议，但无论哪种方式，两家公司都掌握着所有的牌。</div>
+        <div class="tweet-foot">
+          <span>likes 188 / retweets 5 / replies 8 / views 65742</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2025-12-27 02:35</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">It&#x27;s multifaceted. However, InP is EXTREME because $AXTI and $SMTOY control roughly 60%+ of this critical global supply.
+
+The industry&#x27;s shift from copper to photonics has created this structural single point of failure on the entire buildout.
+
+Every optical transceiver/interconnects in hyperscaler data centers from Go...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It&#x27;s multifaceted. However, InP is EXTREME because $AXTI and $SMTOY control roughly 60%+ of this critical global supply.
+
+The industry&#x27;s shift from copper to photonics has created this structural single point of failure on the entire buildout.
+
+Every optical transceiver/interconnects in hyperscaler data centers from Google TPUs, NVIDIA&#x27;s CPO roadmap, AWS/Meta networks requires InP-based components.
+
+This is the definition of a bottleneck.
+
+The future of the entire trillion dollar AI buildout depends on the stability of some random $700m penny stock and a Japanese industrial giant.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2004622136837898647" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>它是多方面的。然而，InP 是极端的，因为 $AXTI 和 $SMTOY 控制着这一关键全球供应量的大约 60% 以上。
+
+该行业从铜到光子的转变在整个扩建中造成了这种结构性单点故障。
+
+来自 Google TPU、NVIDIA 的 CPO 路线图、AWS/Meta 网络的超大规模数据中心中的每个光收发器/互连都需要基于 InP 的组件。
+
+这就是瓶颈的定义。
+
+整个数万亿美元的人工智能建设的未来取决于一些随机的 7 亿美元细价股票和日本工业巨头的稳定性。</div>
+        <div class="tweet-foot">
+          <span>likes 63 / retweets 2 / replies 1 / views 21748</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2025-12-26 23:08</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">Warning: The entire AI industry will likely be bottlenecked by two companies:
+
+1. $AXTI ($700M) 
+2. $SMTOY ($31.7B)
+
+Which both control 60–70%+ of the world&#x27;s InP substrates.
+
+Future $NVDA, $GOOGL TPU v7 pods, $META, $MSFT, $AMZN hyperscaler clusters require InP-based lasers and receivers.
+
+$AVGO, $LITE, $COHR use for ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Warning: The entire AI industry will likely be bottlenecked by two companies:
+
+1. $AXTI ($700M) 
+2. $SMTOY ($31.7B)
+
+Which both control 60–70%+ of the world&#x27;s InP substrates.
+
+Future $NVDA, $GOOGL TPU v7 pods, $META, $MSFT, $AMZN hyperscaler clusters require InP-based lasers and receivers.
+
+$AVGO, $LITE, $COHR use for EMLs for 800G/1.6T transceivers, DFB lasers, and other optical infra.
+
+Without InP substrates, the supply chain falters. 
+
+After looking at TPU BOM to Maia BOM, it looks like future ASICs + GPUs + hyperscaler deployments are heavily reliant on photonics. 
+
+And two vendors could freeze the global InP substrate market covering nearly all of:
+
+- Hyperscaler optics (TPU pods, etc)
+- Optical transceivers (5g, data)
+- LiDAR (robotaxis, drones, military)
+-Optical Modules (interconnect clusters)
+- Silicon photonics laser dies (Nvidia’s future co-packaged optics and Intel/Broadcom SiPh engines use  InP CW laser arrays.)
+
+Since these companies make up majority of the market supply:
+
+-AXTI (est. ~30–35%)
+-Sumitomo (est.~30%)
+- JX Nippon (est. 10-15%)
+
+That’s it. (eg. 2021 industry note from Yole states that &quot;Sumitomo Electric + AXT together had “more than 75%” of the InP substrate market&quot;)
+
+Hyperscalers/AI are moving toward photonics but the entire AI industry is fragile. 
+
+If either $AXTI or $SMTOY stop supplying materials, the entire future AI buidlout gets crippled. It&#x27;s even crazier that a $700m company could become the the center of it all. 
+
+InP substrate will likely one of the biggest bottlenecks alongside HMB as the AI industry shifts to photonics.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2004569946492453003" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>警告：整个人工智能行业可能会受到两家公司的瓶颈：
+
+1.$AXTI（7亿美元） 
+2.$SMTOY ($31.7B)
+
+两者都控制着全球 60-70% 以上的 InP 衬底。
+
+未来的 $NVDA、$GOOGL TPU v7 Pod、$META、$MSFT、$AMZN 超大规模集群需要基于 InP 的激光器和接收器。
+
+$AVGO、$LITE、$COHR 用于 800G/1.6T 收发器、DFB 激光器和其他光学基础设施的 EML。
+
+如果没有 InP 衬底，供应链就会陷入困境。 
+
+在查看了 TPU BOM 到 Maia BOM 后，看来未来的 ASIC + GPU + 超大规模部署将严重依赖光子学。 
+
+两家供应商可能会冻结全球 InP 衬底市场，涵盖几乎所有领域：
+
+- 超大规模光学器件（TPU 吊舱等）
+- 光收发器（5G、数据）
+- LiDAR（机器人出租车、无人机、军事）
+-光学模块（互连集群）
+- 硅光子激光模具（Nvidia 未来的共同封装光学器件和 Intel/Broadcom SiPh 引擎使用 InP CW 激光阵列。）
+
+由于这些公司占据了市场供应的大部分：
+
+-AXTI（估计~30–35%）
+-住友商事（估计~30%）
+- JX Nippon（预计 10-15%）
+
+就是这样。 （例如，Yole 的 2021 年行业报告指出，“Sumitomo Electric + AXT 合计占据 InP 衬底市场“超过 75%”的份额”）
+
+超大规模/人工智能正在向光子学发展，但整个人工智能行业仍然脆弱。 
+
+如果 $AXTI 或 $SMTOY 停止供应材料，整个未来的人工智能建设就会陷入瘫痪。更疯狂的是，一家价值 7 亿美元的公司竟然成为这一切的中心。 
+
+随着人工智能行业转向光子学，InP 衬底可能会成为与 HMB 一样的最大瓶颈之一。</div>
+        <div class="tweet-foot">
+          <span>likes 3909 / retweets 396 / replies 127 / views 5466914</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=SMTOY">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

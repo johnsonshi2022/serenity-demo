@@ -1,0 +1,2747 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$UPWK 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$UPWK 历史推文</h1>
+      <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>42</b></div>
+        <div class="stat-card"><span>历史推文</span><b>42</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2025-07-02</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-03-20</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">关税 / 宏观冲击买点 7</span><span class="chip blue">签约 ARR vs 市值错配 5</span><span class="chip blue">Mag7 客户集中度过滤 4</span><span class="chip blue">Vega / IV 错定价（高阶，慎用） 4</span><span class="chip blue">信念分层、仓位与时点 4</span><span class="chip blue">GAAP 毛利率之战 3</span><span class="chip blue">轧空设置（盈利成长股变体） 3</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-03-20 21:22</span>
+          <span><span class="chip red">$NBIS</span><span class="chip red">$SIVE</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">Thanks! Yeah my $UPWK thesis probably took the longest time to play out on Reddit haha, but I think they&#x27;re usually right directionally over time (I remember being ~8 for 11 or something from my Reddit PT posts, don&#x27;t always get them right).  
+
+People like to cherry pick short term prices (eg. $SIVE drop today or $NBIS...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Thanks! Yeah my $UPWK thesis probably took the longest time to play out on Reddit haha, but I think they&#x27;re usually right directionally over time (I remember being ~8 for 11 or something from my Reddit PT posts, don&#x27;t always get them right).  
+
+People like to cherry pick short term prices (eg. $SIVE drop today or $NBIS drop post convertible note) to say I&#x27;m wrong. But, think most of my thesis posts play out positively over the long run.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034983813009539216" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>谢谢！是的，我的 $UPWK 论文可能花了最长的时间在 Reddit 上发表，哈哈，但我认为随着时间的推移，它们通常在方向上是正确的（我记得大约 11 中的 8 或来自我的 Reddit PT 帖子的东西，并不总是让它们正确）。  
+
+人们喜欢挑选短期价格（例如，今天下跌 SIVE 或可转换票据后下跌 NBIS）来表示我错了。但是，从长远来看，我的大部分论文帖子都会产生积极的影响。</div>
+        <div class="tweet-foot">
+          <span>likes 62 / retweets 1 / replies 3 / views 6832</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-03-03 01:36</span>
+          <span><span class="chip red">$GOOGL</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">Thank you! It really means a lot that my posts are interesting enough to read.
+
+When I first started posting a few months ago, was mainly to my Reddit friends for memes TA drawings like $UPWK and $GOOGL.
+
+But I guess other people found my other breakdowns insightful enough to tune in? It’s pretty humbling to go from 9K...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Thank you! It really means a lot that my posts are interesting enough to read.
+
+When I first started posting a few months ago, was mainly to my Reddit friends for memes TA drawings like $UPWK and $GOOGL.
+
+But I guess other people found my other breakdowns insightful enough to tune in? It’s pretty humbling to go from 9K followers to close to 90K this year!</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028524822570102812" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>谢谢！我的帖子足够有趣，值得一读，这确实意义重大。
+
+几个月前，当我第一次开始发帖时，主要是向我的 Reddit 朋友们提供模因 TA 绘图，例如 $UPWK 和 $GOOGL。
+
+但我想其他人发现我的其他故障足够有洞察力，可以收听？今年从 9000 名粉丝增加到接近 90000 名，真是令人谦卑！</div>
+        <div class="tweet-foot">
+          <span>likes 126 / retweets 0 / replies 5 / views 8770</span>
+        </div>
+        <div class="chips"><span class="chip blue">反模式清单（他明确反对的）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2025-12-02 10:37</span>
+          <span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$PYPL</span><span class="chip red">$SMCI</span><span class="chip red">$UBER</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">So different basket of stocks. How I&#x27;d frame it is:
+
+- $NBIS: high-beta, hyper growth, who knows where it goes. Highest possible upside (700% Y/Y core business, 100%+ Y/Y across 4 subsidiaries like Robotaxi FSD division). 
+
+For example if $UBER Texas robotaxi launch goes well with Avride this month and they expand else...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So different basket of stocks. How I&#x27;d frame it is:
+
+- $NBIS: high-beta, hyper growth, who knows where it goes. Highest possible upside (700% Y/Y core business, 100%+ Y/Y across 4 subsidiaries like Robotaxi FSD division). 
+
+For example if $UBER Texas robotaxi launch goes well with Avride this month and they expand elsewhere, we could see the subsidiary valuation rise a lot.   
+
+- $SMCI: profitable, moderate return from valuation catchup (still ~30-60% return). Growing 60% Y/Y but priced at 11 forward p/e like a no-growth stock eg. $PYPL / distressed asset like $MSTR.
+
+For SMCI it&#x27;s more about looking at the numbers/sector and seeing a misalignment (eg. $UPWK value investing)</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1995683753121939945" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>所以一篮子股票不同。我的框架是这样的：
+
+- $NBIS：高贝塔值，高速增长，谁知道它会走向何方。最大可能的上升空间（核心业务同比增长 700%，Robotaxi FSD 部门等 4 个子公司同比增长 100% 以上）。 
+
+例如，如果本月 UBER 德克萨斯州机器人出租车的推出与 Avride 进展顺利，并且他们在其他地方扩张，我们可能会看到子公司估值大幅上涨。   
+
+- $SMCI：盈利，估值追赶带来适度回报（仍约 30-60% 回报）。同比增长 60%，但远期市盈率定价为 11，就像非增长股票一样。 $PYPL / 不良资产，如 $MSTR。
+
+对于 SMCI 来说，更多的是查看数字/行业并发现偏差（例如 $UPWK 价值投资）</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1307</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2025-11-05 09:44</span>
+          <span><span class="chip red">$CAVA</span><span class="chip red">$CMG</span><span class="chip red">$FLY</span><span class="chip red">$HOOD</span><span class="chip red">$KRUS</span><span class="chip red">$LTC</span><span class="chip red">$SG</span><span class="chip red">$SNAP</span><span class="chip red">$UPWK</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span></span>
+        </div>
+        <div class="tweet-text">Usually only on short term time-frames I&#x27;m wrong but I&#x27;ve always been directionally right for anything higher conviction.
+
+Recently main three were I got wrong were the $LTC ETF catalyst wrong, even after approval it dropped from $113 -&gt; $82.5. Probably one of the weirdest things since it got delayed even despite 95% a...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Usually only on short term time-frames I&#x27;m wrong but I&#x27;ve always been directionally right for anything higher conviction.
+
+Recently main three were I got wrong were the $LTC ETF catalyst wrong, even after approval it dropped from $113 -&gt; $82.5. Probably one of the weirdest things since it got delayed even despite 95% approval odds from gov shutdown then randomly approved during shutdown (and even I didn&#x27;t know about it). Then just tanked on broader market high beta sell offs.
+
+The other was $SG, thought it would rebound from $7.5-$8.3 or so but it&#x27;s $6.3, there&#x27;s a huge bear market on anything consumer. So it got affected by $CMG, $CAVA, $KRUS, etc. selloffs. 
+
+The last was $VIRT, especially now with a p/e of 7 or something ridiculous. They reported earnings and $1.05 vs. $0.97 - $1.04 (beat) and $467.0 million revenue vs. $418.4 million - $449.7 million (beat), but still sold off. (This was more of an asymmetrical hedge) but even with fundamentals, I have no clue why it&#x27;s ~7.5 P/E. People always are like X is a great value investor stock trading at ~15 P/E, this is single digit P/E (but more cyclical on retail trading activity, but $HOOD is reporting record numbers so should be a good proxy). 
+
+Still an extreme enigma to me... I think it&#x27;s undervalued, especially with buybacks and might be another $UPWK.  
+
+Other stuff like nuclear SPACs I bought for fun were half-gambling memes so more understandable if they went down. Usually if I put a thesis behind it then it&#x27;s more accurate. 
+
+Stuff like $SNAP, $FLY, and others I&#x27;ve maintained was a 2026 play, so short term doesn&#x27;t really matter. Things like $WLAC were IPO catalyst plays so high-beta movement during its low float SPAC days doesn&#x27;t really mean much until the event happens.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1985885989219512580" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>通常，我只在短期内犯了错误，但对于任何更高的信念，我的方向总是正确的。
+
+最近我犯的三个主要错误是 $LTC ETF 催化剂错误，即使在批准后它也从 113 美元下跌到 82.5 美元。这可能是最奇怪的事情之一，因为尽管政府关闭的批准几率为 95%，但它还是被推迟了，然后在政府关闭期间随机批准了（甚至我也不知道这一点）。然后就因大盘高贝塔值抛售而遭受重创。
+
+另一个是新加坡元，原以为它会从 7.5 美元至 8.3 美元左右反弹，但实际上是 6.3 美元，任何消费品都存在巨大的熊市。因此它受到了 $CMG、$CAVA、$KRUS 等抛售的影响。 
+
+最后一个是 $VIRT，尤其是现在市盈率为 7 或者有些荒谬。他们公布了盈利和 1.05 美元 vs. 0.97 - 1.04 美元（击败）和 4.67 亿美元营收 vs. 4.184 亿 - 4.497 亿美元（击败），但仍然遭到抛售。 （这更像是一种不对称的对冲）但即使有基本面，我也不知道为什么它的市盈率约为 7.5。人们总是认为 X 是一位伟大的价值投资者，其股票交易价格约为 15 倍市盈率，这是个位数市盈率（但零售交易活动更具周期性，但 $HOOD 正在报告创纪录的数字，因此应该是一个很好的代理）。 
+
+对我来说仍然是一个极端的谜......我认为它被低估了，特别是在回购的情况下，可能是另一个$UPWK。  
+
+其他的东西，比如我为了好玩而买的核SPAC，都是半赌博的模因，所以如果它们失败了就更容易理解了。通常如果我把论文放在后面，那就更准确了。 
+
+像 $SNAP、$FLY 和其他我认为是 2026 年游戏的东西，所以短期并不重要。像 $WLAC 这样的事情是 IPO 的催化剂，因此在 SPAC 流通量较低的日子里，高贝塔系数的走势在事件发生之前并没有多大意义。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 877</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2025-11-02 22:23</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$CRWV</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;ve actually found AI tools like @AskPerplexity, Grok and others to be extremely off when looking at Neoclouds and sectors with new news every day.   
+
+They miss a lot of details, eg. with $NBIS you have utilization information from Whitepapers comparing Nebius to $CRWV and others that aren&#x27;t publicly viewable to AI (...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;ve actually found AI tools like @AskPerplexity, Grok and others to be extremely off when looking at Neoclouds and sectors with new news every day.   
+
+They miss a lot of details, eg. with $NBIS you have utilization information from Whitepapers comparing Nebius to $CRWV and others that aren&#x27;t publicly viewable to AI (which insinuated growing gross margins from GPU utilization).  
+
+When Meta struck a $14B deal with $CRWV and you have earnings report last week from $AMZN, $MSFT, and others you have increased capex spend into AI, and they might miss tailwinds that don&#x27;t mention $NBIS directly with increased changes of more hyperscaler deals.   
+
+Or when there&#x27;s an additional rate cut a few days ago that boosts forward earnings especially with Neoclouds that involve debt. Or when there&#x27;s new information about subsidiaries or portfolio companies like Clickhouse that AI might put 1+1 together with.   
+
+FinX retail does a lot better job with piecing all this information together into forward growth and AI/Neocloud TAM is really hard to model given how speculative and rapidly growing it is.   
+
+That&#x27;s kinda why I go with valuation approaches (in my previous post on how you get to $100B MC for $NBIS), but if you look at $UPWK and more standard businesses. I do valuation modelling differently</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1984989851671007444" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>事实上，我发现 @AskPerplexity、Grok 等人工智能工具在查看 Neoclouds 和每天都有新消息的行业时表现得非常糟糕。   
+
+他们错过了很多细节，例如。通过 $NBIS，您可以从白皮书中获得利用率信息，该白皮书将 Nebius 与 $CRWV 进行比较，以及其他人工智能无法公开查看的信息（这暗示了 GPU 利用率的毛利率不断增长）。  
+
+当 Meta 与 $CRWV 达成 14B 美元的交易时，您上周收到了 $AMZN、$MSFT 和其他公司的收益报告，您增加了人工智能的资本支出，他们可能会错过没有直接提及 $NBIS 的顺风车，因为更多超大规模交易的变化增加。   
+
+或者，当几天前进一步降息以提高预期收益时，尤其是涉及债务的 Neoclouds 时。或者当有关于子公司或投资组合公司（如 Clickhouse）的新信息时，人工智能可能会将其 1+1 结合在一起。   
+
+FinX 零售在将所有这些信息整合到未来增长方面做得更好，而考虑到 AI/Neocloud TAM 的投机性和快速增长，它确实很难建模。   
+
+这就是为什么我采用估值方法（在我之前关于如何以 $NBIS 获得 $100B MC 的文章中），但如果你看看 $UPWK 和更标准的业务。我以不同的方式进行估值建模</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 847</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2025-10-24 20:26</span>
+          <span><span class="chip red">$BULL</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">They didn&#x27;t nail anything. &quot;The present is already priced.&quot; This is literally wrong. 
+
+He&#x27;s correct directionally finding alpha, but wanted to use some Instagram style inspirational quote.
+
+If the present were always correctly priced, nobody would make money exploiting market inefficiencies. 
+
+It was free money arbitra...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">They didn&#x27;t nail anything. &quot;The present is already priced.&quot; This is literally wrong. 
+
+He&#x27;s correct directionally finding alpha, but wanted to use some Instagram style inspirational quote.
+
+If the present were always correctly priced, nobody would make money exploiting market inefficiencies. 
+
+It was free money arbitraging $BULL shares vs. warrants not too long ago due to markets not pricing things in correctly. Or tons of misvalued equities like $UPWK trading way trading under 6.5 P/E with large cash balance sheets and growth.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1981698896826097916" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>他们什么也没钉住。 “礼物已经标价了。”这实际上是错误的。 
+
+他寻找阿尔法的方向是正确的，但他想使用一些 Instagram 风格的励志名言。
+
+如果礼物的定价总是正确的，那么没有人会利用市场效率低下来赚钱。 
+
+不久前，由于市场没有正确定价，美元牛股与认股权证之间的套利是自由资金。或者大量被错误估值的股票，例如 $UPWK，其市盈率低于 6.5，但现金资产负债表庞大且增长。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4011</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2025-10-13 23:51</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BKSY</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWD</span><span class="chip red">$DELL</span><span class="chip red">$DKNG</span><span class="chip red">$ELOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NET</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$QUBT</span><span class="chip red">$RBRK</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">So people keep asking me about $RBRK almost every other post and I know it&#x27;s really popular on X. 
+
+I ended up looking into it so people stop asking (and added some Rubrik to my portfolio at $82). 
+
+TLDR my own research:
+
+- Cybersecurity company (industry trades at extremely high multiples, look at $CRWD or $NET)
+
+- 80...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So people keep asking me about $RBRK almost every other post and I know it&#x27;s really popular on X. 
+
+I ended up looking into it so people stop asking (and added some Rubrik to my portfolio at $82). 
+
+TLDR my own research:
+
+- Cybersecurity company (industry trades at extremely high multiples, look at $CRWD or $NET)
+
+- 80% gross margins (great)
+
+- $1B+ ARR, grew 40-50% Y/Y (great)
+
+(comparison to NET, ~2.2B+ ARR, growing 22% Y/Y, almost 5x the MC)
+
+- OpEx spend: 60-75% of revenue goes to marketing. This is a huge positive. 
+
+OpEx marketing spend is great but it looks really bad short term eg. $HOOD when they give customers 3% to transfer, it hurts short term in earnings reports bc it&#x27;s deceptive and not many people do the breakdown but long term when they cut back on spend, customers are sticky and this helps a lot with profitability. 
+
+FCF was positive, but breakdown of opex expenses was mainly marketing, which is a good thing, unlike Snapchat google cloud opex.
+
+- Diversified client base like Cloudflare (eg. goldman, pepsi, accenture, etc).
+
+Downsides:
+
+- Balance sheet not the best, $1.1B debt or so to fund acquisitions. At least it&#x27;s about acquisitions.
+
+- Don&#x27;t like how their forward revenue numbers slowed down 20-25% compared to something like $NBIS growing like 700% or something more for next year. Obviously unfair comparison, but that&#x27;s why I liked Neoclouds more. 
+
+_
+
+Looks like a good mid term hold with a pretty simple plan -&gt; scale customer base -&gt; scale back marketing + sticky base -&gt; catch up to industry multiples in cybersecurity and hv higher FCF.
+
+Usually these types of growth companies with high gross margins (eg. $HOOD back at $18, growing ~50 y/y) that turn profitable, re-rate the hardest.
+
+$RBRK just gotta spend less on marketing down the road and suddenly they have a lot of fcf with their sticky customer base.
+
+TLDR: Great buy for cybersecurity sector, better opportunities elsewhere.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1977764021815415233" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>因此，人们几乎在所有其他帖子中都不断询问我有关 $RBRK 的问题，我知道它在 X 上非常受欢迎。 
+
+我最终对此进行了调查，以便人们不再询问（并以 82 美元的价格在我的投资组合中添加了一些 Rubrik）。 
+
+TLDR 我自己的研究：
+
+- 网络安全公司（行业交易倍数极高，看看 $CRWD 或 $NET）
+
+- 80% 毛利率（很棒）
+
+- 10 亿美元+ ARR，同比增长 40-50%（很棒）
+
+（与 NET 相比，~2.2B+ ARR，同比增长 22%，几乎是 MC 的 5 倍）
+
+- 运营支出：60-75% 的收入用于营销。这是一个巨大的积极因素。 
+
+运营支出营销支出很大，但短期来看确实很糟糕，例如。当他们向客户提供 3% 的转让费时，这会损害收益报告的短期利益，因为它具有欺骗性，而且没有多少人会进行细分，但从长期来看，当他们削减支出时，客户会具有粘性，这对盈利能力有很大帮助。 
+
+FCF 为正，但运营支出的细分主要是营销，这是一件好事，与 Snapchat 谷歌云运营支出不同。
+
+- 多元化的客户群，如 Cloudflare（例如，高盛、百事可乐、埃森哲等）。
+
+缺点：
+
+- 资产负债表不是最好的，$1.1B 左右的债务为收购提供资金。至少是关于收购的。
+
+- 不喜欢他们的预期收入数字下降了 20-25%，而 $NBIS 等明年将增长 700% 或更多。显然这是不公平的比较，但这就是我更喜欢 Neoclouds 的原因。 
+
+_
+
+看起来是一个很好的中期持有，计划非常简单 -&gt; 扩大客户群 -&gt; 缩减营销+粘性基础 -&gt; 在网络安全和更高的自由现金流方面赶上行业倍数。
+
+通常，这些类型的成长型公司具有高毛利率（例如，$HOOD 回到 18 美元，同比增长约 50 美元）并实现盈利，重新评级是最困难的。
+
+$RBRK 只需要减少在营销上的投入，突然之间，他们就拥有了很多粘性客户群的自由现金流。
+
+TLDR：网络安全领域的绝佳买入，其他地方有更好的机会。</div>
+        <div class="tweet-foot">
+          <span>likes 77 / retweets 2 / replies 14 / views 33534</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2025-10-13 01:36</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BKSY</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$DKNG</span><span class="chip red">$ELOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$QUBT</span><span class="chip red">$RBRK</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">And there’s the de-escalation
+
+Reuters: “Taiwan sees no significant impact on chip sector”
+
+Trump: “Don’t worry about China, it will all be fine… President Xi just had a bad moment.”
+
+Biggest crypto liquidation to date 
+
+Stocks with little impact down 7%
+
+Dip buying opportunity https://t.co/2sUEV7Dg8s</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">And there’s the de-escalation
+
+Reuters: “Taiwan sees no significant impact on chip sector”
+
+Trump: “Don’t worry about China, it will all be fine… President Xi just had a bad moment.”
+
+Biggest crypto liquidation to date 
+
+Stocks with little impact down 7%
+
+Dip buying opportunity https://t.co/2sUEV7Dg8s</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1977428188000309673" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>而且局势正在降级
+
+路透社：“台湾认为芯片行业不会受到重大影响”
+
+特朗普：“别担心中国，一切都会好起来的……习主席刚刚经历了一段糟糕的时刻。”
+
+迄今为止最大的加密货币清算 
+
+影响不大的股票下跌 7%
+
+逢低买入机会 https://t.co/2sUEV7Dg8s</div>
+        <div class="tweet-foot">
+          <span>likes 84 / retweets 4 / replies 11 / views 14504</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2025-10-12 02:32</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BITF</span><span class="chip red">$BKSY</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DELL</span><span class="chip red">$DKNG</span><span class="chip red">$ELOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRAB</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$QUBT</span><span class="chip red">$RBRK</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">Based Friday Market Close (-3.6% SPY day), Thoughts and Explanations
+
+Strong Buy
+$IBIT
+$LTC
+$WLAC
+$NBIS
+$MP
+$TSM
+(For Next Year)
+$ETOR
+$DKNG
+$SNAP
+
+Buy
+$UPWK
+$CRDO
+$ALAB
+$AMZN
+$META
+$UNH
+$SG
+$TGT
+$BULL
+$FLY
+$CIFR
+$WULF
+$IREN
+$GLXY
+$SMCI
+$DELL
+$MRVL
+
+Hold
+$RKLB
+$HOOD
+$RBRK
+$MU
+$HOOD
+$GRAB
+$MARA
+$RIOT
+$NVO
+$RR
+$ELOSE
+$FL...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Based Friday Market Close (-3.6% SPY day), Thoughts and Explanations
+
+Strong Buy
+$IBIT
+$LTC
+$WLAC
+$NBIS
+$MP
+$TSM
+(For Next Year)
+$ETOR
+$DKNG
+$SNAP
+
+Buy
+$UPWK
+$CRDO
+$ALAB
+$AMZN
+$META
+$UNH
+$SG
+$TGT
+$BULL
+$FLY
+$CIFR
+$WULF
+$IREN
+$GLXY
+$SMCI
+$DELL
+$MRVL
+
+Hold
+$RKLB
+$HOOD
+$RBRK
+$MU
+$HOOD
+$GRAB
+$MARA
+$RIOT
+$NVO
+$RR
+$ELOSE
+$FLNC
+$SEI
+$PLTR
+
+Sell
+$CRCL
+$ETH
+$BMNR
+$PL
+$BKSY
+
+Strong Sell
+$RGTI
+$OKLO
+$IONQ
+$QBTS
+$QUBT
+
+_
+
+Explanations:
+
+IBIT - Dumped to $104k, Bitcoin demand has been institutional, tariff fears overblown, and caused one of the biggest liquidation events in history. IMO post-liquidation is the best time to buy crypto. Polymarket still pricing in 55% chance to $130K EOY, but either way Bitcoin is always a good buy long term.
+
+LTC - Down 24% in one day. People on 10X margin were likely frontrunning ETF and got liquidated one exchanges.  Probably the best time I&#x27;ve seen to buy sub $98 because ETF will likely get approved when government shutdown stops.
+
+WLAC - One of the best Neocloud SPAC IPO 1000% opportunities ever at $600m valuation because of their partnership with Fluidstack (the ones that helps WULF + CIFR get backstopped by GOOGL), and both of those are $4-7B. For context they&#x27;re IPOing Q4, so you might need to wait ~2 months.
+
+NBIS - Strongest conviction buy I&#x27;ve had, $400 aggressive PT for next year out of any Neocloud.
+
+MP - National security risk for rare earths (+other rare materials stocks from exploration to Lithium batteries will likely perform well).
+
+TSM - Backbone of all AI Infrastructure
+
+_
+Strong Buy Tax Harvesting Bucket of Stocks
+(Might need to wait for next year)
+
+ETOR - Way too oversold at $38, likely tax harvesting event going on compounding losses.
+
+DKNG - Fundamentally a growth stock. Revenue numbers are insane given market cap but they&#x27;re -15% yearly low. Likely compounded by tax harvesting unaffected by Macro.
+
+SNAP - If you read my thesis, they&#x27;re doing 1.3B quarterly revenue off a 13B marketcap... I&#x27;m convinced they will re-rate next year after lowering opex + increasing revenue from monetizing GCP storage. It&#x27;s just a matter of when the market will price this in, but this is 1Y+ out. Post investors aren&#x27;t patient. Again likely affected by EOY tax harvesting due to performance so far.
+
+_
+
+Buys
+
+UPWK - Down 4.5% from yesterday, amazing fundamentals, ~800m y/y rev off 70%~ or 80~ gross margins thats growing, 200m buybacks, 2.2B market cap. Likely affected by Russell selloff.
+
+CRDO - Data Center Trade, Mag7 uses them.
+
+ALAB - Data Center Trade, Mag7 uses them.
+
+AMZN - It&#x27;s materially affected by 100% Chinese tariffs but they won&#x27;t lose anything, since it gets passed onto the merchant or customers.
+META - Probably less ad revenue by Chinese tariffs (eg. Chinese vendors like Temu, might not buy adspace), buy just based on -6% 1m low + Mag7 laggard with Amazon, I like it more.
+
+UNH - Healthcare not really impacted 100% Chinese Tariff or rare earths.
+
+SG - It&#x27;s down likely due to bad performance + tax harvesting but it&#x27;s almost 1 P/S lol.
+
+TGT - I&#x27;d put it Strong Buy due to dividend catalyst + 5Y low just now, but haven&#x27;t dont enough research on the effect on Chinese tariffs on the stock yet.
+
+BULL - Growing at similar rates asHOOD, their fundamentals aren&#x27;t exactly great for the market cap but you would invest based on retail customer base and the future potential for monetization.
+
+FLY - I did a DD on this earlier but Medium Lift Payload likely to succeed with Northrop in 2027, it takes a TON of patience for a potential 1000% moonshot.
+
+CIFR - Neocloud trade, always bullish. Like Meta X CRWV, more details likely to come soon.
+
+WULF - Neocloud trade bullish.
+
+IREN - Neocloud trade bullish. Their funding round was at some number 70%+ of their stock price if I remember correctly, which is a bullish tell (eg. NBIS and CIFR both hit that after their fundraising round).
+
+GLXY - Part of Neocloud trade.
+
+MRVL - It&#x27;s not really priced in that it&#x27;s growing 56% Y/Y like NVDA.
+
+SMCI - Data center/stargate buildout
+
+DELL -Data center/stargate buildout
+
+_
+
+Sell
+
+CRCL - I will keep repeating this but COIN is better than Circle unless Circle can show they can monetize USDC outside from interest income. Because COIN literally gets 50% revenue sharing and on top of that 100% of the revenue on its platform.
+
+ETH - I will keep repeating this but I will not personally buy above $3000. So even if it dips 16% (you can take the chance of a swing trade, back up to $4k+), there&#x27;s always the chance it keeps cascading down below $3k and I&#x27;ve lost track of how many times this has happened in history.
+
+BMNR - Tied with ETH fundamentally.
+
+PL - Space stocks have gone up a lot, I think with stuff like RGTI and others, fundamentals haven&#x27;t mirrored it&#x27;s marketcap.
+
+BKSY - Space stocks have gone up a lot, I think with stuff like RGTI and others, fundamentals haven&#x27;t mirrored it&#x27;s marketcap.
+
+Strong Sell
+
+RGTI - market cap extremely disconnected from valuation
+
+OKLO - market cap extremely disconnected from valuation
+
+IONQ - market cap disconnected from valuation
+
+QBTS - market cap disconnected from valuation
+-market cap disconnected from valuation
+
+There&#x27;s obviously a macro overhead with China x USA trade wars going on, but none of this was new information (Chinese rare earth export controls have been known for awhile + US has already been tarrifing Chinese goods)
+
+We&#x27;re heading into 2x more rate cuts priced in at 70% and large corrections to cleanse the overvalued froth and liquidate margins (eg. Crypto), will help the market go to higher highs. I will always recommend shares because with good companies, if you wait long enough they will likely outperform (but short term underperform if there&#x27;s random macro risk).
+
+Mid term I&#x27;m the most bullish on Neoclouds for the next year during the rapid AI buildout -&gt; Robotics/Space likely next frontier after that.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1977079938835718513" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>基于周五市场收盘价（-3.6% SPY 日），想法和解释
+
+强力买入
+$IBIT
+$LTC
+$WLAC
+$NBIS
+$MP
+$TSM
+（明年）
+$ETOR
+$DKNG
+$SNAP
+
+购买
+$UPWK
+$CRDO
+$ALAB
+$AMZN
+$元
+$UNH
+$SG
+$TGT
+$牛市
+$飞
+$CIFR
+$WULF
+$IREN
+$GLXY
+$SMCI
+$戴尔
+$MRVL
+
+保持
+$RKLB
+$引擎盖
+$RBRK
+$MU
+$引擎盖
+$GRAB
+$玛拉
+$RIOT
+$NVO
+$RR
+$ELOSE
+$FLNC
+$SEI
+$PLTR
+
+出售
+$CRCL
+$ETH
+$BMNR
+$PL
+$BKSY
+
+强力卖出
+$RGTI
+$OKLO
+$IONQ
+$QBTS
+$QUBT
+
+_
+
+说明：
+
+IBIT - 比特币需求暴跌至 10.4 万美元，已经成为机构性需求，关税担忧被夸大，并引发了历史上最大的清算事件之一。 IMO 清算后是购买加密货币的最佳时机。 Polymarket 的定价仍有 55% 的机会达到 13 万美元 EOY，但无论怎样，从长远来看，比特币始终是一个不错的选择。
+
+LTC - 一日内下跌 24%。持有 10 倍保证金的人很可能在 ETF 上领先，并在一家交易所被清算。  这可能是我见过的购买低于 98 美元的最佳时机，因为当政府关闭停止时 ETF 可能会获得批准。
+
+WLAC - 有史以来最好的 Neocloud SPAC IPO 1000% 机会之一，估值为 6 亿美元，因为他们与 Fluidstack 合作（帮助 WULF + CIFR 得到 GOOGL 的支持），两者都是 $4-7B。就背景而言，他们将于第四季度首次公开募股，因此您可能需要等待约 2 个月。
+
+NBIS - 我买过的最坚定的信念，明年的 PT 价格为 400 美元，是所有 Neocloud 中最好的。
+
+MP - 稀土的国家安全风险（+从勘探到锂电池的其他稀有材料库存可能会表现良好）。
+
+TSM - 所有人工智能基础设施的骨干
+
+_
+强力买入税收收割桶股票
+（可能要等明年）
+
+ETOR - 38 美元过于超卖，可能会发生税收收割事件，导致复合损失。
+
+DKNG - 本质上是一只成长型股票。考虑到市值，收入数字是疯狂的，但仍处于-15%的年度低点。不受宏观影响的税收收割可能会加剧这种情况。
+
+SNAP - 如果你读过我的论文，他们的季度收入为 1.3B，市值为 13B……我相信他们明年将在降低运营支出 + 通过 GCP 存储货币化增加收入后重新评估。这只是市场何时定价的问题，但这是 1 年多的时间。后期投资者没有耐心。由于迄今为止的表现，可能再次受到安永税收征收的影响。
+
+_
+
+购买
+
+UPWK - 比昨天下降 4.5%，基本面令人惊叹，~8 亿年同比增长 70%~ 或 80~ 毛利率正在增长，2 亿次回购，2.2B 市值。可能受到罗素抛售的影响。
+
+CRDO - 数据中心贸易，Mag7 使用它们。
+
+ALAB - 数据中心贸易，Mag7 使用它们。
+
+AMZN - 它受到 100% 中国关税的重大影响，但他们不会损失任何东西，因为它会转嫁给商家或客户。
+META - 中国关税可能会减少广告收入（例如，像 Temu 这样的中国供应商可能不会购买广告空间），仅根据 -6% 100 万低 + Mag7 落后于亚马逊购买，我更喜欢它。
+
+UNH - 医疗保健并未真正影响 100% 中国关税或稀土。
+
+SG - 下降可能是由于表现不佳+税收收割，但几乎是 1 P/S 哈哈。
+
+TGT - 由于股息催化剂+刚刚的5年低点，我将其列为强力买入，但尚未对中国关税对该股的影响进行足够的研究。
+
+牛市 - 以与 HOOD 类似的速度增长，其基本面对于市值而言并不完全理想，但您可以根据零售客户群和未来的货币化潜力进行投资。
+
+FLY - 我之前对此进行了 DD，但诺斯罗普的中型升力有效载荷可能会在 2027 年取得成功，要实现潜在的 1000% 登月计划需要极大的耐心。
+
+CIFR - Neocloud 交易，始终看涨。与 Meta X CRWV 一样，更多细节可能很快就会公布。
+
+WULF - Neocloud 交易看涨。
+
+IREN - Neocloud 贸易看涨。如果我没记错的话，他们的融资回合价格约为股价的 70% 以上，这是一个看涨的信号（例如 NBIS 和 CIFR 在融资回合后都达到了这一水平）。
+
+GLXY - Neocloud 贸易的一部分。
+
+MRVL - 它的价格并没有像 NVDA 那样同比增长 56%。
+
+SMCI - 数据中心/星门扩建
+
+戴尔 - 数据中心/星门扩建
+
+_
+
+出售
+
+CRCL - 我会继续重复这一点，但 COIN 比 Circle 更好，除非 Circle 能够证明他们可以从利息收入中将 USDC 货币化。因为 COIN 实际上获得 50% 的收入分成，此外还获得其平台上 100% 的收入。
+
+ETH - 我会不断重复这一点，但我个人不会购买超过 3000 美元的价格。因此，即使它下跌 16%（你可以抓住机会进行波段交易，回到 4,000 美元以上），它也总是有可能继续跌至 3,000 美元以下，而我已经记不清这种情况在历史上发生过多少次了。
+
+BMNR - 从根本上与 ETH 挂钩。
+
+PL - 太空股票已经上涨了很多，我认为像 RGTI 和其他股票一样，基本面并没有反映出它的市值。
+
+BKSY - 太空股票已经上涨了很多，我认为像 RGTI 和其他股票一样，基本面并没有反映出它的市值。
+
+强力卖出
+
+RGTI——市值与估值极度脱节
+
+OKLO——市值与估值极度脱节
+
+IONQ - 市值与估值脱节
+
+QBTS - 市值与估值脱节
+-市值与估值脱节
+
+中美贸易战的持续显然会带来宏观开销，但这些都不是新信息（中国稀土出口管制已经众所周知+美国已经对中国商品征收关税）
+
+我们将进行两倍的降息，价格为 70%，并进行大规模调整以清除高估的泡沫并清算利润（例如加密货币），这将有助于市场升至更高的高点。我总是会推荐股票，因为对于好的公司来说，如果你等待足够长的时间，它们可能会跑赢大盘（但如果存在随机宏观风险，短期内就会跑输大盘）。
+
+从中期来看，我最看好 Neoclouds 明年的快速 AI 建设 -&gt; 机器人/太空可能是之后的下一个前沿领域。</div>
+        <div class="tweet-foot">
+          <span>likes 755 / retweets 128 / replies 66 / views 182041</span>
+        </div>
+        <div class="chips"><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">机构滞后 / 暗池与资金流</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2025-10-10 03:34</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$NBIS</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">$NBIS is the next Microsoft in the making.
+
+- Scaling from $100M quarterly revenue to $2B-3B+ in 1-2 years off 55-75% gross margin
+
+- Large ownership of next generational companies like Clickhouse (powers Anthropic)
+
+- Infrastructure of Mag7 AI Compute. 
+
+Completely undervalued. https://t.co/dOUiOyKkyd</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$NBIS is the next Microsoft in the making.
+
+- Scaling from $100M quarterly revenue to $2B-3B+ in 1-2 years off 55-75% gross margin
+
+- Large ownership of next generational companies like Clickhouse (powers Anthropic)
+
+- Infrastructure of Mag7 AI Compute. 
+
+Completely undervalued. https://t.co/dOUiOyKkyd</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1976370622633755115" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$NBIS 是正在形成的下一个微软。
+
+- 1-2 年内季度收入从 1 亿美元扩大到 2B-3B+，毛利率为 55-75%
+
+- 拥有大量下一代公司，如 Clickhouse（为 Anthropic 提供动力）
+
+- Mag7 人工智能计算的基础设施。 
+
+完全被低估。 https://t.co/dOUiOyKkyd</div>
+        <div class="tweet-foot">
+          <span>likes 556 / retweets 38 / replies 43 / views 160595</span>
+        </div>
+        <div class="chips"><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">GAAP 毛利率之战</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2025-10-09 06:50</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$DFLI</span><span class="chip red">$DLFI</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$LULU</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$SEI</span><span class="chip red">$SNAP</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span></span>
+        </div>
+        <div class="tweet-text">Okay last post of the night I promise:
+
+$FLY ECLIPSE REUSABLE MEDIUM-LIFT ROCKET LAUNCHES AIMING 2026.
+
+ $4.5B MARKET CAP. MEGA MOAT, backstopped by government + critical for national security. 
+
+I DON&#x27;T NEED TO SAY MORE. 
+
+Love,
+Early $RKLB investor and Rocketlab Megabull. https://t.co/yAQpQGz1B5</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Okay last post of the night I promise:
+
+$FLY ECLIPSE REUSABLE MEDIUM-LIFT ROCKET LAUNCHES AIMING 2026.
+
+ $4.5B MARKET CAP. MEGA MOAT, backstopped by government + critical for national security. 
+
+I DON&#x27;T NEED TO SAY MORE. 
+
+Love,
+Early $RKLB investor and Rocketlab Megabull. https://t.co/yAQpQGz1B5</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1976057641999925300" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>好吧，今晚的最后一篇文章我保证：
+
+$FLY ECLIPSE 可重复使用中型火箭发射，目标是 2026 年。
+
+ $4.5B 市值。巨型护城河，由政府支持+对国家安全至关重要。 
+
+我不需要多说。 
+
+爱，
+早期 $RKLB 投资者和 Rocketlab Megabull。 https://t.co/yAQpQGz1B5</div>
+        <div class="tweet-foot">
+          <span>likes 83 / retweets 7 / replies 9 / views 30272</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2025-10-09 05:12</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$DFLI</span><span class="chip red">$DLFI</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$IREN</span><span class="chip red">$LULU</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$SEI</span><span class="chip red">$SNAP</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span></span>
+        </div>
+        <div class="tweet-text">Wow I cooked insanely hard with this ETF, everything is up a **** ton.
+
+Anyway, some company changes I&#x27;d make + explanations:
+
+$AMD - +10% (rerate)
+$FLY - +3% (new)
+$WLAC - +1% (new)
+$MU - +1% (new)
+$FLNC - .5% (new)
+$SEI - .5% (new)
+$DFLI - - .25% (new)
+
+_
+
+Trim (Tax harvesting)
+
+$ORCL
+$LULU
+$META
+$UPWK
+$ETOR
+$SNAP
+Mi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Wow I cooked insanely hard with this ETF, everything is up a **** ton.
+
+Anyway, some company changes I&#x27;d make + explanations:
+
+$AMD - +10% (rerate)
+$FLY - +3% (new)
+$WLAC - +1% (new)
+$MU - +1% (new)
+$FLNC - .5% (new)
+$SEI - .5% (new)
+$DFLI - - .25% (new)
+
+_
+
+Trim (Tax harvesting)
+
+$ORCL
+$LULU
+$META
+$UPWK
+$ETOR
+$SNAP
+Misc small caps
+
+_
+
+Here&#x27;s an explanation
+
+$AMD - Just got $100B+ in forward revenue lol, they almost doubled their quarterly revenue overnight and hasn&#x27;t even been priced in yet. Extremely strong buy
+
+$FLY - $4.4B valuation doing small-medium lift launches like $RKLB. Reminds me of RocketLab when they first started, risk-reward is good.
+
+$WLAC - Neocloud IPO at $600m valuation (low) for something doing 75%+ EBITDA gross margin + 250% rev from last year + likely backstopped by Mag7
+
+$MU - Memory in demand given the amount of infra required by Stargate + OpenAI
+
+$FLNC + $SEI - Energy Play (high risk high reward)
+
+$DLFI - Battery Play (high risk high reward)
+
+Trim
+
+$ORCL - Having trouble with GPU buildout, just goes to show the moat between hyperscalers and Neoclouds like $NBIS. Higher upside just buying Neoclouds.
+
+$LULU, $META, $UPWK, $ETOR, $SNAP. - Hasn&#x27;t gone up much, we&#x27;re playing as aggressive as possible with winners and will buy back once tax harvesting is done, eg. swap for $AMD, and higher return triple rate cut returns. 
+
+Will buy back near EOY once tax harvesting is done.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1976033094932234314" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>哇，我用这只 ETF 疯狂地炒菜，一切都上涨了很多。
+
+不管怎样，我会做出一些公司的改变+解释：
+
+$AMD - +10%（重新定价）
+$FLY - +3%（新）
+$WLAC - +1%（新）
+$MU - +1%（新）
+$FLNC - 0.5%（新）
+$SEI - 0.5%（新）
+$DFLI - - 0.25%（新）
+
+_
+
+修剪（税收收获）
+
+$ORCL
+$露露
+$元
+$UPWK
+$ETOR
+$SNAP
+其他小型大写字母
+
+_
+
+这是一个解释
+
+$AMD - 刚刚获得了 100B+ 的预期收入，哈哈，他们的季度收入几乎一夜之间翻了一番，而且还没有定价。极力买入
+
+$FLY - $4.4B 估值，推出像 $RKLB 这样的中小型电梯。让我想起RocketLab刚开始的时候，风险回报都不错。
+
+$WLAC - Neocloud IPO 估值为 6 亿美元（低），其 EBITDA 毛利率为 75%+ EBITDA 毛利率为去年的 250% + 可能得到 Mag7 的支持
+
+$MU - 考虑到 Stargate + OpenAI 所需的基础设施数量，内存需求量
+
+$FLNC + $SEI - Energy Play（高风险高回报）
+
+$DLFI - Battery Play（高风险高回报）
+
+修剪
+
+$ORCL - 在 GPU 构建方面遇到麻烦，只是为了展示超大规模和像 $NBIS 这样的 Neocloud 之间的护城河。仅购买 Neoclouds 就有更高的上涨空间。
+
+$LULU、$META、$UPWK、$ETOR、$SNAP。 - 没有上涨太多，我们正在尽可能积极地与赢家打交道，一旦税收收获完成，我们就会回购，例如。兑换 $AMD，以及更高的三倍降息回报。 
+
+一旦税收收获完成，将在接近 EOY 时回购。</div>
+        <div class="tweet-foot">
+          <span>likes 67 / retweets 4 / replies 13 / views 46553</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2025-10-05 04:44</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$EOSE</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$JOBY</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$OPEN</span><span class="chip red">$ORCL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$UPWK</span><span class="chip red">$VIRT</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Saturday Rant because the most popular X accounts are  actively harming retail for engagement and subscriptions. 
+
+The people who sell $10 courses on X just pick anything like $RGTI that went up 4000% off 0 revenue for engagement. 
+
+Then add $JOBY, $OPEN, IONQ, etc. retroactively after a 1000%+ rise and that they&#x27;re a ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Saturday Rant because the most popular X accounts are  actively harming retail for engagement and subscriptions. 
+
+The people who sell $10 courses on X just pick anything like $RGTI that went up 4000% off 0 revenue for engagement. 
+
+Then add $JOBY, $OPEN, IONQ, etc. retroactively after a 1000%+ rise and that they&#x27;re a top stock to own because &quot;Future of X&quot;.
+
+There&#x27;s nothing material and it&#x27;s just harmful information. 
+
+if people follow them blindly and pay $10 for this, your portfolio will get nuked. 
+
+When I do stock lists, I write down transparently:
+
+A light explanation of catalysts or fundamental changes to a stock.
+
+People can disagree, but that&#x27;s what makes discussions productive. People can make their own judgement from new information.
+
+So many of the most popular X accounts are just complete BS from an actual trader&#x27;s perspective. 
+
+It hurts to see newcomers blindly fall for this and end up losing their own money on top of paying for subscriptions too.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1974576290125795760" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>周六咆哮，因为最受欢迎的 X 帐户正在积极损害零售业的参与度和订阅量。 
+
+在 X 上销售 10 美元课程的人只是选择像 $RGTI 这样的东西，因为参与度增加了 0 收入 4000%。 
+
+然后在上涨 1000% 以上之后追溯添加 $JOBY、$OPEN、IONQ 等，并且它们是最值得拥有的股票，因为“X 的未来”。
+
+没有什么实质内容，只是有害信息。 
+
+如果人们盲目跟随他们并为此支付 10 美元，那么你的投资组合将遭到毁灭性打击。 
+
+当我做库存清单时，我会透明地写下：
+
+对股票的催化剂或基本变化的简单解释。
+
+人们可以不同意，但这就是讨论富有成效的原因。人们可以根据新的信息做出自己的判断。
+
+从实际交易者的角度来看，许多最受欢迎的 X 账户完全是胡说八道。 
+
+看到新来者盲目地接受这种做法，最终除了支付订阅费之外还损失了自己的钱，这令人心痛。</div>
+        <div class="tweet-foot">
+          <span>likes 143 / retweets 7 / replies 20 / views 45874</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2025-10-01 03:09</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRM</span><span class="chip red">$ETOR</span><span class="chip red">$GRAB</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MARA</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$PLTR</span><span class="chip red">$PYPL</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$SG</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$UPWK</span><span class="chip red">$VIRT</span></span>
+        </div>
+        <div class="tweet-text">Lot of inspirational trader mindsets going around X lately like:
+ 
+&quot;It will pay off. Be Patient&quot;. All BS. 
+
+Traders consider sector momentum, catalysts, valuation, pullbacks, macro, IV, option flows, etc. 
+
+Here&#x27;s my mindset for short term trading for various stocks: 
+
+1. $NBIS - $111.91, even though it&#x27;s up 1.53% on t...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Lot of inspirational trader mindsets going around X lately like:
+ 
+&quot;It will pay off. Be Patient&quot;. All BS. 
+
+Traders consider sector momentum, catalysts, valuation, pullbacks, macro, IV, option flows, etc. 
+
+Here&#x27;s my mindset for short term trading for various stocks: 
+
+1. $NBIS - $111.91, even though it&#x27;s up 1.53% on the day, CRWV is up 12% off Meta gives them a $14B contract.
+
+So usually it&#x27;s bullish for all neoclouds. It spiked to $117 ( i probably would have still held) but pulled back to $111 likely from too much open interest, but we&#x27;ll likely keep seeing a rally upward. So I&#x27;d use this time to DCA and buy calls/shares even if it&#x27;s up 1.53%
+
+Not &quot;truly a dip&quot; but it&#x27;s more of a dip during a rally. 
+
+2. $HIMS - $56.4 Down 4.67%, usually people just blindly buy the dip but this was actually caused from something material, which was Trump launching a direct to consumer GOV drug website. Short interest decreased back to 33% on the rise to $60. 
+
+This dip will likely be used for short covering. I did buy $46 support but sold shortly on a bounce after I just felt like it would go down more. But I just personally prefer bottom entry points so that&#x27;s probably closer to $50. 
+
+I still remember AMZN launching a competitor, HIMS crashed 20% then rose again, I&#x27;d expect the same with Trump&#x27;s program mid term but near term it&#x27;s a headwind. 
+
+3. $RDDT - $228, down 5.45%, no news. Just probably valuation concerns. We saw similar growth stocks like ALAB, CRED, have random 20% pullbacks. Lot of software/social stocks like SNAP down 8.1% off non-material news. Correction is healthy, stocks don&#x27;t just keep going up, I&#x27;d prefer to wait in the $100+ again, rather than $200+ (just personally), but it&#x27;s actually a better buy than the rest, given RDDT has larger 5-8% pullbacks on random days, just from historical experiences so 6-7% drop is a good buy intra-day and you&#x27;d likely see it recover but we might see a lot of growth stocks have a larger correction into massive rally Nov/Dec so might not be an actual bottom. 
+
+I don&#x27;t really look at chart RSI nowadays, just do this based on feelings from experience looking at the stock + IV every day for the past year or two. 
+
+4. AMZN - No major macro news, prob government shutdown Oct 1st that might cause some panic for index but it&#x27;s pretty immaterial. It dropped, 1.35% so I&#x27;d buy since it&#x27; a good time to cost average. 
+
+5. Klarna - $36, 5.3% drop. Sometimes you just go off gut feeling. Below IPO price, no major news. Most IPOs were down like Gemini, etc. If you wanted to build a long term position I&#x27;d buy at this level. 
+
+6. TSM - $277, I&#x27;ve been guilty of swing trading between $273-$279, so I just buy every drop to $273 and sell at $277-$279 for 2% profit purely with shares. So far I&#x27;ve done this ~2 times with shares. If it drops past $273, I&#x27;d just DCA and then if it drops further switch to calls. 
+
+There&#x27;s no True or False way to do this, everyone kind of has their own approach. (also sorry about CRM, bad earnings got that one wrong, I&#x27;ll probably cost avg if ti declines further). 
+
+But generally this is just what I&#x27;m thinking about when I go down the list of every single stock. Once again, everyone thinks differently, I just wanted to write down how I think if it&#x27;s helpful to others.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1973102864701726752" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>最近 X 周围有很多鼓舞人心的交易者心态，例如：
+ 
+“它会有回报的。要有耐心”。都是废话。 
+
+交易者考虑行业动力、催化剂、估值、回调、宏观、IV、期权流等。 
+
+以下是我对各种股票的短期交易的心态： 
+
+1. $NBIS - $111.91，尽管当天上涨了 1.53%，CRWV 仍比 Meta 给他们的 $14B 合约上涨了 12%。
+
+所以通常对所有新云都是看涨的。它飙升至 117 美元（我可能仍会持有），但可能由于未平仓合约过多而回落至 111 美元，但我们可能会继续看到上涨。所以我会利用这段时间进行 DCA 并购买看涨期权/股票，即使它上涨了 1.53%
+
+不是“真正的下跌”，但更像是反弹期间的下跌。 
+
+2. $HIMS - $56.4 下跌 4.67%，通常人们只是盲目买入，但这实际上是由某种实质性原因造成的，那就是特朗普推出了一个直接面向消费者的 GOV 药品网站。当价格上涨至 60 美元时，空头利息又回落至 33%。 
+
+这次下跌可能会用于空头回补。我确实买入了 46 美元的支撑位，但在我觉得它会进一步下跌后，在反弹后不久就卖出了。但我个人更喜欢底部入场点，因此可能接近 50 美元。 
+
+我还记得 AMZN 推出了一个竞争对手，HIMS 暴跌 20%，然后再次上涨，我预计特朗普的计划中期也会出现同样的情况，但短期来看这是一个逆风。 
+
+3. $RDDT - $228，下跌 5.45%，无消息。可能只是估值问题。我们看到类似的成长型股票，如 ALAB、CRED，有 20% 的随机回调。许多软件/社交股票（例如 SNAP）因非重大新闻而下跌 8.1%。调整是健康的，股票不会只是继续上涨，我宁愿再次等待 100 美元以上，而不是 200 美元以上（仅就个人而言），但它实际上比其他股票更好，因为 RDDT 在随机日期有较大的 5-8％ 回调，仅从历史经验来看，因此 6-7％ 的下跌是一个很好的日内买入，你可能会看到它恢复，但我们可能会看到很多成长型股票在 11 月 / 12 月出现大规模反弹所以可能不是真正的底部。 
+
+我现在不太看 RSI 图表，只是根据过去一两年每天查看股票 + IV 的经验感受来这样做。 
+
+4. AMZN - 没有重大宏观消息，政府可能会在 10 月 1 日关门，这可能会给指数带来一些恐慌，但这并不重要。它下跌了 1.35%，所以我会买入，因为这是平均成本的好时机。 
+
+5. Klarna - 36 美元，下降 5.3%。有时你只是凭直觉行事。低于IPO价格，无重大消息。大多数 IPO 都像 Gemini 一样下跌。如果你想建立长期头寸，我会在这个水平买入。 
+
+6. TSM - $277，我一直在$273-$279之间进行波动交易，所以我只是买入每跌到$273并以$277-$279卖出，纯粹通过股票获得2%的利润。到目前为止，我已经用共享完成了大约 2 次。如果价格跌破 273 美元，我会直接进行 DCA，如果价格进一步下跌，我会转向看涨期权。 
+
+没有正确或错误的方法来做到这一点，每个人都有自己的方法。 （对 CRM 也很抱歉，糟糕的收益导致了这一点错误，如果 ti 进一步下降，我可能会平均花费）。 
+
+但总的来说，这正是我在查看每只股票的名单时所想到的。再说一遍，每个人的想法不同，我只是想写下我的想法，如果对别人有帮助的话。</div>
+        <div class="tweet-foot">
+          <span>likes 92 / retweets 6 / replies 12 / views 58606</span>
+        </div>
+        <div class="chips"><span class="chip blue">轧空设置（盈利成长股变体）</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2025-09-30 05:06</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRM</span><span class="chip red">$ETOR</span><span class="chip red">$GRAB</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MARA</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$PLTR</span><span class="chip red">$PYPL</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$SG</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$UPWK</span><span class="chip red">$VIRT</span></span>
+        </div>
+        <div class="tweet-text">Monday Market Close Thoughts:
+
+Extremely Strong Buy
+$NBIS
+$ETOR
+$LTC
+$VIRT
+
+Buy
+$AMZN
+$SMCI
+$TGT
+$CRM
+$TSM
+$CRDO
+$SG
+$CIFR
+$LULU
+$SLNH
+$ORCL
+$MSTR
+$RIOT
+$MARA
+
+Hold
+$IREN
+$HIMS
+$RKLB
+$PYPL
+$MRVL
+$IBIT
+$UPWK
+$GRAB
+$ALAB
+$ASTS
+$SOFI
+$NVDA
+$NVO
+
+Sell
+$HOOD
+$TSLA
+$RDDT
+$CRCL
+$PLTR
+$BMNR
+
+Strong Sell
+$OKLO
+$QBTS
+$IONQ
+
+_
+
+F...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Monday Market Close Thoughts:
+
+Extremely Strong Buy
+$NBIS
+$ETOR
+$LTC
+$VIRT
+
+Buy
+$AMZN
+$SMCI
+$TGT
+$CRM
+$TSM
+$CRDO
+$SG
+$CIFR
+$LULU
+$SLNH
+$ORCL
+$MSTR
+$RIOT
+$MARA
+
+Hold
+$IREN
+$HIMS
+$RKLB
+$PYPL
+$MRVL
+$IBIT
+$UPWK
+$GRAB
+$ALAB
+$ASTS
+$SOFI
+$NVDA
+$NVO
+
+Sell
+$HOOD
+$TSLA
+$RDDT
+$CRCL
+$PLTR
+$BMNR
+
+Strong Sell
+$OKLO
+$QBTS
+$IONQ
+
+_
+
+Feel free to disagree but these are just my thoughts
+
+Strong Buy Explanations
+
+- Bought ~$70K of Virtu calls, 28% IV and just 6.6 forward p/e is undervalued.
+
+- Always DCA NBIS on the road to $200 on every dip. 
+
+-ETOR is just way too undervalued at $39 imo. I don&#x27;t even know how it hit that. If I remember correctly $700M+ cash pile on a 3.3B market cap, compounding similar rate to IBKR instead of HOOD/BULL but just straight line down below IPO price. 
+
+- LTC ETF approval in 3-4 days with 95% odds. Great buy now unless it gets rejected ofc.
+
+Buy Explanations
+
+- Bought $50k+ Amazon calls today, looks more promising for recovery on the dip to $219+. Benefits from end of year seasonality from Oct - &gt; Jan. Prime Day Oct 8th. Could dip again which is why it&#x27;s good to DCA and not an extremely strong buy. 
+
+- SMCI still projecting 55% forward revenue growth and it&#x27;s kinda undervalued doing 5B+ quarterly revenue lol
+
+- TGT dividend in another month. There&#x27;s some Target event but don&#x27;t really think it matters as much as Amazon prime day.
+
+- CRM just bottoming chart wise, fundamentals not really changed
+
+- TSM better at $273, it&#x27;s always a good buy but not a screaming buy like sub $250
+
+- CRDO/ALAB, both dipped a lot. More of a correction rather than crash, which is why it&#x27;s a decent buy agian.
+
+- SG, idk. I just like their salad and think risk reward at $8 is good considering they were trading $40 not too long ago. 
+
+- CIFR, GOOGL backstopped now just execution. I&#x27;d buy on dips but today was a big rally
+
+-  LULU benefits from Oct -&gt; Jan end of year seasonality with holiday shopping.
+
+- SLNH, apparently waves have been going around X. Pretty small $100m marketcap or so, risk reward seems okay.
+
+- ORCL, they&#x27;re a large shareholder of TikTok US at a discounted 14B valuation and have tons of forward rev from OpenAI/MSFT. It&#x27;s one of those things where it probably dips after earnings like AVGO then pulls off a face ripping rally a month or two later.
+
+- MSTR, Bitcoin does well in Oct. Been shorted so Nav prem is probably around 1.4x-1.5x compared to 2x like during hype waves
+
+-RIOT/MARA pivoted to HPC so I like them more than before
+
+For hold stocks nothing really changed
+
+- Hood, I personally day trade so don&#x27;t be offended if I think it&#x27;s a good sell $130+ on a 12.27% increase day. 
+
+- TSLA, cult stock detached from fundamentals
+
+- RDDT, I had a lot back at $100 wouldn&#x27;t buy at $240 or 45B marketcap now so would probably sell/tri.
+
+- CRCL, just buy Coinbase instead
+
+- PLTR, cult stock detached from fundamentals, large part of their profit is just interest income
+
+- BMNR, just buy ETH if you want but ETH is a strong sell at $4k+
+
+Strong Sell
+
+Anything carrying barely any rev with 10-20B+ marketcap I think is amusing . Props to you if you held OKLO from $8 to $116 though.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1972769926302855553" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>周一市场收盘想法：
+
+极强买入
+$NBIS
+$ETOR
+$LTC
+$VIRT
+
+购买
+$AMZN
+$SMCI
+$TGT
+$CRM
+$TSM
+$CRDO
+$SG
+$CIFR
+$露露
+$SLNH
+$ORCL
+$MSTR
+$RIOT
+$玛拉
+
+保持
+$IREN
+$HIMS
+$RKLB
+$PYPL
+$MRVL
+$IBIT
+$UPWK
+$GRAB
+$ALAB
+$ASTS
+$SOFI
+$NVDA
+$NVO
+
+出售
+$引擎盖
+$特斯拉
+$RDDT
+$CRCL
+$PLTR
+$BMNR
+
+强力卖出
+$OKLO
+$QBTS
+$IONQ
+
+_
+
+随意不同意，但这只是我的想法
+
+强力买入解释
+
+- 购买了约 7 万美元的 Virtu 看涨期权，IV 为 28%，远期市盈率仅为 6.6，被低估。
+
+- 每次下跌时，始终保持 DCA NBIS 走向 200 美元。 
+
+-ETOR 在我看来被低估了，为 39 美元。我什至不知道它是如何击中的。如果我没记错的话，3.3B 市值的现金储备超过 7 亿美元，复合利率与 IBKR 类似，而不是 HOOD/BULL，但只是直线低于 IPO 价格。 
+
+- LTC ETF 在 3-4 天内获得批准，几率为 95%。现在就买吧，除非被拒绝了。
+
+购买说明
+
+- 今天买入了 5 万美元以上的亚马逊看涨期权，看起来更有希望在跌至 219 美元以上时复苏。受益于 10 月 -&gt; 1 月 10 月 8 日黄金日的年末季节性。可能会再次下跌，这就是为什么它对 DCA 有利，但不是一个非常强力的买入。 
+
+- SMCI 仍预计未来收入增长 55%，季度收入达到 5B+ 有点被低估了，哈哈
+
+- TGT 下个月分红。塔吉特有一些活动，但我认为它不如亚马逊黄金日那么重要。
+
+- CRM 刚刚触底，基本面并未真正改变
+
+- TSM 更好，价格为 273 美元，这总是一个不错的选择，但不是像低于 250 美元那样令人尖叫的购买
+
+- CRDO/ALAB，均大幅下跌。更多的是调整而不是崩盘，这就是为什么它是一个不错的买入机会。
+
+- SG，我不知道。我只是喜欢他们的沙拉，并且考虑到不久前他们的交易价格为 40 美元，我认为 8 美元的风险回报很好。 
+
+- CIFR、GOOGL 支持现在只是执行。我会逢低买入，但今天是一次大反弹
+
+- LULU 受益于 10 月 -&gt; 1 月的年底季节性假期购物。
+
+- SLNH，显然波浪一直在 X 左右。市值约为 1 亿美元左右，风险回报似乎还不错。
+
+- ORCL，他们是 TikTok US 的大股东，估值折扣为 14B，并且拥有来自 OpenAI/MSFT 的大量远期收益。这是在 AVGO 等公司盈利一两个月后出现令人震惊的反弹之后，它可能会下跌的原因之一。
+
+- MSTR，比特币在 10 月份表现良好。被做空，因此 Nav prem 可能约为 1.4 倍至 1.5 倍，而炒作浪潮期间为 2 倍
+
+-RIOT/MARA 转向 HPC，所以我比以前更喜欢它们
+
+对于持有股票来说，没有什么真正改变
+
+- Hood，我个人从事日间交易，所以如果我认为在上涨 12.27% 的一天卖出 130 美元以上是不错的选择，请不要生气。 
+
+- TSLA，脱离基本面的热门股票
+
+- RDDT，我在 100 美元时有很多钱，现在不会以 240 美元或 45B 市值购买，所以可能会卖出/三。
+
+- CRCL，只需购买 Coinbase 即可
+
+- PLTR，脱离基本面的邪教股票，其大部分利润只是利息收入
+
+- BMNR，如果你想买 ETH 就可以了，但 ETH 的卖价高达 4000 美元以上
+
+强力卖出
+
+我认为任何几乎没有任何转速且市值为 10-20B+ 的东西都很有趣。如果您持有 OKLO 的价格从 8 美元增至 116 美元，我会向您提供支持。</div>
+        <div class="tweet-foot">
+          <span>likes 762 / retweets 103 / replies 54 / views 334776</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2025-09-30 02:28</span>
+          <span><span class="chip red">$GOOGL</span><span class="chip red">$NVO</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$VIRT</span></span>
+        </div>
+        <div class="tweet-text">@mattscottcap Yeah $UPWK is still great value at $20 but $13 just felt extremely undervalued. 
+
+Feel something similar about $VIRT now, but upside potential is a lot less unless you touch options.
+
+https://t.co/ZzF4IlJXdf</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@mattscottcap Yeah $UPWK is still great value at $20 but $13 just felt extremely undervalued. 
+
+Feel something similar about $VIRT now, but upside potential is a lot less unless you touch options.
+
+https://t.co/ZzF4IlJXdf</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1972730230424174650" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@mattscottcap 是的，20 美元的 UPWK 仍然物有所值，但 13 美元感觉被严重低估了。 
+
+现在对 $VIRT 有类似的感觉，但除非你触及期权，否则上行潜力要小得多。
+
+https://t.co/ZzF4IlJXdf</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1517</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2025-09-28 05:03</span>
+          <span><span class="chip red">$LULU</span><span class="chip red">$NBIS</span><span class="chip red">$NVO</span><span class="chip red">$PYPL</span><span class="chip red">$RKLB</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@DeepIceValue lol I saw NVO and UNH and then looked at your profile and realized it was more so value investing. 
+
+If I had to choose, would be $NBIS or $TSM 1-2 years.
+Then $RKLB for a 3 year timeframe.
+Value investing basket would be: $TGT, $UPWK, $PYPL, $LULU, $UNH, $NVO</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@DeepIceValue lol I saw NVO and UNH and then looked at your profile and realized it was more so value investing. 
+
+If I had to choose, would be $NBIS or $TSM 1-2 years.
+Then $RKLB for a 3 year timeframe.
+Value investing basket would be: $TGT, $UPWK, $PYPL, $LULU, $UNH, $NVO</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1972044369852309938" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@DeepIceValue 哈哈，我看到了 NVO 和 UNH，然后查看了你的个人资料，意识到这更像是价值投资。 
+
+如果我必须选择，我会选择 $NBIS 或 $TSM 1-2 年。
+然后 $RKLB 为期 3 年。
+价值投资篮子为：$TGT、$UPWK、$PYPL、$LULU、$UNH、$NVO</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2412</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2025-09-28 03:11</span>
+          <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$UPWK</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">The NeoCloud Thesis: Hyperscaler Capex Funnel
+
+Why I&#x27;m putting $1.5M+ into Neoclouds, and why this might be a 200-300%+ return.
+
+🔹 Buckets
+
+Mag7 contracts: $CRWV, $NBIS ✅, $WULF, $CIFR ✅
+
+With compute: $IREN ✅, $BITF
+
+Speculative: $WYFI, $GRRR ✅, $SLNH
+
+Miners pivoting to HPC: $RIOT, $MARA, $CLSK, $HUT
+
+Thesis:
+
+Mag7 i...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The NeoCloud Thesis: Hyperscaler Capex Funnel
+
+Why I&#x27;m putting $1.5M+ into Neoclouds, and why this might be a 200-300%+ return.
+
+🔹 Buckets
+
+Mag7 contracts: $CRWV, $NBIS ✅, $WULF, $CIFR ✅
+
+With compute: $IREN ✅, $BITF
+
+Speculative: $WYFI, $GRRR ✅, $SLNH
+
+Miners pivoting to HPC: $RIOT, $MARA, $CLSK, $HUT
+
+Thesis:
+
+Mag7 is AI compute strained, by design from $NVDA.
+
+Trillions of capex that normally flowed through AWS, MSFT Azure, Google Cloud for traditional compute, will now funnel into NeoClouds when they cant handle new AI loads from Anthropic, OpenAI, Gemini, etc.
+
+This is a once-a-decade opportunity, similar to the GPU arms race that made $NVDA a $4T company, on who powers the infra for AWS/Azure/etc for the next 5-10 years.
+
+NBIS (17B from MSFT), CIFR / WULF (3B from GOOGL), CRWV (backstopped by NVDA) are all scaling hundreds of percent (NBIS went from 150M quarterly revenue to likely 1.5B+) with 60-80% gross profit margins.
+
+This revenue growth is almost unheard in history. It&#x27;s mainly because it&#x27;s the wealthiest hyperscalers funneling capex into tiny companies.
+
+NVDA / TSM (2022-&gt;): GPU for hyperscalers
+CRDO / ALAB (2024 -&gt;): hyperscaler wins -&gt; parabolic growth.
+NBIS/CIFR/IREN/etc (2025 - ) AWS/Azure/etc. -&gt; parabolic growth from AI compute
+
+This is how you get hundreds of % in return, not value investing in Paypal. Momentum riding the next generational companies.
+
+So bear thesis usually involves around
+
+- Execution Risk (before it was more speculative, now companies like NBIS have 4B+ to execute) 
+
+People can always worry about execution but Microsoft or Google would not be signing such large 5-10 year contracts without their own DD.
+
+- Large interest rates (mainly looking at you CRWV), that&#x27;s why NBIS, CIFR, and others have potential amazing returns. 
+
+You have 4B+ in funding for $NBIS at $138+ a share (when it&#x27;s $107 now). And funding for $CIFR at $16+ a share when it&#x27;s $11 now. ABOVE current price funding is a bullish tell. 
+
+- GPU depreciation (valid concern but it&#x27;s almost like oil, even older models kept their value and still deliver equity).
+
+- Valuation (I still think we&#x27;re just getting started. If NBIS scales to 6B rev next year 75% gross margin), 26B marketcap is extremely tiny.
+
+- NVDA potentially launching their own GPU-as-a-service and directly competing. Right now these Neoclouds are NVDA&#x27;s answer to preventing concentration risk to Azure/AWS/etc.
+
+- Custom hyperscaler chips like TPU, Trainium. But likely years away, since they&#x27;re still begging for NVDA compute and signed 5Y-10Y contracts. 
+
+Regardless these neoclouds like Nebius are really undervalued relative to forward revenue/gross margins. 
+
+We&#x27;re still very early. Make sure to ride the Neocloud wave like Crypto/TSLA with Trump election or NVDA with OpenAI release.
+
+Of course this is highly speculative and I wouldn&#x27;t YOLO full port calls, but Risk vs. Reward on these little 5-20B neoclouds powering AI workloads for Google/MSFT/etc, the cash cows of Mag7, is worth it. (Trade time Horizon: 8m - 1 year.)
+
+This is the single best asymmetric AI infrastructure trade for 2025-2026.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1972016308662513748" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>NeoCloud 论文：超大规模资本支出漏斗
+
+为什么我要向 Neoclouds 投入 150 万美元以上，以及为什么这可能会带来 200-300% 以上的回报。
+
+🔹 桶
+
+Mag7 合约：$CRWV、$NBIS ✅、$WULF、$CIFR ✅
+
+使用计算：$IREN ✅、$BITF
+
+投机：$WYFI、$GRRR ✅、$SLNH
+
+转向 HPC 的矿工：$RIOT、$MARA、$CLSK、$HUT
+
+论文：
+
+Mag7 是由 $NVDA 设计的 AI 计算紧张型产品。
+
+通常流经 AWS、MSFT Azure、Google Cloud 进行传统计算的数万亿资本支出现在将在 NeoClouds 无法处理来自 Anthropic、OpenAI、Gemini 等的新 AI 负载时流入 NeoClouds。
+
+这是一个十年一次的机会，类似于 GPU 军备竞赛，该竞赛使 $NVDA 成为价值 4T 的公司，竞争的焦点是谁在未来 5-10 年为 AWS/Azure 等的基础设施提供支持。
+
+NBIS（来自 MSFT 的 17B）、CIFR / WULF（来自 GOOGL 的 3B）、CRWV（由 NVDA 支持）都在扩大数百%（NBIS 从 1.5 亿季度收入增加到可能的 1.5B+），毛利率为 60-80%。
+
+这种收入增长在历史上几乎是闻所未闻的。这主要是因为最富有的超大规模企业将资本支出注入小公司。
+
+NVDA / TSM (2022-&gt;)：用于超大规模的 GPU
+CRDO / ALAB (2024 -&gt;)：超大规模企业获胜 -&gt; 抛物线增长。
+NBIS/CIFR/IREN/等（2025 - ）AWS/Azure/等。 -&gt; AI 计算带来的抛物线增长
+
+这就是您获得数百%回报的方式，而不是在 Paypal 进行价值投资。下一代公司的动力。
+
+所以熊论文通常涉及
+
+- 执行风险（之前更具投机性，现在像 NBIS 这样的公司有 4B+ 的执行风险） 
+
+人们总是会担心执行力，但如果没有自己的 DD，微软或谷歌不会签署如此大的 5-10 年合同。
+
+- 利率大（主要看你CRWV），这就是NBIS、CIFR等有潜在惊人回报的原因。 
+
+您以每股 138 美元以上的价格购买 4B+ 美元的 NBIS 资金（现在为 107 美元）。而 $CIFR 的融资价格为每股 16 美元以上，而现在的价格为 11 美元。高于当前价格的融资是看涨信号。 
+
+- GPU 贬值（值得关注，但它几乎就像石油一样，即使是较旧的型号也能保持其价值并仍然提供权益）。
+
+- 估值（我仍然认为我们才刚刚开始。如果 NBIS 明年扩大到 6B rev，毛利率为 75%），26B 的市值非常小。
+
+- NVDA 可能会推出自己的 GPU 即服务并直接竞争。目前，这些 Neocloud 是 NVDA 为防止 Azure/AWS/等出现集中风险而提供的解决方案。
+
+- 定制超大规模芯片，例如 TPU、Trainium。但可能还需要几年的时间，因为他们仍在乞求 NVDA 计算并签署了 5 年至 10 年的合同。 
+
+不管怎样，像 Nebius 这样的新云相对于远期收入/毛利率来说确实被低估了。 
+
+我们还很早。确保顺应 Neocloud 浪潮，例如特朗普当选时的 Crypto/TSLA 或 OpenAI 发布时的 NVDA。
+
+当然，这是高度推测性的，我不会 YOLO 完整的端口调用，但这些小型 5-20B neoclouds 为 Google/MSFT/等（Mag7 的摇钱树）提供 AI 工作负载的风险与回报是值得的。 （交易时间范围：8m - 1年。）
+
+这是 2025-2026 年最好的非对称人工智能基础设施交易。</div>
+        <div class="tweet-foot">
+          <span>likes 880 / retweets 124 / replies 63 / views 1199610</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2025-09-26 02:22</span>
+          <span><span class="chip red">$ETH</span><span class="chip red">$HIMS</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@moonman6577 Thanks! Yeah $UPWK did take a month, but ended up being 45%+.
+
+I&#x27;m usually directionally correct but sometimes  get timing off a bit. A lot of other times I got it spot on lol like with $HIMS or $ETH tho
+
+I wouldn&#x27;t need follower $ because I trade on my own DD and it works</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@moonman6577 Thanks! Yeah $UPWK did take a month, but ended up being 45%+.
+
+I&#x27;m usually directionally correct but sometimes  get timing off a bit. A lot of other times I got it spot on lol like with $HIMS or $ETH tho
+
+I wouldn&#x27;t need follower $ because I trade on my own DD and it works</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1971279115027419438" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@moonman6577 谢谢！是的，$UPWK 确实花了一个月的时间，但最终达到了 45% 以上。
+
+我的方向通常是正确的，但有时会有点不及时。很多其他时候我都得到了它，哈哈，就像 $HIMS 或 $ETH 一样
+
+我不需要追随者 $，因为我用自己的 DD 进行交易并且它有效</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 466</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2025-09-25 07:36</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$RKLB</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;ve been getting a lot of stock weighting questions. A portfolio I&#x27;d build would be: 
+
+30% $NBIS
+6% AMZN
+5.5% TSM
+5% BTC
+5% LULU
+4% UNH
+4% $RKLB
+4% LTC
+3% ORCL
+3% TGT
+3% GRAB
+2% $IREN
+2% META
+2% HOOD
+2% HIMS
+2% AMD
+2% NVO
+1.5% CRDO
+1% BITF
+1% ASTS
+1% SG
+1% UPWK
+1% MP
+1% FOUR
+1% ETOR
+1% INTC
+1% COIN
+1% SMCI
+1% MRVL
+1% ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;ve been getting a lot of stock weighting questions. A portfolio I&#x27;d build would be: 
+
+30% $NBIS
+6% AMZN
+5.5% TSM
+5% BTC
+5% LULU
+4% UNH
+4% $RKLB
+4% LTC
+3% ORCL
+3% TGT
+3% GRAB
+2% $IREN
+2% META
+2% HOOD
+2% HIMS
+2% AMD
+2% NVO
+1.5% CRDO
+1% BITF
+1% ASTS
+1% SG
+1% UPWK
+1% MP
+1% FOUR
+1% ETOR
+1% INTC
+1% COIN
+1% SMCI
+1% MRVL
+1% DAVE
+.5% DLO
+.5% MELI
+.5% SNAP
+.5% CRWV
+.2% ONDS
+.2% NFE
+.2% TSSI
+.2% BKKT
+.2% GRRR</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1970995733659779574" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我收到了很多股票权重的问题。我要建立的投资组合是： 
+
+30% $NBIS
+6% 亚马逊
+5.5% TSM
+5% 比特币
+5% 露露
+4% 新罕布什尔州
+4% $RKLB
+4% 长期信用证
+3% ORCL
+3% 总收益
+3% 抢购
+2% $IREN
+2% 元
+2% 引擎盖
+2% 医疗信息管理系统
+2%AMD
+2% 无船承运人
+1.5％CRDO
+1% 比特币
+1% ASTS
+1% SG
+1% UPWK
+1% MP
+1% 四
+1% 埃托尔
+1% 国际贸易委员会
+1% 硬币
+1% SMCI
+1% MRVL
+1% 戴夫
+.5% DLO
+.5% 梅利
+.5% 快照
+.5% CRWV
+.2% ONDS
+.2% NFE
+.2% TSSI
+.2% BKKT
+.2% GRRR</div>
+        <div class="tweet-foot">
+          <span>likes 257 / retweets 30 / replies 32 / views 94746</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2025-09-25 07:09</span>
+          <span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@h20kita I ended up trimming $UPWK around $17, then held a tiny bit. 
+
+$22-25 is good given H1B increasing freelance hiring, $100m+ buyback and Russell going up from triple rate cuts (part of index) and possibly 5 going into next year. 
+
+Good to hold 1y for long term capital gain though</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@h20kita I ended up trimming $UPWK around $17, then held a tiny bit. 
+
+$22-25 is good given H1B increasing freelance hiring, $100m+ buyback and Russell going up from triple rate cuts (part of index) and possibly 5 going into next year. 
+
+Good to hold 1y for long term capital gain though</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1970988912400347352" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@h20kita 我最终将 UPWK 削减了 17 美元左右，然后持有了一点点。 
+
+考虑到 H1B 自由职业者招聘的增加、超过 1 亿美元的回购以及罗素从三倍降息（指数的一部分）中上涨，明年可能还会降息 5 倍，22-25 美元是不错的选择。 
+
+不过，持有 1 年以获得长期资本收益还是不错的</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1159</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2025-09-25 01:51</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$NBIS</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">People often ask what happens when I get everything right:
+
+1 Year Return: 630.44% 📈
+
+Just genuinely want to help! 
+
+I share my analysis and positions openly from $NBIS to $HOOD to $UPWK before any rally. 
+
+Feel free to look through my history on X or Reddit. https://t.co/2JGib55O0r</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">People often ask what happens when I get everything right:
+
+1 Year Return: 630.44% 📈
+
+Just genuinely want to help! 
+
+I share my analysis and positions openly from $NBIS to $HOOD to $UPWK before any rally. 
+
+Feel free to look through my history on X or Reddit. https://t.co/2JGib55O0r</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1970908938796400881" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>人们经常问，当我一切都正确时会发生什么：
+
+1年回报率：630.44% 📈
+
+只是真心想帮忙！ 
+
+在任何反弹之前，我都会公开分享我对从 $NBIS 到 $HOOD 到 $UPWK 的分析和持仓。 
+
+请随意查看我在 X 或 Reddit 上的历史记录。 https://t.co/2JGib55O0r</div>
+        <div class="tweet-foot">
+          <span>likes 191 / retweets 7 / replies 25 / views 575500</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2025-09-24 04:32</span>
+          <span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@SCurveCapital Yeah you were right about $IREN, congrats. I bought 1 share when we were holding $UPWK back at $12 and it was up an enormous amount. 
+
+I&#x27;m on the $NBIS train though.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@SCurveCapital Yeah you were right about $IREN, congrats. I bought 1 share when we were holding $UPWK back at $12 and it was up an enormous amount. 
+
+I&#x27;m on the $NBIS train though.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1970587170542059531" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@SCurveCapital 是的，你对 $IREN 的看法是对的，恭喜。当我们以 12 美元的价格持有 UPWK 时，我买了 1 股，当时它的价格上涨了很多。 
+
+不过我在 $NBIS 火车上。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1558</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2025-09-23 07:44</span>
+          <span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">No problem! The most money to be made though is if you think the market prices something wrong and you have conviction otherwise.
+
+Like for me market was underpricing $UPWK when it was a p/e of 7 or something low.
+
+I don&#x27;t know enough to give you an answer since financials are probably really complicated, that&#x27;s for yo...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">No problem! The most money to be made though is if you think the market prices something wrong and you have conviction otherwise.
+
+Like for me market was underpricing $UPWK when it was a p/e of 7 or something low.
+
+I don&#x27;t know enough to give you an answer since financials are probably really complicated, that&#x27;s for you to decide.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1970273121065459831" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>没问题！不过，如果你认为市场定价有问题，并且你有相反的信念，那么你就能赚到最多的钱。
+
+对我来说，当市盈率为 7 或较低时，市场低估了 UPWK。
+
+我的知识不足以给你答案，因为财务可能真的很复杂，这由你决定。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 320</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2025-09-23 04:32</span>
+          <span><span class="chip red">$GAP</span><span class="chip red">$LULU</span><span class="chip red">$TGT</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@AndyA143597 For $GAP, I do like it and I like Banana Republic personally. It&#x27;s a stock that benefits from seasonality around this time too. 
+
+$UPWK, $TGT, $UNH, $LULU were value investing port holders but I&#x27;ll need to look more to see if there&#x27;s any material impact from macro/tarrifs.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@AndyA143597 For $GAP, I do like it and I like Banana Republic personally. It&#x27;s a stock that benefits from seasonality around this time too. 
+
+$UPWK, $TGT, $UNH, $LULU were value investing port holders but I&#x27;ll need to look more to see if there&#x27;s any material impact from macro/tarrifs.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1970224716322611675" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@AndyA143597 对于 $GAP，我确实喜欢它，而且我个人也喜欢香蕉共和国。该股也受益于此时的季节性。 
+
+$UPWK、$TGT、$UNH、$LULU 是价值投资港口持有者，但我需要更多地关注宏观/关税是否有任何实质性影响。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 751</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2025-09-20 05:35</span>
+          <span><span class="chip red">$HIMS</span><span class="chip red">$OSCR</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@DanielTan64198 Nice! $UPWK was probably 50%+ if you&#x27;re still holding. $HIMS I called out at like $25 and again at $48.
+
+$OSCR was a swing trade I think I posted at $14 and a good sell would have been $22 but glad to hear you&#x27;re doing well</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@DanielTan64198 Nice! $UPWK was probably 50%+ if you&#x27;re still holding. $HIMS I called out at like $25 and again at $48.
+
+$OSCR was a swing trade I think I posted at $14 and a good sell would have been $22 but glad to hear you&#x27;re doing well</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1969153398034366747" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@DanielTan64198 不错！如果你仍然持有的话，$UPWK 可能是 50%+。 $HIMS 我叫了大约 25 美元，然后又叫了 48 美元。
+
+$OSCR 是一个波动交易，我想我以 14 美元的价格发布，好的卖出价应该是 22 美元，但很高兴听到你做得很好</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4629</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="26">
+        <div class="tweet-head">
+          <span class="mono">2025-09-19 06:46</span>
+          <span><span class="chip red">$PLMR</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@MMerrino569447 I don&#x27;t normally invest in small caps but we got the triple rate cut projection. So this is purely a macro trade..
+
+$PLMR looks solid like $UPWK. But triple rate cut hurts them because of lower investment income, so it doesn&#x27;t  get the benefit like other heavy-debt small caps.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@MMerrino569447 I don&#x27;t normally invest in small caps but we got the triple rate cut projection. So this is purely a macro trade..
+
+$PLMR looks solid like $UPWK. But triple rate cut hurts them because of lower investment income, so it doesn&#x27;t  get the benefit like other heavy-debt small caps.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1968808809322742219" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@MMerrino569447 我通常不投资小盘股，但我们得到了三倍降息的预测。所以这纯粹是宏观贸易。
+
+$PLMR 看起来像 $UPWK 一样稳定。但三重降息对它们造成了伤害，因为投资收益降低，因此它无法像其他重债小盘股那样获得好处。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 542</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="27">
+        <div class="tweet-head">
+          <span class="mono">2025-09-18 05:31</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$RKLB</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@vicecarloans $UPWK, $HOOD, $IREN, and would be 16 17 18 lol. 
+
+For $RKLB just hold it for 5-8 years, should be $350B market cap like SpaceX one day.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@vicecarloans $UPWK, $HOOD, $IREN, and would be 16 17 18 lol. 
+
+For $RKLB just hold it for 5-8 years, should be $350B market cap like SpaceX one day.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1968427635890913694" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@vicecarloans $UPWK、$HOOD、$IREN，并且将是 16 17 18 哈哈。 
+
+对于$RKLB来说，只要持有5-8年，有一天市值应该会像SpaceX一样达到$350B。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 803</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="28">
+        <div class="tweet-head">
+          <span class="mono">2025-09-17 02:57</span>
+          <span><span class="chip red">$ETOR</span><span class="chip red">$GOOGL</span><span class="chip red">$IBKR</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">If you look at my history, I usually buy stuff at the very bottom like $GOOGL or short term bottom like with $UPWK when everyone thinks the company will fail. 
+
+$ETOR is similar to $UPWK with large cash positions + profitable. But it&#x27;s growing at $IBKR rates 20%+ y/y but extremely low market cap. 
+
+Hard to trade agains...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you look at my history, I usually buy stuff at the very bottom like $GOOGL or short term bottom like with $UPWK when everyone thinks the company will fail. 
+
+$ETOR is similar to $UPWK with large cash positions + profitable. But it&#x27;s growing at $IBKR rates 20%+ y/y but extremely low market cap. 
+
+Hard to trade against sentiment sometimes, but I do think market is pricing this wrong.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1968026564081459688" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>如果你看看我的历史，我通常会在最底部买东西，比如 $GOOGL，或者在短期底部买东西，比如 $UPWK，当每个人都认为公司会失败时。 
+
+$ETOR 与 $UPWK 类似，拥有大量现金头寸 + 有利可图。但它的年增长率为 20% 以上，但市值却极低。 
+
+有时很难违背市场情绪进行交易，但我确实认为市场定价是错误的。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 538</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="29">
+        <div class="tweet-head">
+          <span class="mono">2025-09-14 20:13</span>
+          <span><span class="chip red">$ETH</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$OSCR</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">Love seeing people post profits.
+
+Check my $RDDT post history—so far, every breakout I’ve shared from $GOOGL, 2x $HIMS, $ETH, $UPWK, $RKLB, $OSCR has hit
+
+Scroll through my history on X/Reddit and see for yourself.
+
+I’m new to X but here temporarily to help people learn to trade</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Love seeing people post profits.
+
+Check my $RDDT post history—so far, every breakout I’ve shared from $GOOGL, 2x $HIMS, $ETH, $UPWK, $RKLB, $OSCR has hit
+
+Scroll through my history on X/Reddit and see for yourself.
+
+I’m new to X but here temporarily to help people learn to trade</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1967200142525956510" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>喜欢看到人们发布利润。
+
+检查我的 $RDDT 帖子历史记录 - 到目前为止，我从 $GOOGL、2x $HIMS、$ETH、$UPWK、$RKLB、$OSCR 分享的每一次突破都已达到
+
+滚动浏览我在 X/Reddit 上的历史记录并亲自查看。
+
+我是 X 新手，但暂时来这里是为了帮助人们学习交易</div>
+        <div class="tweet-foot">
+          <span>likes 20 / retweets 0 / replies 7 / views 2525</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="30">
+        <div class="tweet-head">
+          <span class="mono">2025-09-12 08:33</span>
+          <span><span class="chip red">$HIMS</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@mattia030339 I’d say do both unless you’re full port. $UPWK went up a ton since i posted so might be a good idea to just get long term capital gains tax on it. 
+
+Otherwise $HIMS probably has more potential near/mid term cause of 42% short interest, if you can catch it on a dip.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@mattia030339 I’d say do both unless you’re full port. $UPWK went up a ton since i posted so might be a good idea to just get long term capital gains tax on it. 
+
+Otherwise $HIMS probably has more potential near/mid term cause of 42% short interest, if you can catch it on a dip.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1966299022429401402" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@mattia030339 我想说除非你是全端口，否则两者都做。自从我发帖以来，$UPWK 上涨了很多，所以对其征收长期资本利得税可能是个好主意。 
+
+否则，如果你能抓住它的下跌机会，$HIMS 可能有更多潜在的近/中期原因，导致 42% 的空头利息。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 528</span>
+        </div>
+        <div class="chips"><span class="chip blue">轧空设置（盈利成长股变体）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="31">
+        <div class="tweet-head">
+          <span class="mono">2025-09-10 21:25</span>
+          <span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">I trimmed $UPWK around $16.5-$17 and kept some in case buybacks + acquisitions take it to $20-25.
+
+At $11-14 it was completely undervalued. At $16 it&#x27;s still undervalued. 
+
+I&#x27;d put it $20 fair value PT and $25 if acquisitions/existing product increase forward rev. Or if operating margins increase. Either way, holding i...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I trimmed $UPWK around $16.5-$17 and kept some in case buybacks + acquisitions take it to $20-25.
+
+At $11-14 it was completely undervalued. At $16 it&#x27;s still undervalued. 
+
+I&#x27;d put it $20 fair value PT and $25 if acquisitions/existing product increase forward rev. Or if operating margins increase. Either way, holding it and selling CC&#x27;s if you&#x27;re unsure is always a good idea.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1965768496354316310" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我将 UPWK 削减至 16.5-17 美元左右，并保留了一些，以防回购+收购使其跌至 20-25 美元。
+
+11-14 美元的价格完全被低估了。 16 美元的价格仍然被低估。 
+
+我认为公允价值 PT 为 20 美元，如果收购/现有产品增加远期收益，则为 25 美元。或者营业利润率是否增加。不管怎样，如果你不确定的话，持有它并出售 CC 总是一个好主意。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 207</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="32">
+        <div class="tweet-head">
+          <span class="mono">2025-09-06 06:01</span>
+          <span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@triforcerytp People turn to freelancing, so positive, unless it’s a major recession. 
+
+Even if revenue drops, $UPWK just needs to increase profit margins.
+
+Their stock is incredibly undervalued and  all management needs to do is cut out bloat to reach $25. $100m in buybacks helps too.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@triforcerytp People turn to freelancing, so positive, unless it’s a major recession. 
+
+Even if revenue drops, $UPWK just needs to increase profit margins.
+
+Their stock is incredibly undervalued and  all management needs to do is cut out bloat to reach $25. $100m in buybacks helps too.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1964086425445691848" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@triforcerytp 人们转向自由职业，非常积极，除非是严重的经济衰退。 
+
+即使收入下降，$UPWK 也只需要提高利润率。
+
+他们的股票被严重低估，管理层所需要做的就是削减股价，使其达到 25 美元。 1 亿美元的回购也有帮助。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 228</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="33">
+        <div class="tweet-head">
+          <span class="mono">2025-09-04 04:54</span>
+          <span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@DanielTan64198 $UPWK under $20 is screaming buy. $25 seems fair valued ~14 p/e. 
+
+Could end up at $75 one day who knows. Upwork is extremely profitable and is just sitting on a cash pile, so if you&#x27;re an investor just wait and see how their acquisitions go. Otherwise I&#x27;d wait to $20+</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@DanielTan64198 $UPWK under $20 is screaming buy. $25 seems fair valued ~14 p/e. 
+
+Could end up at $75 one day who knows. Upwork is extremely profitable and is just sitting on a cash pile, so if you&#x27;re an investor just wait and see how their acquisitions go. Otherwise I&#x27;d wait to $20+</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1963344768186159287" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@DanielTan64198 20 美元以下的 UPWK 是尖叫购买。 25 美元似乎公允价值约为 14 市盈率。 
+
+谁知道有一天最终可能会达到 75 美元。 Upwork 的利润非常丰厚，并且只是坐拥现金储备，因此，如果您是投资者，只需等待，看看他们的收购进展如何。不然我会等20+</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 435</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="34">
+        <div class="tweet-head">
+          <span class="mono">2025-09-04 04:38</span>
+          <span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$IREN</span><span class="chip red">$NVO</span><span class="chip red">$RKLB</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">$UPWK just announced it&#x27;s buying ~5% of it&#x27;s float back with a $100M repurchase program.   
+
+Let&#x27;s reiterate this one more time: 
+
+1. ~2B market cap, with 773M yearly revenue and 77.8% gross margins.  
+
+ 2. Big Cash Pile, profitable, ~9 p/e. Expanding margins + new business acquisitions not priced into forward revenue....</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$UPWK just announced it&#x27;s buying ~5% of it&#x27;s float back with a $100M repurchase program.   
+
+Let&#x27;s reiterate this one more time: 
+
+1. ~2B market cap, with 773M yearly revenue and 77.8% gross margins.  
+
+ 2. Big Cash Pile, profitable, ~9 p/e. Expanding margins + new business acquisitions not priced into forward revenue. 
+
+If you&#x27;re worried about $RKLB, $CRWV, $IREN, $HIMS, $WULF and other high beta stocks from September, seasonality doesn&#x27;t matter if your market cap is this low and you&#x27;re printing money.  
+
+Upwork is probably the most undervalued and immensely profitable stocks to hold in this market.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1963340844188275072" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$UPWK 刚刚宣布将通过 1 亿美元的回购计划回购约 5% 的浮动资金。   
+
+让我们再重申一遍： 
+
+1.~2B市值，年收入7.73亿，毛利率77.8%。  
+
+ 2. 大量现金，盈利，约 9 市盈率。扩大利润+新业务收购未计入远期收入。 
+
+如果您担心 9 月份的 $RKLB、$CRWV、$IREN、$HIMS、$WULF 和其他高贝塔股票，那么如果您的市值这么低并且您正在印钞，那么季节性并不重要。  
+
+Upwork 可能是这个市场上最被低估且利润最高的股票。</div>
+        <div class="tweet-foot">
+          <span>likes 18 / retweets 2 / replies 4 / views 5400</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="35">
+        <div class="tweet-head">
+          <span class="mono">2025-08-31 11:19</span>
+          <span><span class="chip red">$BKKT</span><span class="chip red">$BMBL</span><span class="chip red">$CREDO</span><span class="chip red">$CRWV</span><span class="chip red">$DJT</span><span class="chip red">$HIMS</span><span class="chip red">$RKLB</span><span class="chip red">$TSSI</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">My moonshot baskets for 1000% returns in 5y given current valuations. 
+
+Space - $RKLB (220B)
+AI - $CRWV (470B)
+Semi - $CREDO (200B), $TSSI (3.8B)
+Crypto -  $BKKT (1.8B) 
+Fintech - $DJT (49B)
+Social - $BMBL (6.2B)
+Health - $HIMS (95B)
+Software - $UPWK (19B)
+
+What are your picks?</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">My moonshot baskets for 1000% returns in 5y given current valuations. 
+
+Space - $RKLB (220B)
+AI - $CRWV (470B)
+Semi - $CREDO (200B), $TSSI (3.8B)
+Crypto -  $BKKT (1.8B) 
+Fintech - $DJT (49B)
+Social - $BMBL (6.2B)
+Health - $HIMS (95B)
+Software - $UPWK (19B)
+
+What are your picks?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1961992261816004834" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>考虑到目前的估值，我的登月计划是在 5 年内实现 1000% 的回报。 
+
+太空 - $RKLB (220B)
+AI - $CRWV (470B)
+半 - $CREDO (200B), $TSSI (3.8B)
+加密货币 - $BKKT (1.8B) 
+金融科技 - $DJT (49B)
+社交 - $BMBL (6.2B)
+健康 - $HIMS (95B)
+软件 - $UPWK (19B)
+
+你的选择是什么？</div>
+        <div class="tweet-foot">
+          <span>likes 19 / retweets 0 / replies 2 / views 3366</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="36">
+        <div class="tweet-head">
+          <span class="mono">2025-08-26 04:41</span>
+          <span><span class="chip red">$COIN</span><span class="chip red">$CRCL</span><span class="chip red">$DUOL</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$KSPI</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$NVDA</span><span class="chip red">$NVO</span><span class="chip red">$PLTR</span><span class="chip red">$SG</span><span class="chip red">$SNAP</span><span class="chip red">$TSLA</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">Just a tip: Lower risk appetite around September.
+
+Profitable stocks like $UNH, $NVO, $GOOGL, $UPWK, $KSPI... or stocks down YTD - $MRVL, $SG, $SNAP might do well.
+
+If you&#x27;re full port calls on high beta like $PLTR, $DUOL, $HOOD, $COIN, $CRCL, $NVDA, $MSTR, $TSLA... Good luck.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a tip: Lower risk appetite around September.
+
+Profitable stocks like $UNH, $NVO, $GOOGL, $UPWK, $KSPI... or stocks down YTD - $MRVL, $SG, $SNAP might do well.
+
+If you&#x27;re full port calls on high beta like $PLTR, $DUOL, $HOOD, $COIN, $CRCL, $NVDA, $MSTR, $TSLA... Good luck.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1960080191876702263" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>温馨提示：9 月份左右风险偏好较低。
+
+$UNH、$NVO、$GOOGL、$UPWK、$KSPI 等盈利股票或年初至今下跌的股票 - $MRVL、$SG、$SNAP 可能表现良好。
+
+如果您在高 Beta 版本上进行完整端口调用，例如 $PLTR、$DUOL、$HOOD、$COIN、$CRCL、$NVDA、$MSTR、$TSLA...祝您好运。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2618</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="37">
+        <div class="tweet-head">
+          <span class="mono">2025-08-23 18:53</span>
+          <span><span class="chip red">$GOOGL</span><span class="chip red">$NVO</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">$UPWK is the safest value play, even over $UNH, $NVO, $GOOGL, and others. 
+
+Market makers flushed Upwork call open interest for August 15th, and now it&#x27;s rallying where it should be above $17.5+.
+
+A 1.8B software company with ~80% gross margins doing 770m in annual revenue is almost free money.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$UPWK is the safest value play, even over $UNH, $NVO, $GOOGL, and others. 
+
+Market makers flushed Upwork call open interest for August 15th, and now it&#x27;s rallying where it should be above $17.5+.
+
+A 1.8B software company with ~80% gross margins doing 770m in annual revenue is almost free money.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1959207473812050156" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$UPWK 是最安全的价值游戏，甚至超过 $UNH、$NVO、$GOOGL 等。 
+
+做市商大幅抛售了 8 月 15 日的 Upwork 看涨期权未平仓合约，现在其价格正在反弹，应该高于 17.5 美元以上。
+
+毛利率约为 80%、年收入 7.7 亿美元的 1.8B 软件公司几乎是免费的钱。</div>
+        <div class="tweet-foot">
+          <span>likes 20 / retweets 0 / replies 3 / views 10554</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="38">
+        <div class="tweet-head">
+          <span class="mono">2025-08-07 05:58</span>
+          <span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">@Alan_24z It&#x27;s an easy low-risk hold until it trades $17-23. There&#x27;s too much open interest expiring in 8 days so expect shorting/gamma hedging.
+
+$UPWK is high profitable, growing margins, strong cash position and just raised guidance so selling at $13-$14 is stupid.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Alan_24z It&#x27;s an easy low-risk hold until it trades $17-23. There&#x27;s too much open interest expiring in 8 days so expect shorting/gamma hedging.
+
+$UPWK is high profitable, growing margins, strong cash position and just raised guidance so selling at $13-$14 is stupid.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1953214112500203897" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Alan_24z 这是一个简单的低风险持有，直到其交易价格为 17-23 美元。有太多的未平仓合约将在 8 天内到期，因此预计会出现空头/伽玛对冲。
+
+$UPWK 利润高、利润率不断增长、现金状况强劲，而且刚刚提高了指导，因此以 13-14 美元的价格出售是愚蠢的。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 636</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="39">
+        <div class="tweet-head">
+          <span class="mono">2025-08-07 04:38</span>
+          <span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">$UPWK is will do some repricing after earnings today + short interest/analyst upgrades.
+
+All they needed to do was expand operating margins on their 78% gross margins and they did.
+
+1.5B company doing 770m FY revenue, growing operating margins, and a strong cash position.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$UPWK is will do some repricing after earnings today + short interest/analyst upgrades.
+
+All they needed to do was expand operating margins on their 78% gross margins and they did.
+
+1.5B company doing 770m FY revenue, growing operating margins, and a strong cash position.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1953193874941460776" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$UPWK 将在今天的收益+空头利息/分析师升级后进行一些重新定价。
+
+他们所需要做的就是将营业利润率扩大到 78% 的毛利率，而他们确实做到了。
+
+1.5B 公司的财政年度收入为 7.7 亿美元，营业利润率不断增长，现金状况强劲。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3185</span>
+        </div>
+        <div class="chips"><span class="chip blue">轧空设置（盈利成长股变体）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="40">
+        <div class="tweet-head">
+          <span class="mono">2025-07-21 16:43</span>
+          <span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">So for the long term play on Upwork:
+
+$UPWK is trading at a 7.5 P/E with ~$770M in annual revenue, 78% gross margins, and $622M in cash — yet its market cap is only $1.74B.
+
+Who cares about revenue growth when they can just scale operating margins?</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So for the long term play on Upwork:
+
+$UPWK is trading at a 7.5 P/E with ~$770M in annual revenue, 78% gross margins, and $622M in cash — yet its market cap is only $1.74B.
+
+Who cares about revenue growth when they can just scale operating margins?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1947215927462027284" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>因此，对于 Upwork 的长期发展：
+
+$UPWK 的市盈率为 7.5，年收入约为 7.7 亿美元，毛利率为 78%，现金为 6.22 亿美元，但其市值仅为 $1.74B。
+
+当他们只能扩大营业利润率时，谁会关心收入增长呢？</div>
+        <div class="tweet-foot">
+          <span>likes 9 / retweets 0 / replies 2 / views 9944</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="41">
+        <div class="tweet-head">
+          <span class="mono">2025-07-02 18:48</span>
+          <span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">Why I bought $150k in $UPWK.
+
+Here is UPWORK, UPWK and my explanation on why I bought $150k+ in shares.
+
+At first, you see what looks like a CAT. It starts off with the two ears. Looks like a cat right?
+
+Wrong. This is the NINE TAILED FOX Pattern, not just any cat. https://t.co/BUYY3BncTs</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Why I bought $150k in $UPWK.
+
+Here is UPWORK, UPWK and my explanation on why I bought $150k+ in shares.
+
+At first, you see what looks like a CAT. It starts off with the two ears. Looks like a cat right?
+
+Wrong. This is the NINE TAILED FOX Pattern, not just any cat. https://t.co/BUYY3BncTs</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1940361849985458270" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>为什么我购买了 15 万美元的 $UPWK。
+
+以下是 UPWORK、UPWK 以及我对为何购买 15 万美元以上股票的解释。
+
+首先，您会看到看起来像猫的东西。它从两只耳朵开始。看起来像只猫吧？
+
+错误的。这是九尾狐图案，而不是普通的猫。 https://t.co/BUYY3BncTs</div>
+        <div class="tweet-foot">
+          <span>likes 17 / retweets 0 / replies 6 / views 4199</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=UPWK">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

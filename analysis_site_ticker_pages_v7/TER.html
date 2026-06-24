@@ -1,0 +1,1542 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$TER 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$TER 历史推文</h1>
+      <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>19</b></div>
+        <div class="stat-card"><span>历史推文</span><b>19</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-01-22</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-05-12</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 5</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 4</span><span class="chip blue">认证周期 vs TTM 营收 3</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>已匹配 12 个 A 股链条映射；重点看业务环节和订单传导，不把概念相似当作直接竞争。代表项：绿的谐波、鸣志电器、拓普集团、三花智控。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-05-12 08:08</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CSCO</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">$AEHR is up close to 3x in 1 month by the way. 
+
+I tend to get timing extremely well?? https://t.co/bIbpSXcYtP</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AEHR is up close to 3x in 1 month by the way. 
+
+I tend to get timing extremely well?? https://t.co/bIbpSXcYtP</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053990690477195313" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>顺便说一句，$AEHR 在 1 个月内上涨了近 3 倍。 
+
+我往往能很好地把握时机？ https://t.co/bIbpSXcYtP</div>
+        <div class="tweet-foot">
+          <span>likes 1011 / retweets 26 / replies 100 / views 213994</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 05:54</span>
+          <span><span class="chip red">$FORM</span><span class="chip red">$TER</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">@gregory_FTA $TER is not a good proxy because they&#x27;re extremely large. They had exposure to non-AI segments like smartphone chips, EV/automotive. Then they&#x27;re facing competition from Advantest. 
+
+Best signals are more pure play from $FORM and $VIAV.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@gregory_FTA $TER is not a good proxy because they&#x27;re extremely large. They had exposure to non-AI segments like smartphone chips, EV/automotive. Then they&#x27;re facing competition from Advantest. 
+
+Best signals are more pure play from $FORM and $VIAV.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049608380705280025" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@gregory_FTA $TER 不是一个好的代理，因为它们非常大。他们接触过智能手机芯片、电动汽车/汽车等非人工智能领域。然后他们将面临来自 Advantest 的竞争。 
+
+最好的信号是来自 $FORM 和 $VIAV 的更纯粹的信号。</div>
+        <div class="tweet-foot">
+          <span>likes 50 / retweets 0 / replies 3 / views 17715</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-04-26 03:34</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CSCO</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">Uh chat... is my timing insane or what?
+
+Names like $TSEM are flat all year, I go long, then it doubles. The moment I go long on $AEHR, it almost triples.
+
+People are starting to think I&#x27;m the catalyst because this keeps happening over and over... lol this is a $22B+ company. 
+
+Fun fact on how I get these right : 
+
+-&gt; ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Uh chat... is my timing insane or what?
+
+Names like $TSEM are flat all year, I go long, then it doubles. The moment I go long on $AEHR, it almost triples.
+
+People are starting to think I&#x27;m the catalyst because this keeps happening over and over... lol this is a $22B+ company. 
+
+Fun fact on how I get these right : 
+
+-&gt; Identify critical companies not really noticed
+-&gt; I time my longs around catalysts like $NVDA GTC or OFC. 
+-&gt; And around when news about material changes comes about. 
+-&gt; Then look at good entry points on drops (this is where your astrology TA&#x27;s get used). 
+
+Going long isn&#x27;t just picking a random point in time! On other names, like $ALRIB it&#x27;s new information discovery (eg. Microsoft Quantum), so two different types. 
+
+There&#x27;s actually a strategy here that repeats... (as seen with the other 16 triple digit return stocks).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048123597223579736" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>呃，聊天……是我的时间安排错了还是什么？
+
+像 $TSEM 这样的名字全年都持平，我做多，然后翻倍。当我做多 $AEHR 时，它几乎增加了两倍。
+
+人们开始认为我是催化剂，因为这种情况不断发生……哈哈，这是一家价值 22B+ 的公司。 
+
+关于我如何做对这些的有趣事实： 
+
+-&gt; 找出未被真正注意到的关键公司
+-&gt; 我围绕 $NVDA GTC 或 OFC 等催化剂来计算我的多头头寸。 
+-&gt; 当有关重大变化的消息出现时。 
+-&gt; 然后在掉落物上寻找好的切入点（这是你的占星助教发挥作用的地方）。 
+
+做多不仅仅是选择一个随机的时间点！对于其他名称，例如 $ALRIB，它是新的信息发现（例如 Microsoft Quantum），因此有两种不同的类型。 
+
+这里实际上有一个重复的策略……（正如其他 16 只三位数回报股票所见）。</div>
+        <div class="tweet-foot">
+          <span>likes 1454 / retweets 84 / replies 85 / views 399198</span>
+        </div>
+        <div class="chips"><span class="chip blue">反模式清单（他明确反对的）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-04-21 02:11</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CSCO</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">Told ya. $AEHR is cooking.
+
+Once you reach a certain point with MC it’s mostly institutions driving price.
+
+If you find a name that a ton of hyperscalers use… it’s feels bound to get repriced? https://t.co/AHqpgbqHJK</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Told ya. $AEHR is cooking.
+
+Once you reach a certain point with MC it’s mostly institutions driving price.
+
+If you find a name that a ton of hyperscalers use… it’s feels bound to get repriced? https://t.co/AHqpgbqHJK</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046290739727098166" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>告诉你了。 $AEHR 正在做饭。
+
+一旦 MC 达到一定程度，主要是机构在推动价格。
+
+如果您发现大量超大规模企业使用的名称……感觉一定会重新定价吗？ https://t.co/AHqpgbqHJK</div>
+        <div class="tweet-foot">
+          <span>likes 1162 / retweets 53 / replies 93 / views 345026</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-04-15 00:46</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$FORM</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">&quot;Silicon photonics scaling hits wafer testing bottleneck&quot;
+
+- $FORM (helps that ficontec left), $AEHR 
+- Over in Taiwan MPI (6223), MA-tek (3587), MSScorps (6830)
+- Then large cap Cap - $TER, Advantest (6857) 
+
+Are some decent exposure off the top of my head if you’re curious. 
+
+I’ll make a deeper dive ETF for you all s...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">&quot;Silicon photonics scaling hits wafer testing bottleneck&quot;
+
+- $FORM (helps that ficontec left), $AEHR 
+- Over in Taiwan MPI (6223), MA-tek (3587), MSScorps (6830)
+- Then large cap Cap - $TER, Advantest (6857) 
+
+Are some decent exposure off the top of my head if you’re curious. 
+
+I’ll make a deeper dive ETF for you all soon.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2044094868079906990" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>“硅光子微缩技术遇到晶圆测试瓶颈”
+
+- $FORM（帮助 ficontec 离开）、$AEHR 
+- 台湾 MPI (6223)、MA-tek (3587)、MSScorps (6830)
+- 然后是大盘股 - $TER, Advantest (6857) 
+
+如果你好奇的话，我能想到一些不错的曝光吗？ 
+
+我很快就会为大家制作一个更深层次的 ETF。</div>
+        <div class="tweet-foot">
+          <span>likes 914 / retweets 56 / replies 50 / views 207355</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-04-10 03:32</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CSCO</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">Woah, $AEHR almost triple digit return in 1 week.
+
+This is speed running “Escape the Permanent Underclass with Serenity 101”.
+
+That aside, it helps to understand qualification cycles when you look at stocks or ER. 
+
+A lot of retail investors went short after ER by looking at current revenue rather than volume ramp + al...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Woah, $AEHR almost triple digit return in 1 week.
+
+This is speed running “Escape the Permanent Underclass with Serenity 101”.
+
+That aside, it helps to understand qualification cycles when you look at stocks or ER. 
+
+A lot of retail investors went short after ER by looking at current revenue rather than volume ramp + all ongoing hyperscalers testing out orders.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2042324781916438621" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>哇哦，$AEHR 在 1 周内几乎实现了三位数的回报。
+
+这就是《逃离永久下层阶级与宁静101》的速度跑。
+
+除此之外，当您查看股票或 ER 时，它有助于了解资格周期。 
+
+许多散户投资者通过关注当前收入而不是销量增长+所有正在进行的超大规模交易者测试订单来做空 ER。</div>
+        <div class="tweet-foot">
+          <span>likes 767 / retweets 37 / replies 87 / views 196453</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-04-08 21:37</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CSCO</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">Not too shabby with $AEHR.
+
+Up +20% today. 
+
+For all the bears, this is what happens when you misunderstand qualification cycles in semi names. 
+
+Then try and look at current revenue numbers only. https://t.co/9hU4UwNyRE</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Not too shabby with $AEHR.
+
+Up +20% today. 
+
+For all the bears, this is what happens when you misunderstand qualification cycles in semi names. 
+
+Then try and look at current revenue numbers only. https://t.co/9hU4UwNyRE</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2041872946424377430" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AEHR 还算不错。
+
+今天上涨+20%。 
+
+对于所有熊市来说，当你误解半决赛资格周期时就会发生这种情况。 
+
+然后尝试仅查看当前的收入数字。 https://t.co/9hU4UwNyRE</div>
+        <div class="tweet-foot">
+          <span>likes 532 / retweets 35 / replies 53 / views 94877</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-04-06 22:13</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CSCO</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">Well that was fast with $AEHR.
+
+Up +14.28%… I did think the center of the next silicon photonics bottleneck at $1.1B, with tons of hyperscalers qualifying it.
+
+Was kind of undervaluing it. https://t.co/gDVc6xzF85</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Well that was fast with $AEHR.
+
+Up +14.28%… I did think the center of the next silicon photonics bottleneck at $1.1B, with tons of hyperscalers qualifying it.
+
+Was kind of undervaluing it. https://t.co/gDVc6xzF85</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2041157377928700262" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AEHR 的速度很快。
+
+上涨+14.28%……我确实认为下一个硅光子瓶颈的中心是$1.1B，有大量的超大规模厂商符合它的条件。
+
+有点低估它的价值。 https://t.co/gDVc6xzF85</div>
+        <div class="tweet-foot">
+          <span>likes 703 / retweets 54 / replies 63 / views 156729</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-04-02 01:05</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CSCO</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">$AEHR looks extremely promising at ~$1.1B MC. 
+
+Aehr is starting to remind me of an early $TER, mixed with pre-earnings $AAOI.  
+
+If we look at the timeline and speculated customers:
+
+Feb 11th: Sonoma production win for Hyperscaler&#x27;s AI ASIC processors. (likely $GOOGL, $AMZN, $META).
+
+- Probably Google? Aehr bought Inc...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AEHR looks extremely promising at ~$1.1B MC. 
+
+Aehr is starting to remind me of an early $TER, mixed with pre-earnings $AAOI.  
+
+If we look at the timeline and speculated customers:
+
+Feb 11th: Sonoma production win for Hyperscaler&#x27;s AI ASIC processors. (likely $GOOGL, $AMZN, $META).
+
+- Probably Google? Aehr bought Incal, who was speculated to be used by Google for their TPUs. 
+
+Feb 26th: $14 million from AI lead customer (likely $AMD, $NVDA)
+
+- Probably $AMD here for Instinct MI300/MI400. 
+
+March 3rd: Lead silicon photonics customer for one FOX-XP system (likely $INTC siph)
+
+- Very likely $INTC has been their lead customer. 
+
+March 31st: Initial order from major new silicon photonics customer (likely $AVGO, $MRVL, $CSCO )
+
+- New customer (rules out Intel), prob one of these transitioning to 800G/1.6T silicon photonics transceivers
+
+(All speculative, very confidential BOM)
+
+Regardless. This timeline is just bottling up for $AEHR.  
+
+Could be next earnings. Or two quarters from now. 
+
+But feels like a matter of time before we see mass orders.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2039388766083944750" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AEHR 在 ~$1.1B MC 上看起来非常有前途。 
+
+Aehr 开始让我想起早期的 $TER，与预盈利 $AAOI 混合在一起。  
+
+如果我们看看时间表和推测的客户：
+
+2 月 11 日：Sonoma 赢得了 Hyperscaler 的 AI ASIC 处理器的生产。 （可能是 $GOOGL、$AMZN、$META）。
+
+- 可能是谷歌？ Aehr 收购了 Incal，据推测 Google 将 Incal 用于其 TPU。 
+
+2 月 26 日：来自 AI 领先客户的 1400 万美元（可能是 AMD、NVDA 美元）
+
+- Instinct MI300/MI400 可能是 $AMD。 
+
+3 月 3 日：一套 FOX-XP 系统的硅光子首席客户（可能是 $INTC siph）
+
+- $INTC 很可能是他们的主要客户。 
+
+3 月 31 日：主要新硅光子客户的初始订单（可能是 $AVGO、$MRVL、$CSCO）
+
+- 新客户（排除英特尔），可能是过渡到 800G/1.6T 硅光子收发器的客户之一
+
+（所有推测，非常机密的BOM）
+
+不管怎样。这个时间线已经被 AEHR 限制住了。  
+
+可能是下一个收益。或者从现在起两个季度。 
+
+但感觉我们看到大规模订单只是时间问题。</div>
+        <div class="tweet-foot">
+          <span>likes 716 / retweets 70 / replies 56 / views 1292835</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-03-31 08:35</span>
+          <span><span class="chip red">$AMKR</span><span class="chip red">$ANSS</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$CDNS</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SNPS</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">CPO Value Chain Summary from Mirae Asset:
+
+Laser Source:
+Coherent &lt; $COHR &gt;
+Lumentum &lt; $LITE &gt;
+Furukawa Electric (TYO: 5801)
+Yuanjie Semiconductor (SHA: 688498)
+Innolight Technology / Zhongji Innolight (SZSE: 300308)
+
+PIC Foundry:
+TSMC &lt; $TSM &gt;
+GlobalFoundries $GFS
+Samsung Electronics (KRX: 005930)
+Tower Semiconductor ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">CPO Value Chain Summary from Mirae Asset:
+
+Laser Source:
+Coherent &lt; $COHR &gt;
+Lumentum &lt; $LITE &gt;
+Furukawa Electric (TYO: 5801)
+Yuanjie Semiconductor (SHA: 688498)
+Innolight Technology / Zhongji Innolight (SZSE: 300308)
+
+PIC Foundry:
+TSMC &lt; $TSM &gt;
+GlobalFoundries $GFS
+Samsung Electronics (KRX: 005930)
+Tower Semiconductor &lt; $TSEM&gt;
+
+EIC, Driver IC:
+Broadcom &lt; $AVGO &gt; 
+Marvell &lt; $MRVL &gt;
+NVIDIA &lt; $NVDA &gt;
+
+ELS, Optical Engine
+Innolight / Zhongji Innolight (SZSE: 300308)
+TFC / Suzhou TFC Optical Communication (SZSE: 300394)
+O-Net Technologies 
+Eoptolink Technology (SZSE: 300502)
+
+FAU (Fiber Array Unit):
+Senko Advanced Components (Private)
+Sumitomo Electric (TYO: 5802)
+TFC (SZSE: 300394)
+FOCI Fiber Optic Communications (TWO: 3363)
+
+FAU, Align Tools:
+ficonTEC (Private)
+All Ring Tech (TWO: 6187)
+ADST (Private)
+
+FAU, Engine Assembly:
+Fabrinet &lt; $FN &gt;
+Hon Hai / Foxconn (TWSE: 2317)
+ASE Technology &lt; $ASX &gt; 
+FOCI (TWO: 3363)
+
+OSAT, Advanced Packaging:
+ASE Technology &lt; $ASX &gt;
+Amkor &lt; $AMKR &gt; 
+Kyocera (TYO: 6971)
+Powertech / PTI (TWSE: 6239)
+Shinko Electric (TYO: 6967)
+Fabrinet &lt; $FN &gt;
+
+Connector, Ferrule:
+Senko Advanced Components (Private)
+Sumitomo Electric (TYO: 5802)
+US Conec (Private)
+T&amp;S Communications (SZSE: 300570)
+Molex (Private)
+Browave (TWO: 3163)
+
+Fiber: 
+Corning &lt; $GLW &gt;
+Sumitomo Electric (TYO: 5802)
+Nittobo / Nitto Boseki (TYO: 3110)
+
+E/O Testing: 
+
+Keysight &lt; $KEYS &gt; 
+Teradyne &lt; $TER &gt;
+FormFactor &lt; $FORM &gt; 
+Chroma ATE (TWSE: 2360)
+Multilane (Private)
+
+Switch, System: 
+NVIDIA &lt; $NVDA &gt; 
+Broadcom &lt; $AVGO &gt; 
+Marvell &lt; $MRVL &gt; 
+Google &lt; $GOOGL&gt; 
+
+EDA: 
+Synopsys &lt; $SNPS &gt; 
+Cadence &lt; $CDNS &gt; 
+Ansys &lt; $ANSS &gt; 
+
+Confused by some of names of the list, they might have conflated a few names like Innolight with laser source like $MTSI, Sumitomo, $SIVE, Luxnet, with the actual end module (unless there&#x27;s something that&#x27;s not public material or I missed)? 
+
+But just for people interested in the landscape, this is a good high-level overview.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2038777289115345200" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Mirae Asset 的原棕油价值链摘要：
+
+激光源：
+连贯 &lt; $COHR &gt;
+Lumentum &lt; $LITE &gt;
+古河电工 (TYO: 5801)
+元杰半导体（SHA：688498）
+旭创科技/中际旭创（深交所：300308）
+
+PIC代工厂：
+台积电&lt;$TSM&gt;
+格罗方德 $GFS
+三星电子 (KRX: 005930)
+塔半导体&lt;$TSEM&gt;
+
+EIC、驱动IC：
+博通&lt;$AVGO&gt; 
+Marvell &lt; $MRVL &gt;
+英伟达&lt;$NVDA&gt;
+
+ELS，光学引擎
+旭创/中际旭创（深交所：300308）
+天金光/苏州天金光通信（深交所：300394）
+昂纳科技 
+新易盛科技（深交所：300502）
+
+FAU（光纤阵列单元）：
+Senko先进组件（私人）
+住友电工（TYO：5802）
+天金公司（深交所：300394）
+FOCI 光纤通信（二：3363）
+
+FAU，对齐工具：
+ficonTEC（私人）
+全环科技（二：6187）
+ADST（私人）
+
+FAU，发动机装配：
+法布里内特&lt;$FN&gt;
+鸿海/富士康（台湾证券交易所股票代码：2317）
+日月光科技 &lt; $ASX &gt; 
+焦点（二：3363）
+
+OSAT，先进封装：
+日月光科技 &lt; $ASX &gt;
+Amkor &lt; $AMKR &gt; 
+京瓷（TYO：6971）
+力成科技 / PTI (台湾证券交易所: 6239)
+新光电机 (TYO: 6967)
+法布里内特&lt;$FN&gt;
+
+连接器、套圈：
+Senko先进组件（私人）
+住友电工（TYO：5802）
+美国 Conec（私人）
+天盛通信（深交所：300570）
+莫仕（私人）
+布罗波（二：3163）
+
+纤维： 
+康宁&lt;$GLW&gt;
+住友电工（TYO：5802）
+Nittobo / Nitto Boseki (TYO: 3110)
+
+E/O 测试： 
+
+是德科技&lt;$KEYS&gt; 
+泰瑞达 &lt; $TER &gt;
+形状系数 &lt; $FORM &gt; 
+Chroma ATE（台湾证券交易所：2360）
+多车道（私人）
+
+开关、系统： 
+英伟达&lt;$NVDA&gt; 
+博通&lt;$AVGO&gt; 
+Marvell &lt; $MRVL &gt; 
+谷歌&lt;$GOOGL&gt; 
+
+电子设计自动化： 
+新思科技&lt;$SNPS&gt; 
+节奏&lt;$CDNS&gt; 
+Ansys &lt;$ANSS&gt; 
+
+他们对列表中的一些名称感到困惑，他们可能会将像 Innolight 这样的一些名称与激光源（例如 $MTSI、Sumitomo、$SIVE、Luxnet）与实际的最终模块混为一谈（除非有一些不是公开材料或我错过了）？ 
+
+但对于对景观感兴趣的人来说，这是一个很好的高层次概述。</div>
+        <div class="tweet-foot">
+          <span>likes 337 / retweets 51 / replies 20 / views 80341</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-03-15 05:20</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMZN</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BE</span><span class="chip red">$COHR</span><span class="chip red">$COPX</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">I realized by the amount of bookmarks.
+
+I lowkey dropped a banger ETF?
+
+AI Displacement Equal Weighted YTD:
+
+$AXTI: +191.53%
+$AAOI: +144.47%
+$SNDK: +140.38%
+$SOI: +114.3%
+$LITE: +61.22%
+$AEHR: +60.97%
+$BE: +56.56%
+$VRT: +47.42%
+Samsung: +42.8%
+$TER: +37.99%
+$MU: +35.1%
+Sk Hynix: +34.42%
+$NBIS: +25.57%
+$COHR: +24.92%
+Me...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I realized by the amount of bookmarks.
+
+I lowkey dropped a banger ETF?
+
+AI Displacement Equal Weighted YTD:
+
+$AXTI: +191.53%
+$AAOI: +144.47%
+$SNDK: +140.38%
+$SOI: +114.3%
+$LITE: +61.22%
+$AEHR: +60.97%
+$BE: +56.56%
+$VRT: +47.42%
+Samsung: +42.8%
+$TER: +37.99%
+$MU: +35.1%
+Sk Hynix: +34.42%
+$NBIS: +25.57%
+$COHR: +24.92%
+Mediatek: +17.01%
+$INTC: +16.23%
+$ASML: +15.63%
+Advantest: +11.78%
+$TSM: +5.85%
+$COPX: +4.56%
+$TSEM: +2.44%
+$MRVL: -1.71%
+$NVDA: -4.55%
+$AVGO: -7.32%
+
+These are just the first names that came to my head. I own a lot of these personally (and don&#x27;t own others like $NVDA or $BE ) but included them anyway. 
+
+But honestly, I&#x27;d be happy to equal weight all these names if I weren&#x27;t actively managing my portfolio concentrations. 
+
+I expect the AI Displacement ETF to keep rising:
+
+As they&#x27;re the largest beneficiaries of scaling compute and inference for artificial intelligence.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2032929794275553400" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我通过书签的数量意识到了。
+
+我低调丢了一只重磅ETF？
+
+AI 位移等加权年初至今：
+
+$AXTI：+191.53%
+$AAOI：+144.47%
+$SNDK：+140.38%
+美元SOI：+114.3%
+精简版美元：+61.22%
+$AEHR：+60.97%
+美元：+56.56%
+VRT 美元：+47.42%
+三星：+42.8%
+美元：+37.99%
+MU 美元：+35.1%
+SK海力士：+34.42%
+NBIS 美元：+25.57%
+$COHR：+24.92%
+联发科：+17.01%
+$INTC：+16.23%
+阿斯麦美元：+15.63%
+爱德万测试：+11.78%
+$TSM：+5.85%
+$COPX：+4.56%
+$TSEM：+2.44%
+MRVL 美元：-1.71%
+NVDA 美元：-4.55%
+AVGO 美元：-7.32%
+
+这些只是我脑海中浮现的第一个名字。我个人拥有很多这些（并且不拥有像 $NVDA 或 $BE 这样的其他人），但无论如何都包含它们。 
+
+但老实说，如果我不积极管理我的投资组合集中度，我很乐意对所有这些名字进行同等权重。 
+
+我预计 AI Displacement ETF 将继续上涨：
+
+因为他们是人工智能扩展计算和推理的最大受益者。</div>
+        <div class="tweet-foot">
+          <span>likes 1266 / retweets 95 / replies 62 / views 165506</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-03-15 03:15</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMZN</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BE</span><span class="chip red">$COHR</span><span class="chip red">$COPX</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">The news is pretty heartbreaking:
+
+$META 20% layoffs
+
+$ORCL layoffs
+
+$AMZN 600,000 workers long term layoffs as they get replaced by robotics and AI.
+
+This is a dystopian future.
+
+Companies end up with record profits, without the cost of human labor.
+
+The only way to benefit:
+
+Investing in AI as a hedge. 
+
+The next few...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The news is pretty heartbreaking:
+
+$META 20% layoffs
+
+$ORCL layoffs
+
+$AMZN 600,000 workers long term layoffs as they get replaced by robotics and AI.
+
+This is a dystopian future.
+
+Companies end up with record profits, without the cost of human labor.
+
+The only way to benefit:
+
+Investing in AI as a hedge. 
+
+The next few years feels like the main way to escape the permanent underclass, caused by AI displacement.
+
+The return on equity derived from AI will go to the shareholders. 
+
+While the gap between those who live paycheck to paycheck, not invested in stocks. Will continue to grow. 
+
+This is not the future.
+
+- Opus 4.6 is good enough to replace most software engineers today.
+
+- Waymo has started to replace taxi drivers in places like SF today.
+
+- We know $TSLA Humanoids are coming next as they’re widespread in China, today.
+
+This is happening now. 
+
+Disruptions in Iran are only temporary to the accelerating AI buildout.
+
+AI has hit the inflection point, and looks inevitable. 
+
+You’re already seeing US job revisions down close to 1 Million, which is staggering. 
+
+And we’re seeing the newest LLMs be built by their previous models, as AI approaches the singularity (AI led recursive growth). 
+
+Investing in where the compute and hardware needed to run the AI:
+
+From the datacenter/power/grid sector: 
+$NBIS, $XLU, $VRT, $BE
+
+Photonics sector needed to scale AI:
+$LITE, $COHR, $AAOI, $TSEM
+
+Semi sector needed for the chips:
+$NVDA, $TSM, $ASML, $INTC
+
+Memory sector for the chips:
+$MU, $SNDK, SK Hynix, Samsung
+
+ASICs for hyperscaler AI inference:
+$AVGO, $MRVL, Mediatek
+
+Yields sector to make sure the chips work:
+$TER, $AEHR, Advantest
+
+Along with the raw materials or substrates needed for AI:
+$AXTI, $COPX, $SOI
+
+And many others become the single, largest, hedge against widespread AI displacement. 
+
+Whoever owns the means of compute (bottlenecks, materials, datacenters):
+
+Owns the future of AI.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2032898412279115858" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>这个消息真是令人心碎：
+
+$META 裁员 20%
+
+$ORCL 裁员
+
+AMZN 600,000 名工人被机器人和人工智能取代而长期裁员。
+
+这是一个反乌托邦的未来。
+
+公司最终在没有人力成本的情况下获得了创纪录的利润。
+
+唯一受益的方法：
+
+投资人工智能作为对冲。 
+
+接下来的几年感觉像是逃离由人工智能取代造成的永久下层阶级的主要方式。
+
+人工智能带来的股本回报将归股东所有。 
+
+而那些靠工资过活的人，不投资股票。将继续增长。 
+
+这不是未来。
+
+- Opus 4.6 足以取代当今大多数软件工程师。
+
+- Waymo 今天已开始在旧金山等地取代出租车司机。
+
+- 我们知道 $TSLA 人形机器人将成为下一个目标，因为它们如今在中国很普遍。
+
+现在这种情况正在发生。 
+
+对于加速人工智能建设来说，伊朗的干扰只是暂时的。
+
+人工智能已经达到了拐点，而且看起来是不可避免的。 
+
+你已经看到美国的就业机会减少了近 100 万，这是令人震惊的。 
+
+随着人工智能接近奇点（人工智能引领递归增长），我们看到最新的法学硕士是根据以前的模型构建的。 
+
+投资运行人工智能所需的计算和硬件：
+
+从数据中心/电力/电网部门： 
+$NBIS、$XLU、$VRT、$BE
+
+光子学领域需要扩展人工智能：
+$LITE、$COHR、$AAOI、$TSEM
+
+芯片所需的半扇区：
+$NVDA、$TSM、$ASML、$INTC
+
+芯片的内存扇区：
+$MU、$SNDK、SK 海力士、三星
+
+用于超大规模 AI 推理的 ASIC：
+$AVGO、$MRVL、联发科
+
+确保芯片正常工作的收益率部门：
+$TER、$AEHR、爱德万测试
+
+除了人工智能所需的原材料或基材：
+$AXTI、$COPX、$SOI
+
+还有许多其他因素成为防止人工智能广泛取代的单一、最大的对冲手段。 
+
+谁拥有计算手段（瓶颈、材料、数据中心）：
+
+掌握AI的未来。</div>
+        <div class="tweet-foot">
+          <span>likes 1661 / retweets 170 / replies 115 / views 333108</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-02-27 01:55</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$ASML</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">A simpler overview of $AEHR - $1.1B (without the jargon). One of my long positions:
+
+With AI, thermal is a known bottleneck.
+
+With new gen $NVDA or $AMD type chips that gets hot,  if one chip melts down, it&#x27;s a disaster. 
+
+So tech giants -&gt; every single chip stress tested with heat to see if it fails prematurely in the...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">A simpler overview of $AEHR - $1.1B (without the jargon). One of my long positions:
+
+With AI, thermal is a known bottleneck.
+
+With new gen $NVDA or $AMD type chips that gets hot,  if one chip melts down, it&#x27;s a disaster. 
+
+So tech giants -&gt; every single chip stress tested with heat to see if it fails prematurely in the field. 
+
+$AEHR sells the machines that does the testing of these chips. 
+
+Last year, they were like $POET (pre-qualification/test phase) 
+
+-&gt; but now they&#x27;ve passed.
+
+We&#x27;re seeing that inflection from R&amp;D to mass production:
+
+Today: 
+
+-&gt; $14M order for $AEHR burn-in systems to help scale chip production (wafer level)
+
+But that $14M machine order can only handle a finite number of wafers per week. 
+
+-&gt; As this AI customer scales up, they will physically run out of thermal testing throughput.
+
+so they buy more if they like $AEHR, and this ramps up revenue. 
+
+They also have a separate product line (Sonoma) for testing chips after they&#x27;re packaged.
+
+Hyperscalers have been ordering this, so two different testing stages, two revenue streams.
+
+Management guided for a massive second half 2026 $60M to $80M in new bookings (which is big growth). 
+
+You can look at $TER ($51B) or Advantest (~$125B) to see the ceiling of how big a lot of these companies can get.
+
+They also do testing across other data center layers too: 
+
+- So they&#x27;re working with NAND Flash memory suppliers 
+- Silicon photonics
+
+Tried to strip out as much technical jargon as possible so it&#x27;s more understandable to majority, but it&#x27;s a very nuanced/technical field. 
+
+$AEHR has potential as it&#x27;s now scaling up real-volume after years of R&amp;D and qualification. 
+
+And we&#x27;re sitting in an enormous capex cycle (think $ASML cycles, where people order a lot of machines for the buildout).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027080026051731630" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$AEHR 的更简单概述 - $1.1B（没有行话）。我的多头头寸之一：
+
+对于人工智能来说，热量是一个已知的瓶颈。
+
+对于发热的新一代 NVDA 或 AMD 型芯片，如果其中一个芯片熔化，那将是一场灾难。 
+
+因此，科技巨头 -&gt; 对每个芯片进行热压力测试，看看它是否在现场过早失效。 
+
+$AEHR 出售测试这些芯片的机器。 
+
+去年，他们就像 $POET（资格预审/测试阶段） 
+
+-&gt; 但现在他们已经过去了。
+
+我们看到了从研发到大规模生产的转变：
+
+今天： 
+
+-&gt; 价值 1400 万美元的 AEHR 老化系统订单，以帮助扩大芯片生产规模（晶圆级）
+
+但 1400 万美元的机器订单每周只能处理有限数量的晶圆。 
+
+-&gt; 随着该 AI 客户规模的扩大，他们将耗尽物理上的热测试吞吐量。
+
+因此，如果他们喜欢 $AEHR，他们就会购买更多，这会增加收入。 
+
+他们还有一条单独的产品线（Sonoma），用于在封装后测试芯片。
+
+超大规模企业已经订购了这个，因此有两个不同的测试阶段，两个收入来源。
+
+管理层预计 2026 年下半年新预订量将达到 6000 万至 8000 万美元（这是一个巨大的增长）。 
+
+您可以查看 $TER ($51B) 或 Advantest (~$125B) 来了解这些公司的规模上限。
+
+他们还跨其他数据中心层进行测试： 
+
+- 所以他们正在与 NAND 闪存供应商合作 
+- 硅光子学
+
+试图尽可能多地去掉技术术语，以便大多数人更容易理解，但这是一个非常微妙/技术领域。 
+
+$AEHR 具有潜力，因为经过多年的研发和认证，它现在正在扩大实际数量。 
+
+我们正处于一个巨大的资本支出周期（想想ASML周期，人们订购大量机器进行扩建）。</div>
+        <div class="tweet-foot">
+          <span>likes 723 / retweets 64 / replies 48 / views 88716</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-02-11 11:05</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">For the vast majority of retail: 
+
+If you want to ride the capex trends happening right now, these are probably must have imo:
+
+1. Memory - $MU, Samsung, Sk Hynix, $SNDK
+
+2. Photonics - $LITE, $COHR
+
+3. CoWoS/Foundry/Advanced Packaging - $AMKR, $TSM, $INTC
+
+There&#x27;s a lot of nuanced bottlenecks as you go upstream I talk...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">For the vast majority of retail: 
+
+If you want to ride the capex trends happening right now, these are probably must have imo:
+
+1. Memory - $MU, Samsung, Sk Hynix, $SNDK
+
+2. Photonics - $LITE, $COHR
+
+3. CoWoS/Foundry/Advanced Packaging - $AMKR, $TSM, $INTC
+
+There&#x27;s a lot of nuanced bottlenecks as you go upstream I talk about like :
+
+$AXTI in the substrate/feedstock level for photonics, random niche players like $AAOI for ELS in CPO. $TER or $AEHR for yields, or $TSEM for SiPh. Or even copper usage in DCs to substrates from unimicron to others. 
+
+My opinion is that for the vast 99% of people, you can live life on easy mode without tracking day-to-day updates on X or where the capex spend from $AMKR goes. 
+
+Just turning your brain off from all the supply chain mapping / updates, then just sticking with things like $TSM which is the center of it all is sometimes the better thing to do. 
+
+It probably outperforms a large percentage of the upstream players as well.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2021420335699198329" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>对于绝大多数零售业来说： 
+
+如果你想把握现在发生的资本支出趋势，在我看来，这些可能是必须具备的：
+
+1. 内存 - $MU、三星、Sk Hynix、$SNDK
+
+2. 光子学 - $LITE、$COHR
+
+3. CoWoS/代工/先进封装 - $AMKR、$TSM、$INTC
+
+当你向上游前进时，会遇到很多微妙的瓶颈，我会这样说：
+
+$AXTI 位于光子学的基材/原料水平，随机利基参与者如 $AAOI 位于 CPO 中的 ELS。 $TER 或 $AEHR 表示产量，或 $TSEM 表示 SiPh。甚至是从单微米到其他基材的 DC 中的铜使用。 
+
+我的观点是，对于绝大多数 99% 的人来说，您可以在简单模式下生活，而无需跟踪 X 上的日常更新或 $AMKR 的资本支出去向。 
+
+只需将您的大脑从所有供应链映射/更新中转移出来，然后只坚持像 $TSM 这样的东西，它是这一切的中心，有时是更好的事情。 
+
+它的表现可能也优于大部分上游参与者。</div>
+        <div class="tweet-foot">
+          <span>likes 917 / retweets 86 / replies 42 / views 91168</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-02-10 02:24</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$AMBA</span><span class="chip red">$AXTI</span><span class="chip red">$GOOGL</span><span class="chip red">$NVDA</span><span class="chip red">$OUST</span><span class="chip red">$TER</span><span class="chip red">$U</span></span>
+        </div>
+        <div class="tweet-text">Speaking of other bottlenecks like $AXTI.
+
+I’ve been looking into 4D AI.
+
+Convos with industry insiders leads me to believe it’s an upcoming trend eg. “World Models” for physical AI and humanoids post $NVDA Jensen’s conference.
+
+So took positions into $AEVA which is 4D LiDAR.
+
+Looks like the clearest functional midstre...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Speaking of other bottlenecks like $AXTI.
+
+I’ve been looking into 4D AI.
+
+Convos with industry insiders leads me to believe it’s an upcoming trend eg. “World Models” for physical AI and humanoids post $NVDA Jensen’s conference.
+
+So took positions into $AEVA which is 4D LiDAR.
+
+Looks like the clearest functional midstream bottleneck exposure to the trend, from my research? 
+
+Unless someone has others they’d like to mention.
+
+There’s stuff like $AMBA, $U (yes the games software), $TER, and $OUST but they’re larger companies without the clearest exposure.
+
+That being said it’s still a new space so still doing research. Also, fundamentals are shaky, so this is more of a venture bet for the industry growth. 
+
+Disclosure: I have long shares only of $AEVA, as speculative exposure to 4D AI + World Models for physical AI.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2020926882624176300" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>说到其他瓶颈，例如 $AXTI。
+
+我一直在研究 4D AI。
+
+与业内人士的交流让我相信这是一个即将到来的趋势，例如。 $NVDA Jensen 会议后的物理人工智能和类人机器人的“世界模型”。
+
+因此，我们买入了 $AEVA，即 4D LiDAR。
+
+从我的研究来看，这似乎是趋势中最明显的功能性中游瓶颈？ 
+
+除非有人想提及其他人。
+
+有 $AMBA、$U（是的，游戏软件）、$TER 和 $OUST 之类的公司，但它们都是较大的公司，没有最明显的曝光度。
+
+话虽这么说，这仍然是一个新领域，所以仍在进行研究。此外，基本面不稳定，因此这更像是对行业增长的风险押注。 
+
+披露：我只持有 $AEVA 的多头股票，作为对 4D AI + 物理 AI 世界模型的投机敞口。</div>
+        <div class="tweet-foot">
+          <span>likes 345 / retweets 39 / replies 27 / views 79596</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-02-03 14:46</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;m actually long $AEHR right now in the event any of the big three memory companies use them for HBM DRAM die burn in or hyperscalers expands Sonoma usage. Then there&#x27;s silicon photonics, which is another area of interest.
+
+So it&#x27;s more of a speculative moonshot pick to see if it can compete with Advantest and $TER.
+
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;m actually long $AEHR right now in the event any of the big three memory companies use them for HBM DRAM die burn in or hyperscalers expands Sonoma usage. Then there&#x27;s silicon photonics, which is another area of interest.
+
+So it&#x27;s more of a speculative moonshot pick to see if it can compete with Advantest and $TER.
+
+As for $MRVL, I like it but I find it more of a wait until H2 2026 long. There were reports $MSFT Maia faced roadmap longer delays by like half a year and a large part of marvell&#x27;s expected revenue growth is tethered to this specific hyperscaler ASIC program.
+
+So I&#x27;ll revisit it later on in the year.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2018576691296457118" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>实际上，如果三大内存公司中的任何一家将它们用于 HBM DRAM 芯片烧录或超大规模扩展器扩展了 Sonoma 的使用，我现在实际上是做多 AEHR 的。然后是硅光子学，这是另一个令人感兴趣的领域。
+
+因此，这更像是一个投机性的登月选择，看看它是否可以与 Advantest 和 $TER 竞争。
+
+至于 $MRVL，我喜欢它，但我发现它需要等到 2026 年下半年才能实现。有报道称，$MSFT Maia 的路线图延迟了半年之多，而 Marvell 预期收入增长的很大一部分都与这个特定的超大规模 ASIC 计划挂钩。
+
+所以我会在今年晚些时候重新审视它。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4213</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-02-03 06:14</span>
+          <span><span class="chip red">$SNDK</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">@jukan05 Wow, 19%+ AH on $TER.
+
+Just a normal day for $SNDK though https://t.co/Gu27gjquEi</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@jukan05 Wow, 19%+ AH on $TER.
+
+Just a normal day for $SNDK though https://t.co/Gu27gjquEi</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2018448020719972864" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@jukan05 哇，$TER 上 19%+ AH。
+
+对于 $SNDK 来说只是正常的一天 https://t.co/Gu27gjquEi</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 15533</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-01-24 00:08</span>
+          <span><span class="chip red">$ACLS</span><span class="chip red">$ADEA</span><span class="chip red">$AMKR</span><span class="chip red">$FORM</span><span class="chip red">$KLAC</span><span class="chip red">$MKSI</span><span class="chip red">$MTSI</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$PLAB</span><span class="chip red">$RMBS</span><span class="chip red">$SMTC</span><span class="chip red">$TER</span><span class="chip red">$VECO</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;ve hold positions in the $MU that markets sleep on:
+
+Unimicron.
+
+This one is an incredible long at $16B as they&#x27;re foundational for:
+
+- $MU and Samsung memory substrates
+- $NVDA Rubin/Blackwell
+- TSMC for CoWoS process
+- Apple (iPhones and M-series)
+- Google TPUs
+- AMZN/Hyperscaler ASICs
+- Intel for ABF substrates
+- ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;ve hold positions in the $MU that markets sleep on:
+
+Unimicron.
+
+This one is an incredible long at $16B as they&#x27;re foundational for:
+
+- $MU and Samsung memory substrates
+- $NVDA Rubin/Blackwell
+- TSMC for CoWoS process
+- Apple (iPhones and M-series)
+- Google TPUs
+- AMZN/Hyperscaler ASICs
+- Intel for ABF substrates
+- Amkor that buys Unimicron substrates
+- and all the world&#x27;s semis.
+
+Unimicron is one of the most significant &quot;choke points&quot; in the global AI supply chain as they provide the future:
+
+- IC Substrates for HBM4 / Memory (DRAM/NAND) + GPUs/CPUs
+- The &quot;S&quot; (substrate) in TSM CoWoS
+- Glass Core Substrates for CoPoS
+
+for 2026-2028
+
+and all the foundational parts for customer devices like IPhones and semiconductors used today.
+
+They&#x27;re in the center of the memory bottleneck, CoWoS bottleneck, and interconnects bottleneck for Hyperscaler ASiCs.
+
+As well as the future cycles with Glass Core substrates and more.
+
+AI revolves around the other Micron and you get exposure to most popular bottlenecks like HBM today and tomorrow.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2014731960418238574" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我持有市场所依赖的 $MU 头寸：
+
+欣兴微电子。
+
+这是一个令人难以置信的多头，价格为 $16B，因为它们是以下方面的基础：
+
+- $MU 和三星内存基板
+- $NVDA 鲁宾/布莱克威尔
+- 台积电CoWoS工艺
+- Apple（iPhone 和 M 系列）
+- 谷歌 TPU
+- AMZN/超大规模 ASIC
+- 英特尔 ABF 基板
+- Amkor 购买 Unimicron 基板
+- 以及世界上所有的半决赛。
+
+欣兴微电子是全球人工智能供应链中最重要的“瓶颈”之一，因为它们提供了未来：
+
+- HBM4 / 内存 (DRAM/NAND) + GPU/CPU 的 IC 基板
+- TSM CoWoS 中的“S”（基材）
+- CoPoS 玻璃芯基板
+
+2026-2028 年
+
+以及当今使用的 iPhone 和半导体等客户设备的所有基础部件。
+
+它们处于内存瓶颈、CoWoS 瓶颈和超大规模 ASIC 互连瓶颈的中心。
+
+以及玻璃芯基板的未来周期等。
+
+AI 围绕着其他 Micron 展开，您会遇到当今和未来最流行的瓶颈，例如 HBM。</div>
+        <div class="tweet-foot">
+          <span>likes 454 / retweets 26 / replies 25 / views 110202</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-01-23 00:02</span>
+          <span><span class="chip red">$ACLS</span><span class="chip red">$ADEA</span><span class="chip red">$AMKR</span><span class="chip red">$FORM</span><span class="chip red">$INTC</span><span class="chip red">$KLAC</span><span class="chip red">$MKSI</span><span class="chip red">$MTSI</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$PLAB</span><span class="chip red">$RMBS</span><span class="chip red">$SMTC</span><span class="chip red">$TER</span><span class="chip red">$VECO</span></span>
+        </div>
+        <div class="tweet-text">Memory Supercycle Supply Chain TLDR:
+
+US Sleeper HBM4/Memory alpha picks that benefit from $MU and SK/Samsung:
+
+$VECO ($2B) -Laser annealing
+$PLAB ($2.1B) - Lithography photomask
+$ADEA ($2.18B) - Hybrid bonding
+$ACLS ($2.9B) - Ion implantation
+$FORM ($6.43B) - HBM wafer testing
+$ONTO ($10.6B) - Packaging metrology
+$AMK...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Memory Supercycle Supply Chain TLDR:
+
+US Sleeper HBM4/Memory alpha picks that benefit from $MU and SK/Samsung:
+
+$VECO ($2B) -Laser annealing
+$PLAB ($2.1B) - Lithography photomask
+$ADEA ($2.18B) - Hybrid bonding
+$ACLS ($2.9B) - Ion implantation
+$FORM ($6.43B) - HBM wafer testing
+$ONTO ($10.6B) - Packaging metrology
+$AMKR ($13.1B) -Advanced packaging
+$RMBS ($13.55B) - Memory IP
+$MKSI ($14.9B) - Laser subsystems
+
+Didn&#x27;t include big players like $TER and $KLAC since just wanted to focus on lesser known ones. 
+
+There&#x27;s some indirect beneficiaries too like $SMTC and $MTSI. Markets definitely haven&#x27;t priced some of these in yet. 
+
+Let me know if I missed any. 
+
+Just wanted to publish these in case you find any of them interesting.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2014368177682292774" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>内存超级周期供应链 TLDR：
+
+US Sleeper HBM4/Memory alpha 选择受益于 $MU 和 SK/Samsung：
+
+$VECO ($2B) - 激光退火
+$PLAB ($2.1B) - 光刻光掩模
+$ADEA ($2.18B) - 混合键合
+$ACLS ($2.9B) - 离子注入
+$FORM ($6.43B) - HBM 晶圆测试
+$ONTO ($10.6B) - 包装计量
+$AMKR ($13.1B) - 高级封装
+$RMBS ($13.55B) - 内存 IP
+$MKSI ($14.9B) - 激光子系统
+
+不包括像 $TER 和 $KLAC 这样的大玩家，因为只是想关注不太知名的玩家。 
+
+还有一些间接受益者，例如 $SMTC 和 $MTSI。市场肯定还没有消化其中的一些因素。 
+
+如果我错过了什么，请告诉我。 
+
+只是想发布这些内容，以防您发现其中任何有趣的内容。</div>
+        <div class="tweet-foot">
+          <span>likes 1178 / retweets 170 / replies 54 / views 319004</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=TER">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

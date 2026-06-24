@@ -1,0 +1,2657 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$APLD 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$APLD 历史推文</h1>
+      <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>34</b></div>
+        <div class="stat-card"><span>历史推文</span><b>34</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2025-09-17</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-05-21</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">签约 ARR vs 市值错配 13</span><span class="chip blue">对手方 / 融资质量谱系 10</span><span class="chip blue">关税 / 宏观冲击买点 9</span><span class="chip blue">Mag7 客户集中度过滤 5</span><span class="chip blue">稀释 / ATM 日历否决项 4</span><span class="chip blue">信念分层、仓位与时点 3</span><span class="chip blue">机构滞后 / 暗池与资金流 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-05-22 00:47</span>
+          <span><span class="chip red">$ACN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SHOP</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">And now… $NBIS is $224, around triple prices from last year.
+
+Did you listen anon? https://t.co/WVFKh8d3vy</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">And now… $NBIS is $224, around triple prices from last year.
+
+Did you listen anon? https://t.co/WVFKh8d3vy</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057503508967096598" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>现在……$NBIS 为 224 美元，大约是去年价格的三倍。
+
+你立刻听了吗？ https://t.co/WVFKh8d3vy</div>
+        <div class="tweet-foot">
+          <span>likes 1531 / retweets 64 / replies 182 / views 283452</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-01-18 00:27</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$APLD</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$MSFT</span><span class="chip red">$ORCL</span><span class="chip red">$RIOT</span></span>
+        </div>
+        <div class="tweet-text">Breaking: Elon Musk has sued OpenAI for $134 Billion.
+
+Prediction markets have priced the odds of Elon winning at 59% as of today.   
+
+This may be alarming.   
+
+If OpenAI loses this: 
+
+Markets may trigger a contagion across the AI ecosystem tied to OpenAI.  
+
+$AMD or $CRWV and companies like $ORCL (Stargate) to $MSFT a...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Breaking: Elon Musk has sued OpenAI for $134 Billion.
+
+Prediction markets have priced the odds of Elon winning at 59% as of today.   
+
+This may be alarming.   
+
+If OpenAI loses this: 
+
+Markets may trigger a contagion across the AI ecosystem tied to OpenAI.  
+
+$AMD or $CRWV and companies like $ORCL (Stargate) to $MSFT are massive losers as they&#x27;re heavily levered to OpenAI.  
+
+Then there&#x27;s third order effects on companies as $APLD and $CORZ involved to Coreweave. 
+
+Same goes with $AMD partners, such as $RIOT.  
+
+ For example: 
+
+1. Microsoft / Oracle -&gt; Write down billions in investment, buildout + GPU utilization lag would cost billions 
+
+2. CoreWeave -&gt; Massive risk to backlog revenue, utilization lag + already at risk due to massive debt interest 
+
+3. APLD / CORZ -&gt; Depend on Coreweave for revenue, if the tenant goes down, so does their near term revenue.   
+
+If OpenAI are forced to pay massive damages, return to a strict non-profit status, or declare bankruptcy due to liquidity crises (and cannot fulfill its contractual obligations):  
+
+This might trigger a contagion event across many AI sector names tied to OpenAI.   
+
+Of course this is the worst case scenario. 
+
+My expectation is middle ground: 
+ 
+-&gt; Musk wins the trial (or forces a settlement just before the verdict). 
+
+-&gt; OpenAI is forced to pay a massive fine (e.g., $10B–$20B) and possibly open-source its older models 
+
+-&gt; $MSFT likely steps in to pay the fine or restructure the debt since there&#x27;s too much at stake.   
+
+Or in the 41% chance Musk loses: nothing happens, and companies tied to OpenAI will be fine.  
+
+However it looks markets already priced in a lot of that uncertainty with OpenAI contagion risk with Oracle ($330 -&gt; $195) and Coreweave ($150 -&gt; $101).   
+
+This lawsuit is definitely one of the biggest events markets are watching.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012562412457562304" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>突发新闻：埃隆·马斯克 (Elon Musk) 起诉 OpenAI，索赔 1340 亿美元。
+
+截至目前，预测市场预测埃隆获胜的几率为 59%。   
+
+这可能令人震惊。   
+
+如果 OpenAI 失去了这个： 
+
+市场可能会引发与 OpenAI 相关的整个人工智能生态系统的蔓延。  
+
+$AMD 或 $CRWV 以及 $ORCL (Stargate) 和 $MSFT 等公司都是巨大的输家，因为它们对 OpenAI 的杠杆作用很大。  
+
+然后，对 Coreweave 涉及的 $APLD 和 $CORZ 等公司产生三阶效应。 
+
+$AMD 合作伙伴也是如此，例如 $RIOT。  
+
+ 例如： 
+
+1. Microsoft / Oracle -&gt; 减记数十亿美元的投资，扩建+GPU利用率滞后将花费数十亿美元 
+
+2. CoreWeave -&gt; 积压收入的巨大风险，利用率滞后+由于巨额债务利息已经面临风险 
+
+3. APLD / CORZ -&gt; 收入依赖于 Coreweave，如果租户减少，他们的近期收入也会减少。   
+
+如果OpenAI因流动性危机被迫支付巨额损失、恢复严格的非营利状态或宣布破产（且无法履行其合同义务）：  
+
+这可能会在与 OpenAI 相关的许多人工智能领域名称中引发蔓延事件。   
+
+当然，这是最坏的情况。 
+
+我的期望是中间立场： 
+ 
+-&gt; 马斯克赢得审判（或在判决前强制达成和解）。 
+
+-&gt; OpenAI 被迫支付巨额罚款（例如 $10B–$20B），并可能开源其旧模型 
+
+-&gt; 由于风险太大，微软可能会介入支付罚款或重组债务。   
+
+或者，马斯克输掉的概率为 41%：什么都不会发生，与 OpenAI 相关的公司不会有事。  
+
+然而，市场似乎已经消化了 OpenAI 与 Oracle（330 美元 -&gt; 195 美元）和 Coreweave（150 美元 -&gt; 101 美元）传染风险的不确定性。   
+
+这起诉讼绝对是市场关注的最大事件之一。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 330550</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-01-17 08:36</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">@Mr_Derivatives Just a heads up to the others, a lot of it is nuanced.
+
+With data centers like $WULF or $APLD, a lot of interest is just hedging / convertible note arbitrate and not actual shorts</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Mr_Derivatives Just a heads up to the others, a lot of it is nuanced.
+
+With data centers like $WULF or $APLD, a lot of interest is just hedging / convertible note arbitrate and not actual shorts</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012323115645477076" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Mr_Derivatives 只是提醒其他人，其中很多都是微妙的。
+
+对于像 $WULF 或 $APLD 这样的数据中心，很多人的兴趣只是对冲/可转换票据仲裁，而不是实际的空头</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 12179</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2025-12-19 23:36</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Latest news: OpenAI is raising funds at a $750B valuation after their $10B+ Amazon round at $500B.
+
+$CRWV: +15.85%
+$NBIS: +10.28%
+
+With this deal, companies like Coreweave and Oracle structurally have less counterparty risk with OpenAI&#x27;s stronger balance sheet to fund capex requirements.
+
+Companies like Nebius that are...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Latest news: OpenAI is raising funds at a $750B valuation after their $10B+ Amazon round at $500B.
+
+$CRWV: +15.85%
+$NBIS: +10.28%
+
+With this deal, companies like Coreweave and Oracle structurally have less counterparty risk with OpenAI&#x27;s stronger balance sheet to fund capex requirements.
+
+Companies like Nebius that are algorithmically tied to the sector leaders are up as a result. High-Beta Assets from Rocketlab to Bitcoin are up across the board.
+
+There was extreme volatility recently with the Yen carry trade unwinding + large open interest expiring today. 
+
+However, the fundamentals of the AI trade (especially with Micron&#x27;s godlike ER showing extreme memory demand), and Neoclouds remain better than ever.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2002040245920100762" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>最新消息：OpenAI 在亚马逊以 500B 美元的价格完成 10B+ 轮融资后，以 750B 美元的估值筹集资金。
+
+$CRWV：+15.85%
+NBIS 美元：+10.28%
+
+通过这笔交易，Coreweave 和 Oracle 等公司在结构上减少了交易对手风险，OpenAI 的资产负债表更强劲，可以满足资本支出需求。
+
+像 Nebius 这样在算法上与行业领导者联系在一起的公司因此而上涨。从 Rocketlab 到比特币，高贝塔资产全面上涨。
+
+最近日元套利交易平仓+大量未平仓合约今天到期，波动剧烈。 
+
+然而，人工智能行业的基本面（特别是美光神圣的 ER 显示出极端的内存需求）和 Neoclouds 仍然比以往任何时候都更好。</div>
+        <div class="tweet-foot">
+          <span>likes 174 / retweets 18 / replies 20 / views 40115</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2025-12-17 20:17</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">$HUT has just signed a new Triple lease deal with Anthropic through Fluidstack for at least 245 MW and up to 2,295MW capacity.
+
+The deal is valued at $7 Billion over 15 years with $GOOGL backstopping the deal.
+
+Hut8 is up 25.28% on the news and now trades at a $3.98B market cap https://t.co/50O28EsJVp</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$HUT has just signed a new Triple lease deal with Anthropic through Fluidstack for at least 245 MW and up to 2,295MW capacity.
+
+The deal is valued at $7 Billion over 15 years with $GOOGL backstopping the deal.
+
+Hut8 is up 25.28% on the news and now trades at a $3.98B market cap https://t.co/50O28EsJVp</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2001265461963694140" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$HUT 刚刚通过 Fluidstack 与 Anthropic 签署了一项新的三重租赁协议，容量至少为 245 兆瓦，最高为 2,295 兆瓦。
+
+该交易价值 70 亿美元，为期 15 年，由 $GOOGL 提供支持。
+
+Hut8 受此消息影响上涨 25.28%，目前市值为 $3.98B https://t.co/50O28EsJVp</div>
+        <div class="tweet-foot">
+          <span>likes 117 / retweets 7 / replies 11 / views 52956</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2025-12-17 18:36</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Just In: Amazon&#x27;s $10B OpenAI Funding and The AI Supply Chain Ripple Effect. 
+
+$AMZN is set to invest $10B+ in OpenAI at a $500B+ valuation
+
+Why this is a MASSIVE structural shift for AI stocks:
+
+1. De-Risking the AI DC trade: ( $ORCL, $CRWV, $APLD, $CORZ )
+
+With the SPEED Bill mentioned earlier, the main issues affect...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just In: Amazon&#x27;s $10B OpenAI Funding and The AI Supply Chain Ripple Effect. 
+
+$AMZN is set to invest $10B+ in OpenAI at a $500B+ valuation
+
+Why this is a MASSIVE structural shift for AI stocks:
+
+1. De-Risking the AI DC trade: ( $ORCL, $CRWV, $APLD, $CORZ )
+
+With the SPEED Bill mentioned earlier, the main issues affecting Neoclouds were:
+
+1. DC Delays &amp; Deferred Revenue 
+2. Unsustainable CapEx → No FCF 
+3. OpenAI Contagion/Backlog.
+
+the Speed bill directly addresses #1 and #2. But not #3 with OpenAI. 
+
+The main fears affecting the biggest Neocloud/Datanceter providers like Oracle, Coreweave was their immense capex spend for a counterparty (OpenAI) that doesn&#x27;t have the funding to commit to it&#x27;s capex spend. 
+
+But now, #3 is starting to be addressed with the new Amazon funding.
+
+- With a fresh $10 Billion and Amazon’s balance sheet backing the creator of ChatGPT, OpenAI&#x27;s early commitments to Oracle and CoreWeave are now starting to be backstopped.
+
+- Downstream Impact: This directly derisks companies like $CRWV and $ORCL, who are building capacity for OpenAI. And by two hops, companies like $APLD or $CORZ that rely on Coreweave as a tenant. 
+
+As Coreweave and Oracle are seen as the &quot;sector leaders&quot; this immediately changes sentiment across the whole Neocloud sector from $NBIS, $IREN, $CIFR, $WULF and others as well.  
+
+2. The HyperScaler AI capex wave ( $AMZN, $MRVL, Alchip):
+
+We&#x27;ve seen fears after $AVGO ASIC backlog about hyperscaler spending waning. And many related players tanked on the news.
+
+However, a key condition of this deal is OpenAI’s adoption of Amazon’s proprietary Trainium ASICs. This signals an aggressive scaling of non-Nvidia clusters.
+
+- Design &amp; IP: Direct benefit to ASIC design partners like Marvell ( $MRVL ) and Alchip.
+
+- Custom silicon clusters require massive optical interconnects and HBM. This creates a new capex supercycle for photonics ( $AAOI, $LITE, $COHR ) and memory ( $MU, SK Hynix).
+
+- Foundries such as $TSM. 
+
+and many more related companies involved in the buildout of hyperscaler ASICs.
+
+The only loser? Nvidia ( $NVDA ). 
+
+Amazon is successfully using its massive balance sheet to force the leading LLM to diversify away from H100/Blackwell dependence and boosting the whole AI supply chain alongside it. 
+
+The main takeaway is that the AI trade is funded by the richest companies in the world, such as $AMZN, and OpenAI is showing it can scale up its balance sheet to meet requirements by trading off equity.
+
+Go long on the AI sector.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2001240032099885381" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>最新消息：亚马逊的 10B 美元 OpenAI 资金和人工智能供应链涟漪效应。 
+
+$AMZN 将以 $500B+ 估值向 OpenAI 投资 $10B+
+
+为什么这是人工智能股票的巨大结构性转变：
+
+1. 降低 AI DC 交易风险：( $ORCL, $CRWV, $APLD, $CORZ )
+
+就前面提到的 SPEED 法案而言，影响 Neoclouds 的主要问题是：
+
+1. DC 延误和递延收入 
+2. 不可持续的资本支出 → 无自由现金流 
+3. OpenAI 传染/积压。
+
+速度法案直接针对#1 和#2。但 OpenAI 却不是第三名。 
+
+影响 Oracle、Coreweave 等最大 Neocloud/Datanceter 提供商的主要担忧是，他们为交易对手 (OpenAI) 支付了巨额资本支出，而对方没有资金承诺其资本支出。 
+
+但现在，亚马逊的新资金开始解决第三个问题。
+
+- 随着新的 100 亿美元和亚马逊的资产负债表支持 ChatGPT 的创建者，OpenAI 对 Oracle 和 CoreWeave 的早期承诺现在开始得到支持。
+
+- 下游影响：这直接降低了 $CRWV 和 $ORCL 等正在为 OpenAI 建设能力的公司的风险。经过两步，$APLD 或 $CORZ 等公司依赖 Coreweave 作为租户。 
+
+由于 Coreweave 和 Oracle 被视为“行业领导者”，这立即改变了整个 Neocloud 行业的情绪，包括 $NBIS、$IREN、$CIFR、$WULF 等。  
+
+2. HyperScaler AI 资本支出浪潮（$AMZN、$MRVL、Alchip）：
+
+在 $AVGO ASIC 积压之后，我们看到人们对超大规模支出的担忧正在减弱。许多相关玩家都对这个消息感到不满。
+
+然而，这笔交易的一个关键条件是 OpenAI 采用亚马逊专有的 Trainium ASIC。这标志着非 Nvidia 集群的积极扩展。
+
+- 设计和 IP：为 Marvell ($MRVL) 和 Alchip 等 ASIC 设计合作伙伴带来直接利益。
+
+- 定制硅集群需要大量的光学互连和 HBM。这为光子学（$AAOI、$LITE、$COHR）和内存（$MU、SK Hynix）创造了一个新的资本支出超级周期。
+
+- 代工厂，例如 $TSM。 
+
+以及更多参与超大规模 ASIC 建设的相关公司。
+
+唯一的输家？英伟达（$NVDA）。 
+
+亚马逊成功地利用其庞大的资产负债表迫使领先的法学硕士实现多元化，摆脱对 H100/Blackwell 的依赖，并与之一起推动整个人工智能供应链的发展。 
+
+主要结论是人工智能交易是由世界上最富有的公司（例如 $AMZN）资助的，而 OpenAI 表明它可以通过权衡股权来扩大其资产负债表以满足要求。
+
+做多人工智能领域。</div>
+        <div class="tweet-foot">
+          <span>likes 90 / retweets 13 / replies 11 / views 85972</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2025-12-17 12:15</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">Thanks! There were some other posts about the Speed act passing and “bullish for $NBIS and $CIFR”, which is helpful.
+
+But I just wanted to break down “why” since the DC sector is EXCEPTIONALLY nuanced and interconnected. 
+
+Speed act passing is better than 3x rate cut, since delays are probably one of single biggest iss...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Thanks! There were some other posts about the Speed act passing and “bullish for $NBIS and $CIFR”, which is helpful.
+
+But I just wanted to break down “why” since the DC sector is EXCEPTIONALLY nuanced and interconnected. 
+
+Speed act passing is better than 3x rate cut, since delays are probably one of single biggest issue for probability whe we look at utilization drag, time sensitive depreciation costs, and margins affecting companies like $ORCL and $CRWV. 
+
+Bear case thesis with delays and “unsustainable capex” gets derisked with this act on direct beneficiaries like Coreweave. And companies downstream from $APLD and $CORZ improve as well from lower counterparty risk.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2001144106513522697" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>谢谢！还有一些其他关于速度法案通过和“看涨 $NBIS 和 $CIFR”的帖子，这很有帮助。
+
+但我只是想解释一下“原因”，因为华盛顿特区的情况异常微妙且相互关联。 
+
+速度法案的通过比 3 倍降息要好，因为当我们考虑利用率拖累、时间敏感的折旧成本以及影响 $ORCL 和 $CRWV 等公司的利润时，延迟可能是最大的单一概率问题之一。 
+
+对于像 Coreweave 这样的直接受益者来说，这一法案消除了关于延迟和“不可持续的资本支出”的熊市论点的风险。 $APLD 和 $CORZ 下游的公司也因交易对手风险降低而有所改善。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2209</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2025-12-17 11:38</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Just now, the SPEED Act ADVANCES in the House.
+
+This is the single biggest de-risking bill/event for the Neocloud sector ( $NBIS, $CRWV, $IREN) this year.
+
+Here&#x27;s why and a rundown: 
+
+The U.S. GOVERNMENT is set to support the AI data center buildout from Oracle down to Nebius on national security grounds for US vs Chin...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just now, the SPEED Act ADVANCES in the House.
+
+This is the single biggest de-risking bill/event for the Neocloud sector ( $NBIS, $CRWV, $IREN) this year.
+
+Here&#x27;s why and a rundown: 
+
+The U.S. GOVERNMENT is set to support the AI data center buildout from Oracle down to Nebius on national security grounds for US vs China.
+
+Oracle and CoreWeave recently dropped 40%+ (tanking $NBIS $140 -&gt; $79, $IREN $80 -&gt; 35, $CIFR, $24 -&gt; $14 as well) on three core fears:
+
+1. DC Delays &amp; Deferred Revenue
+2. Unsustainable CapEx → No FCF
+3. OpenAI Contagion/Backlog.
+
+The Speed Act and US Government intervention fixes bear-case points for data center buildout delays and addresses utilization lag profitability issues (margins).  
+
+#1 DC Delays &amp; Deferred Revenue
+
+Bear Thesis: Multi-year permitting delays (NEPA, transmission) turned high-value contracts into deferred revenue risk. $CRWV explicitly cited vendor delays for lowering guidance and tanked on earnings shifting a large portion of revenue to from Q1 Q2 2026.   
+
+The alpha if the Speed Act passes: 
+
+Mandatory Speed and Litigation Shields.
+
+- The Speed Act mandates strict, non-negotiable deadlines (often 1-2 years) for federal environmental and regulatory reviews. 
+
+- The Litigation Shield: The bill drastically shortens the statute of limitations for filing lawsuits against approved permits (e.g., to 150 days) and instructs courts to allow DC buildout to continue even if a permit is temporarily challenged).
+
+The Result: The timeline from contract signing to &quot;GPUs on racks -&gt; revenue flowing&quot; is now compressed and politically de-risked by the Federal Government. 
+
+Deferred revenue is pulled forward and fixes delays and deferred profitability/revenue that plagued $CRWV, $APLD, and the Neocloud sector.
+
+#2: Unsustainable CapEx -&gt; No FCF from monetizing the assets
+
+Bear Thesis: Companies were spending billions on GPUs and construction ( $ORCL&#x27;s capex is massive) with utilization drag (from the point of purchasing the GPUs to monetization) largely affecting profitability and FCF. 
+
+This also largely affects AI Cloud vendors (lacking power to turn monetize the GPUs/capex).
+
+Again This forced companies to take a massive write-down risk due to Utilization Drag (the time the GPU sits idle while the clock runs on depreciation/power-up). This drag is HUGE for profitability on DC segments, as cited in The Information reports on $ORCL&#x27;s razor-thin AI margins.
+
+The SPEED Act and the US Government intervention directly de-risks CapEx as the legislative mandate for speed (Fix #1) effectively guarantees that power infrastructure will arrive within a defined, short timeline. 
+
+This certainty allows $NBIS, $CRWV, and $IREN to time the purchase and deployment of billions in GPUs with high confidence that the assets will begin monetizing immediately upon arrival as well as accelerates FCF from reducing utilization drags. 
+
+This structural change flows down the entire industry. It instantly de-risks the major AI Cloud vendors ($AMZN, $MSFT, $ORCL) who can now guarantee their capacity, and it guarantees demand for the Colo/Infra/Energy providers ( $CIFR, $WULF, and others) whose core business is supplying that power capacity.
+
+The bear case on capex -&gt; FCF + buildout delay timeline has now directly addressed with the Speed ACT. 
+
+Now the US government is set accelerate companies like $NBIS, $CRWV, and $IREN as AI Datacenters is now placed on the forefront of the AI national security battle between the United States and China. 
+
+Whether it passes legislation in the House is what every investor should be watching, but if does, this is one of the largest (not-talked about) tailwinds for the Neocloud /AI Decenter buildout.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2001134839685353742" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>刚刚，《速度法案》在众议院取得进展。
+
+这是今年 Neocloud 领域（$NBIS、$CRWV、$IREN）最大的单一去风险法案/事件。
+
+这是原因和概要： 
+
+出于中美国家安全考虑，美国政府将支持从 Oracle 到 Nebius 的人工智能数据中心建设。
+
+由于三个核心担忧，Oracle 和 CoreWeave 最近下跌了 40% 以上（$NBIS $140 -&gt; $79、$IREN $80 -&gt; 35、$CIFR、$24 -&gt; $14）：
+
+1. DC 延误和递延收入
+2. 不可持续的资本支出 → 无自由现金流
+3. OpenAI 传染/积压。
+
+速度法案和美国政府的干预解决了数据中心建设延迟的悲观点，并解决了利用率滞后的盈利问题（利润）。  
+
+#1 DC 延误和递延收入
+
+熊市论点：多年的许可延迟（NEPA、输电）将高价值合同转化为递延收入风险。 $CRWV 明确指出供应商延迟降低了指导意见，并因将大部分收入从 2026 年第一季度转移到第二季度而导致收益下跌。   
+
+如果速度法案通过，则阿尔法： 
+
+强制性速度和诉讼盾牌。
+
+- 《速度法案》对联邦环境和监管审查规定了严格的、不可协商的期限（通常为 1-2 年）。 
+
+- 诉讼盾：该法案大大缩短了针对已批准许可证提起诉讼的时效（例如缩短至 150 天），并指示法院允许 DC 建设继续进行，即使许可证暂时受到质疑。
+
+结果：从合同签署到“机架上的 GPU -&gt; 收入流动”的时间线现已被联邦政府压缩并降低了政治风险。 
+
+递延收入被提前，并修复了困扰 $CRWV、$APLD 和 Neocloud 领域的延迟和递延盈利能力/收入。
+
+#2：不可持续的资本支出 -&gt; 资产货币化没有自由现金流
+
+熊市论点：公司在 GPU 和建设上花费了数十亿美元（$ORCL 的资本支出巨大），而利用率拖累（从购买 GPU 到货币化）在很大程度上影响了盈利能力和自由现金流。 
+
+这也在很大程度上影响了人工智能云供应商（缺乏将 GPU/资本支出货币化的能力）。
+
+这再次迫使公司因利用率拖累（当时钟在折旧/上电时运行时 GPU 闲置的时间）而承担巨大的减记风险。正如 The Information 报告中关于 $ORCL 微薄的人工智能利润率的报道所指出的那样，这种拖累对 DC 领域的盈利能力来说是巨大的。
+
+SPEED 法案和美国政府干预直接降低了资本支出风险，因为速度立法授权（修复#1）有效保证了电力基础设施将在规定的短时间内建成。 
+
+这种确定性使 $NBIS、$CRWV 和 $IREN 能够在购买和部署数十亿个 GPU 时充满信心，相信这些资产将在抵达后立即开始货币化，并加速 FCF 减少利用率拖累。 
+
+这种结构性变化波及整个行业。它立即降低了主要人工智能云供应商（$AMZN、$MSFT、$ORCL）的风险，这些供应商现在可以保证其容量，并且保证了对核心业务是提供电力容量的托管/基础设施/能源提供商（$CIFR、$WULF 等）的需求。
+
+资本支出 -&gt; FCF + 扩建延迟时间线的熊市情况现已通过 Speed ACT 直接解决。 
+
+现在，美国政府正在加速推动 $NBIS、$CRWV 和 $IREN 等公司的发展，因为人工智能数据中心现在已被置于中美之间人工智能国家安全之战的最前沿。 
+
+每个投资者都应该关注众议院是否通过立法，但如果通过，这将是 Neocloud /AI Decenter 扩建的最大（未提及）推动因素之一。</div>
+        <div class="tweet-foot">
+          <span>likes 453 / retweets 93 / replies 27 / views 169533</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2025-12-16 05:39</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$APLD</span><span class="chip red">$AVGO</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FRMI</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$LGN</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MOD</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$RMBS</span><span class="chip red">$SEI</span><span class="chip red">$SNDK</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Never thought I’d see $NBIS at $80 or $IREN at $35 again.
+
+They’re both trading a lot lower than when they first announced Mag7 contracts. https://t.co/boqDYeyXzL</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Never thought I’d see $NBIS at $80 or $IREN at $35 again.
+
+They’re both trading a lot lower than when they first announced Mag7 contracts. https://t.co/boqDYeyXzL</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2000682225327857953" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>从未想过我会再次看到 $NBIS 为 80 美元或 $IREN 为 35 美元。
+
+他们的交易价格都比首次宣布 Mag7 合约时低很多。 https://t.co/boqDYeyXzL</div>
+        <div class="tweet-foot">
+          <span>likes 434 / retweets 17 / replies 59 / views 188267</span>
+        </div>
+        <div class="chips"><span class="chip blue">Mag7 客户集中度过滤</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2025-12-15 07:58</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$APLD</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FRMI</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LGN</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MOD</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RMBS</span><span class="chip red">$SEI</span><span class="chip red">$SNDK</span><span class="chip red">$SOFI</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Falling Knife or Dip Buy? 
+
+What a brutal Friday for stocks after $ORCL and $AVGO earnings.
+
+Popular FinX names that dropped in just 1 day:
+
+$FRMI | -34.1%
+$SNDK | -15.89%
+$SEI | -15.3%
+$OKLO | -15.13%
+$MOD | -14.67%
+$ALAB | -14.31%
+$FLNC | -13.96%
+$LITE | -12.83%
+$GLXY | -11.73%
+$AAOI | -11.73%
+$AVGO | -11.43%
+$RMBS |...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Falling Knife or Dip Buy? 
+
+What a brutal Friday for stocks after $ORCL and $AVGO earnings.
+
+Popular FinX names that dropped in just 1 day:
+
+$FRMI | -34.1%
+$SNDK | -15.89%
+$SEI | -15.3%
+$OKLO | -15.13%
+$MOD | -14.67%
+$ALAB | -14.31%
+$FLNC | -13.96%
+$LITE | -12.83%
+$GLXY | -11.73%
+$AAOI | -11.73%
+$AVGO | -11.43%
+$RMBS | -11.11%
+$CRWV | -10.06%
+$GLXY | -10.42%
+$EOSE | -9.73%
+$CIFR | -9.69%
+$APLD | -9.43%
+$WULF | -9.48%
+$BMNR | -9.17%
+$LGN | -8.86%
+$IREN | -8.79%
+$TSSI | -8.67%
+$NBIS | -6.99%
+
+I usually add more commentary on each stock, but it&#x27;s been pretty incredible to watch. Things like $FRMI makes sense on losing tenants/funding but as for others.
+
+$NBIS is now lower than post Gov, $MSFT,  and $META deals &amp; $AVGO just had one of its largest drops in history even after $GOOGL TPU ramp. 
+
+What are you watching or buying on Monday?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2000354823435420024" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>落刀还是逢低买入？ 
+
+在发布了 $ORCL 和 $AVGO 收益之后，对于股市来说，周五是多么残酷的一天。
+
+短短 1 天内下降的热门 FinX 名字：
+
+$FRMI | -34.1%
+$SNDK | -15.89%
+$SEI | -15.3%
+$奥克洛 | -15.13%
+$MOD | -14.67%
+$ALAB | -14.31%
+$FLNC | -13.96%
+$精简版| -12.83%
+$GLXY | -11.73%
+$AAOI | -11.73%
+$AVGO | -11.43%
+$人民币| -11.11%
+$CRWV | -10.06%
+$GLXY | -10.42%
+$EOSE | -9.73%
+$CIFR | -9.69%
+$APLD | -9.43%
+$WULF | -9.48%
+$BMNR | -9.17%
+$LGN | -8.86%
+$艾伦 | -8.79%
+$TSSI | -8.67%
+$NBIS | -6.99%
+
+我通常会对每只股票添加更多评论，但观看起来非常令人难以置信。像 $FRMI 这样的东西对于失去租户/资金来说是有意义的，但对于其他人来说。
+
+$NBIS 现在低于 Gov 后、$MSFT 和 $META 交易，而 $AVGO 刚刚经历了历史上最大的跌幅之一，即使在 $GOOGL TPU 上涨之后也是如此。 
+
+周一你在看什么或买什么？</div>
+        <div class="tweet-foot">
+          <span>likes 93 / retweets 10 / replies 13 / views 143676</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2025-12-11 14:43</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span></span>
+        </div>
+        <div class="tweet-text">Yep that’s a good example. If you look at convertible offerings for $NBIS and $IREN both their interest rates were 1-2.5% roughly because $MSFT (mag7) is their shared backlog.
+
+A lot of Neoclouds are affected by OpenAi though and even by two hops like $APLD from $CRWV(main tenant), which had to sell junk bonds at 9.25%...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yep that’s a good example. If you look at convertible offerings for $NBIS and $IREN both their interest rates were 1-2.5% roughly because $MSFT (mag7) is their shared backlog.
+
+A lot of Neoclouds are affected by OpenAi though and even by two hops like $APLD from $CRWV(main tenant), which had to sell junk bonds at 9.25%.
+
+$NBIS is paying ~$73m/year from interest, while $CRWV is paying upwards of $1.3B. But the market seems to move the whole sector together from OpenAI contagion without discerning individual companies that are isolated.
+
+The difference in interest debt, risk, and customer anchors is massive.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1999007067273900257" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是的，这是一个很好的例子。如果你看看 $NBIS 和 $IREN 的可转换产品，它们的利率大致都是 1-2.5%，因为 $MSFT (mag7) 是他们共享的积压订单。
+
+不过，许多 Neocloud 都受到 OpenAi 的影响，甚至受到 $CRWV（主要租户）的 $APLD 等两次跳跃的影响，后者不得不以 9.25% 的价格出售垃圾债券。
+
+$NBIS 每年支付约 7300 万美元的利息，而 $CRWV 则支付超过 $1.3B。但市场似乎将整个行业从 OpenAI 的蔓延中拉到一起，却没有辨别出孤立的个别公司。
+
+利息债务、风险和客户锚的差异是巨大的。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2080</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2025-12-06 01:45</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$ASTS</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$UBER</span></span>
+        </div>
+        <div class="tweet-text">Pre-earnings $NBIS was sitting around $115-$135. We&#x27;ve dropped over ~21%-40% since then on: 
+
+Robotaxi FSD launch with $UBER, doubled ARR estimates, increased GW capacity guidance by 150%, surprise $META contract, MSCI inclusion inflow.
+
+The only downside: 25m share dilution. Which I extremely dislike as an investor (F...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Pre-earnings $NBIS was sitting around $115-$135. We&#x27;ve dropped over ~21%-40% since then on: 
+
+Robotaxi FSD launch with $UBER, doubled ARR estimates, increased GW capacity guidance by 150%, surprise $META contract, MSCI inclusion inflow.
+
+The only downside: 25m share dilution. Which I extremely dislike as an investor (FCF -&gt; ramp up would be preferred) 
+
+Unfortunately, TI hit reports on $ORCL, $CRWV major debt flag, $CRWV affecting suppliers from $APLD raising junk bonds + credit tightening, and GPU depreciation arguments all kind of hit the Neocloud market at the same time.
+
+Only credit tightening was something material and doesn&#x27;t warrant that much of a drop for $NBIS (purely sentiment). 
+
+That being said they need to improve their marketing for sure. (Eg. nobody associates robotaxis with $NBIS at all and even mainstream news don&#x27;t know about it).
+
+As for $IREN, they did a surprising move to buy GPUs instead of colo offerings and given the 3GW capacity investors probably see a huge huge amount of potential dilution, hence the 40% drop too. 
+
+I&#x27;m sure $IREN is fine on the marketing front, it has that cult-like following like $ASTS (which is a good thing going for them).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1996999459788804485" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>预盈 NBIS 约为 115-135 美元。从那时起，我们已经下降了约 21%-40%： 
+
+Robotaxi FSD 与 UBER 合作推出，ARR 预期翻倍，GW 容量指导提高 150%，META 合同令人惊喜，MSCI 纳入流入。
+
+唯一的缺点：2500 万股股权稀释。作为投资者，我非常不喜欢这一点（FCF -&gt; 提升将是首选） 
+
+不幸的是，TI 发布了有关 $ORCL、$CRWV 主要债务标志、$CRWV 影响 $APLD 供应商筹集垃圾债券 + 信贷紧缩以及 GPU 折旧争论的报告，这些都同时冲击了 Neocloud 市场。
+
+只有信贷紧缩才是实质性的，并不能保证美元 NBIS 大幅下跌（纯粹是情绪）。 
+
+话虽这么说，他们肯定需要改进营销。 （例如，根本没有人将机器人出租车与 $NBIS 联系起来，甚至主流新闻也不知道这一点）。
+
+至于 $IREN，他们做出了一个令人惊讶的举动，购买 GPU 而不是托管产品，并且考虑到 3GW 容量，投资者可能会看到巨大的潜在稀释，因此也下降了 40%。 
+
+我确信 $IREN 在营销方面做得很好，它拥有像 $ASTS 这样的狂热追随者（这对他们来说是一件好事）。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2560</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2025-11-25 09:03</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$APLD</span><span class="chip red">$AWS</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$QLCM</span></span>
+        </div>
+        <div class="tweet-text">Good question about risk, I enjoy talking about the downsides too. 
+
+1. Hyperscalers completely their own datacenter buildout with GPUs (TPUs with $GOOGL, Tranium with $AWS), energy, locations in 5+ years.
+
+This is the analogy of Qualcomm with Apple. Apple just uses $QLCM, then builds it&#x27;s own vertical integration -&gt; o...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Good question about risk, I enjoy talking about the downsides too. 
+
+1. Hyperscalers completely their own datacenter buildout with GPUs (TPUs with $GOOGL, Tranium with $AWS), energy, locations in 5+ years.
+
+This is the analogy of Qualcomm with Apple. Apple just uses $QLCM, then builds it&#x27;s own vertical integration -&gt; once it&#x27;s done it sacks the customer. Hence why it&#x27;s important to build up a company&#x27;s own moat during the time ( $NBIS is doing full-stack with its own enterprise clients like cursor, shopify, etc during this time and scaling subsidiaries. Companies fully dependent on one or two hyperscaler contracts don&#x27;t do well).
+
+2. GPU deprecation for $NBIS, $IREN, $CRWV, and $ORCL. 
+
+Any provider doing full stack has higher margins, higher revenue, higher ramp. But that comes into spending billions on GPUs and the GPUs not too much value over the course of the next 4 years. 
+
+I&#x27;ve always maintained GPUs are still valuable many years later, eg. TPUs still are used 7-8 years later, 2020 $NVDA GPUs are still resold high and are used different stacks of inference (lower prio) but run alongside newer models. 
+
+3. Credit tightening + dilution
+
+Too much spend on buildout -&gt; needs to dilute more to build + buy GPUs. We&#x27;ve already seen that with the $4B convertible + $2.5B ATM offering. $NBIS should have enough, but there&#x27;s always the risk margins are lower than expected eg. $ORCL buildout, then the company needs to dilute more. In a market where it&#x27;s harder to raise eg. $APLD junk bonds, it might run into the $CRWV problem where they are forced to raise money with terrible interest rates cutting into the margins. 
+
+ 4. Overbuildout
+
+If there&#x27;s a breakthrough in LLM software, for example,  Claude Opus 4.5 using deepseek type lightweight inference, then less utilization of GPUs then we see data centers, $NVDA, $AMD, and others go down with the AI ship. 
+
+Those are probably the four main risks for $NBIS. This is different for each company, for $IREN I would point to software orchestration for their iaas layer for margin optimization but for $NBIS they have that down.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1993123237136633899" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>关于风险的好问题，我也喜欢谈论缺点。 
+
+1. 超大规模企业在 5 年多的时间内通过 GPU（使用 $GOOGL 的 TPU、使用 $AWS 的 Tranium）、能源、位置完成自己的数据中心建设。
+
+这是高通与苹果的类比。苹果只是使用 $QLCM，然后建立自己的垂直整合 -&gt; 一旦完成，就会解雇客户。因此，为什么在此期间建立公司自己的护城河很重要（$NBIS 在此期间与自己的企业客户（如 Cursor、Shopify 等）进行全栈开发，并扩展子公司。完全依赖一两个超大规模合同的公司表现不佳）。
+
+2. 弃用 $NBIS、$IREN、$CRWV 和 $ORCL 的 GPU。 
+
+任何提供全栈服务的提供商都有更高的利润、更高的收入、更高的增长。但这意味着在 GPU 上花费了数十亿美元，而 GPU 在未来 4 年内并没有太多价值。 
+
+我一直认为 GPU 多年后仍然有价值，例如。 7-8 年后，TPU 仍然被使用，2020 美元的 NVDA GPU 仍然被高价转售，并使用不同的推理堆栈（较低的优先级），但与较新的模型一起运行。 
+
+3.信贷紧缩+稀释
+
+扩建支出过多 -&gt; 需要稀释更多资金来建造+购买 GPU。我们已经通过 $4B 可兑换 + $2.5B ATM 产品看到了这一点。 $NBIS 应该足够了，但风险边际总是低于预期，例如。 $ORCL 扩建，那么公司需要稀释更多。在一个更难筹集资金的市场，例如。 $APLD 垃圾债券，它可能会遇到 $CRWV 问题，他们被迫以可怕的利率削减利润来筹集资金。 
+
+ 4. 过度扩建
+
+如果 LLM 软件取得突破，例如使用 Deepseek 类型的轻量级推理的 Claude Opus 4.5，那么 GPU 的利用率就会降低，那么我们就会看到数据中心、$NVDA、$AMD 和其他数据中心与 AI 船舶一起沉没。 
+
+这些可能是 $NBIS 的四个主要风险。这对于每家公司来说都是不同的，对于 $IREN，我会指出他们的 iaas 层的软件编排以实现利润优化，但对于 $NBIS，他们已经做到了这一点。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1351</span>
+        </div>
+        <div class="chips"><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2025-11-24 23:51</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$COIN</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$DGDX</span><span class="chip red">$FTX</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRRR</span><span class="chip red">$HIVE</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NET</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$SOL</span><span class="chip red">$TSLA</span><span class="chip red">$UBER</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">Nebius [ $NBIS ] is the most undervalued growth company right now. 
+
+And it has the potential to become the next $GOOGL at a $21B market cap. There&#x27;s one simple reason:
+
+It&#x27;s portfolio companies are mindblowing.
+
+The most incredible example on this concept is the company $FTX. Here&#x27;s the story:
+
+When we look at how $ME...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Nebius [ $NBIS ] is the most undervalued growth company right now. 
+
+And it has the potential to become the next $GOOGL at a $21B market cap. There&#x27;s one simple reason:
+
+It&#x27;s portfolio companies are mindblowing.
+
+The most incredible example on this concept is the company $FTX. Here&#x27;s the story:
+
+When we look at how $META grew into a $1T+ company, it wasn&#x27;t just Facebook. It was their portfolio companies Instagram, Whatsapp, and others made Meta dominate the social media landscape.
+
+$FTX was doing something similar, but in digital assets and frontier technologies. 
+
+Four years ago, in 2021, $FTX invested $5.8B into a large basket of assets. And put a large chunk into these three core companies:
+
+1. Anthropic, 13.56% at a $2.5 Billion valuation.
+2. Robinhood [ $HOOD ] 7.6% at a $8.54B valuation
+3. Solana [ $SOL ], 41M+ tokens. 
+
+Fast forward to today, that would have been:
+
+· Anthropic in it&#x27;s latest round is worth $350B. That stake would have been worth ~$47.4B.
+
+· Robinhood is now worth over $100B. That stake would be worth ~$7.6B.
+
+· Solana is now worth  $131.5 per token, making the stake well over $5.7B. 
+
+Those three companies alone generated well over $55B+ in value in 4 years time, and this is not even including FTX&#x27;s tens of billions of dollars + hundreds of other investments + holdings in Chime, Layerzero, Aptos, Hidden Road (bought by $COIN), and crypto.
+
+Their portfolio companies outlasted their core business (and imagine, how much it would have been worth if the core business kept scaling like $GOOGL search did alongside Youtube). 
+
+$NBIS now has the same setup as $FTX did in crypto, $META in social media, but in artificial intelligence with a legitimate and incredibly rapidly growing core business. 
+
+Nebius owns:
+
+1. Clickhouse, 28% at a ~$7B valuation ($6.3 H1 2025)
+2. Avride, 83% at a ~$6B valuation. (post Uber raise)
+3. Toloka AI, ~65% at a ~$640 million valuation 
+4. TripleTen, 100% at a ~$300m valuation.
+
+· Clickhouse powers Anthropic, $META, $TSLA, $NET, and many fortune 500 companies.
+
+· Avride is a self-driving car robotaxi company, spun out of Yandex that $UBER invested in a $375M round in to compete with Waymo.
+
+· Toloka is a AI labeling platform that Amazon, Microsoft, Anthropic, and Shopify uses. 
+
+$1.96B + $4.96B + $416M + $300m = $7.6B valuation in portfolio companies that are growing faster than most public growth companies. 
+
+But if we look at their core business that is scaling to 700%+ Y/Y to $7-9B ARR, with $4.8B in cash, powering $META, $MSFT, Cursor, governments, and many more... 
+
+This might be the last month it&#x27;s under $90 before it receives hundreds of millions to low billions of extra inflows from MSCI inclusion today. There&#x27;s no other datacenter growth company that has this type of portfolio if we look at crowd favorites like $IREN or $CIFR. 
+
+$NBIS is only valued at $21B and the market is sleeping on this opportunity.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1992984440960921604" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Nebius [ $NBIS ] 是目前最被低估的成长型公司。 
+
+它有潜力成为下一个 $GOOGL，市值为 $21B。有一个简单的原因：
+
+它的投资组合公司令人兴奋。
+
+这个概念最令人难以置信的例子是 $FTX 公司。故事是这样的：
+
+当我们看到 $META 如何成长为一家价值 1T+ 的公司时，我们发现这不仅仅是 Facebook。正是他们的投资组合 Instagram、Whatsapp 等公司让 Meta 在社交媒体领域占据主导地位。
+
+$FTX 也在做类似的事情，但涉及数字资产和前沿技术。 
+
+四年前，即 2021 年，$FTX 向一大篮子资产投资了 $5.8B。并将大量资金投入到这三个核心公司：
+
+1. Anthropic，13.56%，估值 25 亿美元。
+2. Robinhood [ $HOOD ] 7.6%，估值为 $8.54B
+3. Solana [ $SOL ]，4100 万+ 代币。 
+
+快进到今天，那就是：
+
+· Anthropic 在其最新一轮中价值 $350B。该股份的价值约为 $47.4B。
+
+· Robinhood 现在价值超过 $100B。该股份价值约 $7.6B。
+
+· Solana 现在每个代币价值 131.5 美元，使得股权远远超过 $5.7B。 
+
+仅这三家公司就在 4 年内创造了超过 55B+ 的价值，这甚至不包括 FTX 的数百亿美元 + 数百项其他投资 + 对 Chime、Layerzero、Aptos、Hidden Road（由 $COIN 购买）和加密货币的持股。
+
+他们的投资组合公司比他们的核心业务更长久（想象一下，如果核心业务像 $GOOGL 搜索与 Youtube 一样不断扩展，那该公司会值多少钱）。 
+
+$NBIS 现在的设置与 $FTX 在加密货币领域、$META 在社交媒体领域的设置相同，但在人工智能领域拥有合法且快速增长的核心业务。 
+
+尼比乌斯拥有：
+
+1. Clickhouse，28%，估值约为 7B 美元（2025 年上半年 6.3 美元）
+2. Avride，83%，估值约为 6B 美元。 （Uber 加薪后）
+3. Toloka AI，约占 65%，估值约 6.4 亿美元 
+4. TripleTen，100%，估值约 3 亿美元。
+
+· Clickhouse 为 Anthropic、$META、$TSLA、$NET 和许多财富 500 强公司提供支持。
+
+· Avride 是一家自动驾驶汽车机器人出租车公司，从 Yandex 中分离出来，UBER 投资了 3.75 亿美元，与 Waymo 竞争。
+
+· Toloka 是 Amazon、Microsoft、Anthropic 和 Shopify 使用的 AI 标签平台。 
+
+$1.96B + $4.96B + $416M + $300m = $7.6B 投资组合公司的估值，这些公司的增长速度快于大多数上市成长型公司。 
+
+但如果我们看看他们的核心业务，其年增长率达到 700% 以上，ARR 为 7-9B 美元，现金为 4.8B 美元，为 $META、$MSFT、Cursor、政府等提供动力...... 
+
+这可能是该股跌至 90 美元以下的最后一个月，之后该股今天将因 MSCI 纳入而获得数亿至数十亿美元的额外资金流入。如果我们看看 $IREN 或 $CIFR 等大众喜爱的产品，没有其他数据中心增长公司拥有此类投资组合。 
+
+$NBIS 的估值仅为 $21B，市场正在沉睡于这个机会。</div>
+        <div class="tweet-foot">
+          <span>likes 468 / retweets 65 / replies 35 / views 185080</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2025-11-24 02:52</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$APLD</span><span class="chip red">$BTC</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">Markets just suffered their worst deleveraging shock in recent history.
+
+High-beta assets are collapsing:
+
+• $NBIS, $IREN, AI stocks are down ~40%+ from peaks
+
+• $MSTR, $BTC plunged 30-40%+ in the past month
+
+• Crypto erased over $1.2 trillion in value
+
+This wasn’t normal, it was a forced unwind across the markets with...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Markets just suffered their worst deleveraging shock in recent history.
+
+High-beta assets are collapsing:
+
+• $NBIS, $IREN, AI stocks are down ~40%+ from peaks
+
+• $MSTR, $BTC plunged 30-40%+ in the past month
+
+• Crypto erased over $1.2 trillion in value
+
+This wasn’t normal, it was a forced unwind across the markets with the most growth and leverage.
+
+Here&#x27;s the four liquidity drains hitting at once:
+
+1. Crypto precursor shock (Oct 2025 – Binance failure)
+
+• A pricing error on Binance sent USDe to $0.65, triggering $19B+ in forced liquidations in 24 hours
+
+• Highly leveraged positions (25x–50x) using USDe/wBETH/BNSOL cascaded into a chain reaction of cascading margin liquidations across the industry
+
+• The event left crypto structurally fragile, and volatility now threatens $7B+ MSCI inflows into $MSTR/treasury stocks, risking BTC/NAV mispricing and forced Bitcoin sales
+
+2. Fed policy uncertainty (rate cut whiplash)
+
+• Markets priced a December cut at 97% → 35% → 70%+ in two days after conflicting Fed signals
+
+• This volatility acted as a stealth tightening, forcing leveraged funds and algorithms (seen post $NVDA earnings) to deleverage pre-emptively
+
+• Policy ambiguity raised global risk, transmitting U.S. uncertainty into broad selling across global funding markets
+
+3. AI credit stress (speculative debt cracks)
+
+• AI build-out requires $3.5T in external financing, pushing companies heavily into debt markets
+
+• Google + XAI raise in usage per similarweb raised concerns about OpenAI and circular financing, alongside how $1T+ in capex spend going into $ORCL, $CRWV, $AMD, and others without having the ncessary capital. 
+
+• Applied Digital [ $APLD ] $2.35B junk bond (rated B+) exposed counterparty and concentration risk, sending its stock and related data center stocks down due to the need of more debt to fund buildout. 
+
+• Capital markets began differentiating between firms with real cash flow and those reliant on speculative debt and OpenAI contracts, punishing names such as $ORCL and $CRWV. 
+
+4. Yen carry trade unwind (the catalyst)
+
+• BoJ rate hikes to 0.5% and normalization narrowed the U.S.–Japan rate gap, squeezing ¥80T (~$500B) in leveraged positions
+
+• Rising JGB yields triggered repatriation flows, pressuring U.S. yields and draining global liquidity
+
+• Forced unwinds led investors to sell U.S. tech and crypto to repay yen loans, amplifying the risk-off cascade
+
+Bottom line:
+
+All four shocks drained liquidity from the same corner of the market, high-beta, leveraged assets, driving a violent unwind in growth tech and crypto and raising the risk of further forced selling.
+
+Excessive leverage, fragile balance sheets, and concentration risk  determined which assets crashed the hardest.
+
+The beginning of a new rate-cutting cycle by the Fed is an &quot;inflection point&quot; as investors need to determine whether the easing is a preventative measure or a reaction to a more serious downturn. However one thing is for certain:
+
+The macro shock reset valuations, but it didn’t change the fundamentals of businesses from $NBIS to $META.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1992667465785201142" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>市场刚刚遭受了近代历史上最严重的去杠杆化冲击。
+
+高贝塔资产正在崩溃：
+
+• $NBIS、$IREN、AI 股票较峰值下跌约 40% 以上
+
+• 过去一个月，$MSTR、$BTC 暴跌 30-40%+
+
+• 加密货币损失了超过 1.2 万亿美元的价值
+
+这是不正常的，这是增长和杠杆率最高的市场的被迫平仓。
+
+以下是同时发生的四种流动性流失情况：
+
+1. 加密前兆冲击（2025 年 10 月 – 币安失败）
+
+• 币安定价错误导致 USDe 跌至 0.65 美元，24 小时内引发 19B+ 美元强制平仓
+
+• 使用 USDe/wBETH/BNSOL 的高杠杆头寸 (25x–50x) 级联成整个行业级联保证金清算的连锁反应
+
+• 该事件使加密货币在结构上变得脆弱，波动性现在威胁着超过 7B 美元的 MSCI 资金流入 $MSTR/库存股，从而导致 BTC/NAV 定价错误并被迫出售比特币
+
+2.美联储政策不确定性（降息狂潮）
+
+• 在美联储发出相互矛盾的信号后，市场预计 12 月降息幅度将在两天内达到 97% → 35% → 70%+
+
+• 这种波动起到了隐形收紧的作用，迫使杠杆基金和算法（见 NVDA 财报后）先发制人地去杠杆化
+
+• 政策模糊性增加了全球风险，将美国的不确定性传导至全球融资市场的广泛抛售中
+
+3.人工智能信用压力（投机性债务裂缝）
+
+• 人工智能建设需要 3.5 吨外部融资，迫使公司大量进入债务市场
+
+• Google + XAI 在类似网站上的使用量增加引发了对 OpenAI 和循环融资的担忧，以及 1T+ 的资本支出如何在没有必要资本的情况下进入 $ORCL、$CRWV、$AMD 和其他公司。 
+
+• Applied Digital [ $APLD ] $2.35B 垃圾债券（评级为 B+）暴露了交易对手和集中风险，由于需要更多债务为扩建提供资金，导致其股票和相关数据中心股票下跌。 
+
+• 资本市场开始区分拥有实际现金流的公司和依赖投机性债务和OpenAI 合约的公司，惩罚诸如$ORCL 和$CRWV 之类的公司。 
+
+4. 日元套利交易平仓（催化剂）
+
+• 日本央行加息至 0.5% 且正常化缩小了美日利差，挤压了杠杆头寸 80T 日元（约 $500B）
+
+• 日本国债收益率上升引发资金回流，给美国收益率带来压力并耗尽全球流动性
+
+• 被迫平仓导致投资者出售美国科技和加密货币以偿还日元贷款，加剧了避险情绪
+
+底线：
+
+所有四次冲击都耗尽了市场同一个角落、高贝塔杠杆资产的流动性，推动了增长型科技和加密货币的猛烈抛售，并增加了进一步被迫抛售的风险。
+
+过高的杠杆率、脆弱的资产负债表和集中风险决定了哪些资产崩溃最严重。
+
+美联储新一轮降息周期的开始是一个“拐点”，因为投资者需要确定宽松政策是预防性措施还是对更严重经济衰退的反应。不过有一点是可以肯定的：
+
+宏观冲击重置了估值，但并没有改变企业的基本面从 $NBIS 到 $META。</div>
+        <div class="tweet-foot">
+          <span>likes 252 / retweets 23 / replies 27 / views 105441</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2025-11-22 21:48</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$CRWV</span><span class="chip red">$GLXY</span><span class="chip red">$HOOD</span></span>
+        </div>
+        <div class="tweet-text">Yeah I&#x27;d might move $GLXY down to a C tier alongside $APLD if we just had to compare HPC sector as you mentioned. 
+
+But because of their other segments, their balance sheet is vastly better so they had to tap into less debt/crdit facilitaties, which is why it&#x27;s a grade higher. 
+
+They do a ton of other stuff like $HOOD ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yeah I&#x27;d might move $GLXY down to a C tier alongside $APLD if we just had to compare HPC sector as you mentioned. 
+
+But because of their other segments, their balance sheet is vastly better so they had to tap into less debt/crdit facilitaties, which is why it&#x27;s a grade higher. 
+
+They do a ton of other stuff like $HOOD competitor brokerage, crypto liquidity providers, etc. and it improves fcf but a bit of an unfair comparison.  They do  have long term hyperscaler visibility with $CRWV on their Helios campus with the the interest rate was ≈9.10%. Downside of that is Coreweave, and there&#x27;s a nonzero chance it goes under.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1992228716064424440" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是的，如果我们只需要像您提到的那样比较 HPC 领域，我可能会将 $GLXY 与 $APLD 一起降低到 C 层。 
+
+但由于他们的其他部门，他们的资产负债表要好得多，所以他们不得不利用更少的债务/信贷便利，这就是为什么它的等级更高。 
+
+他们做了很多其他的事情，比如 $HOOD 竞争对手经纪、加密货币流动性提供商等，这提高了自由现金流，但比较有点不公平。  他们确实在 Helios 园区拥有 $CRWV 的长期超大规模可见性，利率约为 9.10%。 Coreweave 的缺点是它失败的可能性非零。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4601</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2025-11-22 20:31</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$DGXX</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">So I think you&#x27;re replying to points I never made. Just to clarify: I didn&#x27;t rate $BITF. If you read my post, it fell into the unrated category, so I&#x27;m not debating where it goes in comparison with $WYFI or $SLNH. 
+
+As for $SLNH, we&#x27;re not disagreeing on anything I put it as F tier as well since it&#x27;s a hype stock that ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So I think you&#x27;re replying to points I never made. Just to clarify: I didn&#x27;t rate $BITF. If you read my post, it fell into the unrated category, so I&#x27;m not debating where it goes in comparison with $WYFI or $SLNH. 
+
+As for $SLNH, we&#x27;re not disagreeing on anything I put it as F tier as well since it&#x27;s a hype stock that requires excessive debt/dilution on their &quot;2.8GW capacity&quot; buildout plans. 
+
+You said for $NBIS &quot;how attached it is to Bitcoin Mining and if they own their power&quot; - I&#x27;ll take that as a mispeak and that you were using Bitcoin mining in reference with $CLSK, and that you were referencing capacity for $NBIS +. 
+
+$NBIS achieved near long-term parity with $IREN from the capacity side, which is associated as the highest GW capacity player in the industry. So I&#x27;d argue that part is incorrect. 
+
+So as for $SMCI being a reliable/trustworthy partner argument, I sort of disagree, but you did change my mind regarding $DGXX having lower operational and technical execution risk. 
+
+That aside, that part wouldn&#x27;t really change rankings, eg. putting it the same as $APLD which has 2 hyperscaler contracts (if you include $CRWV) but downside from junk bonds (revenue visibility)  
+
+If you wanted to put it on par with $CLSK just due to return potential from MC size, I&#x27;d give you that.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1992209440867783085" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>所以我认为你是在回答我从未提出过的观点。只是澄清一下：我没有评价 $BITF。如果您读过我的文章，它属于未评级类别，所以我不会争论它与 $WYFI 或 $SLNH 相比的走向。 
+
+至于 $SLNH，我们对我将其列为 F 级的任何内容都没有异议，因为它是一只炒作股票，需要对其“2.8GW 产能”建设计划进行过多的债务/稀释。 
+
+您对 $NBIS 说“它与比特币挖矿的关系如何，以及他们是否拥有自己的权力”——我认为这是一个误会，并且您在参考 $CLSK 时使用了比特币挖矿，并且您引用了 $NBIS + 的容量。 
+
+从容量方面来看，$NBIS 与 $IREN 实现了近乎长期的平价，$IREN 被认为是行业中容量最高的公司。所以我认为这部分是不正确的。 
+
+因此，对于 $SMCI 是可靠/值得信赖的合作伙伴的论点，我有点不同意，但你确实改变了我对 $DGXX 具有较低运营和技术执行风险的看法。 
+
+除此之外，这部分不会真正改变排名，例如。与 $APLD 相同，$APLD 有 2 个超大规模合约（如果包括 $CRWV），但有垃圾债券的缺点（收入可见性）  
+
+如果您只是因为 MC 规模的回报潜力而想将其与 $CLSK 相提并论，我会给您这个。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2823</span>
+        </div>
+        <div class="chips"><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2025-11-22 20:15</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span></span>
+        </div>
+        <div class="tweet-text">Sure, I put $NBIS as S tier from that capacity funding angle because it&#x27;s isolated from credit tightening affecting other DC stocks like $APLD (that had to sell junk bonds).  
+
+From Q3 earnings, $CRWV is facing $1.21-$1.25B in interest expenses and only has $1.94 billion in cash equivalents. 
+
+Other neocloud sector sto...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Sure, I put $NBIS as S tier from that capacity funding angle because it&#x27;s isolated from credit tightening affecting other DC stocks like $APLD (that had to sell junk bonds).  
+
+From Q3 earnings, $CRWV is facing $1.21-$1.25B in interest expenses and only has $1.94 billion in cash equivalents. 
+
+Other neocloud sector stocks will need more to cash fund buildout + monetize GW capacity ike $IREN, and will face higher interest rates or lack of funding interest (eg. convertibles). 
+
+This is kind of why we&#x27;re seeing a sector selloff, but some were relatively undeserved (eg. $NBIS, $CIFR).   
+
+With $NBIS you&#x27;re probably looking at their $2.5B ATM offering. With their existing $4.8B+ in cash, they have enough for their full-stack buildout and capacity monetization + and can scale future capacity from visible revenue contracts with $META, $MSFT.   
+
+But I&#x27;m personally not happy with their ATM, since it&#x27;s an overhead affecting stock price + balances out  inflows from MSCI inclusion in 2 days Nov 24th. 
+
+But $NBIS with $7-9B ARR has the highest margins in the industry, which would offset 10% dilution and convertibles given their $20B marketcap.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1992205359327694924" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>当然，从产能融资的角度来看，我将 $NBIS 列为 S 层，因为它不受信贷紧缩影响其他 DC 股票（例如 $APLD（必须出售垃圾债券））的影响。  
+
+从第三季度财报来看，$CRWV 面临着 $1.21-$1.25B 的利息支出，并且只有 19.4 亿美元的现金等价物。 
+
+其他新云行业股票将需要更多资金来现金建设+将 GW 容量货币化（如 $IREN），并将面临更高的利率或缺乏融资利息（例如可转换债券）。 
+
+这就是我们看到行业抛售的原因，但有些行业的抛售相对不值得（例如 $NBIS、$CIFR）。   
+
+对于 $NBIS，您可能正在查看他们的 $2.5B ATM 产品。凭借现有的 $4.8B+ 现金，他们有足够的能力进行全栈建设和容量货币化+，并且可以通过与 $META、$MSFT 的可见收入合同来扩展未来的容量。   
+
+但我个人对他们的 ATM 并不满意，因为这是影响股价的开销 + 抵消了 11 月 24 日 2 天内 MSCI 纳入的资金流入。 
+
+但 ARR 为 7-9B 美元的 NBIS 拥有业内最高的利润率，鉴于其 20B 市值，这将抵消 10% 的稀释和可转换债券。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3064</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2025-11-22 18:42</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$COIN</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRWV</span><span class="chip red">$DELL</span><span class="chip red">$DGDX</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRRR</span><span class="chip red">$HIMS</span><span class="chip red">$HIVE</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RDDT</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">The Neocloud Sector Tierlist.
+
+Post Q3 earnings + Market Sector Drop:
+
+[S] Tier: $NBIS
+[A] Tier:  $CIFR, $WULF, $IREN
+[B] Tier: $GLXY, $CORZ
+[C] Tier:  $APLD, $CLSK
+[D] Tier: $WLAC, $DGDX, $WYFI
+[F] Tier, $CRWV*, $SLNH
+[U] Tier: $GRRR, $MARA, $DGDX, $CLSK, $BITF,  $HIVE, $RIOT **
+
+Ranked in order from left to right.
+
+*...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The Neocloud Sector Tierlist.
+
+Post Q3 earnings + Market Sector Drop:
+
+[S] Tier: $NBIS
+[A] Tier:  $CIFR, $WULF, $IREN
+[B] Tier: $GLXY, $CORZ
+[C] Tier:  $APLD, $CLSK
+[D] Tier: $WLAC, $DGDX, $WYFI
+[F] Tier, $CRWV*, $SLNH
+[U] Tier: $GRRR, $MARA, $DGDX, $CLSK, $BITF,  $HIVE, $RIOT **
+
+Ranked in order from left to right.
+
+* : Short-term pricing drops created compelling entries (e.g., $CRWV), but med-term (12m) attractiveness remains limited. 
+
+**: Uncertain, decided not to rate them (but put them in tierlist photo as F). Some pure miners haven&#x27;t fully pivot into HPC yet + too much contract uncertainty. 
+
+Lot of people asked about updates post earnings, these are just personal thoughts based on weighted assessments of:
+
+a. Contract visibility and revenue certainty 
+b. Resilience to macro tightening and credit conditions c. Balance sheet strength and margin profile 
+d. HPC buildout risk (capacity execution and orchestration) 
+e. Revenue growth trajectory (1–2 year horizon)
+f. Current market capitalization relative to revenue ramp and infrastructure value
+
+The whole Neocloud sector is compelling but some have clearly higher asymmetrical return over others as of Q3.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1992181846134968633" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Neocloud 部门层级列表。
+
+第三季度收益+市场板块下跌：
+
+[S] 等级：$NBIS
+[A] 等级：$CIFR、$WULF、$IREN
+[B] 等级：$GLXY、$CORZ
+[C] 等级：$APLD、$CLSK
+[D] 等级：$WLAC、$DGDX、$WYFI
+[F] 等级、$CRWV*、$SLNH
+[U] 等级：$GRRR、$MARA、$DGDX、$CLSK、$BITF、$HIVE、$RIOT **
+
+按从左到右的顺序排列。
+
+*：短期价格下跌创造了引人注目的条目（例如 $CRWV），但中期（1200 万）吸引力仍然有限。 
+
+**：不确定，决定不对它们进行评级（但将它们放在等级列表照片中为 F）。一些纯粹的矿工尚未完全转向 HPC + 合同不确定性太多。 
+
+很多人询问收益更新后的情况，这些只是基于以下加权评估的个人想法：
+
+a.合同可见性和收入确定性 
+b.对宏观紧缩和信贷条件的抵御能力 c．资产负债表实力和利润率概况 
+d. HPC 建设风险（容量执行和编排） 
+e.收入增长轨迹（1-2 年范围）
+f.当前市值相对于收入增长和基础设施价值
+
+整个 Neocloud 领域都很引人注目，但截至第三季度，有些领域的不对称回报明显高于其他领域。</div>
+        <div class="tweet-foot">
+          <span>likes 513 / retweets 80 / replies 29 / views 209017</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2025-11-20 18:23</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COIN</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$KRUS</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$SBET</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOL</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WLAC</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">Based on the equity ranking table:
+
+Here&#x27;s a deeper analysis of each stock, alongside how I reposition my portfolio to capitalize on the market reset:
+
+· $NBIS at $92, PT $400 / 1Y
+· $RKLB at $43, PT $500 / 5Y
+· $CRCL at $72, PT $150 / 8M
+· $ALAB at $143.4, PT $250 / 6M
+· $SNAP at $8.1, PT $22 / 1Y
+· $CIFR at $14.8, PT...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Based on the equity ranking table:
+
+Here&#x27;s a deeper analysis of each stock, alongside how I reposition my portfolio to capitalize on the market reset:
+
+· $NBIS at $92, PT $400 / 1Y
+· $RKLB at $43, PT $500 / 5Y
+· $CRCL at $72, PT $150 / 8M
+· $ALAB at $143.4, PT $250 / 6M
+· $SNAP at $8.1, PT $22 / 1Y
+· $CIFR at $14.8, PT $28 / 6M
+· $RDDT at $185, PT $275 / 8M
+· $SMCI at $34, PT $55 / 6M
+· $HIMS at $35, PT $60 / 6M
+
+This is in order of concentration weighting from when posted and internal PT speculation based on existing information for mid-cap ($5B+) sections.
+
+Here’s a deeper breakdown on each one and PT timeframe, and a “qualitative”why:
+
+1. Nebius ( $NBIS ): $23B marketcap. Incredibly undervalued and detached from fundamentals.
+
+$7-9B forward ARR, 20-30% EBIT, enterprise contracts from Shopify, Accenture, Cursor, foreign governments and hyperscaler contracts from Meta and Microsoft give Nebius revenue visibility. With $4.8B+ in cash, it&#x27;s isolated from credit tightening affecting data centers. With 2.5 GW expected capacity contracted 2026, it rivals many others eg. $IREN at 2.8 GW, and defeats many of the capacity/power arguments. With many portfolio companies powering companies like Tesla and Anthropic, it also has higher growth potential (think $MSFT with its portfolio companies for longer defensibility).
+
+We also had stellar $NVDA earnings going into Q4 with their blowout, Jensen clarifying arguments against GPU depreciation, which helps with DC sector sentiment. 
+
+$400 1 year price target, $100B+ valuation given forward revenue/margins.
+
+2. Rocketlab ( $RKLB ): $22B marketcap. Overvalued current term, undervalued long term potential. 
+
+Rocketlab is my highest conviction 5Y long alongside Bitcoin. With Space, it&#x27;s not winner takes all, and I&#x27;ve maintained $350-500B long term PT to match SpaceX’s most recent valuation/capabilities.
+
+As of now, it&#x27;s overvalued. But it&#x27;s an incredible + defensible moat from purely a technological standpoint building reusable rockets and we&#x27;re early in terms of commercialization of their end-to-end space products at scale (likely ~2028).
+
+However, we&#x27;re pricing in forward growth with Flatlite commericalization (eg. Starlink), and medium-lift payloads (SpaceX Falcon 9). The market prices in forward growth as well but it’s more about how long in the future with Rocketlab. It&#x27;s always a solid buy, depending on how patient you are with company execution. 
+
+3. Circle ( $CRCL ) - $16B marketcap, undervalued.
+
+With Circle, I&#x27;ve been bear posting it since it was a $50B marketcap, saying short Circle, long Coinbase, given $COIN has 50% revenue sharing with Circle.
+
+It was overvalued due to float numbers and massive insider lockups 2-3 days after earnings/Dec 2nd led to a sell-off (like $BULL). Float dynamics matter a lot that ETF managers like Cathie Wood seem to not understand (hence my warnings). 
+
+But now we&#x27;re reaching respectable valuation numbers. I expect USDC commercialization to continue and given a regulatory focus in the digital asset market, I see $CRCL taking over a lot of Tether&#x27;s marketcap. 
+
+That being said, it&#x27;s well deserving of a $30B+ marketcap pricing in stablecoin volume growth once we start seeing insider shares redistributed to institutions and long term holders. 
+
+4. Astera Labs ( $ALAB ) - $22B marketcap, reasonable valuation
+
+ALAB was one of my mid-term high conviction picks, due to Mag7 adoption of connectivity for datacenter buildout. 
+
+Incredibly high growth and $NVDA-like margins sitting at ~74%, latest er: $230m/q (101% Y/Y growth). My thesis was that if Mag7 is dependent on a company ($NVDA for GPUs) ( NBIS, IREN, CIFR for DC AI cloud buildout), the company will blow away expections quarter after quarter, and we&#x27;re seeing this.
+
+There&#x27;s been a recent sell-off on Astera from $250 back to $140 marks, depsite beating earning expectations across the board and this presents a good buying opportunity.
+
+I maintain a medium term PT $250 for recovery after NVDA earnings and record-high DC buildout from Antrophic&#x27;s $40B DC to $GOOGL&#x27;s $50B DC in Texas + connectivity demand.
+
+5. Snapchat ( $SNAP ) $13B marketcap, undervalued. 
+
+$SNAP is one of my least favorite stocks and CEO&#x27;s (sorry Evan). 
+
+However, I can&#x27;t argue with fundamental changes. A TLDR of my most recent thesis post was that they&#x27;re cutting their massive opex bloat from memories/videos stored 10 years ago and if you look into their GCP hosting fees, it&#x27;s cutting in margins.
+
+Now they&#x27;re both reducing that OPex cost and increasing revenue from that.  We also have AI deals with perplexity adding $400m+ additional revenue streams like RDDT. 
+
+However, short term it&#x27;s suffering from tax-harvesting due to underperformance this year relative to AI companies. In 2026 Q1, I expect the market to start pricing in the new fundamentals Hard. and for this company to beat expectation soundly. 
+
+That being said I expect over a 200%+ upside 1Y from here with the market pricing in the new dynamics. 
+
+5. CIFR ( $CIFR ) - Undervalued at $5B marketcap
+
+$CIFR is my second favorite stock in the Neocloud sector. From memory, it holds a lot of Bitcoin on its balance sheet and is materially affected by the selloff in BTC prices from $120k to $90k. 
+
+However I expect crypto asset prices to recover in a few months once cascading margin liqudations finish and instituions buy-in Bitcoin at low prices. 
+
+Nebius is top because it owns the full AI-cloud value chain for higher revenue potential and stronger returns, even though it forces them to handle orchestration, software, and GPU lifecycle risk instead of sticking to colocation.  
+
+However,  $CIFR because it avoids that entire risk surface and has backing from AMZN and GOOGL for long term revenue anchors. It also stays insulated from GPU procurement, management, and depreciation.  
+
+For CIFR&#x27;s economics we get a a high-margin, annuity structure built on space, power, and cooling for hyperscalers. Risk-adjusted, it’s one of the safest names in the group. But the trade-off is capped upside  Long leases like 10Y, 15Y slow the revenue ramp and mute the payoff relative to full-stack Neocloud operators like NBIS that go from $145m quarterly revenue to $2.1B in a year.
+
+That being said I maintain a $28 PT in 1 month once market prices in $AMZN, $GOOGL Fluidstack revenue and Bitcoin prices recover. 
+
+6. Reddit ( $RDDT ) - Moderate valuation
+
+Coming from the Wendy&#x27;s dumpsters on WSB subreddit, I am naturally biased toward this platform.
+
+However, the initial sell-off of Reddit at $270 was due to fears over ChatGPT citations, which was immaterial. Now, recent data shows that citations are back, but Reddit&#x27;s price still sits at $185 (way below that number) + partly due to macro.
+
+Reddit is one of the least bloated, highly profitable social media companies. And it&#x27;s here to stay due to long term defensibility of the network effect of both younger + older audiences (compared to Snap 900m+ MAU of mostly younger generation).
+
+I expect RDDT to scale up monetization avenues through acquisitions like $HOOD (exchanges) due to their massive FCF and profitability or how Facebook originally acquired WhatsApp, Instagram, built out messenger. It&#x27;s a low-risk, high growth stock, which is why I maintain a $275 PT in 8 months. 
+
+7. SMCI ( $SMCI ) - Undervalued, $20B marketcap.
+
+$20B marketcap is a joke. Nothing else to say. They&#x27;re doing $5B quarterly revenue (off lower-margins for sure). However, market is pricing in the company revenue dropping. 
+
+SMCI quoted majority of the backlog delay to Q2 2026, which aligns with a lot of the DC buildout from Neoclouds to Mag7 customers. 
+
+They expect revenue to grow 50%+ Y/Y next year, with at least $36 billion revenue, but judging from DC buildout from blowout NVDA earnings, I expect server rack companies like $DELL and SMCI to outperform Q2  2026. 
+
+This is why I&#x27;m taking advantage of revenue lag delays from the current quarter and assigning a $55 PT in 6 months time. 
+
+8. Hims and Her Health ( $HIMS) - Undervalued ( $8B marketcap)
+
+Personally, I&#x27;ve used HIMS just for short term trading breakouts. And I&#x27;ve been one to not long-term hold the stock above $50.  
+
+However, back at $35, it&#x27;s reset most of the year&#x27;s growth but grew revenue 49% Y/Y to $500m and is producing a good amount of FCF.
+
+The most under-priced narrative is the Zava acquisition. This adds 1.3M+ users to the HIMS platform and allows the company to expand to the EU market.
+
+Similar to how META acquires companies like Instagram, grows its base + monetizes, I expect HIMS to do the same with Zava + market is pricing in current est. Zava numbers. 
+
+It&#x27;s probably my least confident stock out of the bunch, especially leaving me with a bad taste with the CEO selling shares after leaving 👀 on SS posts back at $70. 
+
+But that being said it&#x27;s a great rebound opportunity to $60 in a 6 month timeframe. 
+
+Hope you enjoyed my perspective. There&#x27;s a lot of x at price posts, but I try to leave a more qualitative breakdown (+ part quantitative but leave out a lot of technical for easier reading) to help retail develop their own conviction and understanding.
+
+Building understanding is important to create internal valuation models yourself rather than blindly following along FinX posters + capitulating when stock prices temporarily drop. 
+
+Happy to discuss more if you drop your own portfolio + concentrations.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1991452423186182524" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>根据权益排名表：
+
+以下是对每只股票的更深入分析，以及我如何重新定位我的投资组合以利用市场重置的机会：
+
+· NBIS 为 92 美元，PT 400 美元/1 年
+· RKLB 为 43 美元，PT 500 美元/5 年
+· $CRCL 为 $72，PT $150 / 8M
+· $ALAB 价格为 $143.4，PT $250 / 600 万美元
+· SNAP 价格为 8.1 美元，PT 22 美元/1 年
+· CIFR 为 14.8 美元，PT 为 28 美元/600 万美元
+· $RDDT $185，PT $275 / 8M
+· $SMCI 为 $34，PT $55 / 6M
+· $HIMS $35，PT $60 / 6M
+
+这是根据发布时的集中权重顺序以及基于中型股 ($5B+) 部分的现有信息的内部 PT 推测。
+
+以下是对每一项和 PT 时间范围的更深入细分，以及“定性”原因：
+
+1. Nebius ( $NBIS ): $23B 市值。其价值被令人难以置信地低估并且脱离了基本面。
+
+7-9B 美元的远期 ARR、20-30% 的息税前利润、来自 Shopify、埃森哲、Cursor 的企业合同、外国政府以及来自 Meta 和 Microsoft 的超大规模合同使 Nebius 收入可见。拥有超过 4.8B 美元的现金，它不受影响数据中心的信贷紧缩的影响。预计 2026 年合同容量为 2.5 吉瓦，可与许多其他公司相媲美。 $IREN 为 2.8 GW，击败了许多容量/功率争论。由于许多投资组合公司为 Tesla 和 Anthropic 等公司提供动力，它也具有更高的增长潜力（想想 MSFT 及其投资组合公司的长期防御能力）。
+
+进入第四季度，我们的 NVDA 收益也非常出色，并且出现井喷，Jensen 澄清了反对 GPU 贬值的论点，这有助于提振 DC 行业的情绪。 
+
+1 年目标价为 400 美元，考虑到远期收入/利润，估值为 100B+ 美元。
+
+2. Rocketlab ( $RKLB ): $22B 市值。高估当前期限，低估长期潜力。 
+
+Rocketlab 是我对比特币 5 年多头的最高信念。对于 Space，它不是赢者通吃，我维持了 350-500B 美元的长期 PT，以匹配 SpaceX 的最新估值/能力。
+
+目前看来，它的价值被高估了。但纯粹从建造可重复使用火箭的技术角度来看，这是一条令人难以置信的、可防御的护城河，而且我们在其端到端太空产品大规模商业化方面处于早期阶段（可能到 2028 年）。
+
+然而，我们定价的是 Flatlite 商业化（例如 Starlink）和中升力有效载荷（SpaceX Falcon 9）的未来增长。市场价格也体现在未来的增长上，但更多的是关于 Rocketlab 的未来多久。这始终是一个可靠的选择，具体取决于您对公司执行的耐心程度。 
+
+3. Circle ( $CRCL ) - $16B 市值，被低估。
+
+对于 Circle，自从它的市值为 50B 美元以来，我一直在发布它，说做空 Circle，做多 Coinbase，因为 $COIN 与 Circle 有 50% 的收入分成。
+
+由于浮动数字和 12 月 2 日盈利后 2-3 天的大量内部锁定导致抛售（如 $BULL），它被高估了。流通量动态非常重要，但像 Cathie Wood 这样的 ETF 经理似乎并不理解（因此我提出警告）。 
+
+但现在我们已经达到了可观的估值数字。我预计 USDC 的商业化将会继续，并且考虑到数字资产市场的监管重点，我认为 $CRCL 会占据 Tether 的大部分市值。 
+
+话虽这么说，一旦我们开始看到内部股票重新分配给机构和长期持有者，稳定币交易量增长就值得 30B+ 市值定价。 
+
+4. Astera Labs ( $ALAB ) - $22B 市值，合理估值
+
+ALAB 是我中期高度确信的选择之一，因为 Mag7 采用连接来进行数据中心建设。 
+
+令人难以置信的高增长和类似于 NVDA 的利润率约为 74%，最新数据：2.3 亿美元/季度（同比增长 101%）。我的论点是，如果 Mag7 依赖于一家公司（GPU 的 NVDA 美元）（用于 DC AI 云建设的 NBIS、IREN、CIFR），那么该公司将一个又一个季度地超出预期，我们也看到了这一点。
+
+尽管 Astera 整体盈利预期全面超出预期，但最近 Astera 遭到抛售，从 250 美元跌至 140 美元，这提供了一个良好的买入机会。
+
+在 NVDA 收益和创纪录的高 DC 建设（从德克萨斯州的 Antropicic 的 $40B DC 到 $GOOGL 的 $50B DC + 连接需求）之后，我维持中期 PT $250 的复苏。
+
+5. Snapchat ( $SNAP ) 市值13B美元，被低估。 
+
+$SNAP 是我最不喜欢的股票和首席执行官之一（对不起埃文）。 
+
+然而，我不能否认根本性的改变。我最近一篇论文的一个长篇大论是，他们正在从 10 年前存储的记忆/视频中削减巨大的运营支出，如果你查看他们的 GCP 托管费用，就会发现它正在削减利润。
+
+现在，他们既降低了运营成本，又增加了收入。  我们还有解决困惑问题的 AI 解决方案，可以增加 4 亿美元以上的额外收入来源，例如 RDDT。 
+
+然而，短期来看，由于今年相对于人工智能公司的表现不佳，该公司将遭受税收收割。 2026 年第一季度，我预计市场将开始在新的基本面中定价。并让这家公司的业绩超出预期。 
+
+话虽这么说，随着市场定价在新的动态下，我预计 1 年的上涨空间将超过 200% 以上。 
+
+5. CIFR ( $CIFR ) - 被低估，市值为 5B 美元
+
+$CIFR 是 Neocloud 领域我第二喜欢的股票。据我记忆，该公司的资产负债表上持有大量比特币，并受到比特币价格从 12 万美元跌至 9 万美元的重大影响。 
+
+然而，我预计，一旦级联保证金清算完成并且机构以低价买入比特币，加密资产价格将在几个月内恢复。 
+
+Nebius 名列前茅，因为它拥有完整的人工智能云价值链，具有更高的收入潜力和更强的回报，尽管这迫使他们处理编排、软件和 GPU 生命周期风险，而不是坚持托管。  
+
+然而，$CIFR 是因为它避免了整个风险面，并且得到了 AMZN 和 GOOGL 的支持以实现长期收入锚定。它还不受 GPU 采购、管理和折旧的影响。  
+
+对于 CIFR 的经济学，我们为超大规模企业提供了一个基于空间、电力和冷却的高利润年金结构。经过风险调整后，它是该集团中最安全的名字之一。但这种权衡受到了限制。相对于像 NBIS 这样的全栈 Neocloud 运营商来说，像 10 年、15 年这样的长期租赁会减缓收入增长，并削弱回报，后者的季度收入从 1.45 亿美元增至一年 2.1 亿美元。
+
+话虽这么说，一旦 $AMZN 的市场价格、$GOOGL Fluidstack 收入和比特币价格回升，我将在 1 个月内维持 28 美元的 PT。 
+
+6. Reddit ( $RDDT ) - 估值适中
+
+来自 WSB Reddit 子版块 Wendy&#x27;s 垃圾箱的我自然偏向这个平台。
+
+然而，Reddit 最初被抛售至 270 美元是由于担心 ChatGPT 引用，但这并不重要。现在，最近的数据显示引用量又回来了，但 Reddit 的价格仍然维持在 185 美元（远低于这个数字）+ 部分原因是宏观因素。
+
+Reddit 是最不臃肿、利润最高的社交媒体公司之一。由于年轻和年长观众的网络效应具有长期防御性（相比之下，Snap 的月活跃用户数大多为年轻一代），这一趋势将持续存在。
+
+我预计 RDDT 将通过收购 $HOOD（交易所）等公司来扩大盈利渠道，因为它们拥有巨大的自由现金流和盈利能力，或者 Facebook 最初收购 WhatsApp、Instagram 并打造即时通讯软件的方式。这是一只低风险、高增长的股票，这就是为什么我在 8 个月内维持 275 美元的 PT 的原因。 
+
+7. SMCI ( $SMCI ) - 被低估，市值 $20B。
+
+$20B 市值就是个笑话。没什么可说的。他们的季度收入为 50 亿美元（当然，利润率较低）。然而，市场定价表明该公司收入正在下降。 
+
+SMCI 引用了 2026 年第二季度的大部分积压延迟，这与 Neoclouds 向 Mag7 客户的大量 DC 建设相一致。 
+
+他们预计明年收入将同比增长 50% 以上，收入至少为 360 亿美元，但从井喷式 NVDA 收益带来的 DC 建设来看，我预计 $DELL 和 SMCI 等服务器机架公司的表现将优于 2026 年第二季度。 
+
+这就是为什么我利用当前季度的收入滞后延迟并在 6 个月内分配 55 美元的 PT。 
+
+8. Hims and Her Health ($HIMS) - 被低估（$8B 市值）
+
+就我个人而言，我仅将 HIMS 用于短期交易突破。我一直是不会长期持有 50 美元以上股票的人。  
+
+然而，回到 35 美元后，它重置了今年的大部分增长，但收入同比增长了 49% 至 5 亿美元，并且产生了大量的自由现金流。
+
+最被低估的故事是 Zava 收购。这为 HIMS 平台增加了 130 万以上用户，并使公司能够扩展到欧盟市场。
+
+与 META 收购 Instagram 等公司、扩大基础+货币化的方式类似，我预计 HIMS 也会对 Zava 做同样的事情，市场定价以当前估计的 Zava 数据为准。 
+
+这可能是我在这群股票中最没有信心的股票，尤其是在 SS 职位回到 70 美元后，首席执行官以 70 美元的价格出售股票，这让我感觉很糟糕。 
+
+但话虽如此，这是 6 个月内反弹至 60 美元的绝佳机会。 
+
+希望您喜欢我的观点。价格帖子中有很多“x”，但我尝试留下更定性的细分（+部分定量，但为了更容易阅读而省略了很多技术性内容），以帮助零售商发展自己的信念和理解。
+
+建立理解对于自己创建内部估值模型非常重要，而不是盲目跟随 FinX 海报+在股价暂时下跌时投降。 
+
+如果您放弃自己的投资组合+专注，很乐意讨论更多。</div>
+        <div class="tweet-foot">
+          <span>likes 418 / retweets 52 / replies 30 / views 258946</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2025-11-20 02:32</span>
+          <span><span class="chip red">$ALPD</span><span class="chip red">$APLD</span><span class="chip red">$CRWV</span><span class="chip red">$S</span></span>
+        </div>
+        <div class="tweet-text">$ALPD took on really bad debt with junk bonds at 9.25% and is connected with $CRWV, which also has a lot of bad debt really cutting into margins/FCF + OpenAI (which also doesn&#x27;t have the funds yet) taking up a lot of backlog + capacity buildout. That kind increases long term risks by a lot, I haven&#x27;t done a quantitativ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$ALPD took on really bad debt with junk bonds at 9.25% and is connected with $CRWV, which also has a lot of bad debt really cutting into margins/FCF + OpenAI (which also doesn&#x27;t have the funds yet) taking up a lot of backlog + capacity buildout. That kind increases long term risks by a lot, I haven&#x27;t done a quantitative modeling yet on $APLD from interest costs. 
+
+There&#x27;s probably better neocloud sector picks out ther but that doesn&#x27;t mean I&#x27;m bearish on it. For $S, I haven&#x27;t looked into it enough to give a good opinion.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1991212880424063060" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$ALPD 承担了 9.25% 的垃圾债券坏账，并与 $CRWV 相关，后者也有大量坏账，真正削减了利润率/FCF + OpenAI（也没有资金）占用了大量积压订单 + 产能建设。这种情况会大大增加长期风险，我还没有对利息成本的 $APLD 进行定量建模。 
+
+可能有更好的新云领域可供选择，但这并不意味着我看跌它。对于$S，我还没有进行足够的研究，无法给出好的意见。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 758</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2025-11-18 22:34</span>
+          <span><span class="chip red">$ACN</span><span class="chip red">$ALAB</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NET</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$SHOP</span><span class="chip red">$SLNH</span><span class="chip red">$SNAP</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">Markets are seeing a drop in most growth stocks right now.
+
+In the past 5 days:
+
+· Cloudflare [ $NET ]: $192.99 (-15.23%)
+· Rocketlab [ $RKLB ]:  $42.50 (-19.35%)
+· Iren [ $IREN ]: $46.6 (-28.74%)
+· Hims [ $HIMS ]: $35.15 (-15.61%)
+
+have lost their recent gains. Why?
+
+Right now, we&#x27;re seeing mechanical hedging downward...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Markets are seeing a drop in most growth stocks right now.
+
+In the past 5 days:
+
+· Cloudflare [ $NET ]: $192.99 (-15.23%)
+· Rocketlab [ $RKLB ]:  $42.50 (-19.35%)
+· Iren [ $IREN ]: $46.6 (-28.74%)
+· Hims [ $HIMS ]: $35.15 (-15.61%)
+
+have lost their recent gains. Why?
+
+Right now, we&#x27;re seeing mechanical hedging downward, mixed with live cascading margin liquidations slightly mirroring the crypto markets.
+
+This is mixed with capitulation based on macro with semi-valid concerns from December rate cut odds, lack of data from Gov shutdown, and AI short reports from several hedge funds. 
+
+The most important thing to note is that: This is despite  improving fundamentals in many individual stocks. 
+
+We&#x27;ve seen companies like:
+
+$NBIS raise ARR guidance from $7-9B from projected analyst $4B marks, and sell off 26.85% this week. 
+
+and we&#x27;ve seen
+
+$SNAP lose any gain from post earnings, after blowout revenue guidance from a $400M surprise perplexity deal. 
+
+At this point, we&#x27;re nearing the bottom before the December Santa Rally, with institutions buying up leverage trader Bitcoin liquidations to quality stocks like $NBIS in dark pools/block trades. 
+
+If forward growth and fundamentals were slowing, continued selling after this drop would be warranted. 
+
+However, if fundamentals are in tact for many growth stock, this market-wide reset is the best buying opportunity for growth stocks from $KRKNF to $ALAB since the April tariff sell-off.
+
+As seen with Robinhood [ $HOOD ] data on popular retail stocks with $IREN, retail is heavily selling the bottom at $45-$50, but bought in at the top post $MSFT deal at $80.
+
+Retail is often the ones to chase buying at the top. But capitulate at the bottom after the drop.
+
+This is the great reset, but not a continued crash leading to a bear market. Stock post-margin liquidations and weak hands moving to long-term investors leads to new highs. 
+
+That being said: what high-beta stock do you think is the most sold off right now?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1990790641056731439" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>目前市场上大多数成长型股票都在下跌。
+
+过去 5 天：
+
+· Cloudflare [ 净美元 ]：192.99 美元 (-15.23%)
+· Rocketlab [ $RKLB ]: $42.50 (-19.35%)
+· 艾伦 [ $IREN ]: $46.6 (-28.74%)
+· 希姆斯 [ $HIMS ]: $35.15 (-15.61%)
+
+失去了最近的收获。为什么？
+
+目前，我们看到机械对冲向下，与实时级联保证金清算混合，略微反映了加密市场。
+
+这与基于宏观的投降、12 月降息可能性的半有效担忧、政府关闭导致的数据缺乏以及多家对冲基金的人工智能空头报告混合在一起。 
+
+最需要注意的是：尽管许多个股的基本面有所改善，但情况仍然如此。 
+
+我们见过这样的公司：
+
+$NBIS 将 ARR 指导从分析师预测的 4B 美元标记上调至 7-9B 美元，本周下跌 26.85%。 
+
+我们已经看到了
+
+在一笔 4 亿美元的令人惊讶的困惑交易带来井喷式收入指引后，$SNAP 失去了盈利后的任何收益。 
+
+目前，我们正接近 12 月圣诞老人集会之前的底部，机构在暗池/大宗交易中买入杠杆交易员比特币清算，以购买 $NBIS 等优质股票。 
+
+如果未来增长和基本面正在放缓，那么在这次下跌之后继续抛售是有道理的。 
+
+然而，如果许多成长型股票的基本面完好无损，那么自 4 月份关税抛售以来，这次市场范围内的重置是成长型股票从 $KRKNF 到 $ALAB 的最佳买入机会。
+
+从 Robinhood [ $HOOD ] 与 $IREN 的热门零售股票数据可以看出，散户在 45-50 美元的底部大量抛售，但在 $MSFT 交易后以 80 美元的价格买入。
+
+零售业往往是追逐高层购买的人。但下跌后就投降于底部。
+
+这是一次伟大的重置，但并不是导致熊市的持续崩盘。股票保证金后清算和弱手转向长期投资者导致新高。 
+
+话虽如此：您认为目前哪种高贝塔值股票被抛售最多？</div>
+        <div class="tweet-foot">
+          <span>likes 160 / retweets 16 / replies 28 / views 319819</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2025-11-18 00:12</span>
+          <span><span class="chip red">$ACN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SHOP</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">Nebius [ $NBIS ] at $86.69 is the purest Neocloud and AI-infra asymmetry left. 
+
+This is the highest revenue Neocloud untouched by $CIFR | $WULF and colo providers that has no:
+
+- Plaguing uncertainty that $IREN, $ORCL face from  full-stack execution. 
+
+- High interest debt that $CRWV, $APLD, and others face.
+
+- Revenu...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Nebius [ $NBIS ] at $86.69 is the purest Neocloud and AI-infra asymmetry left. 
+
+This is the highest revenue Neocloud untouched by $CIFR | $WULF and colo providers that has no:
+
+- Plaguing uncertainty that $IREN, $ORCL face from  full-stack execution. 
+
+- High interest debt that $CRWV, $APLD, and others face.
+
+- Revenue uncertainty at scale with Hyperscaler contracts that $CLSK, $BITF, $WYFI, $SLNH, and others lack. 
+
+After the market-wide drop with the AI sector overrun by fear: 
+
+Nebius is going forward with: $8B midpoint ARR next year, $4.7B+ in cash, diversification in enterprise clients from ( $META, $MSFT, $ACN, $SHOP, Governments), hyper-growth portfolio companies, and a proven full-stack high-margin business.
+
+With extreme demand, execution uncertainty (margins), and isolation from current issues plaguing the markets with OpenAI contract dependency and credit tightening:
+
+Nothing even comes close to Nebius in terms of asymmetrical upside.
+
+You are simply just waiting for company execution.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1990452960758042917" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Nebius [ $NBIS ] 价格为 86.69 美元，是最纯粹的 Neocloud 和人工智能基础设施不对称。 
+
+这是$CIFR 未触及的最高收入 Neocloud | $WULF 和没有以下内容的托管提供商：
+
+- $IREN、$ORCL 在全栈执行中面临着令人困扰的不确定性。 
+
+- $CRWV、$APLD 和其他公司面临的高息债务。
+
+- 超大规模合约的收入存在巨大不确定性，而 $CLSK、$BITF、$WYFI、$SLNH 等都缺乏这些合约。 
+
+在人工智能行业因恐惧而导致整个市场下跌之后： 
+
+Nebius 的未来目标是：明年的中点 ARR 为 8B 美元、现金为 4.7B+ 美元、企业客户多元化（$META、$MSFT、$ACN、$SHOP、政府）、高速增长的投资组合公司以及经过验证的全栈高利润业务。
+
+由于极端的需求、执行的不确定性（利润）以及与 OpenAI 合约依赖和信贷紧缩困扰市场的当前问题的隔离：
+
+在不对称的上升空间方面，没有什么能与 Nebius 相媲美。
+
+您只需等待公司执行即可。</div>
+        <div class="tweet-foot">
+          <span>likes 295 / retweets 20 / replies 27 / views 450664</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2025-11-15 16:15</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Nebius ( $NBIS ) crashed -33.61% last month, falling to a $21B market cap.
+
+Despite this, new 13F filing data shows $NBIS institutional ownership increase:
+
+· 38.36% → 44.6% 🟢 (+6.24%)
+
+with Fintel placing it closer to ~46.3%. 
+
+ Nebius is a $21B MC full-stack Neocloud with:
+
+· $7-9B forward ARR (700%+ Y/Y), 30% EBIT m...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Nebius ( $NBIS ) crashed -33.61% last month, falling to a $21B market cap.
+
+Despite this, new 13F filing data shows $NBIS institutional ownership increase:
+
+· 38.36% → 44.6% 🟢 (+6.24%)
+
+with Fintel placing it closer to ~46.3%. 
+
+ Nebius is a $21B MC full-stack Neocloud with:
+
+· $7-9B forward ARR (700%+ Y/Y), 30% EBIT margins, powering $MSFT Azure, $META | enterprises from Cursor to Shopify | and Governments. 
+
+· $4.7B+ Cash, $7B+ NAV in portfolio companies that power Cloudflare, Tiktok, Tesla, Netflix and Antrophic.
+
+As expected from last month, institutions are starting to realize this once-a-generation growth, as Neoclouds are the center of the AI DC buildout and Mag7 AI compute. 
+
+The institutional ownership of Nebius was always low &lt;28%, due to how their unusual IPO. With high-value companies, ownership typically ranges from 60-80%.
+
+So, we&#x27;re seeing mechanical flows down + retail capitulation + margin liquidation-  &gt; dark pools/block trades -&gt; for institutions to accumulate at lower prices. 
+
+This type of accumulation pattern has not changed and we&#x27;ve seen this same story before with Robinhood ( S-st ), now at 74.62% ownership, before their rally from $20 to $150. 
+
+Irrational fear and capitulation is how institutions accumulate off shareholders. The recent drop is a change in stock price, not in fundamentals. The 1Y price target on $NBIS remains $400. 
+
+When forward growth backs up any market cap projections, it’s a matter of time and execution.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1989608255371579717" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Nebius ( $NBIS ) 上个月暴跌-33.61%，市值跌至 $21B。
+
+尽管如此，新的 13F 备案数据显示 $NBIS 机构所有权有所增加：
+
+· 38.36% → 44.6% 🟢 (+6.24%)
+
+Fintel 的数据接近 46.3%。 
+
+ Nebius 是一个价值 21B 美元的 MC 全栈 Neocloud，具有：
+
+· $7-9B 远期 ARR（700%+ Y/Y），30% 息税前利润，为 $MSFT Azure、$META | 提供动力企业从Cursor到Shopify |和政府。 
+
+· 为 Cloudflare、Tiktok、Tesla、Netflix 和 Antropic 提供支持的投资组合公司的现金为 4.7B+ 美元，资产净值为 7B+ 美元。
+
+正如上个月所预期的那样，机构开始实现这种一代人的增长，因为 Neoclouds 是 AI DC 建设和 Mag7 AI 计算的中心。 
+
+由于其不同寻常的 IPO，Nebius 的机构持股比例始终低于 28%。对于高价值公司，所有权通常在 60-80% 之间。
+
+因此，我们看到机械流量下降+散户投降+保证金清算-&gt;暗池/大宗交易-&gt;机构以较低的价格积累。 
+
+这种类型的积累模式并没有改变，我们之前在 Robinhood (S-st) 上也看到过同样的故事，在从 20 美元涨到 150 美元之前，现在拥有 74.62% 的所有权。 
+
+非理性的恐惧和投降是机构从股东那里积累财富的方式。最近的下跌是股价的变化，而不是基本面的变化。 NBIS 的 1 年目标价仍为 400 美元。 
+
+当未来增长支持任何市值预测时，这只是时间和执行的问题。</div>
+        <div class="tweet-foot">
+          <span>likes 313 / retweets 33 / replies 32 / views 56953</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2025-11-15 13:47</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">Yeah I made another post about credit tightening and contagion from OpenAI in one of my other posts but $NBIS seems the best isolated in those terms because of their strong balance sheet, convertible note structure. 
+
+It’s mostly indiscriminate sector selloff on top of the something structural mainly affecting $CRWV, $...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yeah I made another post about credit tightening and contagion from OpenAI in one of my other posts but $NBIS seems the best isolated in those terms because of their strong balance sheet, convertible note structure. 
+
+It’s mostly indiscriminate sector selloff on top of the something structural mainly affecting $CRWV, $ORCL and related co like $APLD. But given Nebius is high-beta, it can drop from $130 to $90 in 1 trading week but it can also go back to the same price in a short time.
+
+If we go from the GPU depreciation short argument many others like $CIFR are also isolated because they just do colo, so a lot of the selloffs don’t make sense.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1989570829882216941" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>是的，我在我的另一篇文章中发表了另一篇关于信贷紧缩和 OpenAI 蔓延的文章，但从这些方面来说，$NBIS 似乎是最好的孤立的，因为它们拥有强大的资产负债表和可转换票据结构。 
+
+除了主要影响 $CRWV、$ORCL 和 $APLD 等相关公司的结构性因素之外，这主要是不加选择的行业抛售。但考虑到 Nebius 的贝塔值很高，它可能会在 1 个交易周内从 130 美元跌至 90 美元，但也可能在短时间内回到相同的价格。
+
+如果我们从 GPU 贬值的短期论点出发，许多其他公司（例如 $CIFR）也被孤立，因为他们只做 colo，所以很多抛售没有意义。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 490</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2025-11-14 23:21</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">We&#x27;re seeing a live crash in AI + DC stocks right now with $IREN down 37.88% this week to $NBIS down 35.27% this month.
+
+Panic stems from Credit Tightening, High Interest Debt, OpenAI contagion, Macro, and most importantly: Irrational Fear.
+
+Here&#x27;s what happening real time:
+
+1. Credit Tightening - Companies like $APLD ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">We&#x27;re seeing a live crash in AI + DC stocks right now with $IREN down 37.88% this week to $NBIS down 35.27% this month.
+
+Panic stems from Credit Tightening, High Interest Debt, OpenAI contagion, Macro, and most importantly: Irrational Fear.
+
+Here&#x27;s what happening real time:
+
+1. Credit Tightening - Companies like $APLD failed to sell bonds (under subscribed) and ended up issuing $2.35B in high yield debt offerings - Bloomberg Nov 14th. The bonds were sold at 97 cents on the dollar, a significant discount, with a yield of approximately 10%.
+
+The bond deal&#x27;s risk is primarily tied to Applied Digital&#x27;s  reliance on $CRWV, which accounts for a substantial portion of its contracted earnings. More institutional cation (eg. Burry short report on GPU depreciation) around the buildout makes it harder for DC&#x27;s to raise funds.
+
+Tightening funding conditions affect the entire ecosystem that issue debt to fund their own buildout.
+
+2. High Interest Debt - Due to credit tightening, bad debt, which $CRWV has to fund expansion, causes $1B+ in losses a year. This cuts into margins and FCF.
+
+Likewise, $APLD and others that raise funds with bad yields face the same future issues and we&#x27;re seeing a selloff in related companies for risk-management.
+
+3. $1T+ in OpenAI promised funding without balances -
+
+Over $1 trillion+ in capex was promised by OpenAI going to $22.4B+ $CRWV and $300B+ to $ORCL, which they are building capacity for.  The market is now skeptical of these promises from OpenAI due to not having the balances on hand and taking a risk-off approach.
+
+And now we&#x27;re seeing contagion on that buildout from companies like Coreweave spread down to $CORZ and $APLD during this buildout that might rely on $CRWV for future revenue.
+
+4. $CRWV is a sector leaders of AI infrastructure (and partially $ORCL). When the sector leader sell-off, usually others follow suit.
+
+5. Rate Cut odds in December Fall:
+
+On top of the high interest debt, we&#x27;re seeing rate cut odds in December drop to a coinflip ~53%. Having higher interest rates make it trouble for interest-debt burdened companies like $CRWV to refinance for stronger FCF.
+
+_
+
+THE NUANCE and Repositioning:
+
+We&#x27;re seeing a broad sell-off across the board. However,  Capex and contracts from Mag7 ( $META, $GOOGL, $AMZN, $MSFT ) are confirmed with their extreme profitability.
+
+There&#x27;s an easy way to safely reposition to avoid issues with future revenue growth + debt cycles.
+
+1. Position into Neoclouds with contract visibility with Mag7:
+
+-  $NBIS - $19B $MSFT deal, $3B from $META, broad enterprise support
+- $CIFR - $5.5B Colo deal with $AMZN, $3B deal with $GOOGL
+- $WULF - $3.7B+ deals with $GOOGL and more.
+- $IREN - $9B deal with $MSFT
+
+We will likely see more capacity speculative companies like $SLNH, $CLSK, and others fall off and consolidation into Neoclouds with visible enterprise contract (low downside risk of future revenue).
+
+2. Position into Neoclouds with no/extremely low interest debt and high balance sheets:
+
+Companies like $NBIS are isolated from current credit market volatility as they have $4.79 billion in cash and cash equivalents from convertible notes.  Or companies like $CIFR with $1.2B in cash.
+
+3. Avoid companies with direct contracts with OpenAI that&#x27;s not Mag7.
+_
+
+Neoclouds are the backbone of Mag7 AI compute. This thesis has not changed and we&#x27;ll likely see some scale to $100B+ companies in the future as the next AWS.
+
+However, we&#x27;re seeing a widespread, indiscriminate sell-off caused by $CRWV, $ORCL, and OpenAI + credit tightening (partially due to incorrect institutional short reports from Burry on GPU depreciation).
+
+These types of sell-offs are completely not warranted for companies like $NBIS with $7-9B forward ARR and extremely strong balance sheets. But for other speculative companies, it&#x27;s a well-needed correction.
+
+A good quote is “retail is last to sell, last to buy back”.
+
+If you think you can sell and come back two weeks later, missing one or two huge rebound days after a selloff can cost you most of the recovery gains.
+
+Institutions are probably buying the better names right now eg. $NBIS through dark pools/block trades now after these types of washouts and margin liquidations. We&#x27;ve also seen institutional ownership go from 38%-&gt; 43-46% despite share prices dropping.
+
+Use this as a buying opportunity for good names, and hold through these periods of volatility.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1989352983348589023" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我们现在看到 AI + DC 股票的实时崩盘，$IREN 本周下跌 37.88%，$NBIS 本月下跌 35.27%。
+
+恐慌源于信贷紧缩、高息债务、OpenAI 传染、宏观，最重要的是：非理性恐惧。
+
+这是实时发生的事情：
+
+1. 信贷紧缩 - 像 $APLD 这样的公司未能出售债券（认购不足），最终发行了 $2.35B 高收益债券 - 彭博社 11 月 14 日。这些债券的售价为 97 美分，大幅折扣，收益率约为 10%。
+
+此次债券交易的风险主要与 Applied Digital 对 $CRWV 的依赖有关，该债券占其合同收益的很大一部分。围绕扩建的更多机构阳离子（例如 Burry 关于 GPU 贬值的空头报告）使得 DC 筹集资金变得更加困难。
+
+融资条件收紧会影响整个生态系统，这些生态系统会发行债务来为自己的建设提供资金。
+
+2. 高息债务 - 由于信贷紧缩，坏账（$CRWV 必须为扩张提供资金）每年造成 $1B+ 的损失。这会削减利润率和自由现金流。
+
+同样，$APLD 和其他以不良收益率筹集资金的公司也面临着同样的未来问题，我们看到相关公司因风险管理而遭到抛售。
+
+3. OpenAI 承诺提供 1T+ 资金，无余额 -
+
+OpenAI 承诺将向 $CRWV 提供超过 1 万亿美元的资本支出，向 $ORCL 提供 300B+ 美元的资本支出，他们正在为其建设产能。  由于手头没有余额并且采取了规避风险的方式，市场现在对 OpenAI 的这些承诺持怀疑态度。
+
+现在，我们看到像 Coreweave 这样的公司的扩张蔓延到了 $CORZ 和 $APLD，在这个扩张过程中，未来的收入可能依赖于 $CRWV。
+
+4. $CRWV 是人工智能基础设施领域的领导者（部分是 $ORCL）。当行业领先者抛售时，通常其他人也会效仿。
+
+5. 12月秋季降息可能性：
+
+除了高息债务之外，我们还看到 12 月份降息的可能性降至约 53%。较高的利率让 $CRWV 等负债累累的公司难以为更强大的自由现金流进行再融资。
+
+_
+
+细微差别和重新定位：
+
+我们看到全面抛售。然而，Mag7（$META、$GOOGL、$AMZN、$MSFT）的资本支出和合同已证实具有极高的盈利能力。
+
+有一种简单的方法可以安全地重新定位，以避免未来收入增长+债务周期的问题。
+
+1. 通过 Mag7 定位到具有合同可见性的 Neoclouds：
+
+- $NBIS - $19B $MSFT 交易，$3B 来自 $META，广泛的企业支持
+- $CIFR - $5.5B Colo 与 $AMZN 交易，$3B 与 $GOOGL 交易
+- $WULF - $3.7B+ 与 $GOOGL 等交易。
+- $IREN - $9B 与 $MSFT 的交易
+
+我们可能会看到更多容量投机公司，如 $SLNH、$CLSK 等公司衰落，并整合到 Neoclouds 中，并具有可见的企业合同（未来收入下行风险较低）。
+
+2. 进入 Neoclouds，无/极低利息债务和高资产负债表：
+
+像 $NBIS 这样的公司不受当前信贷市场波动的影响，因为它们拥有 47.9 亿美元的可转换票据现金和现金等价物。  或者像 $CIFR 这样拥有 $1.2B 现金的公司。
+
+3. 避免与 OpenAI 直接签订合同的公司（Mag7 以外的公司）。
+_
+
+Neoclouds 是 Mag7 AI 计算的支柱。这个论点没有改变，我们可能会在未来看到一些规模达到 100B+ 美元的公司，成为下一个 AWS。
+
+然而，我们看到 $CRWV、$ORCL 和 OpenAI + 信贷紧缩导致了广泛的、不加区别的抛售（部分原因是 Burry 对 GPU 贬值的机构做空报告不正确）。
+
+对于像 $NBIS 这样远期 ARR 为 7-9B 且资产负债表极其强劲的公司来说，这种类型的抛售是完全没有道理的。但对于其他投机性公司来说，这是一个急需的调整。
+
+一个好的说法是“零售是最后出售，最后回购”。
+
+如果你认为你可以卖出并在两周后回来，那么在抛售后错过一两个巨大的反弹日可能会让你损失大部分复苏收益。
+
+机构现在可能正在购买更好的名字，例如。在这些类型的冲刷和保证金清算之后，现在通过暗池/大宗交易$NBIS。尽管股价下跌，我们还看到机构持股比例从 38% 上升至 43-46%。
+
+将此作为买入好名字的机会，并在这些波动时期坚持下去。</div>
+        <div class="tweet-foot">
+          <span>likes 363 / retweets 47 / replies 44 / views 158794</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="26">
+        <div class="tweet-head">
+          <span class="mono">2025-11-14 22:14</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">@TalentActivity Actually I probably need to revisit this one more time in terms of the contractors with $CRWV, namely $APLD if they&#x27;re selling bonds at 10% yield (just now from Bloomberg). 
+
+$NBIS, $CIFR, $WULF balance sheets are still healthy.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@TalentActivity Actually I probably need to revisit this one more time in terms of the contractors with $CRWV, namely $APLD if they&#x27;re selling bonds at 10% yield (just now from Bloomberg). 
+
+$NBIS, $CIFR, $WULF balance sheets are still healthy.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1989336206262575557" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@TalentActivity 实际上，对于具有 $CRWV 的承包商，即 $APLD，如果他们以 10% 的收益率出售债券（刚刚来自彭博社），我可能需要再次重新审视这一点。 
+
+$NBIS、$CIFR、$WULF 资产负债表仍然健康。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2304</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="27">
+        <div class="tweet-head">
+          <span class="mono">2025-11-14 21:57</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$AWS</span><span class="chip red">$CIFR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;d probably rank Neoclouds like this after we got more context from earnings + deals.
+
+Just based on confirmed deals from capacity buildout:
+
+1. $NBIS - $MSFT | $META | Many
+2. $CIFR - $AWS | $GOOGL
+3. $WULF - $GOOGL
+4. $APLD - $CRWV + Hyperscaler
+5. $CORZ - $CRWV
+ 
+I wouldn&#x27;t touch $CRWV due to interest debt or $ORCL...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;d probably rank Neoclouds like this after we got more context from earnings + deals.
+
+Just based on confirmed deals from capacity buildout:
+
+1. $NBIS - $MSFT | $META | Many
+2. $CIFR - $AWS | $GOOGL
+3. $WULF - $GOOGL
+4. $APLD - $CRWV + Hyperscaler
+5. $CORZ - $CRWV
+ 
+I wouldn&#x27;t touch $CRWV due to interest debt or $ORCL due to contagion from OpenAI and low margins on buildout so far. 
+
+I think just based on market conditions, it&#x27;s safer to go with confirmed higher margin + contracts companies over speculative capacity/HPC buildout pivot arguments right now.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1989331881641541871" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>在我们从收益+交易中获得更多背景信息后，我可能会对 Neoclouds 进行这样的排名。
+
+仅基于产能建设中确认的交易：
+
+1.$NBIS - $MSFT | $元 |很多
+2.$CIFR - $AWS|$CIFR $GOOGL
+3.$WULF - $GOOGL
+4. $APLD - $CRWV + 超大规模
+5.$CORZ - $CRWV
+ 
+由于利息债务，我不会碰 $CRWV，也不会碰 $ORCL，因为 OpenAI 的蔓延以及迄今为止扩建的利润率较低。 
+
+我认为，仅根据市场状况，目前与投机能力/HPC 建设支点论点相比，选择已确认的更高利润率 + 合同公司更为安全。</div>
+        <div class="tweet-foot">
+          <span>likes 18 / retweets 1 / replies 5 / views 3146</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="28">
+        <div class="tweet-head">
+          <span class="mono">2025-11-03 21:15</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$DGXX</span><span class="chip red">$GOOGL</span><span class="chip red">$HIVE</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">The Neocloud List got updated:
+
+$IREN - IREN secured a $9.7B GPU cloud contract with Microsoft, including 20% upfront prepayment, to deploy NVIDIA GB300s over five years.
+
+$CIFR - CIFR secured a $5.5 billion, 15-year lease agreement with Amazon Web Services (AWS).
+
+The Neocloud sector just got insanely bullish with new...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The Neocloud List got updated:
+
+$IREN - IREN secured a $9.7B GPU cloud contract with Microsoft, including 20% upfront prepayment, to deploy NVIDIA GB300s over five years.
+
+$CIFR - CIFR secured a $5.5 billion, 15-year lease agreement with Amazon Web Services (AWS).
+
+The Neocloud sector just got insanely bullish with new contracts coming in from hyperscalers and this just shows insatiable demand for compute. 
+
+I expected $ORCL, $META, and $AMZN to make deals in the original thesis and looks like AWS entered the fray with $CIFR, with likely more deals incoming with other Neoclouds. $META also signed a $14B deal with $CRWV recently and from their ER scaling AI Capex, we&#x27;ll likely see other deals with Neoclouds. 
+
+This is insanely bullish across the whole sector. 
+
+I attached my personal tierlist for fun, but we&#x27;ll likely see a re-ratings in data centers/miners across the board when there&#x27;s more time to analyze deals and margins.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1985334909108433014" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Neocloud 列表已更新：
+
+$IREN - IREN 与 Microsoft 签订了价值 9.7B 美元的 GPU 云合同，包括 20% 的预付款，将在五年内部署 NVIDIA GB300。
+
+$CIFR - CIFR 与 Amazon Web Services (AWS) 签订了价值 55 亿美元、为期 15 年的租赁协议。
+
+随着来自超大规模企业的新合同的出现，Neocloud 行业变得异常乐观，这恰恰表明了对计算的巨大需求。 
+
+我预计 $ORCL、$META 和 $AMZN 会在最初的论文中达成交易，看起来 AWS 也加入了与 $CIFR 的竞争，可能还会有更多与其他 Neocloud 的交易。 $META 最近还与 $CRWV 签署了一项 14B 美元的协议，从他们的 ER 扩展 AI 资本支出来看，我们可能会看到与 Neoclouds 的其他交易。 
+
+这对整个行业来说都是非常乐观的。 
+
+我附上我的个人等级列表是为了好玩，但当有更多时间来分析交易和利润时，我们可能会看到数据中心/矿工的全面重新评级。</div>
+        <div class="tweet-foot">
+          <span>likes 801 / retweets 124 / replies 54 / views 273244</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="29">
+        <div class="tweet-head">
+          <span class="mono">2025-11-03 02:04</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;m deleting my earlier comment to this since X is bugged and it&#x27;s messing up my timeline:
+
+But TLDR from before:
+
+$APLD builds data-centers with significant power capacity and then lease that infrastructure to customers.  So there&#x27;s the $11B $APLD, $CRWV lease right now over 15 years for Ellendale campus. 
+
+Then there...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;m deleting my earlier comment to this since X is bugged and it&#x27;s messing up my timeline:
+
+But TLDR from before:
+
+$APLD builds data-centers with significant power capacity and then lease that infrastructure to customers.  So there&#x27;s the $11B $APLD, $CRWV lease right now over 15 years for Ellendale campus. 
+
+Then there&#x27;s Polaris Forge 2 is ~200+ MW with a $5B contract. Not much of a fan of longer contract terms (eg. 10 Years $CIFR | $WULF), vs. 5 Year $NBIS | $MSFT, since slower revenue ramp and changes of costs, but this is coming from a trader&#x27;s perspecitve. Not as an actual negative when I talk about longer contract terms since if you’re investing for 1Y timeframe, you’d want the fastest revenue ramp possible. 
+
+But if you look at fluidstack $WULF contract agreements eg. 15 years it provides a lot more guarantees for a company over time, vs. if hyperscalers like $MSFT end up building out their own capacity and custom ASICs then some Neoclouds might be in trouble after 4Y</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1985045270841979108" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我正在删除我之前对此的评论，因为 X 被窃听并且它打乱了我的时间线：
+
+但之前的 TLDR ：
+
+$APLD 构建具有强大电力容量的数据中心，然后将该基础设施出租给客户。  因此，Ellendale 校区目前有 11B 美元的 $APLD、$CRWV 租赁期超过 15 年。 
+
+然后是 Polaris Forge 2，容量约为 200+ MW，合同金额为 5B 美元。与 5 年 $NBIS | $WULF 相比，不太喜欢较长合同期限（例如 10 年 $CIFR | $WULF）。 $MSFT，因为收入增长放缓和成本变化，但这是从交易员的角度来看的。当我谈论更长的合同期限时，这并不是一个实际的负面影响，因为如果你投资一年的时间范围，你会希望尽可能最快的收入增长。 
+
+但是如果你看看fluidstack $WULF 合同协议，例如。随着时间的推移，它为公司提供了 15 年更多的保证，而如果像 $MSFT 这样的超大规模企业最终建立自己的容量和定制 ASIC，那么一些 Neoclouds 可能会在 4 年之后陷入麻烦</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3031</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="30">
+        <div class="tweet-head">
+          <span class="mono">2025-11-01 02:03</span>
+          <span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">I’m not claiming one week defines a trend, I’m pointing out that we&#x27;re seeing early divergence where these names usually trade in sync + $NBIS and others trade lower beta. 
+
+If you read the post I mentioned $WYFI, $APLD, $WULF, $CIFR, $BITF, $CLSK and &quot;Miners&quot; in general I&#x27;m not pointing to one specific name.  
+
+This i...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I’m not claiming one week defines a trend, I’m pointing out that we&#x27;re seeing early divergence where these names usually trade in sync + $NBIS and others trade lower beta. 
+
+If you read the post I mentioned $WYFI, $APLD, $WULF, $CIFR, $BITF, $CLSK and &quot;Miners&quot; in general I&#x27;m not pointing to one specific name.  
+
+This is just an observation from about the divergence in performance. And it&#x27;s probably due to margin differences that the market&#x27;s starting to price in.
+
+You&#x27;re free to disagree and that&#x27;s fair.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1984320309273772236" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我并不是说一周定义了一种趋势，我只是指出，我们看到了早期的分歧，这些名字通常同步交易 + $NBIS，而其他名字则交易较低的贝塔值。 
+
+如果您读过我提到的帖子，我提到了 $WYFI、$APLD、$WULF、$CIFR、$BITF、$CLSK 和“矿工”，我并不是指一个特定的名称。  
+
+这只是对性能差异的观察。这可能是由于市场开始定价的利润率差异所致。
+
+你可以自由地提出不同意见，这是公平的。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1665</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="31">
+        <div class="tweet-head">
+          <span class="mono">2025-11-01 00:17</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">Markets are starting to price in:
+
+A divergence between AWS-style full-stack Neoclouds like $NBIS and miners such as $CIFR, $BITF, $CLSK, and others.
+
+This is the reason I sold off $IREN $WULF and others, and consolidated into Nebius.
+
+Why?
+
+💹 Margins &gt; ⚡️Capacity.
+
+Just today:
+
+The CTO of Nebius stated:
+
+“Almost no Ne...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Markets are starting to price in:
+
+A divergence between AWS-style full-stack Neoclouds like $NBIS and miners such as $CIFR, $BITF, $CLSK, and others.
+
+This is the reason I sold off $IREN $WULF and others, and consolidated into Nebius.
+
+Why?
+
+💹 Margins &gt; ⚡️Capacity.
+
+Just today:
+
+The CTO of Nebius stated:
+
+“Almost no Neocloud in the market is actually a cloud. As in a bunch of baremetal with a ton of third-party software slapped on top.”
+
+Provocative? Absolutely not — if you take the term “cloud” seriously, not just as slapping on a bunch of hardware boxes.
+
+Danila explained how baremetal operators will soon discover the challenges Nebius has already solved at scale.
+
+And that’s exactly why I stated $NBIS has the highest asymmetrical upside, since miners may struggle with margins at scale.
+
+We’ve also seen a Forbes article by Nebius Co-Founder Roman Chernin, summarize how the AI economy requires a new, full-stack, AI-native infrastructure, not the stitched-together systems:
+
+“You can buy racks from one supplier, cable them together... but in the long term, economics, flexibility and speed depend on you controlling your own stack.”
+
+“If you control the stack, you control the product, the performance, and the economics.”
+
+_
+
+This doesn’t mean there’s no room for other HPC companies like $WYFI, $APLD, $WULF, and others to grow, and the Neocloud segment is just beginning its run-up (especially when we look at $META or $AMZN earnings).
+
+However, during the speculation phase, we’ve already priced in capacity buildout with miners - most are already up 50–200%+.
+
+But when it comes to execution, those who control the full stack will win on margins.
+
+We’ve seen $CRWV figure that out firsthand, spending billions on software acquisitions and still maintaining lower utilization than $NBIS (as per the whitepaper).
+
+We’ve also seen how an $800B hyperscaler (Oracle) failed to build out its stack, running at 14% gross margins.
+
+If Oracle couldn’t fully integrate its software, and CoreWeave is still spending years trying to do so,  how will small miners pivot?
+
+Arguments from “Type-1 only” operators will find out the hard way what margin compression at scale looks like.
+
+As the Forbes article concludes:
+
+“At the end of the day, if you’re just cabling the boxes or building service on top of infrastructure you don’t control, you’re limited in the game of scale and efficiency.”
+
+ $NBIS already has that full stack today.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1984293587295866986" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>市场开始定价：
+
+$NBIS 等 AWS 风格的全栈 Neocloud 与 $CIFR、$BITF、$CLSK 等矿工之间存在差异。
+
+这就是我卖掉 $IREN $WULF 等并合并到 Nebius 的原因。
+
+为什么？
+
+💹 利润 &gt; ⚡️容量。
+
+就在今天：
+
+Nebius 的 CTO 表示：
+
+“市场上几乎没有 Neocloud 实际上是云。就像一堆裸机，上面有大量第三方软件。”
+
+挑衅？绝对不是——如果你认真对待“云”这个词，而不仅仅是一堆硬件盒子。
+
+Danila 解释了裸机运营商将如何很快发现 Nebius 已经大规模解决的挑战。
+
+这正是我说 NBIS 具有最高的不对称上涨空间的原因，因为矿商可能会在规模化利润方面遇到困难。
+
+我们还看到了 Nebius 联合创始人 Roman Chernin 的一篇福布斯文章，总结了人工智能经济如何需要一个新的、全栈的、人工智能原生的基础设施，而不是缝合在一起的系统：
+
+“您可以从一家供应商那里购买机架，然后将它们连接在一起……但从长远来看，经济性、灵活性和速度取决于您对自己堆栈的控制。”
+
+“如果你控制了堆栈，你就控制了产品、性能和经济性。”
+
+_
+
+这并不意味着 $WYFI、$APLD、$WULF 等其他 HPC 公司没有增长空间，而 Neocloud 领域才刚刚开始增长（特别是当我们查看 $META 或 $AMZN 收益时）。
+
+然而，在投机阶段，我们已经对矿商的产能建设进行了定价——大多数已经增长了 50-200% 以上。
+
+但在执行方面，那些控制整个堆栈的人将在利润上获胜。
+
+我们已经看到 $CRWV 亲眼目睹了这一点，在软件采购上花费了数十亿美元，但利用率仍然低于 $NBIS（根据白皮书）。
+
+我们还看到了一家价值 800B 美元的超大规模提供商 (Oracle) 如何未能构建其堆栈，其毛利率仅为 14%。
+
+如果 Oracle 无法完全集成其软件，而 CoreWeave 仍在花费数年时间尝试这样做，那么小型矿商将如何转型？
+
+来自“仅限 Type-1”运营商的争论将很难找出大规模利润压缩的样子。
+
+正如福布斯文章的结论：
+
+“归根结底，如果你只是在你无法控制的基础设施上布线或构建服务，那么你在规模和效率方面就会受到限制。”
+
+ $NBIS 今天已经拥有完整的堆栈。</div>
+        <div class="tweet-foot">
+          <span>likes 434 / retweets 38 / replies 69 / views 164985</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="32">
+        <div class="tweet-head">
+          <span class="mono">2025-10-29 23:01</span>
+          <span><span class="chip red">$API</span><span class="chip red">$APLD</span><span class="chip red">$GLXY</span><span class="chip red">$NNE</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Thanks! I&#x27;m not here to make any argument for individual stocks here like $APLD, $GLXY, $API, $NNE and others that you mentioned.
+
+I just wanted to give a broader overview of macro and how you could position with the examples above.
+
+If those are your top picks, then great! (i personally like $WULF and $GLXY on there)</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Thanks! I&#x27;m not here to make any argument for individual stocks here like $APLD, $GLXY, $API, $NNE and others that you mentioned.
+
+I just wanted to give a broader overview of macro and how you could position with the examples above.
+
+If those are your top picks, then great! (i personally like $WULF and $GLXY on there)</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1983549684317815177" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>谢谢！我不是在这里对个股做出任何争论，例如 $APLD、$GLXY、$API、$NNE 以及您提到的其他股票。
+
+我只是想对宏观进行更广泛的概述，以及如何通过上面的示例进行定位。
+
+如果这些是您的首选，那就太好了！ （我个人喜欢那里的$WULF和$GLXY）</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1421</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="33">
+        <div class="tweet-head">
+          <span class="mono">2025-09-18 05:25</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$ASTS</span><span class="chip red">$BMNR</span><span class="chip red">$BTBT</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$DAVE</span><span class="chip red">$DELL</span><span class="chip red">$DLO</span><span class="chip red">$ETOR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$MVST</span><span class="chip red">$NBIS</span><span class="chip red">$NVTS</span><span class="chip red">$ONDS</span><span class="chip red">$OPEN</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RUM</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Exploring small caps with 10x+ upside and gaining traction.
+
+Will throw $100k+ at some if people have high conviction with a reason:
+
+$APLD (5B),  $CIFR (4.8B) after $IREN run
+_
+$ONDS (1.99B), $NVTS (1.3B), $MVST (1B), or other recs
+
+Genuinely asking, not advice — just DD-hunting</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Exploring small caps with 10x+ upside and gaining traction.
+
+Will throw $100k+ at some if people have high conviction with a reason:
+
+$APLD (5B),  $CIFR (4.8B) after $IREN run
+_
+$ONDS (1.99B), $NVTS (1.3B), $MVST (1B), or other recs
+
+Genuinely asking, not advice — just DD-hunting</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1968426222578442740" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>探索具有 10 倍以上上涨空间的小盘股并获得关注。
+
+如果人们有很高的信念并有理由，我们会向某些人扔 10 万美元以上：
+
+$IREN 运行后 $APLD (5B)、$CIFR (4.8B)
+_
+$ONDS (1.99B)、$NVTS (1.3B)、$MVST (1B) 或其他建议
+
+真诚地询问，而不是建议——只是 DD 狩猎</div>
+        <div class="tweet-foot">
+          <span>likes 26 / retweets 1 / replies 8 / views 28870</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=APLD">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$GOGL 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$GOGL 历史推文</h1>
+      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>2</b></div>
+        <div class="stat-card"><span>历史推文</span><b>2</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2025-10-16</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2025-10-17</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">关税 / 宏观冲击买点 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2025-10-17 15:28</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BTC</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$FLNC</span><span class="chip red">$GLD</span><span class="chip red">$GOGL</span><span class="chip red">$GOOGL</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">We are 12 days away from a rate cut (94.1% odds). MMs enjoy times like these to cleanse the option chain. 
+
+In terms of levels I’m personally looking out for larger sized leveraged trades:
+
+$NBIS - $105-$110
+$TSM - $170-$175
+$BTC - ~&lt;$100K
+$RKlB - $35-$40
+$ALAB - $100-$120
+_
+
+Special shoutout to Amazon, which is down 4...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">We are 12 days away from a rate cut (94.1% odds). MMs enjoy times like these to cleanse the option chain. 
+
+In terms of levels I’m personally looking out for larger sized leveraged trades:
+
+$NBIS - $105-$110
+$TSM - $170-$175
+$BTC - ~&lt;$100K
+$RKlB - $35-$40
+$ALAB - $100-$120
+_
+
+Special shoutout to Amazon, which is down 4.6% YTD despite the rally.
+
+$AMZN - $200-$210 ($211 is extremely good now for calls, reminds me of $GOOGL at $145 before the epic rally. Basically around now seems good, but like Google it dropped below levels people expected so might even touch $200)
+
+I’m fine with margin + options on higher conviction stuff, this is just my personal risk tolerance, NFA.
+
+These times are the best to go long on high conviction.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1979087229038530782" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>距离降息还有 12 天（可能性为 94.1%）。 MM们喜欢这样的时间来清理期权链。 
+
+就级别而言，我个人正在寻找较大规模的杠杆交易：
+
+$NBIS - $105-$110
+$TSM - $170-$175
+BTC 美元 - ~&lt;10 万美元
+$RK1B - $35-$40
+$ALAB - $100-$120
+_
+
+特别值得赞扬的是亚马逊，尽管股价上涨，但今年迄今仍下跌 4.6%。
+
+$AMZN - $200-$210（211 美元现在非常适合看涨期权，让我想起史诗般的反弹之前 $GOOGL 的价格为 145 美元。现在基本上看起来不错，但像 Google 一样，它跌破了人们预期的水平，因此甚至可能触及 200 美元）
+
+我对保证金+更高信念的期权很满意，这只是我个人的风险承受能力，NFA。
+
+这些时候是坚定信念做多的最佳时机。</div>
+        <div class="tweet-foot">
+          <span>likes 247 / retweets 26 / replies 17 / views 120624</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2025-10-17 06:45</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$BTC</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$FLNC</span><span class="chip red">$GLD</span><span class="chip red">$GOGL</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Macro + Dip thoughts Oct 16th:
+
+There&#x27;s a ton going on, eg. $GLD hitting ATHs, but that&#x27;s a whole different rabbit-hole on the USD. 
+
+Main stock drop today was due to a shock from regional banks, so I&#x27;ll focus on that. 
+
+It&#x27;s a great buying opportunity on:
+
+Neoclouds with confirmed Mag7 contracts
+- $NBIS (MSFT) $CIFR (...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Macro + Dip thoughts Oct 16th:
+
+There&#x27;s a ton going on, eg. $GLD hitting ATHs, but that&#x27;s a whole different rabbit-hole on the USD. 
+
+Main stock drop today was due to a shock from regional banks, so I&#x27;ll focus on that. 
+
+It&#x27;s a great buying opportunity on:
+
+Neoclouds with confirmed Mag7 contracts
+- $NBIS (MSFT) $CIFR (GOOGL), $WULF (GOOGL) etc. 
+
+AI Buildout
+- Semis such as $TSM (Screaming buy it always seem to dips like this after blowout earnings to wipe off calls). 
+
+We already have blowout earnings numbers and increasing margins + forward revenue, $TSM is just the easiest long I&#x27;ve ever seen. 
+
+TSM printing money also supports this builtout thesis.
+
+- Energy such as $FLNC will likely continue going up because of re-rating bc of data center buildout + AI use. 
+
+Crypto
+- $BTC $107k, $LTC $90 all amazing buys, I&#x27;d be a tad more cautious of $CRCL and others though. 
+
+People probably have PTSD from 2023 silvergate, etc. going down and USDC depegging. 
+
+It&#x27;s a much needed correction for certain stocks:
+
+- Quantum 
+- Robotics/Drones 
+- Critical Minerals (only specific ones are likely good)
+
+That have 0 revenue and are increasing parabolically off hype. 
+
+_
+
+The difference is that Neoclouds + AI Buildout is confirmed revenue based on execution. 
+
+They&#x27;re all national security risks but AI Buildout has the wealthiest hyperscalers in the world are backstopping it.
+
+&quot; $AMZN, $META, $MSFT, $GOGL, and others could spend an estimated 320B on capex this year&quot;. - BI
+
+&quot; $META, OpenAI, and $ORCL, have announced plans to spend more than $1 Trillion on Data Centers in the next several years&quot;- BI
+
+_
+
+In terms of what happened in specific: 
+
+Markets dipped today on regional banking fears, but it&#x27;s likely overblown. The latest scare was due to Zion/Western Alliance mainly due to borrower fraud.
+
+My guess is that it&#x27;s individual banks, not systemic banking collapses that would have credit tightening.
+
+We have a near-confirmed rate cut (close to 98%) in 2 weeks time. This is a correction needed across the board (to wipe away the froth) + leverage traders + option flow. use this correction to go long.
+
+This is still one the earliest parts of the whole AI buildout, I do expect $NBIS as an example to scale up to 4.5B-7B+ ARR in 1 year and $60B+ marketcap from here. 
+
+Again the hype built into Neoclouds are because of forward revenue growth (fundamentals), while the hype into Quantum/some drone companies, etc.  are based around promises. 
+
+It&#x27;s a perfect time to scale up longs from companies with INSANE FORWARD REVENUE GROWTH (which will cause large re-ratings to marketcaps) not just industry narrative/speculation like Quantum.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1978955578652398061" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>10 月 16 日宏观 + 下跌想法：
+
+例如，有很多事情正在发生。 $GLD 触及 ATH，但这对美元来说是一个完全不同的兔子洞。 
+
+今天主要股票的下跌是由于地区银行的冲击，所以我将重点关注这一点。 
+
+这是一个绝佳的购买机会：
+
+Neoclouds 已确认 Mag7 合同
+- $NBIS (MSFT) $CIFR (GOOGL)、$WULF (GOOGL) 等。 
+
+人工智能构建
+- 半成品，例如$TSM（在井喷式盈利消除看涨情绪后，尖叫买入似乎总是像这样下跌）。 
+
+我们已经拥有井喷的盈利数据和不断增加的利润+远期收入，$TSM 只是我见过的最简单的多头。 
+
+TSM 印钞也支持这一扩展论点。
+
+- 由于数据中心扩建+人工智能使用的重新评级，诸如 $FLNC 之类的能源可能会继续上涨。 
+
+加密货币
+- $BTC $107k，$LTC $90 都是令人惊叹的买入，不过我对 $CRCL 和其他东西会更加谨慎。 
+
+人们可能会因为 2023 年银门事件等下跌以及 USDC 脱钩而患上创伤后应激障碍 (PTSD)。 
+
+对于某些股票来说，这是非常需要的修正：
+
+- 量子 
+- 机器人/无人机 
+- 关键矿物质（只有特定的矿物质可能是好的）
+
+这些公司的收入为零，并且由于炒作而呈抛物线式增长。 
+
+_
+
+不同的是，Neoclouds + AI Buildout 是基于执行确认收入。 
+
+它们都是国家安全风险，但人工智能构建拥有世界上最富有的超大规模企业的支持。
+
+“$AMZN、$META、$MSFT、$GOGL 和其他公司今年可能在资本支出上花费估计 320B”。 - 商业智能
+
+“$META、OpenAI 和 $ORCL 已宣布计划在未来几年内投资超过 1 万亿美元用于数据中心”- BI
+
+_
+
+就具体发生的事情而言： 
+
+今天市场因地区银行业担忧而下跌，但这种担忧可能被夸大了。最新的恐慌主要是由于借款人欺诈而引起的锡安/西方联盟。
+
+我的猜测是，导致信贷紧缩的是个别银行，而不是系统性银行业崩溃。
+
+我们将在两周内确认降息（接近 98%）。这是需要全面调整（消除泡沫）+杠杆交易者+期权流。利用这个修正做多。
+
+这仍然是整个 AI 建设的最早部分之一，我确实希望以 NBIS 为例，在 1 年内将 ARR 扩大到 4.5B-7B+，市值从这里扩大到 60B+。 
+
+同样，对 Neoclouds 的炒作是因为未来的收入增长（基本面），而对 Quantum/一些无人机公司等的炒作则是基于承诺。 
+
+现在是扩大远期收入增长（这将导致市值大幅重估）的公司多头头寸的最佳时机，而不仅仅是像量子这样的行业叙述/投机。</div>
+        <div class="tweet-foot">
+          <span>likes 163 / retweets 12 / replies 16 / views 98693</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=GOGL">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

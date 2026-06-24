@@ -1,0 +1,1528 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$DPRO 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$DPRO 历史推文</h1>
+      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>15</b></div>
+        <div class="stat-card"><span>历史推文</span><b>15</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-01-16</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-03-26</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">信念分层、仓位与时点 2</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 2</span><span class="chip blue">认证周期 vs TTM 营收 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-03-26 12:53</span>
+          <span><span class="chip red">$AVAV</span><span class="chip red">$DPRO</span></span>
+        </div>
+        <div class="tweet-text">Sorry to hear, drone stocks like $AVAV and $DPRO were my biggest losers and I lost solid 6 fig on that. 
+
+I posted earlier I cut my losses on them since Greenland peace deal, $AVAV recently on the Scar program loss.
+
+And rotated to photonics. 
+
+The Iran war tended to be a lot of the larger military contractors this tim...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Sorry to hear, drone stocks like $AVAV and $DPRO were my biggest losers and I lost solid 6 fig on that. 
+
+I posted earlier I cut my losses on them since Greenland peace deal, $AVAV recently on the Scar program loss.
+
+And rotated to photonics. 
+
+The Iran war tended to be a lot of the larger military contractors this time around, compared to drone companies used in a Venezuela. 
+
+I post a lot on X, and not everything shows up to followers unfortunately.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2037030031223119946" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>很抱歉听到，像 $AVAV 和 $DPRO 这样的无人机股票是我最大的输家，我因此损失了 6 位数。 
+
+我早些时候发布了自格陵兰和平协议以来我减少了他们的损失，$AVAV 最近在 Scar 计划损失上。
+
+并转向光子学。 
+
+与委内瑞拉使用的无人机公司相比，这次伊朗战争往往是由许多大型军事承包商参与。 
+
+我在 X 上发布了很多帖子，不幸的是，并不是所有内容都会向关注者展示。</div>
+        <div class="tweet-foot">
+          <span>likes 32 / retweets 1 / replies 5 / views 7655</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-02-08 06:30</span>
+          <span><span class="chip red">$AIRO</span><span class="chip red">$AVAV</span><span class="chip red">$DPRO</span><span class="chip red">$LPTH</span><span class="chip red">$OSS</span><span class="chip red">$RKLB</span></span>
+        </div>
+        <div class="tweet-text">$OSS, $AIRO, $DPRO, $LPTH (sorta) are defense stocks. Forgot to include $AVAV up there but I’d add that in at $259.
+
+There was peace with Greenland so no really military catalysts recently. But they might pick up again with new Iran tensions.
+
+That being said just feel like $RKLB is a tad overvalued right now but long ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$OSS, $AIRO, $DPRO, $LPTH (sorta) are defense stocks. Forgot to include $AVAV up there but I’d add that in at $259.
+
+There was peace with Greenland so no really military catalysts recently. But they might pick up again with new Iran tensions.
+
+That being said just feel like $RKLB is a tad overvalued right now but long term it’s my favorite pick</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2020263863460192426" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>$OSS、$AIRO、$DPRO、$LPTH（某种程度）是国防股。忘了把 $AVAV 算进去，但我想把它加进去，价格是 259 美元。
+
+与格陵兰岛实现了和平，所以最近没有真正的军事催化剂。但随着伊朗新的紧张局势，它们可能会再次回升。
+
+话虽这么说，但感觉 $RKLB 目前有点被高估，但从长远来看，这是我最喜欢的选择</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 6155</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-02-08 06:10</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$AIRO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$COIN</span><span class="chip red">$CPSH</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DPRO</span><span class="chip red">$ETOR</span><span class="chip red">$GLXY</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$OSS</span><span class="chip red">$POET</span><span class="chip red">$QQQ</span><span class="chip red">$RDDT</span><span class="chip red">$SNDK</span><span class="chip red">$SOL</span><span class="chip red">$TSM</span><span class="chip red">$TTD</span><span class="chip red">$VIX</span><span class="chip red">$VLN</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">Portfolio weightings is my most common question.
+
+Here’s what my portfolio looks like:
+
+35% Memory Supercycle
+_
+10% Samsung Electronics
+10% Sk Hynix
+10% $MU 
+5% $SNDK
+
+25% Digital Asset exposure
+_
+10% $IBIT 
+5% $COIN
+5% $HOOD 
+2.5% $CRCL
+2.5% $SOL
+
+15% Fintech/Advertising
+5% $RDDT
+5% $ETOR
+5% $TTD
+
+15% Datacenter
+-
+10%...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Portfolio weightings is my most common question.
+
+Here’s what my portfolio looks like:
+
+35% Memory Supercycle
+_
+10% Samsung Electronics
+10% Sk Hynix
+10% $MU 
+5% $SNDK
+
+25% Digital Asset exposure
+_
+10% $IBIT 
+5% $COIN
+5% $HOOD 
+2.5% $CRCL
+2.5% $SOL
+
+15% Fintech/Advertising
+5% $RDDT
+5% $ETOR
+5% $TTD
+
+15% Datacenter
+-
+10% $NBIS
+5% $CRDO
+
+10% Semi
+_
+5% $INTC 
+5% $TSM
+
+10% Photonics
+5% $LITE 
+2.5% $AXTI 
+2.5% $COHR 
+
+5% Hedge/Cash
+5% Hedge (Eg. $VIX or $QQQ Puts, especially around now)
+
+10% Small Cap Moonshots
+2.5% $VPG 
+2.5% $LPTH
+1.5% $VLN 
+1.5% $AIRO
+1% $OSS 
+.5% $DPRO 
+.5% $CPSH 
+
+This is using slight margin, eg 1.25x. 
+
+Additional Margin (up to 1.5x):
+- Swing Trades (eg. $GLXY) 
+
+My portfolio looks vaguely similar to this, but with more random names like $AEHR or Unimicron and different weightings.
+
+This is long semi + AI supercycle, with a recovery trade in Crypto. If (Google, Meta, MSFT) cut spending this would hurt, but they just increased capex spend. 
+
+But this is just showing how I do risk management, it’s very risky to full send it into micro caps like $POET.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2020258804953411966" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>投资组合权重是我最常见的问题。
+
+这是我的投资组合的样子：
+
+35% 内存超级循环
+_
+10% 三星电子
+10% SK海力士
+10% MU 美元 
+5% $SNDK
+
+25% 数字资产敞口
+_
+10% IBIT 美元 
+5% 币
+5% $引擎盖 
+2.5% $CRCL
+2.5% 美元
+
+15% 金融科技/广告
+5% $RDDT
+5% 埃托尔
+5% 预付款
+
+15% 数据中心
+-
+10% $NBIS
+5% $CRDO
+
+10% 半
+_
+5% $INTC 
+5% $TSM
+
+10% 光子学
+5% 精简版 
+2.5% $AXTI 
+2.5% COHR 美元 
+
+5% 对冲/现金
+5% 对冲（例如 $VIX 或 $QQQ 看跌期权，尤其是现在）
+
+10% 小盘登月计划
+2.5% VPG 美元 
+2.5% LPTH 美元
+1.5% 极值美元 
+1.5% $艾罗
+1% 开源软件 
+.5% $DPRO 
+.5% $CPSH 
+
+这是使用微小的余量，例如 1.25x。 
+
+额外保证金（高达 1.5 倍）：
+- 波段交易（例如$GLXY） 
+
+我的投资组合看起来与此有点相似，但具有更多随机名称，例如 $AEHR 或 Unimicron 以及不同的权重。
+
+这是一个漫长的半+人工智能超级周期，加密货币交易出现复苏。如果（谷歌、Meta、MSFT）削减支出，这会造成伤害，但他们只是增加了资本支出。 
+
+但这只是展示我如何进行风险管理，将其完全发送到像 $POET 这样的微型大写是非常危险的。</div>
+        <div class="tweet-foot">
+          <span>likes 1250 / retweets 126 / replies 94 / views 128633</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-01-25 00:16</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AIRO</span><span class="chip red">$AMBA</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVAV</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BKKT</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$COHR</span><span class="chip red">$COIN</span><span class="chip red">$COPX</span><span class="chip red">$CRCL</span><span class="chip red">$DPRO</span><span class="chip red">$ETOR</span><span class="chip red">$FIG</span><span class="chip red">$FORM</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LASR</span><span class="chip red">$LIT</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$POET</span><span class="chip red">$RDDT</span><span class="chip red">$SKYT</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TTD</span><span class="chip red">$UAVS</span><span class="chip red">$UMAC</span><span class="chip red">$VELO</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">Jan 25th Ratings. Post EU Tariffs and $INTC ER.
+
+Strong Buy:
+$SNAP
+$META
+Samsung Electronics
+SK Hynix
+$MU
+Unimicron
+$TSM
+$CRCL
+$AXTI 
+$LPTH 
+$COPX
+$LIT
+$AEHR
+$FORM
+$AMKR
+$AVGO
+$MRVL
+
+Buy:
+$COIN
+$SMCI
+$GOOGL
+$FIG
+$AMZN
+$IBIT
+$RDDT
+$TTD
+$HIMS
+$HOOD
+$COHR
+$AMBA
+$IREN
+$POET
+$AAOI
+$LASR
+$VPG
+$OSS
+$INTC
+$UMAC
+$ONDS
+$AIRO
+$DP...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Jan 25th Ratings. Post EU Tariffs and $INTC ER.
+
+Strong Buy:
+$SNAP
+$META
+Samsung Electronics
+SK Hynix
+$MU
+Unimicron
+$TSM
+$CRCL
+$AXTI 
+$LPTH 
+$COPX
+$LIT
+$AEHR
+$FORM
+$AMKR
+$AVGO
+$MRVL
+
+Buy:
+$COIN
+$SMCI
+$GOOGL
+$FIG
+$AMZN
+$IBIT
+$RDDT
+$TTD
+$HIMS
+$HOOD
+$COHR
+$AMBA
+$IREN
+$POET
+$AAOI
+$LASR
+$VPG
+$OSS
+$INTC
+$UMAC
+$ONDS
+$AIRO
+$DPRO
+$AVAV
+$BULL
+$ETOR
+VLN
+NBIS
+GLXY
+CIFR
+HUT
+WULF
+
+Questionable
+$VELO
+$SKYT
+
+Avoid
+$UAVS
+$BKKT
+WLMT
+SLNH
+$PLTR
+CRWV
+$ORCL
+$BMNR
+$IONQ , RGTI, QBTS
+
+_
+
+Strong Buy
+
+Snapchat - Bottomed around $7.4, imo very strong at this level. Increased FCF from memory opex reduction and memory monetization into 2027. Just a waiting game for re-rating. 
+
+Meta - 26% Y/Y revenue growth is extremely strong, produced $10B+ FCF last quarter. Expect it to pick up after next quarter earnings due to optics (700%+ Q/Q EPS optics) that caused selloff last time from BBB. 
+
+Samsung Electronics - Holy grail for semis, samsung provides exposure to both hbm and foundry. 
+
+SK Hynix - memory supercycle
+
+Micron - memory supercycle, but with US backing. 
+
+Unimicron - unholy long for hbm, ic substrates, glass core, cowos, and all other bottlenecks.
+
+TSM - money printer, literally can&#x27;t go wrong with this. 
+
+Circle - 2-3x projected rate cuts would likely hurt circle net income a lot, hence why it&#x27;s being priced in. But amazing long at $16B as they print money and should start seeing expansion of USDC. 
+
+AXTI - LPTH: Bottlenecks for InP / Germanium, etc. Will be a huge theme going into 2026. It&#x27;s just a waiting game for both supply chain disruption (in AXT) or made in America w/ black diamond in Lightpath. 
+
+Low downside risk imo due to capacity ramp -&gt; revenue increase, but moonshot HBM type price increases might be questionable. 
+
+COPX - LI: Rare Earths/Materials like Copper, Lithium are great longs for 2026. Similar with bottlenecks above, supply chain disruptions from China will cause money to flow into securing supply + buildout out new supply chains. 
+
+AEHR - Honestly, they sit in two different hot verticals in AI and Robotics. $5.5m Sonoma order might be linked with Micron and SiC Testing. Seems like an extremely good moonshot sub $1B MC. 
+
+FORM - Likely to be important in US supply chains since they do DRAM/HBM, and Foundry/Logic. &amp; Yield is especailyl important w/ hbm4. 
+
+AMKR - extreme beneficiary of made in america us supply chains and tsm -&gt; US
+
+AVGO - Large correction recently post earnings. Strong buy IMO at these levels given hyperscaler ASICs will continue to ramp (even though there&#x27;s been some delays). 
+
+MRVL - Same story with Broadcom, marvell selloff after rumors of Microsoft maia delays. It&#x27;s just a waiting game for ~2x revenue in 2027 and when markets start pricing that in, and after celestial acqusition, they&#x27;re doing great stuff in other segments like interconnects. 
+
+Buy
+
+Coinbase - Recent correction to Crypto makes Coinbase value decent again at $57B. Was never a fan of their exchange portion, but providing infra for Blackrock IBIT etfs + USDC revenue sharing with Circle, gives Coinbase pretty good long term value. 
+
+SMCI - Extreme selloff from the $60&#x27;s+ back to $30&#x27;s presents attractive opportunity here. Markets are extremely concerned about gross margins -&gt; SMCI expanding overseas, especially with soverign AI + buying lower end nvda gpus. and SMCI&#x27;s margins should increase over there. Also likely due to deals to become sticky w/ customers. It&#x27;s not like they&#x27;re dying revenue growth to $36B+. 
+
+GOOGL - Gemini at this point would likely take over chatgpt, so i&#x27;d remain long google. 
+
+Figma - Software selloff provides good opportunity into a lot of the hammered names like Figma which extremely high gross margins + sturdy growth
+
+Amazon - Basically same price as last year, they&#x27;ve been growing, AWS is doing fine, they&#x27;re in robotics + space LEOs, and just seems like a great long going forward
+
+Bitcoin - Always an attractive Long
+
+Reddit - High valuations, but extremely high gross margins and not going anywhere since everyone uses reddit. 
+
+TTD - Selloff from 2025 presents attractive valuations again
+
+HIMS - Honestly extremely attractive for me at $29, might be put into strong buy again, but of course revenue deceleration is very worrysome. Main alpha is that markets arent pricing in Zava acqusition and just from sheer customer base, they can derive a lot of revenue from new customers. 
+ 
+Robinhood - Selloff from $140 back to $100 presents a good opportunity for Robinhood again. They&#x27;re not going anywere, plus new product revenue expansion from banking + others, should present positive tailwinds. 
+
+Coherent - Long US supply chains, esp. for photonics, inp, etc. 
+
+AMBA - Moonshot long for edge AI inference for robotic ramps + edge compute. 
+
+POET - Basically 1/2 cash now, backdoor into marvell + hyperscalers through celestial. Attractive upside at $6.8 given underwriters bought at $7.25
+
+AAOI - long play tethered to msft maia and aws trainium. both of them haven&#x27;t really taken off yet so it&#x27;s just a waiting agme
+
+LASR - energy directed weapons are super cool. i dont quite like the fundamentals like low 20% revenue growth, but the technology is just way too cool. 
+
+VPG - Long play tethered to optimus ramp. we should see industrial use cases EOY 2026 and consumer EOY 2027, so maybe optimus productions starts hitting balance sheet now or q2. 
+
+OSS - Long play on defense sector and edge AI + $200m contract. 
+
+INTC - long on us policy, earnings didn&#x27;t really change any perspective, just short term price. 
+
+UMAC - Great long play at these levels on drone manufacturing in US.
+
+ONDS, Airo, DPRO - Same with AIRO, DPRO, bullish on drone sector. There&#x27;s not much of a massive tailwind compared to a few weeks ago when US was invading venezuela and threatening greenland, but thematically bullish. 
+
+AVAV - selloff from misinformation about converting r&amp;D type contracts -&gt; long term contract presents considerable upside 
+
+BULL - I do like brokerages like robinhood, webull, etc. that have a ton of retail users since there&#x27;s endless ways to monetize once you own the customer base. selloff back to $8 presents attractive upsdie
+
+ETOR - selloff way overblown, high net income y/y, basically 50% cash, low downside risk. just waiting for re-rating per earnings. they&#x27;re doing well too, 70%+ Y/Y AUM, so not sure why they&#x27;re being priced in like this.  
+
+VLN - not quite the same anymore as close to 1:1 assets/nav, at one point they had $11m+ inv (off 63%) gross margins, $93M cash, so would have been closer to 110-120m : $140m MC, which made no sense. That being said still $80m fwd revenue off 63% -&gt; 69% gross margins, seems like considerable opportunity for re-rating. Markets just don&#x27;t seem to like companies eg. Etoro related to a certain country, I guess
+
+Nebius - $15B clickhouse valuation just goes to show Sum of Parts, where I wouldn&#x27;t be surpirsed if their subsidaries like Avride ended up overtaking the main business. That being said, near term selling pressure due to $2B+ ATM being sold on open market. Should ramp up extremely fast as they meet their $7B ARR target EOY 2026. 
+ 
+GLXY, CIFR, HUT, IREN, WULF - Remain long on the colo, and other neocloud sector plays. That being said most are up 30-40%+ since 2025, so they&#x27;re not exactly a strong buy anymore as they&#x27;ve been priced in. But lot of upside remains. 
+
+Questionable
+
+VELO - Lot of people asked my opinion on this since FinX loves this stock. They have really cool customers like SpaceX, but fundamentals look terrible.
+
+~$11.8M cash + $17.5M offering vs. ~$23M. debt. They barely have any runway left and people buying now are likely to be diluted. 
+
+Velo is the perfect example of amazing customer base like IQE (EU for inP supply chain), but terrible fundamentals. 
+
+SKYT - It&#x27;s a great made in america supply chain company for a lot of cool stuff like quantum components or edge. Benefits from CHIP act, but very slow revenue growth. It&#x27;s a lot better speculative long than Velo since it has better fundamenatls. 
+
+Lower gross margins like 24%, very low operating margins, is obviously priced into MC but U.S. pure-play foundry should be a good story for premium. Bottom line are not really growing too fast though. 
+ 
+Avoid
+
+UAVS - Endless dilution machine with over 100%+ of marketcap given over to arbitrage investors that can convert 100%+ of the shares under 25% market value to sell on retail
+
+BKKT - $300m ATM dilution right now while MC is $550m. Endless dilution machine
+
+Walmart - 43 p/e, there&#x27;s no way. 
+
+SLNH - Lot of dilution ahead. 
+
+Palantir - Concern over valuation P/E 
+
+Coreweave - Concerns over large debt, $1B+ in debt interest hurts FCF a ton. Then there&#x27;s allocation/buildout for OpenAI, which has extreme, extreme concerns if they can fulfill contract obligations, especially since gemini is taking over market share of openai. 
+
+Oracle - There might be technical rebound, but seriously, they&#x27;ve spent so much capex just for openai (eg. stargate), and like coreweave, OpenAI, which has extreme concerns over if they can fufill contracts obligations
+
+BMNR - endless dilution machine to fund silly projects like $200m into mr. beast&#x27;s company. Expect long eth staking etfs, short bmnr plays, and premium to go under as $200m cash into mr.  beast&#x27;s company for example is not very liquid. 
+
+IONQ, RGTI, QBTS - Quantum valuations are very stretched. 
+
+_
+
+Overall Thoughts:
+
+I&#x27;m personally staying extremely long, this is just personal thoughts NFI. 
+
+A lot of small caps and speculative companies have already been re-rated since Jan 1st and I don&#x27;t expect many of the 50-100% moves to continue (we&#x27;ve seen a lot of profit taking Friday on some of these names). 
+
+That being said, Trump is trying to cut rates even more (another 2-3x projected), esp. since Midterms is coming up. 
+
+SPY Up = better chance of getting elected. So I&#x27;m staying very long until after Midterms.
+
+That being said a lot of this helps growth, speculative companies etc. But we&#x27;re already seeing this largely priced in like Rocketlab, one of my favorite longs, reaching $45B+ MC off $155m quarterly revenue, so I&#x27;m questioning valuations a bit -&gt; pivoting a lot of positions into more value (eg. software drop or memory supercycle). 
+
+Thematically I&#x27;m extremely bullish on 
+- AI, Memory, Semis
+- Bottlenecks
+- Critical Materials, etc. 
+
+Very bullish on
+- Made in America supply chains 
+
+Bullish on 
+- Defense Sector
+
+And would look for swing trades/recovery/re-rating for stuff like software to social media companies around now given the recent selloff.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015096496019112151" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>1月25日收视率。发布欧盟关税和 $INTC ER。
+
+强力买入：
+$SNAP
+$元
+三星电子
+SK海力士
+$MU
+欣兴微光
+$TSM
+$CRCL
+$AXTI 
+$LPTH 
+$COPX
+$LIT
+$AEHR
+$表格
+$AMKR
+$AVGO
+$MRVL
+
+购买：
+$硬币
+$SMCI
+$GOOGL
+$无花果
+$AMZN
+$IBIT
+$RDDT
+$TTD
+$HIMS
+$引擎盖
+$COHR
+$AMBA
+$IREN
+$POET
+$AAOI
+$LASR
+$VPG
+$OSS
+$INTC
+$UMAC
+$ONDS
+$艾罗
+$DPRO
+$AVAV
+$牛市
+$ETOR
+VLN
+NBIS
+GLXY
+CIFR
+小屋
+武尔夫
+
+有疑问
+$VELO
+$天空
+
+避免
+$无人机
+$BKKT
+世界LMT
+SLNH
+$PLTR
+CRWV
+$ORCL
+$BMNR
+$IONQ、RGTI、QBTS
+
+_
+
+强力买入
+
+Snapchat - 触底于 7.4 美元左右，我认为在这个水平上非常强劲。到 2027 年，由于内存运营支出减少和内存货币化，自由现金流增加。只是等待重新评级的游戏。 
+
+Meta - 26% 的同比收入增长非常强劲，上季度产生了 10B+ FCF。由于光学器件（700%+ Q/Q EPS 光学器件）导致了上次 BBB 的抛售，预计下一季度收益将会回升。 
+
+三星电子 - 半成品的圣杯，三星提供了 HBM 和代工厂的机会。 
+
+SK Hynix - 内存超级周期
+
+美光——内存超级周期，但有美国的支持。 
+
+Unimicron——对 HBM、IC 基板、玻璃芯、cocos 和所有其他瓶颈的渴望。
+
+TSM——印钞机，这绝对不会出错。 
+
+Circle - 预计降息 2-3 倍可能会严重损害 Circle 的净收入，因此它被定价。但在 $16B 上做多令人惊讶，因为他们印钞并且应该开始看到 USDC 的扩张。 
+
+AXTI - LPTH：InP / 锗等的瓶颈。将成为 2026 年的一个巨大主题。这只是供应链中断（在 AXT 中）或在 Lightpath 中使用黑钻石在美国制造的等待游戏。 
+
+在我看来，由于产能提升 -&gt; 收入增加，下行风险较低，但登月 HBM 类型的价格上涨可能值得怀疑。 
+
+COPX - LI：到 2026 年，稀土/铜、锂等材料的需求很大。与上述瓶颈类似，来自中国的供应链中断将导致资金流入确保供应+建设新的供应链。 
+
+AEHR - 老实说，他们位于人工智能和机器人技术的两个不同的热门垂直领域。 550 万美元的索诺玛订单可能与美光和 SiC 测试相关。看起来像是一个非常好的登月计划 $1B MC。 
+
+FORM - 可能在美国供应链中很重要，因为它们生产 DRAM/HBM 和代工/逻辑。 &amp; 对于 hbm4，产量尤其重要。 
+
+AMKR - 美国制造美国供应链和 tsm 的极端受益者 -&gt; 美国
+
+AVGO - 最近公布收益后出现大幅调整。鉴于超大规模 ASIC 将继续增长（尽管存在一些延迟），IMO 在这些水平上强烈买入。 
+
+MRVL - 与 Broadcom 的情况相同，在有关 Microsoft maia 延迟的传言之后，Marvell 遭到抛售。这只是一场等待 2027 年约 2 倍收入的游戏，当市场开始定价时，在天体收购之后，他们在互连等其他领域做出了伟大的贡献。 
+
+购买
+
+Coinbase - 最近对加密货币的调整使 Coinbase 的价值再次达到 $57B。从来不喜欢他们的交易部分，但为 Blackrock IBIT etfs 提供基础设施 + USDC 与 Circle 分享收入，为 Coinbase 带来了相当不错的长期价值。 
+
+SMCI - 从 60 美元以上回到 30 美元的极度抛售在这里提供了诱人的机会。市场极其关注毛利率-&gt; SMCI 向海外扩张，尤其是主权 AI + 购买低端英伟达 GPU。 SMCI 在那里的利润率应该会增加。也可能是由于交易对客户产生了粘性。他们并没有将收入增长限制在 36B+ 美元以上。 
+
+GOOGL - Gemini 此时可能会接管 chatgpt，所以我会继续做多 google。 
+
+Figma - 软件抛售为许多像 Figma 这样的知名公司提供了良好的机会，这些公司毛利率极高+增长强劲
+
+亚马逊 - 价格与去年基本相同，它们一直在增长，AWS 做得很好，它们在机器人 + 太空 LEO 领域，而且似乎是一个伟大的长期发展
+
+比特币 - 总是有吸引力的多头
+
+Reddit - 高估值，但毛利率极高，而且由于每个人都使用 Reddit，所以不会有任何进展。 
+
+TTD - 2025 年起的抛售再次呈现有吸引力的估值
+
+HIMS - 老实说，29 美元对我来说非常有吸引力，可能会再次强力购买，但当然收入减速是非常令人担忧的。主要的阿尔法是，市场并未对 Zava 的收购进行定价，仅凭纯粹的客户群，他们就可以从新客户那里获得大量收入。 
+ 
+Robinhood - 从 140 美元跌回 100 美元再次为 Robinhood 提供了一个好机会。他们不会离开，再加上银行业和其他方面的新产品收入扩张，应该会带来积极的推动力。 
+
+Coherent - 漫长的美国供应链，尤其是。用于光子学、inp 等 
+
+AMBA - Moonshot 渴望用于机器人坡道+边缘计算的边缘人工智能推理。 
+
+POET - 现在基本上是 1/2 现金，通过 celestial 进入 Marvell + Hyperscalers。鉴于承销商以 7.25 美元的价格买入，6.8 美元的上涨空间颇具吸引力
+
+AAOI - 与 msft maia 和 aws trainium 相关的长期游戏。他们俩都还没有真正起飞，所以这只是一个等待的agme
+
+LASR - 能量定向武器非常酷。我不太喜欢 20% 的低收入增长等基本面，但这项技术实在是太酷了。 
+
+VPG - 与 Optimus 坡道相连的长游戏。我们应该会看到 2026 年 EOY 的工业用例和 2027 年 EOY 的消费者用例，所以也许 Optimus Productions 现在或第二季度就开始触及资产负债表。 
+
+OSS - 国防部门和边缘人工智能的长期发展 + 2 亿美元的合同。 
+
+INTC - 长期看好美国政策，收益并没有真正改变任何观点，只是短期价格。 
+
+UMAC——美国无人机制造在这些层面上发挥着巨大的作用。
+
+ONDS、Airo、DPRO - 与 AIRO、DPRO 相同，看好无人机行业。与几周前美国入侵委内瑞拉并威胁格陵兰时相比，没有太大的推动力，但主题看涨。 
+
+AVAV - 有关转换研发类型合同的错误信息导致抛售 -&gt; 长期合同呈现相当大的上涨空间 
+
+BULL - 我确实喜欢像 robinhood、webull 等拥有大量零售用户的经纪公司，因为一旦你拥有了客户群，就有无穷无尽的盈利方式。抛售回至 8 美元带来有吸引力的上涨
+
+ETOR - 抛售方式被夸大了，同比净利润较高，基本上是 50% 现金，下行风险较低。只是等待每股收益的重新评级。他们也做得很好，同比资产管理规模超过 70%，所以不确定为什么他们的定价是这样的。  
+
+VLN - 不再完全相同，接近 1:1 资产/资产净值，在某一时刻，他们拥有 1100 万美元以上的投资（下降 63%）毛利率，9300 万美元现金，因此接近 1.10-1.2 亿美元：1.4 亿美元的 MC，这是没有意义的。话虽如此，预计毛利率仍为 8000 万美元，毛利率为 63% -&gt; 69%，这似乎是重新评级的绝佳机会。市场似乎不喜欢公司，例如。我猜 Etoro 与某个国家有关
+
+Nebius - $15B clickhouse 估值只是显示各部分的总和，如果他们的子公司（如 Avride）最终超过了主营业务，我不会感到惊讶。话虽如此，由于公开市场上出售 2B+ 美元的 ATM 机，近期出现抛售压力。当他们达到 2026 年 EOY 70 美元的 ARR 目标时，应该会非常快地增长。 
+ 
+GLXY、CIFR、HUT、IREN、WULF - 继续看好 colo 和其他 neocloud 领域的股票。话虽这么说，自 2025 年以来，大多数股票的涨幅都在 30-40% 以上，因此，它们不再是一个值得强烈买入的股票，因为它们已经被定价了。但仍有很大的上涨空间。 
+
+有疑问
+
+VELO - 很多人问我对此的看法，因为 FinX 喜欢这只股票。他们拥有像 SpaceX 这样非常酷的客户，但基本面看起来很糟糕。
+
+约 1180 万美元现金 + 1750 万美元发行对比约 2300 万美元。债务。他们几乎没有剩下任何跑道，现在购买的人可能会被稀释。 
+
+Velo 是像 IQE（欧盟 inP 供应链）这样令人惊叹的客户群的完美例子，但基本面却很糟糕。 
+
+SKYT - 这是一家伟大的美国制造供应链公司，提供许多很酷的东西，例如量子组件或边缘。受益于CHIP法案，但收入增长非常缓慢。它比 Velo 更具投机性，因为它具有更好的基本面。 
+
+较低的毛利率（如 24%）和非常低的营业利润率显然已纳入 MC 的定价，但美国的纯晶圆代工厂应该是溢价的好故事。但底线并没有真正增长得太快。 
+ 
+避免
+
+UAVS - 无限稀释机，将超过 100% 以上的市值交给套利投资者，他们可以将 100% 以上的低于 25% 市值的股票转换为零售出售
+
+BKKT - 目前 ATM 稀释为 3 亿美元，而 MC 为 5.5 亿美元。无限稀释机
+
+沃尔玛 - 43 p/e，没办法。 
+
+SLNH - 未来将有大量稀释。 
+
+Palantir - 对估值市盈率的担忧 
+
+Coreweave - 对巨额债务的担忧，10 亿美元以上的债务利息对 FCF 造成了很大的伤害。然后是 OpenAI 的分配/扩建，如果他们能够履行合同义务，它会非常非常担心，特别是因为 Gemini 正在接管 OpenAI 的市场份额。 
+
+Oracle - 可能会出现技术反弹，但说真的，他们为 openai（例如 stargate）花费了如此多的资本支出，与 coreweave 一样，OpenAI 也非常担心是否能够履行合同义务
+
+BMNR - 无尽的稀释机，为愚蠢的项目提供资金，例如向先生投资 2 亿美元。野兽的公司。预计多头 ETH 质押 ETF、空头 BMNR 交易以及溢价将低于 2 亿美元现金投入 Mr.  例如，野兽公司的流动性就不是很好。 
+
+IONQ、RGTI、QBTS - 量子估值非常高。 
+
+_
+
+总体想法：
+
+我个人会待很长时间，这只是个人想法 NFI。 
+
+自 1 月 1 日以来，许多小盘股和投机性公司已经重新评级，我预计 50-100% 的波动不会持续下去（周五我们已经看到其中一些公司出现大量获利了结）。 
+
+话虽这么说，特朗普正试图进一步降息（预计再降息 2-3 倍），尤其是在 2017 年。因为期中考试快到了。 
+
+SPY Up = 当选的机会更大。所以我会待很长时间直到期中考试结束。
+
+话虽这么说，这在很大程度上有助于增长、投机公司等。但我们已经看到，像 Rocketlab 这样的价格很大程度上是我最喜欢的多头之一，季度收入达到 45B+ MC，季度收入为 1.55 亿美元，所以我对估值有点质疑 -&gt; 将很多头寸转向更高的价值（例如，软件下降或内存超级周期）。 
+
+从主题上来说，我非常看好 
+- 人工智能、内存、半成品
+- 瓶颈
+- 关键材料等 
+
+非常看好
+- 美国制造供应链 
+
+看好 
+- 国防部门
+
+鉴于最近的抛售，现在会寻找诸如软件之类的社交媒体公司的摇摆交易/恢复/重新评级。</div>
+        <div class="tweet-foot">
+          <span>likes 945 / retweets 99 / replies 83 / views 125590</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-01-21 01:28</span>
+          <span><span class="chip red">$AIRO</span><span class="chip red">$AVAV</span><span class="chip red">$DPRO</span><span class="chip red">$ONDS</span><span class="chip red">$RKLB</span><span class="chip red">$TSLA</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;ve initiated positions in $VPG ($573m).
+
+This is my actual/main robotics sector exposure going forward, tethered to $TSLA Optimus. 
+
+Markets have completely overlooked this robotics sector play:
+
+For every Tesla Optimus deployed, $VPG likely takes an exceptionally high BOM for each.
+
+It&#x27;s a pretty open secret by now ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;ve initiated positions in $VPG ($573m).
+
+This is my actual/main robotics sector exposure going forward, tethered to $TSLA Optimus. 
+
+Markets have completely overlooked this robotics sector play:
+
+For every Tesla Optimus deployed, $VPG likely takes an exceptionally high BOM for each.
+
+It&#x27;s a pretty open secret by now that VPG is likely a main supplier for Tesla Optimus Ramp. 
+
+This was first discovered by Citron Research (not taking credit for this).
+
+In April 2025, Citron Research published a report calling VPG the &quot;Hidden Tesla Optimus Play.&quot; 
+
+They pointed out that VPG announced a &quot;major design win&quot; with a humanoid developer in November 2023, right before Tesla revealed the Optimus Gen 2 in December 2023.
+
+Citron: &quot;The evidence is conclusive: VPG is not only supplying Tesla Optimus but expects substantial revenues from this ramp-up, revenue currently invisible to the market due to confidentiality&quot;
+
+I&#x27;ve cross-checked with recent Sellside/Buyside analysts much later in 2025/2026 regarding VPG:
+
+Many from Signia Capital mention for $VPG: &quot;The most notable application would be Tesla’s Optimus robot, which was prototyped in 2022 and is targeting production in 2026&quot;.
+
+However, this was completely forgotten given robotics ramp from Optimus and others were nonexistent through 2023-2025 for the prototyping phase. 
+
+However, given OpenAI&#x27;s push to robotics last week per Bloomberg:
+
+I expect robotics to hit the inflection point this year. 
+
+This company is extremely solid fundamentally already:
+
+- $79.7 Million Revenue (up 5.3% Y/Y but this should ramp up exponentially due to robotics sector)
+- 40.5% Gross Margins
+- ~$65 Million Net Cash ($86m Cash, $20m Debt)
+
+$VPG has a material science/patent moat for Bulk Metal Foil, introduced Z-Foil technology, and is vertically integrated. Can&#x27;t say I understand it all, but it&#x27;s the reason why $TSLA has been prototyping and scaling their Optimus iterations with Vishay.
+
+As for BOM:
+
+There are BOM estimates like:
+
+Legs/Locomotion: ~$21,300 (38% of cost): concentrated in high-torque actuators.
+
+Core Stability: ~$15,600 (28%): structural torso and shoulder mechanisms.
+
+Dexterous Hands: ~$9,500 (17%): Actuators and VPG-style sensors.
+
+Compute/AI: ~$2,100 (4%): Dual FSD chips and 8-camera array.
+
+But generally, we can estimate 3-8% of each robots value is est. $VPG since Shoshani explicitly stated that VPG expects to capture between $500 and $1,200 in revenue per robot in ERs.
+
+Elon likes to claim big numbers, but if you take it at face value &quot;10-million-unit annual target at Giga Texas&quot; 
+
+10M robots/year × $750/robot = $7.5 Billion in annual revenue for VPG.
+
+Considering $VPG is a small $574M company deep in the robotics supply chain right now, I entered long positions given the asymmetrical upside
+
+- of high probability correlation to $TSLA Optimus supply chains
+- high BOM of each robot deployed. 
+- very clean balance sheet, which is rare. 
+
+Please do your own research, this is my own personal thought process of why I entered this long.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013664829282599094" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我已开始建仓 $VPG（5.73 亿美元）。
+
+这是我未来实际/主要的机器人行业风险敞口，与 TSLA Optimus 挂钩。 
+
+市场完全忽视了机器人行业的发展：
+
+对于每个部署的 Tesla Optimus，$VPG 可能需要极高的 BOM。
+
+VPG 可能是 Tesla Optimus Ramp 的主要供应商，这已经是一个相当公开的秘密了。 
+
+这是由 Citron Research 最先发现的（不为此归功于）。
+
+2025 年 4 月，Citron Research 发表报告称 VPG 为“隐藏的 Tesla Optimus Play”。 
+
+他们指出，VPG 于 2023 年 11 月宣布与一家人形机器人开发商取得“重大设计胜利”，就在特斯拉于 2023 年 12 月发布 Optimus Gen 2 之前。
+
+Citron：“证据是确凿的：VPG 不仅向 Tesla Optimus 供货，而且预计会从这次增产中获得大量收入，由于保密原因，目前市场上看不到收入”
+
+我在 2025/2026 年晚些时候就 VPG 与最近的卖方/买方分析师进行了交叉核对：
+
+Signia Capital 的许多人提到 $VPG 时表示：“最引人注目的应用是特斯拉的 Optimus 机器人，该机器人于 2022 年制作出原型，计划于 2026 年投入生产”。
+
+然而，鉴于 Optimus 和其他机器人在 2023 年至 2025 年原型设计阶段都不存在，这一点被完全忘记了。 
+
+然而，据彭博社报道，鉴于 OpenAI 上周对机器人技术的推动：
+
+我预计机器人技术今年将达到拐点。 
+
+该公司的基本面已经非常稳固：
+
+- 7,970 万美元收入（同比增长 5.3%，但由于机器人行业的影响，这一数字应该呈指数级增长）
+- 40.5% 毛利率
+- 约 6500 万美元净现金（8600 万美元现金，2000 万美元债务）
+
+$VPG 拥有 Bulk Metal Foil 的材料科学/专利护城河，引入了 Z-Foil 技术，并且是垂直整合的。不能说我完全理解，但这就是 $TSLA 一直使用 Vishay 进行原型设计和扩展其 Optimus 迭代的原因。
+
+至于物料清单：
+
+BOM 估算如下：
+
+腿部/运动：约 21,300 美元（成本的 38%）：集中在高扭矩执行器。
+
+核心稳定性：约 15,600 美元（28%）：躯干和肩部结构机制。
+
+灵巧的双手：约 9,500 美元 (17%)：执行器和 VPG 型传感器。
+
+计算/人工智能：~2,100 美元 (4%)：双 FSD 芯片和 8 摄像头阵列。
+
+但一般来说，我们可以估计每个机器人价值的 3-8% 预计为 $VPG，因为 Shoshani 明确表示 VPG 预计在 ER 中为每个机器人带来 500 至 1,200 美元的收入。
+
+Elon 喜欢夸大数字，但如果你从表面上看，“Giga Texas 的年度目标是 1000 万台” 
+
+1000 万台机器人/年 × 750 美元/机器人 = VPG 年收入 75 亿美元。
+
+考虑到 $VPG 目前是一家深入机器人供应链、价值 5.74 亿美元的小公司，鉴于不对称的上涨空间，我进入了多头头寸
+
+- 与 $TSLA Optimus 供应链具有高概率相关性
+- 部署的每个机器人的 BOM 较高。 
+- 资产负债表非常干净，这是罕见的。 
+
+请你自己研究一下，这是我个人思考为什么我进入这么长时间的过程。</div>
+        <div class="tweet-foot">
+          <span>likes 567 / retweets 51 / replies 35 / views 233173</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-01-21 00:20</span>
+          <span><span class="chip red">$DPRO</span></span>
+        </div>
+        <div class="tweet-text">@Aldo_Aurelius $DPRO is incredibly risky given low revenue. So position sizing is important if you decide yourself you want to take positions. 
+
+It’s definitely not for everyone as a speculative bet on drone revenue recognition from capacity</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Aldo_Aurelius $DPRO is incredibly risky given low revenue. So position sizing is important if you decide yourself you want to take positions. 
+
+It’s definitely not for everyone as a speculative bet on drone revenue recognition from capacity</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013647870235234509" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Aldo_Aurelius 鉴于收入较低，$DPRO 的风险非常大。因此，如果您决定自己想要持仓，那么头寸规模就很重要。 
+
+作为对无人机容量收入确认的投机性押注，这绝对不适合所有人</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3057</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-01-20 23:43</span>
+          <span><span class="chip red">$DPRO</span><span class="chip red">$RKLB</span></span>
+        </div>
+        <div class="tweet-text">Good question! It’s kinda like $RKLB is from New Zealand but benefits from US DoD funding.
+
+$DPRO gets benefits from both Canada and US funding as its ndaa compliant 
+
+Again there are tons of risks since its early stage and don’t expect much to be priced in until their future earnings. I just thought their drone infra ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Good question! It’s kinda like $RKLB is from New Zealand but benefits from US DoD funding.
+
+$DPRO gets benefits from both Canada and US funding as its ndaa compliant 
+
+Again there are tons of risks since its early stage and don’t expect much to be priced in until their future earnings. I just thought their drone infra buildout had potential</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013638601238602024" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>好问题！这有点像 $RKLB 来自新西兰，但受益于美国国防部的资助。
+
+$DPRO 因符合 ndaa 要求而受益于加拿大和美国的资助 
+
+同样，自早期阶段以来就存在大量风险，并且在未来盈利之前预计不会有太多风险。我只是认为他们的无人机基础设施建设有潜力</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3335</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-01-20 23:22</span>
+          <span><span class="chip red">$DPRO</span></span>
+        </div>
+        <div class="tweet-text">@digestive_bisc Missed out on that huge point thanks. $DPRO benefits a lot from that as one of the only public CAD drone companies.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@digestive_bisc Missed out on that huge point thanks. $DPRO benefits a lot from that as one of the only public CAD drone companies.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013633245783462258" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@digestive_bisc 错过了这一点，谢谢。作为唯一的上市 CAD 无人机公司之一，$DPRO 从中受益匪浅。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2394</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-01-20 22:46</span>
+          <span><span class="chip red">$DPRO</span><span class="chip red">$PDYN</span></span>
+        </div>
+        <div class="tweet-text">Pigybacking off of this, meant to say ev/revenue not p/s above. 
+
+But yeah I looked at $PDYN before too, interesting company. Also there&#x27;s nothing too new with the $DPRO post since it&#x27;s already popular on finx. 
+
+It&#x27;s just really nuanced with the infrastructure setup + large capacity ramp + no flashy contracts since it...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Pigybacking off of this, meant to say ev/revenue not p/s above. 
+
+But yeah I looked at $PDYN before too, interesting company. Also there&#x27;s nothing too new with the $DPRO post since it&#x27;s already popular on finx. 
+
+It&#x27;s just really nuanced with the infrastructure setup + large capacity ramp + no flashy contracts since it&#x27;s a subcontractor -&gt; hits Q reports that algos might not price in. 
+
+A lot of people missed that aspect, so just wanted to post my own thoughts about it.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013624142252376385" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>以此为基础，意思是说 ev/revenue 而不是上面的 p/s。 
+
+但是，是的，我之前也看过 $PDYN，有趣的公司。此外，$DPRO 帖子也没什么新鲜的，因为它已经在 finx 上很流行了。 
+
+它的基础设施设置+大容量斜坡+没有华而不实的合同，因为它是一个分包商，这真的很微妙 - &gt;点击 Q 报告，算法可能不会定价。 
+
+很多人错过了这方面，所以只想发表我自己的想法。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 5129</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-01-20 22:35</span>
+          <span><span class="chip red">$AIRO</span><span class="chip red">$AVAV</span><span class="chip red">$DPRO</span><span class="chip red">$LPTH</span><span class="chip red">$ONDS</span><span class="chip red">$RKLB</span><span class="chip red">$UMAC</span></span>
+        </div>
+        <div class="tweet-text">I’ve initiated small positions in $DPRO ($240m).  
+
+This is an end-to-end war drone contractor and Draganfly looks like the $RKLB to Ondas.  
+
+$ONDS went from ($.51 -&gt; $15, 13x) and was looking for an equivalent.
+
+Here’s what markets (and myself missed). 
+
+Draganfly is a vertically integrated defense prime, not just a ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I’ve initiated small positions in $DPRO ($240m).  
+
+This is an end-to-end war drone contractor and Draganfly looks like the $RKLB to Ondas.  
+
+$ONDS went from ($.51 -&gt; $15, 13x) and was looking for an equivalent.
+
+Here’s what markets (and myself missed). 
+
+Draganfly is a vertically integrated defense prime, not just a drone maker.   
+
+$DPRO controls the entire ecosystem, from the factory infrastructure to the end-drone. And it’s the largest beneficiary of NDAA that banned DJI, which controlled est. 70-80% of market share.
+
+The biggest moat I didn’t understand earlier: embedded production.
+
+I looked small current revenue numbers but missed the that they’re buildout distributed manufacturing throughout many US bases.
+
+Draganfly’s contract with the U.S. Army (Sept 2025) isn&#x27;t just to ship drones; it is to install Micro-Factories at US bases.
+
+It integrates Draganfly into the fabric of US Dpt. of War, creating a layer of &quot;stickiness&quot; that is impossible for competitors to displace.
+
+Here&#x27;s why I entered positions: they went from $5M drone capacity ramp in 2025 to $400m.
+
+Combining this with its partnership with Global Ordnance (where it’s a sub-contractor and Ordnance received $750 Million IDIQ), US-CAD programs (benefits from both) like $220m CAD funding to NATO.
+
+It’s possible for $DPRO from triple digits or possibly 1000%+ revenue growth rates Y/Y.
+
+And... revenue hits balance sheet by surprise in the earnings.
+
+Each drone player from $AVAV, $AIRO, $ONDS, have their own specialty, $DPRO focuses on the nonkinetic and infrastructure aspect:
+
+-&gt; European countries like Sweden use $DPRO drones (2026) for life-saving operations.
+-&gt; DEF-C -&gt; reconnaissance drones for Ukraine conflict -&gt; Global Ordnance (massive defense contractor)
+-&gt; U.S. Department of War (US Army)
+
+and those nonkinetic drones can be transformed with kinetic applications.
+
+With $51M cash on hand (healthy balance sheet), just 20% of capacity ramp would be ~2.2 fwd p/s.
+
+This is a very speculative venture style bet as they&#x27;ve been rapidly expanding infrastructure (like $RKLB at the start), with Northland giving $20 PT&#x27;s.
+
+And this is a hunch that the revenue will catch up to the infrastructure they&#x27;ve deployed across the US army (esp. with Replicator programs and is hidden until earnings). 
+
+$DPRO has already been popular on FinX (and it took some convincing from other users) so I&#x27;ve personally joined the party as I&#x27;m curious to see where it heads.
+
+TLDR: took small speculative positions in $DPRO as it&#x27;s setup to be the Infrastructure of Drone Warfare (like $RKLB back at $2 for space) with high potential upside.
+
+ As it&#x27;s extremely early, there&#x27;s lot of risks as well with revenue recognition from capacity buildout.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013621368831778896" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我已经在 $DPRO（2.4 亿美元）中建立了小额头寸。  
+
+这是一家端到端战争无人机承包商，Draganfly 看起来就像 Ondas 的 $RKLB。  
+
+$ONDS 的价格为 ($.51 -&gt; $15, 13x)，正在寻找同等产品。
+
+这就是市场（和我自己错过的）。 
+
+Draganfly 是一家垂直整合的国防公司，而不仅仅是一家无人机制造商。   
+
+$DPRO 控制着整个生态系统，从工厂基础设施到终端无人机。它是 NDAA 禁止大疆的最大受益者，大疆控制了大约 70-80% 的市场份额。
+
+我之前不明白的最大护城河：嵌入式生产。
+
+我看了一下当前的收入数字，但忽略了他们正在美国许多基地扩建分布式制造。
+
+Draganfly 与美国陆军签订的合同（2025 年 9 月）不仅仅是运输无人机；还包括运输无人机。就是在美国基地安装微型工厂。
+
+它将 Draganfly 集成到 US Dpt 的结构中。战争，创造了一层竞争对手无法取代的“粘性”。
+
+这就是我入仓的原因：无人机产能从 2025 年的 500 万美元增至 4 亿美元。
+
+结合其与 Global Ordnance 的合作关系（该公司是 Global Ordnance 的分包商，Ordnance 获得了 7.5 亿美元的 IDIQ），US-CAD 项目（双方都受益），例如向北约提供 2.2 亿加元的资金。
+
+$DPRO 的收入增长率有可能达到三位数，甚至可能达到 1000% 以上。
+
+而且……收益中的收入出人意料地冲击了资产负债表。
+
+$AVAV、$AIRO、$ONDS 的每位无人机玩家都有自己的专长，$DPRO 专注于非动能和基础设施方面：
+
+-&gt; 瑞典等欧洲国家使用 $DPRO 无人机 (2026) 进行救生行动。
+-&gt; DEF-C -&gt; 用于乌克兰冲突的侦察无人机 -&gt; 全球军械（大型国防承包商）
+-&gt; 美国陆军部（美国陆军）
+
+那些非动能无人机可以通过动能应用进行改造。
+
+手头有 5100 万美元现金（健康的资产负债表），仅 20% 的产能提升将约为 2.2 fwd p/s。
+
+这是一个非常投机的风险投资风格的赌注，因为他们一直在快速扩展基础设施（就像一开始的 $RKLB），Northland 提供了 20 美元的 PT。
+
+预感收入将赶上他们在美国军队部署的基础设施（特别是 Replicator 项目，并且在盈利之前是隐藏的）。 
+
+$DPRO 已经在 FinX 上很受欢迎（并且需要其他用户的一些说服力），所以我个人加入了这个聚会，因为我很好奇它的发展方向。
+
+TLDR：在 $DPRO 中持有少量投机头寸，因为它被设置为无人机战争的基础设施（就像 $RKLB 回到 2 美元的空间），具有很高的上涨潜力。
+
+ 由于现在还为时过早，产能建设带来的收入确认也存在很多风险。</div>
+        <div class="tweet-foot">
+          <span>likes 541 / retweets 67 / replies 42 / views 241483</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-01-20 16:53</span>
+          <span><span class="chip red">$DPRO</span><span class="chip red">$LPTH</span><span class="chip red">$OSS</span><span class="chip red">$SKYT</span></span>
+        </div>
+        <div class="tweet-text">@WaltzDisneyz @itachidata28 I made a post about it earlier regarding 
+
+1) supply chains
+2) defense
+3) made in America semis
+
+But personally $OSS for defense, $LPTH since that one dropping 5% in specific just stupid.
+
+Was looking to scale up $DPRO and $SKYT since they’re both down 4-6%+</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@WaltzDisneyz @itachidata28 I made a post about it earlier regarding 
+
+1) supply chains
+2) defense
+3) made in America semis
+
+But personally $OSS for defense, $LPTH since that one dropping 5% in specific just stupid.
+
+Was looking to scale up $DPRO and $SKYT since they’re both down 4-6%+</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013535456781312289" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@WaltzDisneyz @itachidata28 我之前发了一篇关于它的帖子 
+
+1）供应链
+2）防守
+3）美国制造半决赛
+
+但就我个人而言，$OSS 用于防御，$LPTH 自那以后下降了 5%，具体来说简直是愚蠢的。
+
+正在寻求扩大 $DPRO 和 $SKYT 的规模，因为它们都下跌了 4-6%+</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4401</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-01-20 07:22</span>
+          <span><span class="chip red">$AIRO</span><span class="chip red">$AVAV</span><span class="chip red">$DPRO</span><span class="chip red">$KTOS</span><span class="chip red">$RKLB</span></span>
+        </div>
+        <div class="tweet-text">$AVAV definitely. It’s the gold standard and is already part of replicator. (So already successful alongside $KTOS)
+
+$AIRO is for counter UAV replicator, highest potential for lowest downside risk.
+
+I’ll do a write up on $DPRO later but it reminds me of early stage $RKLB, very speculative upside.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$AVAV definitely. It’s the gold standard and is already part of replicator. (So already successful alongside $KTOS)
+
+$AIRO is for counter UAV replicator, highest potential for lowest downside risk.
+
+I’ll do a write up on $DPRO later but it reminds me of early stage $RKLB, very speculative upside.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013391730410955200" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>绝对是$AVAV。它是黄金标准，并且已经是复制器的一部分。 （因此已经与 $KTOS 一起取得了成功）
+
+$AIRO 用于反无人机复制器，潜力最大，下行风险最低。
+
+稍后我会写一篇关于 $DPRO 的文章，但这让我想起早期的 $RKLB，非常具有投机性的上涨空间。</div>
+        <div class="tweet-foot">
+          <span>likes 23 / retweets 4 / replies 5 / views 6387</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-01-20 06:45</span>
+          <span><span class="chip red">$AIRO</span><span class="chip red">$AVAV</span><span class="chip red">$DPRO</span><span class="chip red">$KTOS</span><span class="chip red">$ONDS</span></span>
+        </div>
+        <div class="tweet-text">Personally speaking, I feel like $ONDS is richly priced compared to other drone companies. 
+
+I have $AVAV, $DPRO, $KTOS, and $AIRO for drone exposure. 
+
+(Just going off the top of my head, dont take this too literally) Fwd EV/revenue multiples was ~28s+ now for Ondas. Even AVAV was 8-9 and they were in the replicator p...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Personally speaking, I feel like $ONDS is richly priced compared to other drone companies. 
+
+I have $AVAV, $DPRO, $KTOS, and $AIRO for drone exposure. 
+
+(Just going off the top of my head, dont take this too literally) Fwd EV/revenue multiples was ~28s+ now for Ondas. Even AVAV was 8-9 and they were in the replicator program. 
+
+Airo was for counter UAV for replicator 2.
+
+When I bought $AIRO was trading at ~2.5 fwd p/s (probably higher now, maybe 3-4&#x27;s). 
+
+Even $DPRO might even be potential 2.8 from some rev calculations. 
+
+So IMO higher upside with other drone companies.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2013382311056642527" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>就我个人而言，我觉得与其他无人机公司相比，$ONDS 的定价很丰富。 
+
+我有 $AVAV、$DPRO、$KTOS 和 $AIRO 用于无人机曝光。 
+
+（只是从我的头脑中走出来，不要太字面意思）对于 Ondas 来说，Fwd EV/收入倍数现在约为 28s+。甚至 AVAV 的战绩也是 8-9，而且他们都在复制程序中。 
+
+Airo 用于复制器 2 的反无人机。
+
+当我购买 $AIRO 时，交易价格约为 2.5 fwd p/s（现在可能更高，可能是 3-4）。 
+
+根据某些转速计算，甚至 $DPRO 甚至可能达到 2.8。 
+
+因此，在我看来，与其他无人机公司相比，其优势更大。</div>
+        <div class="tweet-foot">
+          <span>likes 44 / retweets 3 / replies 6 / views 12340</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-01-19 03:51</span>
+          <span><span class="chip red">$DPRO</span><span class="chip red">$LVMH</span><span class="chip red">$NVO</span><span class="chip red">$UAVS</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;m a bull that&#x27;s excited about Greenland trade tensions.   
+
+US defense like $UAVS and $DPRO are likely to benefit. Same with rare earth/critical materials.   
+
+Can&#x27;t say the same about the pharma bulls in $NVO, European luxury like $LVMH, or possibly big tech.
+
+As you mentioned, I agree it&#x27;s just noise to the AI trad...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;m a bull that&#x27;s excited about Greenland trade tensions.   
+
+US defense like $UAVS and $DPRO are likely to benefit. Same with rare earth/critical materials.   
+
+Can&#x27;t say the same about the pharma bulls in $NVO, European luxury like $LVMH, or possibly big tech.
+
+As you mentioned, I agree it&#x27;s just noise to the AI trade.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012976046136774864" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我是一只对格陵兰岛贸易紧张局势感到兴奋的多头。   
+
+$UAVS 和 $DPRO 等美国国防可能会受益。与稀土/关键材料相同。   
+
+但对于$NVO、$LVMH 等欧洲奢侈品牌，或者可能是大型科技公司的制药公司看涨者，却不能这么说。
+
+正如你所提到的，我同意这对人工智能行业来说只是噪音。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 17733</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-01-16 16:23</span>
+          <span><span class="chip red">$DPRO</span><span class="chip red">$META</span><span class="chip red">$PDYN</span><span class="chip red">$RCAT</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">So while I like $PDYN since they fill in the gaps with smaller companies like $RCAT and $DPRO. They have no role here. 
+
+I&#x27;m focused on robotics scale-up with Boston Dynamics, Tesla, Figure, and others. They all vertically integrate their own software, like $TSLA Dojo AI5 + XAI.
+
+There&#x27;s 0 incentive for any of these gi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So while I like $PDYN since they fill in the gaps with smaller companies like $RCAT and $DPRO. They have no role here. 
+
+I&#x27;m focused on robotics scale-up with Boston Dynamics, Tesla, Figure, and others. They all vertically integrate their own software, like $TSLA Dojo AI5 + XAI.
+
+There&#x27;s 0 incentive for any of these giant companies from $META and others to give their software stack over to $PDYN.
+
+They all try and vertically integrate where they can, so if you pinpoint the companies that have effective monopolies &quot;aka. bottlenecks&quot; where they can&#x27;t, then investing in those should be rewarding as these companies scale up.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012078220603191472" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>因此，虽然我喜欢 $PDYN，因为它们填补了 $RCAT 和 $DPRO 等较小公司的空白。他们在这里没有任何作用。 
+
+我专注于与 Boston Dynamics、Tesla、Figure 等公司合作扩大机器人规模。他们都垂直集成自己的软件，例如 $TSLA Dojo AI5 + XAI。
+
+对于来自 $META 和其他公司的这些大公司来说，将他们的软件堆栈交给 $PDYN 的动机为零。
+
+他们都尝试在力所能及的范围内进行垂直整合，因此，如果你找出那些在其无法做到的地方拥有有效垄断“又名瓶颈”的公司，那么随着这些公司规模的扩大，对这些公司的投资应该会有所回报。</div>
+        <div class="tweet-foot">
+          <span>likes 11 / retweets 1 / replies 2 / views 6185</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=DPRO">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1571 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$APPL 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../analysis_site_static_clone_v7.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../analysis_site_static_clone_v7.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$APPL 历史推文</h1>
+      <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+      <div class="stats">
+        <div class="stat-card"><span>累计提及</span><b>27</b></div>
+        <div class="stat-card"><span>历史推文</span><b>27</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2025-07-28</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-05-05</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+      </div>
+      <div class="chips"><span class="chip blue">Mag7 客户集中度过滤 3</span><span class="chip blue">Vega / IV 错定价（高阶，慎用） 2</span><span class="chip blue">瓶颈狩猎（核心透镜） 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-05-05 19:41</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">The &quot;Meme Stock&quot; with no fundamentals $RPI is now approaching all time highs from record revenue projections. 
+
+Fun to see this idea age well. https://t.co/wx9hQYzJGT</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The &quot;Meme Stock&quot; with no fundamentals $RPI is now approaching all time highs from record revenue projections. 
+
+Fun to see this idea age well. https://t.co/wx9hQYzJGT</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051628401354785026" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>没有基本面的“Meme 股票”$RPI 现在正接近创纪录的收入预测的历史高点。 
+
+很高兴看到这个想法经久不衰。 https://t.co/wx9hQYzJGT</div>
+        <div class="tweet-foot">
+          <span>likes 708 / retweets 20 / replies 69 / views 221461</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-04-15 06:37</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$APPL</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">$RPI hit triple digit % return intraday today, just 2 months later.
+
+That’s 14 different stocks I’ve called YTD from $AAOI to $LITE that hit 100%+ returns.
+
+Maybe if I’m able to write a thesis on 14  separate longs that double in a short time period… I’m decent at it?
+
+I was the first person to long it as AI agentic ha...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$RPI hit triple digit % return intraday today, just 2 months later.
+
+That’s 14 different stocks I’ve called YTD from $AAOI to $LITE that hit 100%+ returns.
+
+Maybe if I’m able to write a thesis on 14  separate longs that double in a short time period… I’m decent at it?
+
+I was the first person to long it as AI agentic hardware orchestration. 
+
+But everyone called my thesis a &quot;Meme&quot; back in Feb.
+
+(Special S/O to FT, Reuters, Bloomberg)
+
+But I called out revenue acceleration expecting a 3x beat compared to consensus. And their earnings report validated my estimates.
+
+It&#x27;s now being re-rated as an AI hardware company.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2044183312533770427" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>仅仅 2 个月后，今天盘中 RPI 的回报率就达到了三位数。
+
+年初至今，我将 14 只不同的股票称为从 $AAOI 到 $LITE，它们的回报率达到了 100% 以上。
+
+也许如果我能够写一篇关于 14 个在短时间内翻倍的独立多头的论文……我很擅长吗？
+
+我是第一个将其视为人工智能代理硬件编排的人。 
+
+但早在二月份，每个人都称我的论文为“Meme”。
+
+（特别致英国《金融时报》、路透社、彭博社）
+
+但我指出收入加速增长，预计收入将比共识高出 3 倍。他们的收益报告验证了我的估计。
+
+它现在被重新评级为人工智能硬件公司。</div>
+        <div class="tweet-foot">
+          <span>likes 804 / retweets 32 / replies 36 / views 185503</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-03-31 17:38</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">My original post on $RPI and OpenClaw vertaim:
+
+&quot;But if the demand influx continues, we might see revenue numbers might hit increase from 14% growth to a modest 48-55% if hoarding continues.&quot;
+
+$RPI New Analyst Projections:
+
+The broker raised its 2026 $RPI forecast to $511 million from $360 million, implying 58% year-on...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">My original post on $RPI and OpenClaw vertaim:
+
+&quot;But if the demand influx continues, we might see revenue numbers might hit increase from 14% growth to a modest 48-55% if hoarding continues.&quot;
+
+$RPI New Analyst Projections:
+
+The broker raised its 2026 $RPI forecast to $511 million from $360 million, implying 58% year-on-year growth.
+
+....
+
+The media labeled &quot;Meme Stock&quot; $RPI from my thesis is up 27% on the projections beat.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2038913900582998087" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我关于 $RPI 和 OpenClaw vertaim 的原始帖子：
+
+“但如果需求持续涌入，我们可能会看到收入增长可能会从 14% 增长到 48-55%（如果囤积继续）。”
+
+$RPI 新分析师预测：
+
+该经纪商将 2026 年 RPI 预测从 3.6 亿美元上调至 5.11 亿美元，意味着同比增长 58%。
+
+....
+
+我论文中标记为“Meme Stock”的媒体 $RPI 比预测上涨了 27%。</div>
+        <div class="tweet-foot">
+          <span>likes 190 / retweets 32 / replies 15 / views 89303</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-03-17 22:34</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">I never gave up hope in my lobster companion $RPI. 
+
+Glad to see it’s finally getting some attention by other analysts. https://t.co/koaLfw15Gs</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I never gave up hope in my lobster companion $RPI. 
+
+Glad to see it’s finally getting some attention by other analysts. https://t.co/koaLfw15Gs</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033914965988684154" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我从未放弃对我的龙虾伴侣 $RPI 的希望。 
+
+很高兴看到它终于得到了其他分析师的关注。 https://t.co/koaLfw15Gs</div>
+        <div class="tweet-foot">
+          <span>likes 358 / retweets 30 / replies 24 / views 108098</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-02-18 07:37</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">Glad my $RPI x OpenClaw 🦞thesis made it to Reuters.
+
+Raspberry Pi’s cheap educational boards had a TAM expansion overnight.
+
+As they’ve become the cheaper standard for AI Agent Orchestration + AI Swarms alongside the $AAPL Mac Mini.
+
+Raspberry Pi has a de facto monopoly in the cheap board space as they were targeting e...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Glad my $RPI x OpenClaw 🦞thesis made it to Reuters.
+
+Raspberry Pi’s cheap educational boards had a TAM expansion overnight.
+
+As they’ve become the cheaper standard for AI Agent Orchestration + AI Swarms alongside the $AAPL Mac Mini.
+
+Raspberry Pi has a de facto monopoly in the cheap board space as they were targeting educational use purposes. 
+
+And almost no company had a need (or incentive) to compete in that space. 
+
+Markets are currently rerating an education company that used to sell 1-2 boards for testing.
+
+Into an AI hardware company that sells mass producible boards for AI Agent Orchestration.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023904689637699910" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>很高兴我的 $RPI x OpenClaw 🦞论文到达了路透社。
+
+Raspberry Pi 的廉价教育板一夜之间完成了 TAM 扩展。
+
+因为它们已经成为 AI Agent Orchestration + AI Swarms 与 AAPL Mac Mini 一起的更便宜的标准。
+
+Raspberry Pi 在廉价主板领域拥有事实上的垄断地位，因为它们的目标是教育用途。 
+
+几乎没有公司有必要（或动机）在该领域竞争。 
+
+市场目前正在重新评估一家曾经销售 1-2 个测试板的教育公司。
+
+进入一家人工智能硬件公司，销售用于人工智能代理编排的大规模生产板。</div>
+        <div class="tweet-foot">
+          <span>likes 253 / retweets 11 / replies 26 / views 112961</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-02-17 17:10</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">Markets seem to love the OpenClaw Raspberry Pi hoarding.
+
+$RPI up another 19.34%, from yesterday&#x27;s 8.1%. https://t.co/DRQTCjIlmQ</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Markets seem to love the OpenClaw Raspberry Pi hoarding.
+
+$RPI up another 19.34%, from yesterday&#x27;s 8.1%. https://t.co/DRQTCjIlmQ</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023686478816309647" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>市场似乎很喜欢 OpenClaw Raspberry Pi 囤积。
+
+美元零售价格指数 (RPI) 较昨天的 8.1% 再次上涨 19.34%。 https://t.co/DRQTCjIlmQ</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 179215</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-02-16 23:12</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">Fun Trade Idea: Long $RPI (Raspberry Pi) 
+
+Reason: 🦞 Openclaw / Picoclaw / Nanobot + Hoarding.
+
+Everyone has been openly hoarding Apple Mac Minis and were long Apple. 
+
+But $APPL is already a $3.7T+ company. Product mass-buying won&#x27;t make a dent.
+
+Raspberry Pi, however, is a 542.68M company. 
+
+The revenue is material. ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Fun Trade Idea: Long $RPI (Raspberry Pi) 
+
+Reason: 🦞 Openclaw / Picoclaw / Nanobot + Hoarding.
+
+Everyone has been openly hoarding Apple Mac Minis and were long Apple. 
+
+But $APPL is already a $3.7T+ company. Product mass-buying won&#x27;t make a dent.
+
+Raspberry Pi, however, is a 542.68M company. 
+
+The revenue is material. 
+
+Feels like markets haven&#x27;t priced this in since I&#x27;ve seen almost 0 mentions about the ticker on X (but many product mentions). 
+
+And it&#x27;s only recently that have the hoarding started Raspberry Pis, as they&#x27;re much cheaper than $500+ Apple products. They also have their mini $NVDA CUDA-light utility ecosystem that people use. 
+
+So it turns out these extremely cheap $20 or $200 devices are perfect for deploying mass deploying isolated instances.
+
+The reason is for OpenClaw orchestration (so they don’t mess up your device) -&gt; interfacing with a central LLM via API.
+
+Before people were just buying 1 or 2 for hobby/education purposes, so revenue has slowing. 
+
+But now Silicon Valley startups and individuals anecdotally appear to be buying tens or hundreds of these things to run concurrent OpenClaw agentic swarms or do stuff like agentic marketing on Reddit and other places.
+
+And no, there are many applications that can&#x27;t be done by spinning up AWS VPS, so people do it locally (there&#x27;s TOS around automation/AI bots, so companies setup their own servers).
+
+That being said main downside risk is that its
+
+- partially foundation owned, and they might not hike rates like $SNDK or $MU does, even if there&#x27;s extreme demand
+
+- Subject to memory price hikes like LPDDR4 component
+
+so this is not a major position. 
+
+However, going forward, revenue should increase due to people buying tens or hundreds of these things for running AI agents. 
+
+Balance sheet also looks clean with low downside risk:
+
+- ~$280M - $300M revenue
+- ~$75M+ Gross Profit
+- ~25% Gross Margin
+- Net income: ~$10M - $15M
+- Net Cash: $28M
+
+Analysts currently project revenue growth closer to 14–17%. 
+
+But if the demand influx continues, we might see revenue numbers might hit increase from 14% growth to a modest 48-55% if hoarding continues. 
+
+Consumer segments are roughly 1/3rd of revenue but the newfound buying from Openclaw + variants is a new cataylst nevertheless for re-rating.
+
+Especially now that Picoclaw and compressed OpenClaw variants are now able to be run on $20 Raspberry Pis instead of just the Raspberry Pi 5’s.
+
+But seems like people just forgot Raspberry PI was a publicly stock as well. 
+
+The stock price is down 56% 1Y to 542.68M euro MC to an all time low. 
+
+So this might be that tailwind for a reversal. 
+
+There&#x27;s also a non-zero chance OpenClaw is a long term catalyst for Raspberry Pi based, agentic deployments. 
+
+TLDR: People are openly buying Raspberry Pis and Apple Mac Minis for Openclaw/Picoclaw, so revenue should benefit from increased demand.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023415224372756782" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>有趣的交易理念：做多 $RPI (Raspberry Pi) 
+
+原因：🦞 Openclaw / Picoclaw / Nanobot + Hoarding。
+
+每个人都在公开囤积苹果 Mac Mini，并做多苹果。 
+
+但 $APPL 已经是一家 $3.7T+ 的公司。产品的大量购买不会产生影响。
+
+然而，Raspberry Pi 是一家拥有 542.68M 的公司。 
+
+收入是物质的。 
+
+感觉市场还没有对此定价，因为我在 X 上看到几乎 0 次提及该股票（但提及了许多产品）。 
+
+直到最近才开始囤积树莓派，因为它们比 500 美元以上的苹果产品便宜得多。他们还有供人们使用的迷你 $NVDA CUDA-light 实用生态系统。 
+
+因此，事实证明，这些极其便宜的 20 美元或 200 美元设备非常适合部署大规模部署隔离实例。
+
+原因是 OpenClaw 编排（这样它们就不会弄乱您的设备）-&gt; 通过 API 与中央 LLM 接口。
+
+之前人们只是出于爱好/教育目的购买一两个，因此收入已经放缓。 
+
+但据传闻，现在硅谷的初创公司和个人似乎正在购买数十或数百个这样的东西，以运行并发的 OpenClaw 代理群或在 Reddit 和其他地方进行代理营销之类的事情。
+
+不，有许多应用程序无法通过启动 AWS VPS 来完成，因此人们在本地进行（有关于自动化/人工智能机器人的 TOS，因此公司设置自己的服务器）。
+
+话虽这么说，主要的下行风险是
+
+- 部分由基金会拥有，即使需求极端，他们也可能不会像 $SNDK 或 $MU 那样加息
+
+- 受 LPDDR4 组件等内存价格上涨的影响
+
+所以这不是一个主要立场。 
+
+然而，展望未来，由于人们购买数十或数百个这样的东西来运行人工智能代理，收入应该会增加。 
+
+资产负债表看起来也很干净，下行风险较低：
+
+- 约 2.8 亿美元 - 3 亿美元收入
+- 毛利润约 7500 万美元以上
+- ~25% 毛利率
+- 净收入：约 1000 万美元 - 1500 万美元
+- 净现金：2800 万美元
+
+分析师目前预计收入增长接近 14-17%。 
+
+但如果需求继续涌入，我们可能会看到收入增长可能会从 14% 增长到适度的 48-55%（如果囤积继续）。 
+
+消费者细分市场大约占收入的 1/3，但来自 Openclaw + 变体的新购买仍然是重新评级的新催化剂。
+
+尤其是现在 Picoclaw 和压缩的 OpenClaw 变体现在可以在 20 美元的 Raspberry Pi 上运行，而不仅仅是 Raspberry Pi 5。
+
+但似乎人们忘记了 Raspberry PI 也是公开股票。 
+
+股价一年来下跌 56% 至 542.68M 欧元，创历史新低。 
+
+因此，这可能是逆转的顺风车。 
+
+OpenClaw 也有可能成为基于 Raspberry Pi 的代理部署的长期催化剂。 
+
+TLDR：人们公开购买用于 Openclaw/Picoclaw 的 Raspberry Pi 和 Apple Mac Mini，因此收入应该会受益于需求的增加。</div>
+        <div class="tweet-foot">
+          <span>likes 951 / retweets 58 / replies 53 / views 933812</span>
+        </div>
+        <div class="chips"><span class="chip blue">GAAP 毛利率之战</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-02-16 23:09</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$RPI</span></span>
+        </div>
+        <div class="tweet-text">Everyone I&#x27;ve talked to knows $RPI but nobody knew Raspberry Pi was a public company, which was interesting (new IPO though).
+
+People were long $APPL because of mac mini hoarding, which made no sense given it&#x27;s size.
+
+But people are also hoarding Raspberry PIs (550m MC) company. So revenue should be more material was m...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Everyone I&#x27;ve talked to knows $RPI but nobody knew Raspberry Pi was a public company, which was interesting (new IPO though).
+
+People were long $APPL because of mac mini hoarding, which made no sense given it&#x27;s size.
+
+But people are also hoarding Raspberry PIs (550m MC) company. So revenue should be more material was my guess.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023414518333001807" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我交谈过的每个人都知道 $RPI，但没有人知道 Raspberry Pi 是一家上市公司，这很有趣（尽管是新的 IPO）。
+
+人们因为 mac mini 囤积而做多 $APPL，考虑到它的尺寸，这毫无意义。
+
+但人们也在囤积Raspberry PI（550m MC）公司。所以我的猜测是收入应该更物质。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 944</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-02-14 16:17</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">Global ranking of the most profitable companies in the world (Mag 7 vs. World)
+
+Projections for 2025-&gt;2026-&gt;2027 (Operating Income).
+
+#1: $NVDA (USA, 4.4T MC) 🇺🇸
+~$135.0B -&gt; $186.5B -&gt; $240.1 Billion
+
+#2: Samsung Electronics (Korea, $820B MC) 🇰🇷
+~$30.2B -&gt; ~$170B -&gt; ~$226.7 Billion
+
+#3 $MSFT (USA, $2.9T MC)
+~$128.5B -&gt;...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Global ranking of the most profitable companies in the world (Mag 7 vs. World)
+
+Projections for 2025-&gt;2026-&gt;2027 (Operating Income).
+
+#1: $NVDA (USA, 4.4T MC) 🇺🇸
+~$135.0B -&gt; $186.5B -&gt; $240.1 Billion
+
+#2: Samsung Electronics (Korea, $820B MC) 🇰🇷
+~$30.2B -&gt; ~$170B -&gt; ~$226.7 Billion
+
+#3 $MSFT (USA, $2.9T MC)
+~$128.5B -&gt; 153.0B -&gt; $181.5 Billion
+
+#4 $GOOGL (USA, $3.7T MC)
+~$129.0B -&gt; $142.0B -&gt; $173.0B
+
+#4 Sk Hynix (Korea, $410B MC)
+~$32.7B -&gt; ~$124B -&gt; ~$161.0 Billion
+
+#5 $APPL (USA, $3.76T MC)
+$133.1B -&gt; $146.0B -&gt; $160.5B
+
+#6 $AMZN (USA, $2.13T MC)
+$80.0B -&gt; $105.0B -&gt; $136.5B
+
+#7 $Meta (USA, $1.62T MC)
+$83.3 -&gt; $97.0B -&gt; $121.5B
+
+#8 $TSLA (USA, $1.31T MC)
+$4.4B -&gt; $8.0B -&gt; $24.0B
+
+Samsung Electronics, a $820B company in Korea is projected to catch up to $NVDA in 2027 in operating income. 
+
+Meanwhile Sk Hynix is projected to overtake both $APPL and $AMZN in operating income in 2027. 
+
+The main takeaway is that the growth of both US hyperscalers and South Korean equities is astounding due to Artificial Intelligence ramp.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2022586015635157403" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>全球最赚钱公司的全球排名（Mag 7 vs. World）
+
+2025-&gt;2026-&gt;2027 年的预测（营业收入）。
+
+#1：$NVDA（美国，4.4T MC）🇺🇸
+~$135.0B -&gt; $186.5B -&gt; $2401 亿
+
+#2：三星电子（韩国，$820B MC）🇰🇷
+~$30.2B -&gt; ~$170B -&gt; ~$2267 亿
+
+#3 $MSFT（美国，$2.9T MC）
+~$128.5B -&gt; 153.0B -&gt; $1815 亿
+
+#4 $GOOGL（美国，$3.7T MC）
+~$129.0B -&gt; $142.0B -&gt; $173.0B
+
+#4 Sk Hynix（韩国，$410B MC）
+~$32.7B -&gt; ~$124B -&gt; ~$1610 亿
+
+#5 $APPL（美国，$3.76T MC）
+$133.1B -&gt; $146.0B -&gt; $160.5B
+
+#6 $AMZN（美国，$2.13T MC）
+$80.0B -&gt; $105.0B -&gt; $136.5B
+
+#7 $Meta（美国，$1.62T MC）
+$83.3 -&gt; $97.0B -&gt; $121.5B
+
+#8 $TSLA（美国，$1.31T MC）
+$4.4B -&gt; $8.0B -&gt; $24.0B
+
+三星电子是一家韩国价值 820B 美元的公司，预计 2027 年营业收入将赶上 $NVDA。 
+
+与此同时，Sk Hynix 的营业收入预计将在 2027 年超过 $APPL 和 $AMZN。 
+
+主要结论是，由于人工智能的发展，美国超大规模企业和韩国股市的增长令人震惊。</div>
+        <div class="tweet-foot">
+          <span>likes 437 / retweets 43 / replies 33 / views 63305</span>
+        </div>
+        <div class="chips"><span class="chip blue">Mag7 客户集中度过滤</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-02-13 20:16</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$EWY</span><span class="chip red">$GOOGL</span><span class="chip red">$KORU</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Trade idea that I published to my shower thoughts channel: 
+
+Korean Index volatility arbitrage and taking advantage of Black-Scholes models. 
+
+$EWY long options seem mispriced.
+
+This is Blackrock&#x27;s Korea Index, which is majority memory (Samsung Electronics, Sk Hynix).
+
+The stock swings 2-5+% a day, and is up 136.25% 1Y...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Trade idea that I published to my shower thoughts channel: 
+
+Korean Index volatility arbitrage and taking advantage of Black-Scholes models. 
+
+$EWY long options seem mispriced.
+
+This is Blackrock&#x27;s Korea Index, which is majority memory (Samsung Electronics, Sk Hynix).
+
+The stock swings 2-5+% a day, and is up 136.25% 1Y, despite priced like a normal index IV.
+
+Samsung is volatile. SK Hynix is volatile (eg. 65% - 80% est). 
+
+But the combination of the two through the index is priced way less than both low beta $GOOGL (37.33%) and $AMZN (39.12%) at ~32% IV. 
+
+I&#x27;ve been watching $EWY for a bit and it does look volatile. 
+
+As for pricing my guess is MMs priced in IV based on historical averages (5-10 years), where the Korean index was completely flat. And were expecting calls 2 years out to revert to the mean. 
+
+But this volatility should be the new norm as markets price in the new memory supercycle (eg. $TSM went from 30% IV to 46.2% IV). 
+
+Long calls should benefit from both Samsung + Sk Hynix carrying the index. 
+
+And the main benefit is vega expansion that you won&#x27;t get from $KORU. 
+
+You also can&#x27;t get this option MM pinning like individual US stocks since this is Korea&#x27;s national index and long term. 
+
+TLDR: Individual components SK Hynix + Samsung are highly volatile.
+
+They&#x27;re basically half of the index, but options in index are priced with low volatility, perhaps due to historical 5-10 year data.  
+
+Long calls benefit from vega expansion that weren&#x27;t priced in correctly as MM forward vol estimates are anchored too heavily on historical realized vol, which was low for $EWY over the past 5-10 years</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2022283819374854167" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>我发布到我的淋浴想法频道的贸易想法： 
+
+韩国指数波动套利并利用布莱克-斯科尔斯模型。 
+
+$EWY 多头期权似乎定价错误。
+
+这是贝莱德的韩国指数，主要是内存（三星电子、SK海力士）。
+
+该股每天波动 2-5% 以上，一年内上涨 136.25%，尽管定价与正常指数 IV 相同。
+
+三星的情况不稳定。 SK Hynix 具有波动性（例如 65% - 80% est）。 
+
+但两者通过指数的组合的定价远低于低 beta $GOOGL (37.33%) 和 $AMZN (39.12%)，IV 约为 32%。 
+
+我已经关注 $EWY 一段时间了，它看起来确实不稳定。 
+
+至于定价，我的猜测是MM根据历史平均值（5-10年）以IV定价，其中韩国指数完全持平。并预计两年后会恢复到平均值。 
+
+但这种波动应该成为新的内存超级周期中市场价格的新常态（例如，$TSM 从 30% IV 升至 46.2% IV）。 
+
+多头看涨期权应该会受益于三星+SK海力士的指数。 
+
+主要好处是 vega 扩展，这是 $KORU 无法提供的。 
+
+你也不能像个别美国股票那样让MM锁定这个选项，因为这是韩国的国家指数和长期指数。 
+
+TLDR：SK 海力士 + 三星的单个组件波动性很大。
+
+它们基本上占指数的一半，但指数中的期权定价波动性较低，这可能是由于 5-10 年的历史数据。  
+
+多头看涨期权受益于 Vega 扩张，但未正确定价，因为 MM 远期交易量估计过于依赖历史已实现交易量，而过去 5-10 年 EWY 的历史已实现交易量较低</div>
+        <div class="tweet-foot">
+          <span>likes 688 / retweets 41 / replies 38 / views 651452</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-02-13 14:30</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$GOOGL</span></span>
+        </div>
+        <div class="tweet-text">These numbers are staggering:
+
+Samsung and SK Hynix are projected to become the most profitable companies in the world by 2027.
+
+Their projections exceed $APPL and $GOOGL, both ~$4T companies in operating profit.
+
+For reference, Samsung is valued at ~$820B and SK Hynix is valued at ~$410B. 
+
+That would make a ~$410B co...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">These numbers are staggering:
+
+Samsung and SK Hynix are projected to become the most profitable companies in the world by 2027.
+
+Their projections exceed $APPL and $GOOGL, both ~$4T companies in operating profit.
+
+For reference, Samsung is valued at ~$820B and SK Hynix is valued at ~$410B. 
+
+That would make a ~$410B company in SK Hynix more profitable than $GOOGL ($3.7T) in 2027.
+
+By Morgan Stanley estimates earlier, SK Hynix and Samsung are est. to bring in:
+
+~$387.7 Billion USD combined operating income.
+
+America’s two most profitable companies $APPL and $GOOGL combined brought in $263 Billion USD for 2025. (Google $129-132B, Apple $133.1B)
+
+2027 est.
+Samsung Electronics: ~$226.7 Billion
+Sk Hynix: ~$161.0 Billion
+
+2027 est:
+Apple: ~$156B-$165B
+Google: ~$168B-178B
+
+The statistics of smaller Korean equities exceeding multi trillion dollar US hyperscalers in profitability is staggering. 
+
+It’s a genuinely interesting point, that a $410B company exceeds $4T+ hyperscalers in profitability. 
+
+But the bigger question markets are pricing in is if the memory shortage is ephemeral, or if they become a necessary “Oil” like GPUs for the AI buildout.
+
+If your answer to that is “likely, might be good to get exposure to Korean, Japanese, or Taiwanese equities.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2022196582884790607" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>这些数字是惊人的：
+
+预计到 2027 年，三星和 SK 海力士将成为全球最赚钱的公司。
+
+他们的预测超过了 $APPL 和 $GOOGL，这两家公司的营业利润均约为 4T 美元。
+
+作为参考，三星估值约为 $820B，SK 海力士估值约为 $410B。 
+
+这将使 SK Hynix 旗下一家价值 410B 美元的公司在 2027 年的盈利能力超过 $GOOGL ($3.7T)。
+
+据摩根士丹利早些时候估计，SK 海力士和三星预计将引进：
+
+合并营业收入约为 3,877 亿美元。
+
+美国最赚钱的两家公司 $APPL 和 $GOOGL 2025 年合计收入达 2630 亿美元。（谷歌 $129-132B，苹果 $133.1B）
+
+预计 2027 年
+三星电子：约2267亿美元
+Sk海力士：约1610亿美元
+
+2027 年预计：
+苹果：~$156B-$165B
+谷歌：~$168B-178B
+
+规模较小的韩国股票的盈利能力超过数万亿美元的美国超大规模股票的统计数据令人震惊。 
+
+这是一个真正有趣的观点，一家 410B 美元的公司的盈利能力超过了 4T+ 超大规模公司。 
+
+但市场定价的更大问题是，内存短缺是否是暂时的，或者它们是否像 GPU 一样成为人工智能建设的必要“石油”。
+
+如果你的答案是“有可能，那么投资韩国、日本或台湾股票可能是件好事。”</div>
+        <div class="tweet-foot">
+          <span>likes 1731 / retweets 194 / replies 75 / views 331739</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-02-13 08:36</span>
+          <span><span class="chip red">$APP</span><span class="chip red">$APPL</span><span class="chip red">$ASTS</span><span class="chip red">$DNKG</span><span class="chip red">$OSS</span><span class="chip red">$PINS</span><span class="chip red">$RDDT</span><span class="chip red">$RDW</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$USAR</span></span>
+        </div>
+        <div class="tweet-text">There are two companies that don’t care about market crashes. 
+
+$APP down 19.7%
+$DNKG down 19.4%
+$PINS down to 19.1%
+$ASTS down 15.21%
+$RDW down to 13.1% 
+$USAR down 12.4%
+Silver down 11.6%
+$OSS down 9.58%
+$RGTI down 8.85%
+$RDDT down 6.8%
+$RKLB down 5.4%
+$APPL down 5.09%
+Gold down 3.4%
+SPY Index down 1.54%
+
+Sandisk up ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">There are two companies that don’t care about market crashes. 
+
+$APP down 19.7%
+$DNKG down 19.4%
+$PINS down to 19.1%
+$ASTS down 15.21%
+$RDW down to 13.1% 
+$USAR down 12.4%
+Silver down 11.6%
+$OSS down 9.58%
+$RGTI down 8.85%
+$RDDT down 6.8%
+$RKLB down 5.4%
+$APPL down 5.09%
+Gold down 3.4%
+SPY Index down 1.54%
+
+Sandisk up 7.21%. 
+
+The other biggest gainer? Walmart, up 3.78% today.
+
+You have a fwd 2027 p/e ~7 memory company growing net income at triple digits y/y.
+
+And a bath towel reseller growing in line with inflation sitting at 46 p/e, outperforming the market.
+
+Markets are starting to make less and less sense.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2022107598821187815" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>有两家公司并不关心市场崩溃。 
+
+$APP 下跌 19.7%
+$DNKG 下跌 19.4%
+$PINS 下降至 19.1%
+$ASTS 下跌 15.21%
+RDW 美元下降至 13.1% 
+美元美元下跌 12.4%
+白银下跌11.6%
+$OSS 下跌 9.58%
+$RGTI 下跌 8.85%
+$RDDT 下跌 6.8%
+$RKLB 下跌 5.4%
+$APPL 下跌 5.09%
+黄金下跌3.4%
+SPY指数下跌1.54%
+
+闪迪涨7.21%。 
+
+另一个最大的赢家？沃尔玛今日上涨3.78%。
+
+您有一家 2027 年市盈率约为 7 的存储器公司，净利润同比增长三位数。
+
+一家浴巾经销商的增长与通胀同步，市盈率为 46 倍，表现优于市场。
+
+市场开始变得越来越没有意义。</div>
+        <div class="tweet-foot">
+          <span>likes 318 / retweets 18 / replies 41 / views 61565</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-02-04 17:00</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$BRK</span><span class="chip red">$DUOL</span><span class="chip red">$FIG</span><span class="chip red">$GOOGL</span><span class="chip red">$JPM</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$PYPL</span></span>
+        </div>
+        <div class="tweet-text">Honestly just looking at the quoted net income chart…
+
+Makes you wonder why people try and full port it into contrarian turnaround plays like $PYPL, $FIG, or $DUOL
+
+I feel like sitting back and chilling in profitable, hyper-growth companies like Samsung or SK Hynix is just the easiest thing to do?
+
+They’re relatively s...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Honestly just looking at the quoted net income chart…
+
+Makes you wonder why people try and full port it into contrarian turnaround plays like $PYPL, $FIG, or $DUOL
+
+I feel like sitting back and chilling in profitable, hyper-growth companies like Samsung or SK Hynix is just the easiest thing to do?
+
+They’re relatively small compared to Mag7, but projected to become the most profitable companies in the world in 2027. 
+
+Sometimes the best thing to do is just join in on the no-brainer trades and live life on easy mode.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2018972810912399375" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>老实说，只要看看引用的净利润图表......
+
+让你想知道为什么人们尝试将其完全移植到逆势逆转游戏中，例如 $PYPL、$FIG 或 $DUOL
+
+我觉得在三星或 SK 海力士这样盈利、高速增长的公司中坐下来放松一下是最容易做的事情吗？
+
+与 Mag7 相比，它们规模相对较小，但预计将在 2027 年成为全球最赚钱的公司。 
+
+有时最好的办法就是加入简单的交易并在简单模式下生活。</div>
+        <div class="tweet-foot">
+          <span>likes 785 / retweets 63 / replies 48 / views 165601</span>
+        </div>
+        <div class="chips"><span class="chip blue">Mag7 客户集中度过滤</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-02-03 10:06</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$BRK</span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$GOOGL</span><span class="chip red">$HY9H</span><span class="chip red">$JPM</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
+        </div>
+        <div class="tweet-text">Korean memory stocks likely have a lot of repricing to do. 
+
+Forward P/E for 2026 (Morgan Stanley): 
+
+SK Hynix ~4.3x 
+Samsung Electronics ~5.1x 
+
+For exposure: $EWY or $FLKR | $HY9H.
+
+Even after going up 15-30% every month, they&#x27;re cheaper than ever. https://t.co/lzUH0jWxk1</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Korean memory stocks likely have a lot of repricing to do. 
+
+Forward P/E for 2026 (Morgan Stanley): 
+
+SK Hynix ~4.3x 
+Samsung Electronics ~5.1x 
+
+For exposure: $EWY or $FLKR | $HY9H.
+
+Even after going up 15-30% every month, they&#x27;re cheaper than ever. https://t.co/lzUH0jWxk1</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2018506303736569942" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>韩国内存股可能需要大量重新定价。 
+
+2026 年远期市盈率（摩根士丹利）： 
+
+SK 海力士 ~4.3x 
+三星电子 ~5.1x 
+
+曝光：$EWY 或 $FLKR | $HY9H。
+
+即使每月上涨 15-30%，它们也比以往任何时候都便宜。 https://t.co/lzUH0jWxk1</div>
+        <div class="tweet-foot">
+          <span>likes 1735 / retweets 138 / replies 63 / views 496859</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-02-02 07:27</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$BRK</span><span class="chip red">$GOOGL</span><span class="chip red">$JPM</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
+        </div>
+        <div class="tweet-text">The Memory Supercycle is here. 
+
+New reports from Morgan Stanley est. 
+
+- Samsung&#x27;s net profit ~$163.0B USD  
+- SK Hynix&#x27;s ~$120.9B USD.
+
+That would make Samsung the most profitable company in the world, even more than $NVDA and $GOOGL.
+
+Here are the top 10 rankings:
+
+1. Samsung Electronics ~$163.0B (2027)
+2. Alphabet ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The Memory Supercycle is here. 
+
+New reports from Morgan Stanley est. 
+
+- Samsung&#x27;s net profit ~$163.0B USD  
+- SK Hynix&#x27;s ~$120.9B USD.
+
+That would make Samsung the most profitable company in the world, even more than $NVDA and $GOOGL.
+
+Here are the top 10 rankings:
+
+1. Samsung Electronics ~$163.0B (2027)
+2. Alphabet $GOOGL $152.44B
+3. Apple $APPL $133.05B
+4 Microsoft $MSFT $127.65B
+5. Sk Hynix $120.9B (2027
+6. NVIDIA $NVDA $116.51B
+7. Amazon $AMZN $95.22B
+8 Meta$META $85.09B
+9. Berkshire Hathaway $BRK $81.5B
+10. JPMorgan Chase $JPM $72.81B
+
+This is forward 2027 net income compared to TTM net income sourced by from companiesmarketcap. Credit to @jukan05 for the Morgan Stanley report. Excluding National companies like Saudi Aramco in these figures. 
+
+The memory supercyle from $MU, Samsung, and SK Hynix is here clearly here.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2018103859647037824" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>记忆超级周期就在这里。 
+
+摩根士丹利的新报告预计。 
+
+- 三星净利润 ~$163.0B USD  
+- SK Hynix 的 ~$120.9B USD。
+
+这将使三星成为世界上最赚钱的公司，甚至超过 $NVDA 和 $GOOGL。
+
+以下是前 10 名的排名：
+
+1.三星电子 ~$163.0B (2027)
+2. 字母$GOOGL $152.44B
+3.苹果$APPL $133.05B
+4 微软 $MSFT $127.65B
+5.SK海力士 $120.9B (2027
+6.NVIDIA $NVDA $116.51B
+7. 亚马逊 $AMZN $95.22B
+8 元$META $85.09B
+9. 伯克希尔哈撒韦公司 $BRK $81.5B
+10.摩根大通$JPM $72.81B
+
+这是与来自公司市值的 TTM 净利润相比的远期 2027 年净利润。摩根士丹利报告归功于@jukan05。这些数字中不包括沙特阿美等国家公司。 
+
+$MU、三星和 SK 海力士的内存超级周期显然在这里。</div>
+        <div class="tweet-foot">
+          <span>likes 1149 / retweets 139 / replies 42 / views 654442</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-01-29 06:37</span>
+          <span><span class="chip red">$APPL</span></span>
+        </div>
+        <div class="tweet-text">@ShortsHoward Nope on this one I had way OTM options. Big cap like $APPL have extremely low IV so I like leverage on these, not so much for smaller companies.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@ShortsHoward Nope on this one I had way OTM options. Big cap like $APPL have extremely low IV so I like leverage on these, not so much for smaller companies.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2016641705957900646" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@ShortsHoward 不，在这个问题上我有很多 OTM 选项。像 $APPL 这样的大盘股的 IV 极低，所以我喜欢利用这些杠杆，但对于小公司来说就不那么喜欢了。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 682</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-01-23 09:09</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$ANET</span><span class="chip red">$APPL</span><span class="chip red">$NBCLF</span><span class="chip red">$NVDA</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Nitto Boseki - $NBCLF | 3110:
+
+The story of an extreme bottleneck for AI:
+
+&gt; Spin Yarn/Glass in 1923
+&gt; Be good at it
+&gt; Create &quot;T-Glass&quot; for tennis rackets
+&gt; Wait 100Y, everyone needs it
+&gt; $TSM for CoWoS
+&gt; $APPL for M-Series Ultra/Max
+&gt; $NVDA for Blackwell + Vera Rubin
+&gt; $TSLA for chips inside FSD cars
+&gt; $AMD for MI300/...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Nitto Boseki - $NBCLF | 3110:
+
+The story of an extreme bottleneck for AI:
+
+&gt; Spin Yarn/Glass in 1923
+&gt; Be good at it
+&gt; Create &quot;T-Glass&quot; for tennis rackets
+&gt; Wait 100Y, everyone needs it
+&gt; $TSM for CoWoS
+&gt; $APPL for M-Series Ultra/Max
+&gt; $NVDA for Blackwell + Vera Rubin
+&gt; $TSLA for chips inside FSD cars
+&gt; $AMD for MI300/MI400 AI accelerators
+&gt; $ANET for 800G to 1.6T and 3.2T
+&gt; Have Apple to Nvidia to TSM fighting over supply
+&gt; Sold out through 2026
+&gt; Apple, Nvidia, and Qualcomm sends teams live on site to literally beg this Yarn Maker for glass supply
+&gt; Now is 80-90% market share of the high-end T-glass used in semiconductors
+
+The $4.23 Billion monopoly that every tech company in the world is fighting over:
+
+A random Japanese Yarn Spinner. 
+
+Disclosure: I own positions.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2014505817509355841" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>Nitto Boseki - $NBCLF | Nitto Boseki 3110：
+
+人工智能极端瓶颈的故事：
+
+&gt; 1923 年纺纱/玻璃
+&gt; 善于做事
+&gt; 为网球拍打造“T-Glass”
+&gt; 等100年，每个人都需要它
+&gt; CoWoS 的 $TSM
+&gt; M 系列 Ultra/Max 的 $APPL
+&gt; Blackwell + Vera Rubin 的 NVDA 美元
+&gt; FSD 汽车内部芯片的 TSLA 美元
+&gt; $AMD 适用于 MI300/MI400 AI 加速器
+&gt; 800G 至 1.6T 和 3.2T 的 ANET 美元
+&gt; 苹果、英伟达、TSM 争夺供应
+&gt; 2026 年之前已售完
+&gt; 苹果、英伟达和高通派出团队现场直播，恳求这家纱线制造商提供玻璃供应
+&gt; 半导体用高端T玻璃目前占有80-90%的市场份额
+
+全球每家科技公司都在争夺 42.3 亿美元的垄断地位：
+
+随机的日本纺纱厂。 
+
+披露：我拥有自己的职位。</div>
+        <div class="tweet-foot">
+          <span>likes 221 / retweets 13 / replies 23 / views 33996</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-01-22 02:39</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$INTC</span><span class="chip red">$NVDA</span></span>
+        </div>
+        <div class="tweet-text">@Crypto_fox7 Yep. Not every day do you get a company backstopped by the White House like $INTC. 
+
+Both the government and all the Mag7 companies like $NVDA and $APPL are just pushing for Intel to succeed.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Crypto_fox7 Yep. Not every day do you get a company backstopped by the White House like $INTC. 
+
+Both the government and all the Mag7 companies like $NVDA and $APPL are just pushing for Intel to succeed.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2014045203737588190" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Crypto_fox7 是的。并不是每天都能得到像 $INTC 这样得到白宫支持的公司。 
+
+政府和所有 Mag7 公司（例如 $NVDA 和 $APPL）都在推动英特尔取得成功。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2627</span>
+        </div>
+        <div class="chips"><span class="chip blue">Mag7 客户集中度过滤</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-01-14 16:43</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$INTC</span></span>
+        </div>
+        <div class="tweet-text">@TheEEInvestor There&#x27;s no public disclosures or news at all regarding $APPL investments in $INTC yet. 
+
+But I&#x27;d say Trump probably knows a bit more than others as the sitting President and is prone to say more things than he should in his live interviews.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@TheEEInvestor There&#x27;s no public disclosures or news at all regarding $APPL investments in $INTC yet. 
+
+But I&#x27;d say Trump probably knows a bit more than others as the sitting President and is prone to say more things than he should in his live interviews.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011358447653261779" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@TheEEInvestor 目前还没有关于 $APPL 对 $INTC 投资的公开披露或新闻。 
+
+但我想说，作为现任总统，特朗普可能比其他人知道得更多，并且在现场采访中可能会说更多不该说的话。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3744</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2026-01-14 16:23</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$AXTI</span><span class="chip red">$CRDO</span><span class="chip red">$INTC</span><span class="chip red">$VLN</span></span>
+        </div>
+        <div class="tweet-text">If you’re wondering why $INTC is flying after hours:
+
+Trump accidentally leaked in an interview that $APPL invested. https://t.co/1B8JMOc5BV</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you’re wondering why $INTC is flying after hours:
+
+Trump accidentally leaked in an interview that $APPL invested. https://t.co/1B8JMOc5BV</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011353420649623561" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>如果您想知道为什么 $INTC 在下班后飞行：
+
+特朗普在采访中不小心泄露了$APPL投资的信息。 https://t.co/1B8JMOc5BV</div>
+        <div class="tweet-foot">
+          <span>likes 482 / retweets 22 / replies 22 / views 214608</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2025-12-05 02:05</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">@Scepticus16 Prob $meta, $amzn, $googl, $nvda, $appl, $msft, $tsla for me in terms of current valuations</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Scepticus16 Prob $meta, $amzn, $googl, $nvda, $appl, $msft, $tsla for me in terms of current valuations</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1996641921561948448" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@Scepticus16 就当前估值而言，对我而言，概率 $meta、$amzn、$googl、$nvda、$appl、$msft、$tsla</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 427</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2025-11-04 23:56</span>
+          <span><span class="chip red">$APPL</span><span class="chip red">$NBIS</span><span class="chip red">$QLCM</span></span>
+        </div>
+        <div class="tweet-text">@DeepValueBagger Yeah good observation,  we’ll likely see specializations emerge from separate buildout.
+
+It is a moat in how you do full stack and some models like $NBIS haven’t been replicated yet. 
+
+Then again you can point out $APPL vs $QLCM with Apple sucking back up the stack as the 🐻case</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@DeepValueBagger Yeah good observation,  we’ll likely see specializations emerge from separate buildout.
+
+It is a moat in how you do full stack and some models like $NBIS haven’t been replicated yet. 
+
+Then again you can point out $APPL vs $QLCM with Apple sucking back up the stack as the 🐻case</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1985737806896120261" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>@DeepValueBagger 是的，观察得很好，我们很可能会看到专业化从单独的构建中出现。
+
+这是你如何做全栈的护城河，像 $NBIS 这样的一些模型还没有被复制。 
+
+然后，您可以再次指出 $APPL 与 $QLCM，其中 Apple 吸回堆栈作为🐻案例</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2802</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2025-10-30 21:56</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$DGXX</span><span class="chip red">$FI</span><span class="chip red">$GOOGL</span><span class="chip red">$KRKNF</span><span class="chip red">$LGN</span><span class="chip red">$LYC.AX</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$TSLA</span><span class="chip red">$UNH</span></span>
+        </div>
+        <div class="tweet-text">Added 6 figures in Jan-Feb $META calls.
+
+Same thing happened last year April and it took 2-6 days for full recovery.
+
+Earnings beat, fundamentals in tact. Same story about capex spend.
+
+Might be 2 day flush so cost averaging but this selloff is a huge opportunity. https://t.co/S3CwYsdaU4</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Added 6 figures in Jan-Feb $META calls.
+
+Same thing happened last year April and it took 2-6 days for full recovery.
+
+Earnings beat, fundamentals in tact. Same story about capex spend.
+
+Might be 2 day flush so cost averaging but this selloff is a huge opportunity. https://t.co/S3CwYsdaU4</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1983895786590200266" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>1 月至 2 月的 $META 电话会议增加了 6 个数字。
+
+去年四月也发生过同样的情况，花了2-6天才完全恢复。
+
+盈利超出预期，基本面完好。关于资本支出的同样的故事。
+
+可能是两天冲刺，所以成本平均，但这次抛售是一个巨大的机会。 https://t.co/S3CwYsdaU4</div>
+        <div class="tweet-foot">
+          <span>likes 201 / retweets 12 / replies 30 / views 131554</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2025-10-01 14:43</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$LULU</span><span class="chip red">$NBIS</span><span class="chip red">$VIRT</span><span class="chip red">$VIX</span></span>
+        </div>
+        <div class="tweet-text">US government shutdown confirmed.
+
+As I expected a few hours ago, Polymarket  was pricing in almost 100% confirmation of a shutdown. 
+
+Institutions and traders already know about it but retail will panic on the news.
+
+Use this golden opportunity to build long positions. https://t.co/HCkIqwCtnd</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">US government shutdown confirmed.
+
+As I expected a few hours ago, Polymarket  was pricing in almost 100% confirmation of a shutdown. 
+
+Institutions and traders already know about it but retail will panic on the news.
+
+Use this golden opportunity to build long positions. https://t.co/HCkIqwCtnd</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1973277513452494873" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>美国政府关门已确认。
+
+正如我几个小时前所预期的那样，Polymarket 的定价几乎 100% 确认关闭。 
+
+机构和交易员已经知道了这一消息，但零售业将会对此消息感到恐慌。
+
+利用这个黄金机会建立多头头寸。 https://t.co/HCkIqwCtnd</div>
+        <div class="tweet-foot">
+          <span>likes 57 / retweets 1 / replies 9 / views 13043</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2025-09-23 04:49</span>
+          <span><span class="chip red">$APPL</span></span>
+        </div>
+        <div class="tweet-text">In this world, nothing can be said for certain, except death, taxes... and
+
+$APPL stock crashing after product launch, people panic selling, then Apple using buybacks to convince market that everyone likes the product.   
+
+($227 -&amp;gt; $256 in 2 weeks) https://t.co/Jy4SRAJFda</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">In this world, nothing can be said for certain, except death, taxes... and
+
+$APPL stock crashing after product launch, people panic selling, then Apple using buybacks to convince market that everyone likes the product.   
+
+($227 -&amp;gt; $256 in 2 weeks) https://t.co/Jy4SRAJFda</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1970228982777029075" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>在这个世界上，没有什么是可以肯定的，除了死亡、税收……以及
+
+产品发布后，$APPL 股票暴跌，人们恐慌性抛售，然后苹果利用回购来说服市场每个人都喜欢该产品。   
+
+（两周内 227 美元 -&gt; 256 美元）https://t.co/Jy4SRAJFda</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 6965</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2025-09-11 00:00</span>
+          <span><span class="chip red">$APPL</span></span>
+        </div>
+        <div class="tweet-text">Sometimes I like to gamble too.
+
+$APPL somehow always falls every Apple event when people say it’s bad.
+
+Then a few days later rallies when they do buybacks and change public narrative like with Apple Intelligence.
+
+I quite like the iPhone Air. This play is extremely high risk. https://t.co/d8Y1B0aDFP</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Sometimes I like to gamble too.
+
+$APPL somehow always falls every Apple event when people say it’s bad.
+
+Then a few days later rallies when they do buybacks and change public narrative like with Apple Intelligence.
+
+I quite like the iPhone Air. This play is extremely high risk. https://t.co/d8Y1B0aDFP</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1965807638832468462" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>有时我也喜欢赌博。
+
+当人们说它不好时，$APPL 总是会在每次苹果活动中下跌。
+
+几天后，当他们进行回购并像苹果情报公司那样改变公众叙述时，就会出现反弹。
+
+我非常喜欢 iPhone Air。这种玩法风险极高。 https://t.co/d8Y1B0aDFP</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 9932</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="26">
+        <div class="tweet-head">
+          <span class="mono">2025-07-28 16:19</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SPOT</span></span>
+        </div>
+        <div class="tweet-text">For WSB charts I posted: 
+
+On $GOOGL, realized profit was $101,428+, and lots of unrealized profit since I expect GOOGL to hit $220+ EOY if tech rally continues ( $META $APPL $AMZN $MSFT $NVDA $SPOT)    
+
+Earnings were a complete blowout and they still have 70B+ in buybacks https://t.co/G6jrKAyumE</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">For WSB charts I posted: 
+
+On $GOOGL, realized profit was $101,428+, and lots of unrealized profit since I expect GOOGL to hit $220+ EOY if tech rally continues ( $META $APPL $AMZN $MSFT $NVDA $SPOT)    
+
+Earnings were a complete blowout and they still have 70B+ in buybacks https://t.co/G6jrKAyumE</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1949746557253030018" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文直译：</b>对于我发布的 WSB 图表： 
+
+在 $GOOGL 上，已实现利润为 101,428 美元以上，还有大量未实现利润，因为我预计如果科技股继续上涨，GOOGL 将达到 220 美元以上的 EOY ($META $APPL $AMZN $MSFT $NVDA $SPOT)    
+
+收益完全井喷，他们仍有 70B+ 的回购 https://t.co/G6jrKAyumE</div>
+        <div class="tweet-foot">
+          <span>likes 7 / retweets 0 / replies 1 / views 4905</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+    
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../analysis_site_static_clone_v7.html#methodology?check=APPL">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>
