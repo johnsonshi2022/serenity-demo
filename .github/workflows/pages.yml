@@ -27,10 +27,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare Pages artifact
+        run: |
+          mkdir public
+          cp index.html _meta.json .nojekyll serenity-stockpick.SKILL.md public/
+          cp -R analysis_site_ticker_pages_v7 public/
+
       - name: Upload Serenity site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: public
 
       - name: Deploy to GitHub Pages
         id: deployment
