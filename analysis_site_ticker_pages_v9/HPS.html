@@ -1,0 +1,1516 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$HPS.A 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$HPS.A 历史推文</h1>
+      <p>$HPS 没有独立历史推文，已合并展示 $HPS.A 的交易所后缀页面。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b></b></div>
+        <div class="stat-card"><span>历史推文</span><b>32</b></div>
+        <div class="stat-card"><span>首次提及</span><b></b></div>
+        <div class="stat-card"><span>最近提及</span><b></b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 6</span><span class="chip blue">签约 ARR vs 市值错配 5</span><span class="chip blue">信念分层、仓位与时点 4</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 3</span><span class="chip blue">GAAP 毛利率之战 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>已匹配 6 个 A 股链条映射；重点看业务环节和订单传导，不把概念相似当作直接竞争。代表项：四方股份、伊戈尔、新特电气、金盘科技。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-06-19 20:19</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$HPS.A</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNAP</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TTD</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">I think something to highlight also is not all my ideas are green, especially on short term timeframes!
+
+My core three themes are Neoclouds (Energy), Memory, and Photonics. 
+
+And I&#x27;m glad I chose the literal top performers for each segment from $NBIS to $EWY leaps to $SIVE. 
+
+However, I still have pretty large losses f...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I think something to highlight also is not all my ideas are green, especially on short term timeframes!
+
+My core three themes are Neoclouds (Energy), Memory, and Photonics. 
+
+And I&#x27;m glad I chose the literal top performers for each segment from $NBIS to $EWY leaps to $SIVE. 
+
+However, I still have pretty large losses following the false analyst report on CPO delays that $NVDA refuted:
+
+That nuked 3 of my TW CPO longs from Foci, Msscorp, Xintec and others. (which are heavily red). Shunsin / Win Semi are holding up much better though. 
+
+Some of the other ones in Japan that I&#x27;ve mentioned like Towa, Harmonic Drive, NCI, etc. are performing much better following short-term volatility. 
+
+As for Korea yes I have PTSD for from Auros and now Foosung that are both both red (I didn&#x27;t own 093370 though, just got PTSD watching price action). 
+
+Idk if I&#x27;ll touch Korea again, just way too volatile. But I still think those will end up green eventually following Sk hynix/samsung qualifications + HVM, and the future japanese supply chain shutdown. 
+
+I also did change some of my previous long ideas like $XLU following the Iran War nuking all chances of rate cuts from 3-4 down to 0, and that didn&#x27;t play out too well. Three software names I mentioned previously like $TTD, $META ended up red. $SNAP, I also changed my thesis after noticing the endless SBC accounting methods. $RDDT idea was finally in the green from $130 -&gt; $170 after a long time. 
+
+But I think the vast majority of my ideas like $MRVL, $NBIS, $ARM, $INTC, $MU, $LITE, SK Hynix, Samsung, for larger cap. 
+
+Down to $AXTI, $LITE, $AAOI, $RPI, $IQE, and others for smaller cap positions directionally play out pretty well. 
+
+With random stuff like $SIMO, $HPS.A, $TSEM, $AEHR, $LPK, $SOI, $ALRIB, and so on all ended up turning out aight too. 
+
+The blended average is kinda overwhelmingly green since majority of my long ideas are triple digit YTD.  
+
+But I&#x27;ve definitely missed a few. 
+
+Also entry point is really important too... I mentioned $AAOI at $30 or $AXTI at ~$13, but not everyone has the same entry point. So if someone bought AOI at $220 and it dropped to $160, I&#x27;d feel bad. 
+
+But regardless, I&#x27;d prefer to judge how ideas play out on medium term timeframes over a few months rather than a few weeks.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2067945397923037693" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我认为需要强调的是，并非我所有的想法都是绿色的，尤其是在短期时间范围内！我的三个核心主题是 AI 算力云公司（能源）、Memory 和 Photonics。我很高兴我为从 $NBIS 到 $EWY 到 $SIVE 的每个细分市场选择了真正的最佳表现者。然而，在 $NVDA 驳斥了有关 CPO 延误的虚假分析师报告后，我仍然遭受了相当大的损失：
+
+这摧毁了我从 Foci、Msscorp、Xintec 等公司购买的 3 个 TW CPO 多头头寸。（呈深红色）。Shusin / Win Semi 的表现要好得多。我提到的日本其他一些公司，如 Towa、Harmonic Drive、NCI 等，在经历短期波动后表现要好得多。至于韩国，是的，我有来自 Auros 的 PTSD，现在 Foosung 都是红色的（虽然我没有 093370，只是在观察价格走势时有 PTSD）。我不知道我是否会再次接触韩国，因为太不稳定了。但我仍然认为，在 Sk hynix/三星资质 + HVM 以及未来日本供应链关闭之后，这些最终将成为绿色。我也确实改变了我之前的一些长期想法，例如伊朗战争后的 $XLU，将所有降息机会从 3-4 降至 0，但效果不太好。我之前提到的三个软件名称如 $TTD、$META 最终变成了红色。$SNAP，在注意到无穷无尽的SBC会计方法后，我也改变了我的论文。经过很长一段时间后，$RDDT 的想法终于从 130 美元变为 170 美元。但我认为我的绝大多数想法都是为了更大的上限，比如$MRVL、$NBIS、$ARM、$INTC、$MU、$LITE、SK Hynix、三星。降至 $AXTI、$LITE、$AAOI、$RPI、$IQE 和其他较小盘头寸的方向表现相当不错。随机的东西，比如 $SIMO、$HPS.A、$TSEM、$AEHR、$LPK、$SOI、$ALRIB 等等，最终也都得到了正确的结果。混合平均值几乎是绿色的，因为我的大部分长期想法今年迄今都是三位数。但我确实错过了一些。另外，切入点也非常重要...我提到了 $AAOI 的价格为 30 美元，$AXTI 的价格约为 13 美元，但并非每个人都有相同的切入点。因此，如果有人以 220 美元的价格购买 AOI，然后它跌至 160 美元，我会感觉很糟糕。但无论如何，我更愿意判断想法在几个月而不是几周的中期时间框架内如何发挥作用。</div>
+        <div class="tweet-foot">
+          <span>likes 2324 / retweets 147 / replies 235 / views 724908</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-06-02 01:27</span>
+          <span><span class="chip red">$HPS.A</span></span>
+        </div>
+        <div class="tweet-text">@AliTava2020 $HPS.A was my Canadian long for transformers bottleneck. 
+
+Pretty large backlog, so multi-year revenue visibility, high market share over dry transformers. 
+
+US production Act likely benefiting companies like Hammond.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@AliTava2020 $HPS.A was my Canadian long for transformers bottleneck. 
+
+Pretty large backlog, so multi-year revenue visibility, high market share over dry transformers. 
+
+US production Act likely benefiting companies like Hammond.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2061499877763482108" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@AliTava2020 $HPS.A 是我对变形金刚瓶颈的加拿大渴望。积压量相当大，因此多年收入可见性，市场份额高于干式变压器。美国生产法案可能有利于像哈蒙德这样的公司。</div>
+        <div class="tweet-foot">
+          <span>likes 33 / retweets 0 / replies 5 / views 4059</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-05-29 03:06</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">$HPS.A is close is to a 2M timeframe.
+
+Transformers in the Sky are up 83.3% since. Bumblebee go brrr? 
+
+But in all reality, transformers demand visibility is very high, solid backlog, high market share (of dry).
+
+Not exactly parabolic, but looks like a compelling compounder. https://t.co/bNGwjqfZ4M</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$HPS.A is close is to a 2M timeframe.
+
+Transformers in the Sky are up 83.3% since. Bumblebee go brrr? 
+
+But in all reality, transformers demand visibility is very high, solid backlog, high market share (of dry).
+
+Not exactly parabolic, but looks like a compelling compounder. https://t.co/bNGwjqfZ4M</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2060075363779366918" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$HPS.A 接近 2M 的时间范围。自那以后，《天空变形金刚》上涨了 83.3%。大黄蜂去brrr？但从现实来看，变压器的需求能见度非常高，积压扎实，市场占有率高（干）。不完全是抛物线，但看起来像是一个引人注目的复合器。https://t.co/bNGwjqfZ4M</div>
+        <div class="tweet-foot">
+          <span>likes 117 / retweets 7 / replies 112 / views 24739</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-05-24 22:07</span>
+          <span><span class="chip red">$CARR</span><span class="chip red">$CBRS</span><span class="chip red">$HPS.A</span><span class="chip red">$NVT</span><span class="chip red">$NVTS</span><span class="chip red">$POWI</span><span class="chip red">$POWL</span><span class="chip red">$VICR</span></span>
+        </div>
+        <div class="tweet-text">Just random themes im looking im having a good time looking into over the weekend: 
+
+-&gt; power semis, integrated voltage regulators, multiphase controllers, CDUs, cold plates, manifolds, pumps, valves, heat exchangers, rear-door systems, chillers. 
+
+$POWL, $NVT, 010120 KS, 267260 KS, 2308 TT,  $VICR, $POWI , CATL, Sungr...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just random themes im looking im having a good time looking into over the weekend: 
+
+-&gt; power semis, integrated voltage regulators, multiphase controllers, CDUs, cold plates, manifolds, pumps, valves, heat exchangers, rear-door systems, chillers. 
+
+$POWL, $NVT, 010120 KS, 267260 KS, 2308 TT,  $VICR, $POWI , CATL, Sungrow 300274 C
+
+-&gt; thermal stuff (ALFA SS, ASTK DC, Daikin 6367 JP), $CARR, MTRS SS)
+
+These are just ones aside from the ones I&#x27;ve talked about eg. $NVTS or $HPS.A. 
+
+They&#x27;re all kinda more priced in but now but it&#x27;s a good starting point in terms of finding more important players that&#x27;s not priced in. 
+
+Then you try and look: which single company do most of these probably rely on? 
+
+I&#x27;m personally less familiar with the energy/cooling/power trade, which I&#x27;m happy to admit since everything is a learning process. 
+
+But normally even if I find something interesting, i don&#x27;t find it more compelling than staying in CPO longs. Always it&#x27;s always fun learning more. 
+
+Was always looking for SRAM-adjacent exposure, think private markets are better to go then $CBRS?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058550475260400103" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是随机主题，我周末玩得很开心： 
+
+-&gt; 功率半导体、集成电压调节器、多相控制器、CDU、冷板、歧管、泵、阀门、热交换器、后门系统、冷却器。$POWL、$NVT、010120 KS、267260 KS、2308 TT、$VICR、$POWI、宁德时代、阳光电源 300274 C
+
+-&gt; 热材料（ALFA SS、ASTK DC、Daikin 6367 JP）、$CARR、MTRS SS）
+
+这些只是我已经讨论过的那些之外的一些。$NVTS 或 $HPS.A。他们的价格都更高了，但现在这是一个很好的起点，可以找到更重要的、没有被定价的球员。然后你尝试看看：其中大部分可能依赖哪家公司？我个人对能源/冷却/电力贸易不太熟悉，我很高兴承认这一点，因为一切都是一个学习过程。但通常情况下，即使我发现一些有趣的东西，我也不认为它比持有 CPO 多头更有吸引力。学习更多总是很有趣的。一直在寻找与 SRAM 相邻的风险敞口，认为私募市场比 $CBRS 更好？</div>
+        <div class="tweet-foot">
+          <span>likes 656 / retweets 20 / replies 68 / views 83042</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-05-16 05:49</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$HPS.A</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">Fun fact: over 70%+ of my portfolio is unrealized, I haven&#x27;t sold a single share in many of these. 
+
+It helps if things like $AXTI hit 1900%+ returns, $SIVE hit 1000%+ returns, and everything larger in concentration hit 300% like $SOI. 
+
+But basically entire portfolio is up triple digits aside from newer thesis names I...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Fun fact: over 70%+ of my portfolio is unrealized, I haven&#x27;t sold a single share in many of these. 
+
+It helps if things like $AXTI hit 1900%+ returns, $SIVE hit 1000%+ returns, and everything larger in concentration hit 300% like $SOI. 
+
+But basically entire portfolio is up triple digits aside from newer thesis names I&#x27;ve entered like $HPS.A which is getting close to 100%. 
+
+Even Shunsin, which is new up 35%+ now or something. 
+
+I&#x27;m on 1.3x-1.4x leverage right now, 96% or so shares only.  I&#x27;ve been using previous positions that appreciated to compound more with others using margin.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2055405163092066719" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>有趣的事实：我的投资组合中有超过 70% 以上尚未变现，其中许多股票我都没有出售过。如果像 $AXTI 达到 1900% 以上的回报，$SIVE 达到 1000% 以上的回报，以及像 $SOI 这样集中度较大的东西达到 300% 以上，这会有所帮助。但基本上，除了我输入的新论文名称（例如 $HPS.A）之外，整个投资组合都增长了三位数，接近 100%。即使是新推出的 Shunsin 现在也上涨了 35% 以上。我现在的杠杆率为 1.3 倍至 1.4 倍，仅持有 96% 左右的股票。我一直在使用以前的头寸，这些头寸可以利用保证金与其他人进行更多的复合。</div>
+        <div class="tweet-foot">
+          <span>likes 271 / retweets 11 / replies 21 / views 39796</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-05-14 00:01</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">I like how $HPS.A is just a vertical line up 2-3% increase every day since my thesis post.
+
+Just 20 CAD away before it hits triple digit returns. https://t.co/CHqWQKzH5E</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I like how $HPS.A is just a vertical line up 2-3% increase every day since my thesis post.
+
+Just 20 CAD away before it hits triple digit returns. https://t.co/CHqWQKzH5E</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2054592898042380788" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我喜欢 $HPS.A 自从我发表论文以来每天都在增长 2-3% 的垂直线。距离回报率达到三位数仅差 20 加元。https://t.co/CHqWQKzH5E</div>
+        <div class="tweet-foot">
+          <span>likes 568 / retweets 28 / replies 81 / views 178168</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-05-11 16:15</span>
+          <span><span class="chip red">$ARM</span><span class="chip red">$HPS.A</span><span class="chip red">$LPK</span><span class="chip red">$SIMO</span></span>
+        </div>
+        <div class="tweet-text">And now $LPK is #19 on the list of my individual stocks that returned 100-1000%+ YTD.
+
+After going up +4.57% today.
+
+Usually 1 or 2 is good, but I’ve written about and went long on 19 different stocks this year that went up triple digits.
+
+I’m kinda impressed with myself ngl? https://t.co/s9FLfTWHGd</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">And now $LPK is #19 on the list of my individual stocks that returned 100-1000%+ YTD.
+
+After going up +4.57% today.
+
+Usually 1 or 2 is good, but I’ve written about and went long on 19 different stocks this year that went up triple digits.
+
+I’m kinda impressed with myself ngl? https://t.co/s9FLfTWHGd</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053750731103150472" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>现在，$LPK 在我的个股名单上排名第 19，年初至今回报率超过 100-1000%。今天上涨了+4.57%。通常 1 或 2 只股票就不错，但今年我已经写过并做多了 19 只不同的股票，这些股票的涨幅达到了三位数。我对自己有点印象 ngl？https://t.co/s9FLfTWHGd</div>
+        <div class="tweet-foot">
+          <span>likes 1184 / retweets 49 / replies 105 / views 208401</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-05-09 00:14</span>
+          <span><span class="chip red">$HPS.A</span><span class="chip red">$LITE</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">Nobody can convince me $SNDK isn’t a meme stock at this point.
+
+But as I’ve said, bottlenecks with multi-year visibility like $HPS.A or $LITE tend to perform better. https://t.co/WkjoG1jIYu</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Nobody can convince me $SNDK isn’t a meme stock at this point.
+
+But as I’ve said, bottlenecks with multi-year visibility like $HPS.A or $LITE tend to perform better. https://t.co/WkjoG1jIYu</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052784100784922983" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>目前没有人能让我相信 $SNDK 不是模因股票。但正如我所说，像 $HPS.A 或 $LITE 这样具有多年可见性的瓶颈往往表现更好。https://t.co/WkjoG1jIYu</div>
+        <div class="tweet-foot">
+          <span>likes 1147 / retweets 49 / replies 115 / views 409255</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-05-07 04:40</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$OSS</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVEF</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">I guess, post earnings when $ARM touched $268...
+
+$ARM is now #18 on the individual stock list that I went long on that hit 100%-1000%+ YTD?
+
+I&#x27;ve lost count TBH. Some others like $LPK and $SIMO and $HPS.A are getting really close now. 
+
+But feels like I&#x27;m one of the few ones out there on X with actual receipts of all ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I guess, post earnings when $ARM touched $268...
+
+$ARM is now #18 on the individual stock list that I went long on that hit 100%-1000%+ YTD?
+
+I&#x27;ve lost count TBH. Some others like $LPK and $SIMO and $HPS.A are getting really close now. 
+
+But feels like I&#x27;m one of the few ones out there on X with actual receipts of all the returns + original thesis post.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052126435721318528" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我猜，当 ARM 触及 268 美元时，公布收益......
+
+$ARM 现在在我做多的个股名单上排名第 18，今年迄今股价达到 100%-1000%+？我已经记不清了。其他一些像 $LPK、$SIMO 和 $HPS.A 现在已经非常接近了。但感觉我是 X 上少数几个拥有所有退货+原始论文帖子实际收据的人之一。</div>
+        <div class="tweet-foot">
+          <span>likes 1154 / retweets 40 / replies 108 / views 472577</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-05-06 06:48</span>
+          <span><span class="chip red">$AEIS</span><span class="chip red">$AMSC</span><span class="chip red">$ATKR</span><span class="chip red">$AZZ</span><span class="chip red">$CLF</span><span class="chip red">$HPS.A</span><span class="chip red">$PLPC</span><span class="chip red">$POWL</span><span class="chip red">$SPXC</span><span class="chip red">$VICR</span><span class="chip red">$VMI</span><span class="chip red">$VSH</span></span>
+        </div>
+        <div class="tweet-text">Just putting it out there:
+
+A lot of these names from $PLPC to $AMSC are doing decently well from two weeks ago.
+
+$HPS.A (my transformers thesis) earnings also came out today and it’s very solid:
+
+$264M CAD vs $236.3M CAD (strong beat) and backlog increased 94.6% Y/Y which is the leading indicator of a demand for these...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just putting it out there:
+
+A lot of these names from $PLPC to $AMSC are doing decently well from two weeks ago.
+
+$HPS.A (my transformers thesis) earnings also came out today and it’s very solid:
+
+$264M CAD vs $236.3M CAD (strong beat) and backlog increased 94.6% Y/Y which is the leading indicator of a demand for these names.
+
+They’re all critical to American infrastructure, not exactly parabolic growth names… but great compounders.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051796147031949708" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是把它放在那里：
+
+从 $PLPC 到 $AMSC 等许多公司自两周前以来表现都不错。$HPS.A（我的变形金刚论文）的收益今天也出来了，而且非常可靠：
+
+2.64 亿加元对比 2.363 亿加元（强劲），积压订单同比增长 94.6%，这是对这些名称需求的领先指标。它们对美国基础设施都至关重要，不完全是抛物线增长的名字……而是伟大的复合者。</div>
+        <div class="tweet-foot">
+          <span>likes 766 / retweets 50 / replies 37 / views 198896</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 02:41</span>
+          <span><span class="chip red">$HPS.A</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">The fact that a large correction looks like a little blip in the overall charts.
+
+Is pretty telling for how “Serenity Stocks” performs over time?
+
+That aside, I’m starting to think everyone’s expectations are too high. 
+
+Now if $SOI or $HPS.A are not up 10% a day people are sad. Before 15% return a year was considered ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The fact that a large correction looks like a little blip in the overall charts.
+
+Is pretty telling for how “Serenity Stocks” performs over time?
+
+That aside, I’m starting to think everyone’s expectations are too high. 
+
+Now if $SOI or $HPS.A are not up 10% a day people are sad. Before 15% return a year was considered very good. 
+
+Corrections like these are normal if you zoom out, even if they’re self-inflicted by US media.
+
+Usually if something is a core component in a multi year optical supercycle… Or are backlogged by multiple years for transformers/switchgear.
+
+It’s a lot easier to sleep at night.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049197267404648516" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>事实上，大的修正在整体图表中看起来像是一个小现象。“宁静股票”随着时间的推移表现如何，这很能说明问题吗？除此之外，我开始认为每个人的期望都太高了。现在，如果 $SOI 或 $HPS.A 没有每天上涨 10%，人们就会感到难过。之前一年15%的回报已经算很不错了。如果你把目光放远，这样的修正是很正常的，即使它们是美国媒体自己造成的。通常，如果某个东西是多年光学超级周期中的核心组件……或者是多年积压的变压器/开关设备。晚上睡觉容易多了。</div>
+        <div class="tweet-foot">
+          <span>likes 653 / retweets 32 / replies 69 / views 160481</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 01:48</span>
+          <span><span class="chip red">$HPS.A</span><span class="chip red">$LPK</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">@wdh37 $SIVE for CPO/1.6T lasers
+$LPK for glass core substrates
+Shunsin for optical test/packaging.
+
+Many others I like though like $HPS.A or $SOI.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@wdh37 $SIVE for CPO/1.6T lasers
+$LPK for glass core substrates
+Shunsin for optical test/packaging.
+
+Many others I like though like $HPS.A or $SOI.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048459173185327358" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@wdh37 $SIVE 用于 CPO/1.6T 激光器
+$LPK 用于玻璃芯基板
+Shunsin 用于光学测试/封装。还有很多我喜欢的，比如 $HPS.A 或 $SOI。</div>
+        <div class="tweet-foot">
+          <span>likes 399 / retweets 24 / replies 19 / views 59393</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 01:09</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMAT</span><span class="chip red">$AMD</span><span class="chip red">$AMSC</span><span class="chip red">$ARM</span><span class="chip red">$ATKR</span><span class="chip red">$COHR</span><span class="chip red">$DOW</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$KLAC</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$PLPC</span><span class="chip red">$POET</span><span class="chip red">$POWL</span><span class="chip red">$SIVE</span><span class="chip red">$TSM</span><span class="chip red">$VICR</span></span>
+        </div>
+        <div class="tweet-text">TLDR of recent news + bottlenecks that go brr:
+
+1. CPU bottleneck - $INTC CEO said AI inference pushed CPU Ratio From 1:8 to 1:1. 
+
+CPUs go brr ( $AMD, Intel, $ARM) -&gt; $AMAT / $TSM / $KLAC, etc. go brr.
+
+2. PGME / PGMEA shortage. DuPont, Shiny Chemical, Daxin, San Fu, $DOW and others go brr? 
+
+Photoresist bottleneck go...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">TLDR of recent news + bottlenecks that go brr:
+
+1. CPU bottleneck - $INTC CEO said AI inference pushed CPU Ratio From 1:8 to 1:1. 
+
+CPUs go brr ( $AMD, Intel, $ARM) -&gt; $AMAT / $TSM / $KLAC, etc. go brr.
+
+2. PGME / PGMEA shortage. DuPont, Shiny Chemical, Daxin, San Fu, $DOW and others go brr? 
+
+Photoresist bottleneck go brr? 
+
+3. Microcontroller potential bottleneck + price hikes (Arterytek/Arterychip) was weighing price hikes on AI capacity squeezes.  
+
+MCU companies potentially go brr?
+
+4. President invoked the &quot;Defense Production Act&quot; this week, it included: 
+
+-Transformers 
+- transmission components 
+- advanced conductors 
+- power electronics 
+- substations 
+- high-voltage circuit breakers 
+-  protective relays, capacitor banks
+ - electrical core steel
+
+As &quot;severe shortages&quot;. Stuff like $AMSC, $PLPC, $POWL, $VICR, $ATKR, $HPS.A go brr. 
+
+5. $GOOGL ramps new TPU servers. Google splits AI chips into training and inference TPUs.
+
+Taiwan happy. Mediatek and others go brr? 
+
+6. Samsung, Kingston lift SSD prices by over 10%. 
+
+SSD prices keep going brrr?  
+
+7. T-glass fiberglass shortages keep getting worse? Nittobo and others keep going brrr?
+
+8. Bromine, essential for etching circuits and flame retardancy, has surged to $12,000 per metric ton.
+
+ICL Group in Israel apparently controls 40% of the global supply?
+
+Not as familiar with this but questionable brrr?
+
+9. &quot;Epitaxy manufacturer LandMark Optoelectronics reporting output still far below customer needs&quot;.
+
+Uhh $IQE and others go brr? 
+
+10. &quot;AI data centers hit interconnect limits, boosting optical module demand&quot;. &quot;the bottleneck is no longer computing power alone, but how that power is connected.&quot;
+
+Photonics from $AAOI, $LITE, $COHR, Innolight and others keep going brr? next gen from $SIVE, $POET, $MRVL, Win Semi and others go brr?
+
+Basically AI semi supply chains go brr because there&#x27;s widespread shortages everywhere due to AI hyperscaler demand.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048449289152778686" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>近期新闻 + 瓶颈的 TLDR：
+
+1. CPU 瓶颈 - $INTC CEO 表示 AI 推理将 CPU 比率从 1:8 推至 1:1。CPU go brr ($AMD、Intel、$ARM) -&gt; $AMAT / $TSM / $KLAC 等 go brr。2.PGME/PGMEA短缺。杜邦、闪亮化工、大新、三福、$DOW等去brr？光刻胶瓶颈何去何从？3. 微控制器潜在瓶颈+价格上涨（Arterytek/Arterychip）正在权衡人工智能产能紧张导致的价格上涨。MCU公司可能走向何方？4.总统本周援引了《国防生产法》，其中包括： 
+
+-变形金刚 
+- 传动部件 
+- 高级指挥家 
+- 电力电子 
+- 变电站 
+- 高压断路器 
+- 保护继电器、电容器组
+ - 电工芯钢
+
+为“严重短缺”。像 $AMSC、$PLPC、$POWL、$VICR、$ATKR、$HPS.A 之类的东西。5. $GOOGL 推出新的 TPU 服务器。谷歌将 AI 芯片分为训练 TPU 和推理 TPU。台湾快乐。联发科等去brr？6、三星、金士顿SSD价格上调10%以上。SSD价格继续上涨吗？7. T-glass玻纤短缺持续加剧？Nittobo 和其他人继续前进 brrr？8. 溴对于电路蚀刻和阻燃至关重要，其价格已飙升至每吨 12,000 美元。以色列ICL集团显然控制了全球40%的供应？对此不太熟悉但有疑问 brrr？9.“外延制造商LandMark Opto electronics 报告产量仍远低于客户需求”。呃 $IQE 和其他人去 brr 吗？10.“人工智能数据中心达到互连极限，推动光模块需求”。“瓶颈不再仅仅是算力，而是这种能力如何连接。”
+
+$AAOI、$LITE、$COHR、Innolight 等公司的光子学继续发展吗？$SIVE、$POET、$MRVL、Win Semi 等的下一代会怎样？基本上，人工智能半供应链发展缓慢，因为人工智能超大规模的需求导致各地普遍出现短缺。</div>
+        <div class="tweet-foot">
+          <span>likes 2835 / retweets 254 / replies 149 / views 530327</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-04-25 01:28</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">If you listened to Optimus Prime…
+
+You’d be up 47% in just 3 weeks with $HPS.A.
+
+Did you listen to Optimus anon? https://t.co/dUWQBpPu0y</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you listened to Optimus Prime…
+
+You’d be up 47% in just 3 weeks with $HPS.A.
+
+Did you listen to Optimus anon? https://t.co/dUWQBpPu0y</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047729405309640899" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>如果你听过擎天柱……
+
+使用 $HPS.A，您将在短短 3 周内上涨 47%。你听过擎天柱吗？https://t.co/dUWQBpPu0y</div>
+        <div class="tweet-foot">
+          <span>likes 759 / retweets 30 / replies 77 / views 203250</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-04-23 06:53</span>
+          <span><span class="chip red">$AEIS</span><span class="chip red">$AMSC</span><span class="chip red">$ATKR</span><span class="chip red">$AZZ</span><span class="chip red">$CLF</span><span class="chip red">$HPS.A</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$PLPC</span><span class="chip red">$POWL</span><span class="chip red">$SPXC</span><span class="chip red">$VICR</span><span class="chip red">$VMI</span><span class="chip red">$VSH</span></span>
+        </div>
+        <div class="tweet-text">Just a shower thought... it’s extremely patriotic and positive sum to be investing in American National Security and supply chains like $AMSC or $NVTS. 
+
+For the longest time hedge funds shorted domestic American sectors like energy + Solar to the point of bankruptcy... 
+
+By betting with China on their state subsidies....</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a shower thought... it’s extremely patriotic and positive sum to be investing in American National Security and supply chains like $AMSC or $NVTS. 
+
+For the longest time hedge funds shorted domestic American sectors like energy + Solar to the point of bankruptcy... 
+
+By betting with China on their state subsidies. 
+
+and many years later, as a result: we have little excess energy capacity needed for AI compared to China. 
+
+By investing alongside the White House and $NVDA to securing US supply chains with up and coming American companies…
+
+Stocka goes brrr? US companies go brrr? And America goes brrr?
+
+(Disclosure: I’m American, and heavily biased toward US)</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047086440757309492" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是一个想法……投资美国国家安全和供应链（如 $AMSC 或 $NVTS）是非常爱国和积极的。长期以来，对冲基金做空能源+太阳能等美国国内行业，直至破产…… 
+
+通过押注中国的国家补贴。多年后的结果是：与中国相比，我们人工智能所需的能源产能几乎没有过剩。通过与白宫和 NVDA 一起投资，确保与新兴美国公司合作的美国供应链……
+
+Stocka 去 brrr 吗？美国公司走向何方？美国会变得更好吗？（披露：我是美国人，并且对美国有严重偏见）</div>
+        <div class="tweet-foot">
+          <span>likes 1259 / retweets 75 / replies 98 / views 321883</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-04-23 03:25</span>
+          <span><span class="chip red">$HPS.A</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">It&#x27;s like giving grants to Korea Zinc to build refineries in the US or $TSM to build foundries in the US.
+
+$HPS.A is largest dry transformers -&gt; switchgear in north america, and they have critical production facilities in US too like Wisconsin/California. 
+
+I think it&#x27;s basically &quot;Anything but China&quot;</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It&#x27;s like giving grants to Korea Zinc to build refineries in the US or $TSM to build foundries in the US.
+
+$HPS.A is largest dry transformers -&gt; switchgear in north america, and they have critical production facilities in US too like Wisconsin/California. 
+
+I think it&#x27;s basically &quot;Anything but China&quot;</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047033986481037769" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>这就像向韩国锌业公司提供赠款以在美国建造炼油厂或向 $TSM 提供赠款以在美国建造铸造厂。$HPS.A 是北美最大的干式变压器 -&gt; 开关设备，他们在美国威斯康星州/加利福尼亚州也拥有重要的生产设施。我认为这基本上是“除了中国以外的任何地方”</div>
+        <div class="tweet-foot">
+          <span>likes 60 / retweets 2 / replies 5 / views 12252</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-04-23 03:16</span>
+          <span><span class="chip red">$HPS.A</span></span>
+        </div>
+        <div class="tweet-text">@mi20483980476 Yes I like $HPS.A and did an individual thesis post on them awhile back for transformers. 
+
+It&#x27;s up 49.4% so far? 
+
+These names are slower compounders compared to pure play AI ones... But critical to national security.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@mi20483980476 Yes I like $HPS.A and did an individual thesis post on them awhile back for transformers. 
+
+It&#x27;s up 49.4% so far? 
+
+These names are slower compounders compared to pure play AI ones... But critical to national security.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047031793489256489" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@mi20483980476 是的，我喜欢 $HPS.A，并且不久前为《变形金刚》写了一篇关于它们的个人论文。到目前为止已经上涨了49.4%？与纯粹的人工智能名称相比，这些名称的合成速度较慢……但对国家安全至关重要。</div>
+        <div class="tweet-foot">
+          <span>likes 58 / retweets 1 / replies 4 / views 9590</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-04-23 03:12</span>
+          <span><span class="chip red">$AEIS</span><span class="chip red">$AMSC</span><span class="chip red">$ASMC</span><span class="chip red">$ATKR</span><span class="chip red">$AZZ</span><span class="chip red">$CLF</span><span class="chip red">$HPS.A</span><span class="chip red">$PLPC</span><span class="chip red">$POWL</span><span class="chip red">$SPXC</span><span class="chip red">$VICR</span><span class="chip red">$VMI</span><span class="chip red">$VSH</span></span>
+        </div>
+        <div class="tweet-text">Yes. The President invoked the &quot;Defense Production Act&quot; 2 days ago.
+
+To expand on domestic infra.
+ 
+Implicit beneficiaries were:
+
+Transmission &amp; Advanced Conductors:
+$AMSC - HTS Wires (advanced conductors), power electronics
+$PLPC - advanced conductors 
+$ATKR - transmission components
+$VMI - grid components
+
+Power Elec...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yes. The President invoked the &quot;Defense Production Act&quot; 2 days ago.
+
+To expand on domestic infra.
+ 
+Implicit beneficiaries were:
+
+Transmission &amp; Advanced Conductors:
+$AMSC - HTS Wires (advanced conductors), power electronics
+$PLPC - advanced conductors 
+$ATKR - transmission components
+$VMI - grid components
+
+Power Electronics
+$AEIS - power control electronics
+$VICR - power delivery
+
+Capacitor Banks
+$VSH - power capacitors and capacitor banks
+
+Substations &amp; High-Voltage Circuit Breakers
+$POWL - substations/switchgear
+$AZZ - substations
+
+Transformers
+$HPS.A - My favorite for transformers
+$SPXC - power transformers
+
+Electrical Core Steel
+$CLF - Only producer of electrical steel in America?
+
+This included: 
+-Transformers
+- transmission components
+- advanced conductors
+- power electronics
+- substations
+- high-voltage circuit breakers
+-  protective relays, capacitor banks
+- electrical core steel
+
+TLDR: The executive action declared a national energy emergency regarding the domestic supply chain for grid infrastructure. Authorized federal funding, purchase commitments, and expedited actions to rapidly expand the manufacturing. 
+
+Lot of beneficiaries, I made a mini ETF of with $AMSC, $CLF, $PLPC, and then $HPS.A; dont have any of the others. 
+
+There&#x27;s probably going to be a bunch of DOE contracts in the next 3-6 months like &quot; DoE Awards ___ to $POWL &quot; off this act is my guess.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047030798554132901" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>是的。总统两天前援引了《国防生产法》。扩大国内基础设施。隐性受益人是：
+
+传输和先进导体：
+$AMSC - HTS 电线（高级导体）、电力电子器件
+$PLPC - 高级指挥 
+$ATKR - 传动部件
+$VMI - 网格组件
+
+电力电子
+$AEIS - 功率控制电子器件
+$VICR - 电力输送
+
+电容器组
+$VSH - 电力电容器和电容器组
+
+变电站和高压断路器
+$POWL - 变电站/开关设备
+$AZZ - 变电站
+
+变形金刚
+$HPS.A - 我最喜欢的变形金刚
+$SPXC - 电源变压器
+
+电工芯钢
+$CLF - 美国唯一的电工钢生产商？这包括： 
+-变形金刚
+- 传动部件
+- 高级指挥家
+- 电力电子
+- 变电站
+- 高压断路器
+- 保护继电器、电容器组
+- 电工芯钢
+
+TLDR：行政行动宣布国内电网基础设施供应链进入国家能源紧急状态。授权联邦资金、采购承诺并加快行动以迅速扩大制造业。很多受益者，我用 $AMSC、$CLF、$PLPC 和 $HPS.A 制作了一个迷你 ETF；没有其他任何一个。我猜测，在接下来的 3-6 个月内，能源部可能会签订一堆合同，例如“能源部将 ___ 授予 $POWL”。</div>
+        <div class="tweet-foot">
+          <span>likes 1653 / retweets 211 / replies 88 / views 917854</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-04-21 11:41</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">LOL what did i say about transformer bottlenecks and upstream supply chains like $HPS.A ???
+
+New Presidential Action Today: 
+
+&quot;The Nation’s capacity to design, produce, and deploy large-scale grid infrastructure, including TRANSFORMERS ... is dangerously limited&quot;
+
+&quot;National emergency under Executive Order 14156 to expa...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">LOL what did i say about transformer bottlenecks and upstream supply chains like $HPS.A ???
+
+New Presidential Action Today: 
+
+&quot;The Nation’s capacity to design, produce, and deploy large-scale grid infrastructure, including TRANSFORMERS ... is dangerously limited&quot;
+
+&quot;National emergency under Executive Order 14156 to expand the domestic capability to develop, manufacture, and deploy grid infrastructure&quot;
+
+It&#x27;s now a US National Emergency to develop supply chains and pour money into the sector for expansion.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046434201428492317" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>哈哈，我对变压器瓶颈和上游供应链（如 $HPS.A）说了什么？？？今天的新总统行动： 
+
+“国家设计、生产和部署大型电网基础设施（包括变形金刚）的能力……非常有限”
+
+“根据第 14156 号行政命令发布国家紧急状态，以扩大国内开发、制造和部署电网基础设施的能力”
+
+美国现在已进入国家紧急状态，要求发展供应链并向该行业注入资金进行扩张。</div>
+        <div class="tweet-foot">
+          <span>likes 644 / retweets 42 / replies 54 / views 170468</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2026-04-21 02:01</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">Boring names like $HPS.A end up cooking hardest?
+
+I said this looked like a steady compounder back at $186 and it’s already at $241 in 2 weeks.
+
+I think transformers/switchgear bottlenecks are underappreciated in markets. https://t.co/XkI6kHdExh</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Boring names like $HPS.A end up cooking hardest?
+
+I said this looked like a steady compounder back at $186 and it’s already at $241 in 2 weeks.
+
+I think transformers/switchgear bottlenecks are underappreciated in markets. https://t.co/XkI6kHdExh</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046288211136442856" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>像 $HPS.A 这样无聊的名字最终会变得最难做饭吗？我说这看起来像是一个稳定的复利，回到 186 美元，两周后已经达到 241 美元。我认为变压器/开关设备的瓶颈在市场上未被充分认识。https://t.co/XkI6kHdExh</div>
+        <div class="tweet-foot">
+          <span>likes 405 / retweets 26 / replies 48 / views 100240</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2026-04-20 09:47</span>
+          <span><span class="chip red">$ALRIB</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MTSI</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;m telling you all...
+
+Lot of stuff in the $SIVE supply chains make very compelling longs.
+
+Win Semi (3105) just goes up 10% a day then halts trading after hitting its max.
+
+Obviously they do things for $AVGO or SpaceX, but photonics ramp spearheaded by $NVDA and followed by $GOOGL, $AMZN, $MSFT
+
+Would make photonics ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;m telling you all...
+
+Lot of stuff in the $SIVE supply chains make very compelling longs.
+
+Win Semi (3105) just goes up 10% a day then halts trading after hitting its max.
+
+Obviously they do things for $AVGO or SpaceX, but photonics ramp spearheaded by $NVDA and followed by $GOOGL, $AMZN, $MSFT
+
+Would make photonics a massive growth vector for Win.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046043070538633618" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我告诉你们一切...
+
+$SIVE 供应链中的很多东西都非常引人注目。胜半(3105)每天只上涨10%，然后在触及最高点后停止交易。显然他们是为 $AVGO 或 SpaceX 做事，但光子学的发展是由 $NVDA 领头的，其次是 $GOOGL、$AMZN、$MSFT
+
+将使光子学成为 Win 的巨大增长载体。</div>
+        <div class="tweet-foot">
+          <span>likes 800 / retweets 44 / replies 59 / views 206792</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2026-04-20 07:11</span>
+          <span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MTSI</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Frontrunning 1.6T/CPO within the broader photonics supercycle is the most compelling investment to me. 
+
+I have high conviction in that statement.
+
+Which is why I&#x27;m long the entire supply chain (+1 extra bottlenecK)
+
+1. $SIVE - Their laser revenue scales aggressively with $JBL, $MRVL, Ayar, O-Net.
+
+And I do think CPO/1...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Frontrunning 1.6T/CPO within the broader photonics supercycle is the most compelling investment to me. 
+
+I have high conviction in that statement.
+
+Which is why I&#x27;m long the entire supply chain (+1 extra bottlenecK)
+
+1. $SIVE - Their laser revenue scales aggressively with $JBL, $MRVL, Ayar, O-Net.
+
+And I do think CPO/1.6T will blow away any conservative analyst projections from how hard $NVDA, $GOOGL, and others have been pushing photonics architectures.
+
+Downside risk is multi-sourcing, but there&#x27;s a reason Jabil chose Sivers. When you compare $MTSI, $LITE, $COHR, Furukawa, and others.
+
+There&#x27;s genuinely not many laser suppliers in the entire world... they&#x27;re all $10B+, then you have this mini CHIPS act chokepoint trading at &lt;$1B MC.
+
+2. Shunsin (6451) - I don&#x27;t see how it&#x27;s possible Foxconn&#x27;s optical foundry for testing, packaging, and assembly is valued at $1.5B MC less than $LWLG. 
+
+When they look extremely derisked piggybacking off of Foxconn&#x27;s photonics volume.
+
+$TSM&#x27;s optical arm VisEra example is ~$5B, but they scale H2 2028 from Gen-3. Foxconn looks to be ramping up just next year.
+
+They&#x27;re just scaling low fwd p/e multiples off of $NVDA CPO supply chain demand in Taiwan and all public indicators point to capacity expansion + extreme demand. 
+ 
+3. Win Semi - They&#x27;re the foundry for Sivers to scale up DFB laser production. As well as $AVGO, SpaceX supply chains and others.
+
+When I do supply chain mapping and Win Semi pops up in every single frontier supply chain I see. 
+
+There&#x27;s probably something markets are not pricing in.
+
+4. $MRVL - I find this genuinely compelling as a mini-Broadcomm. 
+
+Their potential design with with $GOOGL today, helps the case past 2028.
+
+But the catalyst I was looking at was $MSFT Maia ramp, which happens H2 2026, and likely keep scaling up exponentially into 2027, 2028, 2029. 
+
+Celestial acquisition was probably the smartest thing in the world for them. Maybe on next drop or CSP? 
+
+5. $HPS.A - Transformers/Switchgears are commodities  + boring parts of the DC supply chain.
+
+However, when the bottleneck is 2-5 years, and you have backlog increasing 100%+... causing extreme shortages.
+
+It&#x27;s only up 20%+ since my thesis post, but I do see this being de-risked given massive backlog visibility (even though it&#x27;s inferred, they don&#x27;t give exact #). 
+
+I do think markets are missing something, especially with potential gross margin expansion from price hikes if they pull it off.... 
+
+Again backlog + demand just de-risks this company,  and it seems like a high growth compounder post facility expansion last year. 
+
+There&#x27;s many others like $NBIS, $JBL, $RPI, $TSEM, $LITE, $ARM, $SOI, $AXTI,  $IQE, $ALRIB, Fittech, PCL, and others that I&#x27;m very fond of, but just mentioning 5 off the top of my head from today&#x27;s prices... if I&#x27;m creating a new portfolio. 
+
+Of course, it&#x27;s good to barbell with other uncorrelated companies to AI supply chains, but these are just 5 I liked.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046003874553901188" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>对我来说，在更广泛的光子学超级周期中领先的 1.6T/CPO 是最有吸引力的投资。我对这句话深信不疑。这就是为什么我看好整个供应链（+1个额外瓶颈）
+
+1. $SIVE - 他们的激光收入与 $JBL、$MRVL、Ayar、O-Net 一起大幅增长。我确实认为 CPO/1.6T 将推翻任何保守的分析师对 $NVDA、$GOOGL 和其他公司推动光子架构的努力的预测。下行风险是多源采购，但捷普选择 Sivers 是有原因的。当您比较 $MTSI、$LITE、$COHR、Furukawa 等时。全世界确实没有多少激光供应商...他们的价格都是 $10B+，那么你就可以在 &lt;$1B MC 上进行这个迷你 CHIPS 行为的阻塞点交易。2. Shunsin (6451) - 我不明白富士康用于测试、封装和组装的光学代工厂的价值怎么可能是 $1.5B MC 低于 $LWLG。当他们看起来非常危险地利用富士康的光子学业务时。$TSM 的光学臂 VisEra 示例约为 $5B，但他们从 Gen-3 扩展到 2028 年下半年。富士康预计明年就会加速发展。他们只是缩小了台湾 NVDA 毛棕榈油供应链需求的低预期市盈率，所有公开指标都表明产能扩张+极端需求。3. Win Semi - 他们是 Sivers 的代工厂，旨在扩大 DFB 激光器的生产规模。还有 $AVGO、SpaceX 供应链等。当我绘制供应链图时，Win Semi 会出现在我看到的每一个前沿供应链中。可能有些东西市场没有定价。4. $MRVL - 我发现这作为迷你博通确实引人注目。他们今天与 $GOOGL 的潜在设计有助于 2028 年过去。但我所关注的催化剂是 $MSFT Maia 的增长，该增长将在 2026 年下半年发生，并且可能会在 2027 年、2028 年、2029 年继续呈指数级增长。对他们来说，天赐收购可能是世界上最明智的事情。也许在下一滴或 CSP 上？5. $HPS.A - 变压器/开关设备是直流供应链的商品+无聊的部分。然而，当瓶颈是 2-5 年时，积压订单增加 100% 以上……导致极度短缺。自从我发表论文以来，它只上涨了 20% 以上，但我确实看到，考虑到大量积压的可见性，这种情况已经降低了风险（即使是推断出来的，他们也没有给出确切的#）。我确实认为市场遗漏了一些东西，特别是如果他们成功的话，价格上涨可能会导致毛利率扩大...... 
+
+同样，积压+需求只是降低了这家公司的风险，去年工厂扩建后，它似乎是一家高增长的复合企业。还有很多其他的，比如 $NBIS、$JBL、$RPI、$TSEM、$LITE、$ARM、$SOI、$AXTI、$IQE、$ALRIB、Fittech、PCL 以及其他我非常喜欢的股票，但只是从今天的价格中想到的 5 个...如果我正在创建一个新的投资组合。当然，与其他不相关的公司对人工智能供应链进行杠铃是件好事，但这只是我喜欢的 5 家。</div>
+        <div class="tweet-foot">
+          <span>likes 1412 / retweets 121 / replies 63 / views 518639</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">认证周期 vs TTM 营收</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2026-04-19 02:34</span>
+          <span><span class="chip red">$HPS.A</span></span>
+        </div>
+        <div class="tweet-text">@larmatrade @aiizisw77940 yeah $HPS.A typo, i talk a lot on X mb</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@larmatrade @aiizisw77940 yeah $HPS.A typo, i talk a lot on X mb</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2045571676126192037" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@larmatrade @aiizisw77940 是的 $HPS. 拼写错误，我在 X mb 上说了很多</div>
+        <div class="tweet-foot">
+          <span>likes 37 / retweets 0 / replies 1 / views 6946</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2026-04-18 00:48</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMZN</span><span class="chip red">$AXTI</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">$HPS.A is up 21% since my thesis 2 weeks ago.
+
+Unfortunately, not everything can go up 100% every 2 weeks like $AXTI?
+
+If the transformers bottleneck is that extreme for multiple years…
+
+Sometimes it’s better to wait for markets to price that in. 
+
+$AEHR or $AAOI triple digit rallies in few week timeframes probably set...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$HPS.A is up 21% since my thesis 2 weeks ago.
+
+Unfortunately, not everything can go up 100% every 2 weeks like $AXTI?
+
+If the transformers bottleneck is that extreme for multiple years…
+
+Sometimes it’s better to wait for markets to price that in. 
+
+$AEHR or $AAOI triple digit rallies in few week timeframes probably set unrealistic expectations…
+
+Even 10% return yearly is usually good in markets? 
+
+This has been 21% so far and I have comments asking if this is still good, but I’m hoping it’s another triple digit return in due time.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2045182633647456355" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>自两周前我的论文以来，$HPS.A 上涨了 21%。不幸的是，并不是所有东西都能像$AXTI那样每两周上涨100%？如果变形金刚的瓶颈多年来一直如此极端……
+
+有时最好等待市场定价。$AEHR 或 $AAOI 在几周内上涨三位数可能会设定不切实际的期望......
+
+在市场上，即使是 10% 的年回报率通常也不错吗？到目前为止，这一数字已达到 21%，我有评论询问这是否仍然不错，但我希望在适当的时候，它能再次实现三位数的回报。</div>
+        <div class="tweet-foot">
+          <span>likes 434 / retweets 18 / replies 49 / views 127452</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2026-04-18 00:37</span>
+          <span><span class="chip red">$HPS.A</span></span>
+        </div>
+        <div class="tweet-text">@cryptochelss Nothings changed? It’s up like 21% in 2 weeks…
+
+Just gotta be patient sometimes, I expect $HPS.A to double down the road eventually.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@cryptochelss Nothings changed? It’s up like 21% in 2 weeks…
+
+Just gotta be patient sometimes, I expect $HPS.A to double down the road eventually.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2045179755113398358" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@cryptochels 没有改变吗？两周内上涨了 21%……
+
+有时需要保持耐心，我预计 $HPS.A 最终会翻倍。</div>
+        <div class="tweet-foot">
+          <span>likes 28 / retweets 0 / replies 1 / views 4294</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2026-04-16 16:50</span>
+          <span><span class="chip red">$HPS.A</span></span>
+        </div>
+        <div class="tweet-text">It&#x27;s been a solid... 1 week for $HPS.A, please don&#x27;t ask me if I&#x27;m still bullish if nothings changed. 
+
+It&#x27;s still up 18.4% or so, things don&#x27;t move up in a straight line. 
+
+But that aside, probably better to develop your own conviction on it, so you can decide that answer for yourself.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It&#x27;s been a solid... 1 week for $HPS.A, please don&#x27;t ask me if I&#x27;m still bullish if nothings changed. 
+
+It&#x27;s still up 18.4% or so, things don&#x27;t move up in a straight line. 
+
+But that aside, probably better to develop your own conviction on it, so you can decide that answer for yourself.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2044700039944245471" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>对于 $HPS.A 来说，这已经是坚实的... 1 周了，如果没有任何变化，请不要问我是否仍然看涨。它仍然上涨了 18.4% 左右，事情并没有直线上升。但除此之外，可能更好地发展你自己的信念，这样你就可以自己决定答案。</div>
+        <div class="tweet-foot">
+          <span>likes 90 / retweets 0 / replies 2 / views 10358</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="26">
+        <div class="tweet-head">
+          <span class="mono">2026-04-14 00:53</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AXTI</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$NBIS</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">They’re still there.
+
+It’s just hard to say anything….
+
+When all my recent thesis posts from $HPS.A, $IQE, $AXTI, $SIVE, $AAOI, $LITE, $NBIS, Win, Shunsin, $AEHR, $TSEM, $SOI, and many many others I call out. 
+
+Just hard outperforms the market.
+
+Year to date of +1,116.29% isn’t too bad, right chat?</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">They’re still there.
+
+It’s just hard to say anything….
+
+When all my recent thesis posts from $HPS.A, $IQE, $AXTI, $SIVE, $AAOI, $LITE, $NBIS, Win, Shunsin, $AEHR, $TSEM, $SOI, and many many others I call out. 
+
+Just hard outperforms the market.
+
+Year to date of +1,116.29% isn’t too bad, right chat?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2043734433405243696" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>他们还在那里。实在是很难说什么……
+
+当我最近发表的所有论文来自 $HPS.A、$IQE、$AXTI、$SIVE、$AAOI、$LITE、$NBIS、Win、Shunsin、$AEHR、$TSEM、$SOI 和许多其他人时，我大声疾呼。只是很难跑赢市场。今年迄今为止 +1,116.29% 还不错，对吧？</div>
+        <div class="tweet-foot">
+          <span>likes 3011 / retweets 109 / replies 177 / views 1555891</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="27">
+        <div class="tweet-head">
+          <span class="mono">2026-04-13 22:50</span>
+          <span><span class="chip red">$HPS.A</span></span>
+        </div>
+        <div class="tweet-text">@Leoon471 I used to watch Transformers and Megan Fox when I was little.
+
+So it’s the culmination of diverse life experiences that led me to have more conviction in transformers longs like $HPS.A</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Leoon471 I used to watch Transformers and Megan Fox when I was little.
+
+So it’s the culmination of diverse life experiences that led me to have more conviction in transformers longs like $HPS.A</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2043703498362221028" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Leoon471 我小时候经常看变形金刚和梅根福克斯。因此，正是多样化生活经历的积累，让我对像 $HPS.A 这样的变形金刚多头更有信心</div>
+        <div class="tweet-foot">
+          <span>likes 63 / retweets 0 / replies 0 / views 4283</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="28">
+        <div class="tweet-head">
+          <span class="mono">2026-04-13 22:43</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">Has Bumblebee or Optimus Prime ever let you down?
+
+$HPS.A already up ~30%+ since my transformers thesis a week ago. 
+
+I share all this for free to help retail outperform and frontrun institutions.
+
+Everything keeps going up… https://t.co/1JL7xXAVRB</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Has Bumblebee or Optimus Prime ever let you down?
+
+$HPS.A already up ~30%+ since my transformers thesis a week ago. 
+
+I share all this for free to help retail outperform and frontrun institutions.
+
+Everything keeps going up… https://t.co/1JL7xXAVRB</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2043701659621290047" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>大黄蜂或擎天柱曾经让你失望过吗？自从一周前我的变形金刚论文以来，$HPS.A 已经上涨了约 30%+。我免费分享这一切，以帮助零售业超越并领先于机构。一切都在持续上升...... https://t.co/1JL7xXAVRB</div>
+        <div class="tweet-foot">
+          <span>likes 635 / retweets 31 / replies 53 / views 134086</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="29">
+        <div class="tweet-head">
+          <span class="mono">2026-04-10 04:53</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$ORCL</span><span class="chip red">$POWL</span></span>
+        </div>
+        <div class="tweet-text">Unfortunately, not all my names go up triple digits in a week.
+
+$HPS.A is only up ~17% so far.
+
+Hammond was my pick for the transformers/switchgear DC bottleneck since it had a lower MC but high dry transformer market share.
+
+$POWL was another good switchgear long that I came across often; I ended up passing but just t...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Unfortunately, not all my names go up triple digits in a week.
+
+$HPS.A is only up ~17% so far.
+
+Hammond was my pick for the transformers/switchgear DC bottleneck since it had a lower MC but high dry transformer market share.
+
+$POWL was another good switchgear long that I came across often; I ended up passing but just throwing that out there. 
+
+Transformers/Switchgear are probably under-appreciated as a bottleneck but many types are sold out for the next 2-5 years. 
+
+Because of this, they’re causing widespread DC delays and should be a good structural long from backlog visibility + extreme demand.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2042345236354265271" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>不幸的是，并不是我所有的名字都在一周内上升到三位数。$HPS.A 到目前为止仅上涨了约 17%。Hammond 是我选择变压器/开关设备直流瓶颈的选择，因为它的 MC 较低，但干式变压器的市场份额较高。$POWL 是我经常遇到的另一个很好的开关设备；我最终通过了，但只是把它扔在那里。变压器/开关设备作为一个瓶颈可能没有得到充分重视，但许多类型在未来 2-5 年内都会售空。正因为如此，它们导致了广泛的 DC 延误，并且应该是一个很好的结构，远离积压可见性 + 极端需求。</div>
+        <div class="tweet-foot">
+          <span>likes 477 / retweets 27 / replies 44 / views 163105</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="30">
+        <div class="tweet-head">
+          <span class="mono">2026-04-08 11:16</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ARM</span><span class="chip red">$COHR</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$LASR</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">Most recent 5 thesis posts I&#x27;ve shared:
+
+1. $HPS.A ($1.77B) - Transformer/Switchgear DC bottleneck
+2. $ARM ($152B)- AI CPU ramp
+3. Win Semi ($5.7B) - Foundry for CW lasers and other supply chains from SpaceX to humanoids
+4. $SIVE ($295M) - CW Laser ramp for H2 2026 and 2027.
+5. $TSEM ($22B) - photonics foundry
+
+Apart f...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Most recent 5 thesis posts I&#x27;ve shared:
+
+1. $HPS.A ($1.77B) - Transformer/Switchgear DC bottleneck
+2. $ARM ($152B)- AI CPU ramp
+3. Win Semi ($5.7B) - Foundry for CW lasers and other supply chains from SpaceX to humanoids
+4. $SIVE ($295M) - CW Laser ramp for H2 2026 and 2027.
+5. $TSEM ($22B) - photonics foundry
+
+Apart from those, names I&#x27;ve positively mentioned like $MRVL, $AAOI, $RDDT, $NBIS, $RPI, $AEHR, $LITE, $COHR, SK Hynix, $LASR, $SOI, $IQE, and others might be decent additions.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2041716775663055142" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我最近分享的 5 篇论文帖子：
+
+1. $HPS.A ($1.77B) - 变压器/开关设备直流瓶颈
+2. $ARM ($152B)- AI CPU 提升
+3. Win Semi ($5.7B) - CW激光器和其他供应链（从SpaceX到人形机器人）的代工厂
+4. $SIVE（2.95 亿美元）- 2026 年下半年和 2027 年 CW 激光斜坡。5. $TSEM ($22B) - 光子代工厂
+
+除此之外，我积极提到的名称，如 $MRVL、$AAOI、$RDDT、$NBIS、$RPI、$AEHR、$LITE、$COHR、SK Hynix、$LASR、$SOI、$IQE 等可能都是不错的补充。</div>
+        <div class="tweet-foot">
+          <span>likes 201 / retweets 12 / replies 7 / views 27258</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="31">
+        <div class="tweet-head">
+          <span class="mono">2026-04-07 22:13</span>
+          <span><span class="chip red">$HPS.A</span><span class="chip red">$LITE</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">The nice thing about multi-year bottlenecks from:
+
+$HPS.A to $SNDK to $LITE 
+
+Is that you can sleep a easier despite market volatility like today.  
+
+Knowing demand will be extreme even 1 year...
+
+Even if Trump wants to nuke Bikini Bottom and other companies might be more impacted:
+
+-&gt; One has a huge market share over ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The nice thing about multi-year bottlenecks from:
+
+$HPS.A to $SNDK to $LITE 
+
+Is that you can sleep a easier despite market volatility like today.  
+
+Knowing demand will be extreme even 1 year...
+
+Even if Trump wants to nuke Bikini Bottom and other companies might be more impacted:
+
+-&gt; One has a huge market share over Transformers
+-&gt; One has huge market share over NAND
+-&gt; One has huge market share over EML/OCS.
+
+And the one thing in common is that they&#x27;re all likely backlogged on orders into 2028. 
+
+Signaling near-guaranteed fundamental revenue and likely margin expansion into the next year. 
+
+It&#x27;s H1 2026 now.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2041519692985344500" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>多年瓶颈的好处在于：
+
+$HPS.A 至 $SNDK 至 $LITE 
+
+尽管像今天这样的市场波动，您仍然可以睡得更轻松。知道即使一年后需求也会非常大......
+
+即使特朗普想用核武器攻击比基尼泳裤，其他公司可能会受到更大的影响：
+
+-&gt; 比变形金刚拥有巨大的市场份额
+-&gt; 拥有比 NAND 更大的市场份额
+-&gt; 与 EML/OCS 相比，拥有巨大的市场份额。一个共同点是，他们的订单都可能积压到 2028 年。预示着明年的基本收入接近保证，利润率可能会扩大。现在是 2026 年上半年。</div>
+        <div class="tweet-foot">
+          <span>likes 412 / retweets 22 / replies 37 / views 480229</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=HPS.A">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2722 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$XLU 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$XLU 历史推文</h1>
+      <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b>54</b></div>
+        <div class="stat-card"><span>历史推文</span><b>54</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-02-19</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-06-19</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用） 19</span><span class="chip blue">关税 / 宏观冲击买点 17</span><span class="chip blue">瓶颈狩猎（核心透镜） 10</span><span class="chip blue">信念分层、仓位与时点 9</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 6</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-06-19 20:19</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$HPS.A</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNAP</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TTD</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">I think something to highlight also is not all my ideas are green, especially on short term timeframes!
+
+My core three themes are Neoclouds (Energy), Memory, and Photonics. 
+
+And I&#x27;m glad I chose the literal top performers for each segment from $NBIS to $EWY leaps to $SIVE. 
+
+However, I still have pretty large losses f...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I think something to highlight also is not all my ideas are green, especially on short term timeframes!
+
+My core three themes are Neoclouds (Energy), Memory, and Photonics. 
+
+And I&#x27;m glad I chose the literal top performers for each segment from $NBIS to $EWY leaps to $SIVE. 
+
+However, I still have pretty large losses following the false analyst report on CPO delays that $NVDA refuted:
+
+That nuked 3 of my TW CPO longs from Foci, Msscorp, Xintec and others. (which are heavily red). Shunsin / Win Semi are holding up much better though. 
+
+Some of the other ones in Japan that I&#x27;ve mentioned like Towa, Harmonic Drive, NCI, etc. are performing much better following short-term volatility. 
+
+As for Korea yes I have PTSD for from Auros and now Foosung that are both both red (I didn&#x27;t own 093370 though, just got PTSD watching price action). 
+
+Idk if I&#x27;ll touch Korea again, just way too volatile. But I still think those will end up green eventually following Sk hynix/samsung qualifications + HVM, and the future japanese supply chain shutdown. 
+
+I also did change some of my previous long ideas like $XLU following the Iran War nuking all chances of rate cuts from 3-4 down to 0, and that didn&#x27;t play out too well. Three software names I mentioned previously like $TTD, $META ended up red. $SNAP, I also changed my thesis after noticing the endless SBC accounting methods. $RDDT idea was finally in the green from $130 -&gt; $170 after a long time. 
+
+But I think the vast majority of my ideas like $MRVL, $NBIS, $ARM, $INTC, $MU, $LITE, SK Hynix, Samsung, for larger cap. 
+
+Down to $AXTI, $LITE, $AAOI, $RPI, $IQE, and others for smaller cap positions directionally play out pretty well. 
+
+With random stuff like $SIMO, $HPS.A, $TSEM, $AEHR, $LPK, $SOI, $ALRIB, and so on all ended up turning out aight too. 
+
+The blended average is kinda overwhelmingly green since majority of my long ideas are triple digit YTD.  
+
+But I&#x27;ve definitely missed a few. 
+
+Also entry point is really important too... I mentioned $AAOI at $30 or $AXTI at ~$13, but not everyone has the same entry point. So if someone bought AOI at $220 and it dropped to $160, I&#x27;d feel bad. 
+
+But regardless, I&#x27;d prefer to judge how ideas play out on medium term timeframes over a few months rather than a few weeks.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2067945397923037693" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我认为需要强调的是，并非我所有的想法都是绿色的，尤其是在短期时间范围内！我的三个核心主题是 AI 算力云公司（能源）、Memory 和 Photonics。我很高兴我为从 $NBIS 到 $EWY 到 $SIVE 的每个细分市场选择了真正的最佳表现者。然而，在 $NVDA 驳斥了有关 CPO 延误的虚假分析师报告后，我仍然遭受了相当大的损失：
+
+这摧毁了我从 Foci、Msscorp、Xintec 等公司购买的 3 个 TW CPO 多头头寸。（呈深红色）。Shusin / Win Semi 的表现要好得多。我提到的日本其他一些公司，如 Towa、Harmonic Drive、NCI 等，在经历短期波动后表现要好得多。至于韩国，是的，我有来自 Auros 的 PTSD，现在 Foosung 都是红色的（虽然我没有 093370，只是在观察价格走势时有 PTSD）。我不知道我是否会再次接触韩国，因为太不稳定了。但我仍然认为，在 Sk hynix/三星资质 + HVM 以及未来日本供应链关闭之后，这些最终将成为绿色。我也确实改变了我之前的一些长期想法，例如伊朗战争后的 $XLU，将所有降息机会从 3-4 降至 0，但效果不太好。我之前提到的三个软件名称如 $TTD、$META 最终变成了红色。$SNAP，在注意到无穷无尽的SBC会计方法后，我也改变了我的论文。经过很长一段时间后，$RDDT 的想法终于从 130 美元变为 170 美元。但我认为我的绝大多数想法都是为了更大的上限，比如$MRVL、$NBIS、$ARM、$INTC、$MU、$LITE、SK Hynix、三星。降至 $AXTI、$LITE、$AAOI、$RPI、$IQE 和其他较小盘头寸的方向表现相当不错。随机的东西，比如 $SIMO、$HPS.A、$TSEM、$AEHR、$LPK、$SOI、$ALRIB 等等，最终也都得到了正确的结果。混合平均值几乎是绿色的，因为我的大部分长期想法今年迄今都是三位数。但我确实错过了一些。另外，切入点也非常重要...我提到了 $AAOI 的价格为 30 美元，$AXTI 的价格约为 13 美元，但并非每个人都有相同的切入点。因此，如果有人以 220 美元的价格购买 AOI，然后它跌至 160 美元，我会感觉很糟糕。但无论如何，我更愿意判断想法在几个月而不是几周的中期时间框架内如何发挥作用。</div>
+        <div class="tweet-foot">
+          <span>likes 2324 / retweets 147 / replies 235 / views 724908</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-05-22 22:14</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@plaza404_ I made an update awhile back that Iran War caused a major issue with $XLU in terms increasing odds of no rate cuts.
+
+Large part of the utilities tailwind was multiple rate cuts this year, which is now priced at 0 likely.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@plaza404_ I made an update awhile back that Iran War caused a major issue with $XLU in terms increasing odds of no rate cuts.
+
+Large part of the utilities tailwind was multiple rate cuts this year, which is now priced at 0 likely.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057827518783406354" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@plaza404_ 我不久前做了更新，伊朗战争给 $XLU 带来了一个重大问题，即不降息的可能性增加。公用事业公司的一大推动因素是今年多次降息，目前降息的可能性为零。</div>
+        <div class="tweet-foot">
+          <span>likes 45 / retweets 1 / replies 4 / views 10889</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-05-22 22:09</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">People keep asking:
+
+Hey why do have new longs with Taiwan/EU stocks recently like $LPK or Foci?
+
+And not much with new US ones?
+
+It&#x27;s partly because the list of US stocks I&#x27;ve liked from $INTC to $NBIS hasn&#x27;t changed. 
+
+You can always just let the ones you like grow. https://t.co/ostZWjOAAm</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">People keep asking:
+
+Hey why do have new longs with Taiwan/EU stocks recently like $LPK or Foci?
+
+And not much with new US ones?
+
+It&#x27;s partly because the list of US stocks I&#x27;ve liked from $INTC to $NBIS hasn&#x27;t changed. 
+
+You can always just let the ones you like grow. https://t.co/ostZWjOAAm</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057826212257685733" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>人们不断地问：
+
+嘿，为什么最近有台湾/欧盟股票的新多头，例如$LPK或Foci？美国的新产品不多吗？部分原因是我喜欢的美国股票列表从 $INTC 到 $NBIS 没有改变。你总是可以让你喜欢的人成长。https://t.co/ostZWjOAAm</div>
+        <div class="tweet-foot">
+          <span>likes 1136 / retweets 66 / replies 134 / views 422462</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-04-28 01:36</span>
+          <span><span class="chip red">$MRVL</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">It&#x27;s clearly not. Laser and packaging are two materially different parts of optical supply chains. 
+
+I would be transparent if the thesis breaks like I did with $XLU and rate cuts.
+
+But I&#x27;m incredibly bullish on $SIVE since I still think $MRVL just buys directly from them for Celestial and vertically integrates the $PO...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It&#x27;s clearly not. Laser and packaging are two materially different parts of optical supply chains. 
+
+I would be transparent if the thesis breaks like I did with $XLU and rate cuts.
+
+But I&#x27;m incredibly bullish on $SIVE since I still think $MRVL just buys directly from them for Celestial and vertically integrates the $POET packaging process.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048818575633461542" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>显然不是。激光和包装是光学供应链中两个本质上不同的部分。如果论文像我在 $XLU 和降息方面所做的那样失败，我会保持透明。但我非常看好 $SIVE，因为我仍然认为 $MRVL 只是直接从他们那里为 Celestial 购买产品，并垂直整合 $POET 包装流程。</div>
+        <div class="tweet-foot">
+          <span>likes 75 / retweets 2 / replies 1 / views 5609</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 11:38</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Just putting out there...
+
+Would have been +15.02% in 2W equal-weighted return.
+
+On 30 different stocks... mostly medium-large cap. 
+
+1. $INTC +29.62%
+2. $MRVL +40.95%
+3. $TSM +4.72%
+4. $COHR +18.9%
+5. $RKLB +26.76%
+6. $DRAM +12.29%
+7. $AVGO +18.32%
+8. $AMZN +9.17%
+9. $ARM +36.6%
+10. $TSEM -1.25%
+11. $IBIT +7.68%
+12. $...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just putting out there...
+
+Would have been +15.02% in 2W equal-weighted return.
+
+On 30 different stocks... mostly medium-large cap. 
+
+1. $INTC +29.62%
+2. $MRVL +40.95%
+3. $TSM +4.72%
+4. $COHR +18.9%
+5. $RKLB +26.76%
+6. $DRAM +12.29%
+7. $AVGO +18.32%
+8. $AMZN +9.17%
+9. $ARM +36.6%
+10. $TSEM -1.25%
+11. $IBIT +7.68%
+12. $NBIS +15.22%
+13. $GOOGL +6.41%
+14. $AMKR +32.25%
+15. $HOOD +19.14%
+16. $CRCL +17.58%
+17. $META +4.9%
+18. $LITE -5.28%
+19. $LPTH +20.23%
+20. $FN +11.54%
+21. $JBL +15.45%
+22. $MP +17.48%
+23. $HIMS +42.53%
+24. $SMTC +18.83%
+25. $POWL +9.26%
+26. $VPG +17.44%
+27. $MOG.A -3.96%
+28. $MSFT +11.44%
+29. $CVX -1.47%
+30. $XLU -2.29%
+
+Obviously short timeframe, but I expect many of these to keep going up more. 
+
+And probably would have been higher if you time the drop on specific names, rather than going long all at once. 
+
+Not too shabby?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047520460884353096" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>刚放在那里...
+
+2W 等权回报率为 +15.02%。30 种不同的股票......大部分是中型大盘股。1.$INTC +29.62%
+2. MRVL 美元+40.95%
+3.$TSM +4.72%
+4. $COHR +18.9%
+5.$RKLB +26.76%
+6. DRAM美元+12.29%
+7.$AVGO +18.32%
+8.亚马逊+9.17%
+9. ARM +36.6%
+10. $TSEM -1.25%
+11. 息税前利润 +7.68%
+12.$NBIS +15.22%
+13.$GOOGL +6.41%
+14.$AMKR +32.25%
+15.$HOOD +19.14%
+16.$CRCL +17.58%
+17.$元+4.9%
+18.$LITE -5.28%
+19.$LPTH +20.23%
+20.$FN +11.54%
+21.$JBL +15.45%
+22.$MP +17.48%
+23. $HIMS +42.53%
+24.$SMTC +18.83%
+25.$POWL +9.26%
+26. $VPG +17.44%
+27.$MOG.A -3.96%
+28.$微软金融时报 +11.44%
+29. $CVX -1.47%
+30.$XLU -2.29%
+
+显然时间很短，但我预计其中许多会继续上升。如果你根据特定的名字来计算下跌的时间，而不是一次性做多，那么价格可能会更高。是不是太破烂了？</div>
+        <div class="tweet-foot">
+          <span>likes 1644 / retweets 101 / replies 66 / views 309386</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-04-20 04:40</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Wow, majority of these 30 stocks I’ve liked are up a lot in just two weeks (just a recap to new folks)
+
+By the way, my long term opinion doesn’t change on any of them from $MRVL, $AMD, $ARM and others.
+
+Short term entry points do though with names like $AAOI to $AEHR. And they make the difference between +10-20%. 
+
+I f...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Wow, majority of these 30 stocks I’ve liked are up a lot in just two weeks (just a recap to new folks)
+
+By the way, my long term opinion doesn’t change on any of them from $MRVL, $AMD, $ARM and others.
+
+Short term entry points do though with names like $AAOI to $AEHR. And they make the difference between +10-20%. 
+
+I focus a lot about the “undiscovered” ones like Riber or $SIVE or $RPI or $IQE in analysis when I make a new entry -&gt; wait for it to play out.
+
+But the same thesis around $LITE or $NBIS or $AXTI from last year is still the same. 
+
+And I don’t need to post that same thesis multiple times, since it’s not new anymore.
+
+But the reason they’re not new is because markets have validated the thesis and are repricing the stocks live because of them.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2045965735386820934" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>哇，我喜欢的这 30 只股票中的大多数在短短两周内就上涨了很多（只是对新手的回顾）
+
+顺便说一句，我对 $MRVL、$AMD、$ARM 等的长期看法都没有改变。短期切入点的名称是 $AAOI 到 $AEHR。他们的差异在+10-20%之间。当我创建新条目时，我会在分析中重点关注“未被发现”的内容，例如 Riber 或 $SIVE 或 $RPI 或 $IQE -&gt; 等待它发挥作用。但去年关于 $LITE 或 $NBIS 或 $AXTI 的相同论文仍然是相同的。我不需要多次发表同一篇论文，因为它不再是新的了。但它们之所以不新鲜，是因为市场已经验证了这一论点，并因此而对股票进行了重新定价。</div>
+        <div class="tweet-foot">
+          <span>likes 1500 / retweets 82 / replies 87 / views 318889</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-04-09 18:27</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$SIVE</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Here&#x27;s a bunch of random 30 US-available random stocks I like today and why:  
+
+1. $INTC - America&#x27;s hope for foundry, national security
+2. $MRVL - scales rev from future maia asics and add ons like cpo, they do everything lost count
+3. $TSM - backbone of semis/ai
+4. $COHR - They do everything vertically integrated + c...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Here&#x27;s a bunch of random 30 US-available random stocks I like today and why:  
+
+1. $INTC - America&#x27;s hope for foundry, national security
+2. $MRVL - scales rev from future maia asics and add ons like cpo, they do everything lost count
+3. $TSM - backbone of semis/ai
+4. $COHR - They do everything vertically integrated + captures optical cycle
+5. $RKLB - the final frontier of space will be around 5 years from now and 20 years from now. 
+6. $DRAM - memory exposure for samsung/sk hynix
+7. $AVGO - hyperscalers dont like nvidia gpu tax
+8. $AMZN - nobody can compete against the overnight shipping of toilet paper. robotics will lower opex over time
+9. $ARM - AGI CPUs scale revenue quite a bit over the next decade
+10. $TSEM - you&#x27;re going to need a foundry for light based stuff
+11. $IBIT - bitcoin, we all know by now
+12. $NBIS - i think it&#x27;s the next AWS. Also they do self-driving cars with uber, own scaling DB companies, data labeling. It&#x27;s almost like a mini Google. 
+13. $GOOGL - youtube is not going away, gemini is great. they&#x27;re vertically integrated with TPUs and fund buildout with operating income so i like it. 
+14. $AMKR - super facilities coming online in late 2027-2028. benefits from made in america
+15. $HOOD - i dont like short term, but long term i&#x27;m a fan of Robinhood since they captured retail + have more products like banking, etc that they&#x27;re scaling up. product innovation is wild.
+16. $CRCL - I happen to really like stablecoins and see them as the future for both payments/holding (depends on clarity act)
+17. $META - people aren&#x27;t going to stop using instagram or whatsapp, or others anytime soon. 
+18. $LITE - $GOOGL TPU exposure decently high part of BOM. As long as Google&#x27;s AI program keeps running I think $LITE will do well.
+19. $LPTH - Germanium and China export controls will always be an issue so US made engineered alternatives  will always be important
+20. $FN - Someone needs to assemble optical stuff
+21. $JBL - same as above, but added with ip from Intel&#x27;s SiPh acqusition so might end up like innolight?
+22. $MP - American rare earths program is extremely important, similar to $INTC national security risks
+23. $HIMS - Okay here me out they just acquired a ton of companies, and at $19 they have global DTC channel. short sellers really hate this company, but I think it&#x27;s actually promising as a contrarian long
+24. $SMTC - LRO/LPO transition
+25. $POWL - US alternative to hammond for switchgear DC type bottleneck
+26. $VPG - Humanoids will be a thing down the road maybe 2027-2028, this makes the sensors. 
+27. $MOG.A - Feels like i see them everywhere in robotics, to spacex supply chains
+28. $MSFT - At $375, one day we&#x27;ll look back and see this as a buying opportunity.
+29. $CVX - oil might crash after war but these oil companies are going to be extremely important, especially when Venezulea is a goldmine.
+30. $XLU - i think rate cuts might be back online, we need power/grid for AI so these names will always be improtant from $CEG to $NEE
+
+Just throwing out other thoughts aside from $AAOI and $AEHR.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2042187668931616964" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>以下是我今天喜欢的 30 只美国随机股票及其原因： 
+
+1. $INTC——美国对代工、国家安全的希望
+2. $MRVL - 从未来的 maia asics 和像 cpo 这样的附加组件中调整转速，他们做的一切都数不清了
+3. $TSM - semis/ai 的支柱
+4. $COHR - 他们做所有垂直整合+捕获光周期的事情
+5. $RKLB - 太空的最终边界将在 5 年后和 20 年后出现。6. $DRAM - 三星/SK海力士内存曝光
+7. $AVGO - 超大云厂商不喜欢 nvidia gpu 税
+8. $AMZN - 没有人可以与卫生纸的隔夜运输竞争。随着时间的推移，机器人技术将降低运营成本
+9. $ARM - AGI CPU 在未来十年内大幅增加收入
+10. $TSEM - 你将需要一家铸造厂来生产基于光的东西
+11. $IBIT - 比特币，我们现在都知道了
+12. $NBIS - 我认为它是下一个 AWS。他们还与 Uber 合作开发自动驾驶汽车、自己的扩展数据库公司、数据标签。它几乎就像一个迷你谷歌。13. $GOOGL - youtube 不会消失，Gemini 很棒。它们与 TPU 垂直整合，并通过运营收入进行基金建设，所以我喜欢它。14. $AMKR - 超级设施将于 2027 年末至 2028 年上线。美国制造的好处
+15. $HOOD - 我不喜欢短期，但从长远来看，我是 Robinhood 的粉丝，因为他们抓住了零售业+拥有更多产品，例如银行业等，并且正在扩大规模。产品创新是疯狂的。16. $CRCL - 我碰巧真的很喜欢稳定币，并将它们视为支付/持有的未来（取决于澄清法案）
+17. $META - 人们不会很快停止使用 Instagram 或 Whatsapp 或其他应用程序。18. $LITE - $GOOGL TPU 暴露在 BOM 中相当高的部分。只要谷歌的人工智能程序继续运行，我认为 $LITE 就会做得很好。19. $LPTH - 锗和中国的出口管制将始终是一个问题，因此美国制造的工程替代品将始终很重要
+20. $FN - 有人需要组装光学材料
+21. $JBL - 与上面相同，但添加了从英特尔收购的 SiPh 的 ip，所以最终可能会像旭创科技一样？22. $MP - 美国稀土计划极其重要，类似于$INTC国家安全风险
+23. $HIMS - 好吧，我在这里，他们刚刚收购了大量公司，并且以 19 美元的价格拥有全球 DTC 频道。卖空者真的很讨厌这家公司，但我认为作为逆向多头公司实际上很有前途
+24. $SMTC - LRO/LPO 过渡
+25. $POWL - 用于开关设备直流型瓶颈的美国 Hammond 替代品
+26. $VPG - 人形机器人可能会在 2027-2028 年出现，这使得传感器成为可能。27. $MOG.A - 感觉我在机器人领域、SpaceX 供应链中随处可见它们
+28. $MSFT - 价格为 375 美元，有一天我们回头看时会发现这是一个买入机会。29. $CVX - 战后石油可能会崩溃，但这些石油公司将变得极其重要，特别是当委内瑞拉是一座金矿时。30. $XLU - 我认为降息可能会重新上线，我们需要人工智能的电力/电网，所以这些名字从 $CEG 到 $NEE 永远都是重要的
+
+只是抛弃除了 $AAOI 和 $AEHR 之外的其他想法。</div>
+        <div class="tweet-foot">
+          <span>likes 6390 / retweets 781 / replies 192 / views 2663060</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-03-28 10:36</span>
+          <span><span class="chip red">$EWY</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">It’s currency devaluation after crude/energy spikes messing up the trade.
+
+The War in Iran also messed up my $XLU long since there’s no rate cuts being priced in anymore.
+
+Again too much uncertainty with Iran. Idk, you get a massive reversal with $EWY that you don’t with SK Hynix if Trump stops escalations.
+
+But at thi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It’s currency devaluation after crude/energy spikes messing up the trade.
+
+The War in Iran also messed up my $XLU long since there’s no rate cuts being priced in anymore.
+
+Again too much uncertainty with Iran. Idk, you get a massive reversal with $EWY that you don’t with SK Hynix if Trump stops escalations.
+
+But at this point it’s a coin flip on what the administration does.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2037720528312848446" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>这是原油/能源飙升扰乱贸易后货币贬值。伊朗战争也弄乱了我的 $XLU 很久，因为价格不再考虑降息。伊朗问题再次存在太多不确定性。我不知道，如果特朗普停止升级，你的 $EWY 会出现巨大的逆转，而 SK 海力士则不会。但在这一点上，政府的做法就完全不同了。</div>
+        <div class="tweet-foot">
+          <span>likes 31 / retweets 0 / replies 1 / views 7537</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-03-19 08:10</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AVAV</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$INFQ</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Year to Date return from Jan to March:
+
++564.36%. 
+
+I’m speed running last year’s 600%+ returns by finding undiscovered AI bottlenecks.
+
+And picking the winners.
+
+- 500%+ unrealized gains on $AXTI.
+
+- $AAOI 3x’d in 3M or $IQE 2x in 1M.
+
+- $LITE close to 100%+. 
+
+And I expect large capital rotation into silicon photonic...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Year to Date return from Jan to March:
+
++564.36%. 
+
+I’m speed running last year’s 600%+ returns by finding undiscovered AI bottlenecks.
+
+And picking the winners.
+
+- 500%+ unrealized gains on $AXTI.
+
+- $AAOI 3x’d in 3M or $IQE 2x in 1M.
+
+- $LITE close to 100%+. 
+
+And I expect large capital rotation into silicon photonics + CPO names:
+
+Like $SOI, $AEHR, or $SIVE this year. 
+
+(They’re up close to ~70-100%, but have a long way to go)
+
+Then, this is compounded by misc longs, such as $CRCL that increased 148% in 1 month. 
+
+$NBIS that close to doubled from $70 back to $120.
+
+$EWY IV trade is up 50-70% and names like $XLU are up 50%+.
+
+My biggest loser YTD is $RDDT since my cost average was $148.
+
+Some of the misc picks like $INFQ, $VPG, $AVAV, $LPTH are not doing as well. 
+
+But as I’ve mentioned aside from Reddit (which I had high concentration in), a lot of my other picks I’m not as familiar with, I have less concentration in:
+
+But all my higher conviction picks like $TSEM have been strongly compounded recently.
+
+And what matters is I get more things right than wrong, especially in my higher concentration names.
+
+Majority of my YTD returns are actually unrealized since I don’t exit my longs, unless there’s material changes: 
+
+But I did realize a lot of gains at the beginning of the year post Venezuela conflict, as I identified some winners like Gold Reserve that doubled in a day.
+
+Sadly I did sell some Asian names like Nittobo or Macronix that both went up 100-200%+ to rotate capital around the time of the Iran conflict… those ended up going a lot higher afterwards.
+
+I swing trade a lot of misc names like in fintech or write CSP on the side.
+
+Hence why I’m able to compound to 500%+.
+
+While individual names are only up 100-200% (just keep doubling + rotating).
+
+But if you want to ride the next trend:
+
+Most obvious one is Photonics Supercycle if you just look at $AAOI earnings call or $LITE Nvidia GTC call for next few years.
+
+And the current one is the Memory Supercycle if you just look at $SNDK returns. 
+
+And as you’ve seen after my original $AXTI thesis or now Soitec:
+
+These names keep going in a vertical line up, as everyone suddenly now realizes its importance to the next paradigm shift for AI.
+
+My strategy is identifying structural bottlenecks in the AI supply chains before the market discovers them.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034422243594530857" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>一月至三月的年初至今回报：
+
++564.36%。通过寻找未被发现的 AI 瓶颈，我正在加快去年 600% 以上的回报率。并选出获胜者。- $AXTI 未实现收益超过 500%。- 3M 中的 $AAOI 3x 或 1M 中的 $IQE 2x。- $LITE 接近 100%+。我预计大量资本将转向硅光子 + CPO 名称：
+
+就像今年的 $SOI、$AEHR 或 $SIVE。（他们已经接近 70-100%，但还有很长的路要走）
+
+然后，杂项多头的情况更加复杂，例如 $CRCL 在 1 个月内上涨了 148%。NBIS 几乎翻了一番，从 70 美元回到 120 美元。$EWY IV 交易上涨 50-70%，$XLU 等名称上涨 50% 以上。今年以来我最大的输家是 RDDT，因为我的平均成本是 148 美元。一些杂项选择，例如 $INFQ、$VPG、$AVAV、$LPTH 表现不佳。但正如我所提到的，除了 Reddit（我高度关注）之外，我不太熟悉的许多其他选择，我不太关注：
+
+但我所有更高信念的选择，比如 $TSEM，最近都变得更加复杂。重要的是我做对的事情多于做错的事情，尤其是在我的浓度较高的名字中。我的年初至今的大部分回报实际上都没有实现，因为我不会退出我的多头，除非有重大变化： 
+
+但在委内瑞拉冲突后的年初，我确实实现了很多收益，因为我发现了一些赢家，例如黄金储备，一天之内就翻了一番。遗憾的是，我确实卖掉了一些亚洲品牌，例如 Nittobo 或 Macronix，它们在伊朗冲突期间都上涨了 100-200% 以上，以进行资本轮换……之后这些品牌的价格最终上涨了很多。我经常交易很多杂项名称，例如金融科技领域的名称，或者在旁边写上 CSP。这就是为什么我能够复合到 500%+。而个人名字只上涨了100-200%（只要继续翻倍+轮换）。但如果你想顺应下一个趋势：
+
+如果你只看未来几年的 $AAOI 财报电话会议或 $LITE Nvidia GTC 电话会议，最明显的一个就是 Photonics Supercycle。如果你只看 $SNDK 的回报，当前的就是内存超级周期。正如您在我最初的 $AXTI 论文或现在的 Soitec 之后所看到的：
+
+这些名字一直垂直排列，因为现在每个人都突然意识到它对人工智能下一个范式转变的重要性。我的策略是在市场发现人工智能供应链中的结构性瓶颈之前识别它们。</div>
+        <div class="tweet-foot">
+          <span>likes 1793 / retweets 85 / replies 135 / views 143091</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-03-19 02:55</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@Darkhawk720 @_stockResearch Nothing&#x27;s changed with $XLU, it&#x27;s boring multi-year trade. So I&#x27;m personally just sitting on my positions.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Darkhawk720 @_stockResearch Nothing&#x27;s changed with $XLU, it&#x27;s boring multi-year trade. So I&#x27;m personally just sitting on my positions.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034342979507568672" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Darkhawk720 @_stockResearch $XLU 没有任何改变，这是无聊的多年交易。所以我个人只是坚持我的立场。</div>
+        <div class="tweet-foot">
+          <span>likes 20 / retweets 0 / replies 3 / views 2509</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-03-15 05:20</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMZN</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BE</span><span class="chip red">$COHR</span><span class="chip red">$COPX</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">I realized by the amount of bookmarks.
+
+I lowkey dropped a banger ETF?
+
+AI Displacement Equal Weighted YTD:
+
+$AXTI: +191.53%
+$AAOI: +144.47%
+$SNDK: +140.38%
+$SOI: +114.3%
+$LITE: +61.22%
+$AEHR: +60.97%
+$BE: +56.56%
+$VRT: +47.42%
+Samsung: +42.8%
+$TER: +37.99%
+$MU: +35.1%
+Sk Hynix: +34.42%
+$NBIS: +25.57%
+$COHR: +24.92%
+Me...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I realized by the amount of bookmarks.
+
+I lowkey dropped a banger ETF?
+
+AI Displacement Equal Weighted YTD:
+
+$AXTI: +191.53%
+$AAOI: +144.47%
+$SNDK: +140.38%
+$SOI: +114.3%
+$LITE: +61.22%
+$AEHR: +60.97%
+$BE: +56.56%
+$VRT: +47.42%
+Samsung: +42.8%
+$TER: +37.99%
+$MU: +35.1%
+Sk Hynix: +34.42%
+$NBIS: +25.57%
+$COHR: +24.92%
+Mediatek: +17.01%
+$INTC: +16.23%
+$ASML: +15.63%
+Advantest: +11.78%
+$TSM: +5.85%
+$COPX: +4.56%
+$TSEM: +2.44%
+$MRVL: -1.71%
+$NVDA: -4.55%
+$AVGO: -7.32%
+
+These are just the first names that came to my head. I own a lot of these personally (and don&#x27;t own others like $NVDA or $BE ) but included them anyway. 
+
+But honestly, I&#x27;d be happy to equal weight all these names if I weren&#x27;t actively managing my portfolio concentrations. 
+
+I expect the AI Displacement ETF to keep rising:
+
+As they&#x27;re the largest beneficiaries of scaling compute and inference for artificial intelligence.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2032929794275553400" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我通过书签的数量意识到了。我低调丢了一只重磅ETF？AI 位移等加权年初至今：
+
+$AXTI：+191.53%
+$AAOI：+144.47%
+$SNDK：+140.38%
+美元SOI：+114.3%
+精简版美元：+61.22%
+$AEHR：+60.97%
+美元：+56.56%
+VRT 美元：+47.42%
+三星：+42.8%
+美元：+37.99%
+MU 美元：+35.1%
+SK海力士：+34.42%
+NBIS 美元：+25.57%
+$COHR：+24.92%
+联发科：+17.01%
+$INTC：+16.23%
+阿斯麦美元：+15.63%
+爱德万测试：+11.78%
+$TSM：+5.85%
+$COPX：+4.56%
+$TSEM：+2.44%
+MRVL 美元：-1.71%
+NVDA 美元：-4.55%
+AVGO 美元：-7.32%
+
+这些只是我脑海中浮现的第一个名字。我个人拥有很多这些（并且不拥有像 $NVDA 或 $BE 这样的其他人），但无论如何都包含它们。但老实说，如果我不积极管理我的投资组合集中度，我很乐意对所有这些名字进行同等权重。我预计 AI Displacement ETF 将继续上涨：
+
+因为他们是人工智能扩展计算和推理的最大受益者。</div>
+        <div class="tweet-foot">
+          <span>likes 1266 / retweets 95 / replies 62 / views 165506</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-03-15 03:15</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMZN</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BE</span><span class="chip red">$COHR</span><span class="chip red">$COPX</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">The news is pretty heartbreaking:
+
+$META 20% layoffs
+
+$ORCL layoffs
+
+$AMZN 600,000 workers long term layoffs as they get replaced by robotics and AI.
+
+This is a dystopian future.
+
+Companies end up with record profits, without the cost of human labor.
+
+The only way to benefit:
+
+Investing in AI as a hedge. 
+
+The next few...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The news is pretty heartbreaking:
+
+$META 20% layoffs
+
+$ORCL layoffs
+
+$AMZN 600,000 workers long term layoffs as they get replaced by robotics and AI.
+
+This is a dystopian future.
+
+Companies end up with record profits, without the cost of human labor.
+
+The only way to benefit:
+
+Investing in AI as a hedge. 
+
+The next few years feels like the main way to escape the permanent underclass, caused by AI displacement.
+
+The return on equity derived from AI will go to the shareholders. 
+
+While the gap between those who live paycheck to paycheck, not invested in stocks. Will continue to grow. 
+
+This is not the future.
+
+- Opus 4.6 is good enough to replace most software engineers today.
+
+- Waymo has started to replace taxi drivers in places like SF today.
+
+- We know $TSLA Humanoids are coming next as they’re widespread in China, today.
+
+This is happening now. 
+
+Disruptions in Iran are only temporary to the accelerating AI buildout.
+
+AI has hit the inflection point, and looks inevitable. 
+
+You’re already seeing US job revisions down close to 1 Million, which is staggering. 
+
+And we’re seeing the newest LLMs be built by their previous models, as AI approaches the singularity (AI led recursive growth). 
+
+Investing in where the compute and hardware needed to run the AI:
+
+From the datacenter/power/grid sector: 
+$NBIS, $XLU, $VRT, $BE
+
+Photonics sector needed to scale AI:
+$LITE, $COHR, $AAOI, $TSEM
+
+Semi sector needed for the chips:
+$NVDA, $TSM, $ASML, $INTC
+
+Memory sector for the chips:
+$MU, $SNDK, SK Hynix, Samsung
+
+ASICs for hyperscaler AI inference:
+$AVGO, $MRVL, Mediatek
+
+Yields sector to make sure the chips work:
+$TER, $AEHR, Advantest
+
+Along with the raw materials or substrates needed for AI:
+$AXTI, $COPX, $SOI
+
+And many others become the single, largest, hedge against widespread AI displacement. 
+
+Whoever owns the means of compute (bottlenecks, materials, datacenters):
+
+Owns the future of AI.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2032898412279115858" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>这个消息真是令人心碎：
+
+$META 裁员 20%
+
+$ORCL 裁员
+
+AMZN 600,000 名工人被机器人和人工智能取代而长期裁员。这是一个反乌托邦的未来。公司最终在没有人力成本的情况下获得了创纪录的利润。唯一受益的方法：
+
+投资人工智能作为对冲。接下来的几年感觉像是逃离由人工智能取代造成的永久下层阶级的主要方式。人工智能带来的股本回报将归股东所有。而那些靠工资过活的人，不投资股票。将继续增长。这不是未来。- Opus 4.6 足以取代当今大多数软件工程师。- Waymo 今天已开始在旧金山等地取代出租车司机。- 我们知道 $TSLA 人形机器人将成为下一个目标，因为它们如今在中国很普遍。现在这种情况正在发生。对于加速人工智能建设来说，伊朗的干扰只是暂时的。人工智能已经达到了拐点，而且看起来是不可避免的。你已经看到美国的就业机会减少了近 100 万，这是令人震惊的。随着人工智能接近奇点（人工智能引领递归增长），我们看到最新的法学硕士是根据以前的模型构建的。投资运行人工智能所需的计算和硬件：
+
+从数据中心/电力/电网部门： 
+$NBIS、$XLU、$VRT、$BE
+
+光子学领域需要扩展人工智能：
+$LITE、$COHR、$AAOI、$TSEM
+
+芯片所需的半扇区：
+$NVDA、$TSM、$ASML、$INTC
+
+芯片的内存扇区：
+$MU、$SNDK、SK 海力士、三星
+
+用于超大规模 AI 推理的 ASIC：
+$AVGO、$MRVL、联发科
+
+确保芯片正常工作的收益率部门：
+$TER、$AEHR、爱德万测试
+
+除了人工智能所需的原材料或基材：
+$AXTI、$COPX、$SOI
+
+还有许多其他因素成为防止人工智能广泛取代的单一、最大的对冲手段。谁拥有计算手段（瓶颈、材料、数据中心）：
+
+掌握AI的未来。</div>
+        <div class="tweet-foot">
+          <span>likes 1661 / retweets 170 / replies 115 / views 333108</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-03-10 00:09</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@RoshiPosts Nothing’s changed about $XLU, especially 2-3 weeks in. It’s a boring 2 year trade on power grid modernization, ai inference, and rate cuts.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@RoshiPosts Nothing’s changed about $XLU, especially 2-3 weeks in. It’s a boring 2 year trade on power grid modernization, ai inference, and rate cuts.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031039573644779644" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@RoshiPosts $XLU 没有任何变化，尤其是 2-3 周后。这是一次关于电网现代化、人工智能推理和降息的无聊的 2 年交易。</div>
+        <div class="tweet-foot">
+          <span>likes 22 / retweets 0 / replies 6 / views 2926</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-03-07 00:16</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@bilbooo__ Yeah $XLU is a 2 year long waiting for rate cut, grid modernization, and inference to take off. 
+
+If something is a multi-year long... Might require you to wait more than 2 weeks.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@bilbooo__ Yeah $XLU is a 2 year long waiting for rate cut, grid modernization, and inference to take off. 
+
+If something is a multi-year long... Might require you to wait more than 2 weeks.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2029954399536308282" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@bilbooo__ 是的，$XLU 等待降息、电网现代化和推理起飞长达 2 年之久。如果事情持续多年......可能需要您等待两周以上。</div>
+        <div class="tweet-foot">
+          <span>likes 18 / retweets 0 / replies 1 / views 3913</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-03-03 02:21</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$LASR</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Photonics, Memory, Power, and Defense are probably the top 3 momentum sectors right now. 
+
+There’s others like advanced packaging or thermal but you won’t get to the severe bottleneck or returns as top 4 imo.
+
+$AAOI and $AXTI are top two favorite photonic plays.
+
+Samsung and SK Hynix are top two memory plays.
+
+Power I’...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Photonics, Memory, Power, and Defense are probably the top 3 momentum sectors right now. 
+
+There’s others like advanced packaging or thermal but you won’t get to the severe bottleneck or returns as top 4 imo.
+
+$AAOI and $AXTI are top two favorite photonic plays.
+
+Samsung and SK Hynix are top two memory plays.
+
+Power I’ve already said $XLU from rate cuts + grid modernization + hyperscaler inference.
+
+Then defense probably $LASR and others for a bit since the Iran conflict is one of the biggest catalysts. (And hanging around until there’s peacetime)
+
+I usually rotate around 30 or so stocks, so one others like $RDDT I’ve been swing trading and others I’ve mentioned in the past like $RPI I just hold on the side with less concentration in case my thesis turns out right. 
+
+Large part of it is riding the momentum.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028536305030988011" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>光子学、内存、电力和国防可能是目前动力最强的三个领域。还有其他技术，例如先进封装或热学，但在我看来，您不会遇到严重的瓶颈或返回前 4 名。$AAOI 和 $AXTI 是最受欢迎的两种光子游戏。三星和 SK 海力士是排名前两位的内存厂商。功率 我已经说过，来自降息+电网现代化+超大规模推理的$XLU。然后防御可能是 $LASR 和其他一些，因为伊朗冲突是最大的催化剂之一。（并闲逛直到和平时期）
+
+我通常会轮换大约 30 只股票，因此我一直在进行波段交易，比如 $RDDT，而我过去提到过的其他股票，比如 $RPI，我只是持有较少集中度的股票，以防万一我的论点是正确的。其中很大一部分是顺势而为。</div>
+        <div class="tweet-foot">
+          <span>likes 135 / retweets 4 / replies 12 / views 13990</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-03-03 01:54</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">I’m flattered lol. But I’m happy with the performance even with a relatively flat index!
+
+A large part of it is mapping where all the spend goes.
+
+Eg. $GOOGL $180B capex -&gt; TPU program -&gt; BOM of TPU -&gt; 8-12% $LITE -&gt; upstream materials from $AXTI or epiwafers from $IQE.
+
+Or just the DRAM/NAND price hikes -&gt; as simple a...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I’m flattered lol. But I’m happy with the performance even with a relatively flat index!
+
+A large part of it is mapping where all the spend goes.
+
+Eg. $GOOGL $180B capex -&gt; TPU program -&gt; BOM of TPU -&gt; 8-12% $LITE -&gt; upstream materials from $AXTI or epiwafers from $IQE.
+
+Or just the DRAM/NAND price hikes -&gt; as simple as going long on memory.
+
+Recently it’s been power/grid focused from Elon and OpenAI pushing for grid expansion and more capacity, so long $XLU.
+
+I guess it’s just getting lucky with momentum?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028529465962414375" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我受宠若惊，哈哈。但即使指数相对平坦，我也对表现感到满意！其中很大一部分是绘制所有支出的去向。例如。$GOOGL $180B 资本开支 -&gt; TPU 计划 -&gt; TPU BOM -&gt; 8-12% $LITE -&gt; 来自 $AXTI 的上游材料或来自 $IQE 的外延片。或者只是 DRAM/NAND 价格上涨 -&gt; 就像做多内存一样简单。最近，Elon 和 OpenAI 一直关注电力/电网，推动电网扩张和增加容量，所以只要 $XLU。我想这只是运气好而已？</div>
+        <div class="tweet-foot">
+          <span>likes 61 / retweets 1 / replies 3 / views 7695</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-03-01 22:26</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@btc_overflow I’d wait for a correction (if there is one) for $XLU and for IV on a strike to be around 14-16% to enter.
+
+If it keeps going up you don’t lose anything, just miss out on an opportunity among others.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@btc_overflow I’d wait for a correction (if there is one) for $XLU and for IV on a strike to be around 14-16% to enter.
+
+If it keeps going up you don’t lose anything, just miss out on an opportunity among others.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028114549417844809" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@btc_overflow 我会等待 $XLU 的修正（如果有的话）和罢工 IV 大约 14-16% 才能进入。如果它继续上涨，你不会失去任何东西，只是错过了一个机会。</div>
+        <div class="tweet-foot">
+          <span>likes 54 / retweets 0 / replies 0 / views 4049</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-03-01 21:28</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@walteryhooper IV for $XLU was 14% since the ETF has only moved 82% since year 2000 (not account for dividends).
+
+So a 3% movement with slight vega expansion is easily a double. https://t.co/eCIEyAVd0F</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@walteryhooper IV for $XLU was 14% since the ETF has only moved 82% since year 2000 (not account for dividends).
+
+So a 3% movement with slight vega expansion is easily a double. https://t.co/eCIEyAVd0F</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028099937947541831" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@walteryhooper IV 的 $XLU 为 14%，因为该 ETF 自 2000 年以来仅变动了 82%（不考虑股息）。因此，3% 的运动加上轻微的 vega 扩展很容易就变成了两倍。https://t.co/eCIEyAVd0F</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3596</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-03-01 21:24</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@Ngen704 My very OTM calls are up 144%+
+
+I was just sharing closer to ITM strike as an example of the 3% increase this week for $XLU https://t.co/PhgmsJDz39</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Ngen704 My very OTM calls are up 144%+
+
+I was just sharing closer to ITM strike as an example of the 3% increase this week for $XLU https://t.co/PhgmsJDz39</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028099110310748607" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Ngen704 我的 OTM 调用增加了 144%+
+
+我只是分享接近 ITM 罢工的例子，以本周 $XLU 上涨 3% https://t.co/PhgmsJDz39</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 5450</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2026-03-01 21:17</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Elon is completely right when he sounds the alarm that power/grid is vital for US dominance in AI.
+
+My call for the once in a lifetime run for $XLU (grid/power utilities ETF) is playing out real time.
+
+New calls are already up ~100%+ in the week alone. 
+
+Power generation and the grid is a measurement of industrial capa...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Elon is completely right when he sounds the alarm that power/grid is vital for US dominance in AI.
+
+My call for the once in a lifetime run for $XLU (grid/power utilities ETF) is playing out real time.
+
+New calls are already up ~100%+ in the week alone. 
+
+Power generation and the grid is a measurement of industrial capacity and the US has every motivation to modernize and expand it.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028097416273293518" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>当埃隆发出关于电力/电网对于美国在人工智能领域的主导地位至关重要的警报时，他是完全正确的。我对 $XLU（电网/电力公用事业 ETF）一生一次的呼吁正在实时进行。仅在一周内，新呼叫就已增加约 100% 以上。发电和电网是工业能力的衡量标准，美国完全有动力对其进行现代化和扩张。</div>
+        <div class="tweet-foot">
+          <span>likes 812 / retweets 44 / replies 40 / views 130260</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2026-03-01 15:25</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRDO</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@jahintanvir_ Probably the likes of these:
+Memory - $MU, Samsung, SK Hynix, Sandisk
+Foundries, Packaging- $INTC, $TSM, $AMKR
+Photonics - $LITE, $COHR, $AAOI
+ASICs - $AVGO, $MRVL
+Connectivity - $ALAB, $CRDO
+Power/Grid- $XLU
+Datacenters - $NBIS, $CIFR, $WULF</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@jahintanvir_ Probably the likes of these:
+Memory - $MU, Samsung, SK Hynix, Sandisk
+Foundries, Packaging- $INTC, $TSM, $AMKR
+Photonics - $LITE, $COHR, $AAOI
+ASICs - $AVGO, $MRVL
+Connectivity - $ALAB, $CRDO
+Power/Grid- $XLU
+Datacenters - $NBIS, $CIFR, $WULF</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028008655493427252" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@jahintanvir_ 可能是这些：
+内存 - $MU、三星、SK 海力士、Sandisk
+铸造厂、包装 - $INTC、$TSM、$AMKR
+光子学 - $LITE、$COHR、$AAOI
+ASIC - $AVGO、$MRVL
+连接性 - $ALAB、$CRDO
+电力/电网 - $XLU
+数据中心 - $NBIS、$CIFR、$WULF</div>
+        <div class="tweet-foot">
+          <span>likes 263 / retweets 22 / replies 12 / views 24726</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2026-03-01 01:30</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$GLD</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@pepemoonboy You cooked on $AAOI, $GLD, and $XLU</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@pepemoonboy You cooked on $AAOI, $GLD, and $XLU</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027798505738445152" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@pepemoonboy 你用 $AAOI、$GLD 和 $XLU 做饭</div>
+        <div class="tweet-foot">
+          <span>likes 81 / retweets 2 / replies 2 / views 19134</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2026-02-28 00:53</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@annapych1 Yeah some $XLU strikes are up 80-150% in a week since I called it out.
+
+Extremely rare to have a 3.3% movement in a week https://t.co/wmGI7Sysv1</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@annapych1 Yeah some $XLU strikes are up 80-150% in a week since I called it out.
+
+Extremely rare to have a 3.3% movement in a week https://t.co/wmGI7Sysv1</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027426866659996148" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@annapych1 是的，自从我宣布这一消息以来，一些 $XLU 的罢工在一周内上涨了 80-150%。一周内变动 3.3% 极为罕见 https://t.co/wmGI7Sysv1</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 5615</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2026-02-27 04:06</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">$XLU was my long of choice for energy/grid modernization, coupled with rate cuts and mass usage from inference/training.
+
+There’s no rush to enter these trades, utilities and power typically move like dinosaurs. But if you’re doing leaps make sure IV is priced correctly at 14-16%, not inflated strikes.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$XLU was my long of choice for energy/grid modernization, coupled with rate cuts and mass usage from inference/training.
+
+There’s no rush to enter these trades, utilities and power typically move like dinosaurs. But if you’re doing leaps make sure IV is priced correctly at 14-16%, not inflated strikes.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027113047454884103" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$XLU 是我长期以来对能源/电网现代化的选择，再加上降价和推理/训练的大量使用。人们并不急于进入这些行业，公用事业和电力通常会像恐龙一样移动。但如果你要进行跳跃式投资，请确保 IV 的定价正确，为 14-16%，而不是夸大的行使价。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4549</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2026-02-27 03:39</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$EWJ</span><span class="chip red">$EWY</span><span class="chip red">$FORM</span><span class="chip red">$HOOD</span><span class="chip red">$IQE</span><span class="chip red">$KLIC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Year to Date post $NVDA earnings:
+
+477.27%.
+
+Majority of the gains are the result of the research I&#x27;ve done the past few months:
+
+From the $AXTI&#x27;s InP chokepoint that went up few hundred percent recently. 
+
+or profiting off Jane Street from $EWY IV vega expansion for Sk Hynix/Samsung. 
+
+Many others were tens of % or hu...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Year to Date post $NVDA earnings:
+
+477.27%.
+
+Majority of the gains are the result of the research I&#x27;ve done the past few months:
+
+From the $AXTI&#x27;s InP chokepoint that went up few hundred percent recently. 
+
+or profiting off Jane Street from $EWY IV vega expansion for Sk Hynix/Samsung. 
+
+Many others were tens of % or hundreds of percent returns each in a short timeframe. 
+
+Like $XLU going up 3% in a week to the epic directional rally of $MU and $SNDK. 
+
+I think people just like to see the end results like this, which is understandably the most eye-catching.
+
+But most of the groundwork for the current returns was laid out months ago from $LITE Google BOM analysis to semi supply chain bottlenecks from Unimicron, Nittobo, and even $TSM last year. 
+
+Even now I’m planting the seeds for the future with analysis on $XLU for the power/grid sector, or understandably higher risk companies like $IQE as a $LITE supplier for the photonics supply chains. 
+
+I typically shift from: 
+
+&gt; Research Posts (Initial thesis post)
+&gt; Map that into actual ideas + trades
+&gt; Follow-Up DDs on Alpha (eg. SMM InP pricing)
+&gt; celebrate when things go up. 
+
+cross-industry, and typically on sectors with momentum. 
+
+Rather than sticking single stocks, or just analysis only (instead of trading).
+
+And I think people might have found this style refreshing. 
+
+I think recently, I’m is just capitalizing on two different trends:
+
+1. Focusing on active bottlenecks in AI supply chains
+
+- Memory like $SNDK, $MU, Sk Hynix, Samsung, $SIMO
+- Photonics like $LITE, $COHR, $AAOI, $IQE, $AXTI, and Yamamura 
+- Power Grid like $XLU
+- Advanced Packaging/Yields - $AMKR, $ONTO, $CAMT, $KLIC, $FORM, and $AEHR
+
+2. Then focusing on Capital Rotation into Taiwan, Japan, Korea. 
+
+Basically past week capital rotation was rotating from US/China -&gt; Korea, Taiwan, Japan.
+
+ETFs like $EWJ or individual stocks from Nanya Plastics have been taking off. 
+
+- Taiwan Equity Funds recently took in over $1 billion in a single week for the first time in months
+
+- For Japan: GS chart&#x27;s +0.37 long buying
+
+- For Korea, foreigners were net buyers of roughly 1.37 trillion won (~$1 billion USD) in the first half of February
+
+While GS chart shows a staggering -1.52 SD in short activity for North America. 
+
+So that&#x27;s probably my assumption on why $HOOD investors haven&#x27;t been doing too well from a lack of Asian equity exposure. 
+
+The reason being Hyperscaler capex trade flows into Asian countries in the supply chains (eg. Some analysts projected Sk Hynix to have 2.2 2027 fwd p/e, which is absurd) -&gt; institutions following the flow with capital rotation.
+
+As for some reflection, I&#x27;m genuinely surprised by how many people read my posts nowadays and it’s really humbling!
+
+I don’t really celebrate this much (last year I only did one time with a 600%+ 1Y return) but I’m amazed by how lucky I am this year with timing and getting a lot my thesis right. 
+
+I’m not perfect, I do get a few things wrong, but what’s more important is I get more green than red every day.
+
+But thanks to everyone, I grew from a little account to 83K in like two or three months!</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027106275881079067" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>年初至今 NVDA 盈利：
+
+477.27%。大部分收获都是我过去几个月所做的研究的结果：
+
+$AXTI 的 InP 瓶颈最近上涨了百分之几百。或者从 Sk Hynix/Samsung 的 $EWY IV vega 扩张中从 Jane Street 中获利。许多其他公司都在短时间内获得了数十％或数百％的回报。就像 $XLU 在一周内上涨 3%，带动 $MU 和 $SNDK 的史诗般的定向反弹。我想人们就是喜欢看到这样的最终结果，这可以理解是最引人注目的。但当前回报的大部分基础都是几个月前奠定的，从 $LITE Google BOM 分析到去年 Unimicron、Nittobo 甚至 $TSM 的半供应链瓶颈。即使现在，我也正在为未来播下种子，分析电力/电网领域的 $XLU，或者可以理解的风险较高的公司，例如 $IQE，作为光子供应链的 $LITE 供应商。我通常会从以下位置转变： 
+
+&gt; 研究职位（初始论文职位）
+&gt; 将其转化为实际的想法+交易
+&gt; Alpha 上的后续 DD（例如 SMM InP 定价）
+&gt; 当事情进展时庆祝。跨行业，通常是有势头的行业。而不是坚持单一股票，或者只是分析（而不是交易）。我想人们可能会觉得这种风格令人耳目一新。我想最近，我只是利用了两种不同的趋势：
+
+1、聚焦人工智能供应链活跃瓶颈
+
+- 内存如 $SNDK、$MU、Sk Hynix、Samsung、$SIMO
+- 光子学，例如 $LITE、$COHR、$AAOI、$IQE、$AXTI 和 Yamamura 
+- 像$XLU这样的电网
+- 先进封装/产量 - $AMKR、$ONTO、$CAMT、$KLIC、$FORM 和 $AEHR
+
+2、然后重点关注台湾、日本、韩国的资本轮动。基本上上周的资本轮换是从美国/中国-&gt;韩国、台湾、日本轮换。$EWJ 等 ETF 或 Nanya Plastics 的个股一直在起飞。- 台湾股票基金最近单周吸纳资金数月来首次超过 10 亿美元
+
+- 日本：GS 图表多头买入 +0.37
+
+- 2 月上半月，韩国的外国人净买家额约为 1.37 万亿韩元（约合 10 亿美元）
+
+而 GS 图表显示北美的空头活动达到惊人的 -1.52 SD。因此，这可能就是我对为什么 $HOOD 投资者由于缺乏亚洲股票敞口而表现不佳的假设。原因是超大规模资本开支贸易流入供应链中的亚洲国家（例如，一些分析师预测 Sk Hynix 的 2027 年预期市盈率为 2.2，这是荒谬的）-&gt; 机构随着资本轮换而跟随流动。至于一些反思，我真的很惊讶现在有这么多人阅读我的帖子，这真的很令人谦卑！我并没有真正庆祝这么多（去年我只做了一次，获得了 600%+ 1 年的回报），但我很惊讶今年我是多么幸运，时机把握得很好，我的论文很多都正确。我并不完美，我确实会犯一些错误，但更重要的是我每天得到的绿色多于红色。但感谢大家，我在两三个月的时间里从一个小账号发展到了83K！</div>
+        <div class="tweet-foot">
+          <span>likes 1570 / retweets 147 / replies 113 / views 416267</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2026-02-26 01:47</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@bennybigbull Yeah probably stay away from overpriced IV. 
+
+MMs probably just don’t want be the counterparty on $XLU OTM since you can leverage 72x notational or so, so they’re raising premiums a lot.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@bennybigbull Yeah probably stay away from overpriced IV. 
+
+MMs probably just don’t want be the counterparty on $XLU OTM since you can leverage 72x notational or so, so they’re raising premiums a lot.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026715701357264914" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@bennybigbull 是的，可能远离价格过高的 IV。MM 可能只是不想成为 $XLU OTM 的交易对手，因为您可以利用 72 倍名义杠杆左右，因此他们大幅提高了保费。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 5354</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="26">
+        <div class="tweet-head">
+          <span class="mono">2026-02-26 01:40</span>
+          <span><span class="chip red">$VST</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Don’t think people realize how big this move on one of the 
+
+Slowest. Moving. Sectors.
+
+In the world is.
+
+2.56% in a week on $XLU.
+
+Especially if IV is 14%.
+
+All time return since year 2000 is 79.73% for the boring power/grid sector (not including dividends).
+
+Option values are easily up double digits or triple digits....</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Don’t think people realize how big this move on one of the 
+
+Slowest. Moving. Sectors.
+
+In the world is.
+
+2.56% in a week on $XLU.
+
+Especially if IV is 14%.
+
+All time return since year 2000 is 79.73% for the boring power/grid sector (not including dividends).
+
+Option values are easily up double digits or triple digits. 
+
+That being said if IV is elevated (eg. above 17.5%) probably stay away. 
+
+My thesis was this was the once in a lifetime rerating on the most boring sector in the world due to rate cuts, AI inference usage, and grid/power modernization.
+
+Hopefully this is the start my thesis playing out.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026713998281027594" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>不要认为人们意识到这一举动对其中一个有多大 
+
+最慢。移动。部门。世间有。$XLU 一周内上涨 2.56%。尤其是当 IV 为 14% 时。自2000年以来，无聊的电力/电网行业的历史回报率为79.73%（不包括股息）。期权价值很容易达到两位数或三位数。话虽这么说，如果 IV 升高（例如高于 17.5%），您可能会远离。我的论文是，由于降息、人工智能推理的使用和电网/电力现代化，这是对世界上最无聊的行业一生一次的重新评估。希望这是我论文的开始。</div>
+        <div class="tweet-foot">
+          <span>likes 684 / retweets 36 / replies 67 / views 157004</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="27">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 15:51</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FORM</span><span class="chip red">$HOOD</span><span class="chip red">$KLIC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$RKLB</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Last year I shared my 1 year return: 
+
+630.44% before I even joined X.
+
+Lot of conspiracy theorists out there.
+
+But I do happen to be a decent discretionary trader. 
+
+Large part of it was 
+
+&gt; front-running halving
+&gt; buying $RKLB in the 10’s
+&gt; buying $HOOD in the 10’s
+&gt; catalyst trading Presidential nominations
+&gt; riding...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Last year I shared my 1 year return: 
+
+630.44% before I even joined X.
+
+Lot of conspiracy theorists out there.
+
+But I do happen to be a decent discretionary trader. 
+
+Large part of it was 
+
+&gt; front-running halving
+&gt; buying $RKLB in the 10’s
+&gt; buying $HOOD in the 10’s
+&gt; catalyst trading Presidential nominations
+&gt; riding multiple waves up.
+
+Majority of people don’t rotate and sit on a single stock the entire time.
+
+The trick is to ride every wave up and if earnings start to slow/stop, move on to the next and don’t get too attached to a stock.
+
+It’s the same thing with this year, just different sectors and catalysts.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026565774857613477" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>去年我分享了我的一年回报： 
+
+630.44% 在我加入 X 之前。那里有很多阴谋论者。但我确实是一个不错的全权交易者。其中很大一部分是 
+
+&gt; 抢先减半
+&gt; 在 10 年代购买 $RKLB
+&gt; 在 10 年代购买 $HOOD
+&gt; 催化剂交易总统提名
+&gt; 乘着多重波浪向上。大多数人不会一直轮流持有一只股票。诀窍是驾驭每一波上涨，如果盈利开始放缓/停止，则转向下一波，不要过于依赖股票。今年也是同样的情况，只是行业和催化剂不同。</div>
+        <div class="tweet-foot">
+          <span>likes 1017 / retweets 41 / replies 84 / views 170048</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="28">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 13:54</span>
+          <span><span class="chip red">$BE</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Energy/Power/Grid sector will be a massive theme in 2026 onward as inference/training require GW scale DCs.
+
+$BE is a large beneficary and likely at the center of it. I personally ended up going with the $XLU sector as a whole rather than picking individual names (mainly because i don’t personally have enough domain kn...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Energy/Power/Grid sector will be a massive theme in 2026 onward as inference/training require GW scale DCs.
+
+$BE is a large beneficary and likely at the center of it. I personally ended up going with the $XLU sector as a whole rather than picking individual names (mainly because i don’t personally have enough domain knowledge in energy names)</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026536274241401156" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>能源/电力/电网领域将成为 2026 年以后的一个重要主题，因为推理/训练需要 GW 规模的 DC。$BE 是一个巨大的受益者，并且很可能处于其中的中心。我个人最终选择了整个 $XLU 行业，而不是选择个别名称（主要是因为我个人在能源名称方面没有足够的领域知识）</div>
+        <div class="tweet-foot">
+          <span>likes 65 / retweets 3 / replies 6 / views 15672</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="29">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 01:49</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@Investmnt_Eagle I still think so! Ideal would be 14-16% IV not the elevated strikes you&#x27;re looking at ~21-23% IV. 
+
+Point was $XLU was a directional long on US power/grid over the next two years (that benefits from low IV).</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Investmnt_Eagle I still think so! Ideal would be 14-16% IV not the elevated strikes you&#x27;re looking at ~21-23% IV. 
+
+Point was $XLU was a directional long on US power/grid over the next two years (that benefits from low IV).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026353801100407194" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Investmnt_Eagle 我仍然这么认为！理想的 IV 是 14-16%，而不是您所看到的约 21-23% IV 的较高罢工。要点是，$XLU 是未来两年美国电力/电网的定向多头（受益于低 IV）。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 11883</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="30">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 01:02</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FORM</span><span class="chip red">$KLIC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Year to Date: 412.72%
+
+Lot of it is just picking the right sector, profiting off of Jane Street algos weekly, and a bit of luck. 
+
+In terms of bottleneck longs, these are currently my favorite: 
+
+1. Memory -  Samsung, Sk Hynix, $SNDK, $MU, $SIMO 
+
+2. Photonics - $LITE, $COHR, $AAOI, $AXTI, (maybe Yamamura too, but not ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Year to Date: 412.72%
+
+Lot of it is just picking the right sector, profiting off of Jane Street algos weekly, and a bit of luck. 
+
+In terms of bottleneck longs, these are currently my favorite: 
+
+1. Memory -  Samsung, Sk Hynix, $SNDK, $MU, $SIMO 
+
+2. Photonics - $LITE, $COHR, $AAOI, $AXTI, (maybe Yamamura too, but not to the same degree). 
+
+3. Power/Grid - $XLU.
+
+4. Advanced Packaging Capex -  $AMKR, $ONTO, $CAMT, $KLIC, and $FORM.
+
+I’ve talked about all of these before aside from maybe $KLIC?
+
+But most if not all are up like 50-100%+ in a short timeframe, which amplifies overall returns from trading. 
+
+Best lesson I’ve learned this year was to rotate where the money flows and current bottlenecks. Rather than attempting contrarian turnaround plays in sectors like cybersecurity.
+
+I publish all my ideas for free too so hopefully people can take away a thing or two!</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026341976942195152" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>年初至今：412.72%
+
+其中很多只是选择正确的行业，每周从简街算法中获利，以及一点运气。就瓶颈多头而言，目前我最喜欢的是： 
+
+1. 内存 - 三星、Sk Hynix、$SNDK、$MU、$SIMO 
+
+2. 光子学 - $LITE、$COHR、$AAOI、$AXTI（也许山村也是如此，但程度不同）。3. 电力/电网 - $XLU。4. 先进封装资本开支 - $AMKR、$ONTO、$CAMT、$KLIC 和 $FORM。除了 $KLIC 之外，我之前已经讨论过所有这些？但大多数（如果不是全部）在短时间内上涨了 50-100% 以上，这放大了交易的整体回报。我今年学到的最好的教训是在资金流动和当前瓶颈的地方进行轮换。而不是在网络安全等领域尝试逆势扭转局面。我也免费发布我所有的想法，所以希望人们可以带走一两件事！</div>
+        <div class="tweet-foot">
+          <span>likes 3881 / retweets 177 / replies 198 / views 993734</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="31">
+        <div class="tweet-head">
+          <span class="mono">2026-02-23 21:59</span>
+          <span><span class="chip red">$EWY</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">$XLU with OTM is likely to move a lot more both ways due to low IV. If it is a once in history re-rating bc of grid modernization and ai inference), could be very interesting.
+
+$EWY is high probability Vega expansion + directional long from memory supercycle but extremely unlikely to return 10x in a year unless markets...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$XLU with OTM is likely to move a lot more both ways due to low IV. If it is a once in history re-rating bc of grid modernization and ai inference), could be very interesting.
+
+$EWY is high probability Vega expansion + directional long from memory supercycle but extremely unlikely to return 10x in a year unless markets price in Samsung like a US hyperscaler + remove the Korean discount</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025933649598894311" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>由于 IV 较低，具有 OTM 的 $XLU 可能会双向波动更多。如果这是历史上一次对电网现代化和人工智能推理的重新评估，可能会非常有趣。$EWY 是高概率的 Vega 扩展 + 远离内存超级周期的定向长期，但极不可能在一年内返回 10 倍，除非三星的市场价格像美国超大规模厂商 + 取消韩国折扣</div>
+        <div class="tweet-foot">
+          <span>likes 21 / retweets 1 / replies 4 / views 2754</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="32">
+        <div class="tweet-head">
+          <span class="mono">2026-02-23 16:15</span>
+          <span><span class="chip red">$AIPO</span><span class="chip red">$UTES</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@shivprakash looked at others like $UTES which was the second best as it had more IPP exposure and $AIPO (no option chain).
+
+But lowest IV for movement was $XLU</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@shivprakash looked at others like $UTES which was the second best as it had more IPP exposure and $AIPO (no option chain).
+
+But lowest IV for movement was $XLU</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025846946313986120" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@shivprakash 看了其他的，比如 $UTES，它是第二好的，因为它有更多的 IPP 敞口和 $AIPO（无期权链）。但运动的最低 IV 为 $XLU</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3464</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="33">
+        <div class="tweet-head">
+          <span class="mono">2026-02-23 03:14</span>
+          <span><span class="chip red">$EWY</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@Yannis_ko $XLU is more of a structural delta (directional long) play from power/grid investments and expansion.
+
+$EWY was a call on volatility expansion from mispricing.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Yannis_ko $XLU is more of a structural delta (directional long) play from power/grid investments and expansion.
+
+$EWY was a call on volatility expansion from mispricing.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025650532183130188" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Yannis_ko $XLU 更像是电力/电网投资和扩张的结构性三角洲（定向多头）游戏。$EWY 呼吁错误定价导致波动性扩大。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2977</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="34">
+        <div class="tweet-head">
+          <span class="mono">2026-02-23 01:10</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$TSLA</span><span class="chip red">$VST</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">The biggest United States AI bottleneck:
+
+Power and Grid Capacity.
+
+This has been echoed by the CEOs of every major US AI company recently. 
+
+Here&#x27;s the list from $MSFT to $AMZN:
+
+Jensen Huang ( $NVDA ): &quot;At the lowest level: energy. China has twice the amount of energy we have as a nation, and our economy is larger th...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The biggest United States AI bottleneck:
+
+Power and Grid Capacity.
+
+This has been echoed by the CEOs of every major US AI company recently. 
+
+Here&#x27;s the list from $MSFT to $AMZN:
+
+Jensen Huang ( $NVDA ): &quot;At the lowest level: energy. China has twice the amount of energy we have as a nation, and our economy is larger than theirs. It makes no sense to me... There are no new industries you can grow without energy.&quot; (CSIS event)
+
+Elon Musk ( $TSLA / xAI): &quot;Billions of dollars of the most advanced AI hardware ever built. Sitting dark. Not because the chips don’t work. Because there isn’t enough electricity to run them.&quot; (Recent Podcast)
+
+Sam Altman (OpenAI): &quot;Meeting global AI demand will eventually require hundreds of gigawatts of power. Whoever controls power controls the AI value chain.&quot; (Recent Interview)
+
+Andy Jassy ( $AMZN ): &quot;[Our] single biggest constraint is power. I don&#x27;t believe that we will have fully resolved the amount of capacity we need for the demand that we have in a couple of quarters.&quot; (Amazon Earnings Call)
+
+Satya Nadella ( $MSFT ): &quot;The biggest issue we are now having is not a compute glut, but it&#x27;s power. It&#x27;s sort of the ability to get the builds done fast enough close to power. So, if you can&#x27;t do that, you may actually have a bunch of chips sitting in inventory that I can&#x27;t plug in.&quot; (BG2 Pod)
+
+You have every single CEO of American AI labs telling you what the major bottlenecks are for US Artificial Intelligence:
+
+Generating the Energy, and expanding the Grid.
+
+So, we might see boring utilities and power producers  in $XLU be strongly re-rated because of:
+
+1. AI inference + training extreme ramp and demand for GW-scale DCs.
+2. Hyperscaler extreme capex pouring into the sector.
+3. Rate Cut tailwinds.
+
+And most of all. That fact that:
+
+The United States as a country has to rebuild its grid to win a geopolitical arms race.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025619207015301349" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>美国人工智能最大瓶颈：
+
+电力和电网容量。最近，美国各大人工智能公司的首席执行官都对此表示赞同。以下是从 $MSFT 到 $AMZN 的列表：
+
+黄仁勋 ($NVDA)：“最底层的是能源。中国的能源总量是我们国家的两倍，而且我们的经济规模比他们大。这对我来说毫无意义……没有能源就没有新产业可以发展。” （战略与国际研究中心事件）
+
+埃隆·马斯克（$TSLA / xAI）：“耗资数十亿美元建造了有史以来最先进的人工智能硬件。坐在黑暗中。不是因为芯片无法工作。因为没有足够的电力来运行它们。” （最近的播客）
+
+Sam Altman（OpenAI）：“满足全球人工智能需求最终将需要数百吉瓦的电力。谁控制了电力，谁就控制了人工智能价值链。” （最近采访）
+
+Andy Jassy ( $AMZN )：“[我们]最大的限制是电力。我不认为我们能够在几个季度内完全解决满足需求所需的产能问题。” （亚马逊财报电话会议）
+
+Satya Nadella ($MSFT)：“我们现在面临的最大问题不是计算过剩，而是电力。这是一种以足够快的速度完成构建、接近电力的能力。因此，如果你做不到这一点，你实际上可能会在库存中积压一堆我无法插入的芯片。” （BG2 吊舱）
+
+美国人工智能实验室的每一位首席执行官都会告诉你美国人工智能的主要瓶颈是什么：
+
+产生能源并扩大电网。因此，我们可能会看到 $XLU 中乏味的公用事业和电力生产商被强烈重新评级，因为：
+
+1. AI推理+训练极限爬升和GW级DC需求。2. 超大规模资本开支涌入该行业。3. 降息顺风。最重要的是。事实是：
+
+美国作为一个国家必须重建其电网才能赢得地缘政治军备竞赛。</div>
+        <div class="tweet-foot">
+          <span>likes 609 / retweets 52 / replies 49 / views 137251</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="35">
+        <div class="tweet-head">
+          <span class="mono">2026-02-22 11:56</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@aditya_martand You should build your own conviction, not follow others. 
+
+I&#x27;m just sharing my thought process behind my own trade on $XLU in case others find the ideas interesting + can learn something.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@aditya_martand You should build your own conviction, not follow others. 
+
+I&#x27;m just sharing my thought process behind my own trade on $XLU in case others find the ideas interesting + can learn something.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025419502725595329" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@aditya_martand 你应该建立自己的信念，而不是跟随别人。我只是在 $XLU 上分享我自己的交易背后的思考过程，以防其他人觉得这些想法很有趣 + 可以学到一些东西。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2240</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="36">
+        <div class="tweet-head">
+          <span class="mono">2026-02-22 00:11</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@Trylanol I don&#x27;t think this is a trade that requires much urgency tbh, $XLU moves like a dinosaur. This is just one trade idea of many!
+
+Probably could enter this like half a year later too if you decide for yourself. Power/grid is likely a bottleneck going into 2028 as well.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Trylanol I don&#x27;t think this is a trade that requires much urgency tbh, $XLU moves like a dinosaur. This is just one trade idea of many!
+
+Probably could enter this like half a year later too if you decide for yourself. Power/grid is likely a bottleneck going into 2028 as well.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025241985901363480" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Trylanol 我不认为这是一项需要太多紧迫性的交易，$XLU 像恐龙一样移动。这只是众多贸易想法之一！如果你自己决定的话，大概半年后也可以进入。电力/电网也可能成为 2028 年的瓶颈。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 4178</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="37">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 23:40</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">So just to give you an example on leverage with $XLU - you can buy contracts for 60 cent premium at higher strikes when the stock price is $43.6. 
+
+The notional exposure might be 72 times, so you can control $4360 worth of stock for $60 if it goes ITM.
+
+2x leverage doesn&#x27;t quite get to that. But of course the option pl...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So just to give you an example on leverage with $XLU - you can buy contracts for 60 cent premium at higher strikes when the stock price is $43.6. 
+
+The notional exposure might be 72 times, so you can control $4360 worth of stock for $60 if it goes ITM.
+
+2x leverage doesn&#x27;t quite get to that. But of course the option play is extremely risky, I just wanted to share my thoughts.
+
+I&#x27;m sure others can come to other directional longs based on the overall thesis if there&#x27;s one or two winners in the power basket.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025234298295779416" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>因此，仅举一个使用 $XLU 杠杆的例子 - 当股价为 43.6 美元时，您可以以更高的行使价以 60 美分的溢价购买合约。名义风险敞口可能是 72 倍，因此如果 ITM 上市，您可以以 60 美元的价格控制价值 4360 美元的股票。2 倍杠杆并不能完全达到这个目的。但当然，期权玩法风险极大，我只是想分享我的想法。我相信，如果权力篮子里有一个或两个赢家，其他人可以根据总体论文进行其他定向多头。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3957</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="38">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 23:19</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@Ren_aramb Yeah power/grid is extremely boring. Only up 200% since the 1990s so IV is priced extremely low.
+
+I just think AI inference/training ramp alongside hyperscaler capex + rate cuts might just be that unique moment in history with $XLU
+
+I don&#x27;t know if I&#x27;m right or not, we&#x27;ll see. https://t.co/qhBgCX5bFo</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Ren_aramb Yeah power/grid is extremely boring. Only up 200% since the 1990s so IV is priced extremely low.
+
+I just think AI inference/training ramp alongside hyperscaler capex + rate cuts might just be that unique moment in history with $XLU
+
+I don&#x27;t know if I&#x27;m right or not, we&#x27;ll see. https://t.co/qhBgCX5bFo</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025228955335479385" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Ren_aramb 是的，电力/电网非常无聊。自 20 世纪 90 年代以来仅上涨了 200%，因此 IV 的价格极低。我只是认为 AI 推理/训练的提升以及超大规模资本开支 + 降息可能只是 $XLU 历史上独一无二的时刻
+
+我不知道我说得对还是错，我们拭目以待吧。https://t.co/qhBgCX5bFo</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 8267</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="39">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 23:13</span>
+          <span><span class="chip red">$BE</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">few things:  
+
+1. behind the meter seems like a bandaid for the massive GW power required by AI DCs. 
+2.  grid needing massive upgrades isn&#x27;t a bear case? probably gives them even more pricing power
+3. soec and smr are probably later on past 2029, this is a 2year trade.  
+
+$XLU is an ETF so I don&#x27;t need to pick individ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">few things:  
+
+1. behind the meter seems like a bandaid for the massive GW power required by AI DCs. 
+2.  grid needing massive upgrades isn&#x27;t a bear case? probably gives them even more pricing power
+3. soec and smr are probably later on past 2029, this is a 2year trade.  
+
+$XLU is an ETF so I don&#x27;t need to pick individual winners like $BE. I&#x27;m long power/grid as a sector rather than getting the individual names right.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025227339408490717" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>几件事： 
+
+1. 对于 AI DC 所需的海量 GW 电力来说，电表后面似乎是一个创可贴。2. 电网需要大规模升级，这不是一个难以承受的情况吗？可能会给他们更多的定价权
+3. soec和smr可能会在2029年晚些时候，这是一个2年的交易。$XLU 是一只 ETF，所以我不需要像 $BE 那样挑选个人赢家。我看好电力/电网作为一个部门，而不是正确地看待个别名字。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 7816</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="40">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 23:08</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Up for you to decide based on risk management if you want to do the trade yourself (more ITM usually the safer it is).   
+
+Just wanted to present my own macro thesis on power/grid as a long and that $XLU has low volatility given previous history.   
+
+Just be really careful about spread with limit ordersif you go very O...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Up for you to decide based on risk management if you want to do the trade yourself (more ITM usually the safer it is).   
+
+Just wanted to present my own macro thesis on power/grid as a long and that $XLU has low volatility given previous history.   
+
+Just be really careful about spread with limit ordersif you go very OTM. Usually the lower strikes have a more normal ~14% IV given they&#x27;re more liquid.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025226168493122043" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>如果您想自己进行交易，您可以根据风险管理来决定（ITM 越多通常越安全）。只是想展示我自己关于电力/电网的宏观论文，鉴于之前的历史，$XLU 的波动性较低。如果您的价差非常大，请务必小心限价订单的价差。通常，较低的罢工有更正常的 ~14% IV，因为它们更具流动性。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 6031</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="41">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 23:05</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Thanks, seeing the Elon Musk interview regarding power as a bottleneck helped build some conviction. 
+
+Here&#x27;s usually directionally right about things given he&#x27;s running an AI company.. 
+
+My guess is instituions might rotate into electricity/grid like $XLU over the next year and half.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Thanks, seeing the Elon Musk interview regarding power as a bottleneck helped build some conviction. 
+
+Here&#x27;s usually directionally right about things given he&#x27;s running an AI company.. 
+
+My guess is instituions might rotate into electricity/grid like $XLU over the next year and half.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025225262926102837" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>谢谢，看到埃隆·马斯克关于电力是瓶颈的采访有助于建立一些信念。鉴于他经营着一家人工智能公司，这通常是正确的。我的猜测是，在接下来的一年半内，机构可能会像 $XLU 一样转向电力/电网。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 6424</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="42">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 22:52</span>
+          <span><span class="chip red">$CEG</span><span class="chip red">$TLN</span><span class="chip red">$VST</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">This is a riskier option for maximum returns using OTM options in an extremely low volatility ETF in $XLU for US power/grid exposure.
+
+You won&#x27;t get the same returns from $VST, $CEG, or $TLN, even if they double. 
+
+Don&#x27;t need to pick individual winners with ETFs, sector as a whole should benefit.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">This is a riskier option for maximum returns using OTM options in an extremely low volatility ETF in $XLU for US power/grid exposure.
+
+You won&#x27;t get the same returns from $VST, $CEG, or $TLN, even if they double. 
+
+Don&#x27;t need to pick individual winners with ETFs, sector as a whole should benefit.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025222163251540079" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>对于美国电力/电网风险敞口，在极低波动性 ETF（以 $XLU 计价）中使用 OTM 期权，这是一种风险较高的最大回报选择。您不会从 $VST、$CEG 或 $TLN 获得相同的回报，即使它们翻倍。无需通过 ETF 挑选个别赢家，整个行业应该受益。</div>
+        <div class="tweet-foot">
+          <span>likes 53 / retweets 1 / replies 4 / views 22700</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="43">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 22:45</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$CEG</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$VST</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">If I had to turn $100k -&gt; $1M in 1 year. 
+
+It would be: $XLU OTM 2 year leaps 
+
+2026 is the first time in modern history markets have: 
+
+-  falling interest rates
+- AI inference + buildout
+
+There&#x27;s a potential ~40%  for XLU (1000%+ OTM), from mapping. 
+
+Here&#x27;s my macro thesis:
+
+1. Rate Cuts
+
+When the Fed cuts rates wit...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If I had to turn $100k -&gt; $1M in 1 year. 
+
+It would be: $XLU OTM 2 year leaps 
+
+2026 is the first time in modern history markets have: 
+
+-  falling interest rates
+- AI inference + buildout
+
+There&#x27;s a potential ~40%  for XLU (1000%+ OTM), from mapping. 
+
+Here&#x27;s my macro thesis:
+
+1. Rate Cuts
+
+When the Fed cuts rates without a recession, utility debt becomes cheaper, and institutional rotates low-yielding cash to for utility dividends. 
+
+This causes immediate valuation multiple expansion:
+
+1995: The S&amp;P Utilities sector returned +31.3% in 1995 and another +12.1% in 1996 - ~47% cumulative return
+
+2019 Mid-Cycle Cut: Result: XLU generated a +25.9% total return in that single year
+
+Standard soft-landing rate-cut cycle naturally maps to a 25% to 30% baseline return. And we&#x27;re entering a new rate cut cycle in 2026. 
+
+2. The Infrastructure Supercycle Capex
+
+Infra CapEx gives the sector compounding earnings growth. Following the early 2000s, utilities entered a massive CapEx cycle to modernize aging grid infrastructure.
+
+Because they were constantly spending and expanding their guaranteed rate base, XLU returned +23.5% in 2004, +16.3% in 2005, +20.8% in 2006, and +18.4% in 2007. 
+
+However this time:
+
+The $800B+ AI buildout of 2026 makes the 2004 grid modernization look like pennies. 
+
+So you have Valuation Multiple Expansion (+15% to +20%), from rate cuts from #1.  EPS growth (+18% to +20%) from #2 from capex spend historically. Just from a history lesson. 
+
+But 2026 is the most unique moment in history from AI usage.
+
+Just from my own model projections as all former estimates are likely wrong from extreme AI ramp (eg. DOE/LBNL projections): 
+
+Hyperscaler CapEx Inflows (Spend) - (Amazon, Microsoft, Meta, Google, Oracle) into DCs est:
+
+2024: $220 Billion
+2025: $350 Billion
+2026: $550 Billion
+2027: $800 Billion
+2028: $1.2 Trillion (Growth: +445% over 4 years)
+
+U.S. Data Center Power Usage:
+
+2024: 190 TWh
+2025: 280 TWh
+2026: 430 TWh
+2027: 650 TWh
+2028: 980 TWh (Growth: +415% over 4 years)
+
+% of Total U.S. Electricity Consumed by AI:
+
+2024: 4.5% of the U.S. grid
+2025: 6.6%
+2026: 8.2-10.2%
+2027: 13.4-15.4%
+2028: 21.3-23.3%
+
+Lawrence Berkeley National Laboratory and the Department of Energy seem off by AI usage (they&#x27;re projecting ~12% by 2028)
+
+Physical Grid Capacity Demand:
+2024: 18 GW
+2025: 35 GW
+2026: 65 GW
+2027: 105 GW
+2028: 160 GW
+
+Basically you can just see 2026 into 2028 being the inflection point whereas 2024-2025 where slower years on the ramp up. 
+
+Then there&#x27;s the &quot;Desperation Premium&quot; for independent companies.  Because grid capacity is sold out, tech giants are paying massive premiums to utilities to cut the line. eg. PJM Interconnection (Virginia &quot;Data Center Alley&quot;), capacity prices spiked from $28.92 per MW-day in 2024 to an unfathomable $329.17 per MW-day for 2026/2027.
+
+$VST or Constellation are a large weighting in the ETF as independent power producers. 
+
+Across the board, you can see the extreme ramp from 2026 (now) into 2028 compared to previous years, alongside extreme capex going into building the infrastructure. 
+
+2026 is the first time in modern market history that every single thing is firing at the same time for the boring grid/power sector with AI as the biggest tailwind. 
+
+And as Elon quotes it: &quot;Billions of dollars of the most advanced hardware. Sitting dark. Not because the chips won&#x27;t work. Because there&#x27;s not enough electricity to run on them&quot;. 
+
+Again 2026 is an absolute historical anomaly due to AI and MMs have priced in historical IV (extremely flat ~14%-16%) for OTM calls. 
+
+We&#x27;re seeing an explosion in AI inference (beyond previous measurements) as well as training (per OpenAI report today). 
+
+So the most boring sector on earth (power/grid), might just be the start of a major rally due to hyperscaler/gov spend into grid improvements -&gt; extreme power consumption from AI inference/training -&gt; rate cuts and others. 
+
+This is just my personal thesis, options come with risk and magnifies downside too. These are also my own projections, no certainty if they will exceed or be lower than them. 
+
+But basically:
+
+2026 is an absolute historical anomaly.
+
+New bottleneck in the US is power. 
+
+There&#x27;s extreme demand from AI, extreme capex, rate cuts:  
+
+$XLU looks like the best trade for exposure. 
+
+Time will tell if this is right or not.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025220219602706881" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>如果我必须在 1 年内赚到 10 万美元 -&gt; 100 万美元。它将是：$XLU OTM 2 年跳跃 
+
+2026 年是现代历史上市场首次出现： 
+
+- 利率下降
+- AI推理+构建
+
+从映射来看，XLU 的潜力约为 40%（1000%+ OTM）。这是我的宏观论文：
+
+1. 降息
+
+当美联储在没有经济衰退的情况下降息时，公用事业债务就会变得更便宜，机构将低收益现金转向公用事业股息。这会导致立即估值倍数扩张：
+
+1995 年：标普公用事业板块在 1995 年的回报率达到了 +31.3%，在 1996 年又达到了 +12.1%——累积回报率约为 47%
+
+2019 年周期中期削减：结果：XLU 在当年创造了 +25.9% 的总回报
+
+标准的软着陆降息周期自然对应着 25% 至 30% 的基线回报。我们将在 2026 年进入新的降息周期。2. 基础设施资本开支超级周期
+
+基础设施资本开支为该行业带来复合收益增长。2000 年代初之后，公用事业公司进入了大规模的资本开支周期，以实现老化电网基础设施的现代化。由于他们不断支出并扩大保证利率基础，XLU 2004 年的回报率为 +23.5%，2005 年为 +16.3%，2006 年为 +20.8%，2007 年为 +18.4%。然而这一次：
+
+2026 年花费 800B+ 的人工智能建设使得 2004 年的电网现代化看起来微不足道。因此，从#1 开始降息，估值倍数扩张（+15% 至+20%）。每股收益增长（+18% 至+20%），从历史上的资本开支排名第二。刚刚从历史课上学到的。但 2026 年是人工智能使用历史上最独特的时刻。仅根据我自己的模型预测，因为极端 AI 斜坡的所有先前估计都可能是错误的（例如 DOE/LBNL 预测）： 
+
+超大规模资本开支流入（支出）-（亚马逊、微软、Meta、谷歌、甲骨文）流入数据中心：
+
+2024 年：2200 亿美元
+2025 年：3500 亿美元
+2026 年：5500 亿美元
+2027 年：8000 亿美元
+2028 年：1.2 万亿美元（增长：4 年内增长 445%）
+
+美国数据中心用电量：
+
+2024 年：190 太瓦时
+2025 年：280 太瓦时
+2026 年：430 太瓦时
+2027 年：650 太瓦时
+2028 年：980 太瓦时（增长：4 年内增长 415%）
+
+人工智能占美国总电力消耗的百分比：
+
+2024 年：美国电网的 4.5%
+2025 年：6.6%
+2026年：8.2-10.2%
+2027年：13.4-15.4%
+2028年：21.3-23.3%
+
+劳伦斯伯克利国家实验室和能源部似乎对人工智能的使用感到失望（他们预计到 2028 年将达到约 12%）
+
+物理电网容量需求：
+2024年：18吉瓦
+2025 年：35 吉瓦
+2026年：65吉瓦
+2027 年：105 吉瓦
+2028年：160吉瓦
+
+基本上你可以看到 2026 年到 2028 年是拐点，而 2024 年到 2025 年是增长较慢的年份。然后是独立公司的“绝望溢价”。由于电网容量已售罄，科技巨头正在向公用事业公司支付巨额溢价以切断线路。例如。PJM Interconnection（弗吉尼亚州“数据中心巷”）的容量价格从 2024 年每兆瓦日 28.92 美元飙升至 2026/2027 年每兆瓦日 329.17 美元。$VST 或 Constellation 作为独立电力生产商在 ETF 中占有很大的权重。总体而言，与前几年相比，从 2026 年（现在）到 2028 年，您可以看到极端的增长，同时用于建设基础设施的资本开支也极端巨大。2026 年是现代市场历史上第一次，无聊的电网/电力行业的所有事物同时启动，人工智能成为最大的推动力。正如埃隆引用的那样：“数十亿美元的最先进硬件。坐在黑暗中。不是因为芯片无法工作。因为没有足够的电力来运行它们”。再次强调，2026 年是一个绝对的历史异常，因为人工智能和做市商已经为 OTM 看涨期权定价了历史 IV（极其持平~14%-16%）。我们看到人工智能推理（超出了之前的测量）和训练（根据今天的 OpenAI 报告）的爆炸式增长。因此，地球上最无聊的行业（电力/电网）可能只是大规模反弹的开始，因为超大规模/政府在电网改进方面的支出 -&gt; 人工智能推理/训练带来的极端功耗 -&gt; 降价等。这只是我的个人论文，选择伴随着风险，也会放大负面影响。这些也是我自己的预测，不确定是否会超过或低于它们。但基本上：
+
+2026 年绝对是历史异常。美国的新瓶颈是电力。人工智能的巨大需求、极端的资本开支、降息： 
+
+$XLU 看起来是曝光的最佳交易。时间会证明这是否正确。</div>
+        <div class="tweet-foot">
+          <span>likes 1691 / retweets 144 / replies 124 / views 562545</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">机构滞后 / 暗池与资金流</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="44">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 20:38</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@r0ck3t23 For people wondering the best trade for what Elon just said: 
+
+$XLU long calls for US power/grid exposure, just putting it out there.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@r0ck3t23 For people wondering the best trade for what Elon just said: 
+
+$XLU long calls for US power/grid exposure, just putting it out there.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025188397149835640" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@r0ck3t23 对于那些想知道埃隆刚才所说的最佳交易的人： 
+
+$XLU 长期呼吁美国电力/电网投资，只是将其放在那里。</div>
+        <div class="tweet-foot">
+          <span>likes 382 / retweets 12 / replies 18 / views 31825</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="45">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 19:06</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@jCarterinvests Thanks! Considering my sub was $1 for extra shower thoughts space, that tenfold $10 profit doesn’t sound like much lol!
+
+I’ll publish a more quantitative reasoning why I think $XLU is a once a generation long later today. 
+
+Before was more of a high level directional reasoning</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@jCarterinvests Thanks! Considering my sub was $1 for extra shower thoughts space, that tenfold $10 profit doesn’t sound like much lol!
+
+I’ll publish a more quantitative reasoning why I think $XLU is a once a generation long later today. 
+
+Before was more of a high level directional reasoning</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025165226778427734" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@jCarterinvests 谢谢！考虑到我的潜艇需要 1 美元才能获得额外的淋浴空间，十倍的 10 美元利润听起来并不多，哈哈！很久以后，我将发布更定量的推理，解释为什么我认为 $XLU 是一代人一次的。之前更多的是高级定向推理</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 6779</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="46">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 15:35</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$AIRO</span><span class="chip red">$AVAV</span><span class="chip red">$AXTI</span><span class="chip red">$CIFR</span><span class="chip red">$CPSH</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CVX</span><span class="chip red">$ETOR</span><span class="chip red">$EWY</span><span class="chip red">$FORM</span><span class="chip red">$GLXY</span><span class="chip red">$HOOD</span><span class="chip red">$INFQ</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NBIS</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SMCI</span><span class="chip red">$SOFI</span><span class="chip red">$VLN</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Year to Date: 316.4%
+
+From January 2026 into February 2026.
+
+Reflection of my short term trades and longs:
+
+&gt; Swing traded tax harvested stocks like $GLXY, $SMCI, and $IREN start of the year
+
+&gt; Rode Venezuela stocks from Gold Reserve, $AVAV, to $CVX (calls) up
+
+&gt; Bought into defense like $LPTH, $OSS, $AIRO after invasi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Year to Date: 316.4%
+
+From January 2026 into February 2026.
+
+Reflection of my short term trades and longs:
+
+&gt; Swing traded tax harvested stocks like $GLXY, $SMCI, and $IREN start of the year
+
+&gt; Rode Venezuela stocks from Gold Reserve, $AVAV, to $CVX (calls) up
+
+&gt; Bought into defense like $LPTH, $OSS, $AIRO after invasion from war + $ONDS “follow the leader” catalyst 
+
+&gt; Catalyst traded $INTC and timed earnings correctly. 
+
+&gt; Swing traded $CRDO off wire color change fears
+
+&gt; Swing traded $MRVL after erroneous reporting on hyperscaler client losses
+
+&gt; Got earnings right like $META
+
+&gt; Portfolio margined into $NBIS and $CIFR on the major selloff to $70 and $11.
+
+&gt; Swing trades things from $HOOD drop to $CRDO drop into recovery.
+
+&gt; Bought Bitcoin dip to $73k and heavy margin on $62k into recovery
+
+&gt; Recovery plays like $ETOR after selloff and ER helped.
+
+&gt; Getting catalysts on companies like $RPI correct
+
+&gt; Time lag arbitrages between Asian equities and European/US time zones.
+
+&gt; IV expansion off $EWY and other indexes.
+
+&gt; Timing rotation into power/grids like $XLU and currently swing trading stuff like $RDDT,
+
+I’m sure I missed a bunch but these were the main ones I posted about!
+
+On the side I would day trade:
+
+Eg. $ORCL 8% selloff from offering into recovery or random 10% selloffs on immaterial $SOFI sellside downgrades. 
+
+I don’t post stuff like these on my main timeline since I don’t want to influence when people buy/sell. 
+
+Just want to give directional ideas and let people come to their own conclusions. 
+
+Aside from that I’m happy everything went up today, including my hedges. 
+
+This is all while my core long portfolio from:
+
+- Photonics and memory from SK Hynix to $AXTI to supply chain bottlenecks like $AEHR and $FORM have been mogging Burry’s $PLTR $415/year returns.
+
+- Longs from Korean/Japanese equities like Nittobo, Kioxia, and Unimicron have hard carried US equity drawdowns.
+
+Not everything in my portfolio is green like $CRCL, $CPSH, $VLN, $NBIS or recently $INFQ.
+
+But what matters is you have more concentration in green than red. This is all while SPY is YTD: .55% and most high beta stocks are heavily red YTD.
+
+I also don’t want people to follow along everything since sector rotation, option arbitrage, and substrate bottlenecks are hard to digest. Since I also rotate around like 30 different stocks based on macro/earning catalysts, whereas most people focus on a few and hold on for years. 
+
+But it does hurt when more if get something wrong with short term drawdowns from Q4 2025 (if people bought short term options) and it’s only now recovered past cost average. 
+
+However, I’m extremely confident in core longs like $NBIS to strongly outperform in due time.
+
+Hopefully people can take away one or two trade ideas that they find interesting or learn something!
+
+——
+
+Just some reflection, i think a reason for my recent popularity is I’m not trying to sell anything. This is also not my full time job (I run a tech company) and I was just doing this for enjoyment, so very surprised by the recent popularity.
+
+I do think my edge is probably information synthesis and mapping -&gt; discovering alpha markets missed -&gt; into actionable long ideas across fintech and semis.
+
+Compared to accounts that publish breaking news or excel in breakdowns of one or two specific stocks. 
+
+Regardless, I publish all my ideas for free just to get fulfillment if I can help others. 
+
+So it does bring me gratitude that people find my ideas interesting or high-signal enough to listen.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025112091967811613" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>年初至今：316.4%
+
+从2026年1月到2026年2月。我的短期交易和多头交易的反映：
+
+&gt; 年初波动交易的税收股票，如 $GLXY、$SMCI 和 $IREN
+
+&gt; 委内瑞拉股票从黄金储备 $AVAV 上涨至 $CVX（看涨期权）
+
+&gt; 战争入侵后，像 $LPTH、$OSS、$AIRO 一样投入国防 + $ONDS “跟随领导者”催化剂 
+
+&gt; Catalyst 交易 $INTC 并正确计时盈利。&gt; 摇摆交易 $CRDO 线外颜色变化担忧
+
+&gt; 在错误报告超大规模客户损失后，Swing 交易 $MRVL
+
+&gt; 像 $META 一样获得正确的收入
+
+&gt; 在重大抛售中，投资组合保证金达到 $NBIS 和 $CIFR，分别达到 70 美元和 11 美元。&gt; Swing 交易从 $HOOD 下降到 $CRDO 下降进入复苏。&gt; 买入比特币跌至 73,000 美元，并以 62,000 美元的巨额利润进入复苏
+
+&gt; 抛售后的复苏就像 $ETOR 一样，ER 有所帮助。&gt; 让 $RPI 等公司的催化剂正确
+
+&gt; 亚洲股票与欧洲/美国时区之间的时差套利。&gt; $EWY 和其他索引的 IV 扩展。&gt; 定时轮换到电力/电网（例如 $XLU）以及当前的波动交易（例如 $RDDT），
+
+我确信我错过了很多，但这些是我发布的主要内容！另一方面，我会进行日间交易：
+
+例如。$ORCL 因发行进入复苏而遭受 8% 的抛售，或由于 $SOFI 卖方降级而随机发生 10% 的抛售。我不会在我的主时间轴上发布此类内容，因为我不想影响人们的购买/出售时间。只是想给出方向性的想法，让人们得出自己的结论。除此之外，我很高兴今天一切都上涨了，包括我的树篱。这就是我的核心长期投资组合：
+
+- 从 SK Hynix 到 $AXTI 的光子学和内存，再到 $AEHR 和 $FORM 等供应链瓶颈，一直拖累 Burry 的 $PLTR $415/年回报。- Nittobo、Kioxia 和 Unimicron 等韩国/日本股票的多头难以承受美国股票的下跌。我的投资组合中并非所有东西都是绿色的，比如 $CRCL、$CPSH、$VLN、$NBIS 或最近的 $INFQ。但重要的是你对绿色的关注度比对红色的关注度更高。这一切都是在 SPY 年初至今为：0.55% 且大多数高贝塔股票年初至今为严重红色的情况下进行的。我也不希望人们跟随一切，因为行业轮换、期权套利和基板瓶颈很难消化。因为我还会根据宏观/盈利催化剂轮换大约 30 只不同的股票，而大多数人只关注少数股票并持有多年。但如果从 2025 年第四季度开始的短期回撤（如果人们购买短期期权）出现问题，而且现在才恢复到过去的平均成本，那么这确实会造成伤害。然而，我对像 $NBIS 这样的核心多头在适当的时候表现强劲充满信心。希望人们能够带走一两个他们觉得有趣的贸易想法或学到一些东西！——
+
+只是一些反思，我认为我最近受欢迎的一个原因是我不想卖任何东西。这也不是我的全职工作（我经营一家科技公司），我这样做只是为了享受，所以对最近的流行感到非常惊讶。我确实认为我的优势可能是信息合成和映射 -&gt; 发现错过的阿尔法市场 -&gt; 转化为跨金融科技和半导体的可操作的长期想法。与发布突发新闻或擅长一两只特定股票细分的账户相比。无论如何，我免费发布我所有的想法，只是为了在我可以帮助别人的情况下获得满足。因此，人们发现我的想法很有趣或有足够的信号力值得倾听，这确实让我很感激。</div>
+        <div class="tweet-foot">
+          <span>likes 1925 / retweets 52 / replies 157 / views 471374</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="47">
+        <div class="tweet-head">
+          <span class="mono">2026-02-20 18:57</span>
+          <span><span class="chip red">$CVX</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@Sandeman52 Thanks! Biggest concentration in memory, photonics, and semi bottlenecks right now. Tons of random Japanese and Korean supply chain names like Nittobo and SK Hynix.
+
+Shifting a lot of my fintech positions into power like $XLU leaps + holding some $CVX leaps.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Sandeman52 Thanks! Biggest concentration in memory, photonics, and semi bottlenecks right now. Tons of random Japanese and Korean supply chain names like Nittobo and SK Hynix.
+
+Shifting a lot of my fintech positions into power like $XLU leaps + holding some $CVX leaps.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024800666695442788" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Sandeman52 谢谢！目前最大的关注点是内存、光子学和半瓶颈。大量随机的日本和韩国供应链名称，例如 Nittobo 和 SK Hynix。将我的许多金融科技职位转变为权力，例如 $XLU 跳跃 + 持有一些 $CVX 跳跃。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 7270</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="48">
+        <div class="tweet-head">
+          <span class="mono">2026-02-20 18:34</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$CEG</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$VST</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@barbell_ideas Maybe read my other posts before commenting?
+
+This was literally today
+
+https://t.co/cNeCntIE0t</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@barbell_ideas Maybe read my other posts before commenting?
+
+This was literally today
+
+https://t.co/cNeCntIE0t</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024794664482795571" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@barbell_ideas 也许在发表评论之前先阅读我的其他帖子？这就是今天
+
+https://t.co/cNeCntIE0t</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2737</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="49">
+        <div class="tweet-head">
+          <span class="mono">2026-02-20 03:40</span>
+          <span><span class="chip red">$VST</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Appreciate it! Thing to note is the IV is one of the lowest out of all the index’s since this hasn’t moved since the 2000’s. 
+
+But I think this year is its time to shine, esp. with different index weightings toward independent companies like $VST.
+
+I’d expect $XLU IV 14% -&gt; 26-28% if things go as planned.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Appreciate it! Thing to note is the IV is one of the lowest out of all the index’s since this hasn’t moved since the 2000’s. 
+
+But I think this year is its time to shine, esp. with different index weightings toward independent companies like $VST.
+
+I’d expect $XLU IV 14% -&gt; 26-28% if things go as planned.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024569714664722703" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>欣赏它！值得注意的是，IV 是所有指数中最低的之一，因为自 2000 年代以来一直没有变化。但我认为今年是它闪耀的时候，尤其是。对像 $VST 这样的独立公司有不同的指数权重。如果事情按计划进行，我预计 $XLU IV 为 14% -&gt; 26-28%。</div>
+        <div class="tweet-foot">
+          <span>likes 22 / retweets 0 / replies 1 / views 9865</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="50">
+        <div class="tweet-head">
+          <span class="mono">2026-02-20 03:15</span>
+          <span><span class="chip red">$CEG</span><span class="chip red">$VVST</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@adenois few things, $CEG, $VVST and others are independent so they have more pricing power. they&#x27;re also a large % of $XLU concentration +  power capacity prices are skyrocking.
+
+And with AI, yes demand &amp;gt; supply and mag7 is largely funding this new historic grid expansion.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@adenois few things, $CEG, $VVST and others are independent so they have more pricing power. they&#x27;re also a large % of $XLU concentration +  power capacity prices are skyrocking.
+
+And with AI, yes demand &amp;gt; supply and mag7 is largely funding this new historic grid expansion.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024563428220940628" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@aenois 很少有东西，$CEG、$VVST 和其他东西是独立的，所以他们有更多的定价权。它们也是 $XLU 集中度的很大一部分 + 电力容量价格飞涨。对于人工智能来说，是的，需求 &gt; 供应，而 mag7 很大程度上为这一新的历史性电网扩张提供了资金。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 5472</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="51">
+        <div class="tweet-head">
+          <span class="mono">2026-02-20 03:04</span>
+          <span><span class="chip red">$CEG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">@SnakePoops Risk is largely overstated. they still go directly to $CEG or others in $XLU to pull power directly for &quot;off-grid&quot;. Lot of regulatory problems too.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@SnakePoops Risk is largely overstated. they still go directly to $CEG or others in $XLU to pull power directly for &quot;off-grid&quot;. Lot of regulatory problems too.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024560808475447316" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@SnakePoops 风险在很大程度上被夸大了。他们仍然直接前往 $CEG 或 $XLU 的其他地方直接拉电以进行“离网”。监管问题也很多。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 7200</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="52">
+        <div class="tweet-head">
+          <span class="mono">2026-02-20 02:56</span>
+          <span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Thanks, I do think $XLU is a once a generation type long due of AI creating critical importance to the boring grid sector.    
+
+Don&#x27;t think we&#x27;ve ever seen a shift like this in awhile and IV is pricing in historical averages (flat since the dawn of time).   
+
+US will spend a lot to upgrade the grid and demand cannot be...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Thanks, I do think $XLU is a once a generation type long due of AI creating critical importance to the boring grid sector.    
+
+Don&#x27;t think we&#x27;ve ever seen a shift like this in awhile and IV is pricing in historical averages (flat since the dawn of time).   
+
+US will spend a lot to upgrade the grid and demand cannot be fulfilled from US hyperscalers. 
+
+Usually high interest rates hurt, but there&#x27;s the tailwind of additional rate cuts too.  So, I do think this is a potential triple digit return long if my thesis plays out correctly.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024558754130481336" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>谢谢，我确实认为 $XLU 是一种一代类型，因为人工智能对无聊的网格领域至关重要。不要以为我们已经有一段时间没有见过这样的转变了，IV 的定价是历史平均水平（自创世以来一直持平）。美国将花费大量资金升级电网，而美国超大云厂商无法满足需求。通常高利率会造成伤害，但进一步降息也会带来负面影响。因此，我确实认为，如果我的论文正确进行，这将是一个潜在的三位数回报。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 6039</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="53">
+        <div class="tweet-head">
+          <span class="mono">2026-02-20 02:48</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$CEG</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$VST</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Trade Idea: Long OTM $XLU leaps (2 years, Dec 2027/Jan 2028).
+
+This feels like once-a-generation long due to AI. 
+
+XLU has concentration in $VST / $CEG power companies. 
+
+Two reasons:
+
+1. Paradigm shift due to AI DC electricity usage.
+
+2. Low option IV (~14%) based on historical averages (flat since 2000s).
+
+AI power u...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Trade Idea: Long OTM $XLU leaps (2 years, Dec 2027/Jan 2028).
+
+This feels like once-a-generation long due to AI. 
+
+XLU has concentration in $VST / $CEG power companies. 
+
+Two reasons:
+
+1. Paradigm shift due to AI DC electricity usage.
+
+2. Low option IV (~14%) based on historical averages (flat since 2000s).
+
+AI power usage is astronomical. 
+
+This cannot be understated.
+
+Never before in history have DCs use up this much GWs in power, especially when they require outputs of nuclear reactors for training LLMs.
+
+This forces $META, $AMZN, $GOOGL, and others to sign multi-year agreements to consume as much power as possible. And yet they still don&#x27;t have enough.
+
+-&gt; So, trillions would likely be poured into grid upgrades. 
+
+Usually interest rates hurt the sector but we&#x27;re going into more rate cuts, so it makes the sector a much better long. 
+
+OpenAI&#x27;s letter to congress pleaded the US to invest in energy as well to compete vs. China.
+
+So, this feels like a once-a-decade type long due to:
+
+- paradigm shift eating up any available power from AI
+- trillions in grid upgrades to compete vs. China
+- rate cuts. 
+
+And low IV pricing from historical averages.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024556607762550943" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>交易理念：做多 OTM $XLU 飞跃（2 年，2027 年 12 月/2028 年 1 月）。由于人工智能，这感觉像是一代人一次的事。XLU 专注于 $VST / $CEG 电力公司。两个原因：
+
+1. AI DC用电带来的范式转变。2. 基于历史平均值的低选项 IV（~14%）（自 2000 年代以来持平）。AI 的耗电量是天文数字。这一点不可低估。历史上，DC 从未使用过如此多的 GW 电力，特别是当它们需要核反应堆输出来训练 LLM 时。这迫使 $META、$AMZN、$GOOGL 和其他公司签署多年协议以消耗尽可能多的电力。但他们仍然不够。-&gt; 因此，可能会投入数万亿美元用于电网升级。通常利率会损害该行业，但我们将进一步降息，因此这使得该行业的多头表现更好。OpenAI 在给国会的信中恳求美国投资能源以及与中国竞争。所以，这感觉像是十年一次的类型，因为：
+
+- 范式转变吞噬了人工智能的任何可用力量
+- 数万亿电网升级以与中国竞争
+- 降息。且 IV 定价低于历史平均水平。</div>
+        <div class="tweet-foot">
+          <span>likes 666 / retweets 70 / replies 56 / views 340193</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=XLU">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

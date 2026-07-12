@@ -1,0 +1,2348 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$IBKR 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$IBKR 历史推文</h1>
+      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b>55</b></div>
+        <div class="stat-card"><span>历史推文</span><b>55</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2025-09-16</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-05-20</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用） 4</span><span class="chip blue">关税 / 宏观冲击买点 3</span><span class="chip blue">机构滞后 / 暗池与资金流 3</span><span class="chip blue">Mag7 客户集中度过滤 2</span><span class="chip blue">信念分层、仓位与时点 2</span><span class="chip blue">签约 ARR vs 市值错配 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-05-20 21:10</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@a_ahmd31117 If they do the ADR route, you can just convert it through $IBKR through adr conversion and start trading it on Nasdaq. You keep it unrealized that way too.
+
+Costs a tiny fee though.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@a_ahmd31117 If they do the ADR route, you can just convert it through $IBKR through adr conversion and start trading it on Nasdaq. You keep it unrealized that way too.
+
+Costs a tiny fee though.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057086489247555851" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@a_ahmd31117 如果他们采用 ADR 路线，您只需通过 ADR 转换将其通过 $IBKR 进行转换，然后开始在纳斯达克进行交易。你也以这种方式保持它未实现。不过需要支付少量费用。</div>
+        <div class="tweet-foot">
+          <span>likes 81 / retweets 1 / replies 6 / views 7919</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-05-17 07:47</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">Wow I’ve hit 300k followers just now!
+
+What a milestone! My goal from the start was always to help retail from Day 0 instead of institutions.
+
+That being said… I’ve probably helped out $IBKR too much recently with thousands of new “Serenity Accounts?
+
+$HOOD retail DW… Working on something surprising for you all, just s...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Wow I’ve hit 300k followers just now!
+
+What a milestone! My goal from the start was always to help retail from Day 0 instead of institutions.
+
+That being said… I’ve probably helped out $IBKR too much recently with thousands of new “Serenity Accounts?
+
+$HOOD retail DW… Working on something surprising for you all, just stay tight. 
+
+Maybe 6-8 weeks? 
+
+Regardless happy to see so much validation of my thoughts. 
+
+And I hope whatever I do sets a lasting example for X about the positive sum nature of free information democratization.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2055797412053070128" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>哇，我现在已经有 30 万粉丝了！多么具有里程碑意义啊！我从一开始的目标就是从第 0 天开始帮助零售业而不是机构。话虽这么说……我最近可能通过数千个新的“宁静账户”为 $IBKR 提供了太多帮助？$HOOD 零售 DW...正在为你们所有人做一些令人惊讶的事情，保持紧张。也许6-8周？不管怎样，很高兴看到我的想法得到如此多的验证。我希望无论我做什么，都能为 X 树立一个关于自由信息民主化正和性质的持久榜样。</div>
+        <div class="tweet-foot">
+          <span>likes 2054 / retweets 44 / replies 176 / views 312016</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-05-10 06:16</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@kxshxl A lot of them are omnibus and held on behalf of pools of retail/institution like $IBKR. 
+
+You can kinda guess from some of them that it skews toward retail. 
+
+But names like Goldman Sachs are institutional.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@kxshxl A lot of them are omnibus and held on behalf of pools of retail/institution like $IBKR. 
+
+You can kinda guess from some of them that it skews toward retail. 
+
+But names like Goldman Sachs are institutional.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053237681619087550" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@kxshxl 其中很多都是综合性的，并代表 $IBKR 等零售/机构池持有。你可以从其中一些猜测它偏向零售。但像高盛这样的名字是机构性的。</div>
+        <div class="tweet-foot">
+          <span>likes 59 / retweets 1 / replies 4 / views 11626</span>
+        </div>
+        <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-05-10 05:56</span>
+          <span><span class="chip red">$IBKR</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">The US/West now controls majority of the shares of $SIVE.
+
+With Goldman Sachs/JP Morgan/Morgan Stanley and other US institutions entering. 
+
+US/West 46.8%:
+- Fidelity: 11.5% (retail) 
+- Charles Schawb: 11.4% (retail)
+- $IBKR: 9.3% (primarily retail) 
+- BNY Mellon: 4.2% (retail) 
+- Morgan Stanley Smith Barney: 3.1% (Ret...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The US/West now controls majority of the shares of $SIVE.
+
+With Goldman Sachs/JP Morgan/Morgan Stanley and other US institutions entering. 
+
+US/West 46.8%:
+- Fidelity: 11.5% (retail) 
+- Charles Schawb: 11.4% (retail)
+- $IBKR: 9.3% (primarily retail) 
+- BNY Mellon: 4.2% (retail) 
+- Morgan Stanley Smith Barney: 3.1% (Retail/Wealth management) 
+-Bank of America: 2.8%  (retail/Wealth management) 
+- BNY Mellon: .9% (institutional) 
+- Morgan Stanley Client Assets:  .7% (institutional) 
+- Bank of New York Mellon:  .5% (institution) 
+- JP Morgan:  .5% (institutional) 
+- J.P. Morgan Securities Plc:  .4% (institutional) 
+- Citibank New York: .3% (institutional) 
+- JP Morgan SE: .2% (institutional) 
+- Morgan Stanley:  .2% (institutional) 
+- JP Morgan Securities: .2% (institutional) 
+- BoFA Securities: .2%  (institutional)
+- Goldman Sachs:  .2% (institutional) 
+- Goldman Sachs International: .1% (institutional) 
+- Cbny-Rja-Client Asset - .1%  (retail/wealth) 
+
+Large % now owned US retail shareholders (eg. $IBKR on behalf of clients, probably majority retail some institutions). 
+
+The new but smaller JP Morgan Goldman Sachs, and  Citibank % positions are likely hedge funds or other institutions trying to build positions. 
+
+Europe &amp; Switzerland: 11.3% 
+- Clearstream: 6.2% 
+- UBS Switzerland: 1.6% 
+- Six SIS: 0.8% 
+- Euroclear Bank: 0.8% 
+- Saxo Bank: 0.6% 
+- BNP Paribas: 0.6% 
+- Caceis Bank / Intesa San Paolo: 0.2% each
+- KBC / LGT / Julius Baer: 0.1% each
+
+Swedish ~8.49%: 
+Försäkringsaktiebolaget Avanza Pension - 4.76%  
+Nordnet Pensionsförsäkring - 2.73% 
+Skandinaviska Enskilda - .2% 
+SEB Life International -  .1% 
+Nordea Bank Abp - 0.7%
+
+Canada/UK/Middle East ~.6%: 
+First Intl Bank of Israel - .3% 
+Royal Bank of  Canada - .1% 
+Royal Bank of Canada - .1% 
+HSBC - .1% 
+
+A special thank you to the Swedish Media doing the work of US institutions:
+
+The West now has ~58.7% ownership. Swedish is now down to 8.49% due to local media.
+
+I wonder if they realized what they&#x27;ve done now scaring off local investors now that it&#x27;s changed hands to US institutions/investors?
+
+The West have now acquired majority of the float before the CPO supercycle. 
+
+You can also start to see US institutions like JP Morgan or Goldman Sachs building start positions (on behalf of institutional investors), probably off of US retail taking profits. This is likely after $SIVE reached a certain MC threshold for fund mandates. 
+
+But a large % of it is still owned by US retail on places like $IBKR and Fidelity. (this is what I call frontrunning the institutions) 
+
+TLDR:  
+
+$SIVE went from majority: 
+-&gt; Swedish retail ownership 
+-&gt; US retail ownership 
+-&gt; gradual US Institution ownership as US retail takes profit or sells (if they figure out a way to scare off US retail like the Swedish media did).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053232613561909746" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>美国/西方现在控制着 $SIVE 的大部分股份。随着高盛/摩根大通/摩根士丹利等美国机构的进入。美国/西部 46.8%：
+- 保真度：11.5%（零售） 
+- Charles Schawb：11.4%（零售）
+- IBKR 美元：9.3%（主要是零售） 
+- 纽约梅隆银行：4.2%（零售） 
+- 摩根士丹利美邦：3.1%（零售/财富管理） 
+-美国银行：2.8%（零售/财富管理） 
+- 纽约梅隆银行：0.9%（机构） 
+- 摩根士丹利客户资产：0.7%（机构） 
+- 纽约梅隆银行：0.5%（机构） 
+- 摩根大通：0.5%（机构） 
+- 摩根大通证券公司：0.4%（机构） 
+- 纽约花旗银行：0.3%（机构） 
+- 摩根大通：0.2%（机构） 
+- 摩根士丹利：.2%（机构） 
+- 摩根大通证券：.2%（机构） 
+- 美银证券：.2%（机构）
+- 高盛：.2%（机构） 
+- 高盛国际：.1%（机构） 
+- Cbny-Rja-客户资产 - .1%（零售/财富） 
+
+现在有很大%的美国散户股东拥有（例如，代表客户的$IBKR，可能大部分是散户一些机构）。新的但规模较小的摩根大通高盛和花旗银行的%头寸可能是对冲基金或其他试图建立头寸的机构。欧洲和瑞士：11.3% 
+- 明讯银行：6.2% 
+- 瑞银瑞士：1.6% 
+- 六个 SIS：0.8% 
+- 欧洲清算银行：0.8% 
+- 盛宝银行：0.6% 
+- 法国巴黎银行：0.6% 
+- Caceis 银行 / Intesa San Paolo：各 0.2%
+- KBC / LGT / Julius Baer：各 0.1%
+
+瑞典语~8.49%： 
+Försäkringsaktiebolaget Avanza Pension - 4.76% 
+Nordnet Pensionsförsäkring - 2.73% 
+斯堪迪纳维斯卡恩斯基尔达 - .2% 
+SEB 人寿国际 - .1% 
+北欧银行 Abp - 0.7%
+
+加拿大/英国/中东 ~.6%： 
+以色列第一国际银行 - .3% 
+加拿大皇家银行 - .1% 
+加拿大皇家银行 - .1% 
+汇丰银行 - .1% 
+
+特别感谢瑞典媒体为美国机构所做的工作：
+
+西方现在拥有约 58.7% 的所有权。由于当地媒体的报道，瑞典语现在已降至 8.49%。我想知道他们是否意识到他们现在所做的事情吓跑了当地投资者，因为它已经转手给了美国机构/投资者？西方现在已经在毛棕榈油超级周期之前获得了大部分流通量。您还可以开始看到摩根大通或高盛等美国机构（代表机构投资者）建立起始头寸，可能是从美国散户获利了结中获利。这可能是在 $SIVE 达到基金授权的某个 MC 阈值之后。但其中很大一部分仍由 $IBKR 和 Fidelity 等美国零售机构持有。（这就是我所说的机构抢先交易） 
+
+总而言之： 
+
+$SIVE 来自多数派： 
+-&gt; 瑞典零售业所有权 
+-&gt; 美国零售所有权 
+-&gt; 随着美国零售业获利或出售，美国机构逐渐拥有所有权（如果他们像瑞典媒体那样找到一种吓跑美国零售业的方法）。</div>
+        <div class="tweet-foot">
+          <span>likes 1359 / retweets 111 / replies 126 / views 286559</span>
+        </div>
+        <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-05-08 17:18</span>
+          <span><span class="chip red">$BOA</span><span class="chip red">$FNF</span><span class="chip red">$IBKR</span><span class="chip red">$SCHW</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">What did I say? $SIVE was undergoing a transfer of Swedish ownership over to the US... 
+
+If I&#x27;m interpreting things right from the new cap table.
+
+The US / West now owns 42.18% of $SIVE: 
+
+~ $FNF (Fidelity) - 11.5% (US/West)
+~ $SCHW (Schwab) - 11.4% (US/West)
+~ $IBKR - 9.25% (US/International)
+~ Pershing (BNY Melon) - ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">What did I say? $SIVE was undergoing a transfer of Swedish ownership over to the US... 
+
+If I&#x27;m interpreting things right from the new cap table.
+
+The US / West now owns 42.18% of $SIVE: 
+
+~ $FNF (Fidelity) - 11.5% (US/West)
+~ $SCHW (Schwab) - 11.4% (US/West)
+~ $IBKR - 9.25% (US/International)
+~ Pershing (BNY Melon) - 4.15% (US/West)
+~ Morgan Stanley - 3.12% 
+~Merrill Lynch ( $BOA ) - 2.76%
+
+Europe: ~7.73%:
+
+Clearstream Banking - 6.16% (European)
+UBS Switzerland AG - 1.57% (Swedish/EU)
+
+While Swedish now hold ~7.49% of $SIVE:
+
+Försäkringsaktiebolaget Avanza Pension - 4.76%
+Nordnet Pensionsförsäkring AB - 2.73
+
+Before, Sivers was a ~60% European/Swedish retail owned company... 
+
+They went from that, down closer to 0 as they keep selling their shares.
+
+US has close to majority control, right before the CPO supercycle of 2027. 
+
+Transfer seems almost complete?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052679583892426925" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我说什么了？$SIVE 正在将瑞典所有权转让给美国...... 
+
+如果我从新的股权结构表中正确解释事情的话。美国/西方现在拥有 $SIVE 的 42.18%： 
+
+~ $FNF（富达）- 11.5%（美国/西方）
+~ $SCHW (施瓦布) - 11.4% (美国/西部)
+~ $IBKR - 9.25%（美国/国际）
+~ Pershing (BNY Melon) - 4.15%（美国/西部）
+~ 摩根士丹利 - 3.12% 
+~美林 ($BOA) - 2.76%
+
+欧洲：~7.73%：
+
+Clearstream 银行 - 6.16%（欧洲）
+UBS Switzerland AG - 1.57%（瑞典/欧盟）
+
+虽然瑞典人现在持有 $SIVE 的约 7.49%：
+
+Försäkringsaktiebolaget Avanza Pension - 4.76%
+Nordnet Pensionsförsäkring AB - 2.73
+
+此前，Sivers 是一家约 60% 的欧洲/瑞典零售公司…… 
+
+随着他们继续出售股票，他们的股价跌至接近 0。就在 2027 年CPO超级周期之前，美国几乎拥有多数控制权。转移似乎即将完成？</div>
+        <div class="tweet-foot">
+          <span>likes 1382 / retweets 93 / replies 146 / views 412210</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-05-04 06:45</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">US retail investors should switch from $HOOD to $IBKR for international equities. 
+
+I’m not sure why anyone still uses Robinhood for investing anymore.
+
+Unless you have $50 and no clue what you’re doing.
+
+They had their chance to innovate but focused on Melania Coin integrations</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">US retail investors should switch from $HOOD to $IBKR for international equities. 
+
+I’m not sure why anyone still uses Robinhood for investing anymore.
+
+Unless you have $50 and no clue what you’re doing.
+
+They had their chance to innovate but focused on Melania Coin integrations</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051070690032566401" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>对于国际股票，美国散户投资者应从 $HOOD 转向 $IBKR。我不知道为什么有人仍然使用 Robinhood 进行投资。除非你有 50 美元并且不知道自己在做什么。他们有机会进行创新，但专注于 Melania Coin 集成</div>
+        <div class="tweet-foot">
+          <span>likes 1705 / retweets 48 / replies 215 / views 343874</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 14:18</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@labubu_trader haha i felt the same with $IBKR UI being trash, but I got used to it.
+
+Imagine if they just spent like $150k on their billions of profit. for one designer to overhaul TWS, mobile and their dashboard
+
+Hope $HOOD pivots to the right direction.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@labubu_trader haha i felt the same with $IBKR UI being trash, but I got used to it.
+
+Imagine if they just spent like $150k on their billions of profit. for one designer to overhaul TWS, mobile and their dashboard
+
+Hope $HOOD pivots to the right direction.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049372794346192957" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@labubu_trader 哈哈，我对 $IBKR UI 是垃圾也有同样的感觉，但我已经习惯了。想象一下，如果他们只花费 15 万美元就获得了数十亿美元的利润。一位设计师彻底改造 TWS、移动设备及其仪表板
+
+希望 $HOOD 转向正确的方向。</div>
+        <div class="tweet-foot">
+          <span>likes 161 / retweets 1 / replies 15 / views 13130</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 13:53</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">It’s true $IBKR &gt; $HOOD currently.
+
+I do think Robinhood has the potential to turn that around though… they have a better UI and more retail-friendly platform. 
+
+But just current execution (remove payment order flow for options) and lack of int. offerings is horrendous, so interactive brokers is clearly the better choi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It’s true $IBKR &gt; $HOOD currently.
+
+I do think Robinhood has the potential to turn that around though… they have a better UI and more retail-friendly platform. 
+
+But just current execution (remove payment order flow for options) and lack of int. offerings is horrendous, so interactive brokers is clearly the better choice atm.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049366407440437604" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>目前确实$IBKR &gt; $HOOD。我确实认为 Robinhood 有潜力扭转这一局面……他们拥有更好的用户界面和更适合零售的平台。但只是当前执行（删除选项的支付订单流）并且缺少 int。提供的服务非常糟糕，因此互动经纪商显然是 ATM 更好的选择。</div>
+        <div class="tweet-foot">
+          <span>likes 190 / retweets 3 / replies 14 / views 20096</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 13:29</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">Product innovation from $HOOD would have been enabling international stock trading ASAP. 
+
+Instead they doubled down on &quot;prediction markets&quot; + &quot;raffles&quot; + new crapcoin listings where retail recklessly lose their money.
+
+They also lost retail to $IBKR that now enabled Korean stock trading. 
+
+Especially due to internatio...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Product innovation from $HOOD would have been enabling international stock trading ASAP. 
+
+Instead they doubled down on &quot;prediction markets&quot; + &quot;raffles&quot; + new crapcoin listings where retail recklessly lose their money.
+
+They also lost retail to $IBKR that now enabled Korean stock trading. 
+
+Especially due to international stock growth from Taiwah, Korea, Europe, Japan. 
+
+As a result, we saw new IBKR accounts grow to an all time high this quarter (just from qualitative experiences).
+
+My opinion is $HOOD missed earnings since they lost track of what they should actually do to help out retail investors.
+
+If they had retail investors all spending tons of TX fees from int. Equities trading, likely more margin usage, fees, cash on platform, wealth appreciation, and so on, which is the basis of the platform.
+
+Maybe things would have gone better despite digital asset downturn.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049360475046224050" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$HOOD 的产品创新本来可以尽快实现国际股票交易。相反，他们加倍押注于“预测市场”+“莱佛士”+新的垃圾币上市，零售业鲁莽地赔钱。他们的零售业务也输给了现在可以进行韩国股票交易的 $IBKR。特别是由于台湾、韩国、欧洲、日本的国际库存增长。因此，我们看到本季度新的 IBKR 账户增长至历史最高水平（仅从定性经验来看）。我的观点是 $HOOD 错过了盈利，因为他们不知道自己应该做什么来帮助散户投资者。如果他们让散户投资者都从 int 花费大量的 TX 费用。股票交易，可能会有更多的保证金使用、费用、平台现金、财富增值等等，这是平台的基础。尽管数字资产低迷，也许事情会变得更好。</div>
+        <div class="tweet-foot">
+          <span>likes 1765 / retweets 85 / replies 180 / views 349411</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 08:54</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">Yeah glad to hear others are feeling the same. Win Semi/HPS.A were a few of the rarer ones that had lower margin requirements as you mentioned. 
+
+But even if they&#x27;re in the billion MC range, they still get slapped with close to 100% maintenance margin most of the time.
+
+Long only equity in Asia/EU shouldn&#x27;t be treated ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yeah glad to hear others are feeling the same. Win Semi/HPS.A were a few of the rarer ones that had lower margin requirements as you mentioned. 
+
+But even if they&#x27;re in the billion MC range, they still get slapped with close to 100% maintenance margin most of the time.
+
+Long only equity in Asia/EU shouldn&#x27;t be treated the same as US short dated options and I hope $IBKR eases restrictions a bit.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049291123118715362" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>是的，很高兴听到其他人也有同样的感觉。正如您提到的，Win Semi/HPS.A 是保证金要求较低的少数几种。但即使它们在十亿 MC 范围内，大多数时候它们仍然会获得接近 100% 的维持保证金。亚洲/欧盟的多头股票不应与美国短期期权同等对待，我希望 IBKR 能稍微放松限制。</div>
+        <div class="tweet-foot">
+          <span>likes 36 / retweets 1 / replies 5 / views 10533</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 08:46</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@Ren_aramb Yeah $IBKR is trolling with the margin requirements... and they hike it on volatility too. 
+
+Like 100% is the same as short dated US options, but instead you just holding pure equities in Asia/EU?  
+
+Even going long with options has less maintenance margin lol.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Ren_aramb Yeah $IBKR is trolling with the margin requirements... and they hike it on volatility too. 
+
+Like 100% is the same as short dated US options, but instead you just holding pure equities in Asia/EU?  
+
+Even going long with options has less maintenance margin lol.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049289070875156910" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Ren_aramb 是的，$IBKR 正在调整保证金要求……而且他们也提高了波动性。就像 100% 与短期美国期权相同，但您只持有亚洲/欧盟的纯股票？即使做多期权，维持保证金也会减少，哈哈。</div>
+        <div class="tweet-foot">
+          <span>likes 69 / retweets 0 / replies 5 / views 10932</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 08:42</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">Uh... what&#x27;s with $IBKR + Portfolio Margin + Foreign Stocks?
+
+Every single name in Asia or Europe gets slapped to 100% maintenance margin for no reason. 
+
+Just because something isn&#x27;t in the US like in Korea, Europe, or Japan doesn&#x27;t make it a toxic asset?
+
+Do you guys just use prime brokers or something to get around ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Uh... what&#x27;s with $IBKR + Portfolio Margin + Foreign Stocks?
+
+Every single name in Asia or Europe gets slapped to 100% maintenance margin for no reason. 
+
+Just because something isn&#x27;t in the US like in Korea, Europe, or Japan doesn&#x27;t make it a toxic asset?
+
+Do you guys just use prime brokers or something to get around this?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049288233583006018" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>呃...$IBKR + 投资组合保证金 + 外国股票是怎么回事？亚洲或欧洲的每一个名字都无缘无故地被打到 100% 的维持保证金。仅仅因为某些东西不像韩国、欧洲或日本那样出现在美国，就不会成为有毒资产吗？你们只是使用主要经纪人或其他什么来解决这个问题吗？</div>
+        <div class="tweet-foot">
+          <span>likes 532 / retweets 19 / replies 82 / views 233754</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-04-28 11:01</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@ZacSazerac999 I’m inadvertently hard carrying $IBKR retail growth lol.
+
+But glad to hear that! interactive brokers has the best execution so you’ll actually save up long term.
+
+Their UI can use a lot of work though.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@ZacSazerac999 I’m inadvertently hard carrying $IBKR retail growth lol.
+
+But glad to hear that! interactive brokers has the best execution so you’ll actually save up long term.
+
+Their UI can use a lot of work though.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048960689327456513" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@ZacSazerac999 我无意中很难承受 IBKR 零售增长，哈哈。但很高兴听到这个！互动经纪商拥有最佳的执行力，因此您实际上可以长期节省资金。不过，他们的用户界面需要做很多工作。</div>
+        <div class="tweet-foot">
+          <span>likes 33 / retweets 0 / replies 5 / views 3620</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-04-28 10:42</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">Woah no way.
+
+$IBKR has Korean stocks now.
+
+This is going to be fun, I had a lot of ideas in mind I couldn’t long.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Woah no way.
+
+$IBKR has Korean stocks now.
+
+This is going to be fun, I had a lot of ideas in mind I couldn’t long.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048956013374755266" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>哇哦，没办法。$IBKR 现在有韩国股票。这会很有趣，我脑子里有很多想法，但我不能太久。</div>
+        <div class="tweet-foot">
+          <span>likes 2129 / retweets 73 / replies 113 / views 663235</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-04-23 17:02</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@x4tsr Probably would have been millions in referral fees… it’s okay though, improves $IBKR earnings net income by a tiny bit.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@x4tsr Probably would have been millions in referral fees… it’s okay though, improves $IBKR earnings net income by a tiny bit.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047239772733898862" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@x4tsr 可能会有数百万的推荐费……不过没关系，稍微提高了 $IBKR 的净收入。</div>
+        <div class="tweet-foot">
+          <span>likes 55 / retweets 0 / replies 4 / views 9148</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-04-23 16:58</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">You’re welcome $IBKR?
+
+But it legitimately is the better brokerage right now, I’m surprised $HOOD doesn’t have international stocks. https://t.co/yMEZOXtI9w</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">You’re welcome $IBKR?
+
+But it legitimately is the better brokerage right now, I’m surprised $HOOD doesn’t have international stocks. https://t.co/yMEZOXtI9w</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047238732382876064" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>不客气$IBKR？但它确实是目前更好的经纪业务，我很惊讶 $HOOD 没有国际股票。https://t.co/yMEZOXtI9w</div>
+        <div class="tweet-foot">
+          <span>likes 861 / retweets 35 / replies 77 / views 285211</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-04-21 02:52</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@pennycheck Honestly, not a bad idea for $IBKR, will tune into earnings lol! 
+
+But I do think all the retail accounts only account for a slight boost relative to institutional volume... the trading fees / margin usage might be material like $HOOD over time.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@pennycheck Honestly, not a bad idea for $IBKR, will tune into earnings lol! 
+
+But I do think all the retail accounts only account for a slight boost relative to institutional volume... the trading fees / margin usage might be material like $HOOD over time.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046301059287810310" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@pennycheck 老实说，对于 $IBKR 来说，这不是一个坏主意，将调整收益哈哈！但我确实认为，相对于机构交易量，所有零售账户仅略有增长……随着时间的推移，交易费用/保证金使用可能会像 $HOOD 一样重要。</div>
+        <div class="tweet-foot">
+          <span>likes 110 / retweets 0 / replies 3 / views 27839</span>
+        </div>
+        <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-04-18 01:18</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">Holy **** finally Anthropic listened and forced KYC.
+
+About time, stop letting DeepSeek, Moonshoot, and MiniMax have a free pass to distill Opus and other latest models. https://t.co/Ba8XBTIsnb</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Holy **** finally Anthropic listened and forced KYC.
+
+About time, stop letting DeepSeek, Moonshoot, and MiniMax have a free pass to distill Opus and other latest models. https://t.co/Ba8XBTIsnb</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2045190238281277541" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>圣神最终人择听了，强制KYC。是时候了，别再让 DeepSeek、Moonshoot 和 MiniMax 获得免费通行证来提炼 Opus 和其他最新模型了。https://t.co/Ba8XBTIsnb</div>
+        <div class="tweet-foot">
+          <span>likes 486 / retweets 15 / replies 32 / views 140920</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-04-07 12:04</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@japhy_zeng I recommend $IBKR for international stock access. Probably want to get an account anyway since they have the best execution</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@japhy_zeng I recommend $IBKR for international stock access. Probably want to get an account anyway since they have the best execution</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2041366490298102045" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@japhy_zeng 我推荐 $IBKR 用于国际股票访问。无论如何，可能都想获得一个帐户，因为他们有最好的执行力</div>
+        <div class="tweet-foot">
+          <span>likes 33 / retweets 0 / replies 0 / views 4909</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2026-04-03 20:05</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@DanCote303 The line is green when you switch to % performance. 
+
+It&#x27;s blue when you go to USD values on $IBKR.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@DanCote303 The line is green when you switch to % performance. 
+
+It&#x27;s blue when you go to USD values on $IBKR.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2040037901216759832" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@DanCote303 当您切换到％性能时，该线是绿色的。当您查看 $IBKR 上的美元价值时，它是蓝色的。</div>
+        <div class="tweet-foot">
+          <span>likes 21 / retweets 0 / replies 1 / views 2781</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2026-03-27 13:02</span>
+          <span><span class="chip red">$IBKR</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@buht $IBKR for companies I mention like $SIVE or WIN</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@buht $IBKR for companies I mention like $SIVE or WIN</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2037394808101392643" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@buht $IBKR 对于我提到的公司，例如 $SIVE 或 WIN</div>
+        <div class="tweet-foot">
+          <span>likes 23 / retweets 1 / replies 4 / views 9754</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2026-03-24 23:50</span>
+          <span><span class="chip red">$IBKR</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@RitwikBobbili It&#x27;s $SIVE SFB. The data on $IBKR doesn&#x27;t show up so I just ended up market buying.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@RitwikBobbili It&#x27;s $SIVE SFB. The data on $IBKR doesn&#x27;t show up so I just ended up market buying.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036470700173828342" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@RitwikBobbili 这是 $SIVE SFB。$IBKR 的数据没有显示，所以我只是结束了市场买入。</div>
+        <div class="tweet-foot">
+          <span>likes 24 / retweets 0 / replies 3 / views 7360</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2026-03-24 15:21</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span><span class="chip red">$IQE</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">It’s hilarious we live in a world:
+
+Where equity analysts at major banks… 
+
+Might need to adjust their estimates for $IBKR or $HOOD earnings.
+
+Because a random person on X liked international equities like $SIVE, $IQE, Macronix, SK Hynix, Unimicron, and others not available on Robinhood or US brokerages.  
+
+What a wild...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It’s hilarious we live in a world:
+
+Where equity analysts at major banks… 
+
+Might need to adjust their estimates for $IBKR or $HOOD earnings.
+
+Because a random person on X liked international equities like $SIVE, $IQE, Macronix, SK Hynix, Unimicron, and others not available on Robinhood or US brokerages.  
+
+What a wild timeline.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036342519727006000" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我们生活在一个世界里，这真是太搞笑了：
+
+主要银行的股票分析师... 
+
+可能需要调整他们对 $IBKR 或 $HOOD 收入的估计。因为 X 上随机的一个人喜欢 $SIVE、$IQE、Macronix、SK Hynix、Unimicron 等国际股票，以及 Robinhood 或美国经纪公司不提供的其他股票。多么疯狂的时间表啊。</div>
+        <div class="tweet-foot">
+          <span>likes 644 / retweets 8 / replies 42 / views 96424</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2026-03-22 20:59</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@mkfilko Yes it’s $IBKR. Right now they have a bug displaying data.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@mkfilko Yes it’s $IBKR. Right now they have a bug displaying data.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2035702800563523651" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@mkfilko 是的，这是 $IBKR。现在他们有一个显示数据的错误。</div>
+        <div class="tweet-foot">
+          <span>likes 20 / retweets 0 / replies 2 / views 4044</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2026-03-19 15:05</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$GOOGL</span><span class="chip red">$IBKR</span><span class="chip red">$JBL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@mrsgayathridas $IBKR. 
+
+The new announcement $SIVE is the light source for $JBL is probably biggest news to date. And I expect the stock to get re-rated immensely from the news.
+
+Jabil powers $GOOGL, $META, $AMZN, $MSFT for optical transceivers. 
+
+They’re a huge player.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@mrsgayathridas $IBKR. 
+
+The new announcement $SIVE is the light source for $JBL is probably biggest news to date. And I expect the stock to get re-rated immensely from the news.
+
+Jabil powers $GOOGL, $META, $AMZN, $MSFT for optical transceivers. 
+
+They’re a huge player.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034526726324449395" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@mrsgayathridas $IBKR。新宣布 $SIVE 是 $JBL 的光源可能是迄今为止最大的新闻。我预计该股将因这一消息而大幅重新评级。Jabil 为 $GOOGL、$META、$AMZN、$MSFT 的光收发器提供支持。他们是一个巨大的球员。</div>
+        <div class="tweet-foot">
+          <span>likes 39 / retweets 1 / replies 3 / views 5261</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2026-03-19 03:02</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@Davidson_august Yeah you can do it through $IBKR. Their Stockholm data feed is kinda buggy. I personally just did market buy whatever price, since I&#x27;m personally long. 
+
+So didn&#x27;t really care much about 1-2% limit fill differences.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Davidson_august Yeah you can do it through $IBKR. Their Stockholm data feed is kinda buggy. I personally just did market buy whatever price, since I&#x27;m personally long. 
+
+So didn&#x27;t really care much about 1-2% limit fill differences.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034344634043011213" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Davidson_august 是的，你可以通过 $IBKR 做到这一点。他们的斯德哥尔摩数据源有点问题。我个人只是在市场上买入任何价格，因为我个人是做多的。所以并不太关心 1-2% 的限制填充差异。</div>
+        <div class="tweet-foot">
+          <span>likes 18 / retweets 0 / replies 1 / views 3353</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="26">
+        <div class="tweet-head">
+          <span class="mono">2026-03-18 08:34</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@afasano23 Lot of the random bottlenecks/chokepoints in the AI supply chain are not US based… as seen with HBM and Toto toilets over in Japan.
+
+$IBKR has access to most stocks compared to $HOOD and others.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@afasano23 Lot of the random bottlenecks/chokepoints in the AI supply chain are not US based… as seen with HBM and Toto toilets over in Japan.
+
+$IBKR has access to most stocks compared to $HOOD and others.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034065887175835838" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@afasano23 人工智能供应链中的许多随机瓶颈/阻塞点并不位于美国……正如日本的 HBM 和 Toto 厕所所见。与 $HOOD 和其他公司相比，$IBKR 可以购买大多数股票。</div>
+        <div class="tweet-foot">
+          <span>likes 19 / retweets 0 / replies 2 / views 3552</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="27">
+        <div class="tweet-head">
+          <span class="mono">2026-03-02 00:25</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@ramprasadenaik Get an $IBKR account for access to international markets</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@ramprasadenaik Get an $IBKR account for access to international markets</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028144668178038945" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@ramprasadenaik 获取 $IBKR 账户以进入国际市场</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2963</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="28">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 01:40</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@Veeshalnarote12 @BlessedFrLife $IBKR inflates trades a bit. But point still stands that it&#x27;s a decent amount though</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Veeshalnarote12 @BlessedFrLife $IBKR inflates trades a bit. But point still stands that it&#x27;s a decent amount though</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026351469688226004" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Veeshalnarote12 @BlessedFrLife $IBKR 稍微夸大了交易。但问题仍然是，这是一个不错的数额</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 8115</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="29">
+        <div class="tweet-head">
+          <span class="mono">2026-02-24 13:25</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@MaoBaoBaomby I feel like I’m hard carrying $IBKR in terms of giving them record numbers of users.
+
+But that brokerage has access to international stocks.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@MaoBaoBaomby I feel like I’m hard carrying $IBKR in terms of giving them record numbers of users.
+
+But that brokerage has access to international stocks.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026166459635011767" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@MaoBaoBaomby 我觉得我很难携带 $IBKR 来为他们提供创纪录的用户数量。但该经纪公司可以投资国际股票。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1660</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="30">
+        <div class="tweet-head">
+          <span class="mono">2026-02-24 10:23</span>
+          <span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$IBKR</span><span class="chip red">$INTC</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBCLF</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">lol https://t.co/8i18XOIKK7</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">lol https://t.co/8i18XOIKK7</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026120730409332798" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>哈哈 https://t.co/8i18XOIKK7</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 77692</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="31">
+        <div class="tweet-head">
+          <span class="mono">2026-02-24 03:12</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">Today, Anthropic called out DeepSeek, Moonshot, and Minimax for distillation.  
+
+OpenAI has also faced the same issues with Chinese labs. 
+
+The most braindead fix nobody is doing: 
+
+KYC verification. 
+
+Every financial institution from $HOOD to $IBKR does this to track flow of funds (eg. Persona selfie / ID)
+
+Same shoul...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Today, Anthropic called out DeepSeek, Moonshot, and Minimax for distillation.  
+
+OpenAI has also faced the same issues with Chinese labs. 
+
+The most braindead fix nobody is doing: 
+
+KYC verification. 
+
+Every financial institution from $HOOD to $IBKR does this to track flow of funds (eg. Persona selfie / ID)
+
+Same should apply to token flows. 
+
+American Frontier Labs should start doing this soon for their latest models. 
+
+I&#x27;m sure they care about frictionless growth, but this is national security at risk and people/enterprises only need to go through this process once. 
+
+This is by far the easiest fix that can be done in a day. 
+
+Chinese labs will continue to find bypasses if this is not done.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026012416841334975" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>今天，Anthropic 邀请 DeepSeek、Moonshot 和 Minimax 进行蒸馏。OpenAI 与中国实验室也面临着同样的问题。没人做过的最脑残的修复： 
+
+KYC 验证。从 $HOOD 到 $IBKR 的每个金融机构都会这样做来跟踪资金流（例如，人物自拍/身份证）
+
+这同样适用于代币流。美国前沿实验室应该很快就开始为他们的最新模型做这件事。我确信他们关心无摩擦的增长，但这会危及国家安全，人们/企业只需要经历一次这个过程。这是迄今为止一天内可以完成的最简单的修复。如果不这样做，中国实验室将继续寻找绕过方法。</div>
+        <div class="tweet-foot">
+          <span>likes 325 / retweets 11 / replies 30 / views 189740</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="32">
+        <div class="tweet-head">
+          <span class="mono">2026-02-20 12:51</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@boi_ozzy I’m up over 1800%+ for my $IBKR account over an 19 month timeframe.
+
+Just in case people think this is one-off returns. https://t.co/Z9jr5ttd51</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@boi_ozzy I’m up over 1800%+ for my $IBKR account over an 19 month timeframe.
+
+Just in case people think this is one-off returns. https://t.co/Z9jr5ttd51</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2024708451738538471" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@boi_ozzy 我的 $IBKR 账户在 19 个月的时间内上涨了 1800% 以上。以防万一人们认为这是一次性回报。https://t.co/Z9jr5ttd51</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 6605</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="33">
+        <div class="tweet-head">
+          <span class="mono">2026-02-17 18:33</span>
+          <span><span class="chip red">$IBKR</span><span class="chip red">$RPBPF</span></span>
+        </div>
+        <div class="tweet-text">@HenryV9120 @WheelieInvestor Robinhood can&#x27;t access OTC either for $RPBPF.
+
+$IBKR accounts should be really quick to setup.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@HenryV9120 @WheelieInvestor Robinhood can&#x27;t access OTC either for $RPBPF.
+
+$IBKR accounts should be really quick to setup.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023707434137850006" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@HenryV9120 @WheelieInvestor Robinhood 也无法以 $RPBPF 访问 OTC。$IBKR 账户的设置应该非常快。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1346</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="34">
+        <div class="tweet-head">
+          <span class="mono">2026-02-17 18:24</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@WheelieInvestor I don&#x27;t think you can with $HOOD unfortunately. Probably need an $IBKR account or an account with LSE access.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@WheelieInvestor I don&#x27;t think you can with $HOOD unfortunately. Probably need an $IBKR account or an account with LSE access.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023704996697837780" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@WheelieInvestor 不幸的是，我认为你不能使用 $HOOD。可能需要 $IBKR 账户或具有 LSE 访问权限的账户。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1985</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="35">
+        <div class="tweet-head">
+          <span class="mono">2026-02-17 16:42</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@BitcoinDiddy Yep, using Robinhood for short dated options is just throwing away money. 
+
+MMs like Citadel literally pay $HOOD to give users worse fill and to trade against uninformed retail flows. 
+
+Using $IBKR or others, you get better execution, and it goes direct to exchanges.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@BitcoinDiddy Yep, using Robinhood for short dated options is just throwing away money. 
+
+MMs like Citadel literally pay $HOOD to give users worse fill and to trade against uninformed retail flows. 
+
+Using $IBKR or others, you get better execution, and it goes direct to exchanges.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2023679311593828431" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@BitcoinDiddy 是的，使用 Robinhood 进行短期期权只是在浪费钱。像 Citadel 这样的 MM 实际上要支付 $HOOD 来给用户提供更差的填充并与不知情的零售流进行交易。使用 $IBKR 或其他，您可以获得更好的执行，并且它直接进入交易所。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 2984</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="36">
+        <div class="tweet-head">
+          <span class="mono">2026-02-11 17:36</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">Starting to feel like the bull cycle is over for $HOOD after their earnings.
+
+I don’t think it’s going to crash, but likely stay rangebound for awhile. 
+
+Seeing revenue deceleration to 27% y/y and forward 35 p/e estimates possibly balloon to 45-50+ at a $80B MC.
+
+That growth was partially bought as well (eg. Bitstamp a...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Starting to feel like the bull cycle is over for $HOOD after their earnings.
+
+I don’t think it’s going to crash, but likely stay rangebound for awhile. 
+
+Seeing revenue deceleration to 27% y/y and forward 35 p/e estimates possibly balloon to 45-50+ at a $80B MC.
+
+That growth was partially bought as well (eg. Bitstamp acquisition) rather than new feature monetization like they’ve done in the past. 
+
+Long term it still has potential but short term too many headwinds.
+
+The saving grace is crypto market recovering.
+
+Or 
+
+- International stock expansion ASAP ( $IBKR is eating up a ton of inflows as investors want exposure to other countries like Japan or Korea)
+
+- Token launch on their new blockchain, so they can bump up balance sheets like BNB and Binance. 
+
+With some other ideas, etc. 
+
+Don’t think relying on prediction markets is the right choice to go down. It’s definitely a bad optics for short term gain.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2021518590219079692" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>在盈利之后，开始感觉 $HOOD 的牛市周期已经结束。我认为它不会崩溃，但可能会在一段时间内保持区间波动。收入同比下降 27%，远期 35 市盈率估计可能会在 80B 美元的 MC 下飙升至 45-50+。这种增长也是部分购买的（例如 Bitstamp 收购），而不是像过去那样通过新功能货币化。长期来看仍有潜力，但短期阻力太多。可取之处是加密货币市场正在复苏。或者 
+
+- 尽快扩张国际股票（由于投资者希望投资于日本或韩国等其他国家，$IBKR 正在吞噬大量资金流入）
+
+- 在他们的新区块链上推出代币，这样他们就可以像 BNB 和 Binance 一样提高资产负债表。还有一些其他的想法等等。不要认为依赖预测市场是下跌的正确选择。对于短期收益来说，这绝对是一个糟糕的选择。</div>
+        <div class="tweet-foot">
+          <span>likes 231 / retweets 29 / replies 28 / views 37474</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="37">
+        <div class="tweet-head">
+          <span class="mono">2026-02-03 15:00</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@ruth_capital Yep this is correct. Not individual trades, but still quite a lot for $IBKR was the point.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@ruth_capital Yep this is correct. Not individual trades, but still quite a lot for $IBKR was the point.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2018580217976254488" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@ruth_capital 是的，这是正确的。重点不是个别交易，但对于 $IBKR 来说仍然相当多。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1688</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="38">
+        <div class="tweet-head">
+          <span class="mono">2026-01-28 21:50</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@hippygecko It’s interesting that $IBKR is second order beneficiary of US retail investing internationally in the memory/semi supercycles. $HOOD doesn’t have access to these types of TW or JP stocks.
+
+Pretty sure @vladtenev should make this his #1 priority. https://t.co/ne4ZdKaZYy</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@hippygecko It’s interesting that $IBKR is second order beneficiary of US retail investing internationally in the memory/semi supercycles. $HOOD doesn’t have access to these types of TW or JP stocks.
+
+Pretty sure @vladtenev should make this his #1 priority. https://t.co/ne4ZdKaZYy</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2016509082358919603" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@hippygecko 有趣的是，$IBKR 是美国散户在内存/半超级周期国际投资的第二大受益者。$HOOD 无法访问这些类型的 TW 或 JP 股票。很确定@vladtenev 应该将此作为他的第一优先事项。https://t.co/ne4ZdKaZYy</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1511</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="39">
+        <div class="tweet-head">
+          <span class="mono">2026-01-28 20:39</span>
+          <span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@WaterFish2000 It&#x27;s on $IBKR. You just have to enable foreign trading permissions. https://t.co/FY3s1GYrpn</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@WaterFish2000 It&#x27;s on $IBKR. You just have to enable foreign trading permissions. https://t.co/FY3s1GYrpn</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2016491400150626592" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@WaterFish2000 它在 $IBKR 上。您只需启用对外交易权限即可。https://t.co/FY3s1GYrpn</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1555</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="40">
+        <div class="tweet-head">
+          <span class="mono">2026-01-28 20:22</span>
+          <span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$IBKR</span><span class="chip red">$INTC</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBCLF</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">Nanyna (TPE: 2408) is one of my longs alongside $MU, SK Hynix, and Samsung for memory.
+
+But for a different reason.  
+
+You might be thinking if this parabolic trend (+972% 1Y). is going to stop? Probably not. 
+
+And it just keeps going up 7% a day.
+
+Here&#x27;s a simple TLDR why: 
+
+The forward P/E is only ~13.62 (likely lowe...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Nanyna (TPE: 2408) is one of my longs alongside $MU, SK Hynix, and Samsung for memory.
+
+But for a different reason.  
+
+You might be thinking if this parabolic trend (+972% 1Y). is going to stop? Probably not. 
+
+And it just keeps going up 7% a day.
+
+Here&#x27;s a simple TLDR why: 
+
+The forward P/E is only ~13.62 (likely lower now with price hikes).
+
+With +357.7% Revenue Growth/+804.27% Net Income Growth Y/Y, their profits are astronomical. 
+
+Similar to Micron and their 57.56%+ last month, and more than doubling since I first mentioned it: 
+
+The stock price literally can&#x27;t keep up. 
+
+While the giants (Samsung, SK Hynix, and $MU) are fighting over the high-end AI market, Nanya specialized in the legacy and specialty DRAM products from PCs, computer electronics, and  industrial. (They are doing advanced chips though with 1b Nodes though).
+
+And the memory companies left a massive void Nanya filled: 
+
+Micron - Total Exit from Consumer Lines
+SK Hynix - Focusing almost entirely on HBM4 and server-grade DRAM.
+Samsung - Reallocating 30–40% of legacy lines to advanced AI memory.
+Nanya - Last man standing
+
+Demand stayed steady but legacy DRAM supply suddenly fell off a cliff. And it&#x27;s still widely used from:
+
+- Consumer PCs and Laptops: Millions of computers built between 2015 and 2023 use DDR4
+- Smartphones: Most mid-range and budget smartphones use LPDDR4
+- Home Electronics: Smart TVs, gaming consoles (like the older Nintendo Switch or PS4) use these.
+
+Basically, they still need to make these, but Nayna has all the cards. 
+
+Buyers are paying a &quot;scarcity premium&quot; for older memory because they can&#x27;t find it anywhere else and seeing a supply shock in a boring market. 
+
+Nanya essentially became the guy selling water in a desert. And they can keep jacking up the price of water.
+
+I&#x27;m long on the cat sounding company selling water in the desert.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2016487104000446545" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>Nanyna (TPE: 2408) 是我在内存方面的看多股票之一，与 $MU、SK Hynix 和 Samsung 一样。但出于不同的原因。您可能会想，如果这个抛物线趋势（+972% 1Y）。会停止吗？可能不会。而且每天都在上涨 7%。这是一个简单的 TLDR 原因： 
+
+远期市盈率仅为 13.62（随着价格上涨，现在可能会更低）。同比收入增长+357.7%/净利润增长+804.27%，他们的利润是天文数字。与美光类似，上个月他们的增长率为 57.56%+，自从我第一次提到以来已经增加了一倍多： 
+
+股价根本跟不上。当巨头（三星、SK 海力士和 $MU）争夺高端 AI 市场时，南亚科技专注于 PC、计算机电子和工业领域的传统和特种 DRAM 产品。（尽管他们正在使用 1b 节点制作先进的芯片）。内存公司留下了巨大的空白，Nanya 填补了这一空白： 
+
+美光 - 彻底退出消费产品线
+SK Hynix - 几乎完全专注于 HBM4 和服务器级 DRAM。三星 - 将 30-40% 的传统生产线重新分配给先进的 AI 内存。Nanya - 最后一个站着的人
+
+需求保持稳定，但传统 DRAM 供应突然断崖式下跌。它仍然被广泛使用：
+
+- 消费类 PC 和笔记本电脑：2015 年至 2023 年间生产的数百万台计算机使用 DDR4
+- 智能手机：大多数中档和廉价智能手机都使用 LPDDR4
+- 家用电子产品：智能电视、游戏机（如较旧的任天堂 Switch 或 PS4）都使用这些。基本上，他们仍然需要制作这些，但 Nayna 拥有所有的牌。买家正在为旧内存支付“稀缺溢价”，因为他们在其他地方找不到它，并且在无聊的市场中看到供应冲击。南亚本质上成了在沙漠里卖水的人。他们还可以继续抬高水价。我看好这家在沙漠里卖水的公司。</div>
+        <div class="tweet-foot">
+          <span>likes 338 / retweets 19 / replies 15 / views 138466</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="41">
+        <div class="tweet-head">
+          <span class="mono">2026-01-26 06:26</span>
+          <span><span class="chip red">$HY9H</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@Ren_aramb $IBKR has $HY9H which is SK Hynix on Frankfurt.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Ren_aramb $IBKR has $HY9H which is SK Hynix on Frankfurt.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015551832794464396" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Ren_aramb $IBKR 有 $HY9H，这是法兰克福的 SK Hynix。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 8361</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="42">
+        <div class="tweet-head">
+          <span class="mono">2026-01-26 06:16</span>
+          <span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$IBKR</span><span class="chip red">$INTC</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBCLF</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">TLDR of my top foreign stocks:  
+
+1. Nitto Boseki - T-Glass (Japan) 
+
+2. Unimicron - Substrates/Glass Core (Taiwan) 
+
+3. Samsung/SK Hynix - HBM (Korea) 
+
+4. Kioxia - NAND w/ $SNDK (Japan)
+
+ 5. Nanya Technologies - Memory (Taiwan) 
+
+US supply chains like $INTC (foundry), $MU (memory),  or $LPTH (germanium) are typically...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">TLDR of my top foreign stocks:  
+
+1. Nitto Boseki - T-Glass (Japan) 
+
+2. Unimicron - Substrates/Glass Core (Taiwan) 
+
+3. Samsung/SK Hynix - HBM (Korea) 
+
+4. Kioxia - NAND w/ $SNDK (Japan)
+
+ 5. Nanya Technologies - Memory (Taiwan) 
+
+US supply chains like $INTC (foundry), $MU (memory),  or $LPTH (germanium) are typically my longs of preference &quot;Made in America&quot; bottleneck + supply chains. But some of these foreign companies are either critical to the entire AI buildout or capture a lot of the overflow.
+
+If you&#x27;re wondering how you get access to foreign markets?   
+
+- $IBKR    
+
+There are US OTC equivalents for companies like Nitto Boseki like $NBCLF.   If you&#x27;re on Robinhood, $EWY / $FLKR provides access to large KR memory exposure.
+ 
+Some like Nitto Boseki are near monopolies so these are the very rare foreign companies I go out of my way to invest in.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015549311732658520" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我的顶级外国股票的 TLDR： 
+
+1. Nitto Boseki - T-Glass（日本） 
+
+2.欣兴电子 - 基板/玻璃芯（台湾） 
+
+3.三星/SK海力士-HBM（韩国） 
+
+4. Kioxia - 带 $SNDK 的 NAND（日本）
+
+ 5. Nanya Technologies - 内存（台湾） 
+
+美国供应链，如 $INTC（代工）、$MU（内存）或 $LPTH（锗）通常是我最看重的“美国制造”瓶颈 + 供应链。但其中一些外国公司要么对整个人工智能建设至关重要，要么占据了大量的优势。如果您想知道如何进入国外市场？- $IBKR 
+
+Nitto Boseki 等公司在美国也有类似的场外交易，例如 $NBCLF。如果您使用 Robinhood，$EWY / $FLKR 提供对大量 KR 内存暴露的访问。像 Nitto Boseki 这样的公司几乎处于垄断地位，所以这些是我极力投资的极少数外国公司。</div>
+        <div class="tweet-foot">
+          <span>likes 738 / retweets 75 / replies 37 / views 347071</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="43">
+        <div class="tweet-head">
+          <span class="mono">2026-01-24 02:34</span>
+          <span><span class="chip red">$IBKR</span><span class="chip red">$TTMI</span></span>
+        </div>
+        <div class="tweet-text">US, but I travel around a lot. $IBKR has access to most markets.
+
+That being said there are similar US plays like $TTMI (up 267% 1Y) for similar exposure if you want to avoid foreign fees but obviously not quite the same.
+
+Also I talk about a lot of things, there&#x27;s tons of other opportunities out there</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">US, but I travel around a lot. $IBKR has access to most markets.
+
+That being said there are similar US plays like $TTMI (up 267% 1Y) for similar exposure if you want to avoid foreign fees but obviously not quite the same.
+
+Also I talk about a lot of things, there&#x27;s tons of other opportunities out there</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2014768672452313419" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>美国，但我经常出差。$IBKR 可以进入大多数市场。话虽这么说，如果您想避免外国费用，那么类似的美国股票也有类似的风险敞口，例如 $TTMI（一年上涨 267%），但显然不完全相同。我还谈论了很多事情，还有很多其他机会</div>
+        <div class="tweet-foot">
+          <span>likes 4 / retweets 0 / replies 1 / views 4114</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="44">
+        <div class="tweet-head">
+          <span class="mono">2026-01-04 13:15</span>
+          <span><span class="chip red">$ASHM</span><span class="chip red">$GRZ.V</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">Many of these like $GRZ.V or $ASHM were risky, distressed assets, frozen because of Venezuelan government. 
+
+Now that there&#x27;s a regime change from Maduro, all of their value (gold mines, bonds) just got unlocked. 
+
+For that reason, lot of these are not on Nasdaq / NYSE because of small marketcap or foreign companies wi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Many of these like $GRZ.V or $ASHM were risky, distressed assets, frozen because of Venezuelan government. 
+
+Now that there&#x27;s a regime change from Maduro, all of their value (gold mines, bonds) just got unlocked. 
+
+For that reason, lot of these are not on Nasdaq / NYSE because of small marketcap or foreign companies with Venezuelan interest, so you would need to go to $IBKR or others to access then.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2007682243276443931" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>其中许多资产（例如 $GRZ.V 或 $ASHM）都是有风险的不良资产，因委内瑞拉政府而被冻结。现在马杜罗政权更迭，它们的所有价值（金矿、债券）都被释放了。因此，由于市值较小或对委内瑞拉感兴趣的外国公司，其中很多不在纳斯达克/纽约证券交易所上市，因此您需要前往 $IBKR 或其他机构才能访问。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3164</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="45">
+        <div class="tweet-head">
+          <span class="mono">2025-11-20 18:23</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COIN</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$KRUS</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$SBET</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOL</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WLAC</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">Based on the equity ranking table:
+
+Here&#x27;s a deeper analysis of each stock, alongside how I reposition my portfolio to capitalize on the market reset:
+
+· $NBIS at $92, PT $400 / 1Y
+· $RKLB at $43, PT $500 / 5Y
+· $CRCL at $72, PT $150 / 8M
+· $ALAB at $143.4, PT $250 / 6M
+· $SNAP at $8.1, PT $22 / 1Y
+· $CIFR at $14.8, PT...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Based on the equity ranking table:
+
+Here&#x27;s a deeper analysis of each stock, alongside how I reposition my portfolio to capitalize on the market reset:
+
+· $NBIS at $92, PT $400 / 1Y
+· $RKLB at $43, PT $500 / 5Y
+· $CRCL at $72, PT $150 / 8M
+· $ALAB at $143.4, PT $250 / 6M
+· $SNAP at $8.1, PT $22 / 1Y
+· $CIFR at $14.8, PT $28 / 6M
+· $RDDT at $185, PT $275 / 8M
+· $SMCI at $34, PT $55 / 6M
+· $HIMS at $35, PT $60 / 6M
+
+This is in order of concentration weighting from when posted and internal PT speculation based on existing information for mid-cap ($5B+) sections.
+
+Here’s a deeper breakdown on each one and PT timeframe, and a “qualitative”why:
+
+1. Nebius ( $NBIS ): $23B marketcap. Incredibly undervalued and detached from fundamentals.
+
+$7-9B forward ARR, 20-30% EBIT, enterprise contracts from Shopify, Accenture, Cursor, foreign governments and hyperscaler contracts from Meta and Microsoft give Nebius revenue visibility. With $4.8B+ in cash, it&#x27;s isolated from credit tightening affecting data centers. With 2.5 GW expected capacity contracted 2026, it rivals many others eg. $IREN at 2.8 GW, and defeats many of the capacity/power arguments. With many portfolio companies powering companies like Tesla and Anthropic, it also has higher growth potential (think $MSFT with its portfolio companies for longer defensibility).
+
+We also had stellar $NVDA earnings going into Q4 with their blowout, Jensen clarifying arguments against GPU depreciation, which helps with DC sector sentiment. 
+
+$400 1 year price target, $100B+ valuation given forward revenue/margins.
+
+2. Rocketlab ( $RKLB ): $22B marketcap. Overvalued current term, undervalued long term potential. 
+
+Rocketlab is my highest conviction 5Y long alongside Bitcoin. With Space, it&#x27;s not winner takes all, and I&#x27;ve maintained $350-500B long term PT to match SpaceX’s most recent valuation/capabilities.
+
+As of now, it&#x27;s overvalued. But it&#x27;s an incredible + defensible moat from purely a technological standpoint building reusable rockets and we&#x27;re early in terms of commercialization of their end-to-end space products at scale (likely ~2028).
+
+However, we&#x27;re pricing in forward growth with Flatlite commericalization (eg. Starlink), and medium-lift payloads (SpaceX Falcon 9). The market prices in forward growth as well but it’s more about how long in the future with Rocketlab. It&#x27;s always a solid buy, depending on how patient you are with company execution. 
+
+3. Circle ( $CRCL ) - $16B marketcap, undervalued.
+
+With Circle, I&#x27;ve been bear posting it since it was a $50B marketcap, saying short Circle, long Coinbase, given $COIN has 50% revenue sharing with Circle.
+
+It was overvalued due to float numbers and massive insider lockups 2-3 days after earnings/Dec 2nd led to a sell-off (like $BULL). Float dynamics matter a lot that ETF managers like Cathie Wood seem to not understand (hence my warnings). 
+
+But now we&#x27;re reaching respectable valuation numbers. I expect USDC commercialization to continue and given a regulatory focus in the digital asset market, I see $CRCL taking over a lot of Tether&#x27;s marketcap. 
+
+That being said, it&#x27;s well deserving of a $30B+ marketcap pricing in stablecoin volume growth once we start seeing insider shares redistributed to institutions and long term holders. 
+
+4. Astera Labs ( $ALAB ) - $22B marketcap, reasonable valuation
+
+ALAB was one of my mid-term high conviction picks, due to Mag7 adoption of connectivity for datacenter buildout. 
+
+Incredibly high growth and $NVDA-like margins sitting at ~74%, latest er: $230m/q (101% Y/Y growth). My thesis was that if Mag7 is dependent on a company ($NVDA for GPUs) ( NBIS, IREN, CIFR for DC AI cloud buildout), the company will blow away expections quarter after quarter, and we&#x27;re seeing this.
+
+There&#x27;s been a recent sell-off on Astera from $250 back to $140 marks, depsite beating earning expectations across the board and this presents a good buying opportunity.
+
+I maintain a medium term PT $250 for recovery after NVDA earnings and record-high DC buildout from Antrophic&#x27;s $40B DC to $GOOGL&#x27;s $50B DC in Texas + connectivity demand.
+
+5. Snapchat ( $SNAP ) $13B marketcap, undervalued. 
+
+$SNAP is one of my least favorite stocks and CEO&#x27;s (sorry Evan). 
+
+However, I can&#x27;t argue with fundamental changes. A TLDR of my most recent thesis post was that they&#x27;re cutting their massive opex bloat from memories/videos stored 10 years ago and if you look into their GCP hosting fees, it&#x27;s cutting in margins.
+
+Now they&#x27;re both reducing that OPex cost and increasing revenue from that.  We also have AI deals with perplexity adding $400m+ additional revenue streams like RDDT. 
+
+However, short term it&#x27;s suffering from tax-harvesting due to underperformance this year relative to AI companies. In 2026 Q1, I expect the market to start pricing in the new fundamentals Hard. and for this company to beat expectation soundly. 
+
+That being said I expect over a 200%+ upside 1Y from here with the market pricing in the new dynamics. 
+
+5. CIFR ( $CIFR ) - Undervalued at $5B marketcap
+
+$CIFR is my second favorite stock in the Neocloud sector. From memory, it holds a lot of Bitcoin on its balance sheet and is materially affected by the selloff in BTC prices from $120k to $90k. 
+
+However I expect crypto asset prices to recover in a few months once cascading margin liqudations finish and instituions buy-in Bitcoin at low prices. 
+
+Nebius is top because it owns the full AI-cloud value chain for higher revenue potential and stronger returns, even though it forces them to handle orchestration, software, and GPU lifecycle risk instead of sticking to colocation.  
+
+However,  $CIFR because it avoids that entire risk surface and has backing from AMZN and GOOGL for long term revenue anchors. It also stays insulated from GPU procurement, management, and depreciation.  
+
+For CIFR&#x27;s economics we get a a high-margin, annuity structure built on space, power, and cooling for hyperscalers. Risk-adjusted, it’s one of the safest names in the group. But the trade-off is capped upside  Long leases like 10Y, 15Y slow the revenue ramp and mute the payoff relative to full-stack Neocloud operators like NBIS that go from $145m quarterly revenue to $2.1B in a year.
+
+That being said I maintain a $28 PT in 1 month once market prices in $AMZN, $GOOGL Fluidstack revenue and Bitcoin prices recover. 
+
+6. Reddit ( $RDDT ) - Moderate valuation
+
+Coming from the Wendy&#x27;s dumpsters on WSB subreddit, I am naturally biased toward this platform.
+
+However, the initial sell-off of Reddit at $270 was due to fears over ChatGPT citations, which was immaterial. Now, recent data shows that citations are back, but Reddit&#x27;s price still sits at $185 (way below that number) + partly due to macro.
+
+Reddit is one of the least bloated, highly profitable social media companies. And it&#x27;s here to stay due to long term defensibility of the network effect of both younger + older audiences (compared to Snap 900m+ MAU of mostly younger generation).
+
+I expect RDDT to scale up monetization avenues through acquisitions like $HOOD (exchanges) due to their massive FCF and profitability or how Facebook originally acquired WhatsApp, Instagram, built out messenger. It&#x27;s a low-risk, high growth stock, which is why I maintain a $275 PT in 8 months. 
+
+7. SMCI ( $SMCI ) - Undervalued, $20B marketcap.
+
+$20B marketcap is a joke. Nothing else to say. They&#x27;re doing $5B quarterly revenue (off lower-margins for sure). However, market is pricing in the company revenue dropping. 
+
+SMCI quoted majority of the backlog delay to Q2 2026, which aligns with a lot of the DC buildout from Neoclouds to Mag7 customers. 
+
+They expect revenue to grow 50%+ Y/Y next year, with at least $36 billion revenue, but judging from DC buildout from blowout NVDA earnings, I expect server rack companies like $DELL and SMCI to outperform Q2  2026. 
+
+This is why I&#x27;m taking advantage of revenue lag delays from the current quarter and assigning a $55 PT in 6 months time. 
+
+8. Hims and Her Health ( $HIMS) - Undervalued ( $8B marketcap)
+
+Personally, I&#x27;ve used HIMS just for short term trading breakouts. And I&#x27;ve been one to not long-term hold the stock above $50.  
+
+However, back at $35, it&#x27;s reset most of the year&#x27;s growth but grew revenue 49% Y/Y to $500m and is producing a good amount of FCF.
+
+The most under-priced narrative is the Zava acquisition. This adds 1.3M+ users to the HIMS platform and allows the company to expand to the EU market.
+
+Similar to how META acquires companies like Instagram, grows its base + monetizes, I expect HIMS to do the same with Zava + market is pricing in current est. Zava numbers. 
+
+It&#x27;s probably my least confident stock out of the bunch, especially leaving me with a bad taste with the CEO selling shares after leaving 👀 on SS posts back at $70. 
+
+But that being said it&#x27;s a great rebound opportunity to $60 in a 6 month timeframe. 
+
+Hope you enjoyed my perspective. There&#x27;s a lot of x at price posts, but I try to leave a more qualitative breakdown (+ part quantitative but leave out a lot of technical for easier reading) to help retail develop their own conviction and understanding.
+
+Building understanding is important to create internal valuation models yourself rather than blindly following along FinX posters + capitulating when stock prices temporarily drop. 
+
+Happy to discuss more if you drop your own portfolio + concentrations.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1991452423186182524" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>根据权益排名表：
+
+以下是对每只股票的更深入分析，以及我如何重新定位我的投资组合以利用市场重置的机会：
+
+· NBIS 为 92 美元，PT 400 美元/1 年
+· RKLB 为 43 美元，PT 500 美元/5 年
+· $CRCL 为 $72，PT $150 / 8M
+· $ALAB 价格为 $143.4，PT $250 / 600 万美元
+· SNAP 价格为 8.1 美元，PT 22 美元/1 年
+· CIFR 为 14.8 美元，PT 为 28 美元/600 万美元
+· $RDDT $185，PT $275 / 8M
+· $SMCI 为 $34，PT $55 / 6M
+· $HIMS $35，PT $60 / 6M
+
+这是根据发布时的集中权重顺序以及基于中型股 ($5B+) 部分的现有信息的内部 PT 推测。以下是对每一项和 PT 时间范围的更深入细分，以及“定性”原因：
+
+1. Nebius ( $NBIS ): $23B 市值。其价值被令人难以置信地低估并且脱离了基本面。7-9B 美元的远期 ARR、20-30% 的息税前利润、来自 Shopify、埃森哲、Cursor 的企业合同、外国政府以及来自 Meta 和 Microsoft 的超大规模合同使 Nebius 收入可见。拥有超过 4.8B 美元的现金，它不受影响数据中心的信贷紧缩的影响。预计 2026 年合同容量为 2.5 吉瓦，可与许多其他公司相媲美。$IREN 为 2.8 GW，击败了许多容量/功率争论。由于许多投资组合公司为 Tesla 和 Anthropic 等公司提供动力，它也具有更高的增长潜力（想想 MSFT 及其投资组合公司的长期防御能力）。进入第四季度，我们的 NVDA 收益也非常出色，并且出现井喷，Jensen 澄清了反对 GPU 贬值的论点，这有助于提振 DC 行业的情绪。1 年目标价为 400 美元，考虑到远期收入/利润，估值为 100B+ 美元。2. Rocketlab ( $RKLB ): $22B 市值。高估当前期限，低估长期潜力。Rocketlab 是我对比特币 5 年多头的最高信念。对于 Space，它不是赢者通吃，我维持了 350-500B 美元的长期 PT，以匹配 SpaceX 的最新估值/能力。目前看来，它的价值被高估了。但纯粹从建造可重复使用火箭的技术角度来看，这是一条令人难以置信的、可防御的护城河，而且我们在其端到端太空产品大规模商业化方面处于早期阶段（可能到 2028 年）。然而，我们定价的是 Flatlite 商业化（例如 Starlink）和中升力有效载荷（SpaceX Falcon 9）的未来增长。市场价格也体现在未来的增长上，但更多的是关于 Rocketlab 的未来多久。这始终是一个可靠的选择，具体取决于您对公司执行的耐心程度。3. Circle ( $CRCL ) - $16B 市值，被低估。对于 Circle，自从它的市值为 50B 美元以来，我一直在发布它，说做空 Circle，做多 Coinbase，因为 $COIN 与 Circle 有 50% 的收入分成。由于浮动数字和 12 月 2 日盈利后 2-3 天的大量内部锁定导致抛售（如 $BULL），它被高估了。流通量动态非常重要，但像 Cathie Wood 这样的 ETF 经理似乎并不理解（因此我提出警告）。但现在我们已经达到了可观的估值数字。我预计 USDC 的商业化将会继续，并且考虑到数字资产市场的监管重点，我认为 $CRCL 会占据 Tether 的大部分市值。话虽这么说，一旦我们开始看到内部股票重新分配给机构和长期持有者，稳定币交易量增长就值得 30B+ 市值定价。4. Astera Labs ( $ALAB ) - $22B 市值，合理估值
+
+ALAB 是我中期高度确信的选择之一，因为 Mag7 采用连接来进行数据中心建设。令人难以置信的高增长和类似于 NVDA 的利润率约为 74%，最新数据：2.3 亿美元/季度（同比增长 101%）。我的论点是，如果 Mag7 依赖于一家公司（GPU 的 NVDA 美元）（用于 DC AI 云建设的 NBIS、IREN、CIFR），那么该公司将一个又一个季度地超出预期，我们也看到了这一点。尽管 Astera 整体盈利预期全面超出预期，但最近 Astera 遭到抛售，从 250 美元跌至 140 美元，这提供了一个良好的买入机会。在 NVDA 收益和创纪录的高 DC 建设（从德克萨斯州的 Antropicic 的 $40B DC 到 $GOOGL 的 $50B DC + 连接需求）之后，我维持中期 PT $250 的复苏。5. Snapchat ( $SNAP ) 市值13B美元，被低估。$SNAP 是我最不喜欢的股票和首席执行官之一（对不起埃文）。然而，我不能否认根本性的改变。我最近一篇论文的一个长篇大论是，他们正在从 10 年前存储的记忆/视频中削减巨大的运营支出，如果你查看他们的 GCP 托管费用，就会发现它正在削减利润。现在，他们既降低了运营成本，又增加了收入。我们还有解决困惑问题的 AI 解决方案，可以增加 4 亿美元以上的额外收入来源，例如 RDDT。然而，短期来看，由于今年相对于人工智能公司的表现不佳，该公司将遭受税收收割。2026 年第一季度，我预计市场将开始在新的基本面中定价。并让这家公司的业绩超出预期。话虽这么说，随着市场定价在新的动态下，我预计 1 年的上涨空间将超过 200% 以上。5. CIFR ( $CIFR ) - 被低估，市值为 5B 美元
+
+$CIFR 是 AI 算力云公司 领域我第二喜欢的股票。据我记忆，该公司的资产负债表上持有大量比特币，并受到比特币价格从 12 万美元跌至 9 万美元的重大影响。然而，我预计，一旦级联保证金清算完成并且机构以低价买入比特币，加密资产价格将在几个月内恢复。Nebius 名列前茅，因为它拥有完整的人工智能云价值链，具有更高的收入潜力和更强的回报，尽管这迫使他们处理编排、软件和 GPU 生命周期风险，而不是坚持托管。然而，$CIFR 是因为它避免了整个风险面，并且得到了 AMZN 和 GOOGL 的支持以实现长期收入锚定。它还不受 GPU 采购、管理和折旧的影响。对于 CIFR 的经济学，我们为超大云厂商提供了一个基于空间、电力和冷却的高利润年金结构。经过风险调整后，它是该集团中最安全的名字之一。但这种权衡受到了限制。相对于像 NBIS 这样的全栈 AI 算力云公司 运营商来说，像 10 年、15 年这样的长期租赁会减缓收入增长，并削弱回报，后者的季度收入从 1.45 亿美元增至一年 2.1 亿美元。话虽这么说，一旦 $AMZN 的市场价格、$GOOGL Fluidstack 收入和比特币价格回升，我将在 1 个月内维持 28 美元的 PT。6. Reddit ( $RDDT ) - 估值适中
+
+来自 WSB Reddit 子版块 Wendy&#x27;s 垃圾箱的我自然偏向这个平台。然而，Reddit 最初被抛售至 270 美元是由于担心 ChatGPT 引用，但这并不重要。现在，最近的数据显示引用量又回来了，但 Reddit 的价格仍然维持在 185 美元（远低于这个数字）+ 部分原因是宏观因素。Reddit 是最不臃肿、利润最高的社交媒体公司之一。由于年轻和年长观众的网络效应具有长期防御性（相比之下，Snap 的月活跃用户数大多为年轻一代），这一趋势将持续存在。我预计 RDDT 将通过收购 $HOOD（交易所）等公司来扩大盈利渠道，因为它们拥有巨大的自由现金流和盈利能力，或者 Facebook 最初收购 WhatsApp、Instagram 并打造即时通讯软件的方式。这是一只低风险、高增长的股票，这就是为什么我在 8 个月内维持 275 美元的 PT 的原因。7. SMCI ( $SMCI ) - 被低估，市值 $20B。$20B 市值就是个笑话。没什么可说的。他们的季度收入为 50 亿美元（当然，利润率较低）。然而，市场定价表明该公司收入正在下降。SMCI 引用了 2026 年第二季度的大部分积压延迟，这与 AI 算力云公司 向 Mag7 客户的大量 DC 建设相一致。他们预计明年收入将同比增长 50% 以上，收入至少为 360 亿美元，但从井喷式 NVDA 收益带来的 DC 建设来看，我预计 $DELL 和 SMCI 等服务器机架公司的表现将优于 2026 年第二季度。这就是为什么我利用当前季度的收入滞后延迟并在 6 个月内分配 55 美元的 PT。8. Hims and Her Health ($HIMS) - 被低估（$8B 市值）
+
+就我个人而言，我仅将 HIMS 用于短期交易突破。我一直是不会长期持有 50 美元以上股票的人。然而，回到 35 美元后，它重置了今年的大部分增长，但收入同比增长了 49% 至 5 亿美元，并且产生了大量的自由现金流。最被低估的故事是 Zava 收购。这为 HIMS 平台增加了 130 万以上用户，并使公司能够扩展到欧盟市场。与 META 收购 Instagram 等公司、扩大基础+货币化的方式类似，我预计 HIMS 也会对 Zava 做同样的事情，市场定价以当前估计的 Zava 数据为准。这可能是我在这群股票中最没有信心的股票，尤其是在 SS 职位回到 70 美元后，首席执行官以 70 美元的价格出售股票，这让我感觉很糟糕。但话虽如此，这是 6 个月内反弹至 60 美元的绝佳机会。希望您喜欢我的观点。价格帖子中有很多“x”，但我尝试留下更定性的细分（+部分定量，但为了更容易阅读而省略了很多技术性内容），以帮助零售商发展自己的信念和理解。建立理解对于自己创建内部估值模型非常重要，而不是盲目跟随 FinX 海报+在股价暂时下跌时投降。如果您放弃自己的投资组合+专注，很乐意讨论更多。</div>
+        <div class="tweet-foot">
+          <span>likes 418 / retweets 52 / replies 30 / views 258946</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="46">
+        <div class="tweet-head">
+          <span class="mono">2025-11-14 21:30</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$CIFR</span><span class="chip red">$GOOGL</span><span class="chip red">$IBKR</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span></span>
+        </div>
+        <div class="tweet-text">Yeah premarket on Neoclouds like $CIFR is just disgusting to look at and it&#x27;s pre $GOOGL deal price with the 10%+ drop premarket. 
+
+And that&#x27;s pretending $AMZN colo deal never happened too. Similar thing as you mentioned with $NBIS, approaching pre $MSFT deal. We&#x27;re seeing a complete detachment from fundamentals across...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yeah premarket on Neoclouds like $CIFR is just disgusting to look at and it&#x27;s pre $GOOGL deal price with the 10%+ drop premarket. 
+
+And that&#x27;s pretending $AMZN colo deal never happened too. Similar thing as you mentioned with $NBIS, approaching pre $MSFT deal. We&#x27;re seeing a complete detachment from fundamentals across the board due the market crash + panic selling.
+
+Right now, we&#x27;re likely seeing margin cascading liquidations + mechanical flows downward with short term option expiration on Neoclouds. I&#x27;m not using any margin but there&#x27;s probably margin liquidations across the board given record high usage on brokerages like $IBKR.
+
+But missing one or two huge rebound days after a selloff can cost the biggest recovery gains, which is why it’s better to hold through periods of volatility. I&#x27;m still holding $NBIS and others since im confident in their fundamentals.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1989324982233776303" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>是的，像 $CIFR 这样的 AI 算力云公司 的预售价格实在是令人恶心，而且它是预 $GOOGL 交易价格，预售价格下降了 10% 以上。这也是假装 $AMZN 托管交易从未发生过。与您提到的 $NBIS 类似，接近 $MSFT 交易之前。由于市场崩盘+恐慌性抛售，我们看到全面脱离基本面。目前，我们可能会看到保证金级联清算+机械流量下降，AI 算力云公司 上的短期期权到期。我没有使用任何保证金，但鉴于 $IBKR 等经纪公司的使用率创历史新高，可能会出现全面的保证金清算。但在抛售后错过一两个巨大的反弹日可能会损失最大的复苏收益，这就是为什么最好在波动时期持有的原因。我仍然持有 $NBIS 和其他股票，因为我对它们的基本面充满信心。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1605</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="47">
+        <div class="tweet-head">
+          <span class="mono">2025-10-29 00:25</span>
+          <span><span class="chip red">$CIFR</span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span><span class="chip red">$MSFT</span><span class="chip red">$SPY</span></span>
+        </div>
+        <div class="tweet-text">I use Robinhood and Charles Schwab too on top of IBKR. It&#x27;s fine to use multiple.
+
+But if you&#x27;re doing a ton of options it&#x27;s worth going to $IBKR or Fidelity since both of them have great execution. IBKR probably tops out Fidelity when it comes to more volatility. 
+
+It&#x27;s nuanced though. $HOOD beats other platforms if t...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I use Robinhood and Charles Schwab too on top of IBKR. It&#x27;s fine to use multiple.
+
+But if you&#x27;re doing a ton of options it&#x27;s worth going to $IBKR or Fidelity since both of them have great execution. IBKR probably tops out Fidelity when it comes to more volatility. 
+
+It&#x27;s nuanced though. $HOOD beats other platforms if the spread is low like $MSFT or $SPY and you&#x27;ll actually save money. 
+
+If you&#x27;re selling options on $CIFR or higher IV stocks, the spread is likely to be much much higher and you can lose thousands of dollars (if you trade with $60k in options for example) just based on bad fills and completely you&#x27;re better off moving from $HOOD. 
+
+If you&#x27;re long term investing, no margin, doesn&#x27;t really matter what platform you go. If you&#x27;re long term investing margin with shares, IBKR or Robinhood are great cause margin rates are low, while Schwab/Fidelity are higher. 
+
+Again it&#x27;s kinda nuanced depending on what exactly you&#x27;re aiming to do, what stocks you have.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1983208571820290480" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>除了 IBKR 之外，我还使用 Robinhood 和 Charles Schwab。用多个就好了。但如果您有大量选择，那么值得选择 $IBKR 或 Fidelity，因为它们都有出色的执行力。当谈到更大的波动性时，IBKR 可能会超过 Fidelity。但它是微妙的。如果点差像 $MSFT 或 $SPY 一样低，$HOOD 会击败其他平台，并且您实际上会省钱。如果您出售 CIFR 或更高 IV 股票的期权，则价差可能会高得多，并且您可能会因为糟糕的成交而损失数千美元（例如，如果您以 6 万美元的期权进行交易），并且您最好还是从 $HOOD 转移。如果你是长期投资，没有保证金，那么你选择什么平台并不重要。如果您以股票保证金进行长期投资，IBKR 或 Robinhood 是不错的选择，因为保证金率较低，而 Schwab/Fidelity 则较高。同样，这有点微妙，具体取决于你的具体目标是什么，你拥有什么股票。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 901</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="48">
+        <div class="tweet-head">
+          <span class="mono">2025-10-02 04:27</span>
+          <span><span class="chip red">$ETOR</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@MakhmudovAkbar Yeah $ETOR is great on a 5% drop today. Genuinely don&#x27;t know why it&#x27;s down so much given they&#x27;re like 33% cash and growing at $IBKR rates.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@MakhmudovAkbar Yeah $ETOR is great on a 5% drop today. Genuinely don&#x27;t know why it&#x27;s down so much given they&#x27;re like 33% cash and growing at $IBKR rates.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1973484964642693270" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@MakhmudovAkbar 是的，$ETOR 今天下跌了 5%，非常棒。真的不知道为什么它会下降这么多，因为它们大约是 33% 的现金，并且以 IBKR 的利率增长。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 997</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="49">
+        <div class="tweet-head">
+          <span class="mono">2025-09-29 02:28</span>
+          <span><span class="chip red">$CIFR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span><span class="chip red">$NBIS</span></span>
+        </div>
+        <div class="tweet-text">Aggressively writing options off $1m would be: 
+
++$20.24K in 5 days, 2.024% a week, 183.48% y/y return. 
+
+With a $1M cash, IBKR portfolio margin example:
+
+85 $NBIS $96 PUT, (+$5.52K premium) ($809K)
+55 $HIMS $49.5 PUT (+$1.427k) ($270k)
+250 $CIFR $10 Put (+$5.239K) - ($253k) 
+80 RKLB $42 PUT (+3.8K) ($332K)
+35 TGT $85,...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Aggressively writing options off $1m would be: 
+
++$20.24K in 5 days, 2.024% a week, 183.48% y/y return. 
+
+With a $1M cash, IBKR portfolio margin example:
+
+85 $NBIS $96 PUT, (+$5.52K premium) ($809K)
+55 $HIMS $49.5 PUT (+$1.427k) ($270k)
+250 $CIFR $10 Put (+$5.239K) - ($253k) 
+80 RKLB $42 PUT (+3.8K) ($332K)
+35 TGT $85, (+$1.3k) $296k)
+35 AMZN $207.5, (+$1.22K), ($725K)
+50 IBIT $59 PUT (+$947.86) - ($293k)
+5 META $712.5 PUT (+$869) ($335K)
+
+$1M cash, 3.31M margin. This is just something I would  do if I kept cash for the next week. 
+
+This is bottom timing on every stock, and predicting strikes that would not hit for this week based on fundamentals, macro timing, events, and volatility. 
+
+Also the return would probably be higher than 183% if you did it earnings week lol, which is probably the most profitable out of any event. BUT AGAIN SUPER DANGEROUS, this is something I&#x27;d personally do, maybe just read for fun and try on paper accounts but not live. 
+
+Also, I&#x27;m also going off the top of my head with margin maintenance (eg. you can leverage more with META, TGT, AMZN, etc. given they&#x27;re low beta). 
+
+You have to time bottoms then write the puts.  eg. AMZN not likely hitting sub $210, BTC sort of bottoming $107k around now, RKLB not going below $43 near term, NBIS $100 support, TGT bototming, META not likely to drop 5%+ a week, etc.
+
+So hopefully this is a bit informative to active SWING TRADERS and advanced traders, if you&#x27;re a newcomer with just indexes, do not try this. 
+
+_
+
+So just random thoughts
+
+1. Do not write puts on stocks you&#x27;re not comfortable buying at those levels. Don&#x27;t get tempted by high premiums on OKLO or QBTS cause those could just never recover for years on a sudden drop. You need to know what a great long is already. 
+
+^^^^IMPORTANT*** ^^^^, please do not write options on random penny stocks or speculative stuff. Only stuff you&#x27;re fine buying and holding since writing puts kinda means you would buy it at those levels anyway. 
+
+2. REPEAT with high IV on REALLY good stocks, eg. if HOOD IV reaches 90% or RKLB IV is 90% or NBIS IV is 90%, cause eventually IV decreases to 60% or something once things stall out. 
+
+3. Do not over-margin extremely high beta stocks, usually 1.3-1.5x margin is safer for stuff like NBIS or RKLB. 2-3x on high beta is dangerous.
+
+That&#x27;s why ~1.5x margin is fine 1,664 on NBIS, CIFR, HIMS, RKLB, etc in case all of them drop aside from one.
+
+Then low beta stocks like META, IBIT, TGT, AMZN you;&#x27;re fine margining since it wouldn&#x27;t really dent the portfolio much if it drops that much.
+
+4. LEARN implied volatility and know WHY it changes. If you just do this on repeat but sell stuff on earnings week and something like TTD crashes 40%, you&#x27;re in trouble. Again this only applies non-earnings week.
+
+5. If you really want to play safe, do one strike lower. Like $CIFR $7.5 will probably not hit, but $10 strike has a small chance. But I&#x27;d want to buy it at $10 anyway + the 5.2K prem, so I chose that strike. 
+
+6. Also need to know any major macro events + risk levels. So off the top of my mind, there&#x27;s probably going to be negative news about US GOV shutdown, increased chances of US recession, polymarket pricing down triple rate cut 65% -&gt; 56%, etc.
+
+On the other hand, some catalysts like stuff like AMZN has prime day on 8th-9th so it&#x27;s likely to do better around and increase in price so probably better to write options later. So I might just wait until Oct 3rd, to start selling puts instead of this week if it&#x27;s too risky. 
+
+_
+
+Generally rough rule of thumb
+
+IV - &lt;30%, not exactly worth it, doesn&#x27;t really move too much like blackrock, SPY unless there&#x27;s like PPI or some other event
+
+IV - 30-45%, usually tech stocks like MSFT, GOOGL, AMZN, etc. It&#x27;s good to do these with extra margin on top of your 1.5x that you use for higher beta.
+
+45%-65%, usually more 30-60% y/y growth type companies like MRVL, Coin, etc. Sometimes they&#x27;re really mispriced like COIN/HOOD IV is not worth sometimes given how much they move.
+
+65%-100%, usually your more fun retail stocks like RKLB, NBIS, it&#x27;s really good sweet spot since they&#x27;ll likely bounce on dips and if you know how to time bottoms + add a few percent off, it&#x27;s likely 100%+ premium gain. 
+
+100%+, lol danger zone (if you&#x27;re selling few days out). stuff like OPEN, OKLO, earnings. Probably a reason for it. It&#x27;s good if you know WHY like NBIS increasing 40% off MSFT deal, i&#x27;d sell $85 puts back then at like 200% IV because fundamentally I&#x27;d buy at those levels. 
+
+IV goes to 100%+ on stuff like NBIS if there&#x27;s one or two days out and that&#x27;s actually a good thing for option sellers. If it&#x27;s a week out then uhh something might be extremely volatile. 
+_
+
+If I had to breakdown individual ones
+
+AMZN for example, as a swing trader I&#x27;d would buy calls around $210 levels, unlikely to drop past $207.5 (so breakeven is $207.15 which is -5.96%), so you want to make sure you choose a level it never hits. You also know IV + beta (how things fluctuates) is relatively low so you can change your margin based on it never hitting. 
+
+For high beta for example, 85 NBIS $96 PUT, (+$5.52K premium) ($809K)
+
+IV is 92% which is so nice for option selling. You get more premium, and you don&#x27;t really erxpect it to dip below $100 either. IBKR doesn&#x27;t do this so I&#x27;d recommend stuff like Robinhood to see breakeven, so on this stock would need to drop 11.3% for breakeven. 
+
+_
+
+Again I&#x27;d only recommend this if you&#x27;re an active swing trader with higher risk tolerance, otherwise stick with stocks that you just hold over a year. 
+
+This is also for aggressive compounding option selling,
+ not using it strategically to DCA into positions, (eg. if I wanted to buy AMZN at $120, and I think I could get it at a better position, you can write PUTS at current strike instead of way lower). 
+
+Also, this kinda always works every week **UNLESS** there&#x27;s a black swan event like Trump tarrifs that absolutely tank the market. So PUT sellers that week kind of got wrecked, and you might need to just take a tiny loss and restart. 
+
+I do this when I have spare cash on the side since I&#x27;m more of a breakout trader type. 
+
+This is just my personal trading style and flow of thoughts, again VERY DANGEROUS, even if you have some experience. This is super advanced, a lot of former quant traders + buyside colleagues of mine have cash and do this option selling style off $10m+, I&#x27;m just kinda showing how it&#x27;s done and what the thought process is behind it. 
+
+Feel free to ask random questions and I&#x27;ll help explain.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1972367879858470974" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>大幅减记 100 万美元的期权将是： 
+
+5 天+20,24K 美元，每周 2.024%，同比回报 183.48%。拥有 100 万美元现金的 IBKR 投资组合保证金示例：
+
+85 $NBIS $96 看跌期权，（+$552K 溢价）（$809K）
+55 $HIMS $49.5 看跌期权 (+$1,427k) ($270k)
+250 $CIFR $10 看跌期权 (+$5,239K) - ($253k) 
+80 RKLB 42 美元看跌期权 (+3.8K) ($332K)
+35 TGT $85, (+$1,300) $296k)
+35 AMZN 207.5 美元，（+ 122 万美元），（72.5 万美元）
+50 IBIT $59 看跌期权 (+$947.86) - ($293k)
+5 META $712.5 看跌期权 (+$869) ($335K)
+
+100 万美元现金，331 万保证金。如果我保留下周的现金，这就是我会做的事情。这是每只股票的底部时机，并根据基本面、宏观时机、事件和波动性预测本周不会出现罢工。另外，如果你在财报周进行，回报率可能会高于 183%，哈哈，这可能是所有活动中利润最高的。但同样超级危险，这是我个人会做的事情，也许只是为了好玩而阅读并尝试纸质账户，但不是现场。另外，我还非常关心保证金维持（例如，您可以使用 META、TGT、AMZN 等进行更多杠杆操作，因为它们的 Beta 值较低）。你必须计算底部的时间，然后写看跌期权。例如。AMZN 不太可能触及 210 美元以下，BTC 目前可能触底 10.7 万美元，RKLB 近期不会低于 43 美元，NBIS 100 美元支撑，TGT 触底，META 不太可能每周下跌 5% 以上，等等。因此，希望这能为活跃的波段交易者和高级交易者提供一些信息，如果您是只掌握指数的新手，请不要尝试此操作。_
+
+所以只是随意的想法
+
+1. 不要在那些您不愿意在这些水平上购买的股票上卖出看跌期权。不要被 OKLO 或 QBTS 的高额保费所诱惑，因为这些保费可能会在突然下降后数年内永远无法恢复。你需要知道什么是伟大的长期。^^^^重要*** ^^^^，请不要在随机的细价股票或投机性东西上写下期权。只有你可以购买和持有的东西，因为卖出看跌期权意味着你无论如何都会在这些水平上购买它。2. 对真正优秀的股票重复高IV，例如。如果 HOOD IV 达到 90% 或 RKLB IV 为 90% 或 NBIS IV 为 90%，一旦事情陷入停滞，最终 IV 会降至 60% 或其他值。3. 不要对贝塔值极高的股票过度保证金，通常 1.3-1.5 倍的保证金对于 NBIS 或 RKLB 等股票来说比较安全。高 Beta 值的 2-3 倍是危险的。这就是为什么在 NBIS、CIFR、HIMS、RKLB 等上，约 1.5 倍的保证金 1,664 就足够了，以防万一所有这些都脱离其中。然后像 META、IBIT、TGT、AMZN 这样的低贝塔股票，你的利润率很高，因为如果它下跌那么多，它不会对投资组合造成太大影响。4. 了解隐含波动率并了解其变化的原因。如果你只是重复这样做，但在财报周出售东西，而 TTD 之类的东西却暴跌了 40%，那么你就有麻烦了。同样，这仅适用于非盈利周。5. 如果你真的想安全一点，那就降低一击。就像 $CIFR 7.5 美元可能不会达到，但达到 10 美元的可能性很小。但无论如何我想以 10 美元+ 5.2K 的价格购买它，所以我选择了这个罢工。6.还需要了解任何重大宏观事件+风险水平。因此，我首先想到的是，可能会出现有关美国政府关闭、美国经济衰退可能性增加、多元市场定价三倍降息 65% -&gt; 56% 等负面消息。另一方面，像 AMZN 这样的催化剂在 8 日至 9 日有黄金日，因此它可能会表现更好并上涨价格，因此可能最好稍后再写期权。因此，如果风险太大，我可能会等到 10 月 3 日才开始出售看跌期权，而不是本周。_
+
+一般粗略的经验法则
+
+IV - &lt;30%，不完全值得，不会像 Blackrock、SPY 那样波动太大，除非有 PPI 或其他事件
+
+IV - 30-45%，通常是科技股，如 MSFT、GOOGL、AMZN 等。在用于更高贝塔值的 1.5 倍基础上，用额外的保证金来做这些事情是很好的。45%-65%，通常是 30-60% 的同比增长型公司，如 MRVL、Coin 等。有时它们的定价真的很错误，比如 COIN/HOOD IV 有时不值得，因为它们的变动幅度很大。65%-100%，通常是更有趣的零售股票，如 RKLB、NBIS，这确实是一个很好的最佳点，因为它们可能会逢低反弹，如果你知道如何把握底部时机 + 添加几个百分点的折扣，则可能会获得 100%+ 的溢价收益。100%+，哈哈危险区域（如果你几天后就卖掉）。像 OPEN、OKLO、收益之类的东西。大概是有原因的吧。如果你知道为什么像 NBIS 在 MSFT 交易中增加 40% 那样，那很好，当时我会以 200% IV 的价格卖出 85 美元的看跌期权，因为从根本上来说我会在这些水平上买入。如果有一两天的时间，像 NBIS 这样的东西的 IV 会达到 100%+，这对期权卖家来说实际上是一件好事。如果是一周后，那么呃，有些事情可能会非常不稳定。_
+
+如果我必须分解个别的
+
+以 AMZN 为例，作为一名波段交易者，我会在 210 美元左右的水平买入看涨期权，不太可能跌破 207.5 美元（因此盈亏平衡点为 207.15 美元，即 -5.96%），因此您要确保选择一个永远不会触及的水平。您还知道 IV + beta（事物如何波动）相对较低，因此您可以根据它从未达到的情况来更改您的保证金。例如，对于高 Beta 值，85 NBIS $96 PUT，（+$5.52K 溢价）（$809K）
+
+IV 为 92%，这对于期权销售来说非常好。你会得到更多的溢价，而且你也不会真正预期它会跌破 100 美元。IBKR 不会这样做，所以我会推荐像 Robinhood 这样的公司来实现盈亏平衡，因此这只股票需要下跌 11.3% 才能实现盈亏平衡。_
+
+再次强调，如果您是一位具有较高风险承受能力的活跃波动交易者，我只会建议您这样做，否则请坚持持有仅持有一年以上的股票。这也适用于激进的复利期权销售，
+ 不战略性地使用它来 DCA 建仓（例如，如果我想以 120 美元的价格购买 AMZN，并且我认为我可以在更好的位置获得它，那么您可以在当前的执行价处写出看跌期权，而不是更低的价格）。此外，这种方法每周都会起作用**除非**出现像特朗普关税这样的黑天鹅事件，绝对会重挫市场。因此，那一周的 PUT 卖家有点遭受重创，您可能需要承受一点点损失并重新启动。当我有闲钱时我会这样做，因为我更像是突破交易者类型。这只是我个人的交易风格和想法，同样非常危险，即使你有一些经验。这是非常先进的，很多前量化交易员和我的买方同事都有现金，并以 1000 万美元以上的价格进行这种期权销售方式，我只是展示了它是如何完成的以及其背后的思维过程。请随意提出随机问题，我会帮助解释。</div>
+        <div class="tweet-foot">
+          <span>likes 194 / retweets 19 / replies 24 / views 101327</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="50">
+        <div class="tweet-head">
+          <span class="mono">2025-09-27 04:45</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">So just to add to the discussion on learning option selling:  
+
+1. BROKERAGE IS EXTREMELY IMPORTANT, NEVER USE $HOOD IF YOU HAVE A LARGE PORT. They claim it&#x27;s free but it&#x27;s probably one of the worst for option trading since they route your order to MMs and that&#x27;s how they make money off of you by screwing your fills. 
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So just to add to the discussion on learning option selling:  
+
+1. BROKERAGE IS EXTREMELY IMPORTANT, NEVER USE $HOOD IF YOU HAVE A LARGE PORT. They claim it&#x27;s free but it&#x27;s probably one of the worst for option trading since they route your order to MMs and that&#x27;s how they make money off of you by screwing your fills. 
+
+Unless you&#x27;re selling CC&#x27;s CSP on Mag7/SPY with low spread, then use $IBKR for order execution since they give you the best fill even if you sell for the lowest price.
+
+ It looks like you&#x27;re losing a few dollars but .2 -.4 per contract on execution makes thousands of dollars of a difference.  
+
+2. If you&#x27;re a smaller account, I&#x27;d recommend margin instead of 2x leveraged ETFs because of volatility decay. (you can use google to learn why you don&#x27;t hold 2x leveraged ETFs for more than a short time). You have liquidation risks if you use margin but it&#x27;s still better than leveraged ETFs. Think they pointed it out already in the post  
+
+3. Learn IV of stocks. Eg. Hood probably doesn&#x27;t go up and down more than 4-6% a day normally.  NBIS probably doesn&#x27;t move more than 7% a day. TSM doesn&#x27;t really move 4%+ a day.   If you&#x27;re selling CCs 4 days out like on NBIS, 6*4 for example, selling 24%+ OTM for like $130 if it&#x27;s $107 is usually smart and profitable. 
+
+If you sell CCs for like $110, you&#x27;re asking for your stock to be called away and it&#x27;s usually a strategy when you try and sell it.  It&#x27;s also important to learn catalysts. If there&#x27;s an earnings coming up the original IV doesn&#x27;t apply anymore since it could swing a lot higher or lower. Earnings CCs is completely different.  
+
+4.  CSP is good. If you want to do a lot of this with a small account use IBKR portfolio margin, that way you can write a sell a ton of puts way OTM on a lot of stocks. Biggest risk is either you don&#x27;t know what you&#x27;re doing, or there&#x27;s some black swan event like random 20% tarrifs on the world crashing the market earlier on in the year.  Again I&#x27;m saying this from the perspective of tons of experience, but a newcomer might lose a lot of money.   Same rule for IV applies. If AMZN is usually +-5% a week, you can sell PUTS 7% OTM and likely profit every week.     
+
+Earnings again is a whole new strategy. it will probably take me a whole lot of time to explain this but it&#x27;s extremely profitable too.  A lot of people just sit on $1M+ and make like $10k a week passively doing &quot;safer&quot; CSPs or DCAing into positions.  And earnings week every quarter is an insane amount of money. Unless a stock gets nuked like how TTD tanked 40%.     
+
+But generally important to learn if you want to compound your wealth + existing assets.
+
+Option selling is great real estate (for selling CCs, or extremely OTM put selling) ONLY if you know what you&#x27;re doing + do it on legitimate assets like IIBIT, HOOD. Otherwise there&#x27;s tons of risks involved.
+
+Generally great advice overall for traders to learn.  Just my thoughts and nuances to the lesson from personal experience.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1971677620623540346" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>因此，我想补充一下关于学习期权销售的讨论： 
+
+1. 经纪业务极其重要，如果您拥有大型港口，切勿使用 $HOOD。他们声称它是免费的，但这可能是期权交易中最糟糕的交易之一，因为他们将你的订单发送给MM，这就是他们通过欺骗你的交易来从你身上赚钱的方式。除非您在 Mag7/SPY 上以低点差出售 CC 的 CSP，否则请使用 $IBKR 执行订单，因为即使您以最低价格出售，它们也会为您提供最佳成交量。看起来您损失了几美元，但每份合同执行时的 0.2 -.4 美元会产生数千美元的差异。2. 如果您的账户规模较小，我建议您使用保证金，而不是 2 倍杠杆 ETF，因为波动性会衰减。（您可以使用谷歌来了解为什么您不短时间持有2倍杠杆ETF）。如果使用保证金，您会面临清算风险，但它仍然比杠杆 ETF 更好。认为他们已经在帖子中指出了 
+
+3.了解股票的IV。例如。正常情况下，Hood 每天的波动幅度可能不会超过 4-6%。NBIS 每天的变动可能不会超过 7%。TSM 每天的移动幅度并没有超过 4%。如果您像在 NBIS 上一样在 4 天后出售 CC，例如 6*4，那么以 130 美元左右的价格出售 24%+ OTM（如果其价格为 107 美元）通常是明智且有利可图的。如果您以 110 美元左右的价格出售 CC，则您是在要求撤回您的股票，这通常是您尝试出售股票时的一种策略。学习催化剂也很重要。如果有盈利，原来的 IV 就不再适用，因为它可能会大幅波动或大幅波动。收益CC完全不同。4.CSP好。如果您想用小账户做很多这样的事情，请使用 IBKR 投资组合保证金，这样您就可以以 OTM 的方式在很多股票上卖出大量看跌期权。最大的风险要么是你不知道自己在做什么，要么是出现一些黑天鹅事件，比如今年早些时候全球随机征收 20% 的关税，导致市场崩溃。我再次从大量经验的角度这么说，但新人可能会损失很多钱。IV 的规则相同。如果 AMZN 通常每周 +-5%，您可以每周卖出 7% OTM 的看跌期权并可能获利。盈利再次是一个全新的策略。我可能会花很多时间来解释这一点，但它也非常有利可图。很多人只是坐拥 100 万美元以上的资金，每周赚取 1 万美元左右，被动地从事“更安全”的 CSP 或 DCA 工作。每个季度的财报周都是一笔疯狂的钱。除非一只股票像 TTD 下跌 40% 那样遭受重创。但如果您想使您的财富+现有资产复合，那么学习通常很重要。期权销售是很好的房地产（对于销售 CC，或者极端的 OTM 看跌期权销售），前提是您知道自己在做什么 + 在 IIBIT、HOOD 等合法资产上进行操作。否则会涉及很多风险。总的来说，总体来说对于交易者来说是很好的学习建议。只是我的想法和个人经验教训的细微差别。</div>
+        <div class="tweet-foot">
+          <span>likes 198 / retweets 16 / replies 17 / views 70157</span>
+        </div>
+        <div class="chips"><span class="chip blue">Mag7 客户集中度过滤</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="51">
+        <div class="tweet-head">
+          <span class="mono">2025-09-21 02:57</span>
+          <span><span class="chip red">$ETOR</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">@KevinLMak Prob $ETOR. 
+
+I&#x27;m guessing it&#x27;s because it&#x27;s down for the year and people tax harvest before EOY.
+
+But ~800+ net cash, 3.6B marketcap, growing 22% y/y like $IBKR, profitable, down in the dumps.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@KevinLMak Prob $ETOR. 
+
+I&#x27;m guessing it&#x27;s because it&#x27;s down for the year and people tax harvest before EOY.
+
+But ~800+ net cash, 3.6B marketcap, growing 22% y/y like $IBKR, profitable, down in the dumps.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1969475920521281899" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@KevinLMak 概率 $ETOR。我猜这是因为今年的收成下降了，人们在年底前对收成征税了。但净现金约 800+，市值 3.6B，同比增长 22%，与 $IBKR 一样，盈利，但在下跌。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 1956</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="52">
+        <div class="tweet-head">
+          <span class="mono">2025-09-18 05:25</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$ASTS</span><span class="chip red">$BMNR</span><span class="chip red">$BTBT</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$DAVE</span><span class="chip red">$DELL</span><span class="chip red">$DLO</span><span class="chip red">$ETOR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$MVST</span><span class="chip red">$NBIS</span><span class="chip red">$NVTS</span><span class="chip red">$ONDS</span><span class="chip red">$OPEN</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RUM</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">Exploring small caps with 10x+ upside and gaining traction.
+
+Will throw $100k+ at some if people have high conviction with a reason:
+
+$APLD (5B),  $CIFR (4.8B) after $IREN run
+_
+$ONDS (1.99B), $NVTS (1.3B), $MVST (1B), or other recs
+
+Genuinely asking, not advice — just DD-hunting</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Exploring small caps with 10x+ upside and gaining traction.
+
+Will throw $100k+ at some if people have high conviction with a reason:
+
+$APLD (5B),  $CIFR (4.8B) after $IREN run
+_
+$ONDS (1.99B), $NVTS (1.3B), $MVST (1B), or other recs
+
+Genuinely asking, not advice — just DD-hunting</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1968426222578442740" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>探索具有 10 倍以上上涨空间的小盘股并获得关注。如果人们有很高的信念并有理由，我们会向某些人扔 10 万美元以上：
+
+$IREN 运行后 $APLD (5B)、$CIFR (4.8B)
+_
+$ONDS (1.99B)、$NVTS (1.3B)、$MVST (1B) 或其他建议
+
+真诚地询问，而不是建议——只是 DD 狩猎</div>
+        <div class="tweet-foot">
+          <span>likes 26 / retweets 1 / replies 8 / views 28870</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="53">
+        <div class="tweet-head">
+          <span class="mono">2025-09-17 04:38</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$BMNR</span><span class="chip red">$BTBT</span><span class="chip red">$CRDO</span><span class="chip red">$DAVE</span><span class="chip red">$DELL</span><span class="chip red">$DLO</span><span class="chip red">$ETOR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$OPEN</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RUM</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">My top 15 catalyst driven stocks from September sorted by potential to FY 2025, explanation, and ideal entry points:
+
+1. $NBIS - 17B+ MSFT contract, dilution mostly finished &lt; $100 (now). I like this over $IREN, $WULF, or $BTBT
+2. $HIMS - 42% Short interest. 1.2M+ customers coming in from EU.  Could up to $100 on surpr...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">My top 15 catalyst driven stocks from September sorted by potential to FY 2025, explanation, and ideal entry points:
+
+1. $NBIS - 17B+ MSFT contract, dilution mostly finished &lt; $100 (now). I like this over $IREN, $WULF, or $BTBT
+2. $HIMS - 42% Short interest. 1.2M+ customers coming in from EU.  Could up to $100 on surprise news &lt;  $45
+3. $LTC - ETF launch soon + LTC reserves &lt; $120 (now) 
+4. $RKLB - Neutron Launch early 2026 &lt; $42
+5. $TSM (calls)- Keep growing to 1.8T+ MC, capex spend insane.&lt; $265 (now)
+6. $ETOR - Undervalued with fintechl ike $HOOD $IBKR taking off. I&#x27;d prefer this over $DLO or $DAVE at current prices  &lt; $48 (now)
+7. $LULU - Short term bounce to year end from holiday consumer spending, oversold &lt; $165 (now)
+7. $MRVL - Healthy 45-55% Y/Y, unfairly punished after earnings &lt; $70 (now)
+8. $SG - Worth the investment for bounceback. $45 last year. &lt; $9 (now)
+9. $TSSI - Server racks like $SMCI, $DELL catching up to rest of AI boom. &lt; $13.5 
+10. $ASTS - Cult like stock like $OPEN &lt; $38.5
+11. $CRDO - Catchup to $ALAB at $38B MC &lt; $125
+12. $RUM - Charlie Kirk + conservatives likely to drive engagement to platform EOY. &lt; $7.25
+13. $AMZN (calls)- AWS... Follow $ORCL and other datacenter earnings &lt; $215
+14. $SMCI - 33B forward revenue 2026. 24B market cap lol. One good earnings and it pops off. $45 (now)
+15. $IBIT (1Y leaps) - Pure BTC given USD printing. No $MSTR or $BMNR, just pure asset ETF &lt; $112.5k
+
+Anything else I&#x27;m missing?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1968051910663118861" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我从 9 月开始按 2025 财年潜力、解释和理想切入点排序的前 15 只催化剂驱动股票：
+
+1. $NBIS - 17B+ MSFT 合约，稀释大部分完成后 &lt; 100 美元（现在）。我喜欢这个胜过 $IREN、$WULF 或 $BTBT
+2. $HIMS - 42% 空头利息。来自欧盟的超过 120 万客户。惊喜消息 &lt; 45 美元时最高可达 100 美元
+3. $LTC - ETF 即将推出 + LTC 储备金 &lt; 120 美元（现在） 
+4. $RKLB - Neutron 于 2026 年初发射 &lt; 42 美元
+5. $TSM（看涨期权）- 继续增长至 1.8T+ MC，资本开支疯狂。&lt; $265（现在）
+6. $ETOR - 随着 $HOOD $IBKR 等金融科技的起飞而被低估。我更喜欢这个，而不是 $DLO 或 $DAVE，当前价格 &lt; 48 美元（现在）
+7. $LULU - 假日消费者支出到年底的短期反弹，超卖 &lt; 165 美元（现在）
+7. $MRVL - 健康 45-55% Y/Y，收入低于 70 美元后受到不公平的惩罚（现在）
+8. $SG - 值得投资以实现反弹。去年45美元。&lt; 9 美元（现在）
+9. $TSSI - 像 $SMCI、$DELL 这样的服务器机架正在赶上人工智能热潮的其他部分。&lt; 13.5 美元 
+10. $ASTS - 像 $OPEN 这样的热门股票 &lt; $38.5
+11. $CRDO - 以 $38B MC &lt; $125 追赶 $ALAB
+12. $RUM - Charlie Kirk + 保守派可能会推动 EOY 平台的参与度。&lt; 7.25 美元
+13. $AMZN（看涨期权）- AWS...关注 $ORCL 和其他数据中心收益 &lt; 215 美元
+14. $SMCI - 2026 年远期收入为 33B。市值为 24B 哈哈。一笔不错的收入就突然出现了。45 美元（现在）
+15. $IBIT（1Y 跳跃）- 纯 BTC 考虑美元印刷。没有 $MSTR 或 $BMNR，只有纯资产 ETF &lt; $112.5k
+
+我还缺少什么吗？</div>
+        <div class="tweet-foot">
+          <span>likes 32 / retweets 2 / replies 9 / views 28906</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">轧空设置（盈利成长股变体）</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="54">
+        <div class="tweet-head">
+          <span class="mono">2025-09-17 02:57</span>
+          <span><span class="chip red">$ETOR</span><span class="chip red">$GOOGL</span><span class="chip red">$IBKR</span><span class="chip red">$UPWK</span></span>
+        </div>
+        <div class="tweet-text">If you look at my history, I usually buy stuff at the very bottom like $GOOGL or short term bottom like with $UPWK when everyone thinks the company will fail. 
+
+$ETOR is similar to $UPWK with large cash positions + profitable. But it&#x27;s growing at $IBKR rates 20%+ y/y but extremely low market cap. 
+
+Hard to trade agains...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you look at my history, I usually buy stuff at the very bottom like $GOOGL or short term bottom like with $UPWK when everyone thinks the company will fail. 
+
+$ETOR is similar to $UPWK with large cash positions + profitable. But it&#x27;s growing at $IBKR rates 20%+ y/y but extremely low market cap. 
+
+Hard to trade against sentiment sometimes, but I do think market is pricing this wrong.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/1968026564081459688" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>如果你看看我的历史，我通常会在最底部买东西，比如 $GOOGL，或者在短期底部买东西，比如 $UPWK，当每个人都认为公司会失败时。$ETOR 与 $UPWK 类似，拥有大量现金头寸 + 有利可图。但它的年增长率为 20% 以上，但市值却极低。有时很难违背市场情绪进行交易，但我确实认为市场定价是错误的。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 538</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=IBKR">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$PLSR 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$PLSR 历史推文</h1>
+      <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b>2</b></div>
+        <div class="stat-card"><span>历史推文</span><b>2</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-01-18</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-01-18</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-01-19 03:22</span>
+          <span><span class="chip red">$PLSR</span></span>
+        </div>
+        <div class="tweet-text">Trump&#x27;s tariff policies are an engima to me.
+
+Also just a heads up for people who think they should ape into $PLSR
+
+- Nobody knows the volume of helium-3 in the reservoir
+
+- separating helium-3 from helium-4 might be insanely expensive (nobody knows cost structure) and it might be worthless to attempt
+
+They&#x27;ve actually...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Trump&#x27;s tariff policies are an engima to me.
+
+Also just a heads up for people who think they should ape into $PLSR
+
+- Nobody knows the volume of helium-3 in the reservoir
+
+- separating helium-3 from helium-4 might be insanely expensive (nobody knows cost structure) and it might be worthless to attempt
+
+They&#x27;ve actually said &quot;no commercial technology currently exists to separate He-3 from He-4 at scale&quot;
+
+For example separating salt from the ocean to make purified water and selling that. 
+
+Hence why it&#x27;s still $140m MC despite sitting on a potential gold mine (and if they do attempt it expect a TON of dilution).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012968817476157868" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>特朗普的关税政策对我来说是一个难题。也只是给那些认为自己应该模仿 $PLSR 的人提个醒
+
+- 没有人知道储存器中氦 3 的体积
+
+- 将 helium-3 与 helium-4 分离可能非常昂贵（没有人知道成本结构），并且尝试可能毫无价值
+
+他们实际上说过“目前不存在大规模分离 He-3 和 He-4 的商业技术”
+
+例如，从海洋中分离盐来制造纯净水并出售。因此，尽管坐拥一个潜在的金矿，但它仍然是 1.4 亿美元的 MC（如果他们确实尝试的话，预计会被大量稀释）。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 3492</span>
+        </div>
+        <div class="chips"><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-01-19 03:09</span>
+          <span><span class="chip red">$PLSR</span></span>
+        </div>
+        <div class="tweet-text">They&#x27;re all called bottlenecks because they&#x27;re critical for their specific vertical. But helium-3 definitely is for US quantum/defense industry.
+
+$PLSR seems quite interesting since they discovered a helium reservoir in Minnesota. 
+
+Apparently it&#x27;s possible that it contains significant amounts of Helium-3 but I&#x27;m not q...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">They&#x27;re all called bottlenecks because they&#x27;re critical for their specific vertical. But helium-3 definitely is for US quantum/defense industry.
+
+$PLSR seems quite interesting since they discovered a helium reservoir in Minnesota. 
+
+Apparently it&#x27;s possible that it contains significant amounts of Helium-3 but I&#x27;m not quite sure if it&#x27;s true.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012965528281993367" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>它们都被称为瓶颈，因为它们对于特定的垂直领域至关重要。但 helium-3 绝对适用于美国量子/国防工业。$PLSR 似乎很有趣，因为他们在明尼苏达州发现了一个氦气库。显然它可能含有大量的 Helium-3，但我不太确定这是否属实。</div>
+        <div class="tweet-foot">
+          <span>likes 31 / retweets 4 / replies 5 / views 11399</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=PLSR">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

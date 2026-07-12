@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$CODA 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$CODA 历史推文</h1>
+      <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b>12</b></div>
+        <div class="stat-card"><span>历史推文</span><b>12</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-01-18</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-03-13</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射 3</span><span class="chip blue">瓶颈狩猎（核心透镜） 3</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-03-14 04:17</span>
+          <span><span class="chip red">$CODA</span><span class="chip red">$KRKNF</span><span class="chip red">$OPTT</span></span>
+        </div>
+        <div class="tweet-text">WSJ: Iran’s Sea Mines Are One of Its Most Powerful Weapons
+
+“Mines have been among the most destructive weapons that the U.S. Navy has faced”
+
+More attention is now being poured into the Underwater defense sector.
+
+Ocean defense names such as $KRKNF, $OPTT, and $CODA that are popular on X for sonar and mine neutralizat...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">WSJ: Iran’s Sea Mines Are One of Its Most Powerful Weapons
+
+“Mines have been among the most destructive weapons that the U.S. Navy has faced”
+
+More attention is now being poured into the Underwater defense sector.
+
+Ocean defense names such as $KRKNF, $OPTT, and $CODA that are popular on X for sonar and mine neutralization applications.
+
+May finally see more investor attention and possible defense contracts.
+
+Especially as US media cycles focus on the mines beneath the Strait.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2032551687089746239" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>华尔街日报：伊朗的海雷是其最强大的武器之一
+
+“地雷是美国海军面临的最具破坏性的武器之一”
+
+现在越来越多的注意力被投入到水下防御领域。海洋防御名称，例如 $KRKNF、$OPTT 和 $CODA，在 X 上很流行，用于声纳和水雷中和应用。最终可能会看到更多投资者的关注和可能的国防合同。尤其是当美国媒体关注海峡下方的水雷时。</div>
+        <div class="tweet-foot">
+          <span>likes 285 / retweets 15 / replies 25 / views 45684</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-03-12 00:32</span>
+          <span><span class="chip red">$CODA</span><span class="chip red">$KRKNF</span></span>
+        </div>
+        <div class="tweet-text">@CoffeeStocksGuy Nice, you beat me to it. Funny how you came to the same conclusion regarding $CODA and $KRKNF
+
+This was more reactionary to the new mine reports 12M ago. Looks like crude oil prices slightly spiked since the news.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@CoffeeStocksGuy Nice, you beat me to it. Funny how you came to the same conclusion regarding $CODA and $KRKNF
+
+This was more reactionary to the new mine reports 12M ago. Looks like crude oil prices slightly spiked since the news.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031770301298802834" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@CoffeeStocksGuy 很好，你比我先一步。有趣的是，你对 $CODA 和 $KRKNF 得出了相同的结论
+
+这对 1200 万年前的新矿井报告更为反动。自消息传出以来，原油价格似乎略有上涨。</div>
+        <div class="tweet-foot">
+          <span>likes 24 / retweets 0 / replies 2 / views 3819</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-03-12 00:26</span>
+          <span><span class="chip red">$AVAV</span><span class="chip red">$CODA</span><span class="chip red">$KRKNF</span></span>
+        </div>
+        <div class="tweet-text">Not exactly, $CODA looks very fundamentally sound.
+
+ High cash balance, net income positive, and extremely high margins for the sector + sensors. 
+
+If anything, Iran placing mines in the Strait just gave sonar/detection stocks like these and $KRKNF the biggest tailwind of the decade. 
+
+Warfare in Venezulea focused more...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Not exactly, $CODA looks very fundamentally sound.
+
+ High cash balance, net income positive, and extremely high margins for the sector + sensors. 
+
+If anything, Iran placing mines in the Strait just gave sonar/detection stocks like these and $KRKNF the biggest tailwind of the decade. 
+
+Warfare in Venezulea focused more on drones like $AVAV and never really went underwater. 
+
+So this is probably one of the first times everyone sees the applications now + leads to more sector inflows, even if TAM didn&#x27;t exactly increase too much.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031768855287394699" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>不完全是，$CODA 看起来基本面非常健全。该行业+传感器现金余额高，净利润为正，利润率极高。如果说有什么不同的话，那就是伊朗在海峡布设地雷，只是给像这样的声纳/探测股和 $KRKNF 带来了十年来最大的推动力。委内瑞拉的战争更多地集中在像 $AVAV 这样的无人机上，并且从未真正进入水下。因此，这可能是每个人第一次看到现在的申请+导致更多的部门流入，即使 TAM 并没有增加太多。</div>
+        <div class="tweet-foot">
+          <span>likes 26 / retweets 0 / replies 0 / views 3539</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-03-12 00:13</span>
+          <span><span class="chip red">$CODA</span><span class="chip red">$GOOGL</span><span class="chip red">$KRKNF</span><span class="chip red">$LITE</span></span>
+        </div>
+        <div class="tweet-text">Just in 10M ago from Reuters: 
+
+New confirmation from sources that Iran has deployed about a dozen mines in the Strait of Hormuz.
+
+There&#x27;s two very aquatic warfare stocks I found interesting for exposure. 
+
+$KRKNF the Squid🦑and $CODA the Octopus.
+
+$KRKNF: Kraken Robotics, the Andruil supplier, is one of the more pure p...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just in 10M ago from Reuters: 
+
+New confirmation from sources that Iran has deployed about a dozen mines in the Strait of Hormuz.
+
+There&#x27;s two very aquatic warfare stocks I found interesting for exposure. 
+
+$KRKNF the Squid🦑and $CODA the Octopus.
+
+$KRKNF: Kraken Robotics, the Andruil supplier, is one of the more pure play stocks for the acquatic warfare sector:
+
+They build Synthetic Aperture Sonar (SAS) and SeaPower batteries that many defense primes like Andruil rely on. 
+
+Anduril recently opened a facility in Rhode Island to mass produce UUVs (eg. Dive-LD and Ghost Shark). 
+
+According to retail BOM estimates:
+- Dive-LD carries $1M to $2M CAD in Kraken hardware
+- Ghost Shark XL-AUV carries $8M to $10M CAD.
+
+If that Anduril ramps happens: the revenue ramp is there.
+
+I wouldn&#x27;t try and model Kraken based off revenue projections but more like how much Andruil scales (similar modeling $LITE based on $GOOGL TPU)
+
+But financials, assets: $301.5M, Liabilities: $65.7M, Total debt: ~$24.1M so looks pretty healthy. 60% YoY revenue growth off 59% gross margins. 
+
+As for demining the strait, they have the KATFISH mine-hunting drone. And SAS Sonar for 3D images of the seafloor for identifying buried mines. 
+
+$CODA: Coda Octopus, basically pure play exposure to Iran placing mines.
+
+Their main product is Echoscope real-time 3D/4D/5D volumetric sonar that maps static and moving objects in murky, pitch-black water.
+
+This carries forward to other products like &quot;NANO Gen Series&quot;, Echoscope version as a perception sensor for UUVs. 
+
+And then a diver augmented display (that SPECWAR ordered), which is basically the Echoscope sonar feeding people data. 
+
+CODA has an amazing balance sheet. Recent FY2025 report (ending Oct 2025), they hold $28.7 million in pure cash and have zero long-term debt.
+
+Gross margins are extremely high as well, consolidated gross margin of 66.5% while majority of defense contracotrs sit around 10-20%. 
+
+$26.6M revenue for 2025, 30.7% Y/Y increase, and $4.1M net income, which is rare to be profitable. 
+
+But basically their product set of sonar / detection looks perfect pure play for this exact scenario and they’re fundamentally very sound, without the catalyst. 
+
+Regardless, Iran mining the straight isn&#x27;t exactly a major TAM increase. 
+
+However, it does alert investors and the government that warfare may transition underwater:
+
+Leading to more sector inflows as well as defense contract opportunities. 
+
+These were my two favorites personally, just publishing my thoughts here in case other&#x27;s find this helpful.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031765468982473011" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>就在 1000 万年前，路透社： 
+
+消息人士新证实，伊朗在霍尔木兹海峡部署了大约十几枚水雷。我发现有两只非常值得关注的水战股票。$KRKNF 鱿鱼🦑和 $CODA 章鱼。$KRKNF：Andruil 供应商 Kraken Robotics 是水战领域较为纯粹的股票之一：
+
+他们制造了合成孔径声纳 (SAS) 和 SeaPower 电池，Andruil 等许多防御主力都依赖这些电池。Anduril 最近在罗德岛州开设了一家工厂，用于大规模生产 UUV（例如 Dive-LD 和 Ghost Shark）。根据零售 BOM 估算：
+- Dive-LD 在 Kraken 硬件中携带 100 万至 200 万加元
+- Ghost Shark XL-AUV 运载 800 万至 1000 万加元。如果安杜里尔的增长发生：收入增长就在那里。我不会尝试根据收入预测对 Kraken 进行建模，而更像是 Andruil 的扩展程度（类似基于 $GOOGL TPU 的 $LITE 建模）
+
+但财务方面，资产：3.015 亿美元，负债：6570 万美元，总债务：约 2410 万美元，所以看起来相当健康。收入同比增长 60%，毛利率为 59%。至于海峡扫雷，他们有KATFISH扫雷无人机。SAS 声纳可提供海底 3D 图像，用于识别埋藏的水雷。$CODA：Coda Octopus，基本上是在伊朗布设地雷的纯粹游戏。他们的主要产品是 Echoscopy 实时 3D/4D/5D 体积声纳，可绘制浑浊、漆黑的水中的静态和移动物体。这延续到了其他产品，如“NANO Gen 系列”、回声镜版本，作为 UUV 的感知传感器。然后是潜水员增强显示器（SPECWAR 订购的），它基本上是为人们提供数据的回声镜声纳。CODA 拥有惊人的资产负债表。最近的 2025 财年报告（截至 2025 年 10 月）显示，他们持有 2870 万美元的纯现金，长期债务为零。毛利率也非常高，综合毛利率为 66.5%，而大多数国防承包商的毛利率约为 10-20%。2025 年营收 2660 万美元，同比增长 30.7%，净利润 410 万美元，实现盈利实属罕见。但基本上，他们的声纳/检测产品集看起来非常适合这种情况，而且它们基本上非常健全，无需催化剂。无论如何，伊朗开采直道并不是 TAM 的主要增长。然而，它确实提醒投资者和政府战争可能会转变为水下：
+
+导致更多的行业流入以及国防合同机会。这是我个人最喜欢的两个，只是在这里发表我的想法，以防其他人觉得这有帮助。</div>
+        <div class="tweet-foot">
+          <span>likes 402 / retweets 24 / replies 31 / views 53455</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">GAAP 毛利率之战</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-03-11 06:27</span>
+          <span><span class="chip red">$CODA</span><span class="chip red">$GD</span><span class="chip red">$RTX</span></span>
+        </div>
+        <div class="tweet-text">@barbell_ideas Yeah just double checked $CODA gross margins are 66.5% to 67.6%, which is extremely high for the industry.
+
+Defense contractors like $GD or $RTX typically range around 10-20%.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@barbell_ideas Yeah just double checked $CODA gross margins are 66.5% to 67.6%, which is extremely high for the industry.
+
+Defense contractors like $GD or $RTX typically range around 10-20%.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031497121468383529" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@barbell_ideas 是的，刚刚仔细检查过 $CODA 毛利率为 66.5% 至 67.6%，这对于行业来说是非常高的。$GD 或 $RTX 等国防承包商通常在 10-20% 左右。</div>
+        <div class="tweet-foot">
+          <span>likes 24 / retweets 1 / replies 2 / views 4089</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-03-11 05:09</span>
+          <span><span class="chip red">$CODA</span></span>
+        </div>
+        <div class="tweet-text">@DanzTrader So far I’ve found $CODA to be the biggest direct beneficiary compared to the others. Still looking into other names though.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@DanzTrader So far I’ve found $CODA to be the biggest direct beneficiary compared to the others. Still looking into other names though.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031477579119833292" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@DanzTrader 到目前为止，我发现与其他人相比，$CODA 是最大的直接受益者。但仍在寻找其他名字。</div>
+        <div class="tweet-foot">
+          <span>likes 37 / retweets 0 / replies 2 / views 3704</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-03-11 04:16</span>
+          <span><span class="chip red">$CODA</span><span class="chip red">$ESLT</span><span class="chip red">$EXA</span><span class="chip red">$KRKNF</span><span class="chip red">$MIND</span><span class="chip red">$OPTT</span></span>
+        </div>
+        <div class="tweet-text">Just in: Trump is angered after Iran mined the Strait of Hormuz.
+
+&gt; Iran Places Underwater Mines
+&gt; Trump Angry bc Oil
+&gt; Urgent need to clear them 
+&gt; Mine Detection + Clearance Companies = Profit?
+
+If you want to profit off the situation:
+
+Defense companies like $CODA, $KRKNF, $OPTT, $MIND, $EXA, $ESLT and many others s...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just in: Trump is angered after Iran mined the Strait of Hormuz.
+
+&gt; Iran Places Underwater Mines
+&gt; Trump Angry bc Oil
+&gt; Urgent need to clear them 
+&gt; Mine Detection + Clearance Companies = Profit?
+
+If you want to profit off the situation:
+
+Defense companies like $CODA, $KRKNF, $OPTT, $MIND, $EXA, $ESLT and many others stand to benefit.
+
+It&#x27;s the biggest catalyst of the decade for aquatic defense contractors, given the new news.
+
+Just need to figure out who stands to benefit the most.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031464140028654077" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>刚刚报道：伊朗在霍尔木兹海峡布雷后，特朗普感到愤怒。&gt; 伊朗布设水雷
+&gt; 特朗普对BC石油公司感到愤怒
+&gt; 迫切需要清除它们 
+&gt; 探雷+清理公司=利润？如果你想从这种情况中获利：
+
+$CODA、$KRKNF、$OPTT、$MIND、$EXA、$ESLT 等国防公司将受益。鉴于这一新消息，这是十年来水生防御承包商最大的催化剂。只需要弄清楚谁受益最大。</div>
+        <div class="tweet-foot">
+          <span>likes 508 / retweets 36 / replies 50 / views 70307</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-03-11 03:48</span>
+          <span><span class="chip red">$BA</span><span class="chip red">$CODA</span><span class="chip red">$EXA</span><span class="chip red">$EXALF</span><span class="chip red">$GD</span><span class="chip red">$HII</span><span class="chip red">$KRKNF</span><span class="chip red">$MIND</span><span class="chip red">$NOC</span><span class="chip red">$NORBT</span><span class="chip red">$NSANY</span><span class="chip red">$OPTT</span><span class="chip red">$SAABF</span><span class="chip red">$TDY</span></span>
+        </div>
+        <div class="tweet-text">Other interesting names aside from $KRKNF, $CODA, $EXA:  
+
+$OPTT - WAM-Vs for underwater mine inspection + disposal (possibly Andruil partner, mentioned by followers).     
+
+$MIND - Side-scan sonars for mines
+
+$NORBT - Wideband Multibeam Sonars
+
+$HII - REMUS 100, 300, and 600 for mine clearance operations.  
+
+$GD - Blu...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Other interesting names aside from $KRKNF, $CODA, $EXA:  
+
+$OPTT - WAM-Vs for underwater mine inspection + disposal (possibly Andruil partner, mentioned by followers).     
+
+$MIND - Side-scan sonars for mines
+
+$NORBT - Wideband Multibeam Sonars
+
+$HII - REMUS 100, 300, and 600 for mine clearance operations.  
+
+$GD - Bluefin Robotics Knifefish UUV for buried mines in cluttered underwater  
+
+$BA - Archerfish, an autonomous, expendable mine neutralizer  
+
+$SAABF - Sea Wasp for navigate up to naval mines and IEDs and place explosive charges next to them  
+
+$TDY - Gavia AUV for minehunting, SeaBotix ROVs, and the high-end RESON sonars  
+
+$NSANY - Synthetic Aperture Sonar  
+
+$NOC - AN/AQS-24B/C for minehunting</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031457195091759114" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>除了 $KRKNF、$CODA、$EXA 之外的其他有趣名称： 
+
+$OPTT - 用于水雷检查+处置的WAM-V（可能是Andruil合作伙伴，追随者提到）。$MIND - 地雷侧扫声纳
+
+$NORBT - 宽带多波束声纳
+
+$HII - REMUS 100、300 和 600 用于扫雷作业。$GD - Bluefin Robotics Knifefish UUV 用于在杂乱的水下埋设地雷 
+
+$BA - Archerfish，一种自主的、消耗性地雷中和器 
+
+$SAABF - 海黄蜂，用于导航至水雷和简易爆炸装置并在其旁边放置炸药 
+
+$TDY - 用于扫雷的 Gavia AUV、SeaBotix ROV 和高端 RESON 声纳 
+
+$NSANY - 合成孔径声纳 
+
+$NOC - 用于扫雷的 AN/AQS-24B/C</div>
+        <div class="tweet-foot">
+          <span>likes 476 / retweets 38 / replies 36 / views 103388</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-03-11 03:15</span>
+          <span><span class="chip red">$CODA</span><span class="chip red">$EXALF</span><span class="chip red">$KRKNF</span></span>
+        </div>
+        <div class="tweet-text">Iran is now deploying mines in Strait of Hormuz.
+
+You might be wondering like everyone else: How do I profit off Iran mining the waterway for oil?
+
+Here&#x27;s how:
+
+Sonar for Minefields:  $CODA, $KRKNF.
+
+Coda Octopus ( $CODA, $174M): 3D/4D/5D volumetric sonar for mines in muddy water. DAVD for U.S. Navy EOD to defuse mines...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Iran is now deploying mines in Strait of Hormuz.
+
+You might be wondering like everyone else: How do I profit off Iran mining the waterway for oil?
+
+Here&#x27;s how:
+
+Sonar for Minefields:  $CODA, $KRKNF.
+
+Coda Octopus ( $CODA, $174M): 3D/4D/5D volumetric sonar for mines in muddy water. DAVD for U.S. Navy EOD to defuse mines.
+
+Kraken Robotics ( $KRKNF, $2.97B):  KATFISH towed underwater vehicle is actively used by NATO navies for high-speed, high-resolution seabed mapping and minehunting
+
+Mine Identification and Disposal:
+
+Exail ( $EXALF, 2.2B MC ): Operates MIDS - Mine Identification and Disposal Systems
+
+This is the biggest tailwind of the year for underwater defense companies:
+
+As the battle moves from land to underseas: Search and Destroy for Iranian mines in the Straight.
+
+Given this is brand new news, that came out a few minutes ago, don’t think they’ve been priced in yet.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031448823164436895" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>伊朗目前正在霍尔木兹海峡部署水雷。您可能像其他人一样想知道：我如何从伊朗开采水道石油中获利？方法如下：
+
+雷区声纳：$CODA、$KRKNF。Coda Octopus（$CODA，$1.74M）：用于泥水中地雷的 3D/4D/5D 体积声纳。DAVD 用于美国海军 EOD 拆除地雷。Kraken Robotics ( $KRKNF, $2.97B)：北约海军积极使用 KATFISH 牵引式水下航行器进行高速、高分辨率海底测绘和扫雷
+
+地雷识别和处置：
+
+Exail ( $EXALF, 2.2B MC )：操作 MIDS - 地雷识别和处置系统
+
+对于水下防御公司来说，这是今年最大的推动力：
+
+随着战斗从陆地转移到海底：搜索并摧毁直道上的伊朗水雷。鉴于这是几分钟前发布的全新消息，不要认为它们还没有被定价。</div>
+        <div class="tweet-foot">
+          <span>likes 1146 / retweets 103 / replies 75 / views 292283</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-01-28 04:37</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$CODA</span><span class="chip red">$CPSH</span><span class="chip red">$CVV</span><span class="chip red">$ESE</span><span class="chip red">$FEIM</span><span class="chip red">$GHM</span><span class="chip red">$GSM</span><span class="chip red">$HALEU</span><span class="chip red">$INTT</span><span class="chip red">$IQE</span><span class="chip red">$KULR</span><span class="chip red">$LPKFF</span><span class="chip red">$LPTH</span><span class="chip red">$MKSI</span><span class="chip red">$MTRN</span><span class="chip red">$NTI</span><span class="chip red">$NVDA</span><span class="chip red">$OPXS</span><span class="chip red">$PDFS</span><span class="chip red">$PESI</span><span class="chip red">$PKE</span><span class="chip red">$PLAB</span><span class="chip red">$RDW</span><span class="chip red">$RELL</span><span class="chip red">$TAYD</span><span class="chip red">$TDY</span><span class="chip red">$VNP.TO</span><span class="chip red">$VREX</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">There&#x27;s an interesting company on here that happens to own ~25-30% of this semi-grade material supply chain in the world.
+
+Thermal is probably an issue, so might be a potential material composite chokepoint with $NVDA architectures in 2027.
+
+There was no issue with H200s (&lt;1000W) but as you get higher to 2000w with Rub...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">There&#x27;s an interesting company on here that happens to own ~25-30% of this semi-grade material supply chain in the world.
+
+Thermal is probably an issue, so might be a potential material composite chokepoint with $NVDA architectures in 2027.
+
+There was no issue with H200s (&lt;1000W) but as you get higher to 2000w with Rubin deployments, might be a hidden beneficiary of material transitions.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2016249140855156962" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>这里有一家有趣的公司，恰好拥有世界上半级材料供应链的约 25-30%。散热可能是一个问题，因此可能成为 2027 年 $NVDA 架构的潜在材料复合瓶颈。H200（&lt;1000W）没有问题，但当您通过 Rubin 部署将功率提高到 2000w 时，可能是材料转换的隐藏受益者。</div>
+        <div class="tweet-foot">
+          <span>likes 196 / retweets 11 / replies 19 / views 192910</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-01-25 04:02</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$CODA</span><span class="chip red">$CPSH</span><span class="chip red">$CVV</span><span class="chip red">$ESE</span><span class="chip red">$FEIM</span><span class="chip red">$GHM</span><span class="chip red">$GSM</span><span class="chip red">$HALEU</span><span class="chip red">$INTT</span><span class="chip red">$IQE</span><span class="chip red">$KULR</span><span class="chip red">$LPKFF</span><span class="chip red">$LPTH</span><span class="chip red">$MKSI</span><span class="chip red">$MTRN</span><span class="chip red">$NTI</span><span class="chip red">$OPXS</span><span class="chip red">$PDFS</span><span class="chip red">$PESI</span><span class="chip red">$PKE</span><span class="chip red">$PLAB</span><span class="chip red">$RDW</span><span class="chip red">$RELL</span><span class="chip red">$TAYD</span><span class="chip red">$TDY</span><span class="chip red">$VNP.TO</span><span class="chip red">$VREX</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">@__EthanHunt__ I listed $WOLF in my list of potential bottlenecks, and the company genuinely is interesting. 
+
+But there&#x27;s a difference between &quot;bottleneck&quot; and good investment. 
+
+Felt my the DD I did would go to waste, so ended up just posting it. 
+
+https://t.co/XCICxxODXQ</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@__EthanHunt__ I listed $WOLF in my list of potential bottlenecks, and the company genuinely is interesting. 
+
+But there&#x27;s a difference between &quot;bottleneck&quot; and good investment. 
+
+Felt my the DD I did would go to waste, so ended up just posting it. 
+
+https://t.co/XCICxxODXQ</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015153348287381771" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@__EthanHunt__ 我在潜在瓶颈列表中列出了 $WOLF，该公司确实很有趣。但“瓶颈”和良好的投资是有区别的。觉得我做的DD会浪费，所以最后只是发布它。https://t.co/XCICxxODXQ</div>
+        <div class="tweet-foot">
+          <span>likes 21 / retweets 0 / replies 2 / views 9103</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-01-19 02:38</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$CODA</span><span class="chip red">$CPSH</span><span class="chip red">$CVV</span><span class="chip red">$ESE</span><span class="chip red">$FEIM</span><span class="chip red">$GHM</span><span class="chip red">$GSM</span><span class="chip red">$HALEU</span><span class="chip red">$INTT</span><span class="chip red">$IQE</span><span class="chip red">$KULR</span><span class="chip red">$LPKFF</span><span class="chip red">$LPTH</span><span class="chip red">$MKSI</span><span class="chip red">$MTRN</span><span class="chip red">$NTI</span><span class="chip red">$OPXS</span><span class="chip red">$PDFS</span><span class="chip red">$PESI</span><span class="chip red">$PKE</span><span class="chip red">$PLAB</span><span class="chip red">$RDW</span><span class="chip red">$RELL</span><span class="chip red">$TAYD</span><span class="chip red">$TDY</span><span class="chip red">$VNP.TO</span><span class="chip red">$VREX</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">Personal TLDR research. 
+ 
+Western supply chain bottlenecks like $LPTH and $AXTI:  
+
+$MTRN - Beryllium (Spor Mountain) 
+$HALEU - Uranium | SMRs 
+$ESE - Space fuel tanks (through Vacco) 
+$GHM - Vacuum Ejectors &amp; Surface Condensers | U.S. Navy 
+$FEIM - Atomic Clocks  
+$OPXS - Light Laser Periscopes  
+$TAYD - Vibration  
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Personal TLDR research. 
+ 
+Western supply chain bottlenecks like $LPTH and $AXTI:  
+
+$MTRN - Beryllium (Spor Mountain) 
+$HALEU - Uranium | SMRs 
+$ESE - Space fuel tanks (through Vacco) 
+$GHM - Vacuum Ejectors &amp; Surface Condensers | U.S. Navy 
+$FEIM - Atomic Clocks  
+$OPXS - Light Laser Periscopes  
+$TAYD - Vibration  
+$PKE - Heat 
+$VNP.TO - Western gallium  
+$TDY - Rad-Hard Image Sensors  $RDW - Roll-Out Solar Arrays 
+$PDFS - Exensio Yield for Intel 18A  
+$WOLF - Silicon Carbide  
+$RELL - Ultracapacitors &amp; Magnetrons  
+$CPSH - Thermal / Aluminum Silicon Carbide  
+$VREX - X-Ray Tubes  
+$GSM - Western Silicon Metal  
+$INTT - Extreme Thermal Cycling  
+$CODA - Turbidity (Murkiness)  
+$NTI - Corrosion  $PLAB - Photomask  
+$MKSI - Plasma Control 
+$KULR - Explosive Heat  
+$PESI - Radioactive mixed waste.  
+$CVV - Gas-to-Solid Deposition.  
+$LPKFF - Laser Induced Deep Etching/  Glass Substrates    
+
+These are just more of the &quot;under the radar&quot; small caps I was researching -&gt; ended up choosing $AXTI and $LPTH if people were interested.   
+
+ Lot of them have terrible fundamentals despite being vital eg: $IQE (already pretty known), so it&#x27;s not a good idea to just blindly buy a bottleneck.     
+
+There were a lot more out there I haven&#x27;t finished researching (so didn&#x27;t include), and it&#x27;s a lot harder to pinpoint ones that haven&#x27;t been priced in.     
+
+But wouldn&#x27;t be surprised if a lot of these went up 5x over the next year.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2012957864026087525" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>个人 TLDR 研究。$LPTH 和 $AXTI 等西方供应链瓶颈： 
+
+$MTRN - 铍（Spor Mountain） 
+$HALEU - 铀 |小型反应堆 
+$ESE - 太空燃料箱（通过 Vacco） 
+$GHM - 真空喷射器和表面冷凝器|美国海军 
+$FEIM - 原子钟 
+$OPXS - 光激光潜望镜 
+$TAYD - 振动 
+$PKE - 热火 
+$VNP.TO - 西方镓 
+$TDY - 抗辐射图像传感器 $RDW - 卷出式太阳能电池阵列 
+$PDFS - Intel 18A 的 Exensio 产量 
+$WOLF - 碳化硅 
+$RELL - 超级电容器和磁控管 
+$CPSH - 导热/碳化硅铝 
+$VREX - X 射线管 
+$GSM - 西方金属硅 
+$INTT - 极限热循环 
+$CODA - 浊度（浑浊度） 
+$NTI - 腐蚀 $PLAB - 光掩模 
+$MKSI - 等离子控制 
+$KULR - 爆炸热 
+$PESI - 放射性混合废物。$CVV - 气固沉积。$LPKFF - 激光诱导深蚀刻/玻璃基板 
+
+这些只是我正在研究的更多“雷达下”小盘股 -&gt; 如果人们感兴趣的话，最终会选择 $AXTI 和 $LPTH。尽管很重要，但他们中的很多人的基本面都很糟糕，例如：$IQE（已经众所周知），所以盲目购买瓶颈并不是一个好主意。还有很多东西我还没有完成研究（所以没有包括在内），而且要找出那些还没有被定价的东西要困难得多。但如果其中很多在明年上涨了 5 倍，也不会感到惊讶。</div>
+        <div class="tweet-foot">
+          <span>likes 857 / retweets 87 / replies 49 / views 159781</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=CODA">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

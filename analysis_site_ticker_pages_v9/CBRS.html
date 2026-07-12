@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$CBRS 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$CBRS 历史推文</h1>
+      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b>8</b></div>
+        <div class="stat-card"><span>历史推文</span><b>8</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-05-14</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-07-02</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 未到期。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-07-03 02:13</span>
+          <span><span class="chip red">$CBRS</span><span class="chip red">$SPCX</span></span>
+        </div>
+        <div class="tweet-text">@hitraderjoe Recent US IPO models have been very stupid like $SPCX / $CBRS hiking valuations to absurd numbers before going public.
+
+More US listings should follow Unitree (which would likely command higher valuations) + China&#x27;s IPOs like Lightelligence. 
+
+That allow retail access at the same</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@hitraderjoe Recent US IPO models have been very stupid like $SPCX / $CBRS hiking valuations to absurd numbers before going public.
+
+More US listings should follow Unitree (which would likely command higher valuations) + China&#x27;s IPOs like Lightelligence. 
+
+That allow retail access at the same</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072745577310564861" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@hitraderjoe 近期美国 IPO 模式很荒唐，像 $SPCX / $CBRS 在上市前把估值推到离谱水平。更多美国上市应当学习 Unitree，或者中国 IPO 里的 Lightelligence，让散户能在更合理阶段获得准入。</div>
+        <div class="tweet-foot">
+          <span>likes 12 / retweets 0 / replies 1 / views 3047</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-06-30 22:17</span>
+          <span><span class="chip red">$CBRS</span><span class="chip red">$RDDT</span></span>
+        </div>
+        <div class="tweet-text">There was a pretty funny anecdotal complaint from the Machine Learning $RDDT subreddit.
+
+On $CBRS + OpenAI:
+
+- Needs 1-2K tokens/sec so tries to use Cerebras.
+
+- Claims OpenAI reserved all capacity, making waitlist infinite for everyone else not a hyperscaler.
+
+- Stated https://t.co/ZXPPg7v5Ch</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">There was a pretty funny anecdotal complaint from the Machine Learning $RDDT subreddit.
+
+On $CBRS + OpenAI:
+
+- Needs 1-2K tokens/sec so tries to use Cerebras.
+
+- Claims OpenAI reserved all capacity, making waitlist infinite for everyone else not a hyperscaler.
+
+- Stated https://t.co/ZXPPg7v5Ch</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2071961279380791729" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>Reddit 机器学习 $RDDT 子版块有一个非常有趣的轶事抱怨。在 $CBRS + OpenAI 上：
+
+- 需要 1-2K 代币/秒，因此尝试使用 Cerebras。- 声称 OpenAI 保留了所有容量，使得其他人（而不是超大云厂商）的候补名单无限。- 声明 https://t.co/ZXPPg7v5Ch</div>
+        <div class="tweet-foot">
+          <span>likes 239 / retweets 19 / replies 124 / views 93511</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-06-27 14:38</span>
+          <span><span class="chip red">$CBRS</span></span>
+        </div>
+        <div class="tweet-text">@wannabepanacea pls don’t blindly follow along, esp. since I actively manage my own positions!
+
+$CBRS is just a cautionary position for me right now. 
+
+Cause things evolve every month in the AI space (eg. Custom jalapeño chips, maybe OpenAI has troubles, rate hikes), etc.
+
+But if it’s compelling</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@wannabepanacea pls don’t blindly follow along, esp. since I actively manage my own positions!
+
+$CBRS is just a cautionary position for me right now. 
+
+Cause things evolve every month in the AI space (eg. Custom jalapeño chips, maybe OpenAI has troubles, rate hikes), etc.
+
+But if it’s compelling</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2070758710599954450" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@wannabepanacea 请不要盲目跟随，尤其是。因为我积极管理自己的仓位！$CBRS 目前对我来说只是一个警告。因为人工智能领域的事情每个月都在变化（例如定制墨西哥辣椒芯片，也许 OpenAI 遇到了麻烦，利率上涨）等等。但如果有说服力的话</div>
+        <div class="tweet-foot">
+          <span>likes 108 / retweets 2 / replies 7 / views 18886</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-06-27 14:22</span>
+          <span><span class="chip red">$CBRS</span></span>
+        </div>
+        <div class="tweet-text">Kinda nutty OpenAI’s is launching its heavyweight 5.6 Sol frontier model on $CBRS.
+
+At up to 750 tokens/sec, which is obscene performance.
+
+American inference go brrr.
+
+I actually picked up starter positions on Cerebras for the first time in the ~170s (below $185 IPO price) after https://t.co/vRVu6Jsahd</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Kinda nutty OpenAI’s is launching its heavyweight 5.6 Sol frontier model on $CBRS.
+
+At up to 750 tokens/sec, which is obscene performance.
+
+American inference go brrr.
+
+I actually picked up starter positions on Cerebras for the first time in the ~170s (below $185 IPO price) after https://t.co/vRVu6Jsahd</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2070754658868687086" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>有点疯狂的 OpenAI 正在 $CBRS 上推出其重量级 5.6 Sol 前沿模型。高达 750 个令牌/秒，这是令人不快的性能。美国的推理去吧。实际上，在 https://t.co/vRVu6Jsahd 之后，我在大约 170 年代（低于 185 美元的 IPO 价格）第一次在 Cerebras 上获得了首发职位</div>
+        <div class="tweet-foot">
+          <span>likes 259 / retweets 25 / replies 87 / views 93997</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-06-16 21:00</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CBRS</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span></span>
+        </div>
+        <div class="tweet-text">Just some random thoughts, I do think AI is the most disruptive technology in human history. 
+
+To the level of agricultural or industrial revolution.
+
+Since Anthropic, OpenAi, XAI, and others are racing to build superintelligence. 
+
+The amount of economic impact can&#x27;t be measured if AI helps find cures for cancer or ac...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just some random thoughts, I do think AI is the most disruptive technology in human history. 
+
+To the level of agricultural or industrial revolution.
+
+Since Anthropic, OpenAi, XAI, and others are racing to build superintelligence. 
+
+The amount of economic impact can&#x27;t be measured if AI helps find cures for cancer or accelerates discovery for Quantum Computing. 
+
+Or if AI end up displacing the workforce, which increases profitability for companies. 
+
+The US Gov has every incentive to keep the buildout going too, as the implications from Warfare, Cybersecurity, is also immeasurable if China takes the lead. 
+
+So there&#x27;s likely to be incentives and subsidies to win, even if there&#x27;s not enough profit derived LLM training/inference. 
+
+As for sustainability, when you look upstream, $GOOGL is able to fund it majorly with their own cashflow, same with $AMZN, $MSFT. 
+
+More lukewarm on $META. Very iffy about $ORCL. 
+
+But I do see some bubbles forming around debt interest like $CRWV.
+
+Maybe circular valuations that&#x27;s happening with OpenAI backlog agreements or $NVDA / $AMD agreements with Neoclouds to buy their GPUs.
+
+But as seen with $MSFT and having OpenAI be a major part of the backlog, it did correct off the information, so &quot;bubbles&quot; like that do pop despite the overall markets increasing.
+
+Definitely don&#x27;t see a bubble in upstream semiconductors from $LITE to Sk Hynix though since the amount of profit they get from the buildout would likely be insane to make up for capex decreasing. 
+
+OpenAI was actually my biggest fear from contagion, eg. $CRWV, $CBRS and others, but they just raised a lot.
+
+So think it will be fine for another 1 1/2 years of capex, especially if they IPO this year. 
+
+I also don&#x27;t think we&#x27;ll get massive Fed tightening despite &quot;predictions&quot; since this will trigger a contagion since many of these players rely heavily on debt. 
+
+And although the Fed is independent, don&#x27;t think Trump would have supported someone who is against his administration goals.  
+
+As for semiconductor valuations going up every day like $AMD or $MU, there&#x27;s probably going to be some corrections here and there. Everything going up together is kinda unhealthy. 
+
+Can&#x27;t time the capex peak but just from $AVGO and other projections, it just keeps accelerating exponentially into 2028. 
+
+Especially as everyone is starting to sign multi year agreements as well. 
+
+OpenAI contagion / hyperscaler capex decreasing / fed tightening was what I&#x27;m looking out for, and no blaring signs of any of those yet. 
+
+So I think the music will keep playing for this year at the bare minimum.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2066868456457416871" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是一些随意的想法，我确实认为人工智能是人类历史上最具颠覆性的技术。达到农业或工业革命的水平。自 Anthropic 以来，OpenAi、XAI 和其他公司都在竞相构建超级智能。如果人工智能有助于找到癌症的治疗方法或加速量子计算的发现，其经济影响的大小是无法衡量的。或者，如果人工智能最终取代劳动力，从而提高公司的盈利能力。美国政府也完全有动力继续进行扩建，因为如果中国带头，战争和网络安全的影响也是不可估量的。因此，即使没有足够的利润衍生法学硕士培训/推理，也可能会获得激励和补贴。至于可持续性，当你向上游看时，$GOOGL 能够主要用自己的现金流为其提供资金，与 $AMZN、$MSFT 一样。$META 上更加冷淡。关于 $ORCL 非常不确定。但我确实看到一些围绕债务利息形成的泡沫，例如 $CRWV。也许循环估值正在发生在 OpenAI 积压协议或与 AI 算力云公司 购买 GPU 的 NVDA / AMD 协议中。但正如 $MSFT 所见，OpenAI 成为积压的主要部分，它确实纠正了信息，因此尽管整体市场在增长，但像这样的“泡沫”确实会破裂。从 $LITE 到 Sk Hynix 的上游半导体绝对不会出现泡沫，因为他们从扩建中获得的利润可能会难以弥补资本开支的下降。OpenAI 实际上是我对传染的最大恐惧，例如。$CRWV、$CBRS 等等，但他们只是筹集了很多。因此，认为再花 1 1/2 年的资本开支就可以了，特别是如果他们今年 IPO。尽管有“预测”，我也不认为美联储会大规模收紧货币政策，因为这将引发蔓延，因为许多参与者严重依赖债务。尽管美联储是独立的，但不要认为特朗普会支持违背其政府目标的人。至于半导体估值每天都在上涨，如 $AMD 或 $MU，可能会出现一些调整。一切都一起上升有点不健康。无法确定资本开支高峰的时间，但仅从 $AVGO 和其他预测来看，资本开支只会在 2028 年呈指数级加速。特别是当每个人都开始签署多年协议时。OpenAI 蔓延/超大规模资本开支减少/美联储紧缩是我正在寻找的，但目前还没有任何明显的迹象。所以我认为今年音乐至少会继续播放。</div>
+        <div class="tweet-foot">
+          <span>likes 1618 / retweets 158 / replies 260 / views 362202</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-05-24 22:07</span>
+          <span><span class="chip red">$CARR</span><span class="chip red">$CBRS</span><span class="chip red">$HPS.A</span><span class="chip red">$NVT</span><span class="chip red">$NVTS</span><span class="chip red">$POWI</span><span class="chip red">$POWL</span><span class="chip red">$VICR</span></span>
+        </div>
+        <div class="tweet-text">Just random themes im looking im having a good time looking into over the weekend: 
+
+-&gt; power semis, integrated voltage regulators, multiphase controllers, CDUs, cold plates, manifolds, pumps, valves, heat exchangers, rear-door systems, chillers. 
+
+$POWL, $NVT, 010120 KS, 267260 KS, 2308 TT,  $VICR, $POWI , CATL, Sungr...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just random themes im looking im having a good time looking into over the weekend: 
+
+-&gt; power semis, integrated voltage regulators, multiphase controllers, CDUs, cold plates, manifolds, pumps, valves, heat exchangers, rear-door systems, chillers. 
+
+$POWL, $NVT, 010120 KS, 267260 KS, 2308 TT,  $VICR, $POWI , CATL, Sungrow 300274 C
+
+-&gt; thermal stuff (ALFA SS, ASTK DC, Daikin 6367 JP), $CARR, MTRS SS)
+
+These are just ones aside from the ones I&#x27;ve talked about eg. $NVTS or $HPS.A. 
+
+They&#x27;re all kinda more priced in but now but it&#x27;s a good starting point in terms of finding more important players that&#x27;s not priced in. 
+
+Then you try and look: which single company do most of these probably rely on? 
+
+I&#x27;m personally less familiar with the energy/cooling/power trade, which I&#x27;m happy to admit since everything is a learning process. 
+
+But normally even if I find something interesting, i don&#x27;t find it more compelling than staying in CPO longs. Always it&#x27;s always fun learning more. 
+
+Was always looking for SRAM-adjacent exposure, think private markets are better to go then $CBRS?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058550475260400103" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是随机主题，我周末玩得很开心： 
+
+-&gt; 功率半导体、集成电压调节器、多相控制器、CDU、冷板、歧管、泵、阀门、热交换器、后门系统、冷却器。$POWL、$NVT、010120 KS、267260 KS、2308 TT、$VICR、$POWI、宁德时代、阳光电源 300274 C
+
+-&gt; 热材料（ALFA SS、ASTK DC、Daikin 6367 JP）、$CARR、MTRS SS）
+
+这些只是我已经讨论过的那些之外的一些。$NVTS 或 $HPS.A。他们的价格都更高了，但现在这是一个很好的起点，可以找到更重要的、没有被定价的球员。然后你尝试看看：其中大部分可能依赖哪家公司？我个人对能源/冷却/电力贸易不太熟悉，我很高兴承认这一点，因为一切都是一个学习过程。但通常情况下，即使我发现一些有趣的东西，我也不认为它比持有 CPO 多头更有吸引力。学习更多总是很有趣的。一直在寻找与 SRAM 相邻的风险敞口，认为私募市场比 $CBRS 更好？</div>
+        <div class="tweet-foot">
+          <span>likes 656 / retweets 20 / replies 68 / views 83042</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-05-15 07:32</span>
+          <span><span class="chip red">$BULL</span><span class="chip red">$CBRS</span><span class="chip red">$CRCL</span></span>
+        </div>
+        <div class="tweet-text">Not a fan of $CBRS, especially at ~$90B-100B MC valuations.
+
+But I do like the company.
+
+There’s a lot of short term valuation disconnects with float dynamics after IPO as seen with $CRCL or $BULL though. 
+
+So would not be surprised if it ends up trading at absurd valuations for a short time until things correct.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Not a fan of $CBRS, especially at ~$90B-100B MC valuations.
+
+But I do like the company.
+
+There’s a lot of short term valuation disconnects with float dynamics after IPO as seen with $CRCL or $BULL though. 
+
+So would not be surprised if it ends up trading at absurd valuations for a short time until things correct.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2055068788975157672" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>不喜欢 $CBRS，尤其是在 MC 估值约为 $90B-100B 的情况下。但我确实喜欢这家公司。不过，IPO 后的短期估值与流通动态存在很多脱节，如 $CRCL 或 $BULL 所示。因此，如果它最终在短时间内以荒谬的估值进行交易，直到情况纠正，也不会感到惊讶。</div>
+        <div class="tweet-foot">
+          <span>likes 796 / retweets 32 / replies 101 / views 310439</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-05-15 07:26</span>
+          <span><span class="chip red">$CBRS</span></span>
+        </div>
+        <div class="tweet-text">@Ryan76589177 @TheMarathon8320 Bro $CBRS is a newly listed company today, cut me some slack.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Ryan76589177 @TheMarathon8320 Bro $CBRS is a newly listed company today, cut me some slack.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2055067155990012017" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Ryan76589177 @TheMarathon8320 兄弟 $CBRS 今天是一家新上市公司，请放宽我的要求。</div>
+        <div class="tweet-foot">
+          <span>likes 96 / retweets 0 / replies 4 / views 11807</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=CBRS">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

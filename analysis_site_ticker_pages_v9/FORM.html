@@ -1,0 +1,2076 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$FORM 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$FORM 历史推文</h1>
+      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b>23</b></div>
+        <div class="stat-card"><span>历史推文</span><b>23</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-01-22</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-04-30</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 9</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 5</span><span class="chip blue">Vega / IV 错定价（高阶，慎用） 3</span><span class="chip blue">信念分层、仓位与时点 3</span><span class="chip blue">关税 / 宏观冲击买点 2</span><span class="chip blue">认证周期 vs TTM 营收 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 08:25</span>
+          <span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$TOWA</span><span class="chip red">$TOWCF</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">Yeah... the more I look into things, $TOWA / $TOWCF (6315) at ~$1.34b looks like a sleeper beneficiary for HBM4 spend from SK Hynix, Samsung, $MU.
+
+It’s hyper cyclical with spending cycles. 
+
+But we’re seeing hikes in capex spend across the board from memory makers.
+
+Not exactly a 4x type play... 
+
+But my guess is that...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yeah... the more I look into things, $TOWA / $TOWCF (6315) at ~$1.34b looks like a sleeper beneficiary for HBM4 spend from SK Hynix, Samsung, $MU.
+
+It’s hyper cyclical with spending cycles. 
+
+But we’re seeing hikes in capex spend across the board from memory makers.
+
+Not exactly a 4x type play... 
+
+But my guess is that it should get materially re-rated from a spike in unavoidable inflows for the start of the new HBM4 memory cycle anyway.
+
+And they appear to be a largely forgotten beneficiary for this new cycle despite their monopoly in compression modeling processes. 
+
+Hybrid bonding just removes one step in the process but requires Towa anyway (monopolies tend to get higher premiums)
+
+I also don&#x27;t think this cycle is like the last due to how much memory companies have been printing recently?
+
+Just my thoughts, but if my guess is right... it should show up in earnings on the Monday 11th (Tokyo Time) as everyone’s building out HBM4 lines?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049646205039522009" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>是的...我越深入研究，$TOWA / $TOWCF (6315) 的价格约为 1.34b 美元，看起来像是 SK 海力士、三星、$MU 的 HBM4 支出的卧铺受益者。支出周期具有超周期性。但我们看到内存制造商的资本开支全面增加。不完全是4x类型的游戏...... 
+
+但我的猜测是，无论如何，在新的 HBM4 内存周期开始时，由于不可避免的资金流入激增，它应该得到实质性的重新评级。尽管他们在压缩建模过程中处于垄断地位，但他们似乎是这个新周期的很大程度上被遗忘的受益者。混合粘合仅消除了该过程中的一个步骤，但无论如何都需要 Towa（垄断企业往往会获得更高的保费）
+
+我也不认为这个周期与上一个周期相似，因为最近内存公司印刷了多少？只是我的想法，但如果我的猜测是正确的……它应该会出现在 11 日星期一（东京时间）的收益中，因为每个人都在构建 HBM4 生产线？</div>
+        <div class="tweet-foot">
+          <span>likes 577 / retweets 53 / replies 53 / views 209237</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 05:55</span>
+          <span><span class="chip red">$FORM</span><span class="chip red">$ONTO</span></span>
+        </div>
+        <div class="tweet-text">@labubu_trader Hard to go wrong with $FORM or $ONTO. The whole ecosystem is just accelerating so fast right now.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@labubu_trader Hard to go wrong with $FORM or $ONTO. The whole ecosystem is just accelerating so fast right now.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049608537039679890" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@labubu_trader $FORM 或 $ONTO 很难出错。整个生态系统现在正在加速发展。</div>
+        <div class="tweet-foot">
+          <span>likes 78 / retweets 1 / replies 2 / views 16161</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 05:54</span>
+          <span><span class="chip red">$FORM</span><span class="chip red">$TER</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">@gregory_FTA $TER is not a good proxy because they&#x27;re extremely large. They had exposure to non-AI segments like smartphone chips, EV/automotive. Then they&#x27;re facing competition from Advantest. 
+
+Best signals are more pure play from $FORM and $VIAV.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@gregory_FTA $TER is not a good proxy because they&#x27;re extremely large. They had exposure to non-AI segments like smartphone chips, EV/automotive. Then they&#x27;re facing competition from Advantest. 
+
+Best signals are more pure play from $FORM and $VIAV.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049608380705280025" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@gregory_FTA $TER 不是一个好的代理，因为它们非常大。他们接触过智能手机芯片、电动汽车/汽车等非人工智能领域。然后他们将面临来自 Advantest 的竞争。最好的信号是来自 $FORM 和 $VIAV 的更纯粹的信号。</div>
+        <div class="tweet-foot">
+          <span>likes 50 / retweets 0 / replies 3 / views 17715</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 05:40</span>
+          <span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$ONTO</span><span class="chip red">$TOWA</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">Monitoring the situation for you (testing/yields edition):
+
+$VIAV and $FORM earnings: Extremely Bullish
+
+So what does this mean?
+
+Names like  $ONTO / $CAMT go brr. Throw in $TOWA (6315), since there&#x27;s indication of aggressive memory production ramp.
+
+Names like Msscorps / $KEYS should go brrr. 
+
+Broader upstream yields...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Monitoring the situation for you (testing/yields edition):
+
+$VIAV and $FORM earnings: Extremely Bullish
+
+So what does this mean?
+
+Names like  $ONTO / $CAMT go brr. Throw in $TOWA (6315), since there&#x27;s indication of aggressive memory production ramp.
+
+Names like Msscorps / $KEYS should go brrr. 
+
+Broader upstream yields, test, validation, and inspection for both memory + optical ecosystem go heavily BRRR. And it&#x27;s a leading indicator for $COHR, $FN, $LITE, and others if they&#x27;re ramping up production. 
+
+For $VIAV:
+-&gt; $406.8M vs. $393M (beat) 42.8% Y/Y growth.
+-&gt; $.27 EPS vs $0.2-$0.24
+Guidance was $427m-$437m, indicating acceleration.
+
+For $FORM:
+-&gt; $226M, 32% Y/Y, $.56  EPS vs. $.45
+-&gt; margins increased a TON to 49% (which indicates pricing power).
+-&gt; Guidance was $.61 EPS, midpoint ~$240m revenue. 
+
+&quot;Record demand for High Bandwidth Memory (HBM) and stronger &quot;Foundry &amp; Logic networking applications&quot;
+
+Basically the smaller yields/test ecosystem in general. BRRR.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049604721766494640" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>为您监控情况（测试/收益版）：
+
+$VIAV 和 $FORM 收益：极其看涨
+
+那么这意味着什么呢？像 $ONTO / $CAMT 这样的名字都很好。加上$TOWA (6315)，因为有迹象表明内存产量正在大幅增加。像 Msscorps / $KEYS 这样的名字应该是 brrr。存储器 + 光学生态系统的更广泛的上游产量、测试、验证和检查都非常重视 BRRR。对于 $COHR、$FN、$LITE 和其他正在提高产量的公司来说，这是一个领先指标。对于 $VIAV：
+-&gt; 4.068 亿美元 vs. 3.93 亿美元（超过）42.8% 的同比增长。-&gt; 每股收益 0.27 美元 vs 0.2-0.24 美元
+指导值为 4.27 亿至 4.37 亿美元，表明加速增长。对于 $FORM：
+-&gt; 2.26 亿美元，同比增长 32%，每股收益 0.56 美元 vs. 0.45 美元
+-&gt; 利润率增加一吨至 49%（这表明定价能力）。-&gt; 指导值为每股收益 0.61 美元，收入中值约为 2.4 亿美元。“对高带宽内存 (HBM) 和更强大的“铸造和逻辑网络应用”的需求创历史新高
+
+基本上，总体上较小的产量/测试生态系统。BRRR。</div>
+        <div class="tweet-foot">
+          <span>likes 1133 / retweets 104 / replies 78 / views 349851</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-04-15 00:55</span>
+          <span><span class="chip red">$FORM</span></span>
+        </div>
+        <div class="tweet-text">@JonkooTrades I was long $FORM earlier this year/last year. IMO probably going to keep going up but there’s higher upside from some lesser known players over in Taiwan/Japan.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@JonkooTrades I was long $FORM earlier this year/last year. IMO probably going to keep going up but there’s higher upside from some lesser known players over in Taiwan/Japan.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2044097166915055730" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@JonkooTrades 今年早些时候/去年我做多了 $FORM。IMO 可能会继续上涨，但台湾/日本一些不太知名的参与者有更高的上涨空间。</div>
+        <div class="tweet-foot">
+          <span>likes 46 / retweets 1 / replies 3 / views 14743</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-04-15 00:46</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$FORM</span><span class="chip red">$TER</span></span>
+        </div>
+        <div class="tweet-text">&quot;Silicon photonics scaling hits wafer testing bottleneck&quot;
+
+- $FORM (helps that ficontec left), $AEHR 
+- Over in Taiwan MPI (6223), MA-tek (3587), MSScorps (6830)
+- Then large cap Cap - $TER, Advantest (6857) 
+
+Are some decent exposure off the top of my head if you’re curious. 
+
+I’ll make a deeper dive ETF for you all s...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">&quot;Silicon photonics scaling hits wafer testing bottleneck&quot;
+
+- $FORM (helps that ficontec left), $AEHR 
+- Over in Taiwan MPI (6223), MA-tek (3587), MSScorps (6830)
+- Then large cap Cap - $TER, Advantest (6857) 
+
+Are some decent exposure off the top of my head if you’re curious. 
+
+I’ll make a deeper dive ETF for you all soon.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2044094868079906990" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>“硅光子微缩技术遇到晶圆测试瓶颈”
+
+- $FORM（帮助 ficontec 离开）、$AEHR 
+- 台湾 MPI (6223)、MA-tek (3587)、MSScorps (6830)
+- 然后是大盘股 - $TER, Advantest (6857) 
+
+如果你好奇的话，我能想到一些不错的曝光吗？我很快就会为大家制作一个更深层次的 ETF。</div>
+        <div class="tweet-foot">
+          <span>likes 914 / retweets 56 / replies 50 / views 207355</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-04-11 04:30</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$FORM</span><span class="chip red">$GDRZF</span><span class="chip red">$HOOD</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$NBIS</span><span class="chip red">$OSS</span><span class="chip red">$RKLB</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">I feel like I&#x27;ve called out the most triple digit stock returns YTD...
+
+Out of anyone in history?  Hence why I have 150k+ followers now! 
+
+In just a short timeframe:
+$AXTI -&gt; 5x+
+$AAOI -&gt; 5x
+$SIVE -&gt; 2x+
+$LITE -&gt; 2x+ 
+$IQE -&gt; 2x+ 
+$AEHR -&gt; 2x+ 
+$CRCL -&gt; 2x+ 
+$EWY IV -&gt; 2x
+Unimicron -&gt; 2x+
+Nitto Boseki -&gt; 2x+
+$OSS -&gt; 2x...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I feel like I&#x27;ve called out the most triple digit stock returns YTD...
+
+Out of anyone in history?  Hence why I have 150k+ followers now! 
+
+In just a short timeframe:
+$AXTI -&gt; 5x+
+$AAOI -&gt; 5x
+$SIVE -&gt; 2x+
+$LITE -&gt; 2x+ 
+$IQE -&gt; 2x+ 
+$AEHR -&gt; 2x+ 
+$CRCL -&gt; 2x+ 
+$EWY IV -&gt; 2x
+Unimicron -&gt; 2x+
+Nitto Boseki -&gt; 2x+
+$OSS -&gt; 2x+ 
+$GDRZF -&gt; 2x+
+$AEHR -&gt; 2x
+
+With many more like $TSEM, $RPI having close to triple digit returns. 
+
+Not including many others last year like $HOOD or $RKLB for triple digit returns, just this YTD.
+
+There&#x27;s stuff like $FORM and others like Macronix... and $NBIS that actually doubled from the bottom at $70. But I won&#x27;t take credit since I didn&#x27;t do a specific post about it during the timeframes. 
+
+There&#x27;s a difference between just mentioning among many other tickers.
+
+Then having conviction like myself, writing a specific thesis post about it, getting catalyst timing right, and going long yourself. 
+
+But proud if this helped retail going the right direction. 
+
+Especially that they don’t need to pay $2,000+ just to see tickers people go long on or join some “special club” for company discussion.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2042701873833218352" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我觉得我已经喊出了年初至今最高三位数的股票回报率......
+
+历史上没有谁？这就是为什么我现在有超过 15 万粉丝！在短短的时间内：
+$AXTI -&gt; 5x+
+$AAOI -&gt; 5x
+$SIVE -&gt; 2x+
+$LITE -&gt; 2x+ 
+$IQE -&gt; 2x+ 
+$AEHR -&gt; 2x+ 
+$CRCL -&gt; 2x+ 
+$EWY IV -&gt; 2x
+欣兴微电子 -&gt; 2x+
+Nitto Boseki -&gt; 2x+
+$OSS -&gt; 2x+ 
+$GDRZF -&gt; 2x+
+$AEHR -&gt; 2x
+
+与许多类似 $TSEM、$RPI 的回报率接近三位数。不包括去年的许多其他项目，例如 $HOOD 或 $RKLB 的三位数回报，仅包括今年迄今的回报。有像 $FORM 之类的东西，还有像 Macronix... 和 $NBIS 这样的东西，实际上从底部翻了一番，达到 70 美元。但我不会把功劳归功于我，因为我在这段时间内没有发表关于它的具体帖子。仅仅在许多其他代码中提及之间存在差异。然后像我一样有信念，写一篇关于它的具体论文，找到正确的催化剂时机，然后自己做多。但如果这有助于零售业朝着正确的方向发展，我会感到自豪。特别是他们不需要支付 2,000 美元以上只是为了看到人们做多或加入一些“特殊俱乐部”进行公司讨论。</div>
+        <div class="tweet-foot">
+          <span>likes 2122 / retweets 93 / replies 154 / views 186696</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-04-06 01:24</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$ASE</span><span class="chip red">$ATEYY</span><span class="chip red">$FORM</span><span class="chip red">$KEYS</span></span>
+        </div>
+        <div class="tweet-text">Digitimes: Taiwan tackles CPO testing bottlenecks to scale SiPh for AI data centers.
+
+Huge. Emphasis. on: &quot;CPO and Silicon Photonics bottleneck&quot; + &quot;Testing.&quot;
+
+$FORM, $KEYS, $ASE, and $ATEYY are popular ones ones in this bottleneck eg. optical alignment. 
+
+Then there&#x27;s $AEHR for exposure to SipH yields/testing bottlenec...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Digitimes: Taiwan tackles CPO testing bottlenecks to scale SiPh for AI data centers.
+
+Huge. Emphasis. on: &quot;CPO and Silicon Photonics bottleneck&quot; + &quot;Testing.&quot;
+
+$FORM, $KEYS, $ASE, and $ATEYY are popular ones ones in this bottleneck eg. optical alignment. 
+
+Then there&#x27;s $AEHR for exposure to SipH yields/testing bottlenecks. 
+
+Forecasts show that by 2026, over 50% of data center transceiver sales will come from silicon photonics (SiPh) modules.
+
+Right now, in 2026, there&#x27;s quite still a few qualification cycles:
+
+But expect mass order ramp to hit anytime.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2040842953883840770" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>Digitimes：台湾解决了 CPO 测试瓶颈，为 AI 数据中心扩展 SiPh。巨大的。强调。上：“CPO和硅光子瓶颈”+“测试”。$FORM、$KEYS、$ASE 和 $ATEYY 是这个瓶颈中流行的那些，例如。光学对准。然后还有 $AEHR 用于暴露 SipH 产量/测试瓶颈。预测显示，到 2026 年，超过 50% 的数据中心收发器销售额将来自硅光子 (SiPh) 模块。现在，2026 年，还有几个资格周期：
+
+但预计大规模订单随时都会增加。</div>
+        <div class="tweet-foot">
+          <span>likes 496 / retweets 35 / replies 37 / views 104649</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-03-31 08:35</span>
+          <span><span class="chip red">$AMKR</span><span class="chip red">$ANSS</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$CDNS</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SNPS</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">CPO Value Chain Summary from Mirae Asset:
+
+Laser Source:
+Coherent &lt; $COHR &gt;
+Lumentum &lt; $LITE &gt;
+Furukawa Electric (TYO: 5801)
+Yuanjie Semiconductor (SHA: 688498)
+Innolight Technology / Zhongji Innolight (SZSE: 300308)
+
+PIC Foundry:
+TSMC &lt; $TSM &gt;
+GlobalFoundries $GFS
+Samsung Electronics (KRX: 005930)
+Tower Semiconductor ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">CPO Value Chain Summary from Mirae Asset:
+
+Laser Source:
+Coherent &lt; $COHR &gt;
+Lumentum &lt; $LITE &gt;
+Furukawa Electric (TYO: 5801)
+Yuanjie Semiconductor (SHA: 688498)
+Innolight Technology / Zhongji Innolight (SZSE: 300308)
+
+PIC Foundry:
+TSMC &lt; $TSM &gt;
+GlobalFoundries $GFS
+Samsung Electronics (KRX: 005930)
+Tower Semiconductor &lt; $TSEM&gt;
+
+EIC, Driver IC:
+Broadcom &lt; $AVGO &gt; 
+Marvell &lt; $MRVL &gt;
+NVIDIA &lt; $NVDA &gt;
+
+ELS, Optical Engine
+Innolight / Zhongji Innolight (SZSE: 300308)
+TFC / Suzhou TFC Optical Communication (SZSE: 300394)
+O-Net Technologies 
+Eoptolink Technology (SZSE: 300502)
+
+FAU (Fiber Array Unit):
+Senko Advanced Components (Private)
+Sumitomo Electric (TYO: 5802)
+TFC (SZSE: 300394)
+FOCI Fiber Optic Communications (TWO: 3363)
+
+FAU, Align Tools:
+ficonTEC (Private)
+All Ring Tech (TWO: 6187)
+ADST (Private)
+
+FAU, Engine Assembly:
+Fabrinet &lt; $FN &gt;
+Hon Hai / Foxconn (TWSE: 2317)
+ASE Technology &lt; $ASX &gt; 
+FOCI (TWO: 3363)
+
+OSAT, Advanced Packaging:
+ASE Technology &lt; $ASX &gt;
+Amkor &lt; $AMKR &gt; 
+Kyocera (TYO: 6971)
+Powertech / PTI (TWSE: 6239)
+Shinko Electric (TYO: 6967)
+Fabrinet &lt; $FN &gt;
+
+Connector, Ferrule:
+Senko Advanced Components (Private)
+Sumitomo Electric (TYO: 5802)
+US Conec (Private)
+T&amp;S Communications (SZSE: 300570)
+Molex (Private)
+Browave (TWO: 3163)
+
+Fiber: 
+Corning &lt; $GLW &gt;
+Sumitomo Electric (TYO: 5802)
+Nittobo / Nitto Boseki (TYO: 3110)
+
+E/O Testing: 
+
+Keysight &lt; $KEYS &gt; 
+Teradyne &lt; $TER &gt;
+FormFactor &lt; $FORM &gt; 
+Chroma ATE (TWSE: 2360)
+Multilane (Private)
+
+Switch, System: 
+NVIDIA &lt; $NVDA &gt; 
+Broadcom &lt; $AVGO &gt; 
+Marvell &lt; $MRVL &gt; 
+Google &lt; $GOOGL&gt; 
+
+EDA: 
+Synopsys &lt; $SNPS &gt; 
+Cadence &lt; $CDNS &gt; 
+Ansys &lt; $ANSS &gt; 
+
+Confused by some of names of the list, they might have conflated a few names like Innolight with laser source like $MTSI, Sumitomo, $SIVE, Luxnet, with the actual end module (unless there&#x27;s something that&#x27;s not public material or I missed)? 
+
+But just for people interested in the landscape, this is a good high-level overview.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2038777289115345200" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>Mirae Asset 的CPO价值链摘要：
+
+激光源：
+连贯 &lt; $COHR &gt;
+Lumentum &lt; $LITE &gt;
+古河电工 (TYO: 5801)
+元杰半导体（SHA：688498）
+旭创科技/中际旭创（深交所：300308）
+
+PIC代工厂：
+台积电&lt;$TSM&gt;
+格罗方德 $GFS
+三星电子 (KRX: 005930)
+塔半导体&lt;$TSEM&gt;
+
+EIC、驱动IC：
+博通&lt;$AVGO&gt; 
+Marvell &lt; $MRVL &gt;
+英伟达&lt;$NVDA&gt;
+
+ELS，光学引擎
+旭创/中际旭创（深交所：300308）
+天金光/苏州天金光通信（深交所：300394）
+昂纳科技 
+新易盛科技（深交所：300502）
+
+FAU（光纤阵列单元）：
+Senko先进组件（私人）
+住友电工（TYO：5802）
+天金公司（深交所：300394）
+FOCI 光纤通信（二：3363）
+
+FAU，对齐工具：
+ficonTEC（私人）
+全环科技（二：6187）
+ADST（私人）
+
+FAU，发动机装配：
+法布里内特&lt;$FN&gt;
+鸿海/富士康（台湾证券交易所股票代码：2317）
+日月光科技 &lt; $ASX &gt; 
+焦点（二：3363）
+
+OSAT，先进封装：
+日月光科技 &lt; $ASX &gt;
+Amkor &lt; $AMKR &gt; 
+京瓷（TYO：6971）
+力成科技 / PTI (台湾证券交易所: 6239)
+新光电机 (TYO: 6967)
+法布里内特&lt;$FN&gt;
+
+连接器、套圈：
+Senko先进组件（私人）
+住友电工（TYO：5802）
+美国 Conec（私人）
+天盛通信（深交所：300570）
+莫仕（私人）
+布罗波（二：3163）
+
+纤维： 
+康宁&lt;$GLW&gt;
+住友电工（TYO：5802）
+Nittobo / Nitto Boseki (TYO: 3110)
+
+E/O 测试： 
+
+是德科技&lt;$KEYS&gt; 
+泰瑞达 &lt; $TER &gt;
+形状系数 &lt; $FORM &gt; 
+Chroma ATE（台湾证券交易所：2360）
+多车道（私人）
+
+开关、系统： 
+英伟达&lt;$NVDA&gt; 
+博通&lt;$AVGO&gt; 
+Marvell &lt; $MRVL &gt; 
+谷歌&lt;$GOOGL&gt; 
+
+电子设计自动化： 
+新思科技&lt;$SNPS&gt; 
+节奏&lt;$CDNS&gt; 
+Ansys &lt;$ANSS&gt; 
+
+他们对列表中的一些名称感到困惑，他们可能会将像 Innolight 这样的一些名称与激光源（例如 $MTSI、Sumitomo、$SIVE、Luxnet）与实际的最终模块混为一谈（除非有一些不是公开材料或我错过了）？但对于对景观感兴趣的人来说，这是一个很好的高层次概述。</div>
+        <div class="tweet-foot">
+          <span>likes 337 / retweets 51 / replies 20 / views 80341</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-03-24 22:32</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$FORM</span></span>
+        </div>
+        <div class="tweet-text">@GoldenMeth IMO $AEHR is a great long here and should hit its inflection point in the next few months like $AAOI.
+
+$AMKR better to wait next year since they’re in capex phase and their buildout comes online late 2027 or 2028 if I remember correctly.
+
+$FORM was a fan this yr</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@GoldenMeth IMO $AEHR is a great long here and should hit its inflection point in the next few months like $AAOI.
+
+$AMKR better to wait next year since they’re in capex phase and their buildout comes online late 2027 or 2028 if I remember correctly.
+
+$FORM was a fan this yr</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036451073045700967" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@GoldenMeth IMO $AEHR 在这里是一个很好的多头，应该会像 $AAOI 一样在接下来的几个月内达到拐点。$AMKR 最好等到明年，因为他们正处于资本开支阶段，如果我没记错的话，他们的扩建将于 2027 年末或 2028 年上线。$FORM 今年是它的粉丝</div>
+        <div class="tweet-foot">
+          <span>likes 77 / retweets 1 / replies 2 / views 21546</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-03-20 16:56</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AIXA</span><span class="chip red">$APH</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESI</span><span class="chip red">$CAMT</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$CSCO</span><span class="chip red">$FN</span><span class="chip red">$FOCI</span><span class="chip red">$FORM</span><span class="chip red">$GLW</span><span class="chip red">$HIMX</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$MXL</span><span class="chip red">$NOK</span><span class="chip red">$ONTO</span><span class="chip red">$OXINF</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SMHN</span><span class="chip red">$SMTC</span><span class="chip red">$SOI</span><span class="chip red">$TEL</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$UMC</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">The Serenity Silicon Photonics / CPO ETF.
+
+YTD Returns of Each Index Stock: 
+
+$IQE: +282.5%
+$AXTI: +246.6%
+Landmark: 167.54%
+$AAOI: +157.37%
+$SIVE: +113.08%
+$SOI: +103.54%
+$LITE: +100.27%
+$LWLG: +92.35%
+$VIAV: +88.71%
+$AIXA: +73.92%
+$AEHR: +70.4%
+$CIEN: +67.67%
+$FORM: +60.67%
+$FOCI: +60.44%
+$CAMT: +49.13%
+$GLW: +46.77%...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The Serenity Silicon Photonics / CPO ETF.
+
+YTD Returns of Each Index Stock: 
+
+$IQE: +282.5%
+$AXTI: +246.6%
+Landmark: 167.54%
+$AAOI: +157.37%
+$SIVE: +113.08%
+$SOI: +103.54%
+$LITE: +100.27%
+$LWLG: +92.35%
+$VIAV: +88.71%
+$AIXA: +73.92%
+$AEHR: +70.4%
+$CIEN: +67.67%
+$FORM: +60.67%
+$FOCI: +60.44%
+$CAMT: +49.13%
+$GLW: +46.77%
+$SMHN: +45.94%
+Fujikura: +43.89%
+$COHR: +41.81%
+$KEYS: +40.48%
+$TSEM: +36.42%
+$ASX: +29.89%
+$MTSI: +28.34%
+$NOK: +27.5%
+Shin-Etsu: +27.33%
+$ONTO: +26.28%
+$BESI: +24.71%
+$UMC: +18.11%
+$INTC: +17.27%
+$OXINF: 15.03%
+$FN: +12.79%
+Eoptolink: +11.82%
+$TSM: +6.00%
+$HIMX: +5.39%
+$SMTC: +4.11%
+Sumitomo: +3.67%
+$CSCO: +3.25%
+Innolight: +.33%
+$MRVL: +.16%
+$APH: -6.48%
+$MXL: -7.62%
+$AVGO: -7.99%
+$POET: -12.99%
+$TEL: -14.93%
+
+This is retrospectively, but as you&#x27;ve known I&#x27;ve been in a lot of the winners for awhile (eg. Top 6/7 like $AXTI or $LITE aside from Landmark). 
+
+However, if you were curious if you invested in the photonics trend as a whole at the start of the year.
+
+The equal weighted return? 
+
+50.033%
+
+I expect the Photonic Supercycle to last over the next several years, and many of these names to be large beneficaries going forward. 
+
+Especially as CPO is used to scale AI deployments. 
+
+Photonics is the new architectural paradigm for AI.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034916899021365725" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>Serenity Silicon Photonics / CPO ETF。各指数股票的年初至今回报率： 
+
+IQE 美元：+282.5%
+$AXTI：+246.6%
+地标：167.54%
+$AAOI：+157.37%
+$SIVE：+113.08%
+$SOI：+103.54%
+精简版美元：+100.27%
+$LWLG：+92.35%
+$VIAV：+88.71%
+$艾莎：+73.92%
+$AEHR：+70.4%
+$CIEN：+67.67%
+美元形式：+60.67%
+FOCI 美元：+60.44%
+$CAMT：+49.13%
+GLW 美元：+46.77%
+$SMHN：+45.94%
+藤仓：+43.89%
+$COHR：+41.81%
+$钥匙：+40.48%
+$TSEM：+36.42%
+澳大利亚证券交易所：+29.89%
+MTSI 美元：+28.34%
+挪威克朗美元：+27.5%
+信越：+27.33%
+$ONTO：+26.28%
+$BESI：+24.71%
+联华电子：+18.11%
+$INTC：+17.27%
+$OXINF: 15.03%
+国民福利金：+12.79%
+新易盛：+11.82%
+$TSM：+6.00%
+$HIMX：+5.39%
+$SMTC：+4.11%
+住友商事：+3.67%
+$CSCO：+3.25%
+旭创科技：+.33%
+MRVL 美元：+.16%
+APH 美元：-6.48%
+$MXL：-7.62%
+AVGO 美元：-7.99%
+$POET：-12.99%
+$电话：-14.93%
+
+这是回顾性的，但正如您所知，我已经在很多获胜者中有一段时间了（例如，除了 Landmark 之外，像 $AXTI 或 $LITE 这样的前 6/7 名）。然而，如果您想知道您是否在年初投资了整个光子学趋势。等权重回报？50.033%
+
+我预计光子超级周期将在未来几年持续下去，其中许多名字将成为未来的巨大受益者。特别是当 CPO 用于扩展人工智能部署时。光子学是人工智能的新架构范式。</div>
+        <div class="tweet-foot">
+          <span>likes 1002 / retweets 103 / replies 63 / views 136683</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-03-18 07:58</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$APH</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESI</span><span class="chip red">$CAMT</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$CSCO</span><span class="chip red">$FIT</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$HIMX</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$MXL</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SMHN</span><span class="chip red">$SMTC</span><span class="chip red">$SOI</span><span class="chip red">$TEL</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$UMC</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">The Photonics Supercycle is here.
+
+$NVDA is spearheading the next leap into CPO &amp; Silicon Photonics.
+
+And we’re only near the inflection point with chokepoints in the supply chains like Soitec ( $SOI ) or Sivers ( $SIVE ).
+
+“NVIDIA’s update on the Spectrum-X switch with co-packaged optics is an important moment, confir...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The Photonics Supercycle is here.
+
+$NVDA is spearheading the next leap into CPO &amp; Silicon Photonics.
+
+And we’re only near the inflection point with chokepoints in the supply chains like Soitec ( $SOI ) or Sivers ( $SIVE ).
+
+“NVIDIA’s update on the Spectrum-X switch with co-packaged optics is an important moment, confirming that silicon photonics is central to next-generation AI infrastructure.”
+
+Despite a long-standing reliance on copper-based interconnects for scale-up systems, the company is now placing photonics at the core of its future platforms, including Vera Rubin Ultra.
+
+This transition is expected to support increasingly complex configurations, such as NVL576 and future architectures like Kyber NVL1152.”
+
+“Nvidia is already in production with Spectrum-X Photonics, which is co-packaged optics (CPO) Ethernet switch. 
+
+The company also announced the Quantum-X Photonics InfiniBand switch, which delivers up to 800 Tb per second of scale-out throughput using its proprietary scale-out interconnect”
+
+Although copper is important, it can no longer alone can no longer handle AI-scale demands. 
+
+NVLink8 CPO is probably the biggest signal with $NVDA also bringing silicon photonics into its scale-up NVLink interconnect, not just scale-out networking. 
+
+CPO for scale-out is shipping now/2026, CPO for NVLink scale-up arrives soon.
+
+The paradigm has shifted, and the bottleneck of AI infrastructure is now officially being solved by light.
+
+It’s only a matter of time before markets find these chokepoints in the supply chains. 
+
+Then price them in.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2034056688693875036" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>光子学超级周期就在这里。$NVDA 正在引领 CPO 和硅光子学的下一次飞跃。我们仅接近拐点，供应链中存在瓶颈，例如 Soitec ($SOI) 或 Sivers ($SIVE)。“NVIDIA 对具有共同封装光学器件的 Spectrum-X 交换机的更新是一个重要时刻，它证实了硅光子学是下一代 AI 基础设施的核心。”
+
+尽管放大系统长期依赖铜基互连，但该公司现在将光子学作为其未来平台的核心，包括 Vera Rubin Ultra。这一转变预计将支持日益复杂的配置，例如 NVL576 和 Kyber NVL1152 等未来架构。”
+
+“Nvidia 已经开始生产 Spectrum-X Photonics，这是一种共封装光学 (CPO) 以太网交换机。该公司还发布了 Quantum-X Photonics InfiniBand 交换机，该交换机使用其专有的横向扩展互连可提供高达每秒 800 Tb 的横向扩展吞吐量”
+
+尽管铜很重要，但仅靠它已经无法满足人工智能规模的需求。NVLink8 CPO 可能是 $NVDA 最大的信号，还将硅光子引入其纵向扩展 NVLink 互连，而不仅仅是横向扩展网络。用于横向扩展的 CPO 现已发货/2026 年，用于 NVLink 纵向扩展的 CPO 即将到达。范式已经转变，人工智能基础设施的瓶颈现在正式被光解决。市场在供应链中发现这些瓶颈只是时间问题。然后给它们定价。</div>
+        <div class="tweet-foot">
+          <span>likes 584 / retweets 46 / replies 48 / views 103411</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-03-18 00:51</span>
+          <span><span class="chip red">$CIEN</span><span class="chip red">$FORM</span></span>
+        </div>
+        <div class="tweet-text">@TheValueist Great overview of every name from $CIEN to $FORM! I’m sure you’re locked in too now after this post</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@TheValueist Great overview of every name from $CIEN to $FORM! I’m sure you’re locked in too now after this post</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033949266310529357" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@TheValueist 很好地概述了从 $CIEN 到 $FORM 的每个名称！我相信看完这篇文章你现在也被锁定了</div>
+        <div class="tweet-foot">
+          <span>likes 48 / retweets 0 / replies 0 / views 11502</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-03-17 20:56</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$FORM</span><span class="chip red">$KEYS</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">Glad to hear! Yeah, there&#x27;s so many different names since photonics TAM for AI is massive. 
+
+You can definitely make an ETF of stuff like $FORM, $KEYS, $VIAV, $AEHR, and the 20+ other companies. Then probably sit back and chill.  
+
+But... I personally like to try and pick a few of the highest upside winners personally.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Glad to hear! Yeah, there&#x27;s so many different names since photonics TAM for AI is massive. 
+
+You can definitely make an ETF of stuff like $FORM, $KEYS, $VIAV, $AEHR, and the 20+ other companies. Then probably sit back and chill.  
+
+But... I personally like to try and pick a few of the highest upside winners personally.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033890208937349542" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>很高兴听到！是的，由于人工智能的光子学 TAM 非常庞大，因此有很多不同的名称。你绝对可以用 $FORM、$KEYS、$VIAV、$AEHR 和其他 20 多家公司创建 ETF。然后可能会坐下来冷静一下。但是……我个人喜欢尝试亲自挑选一些最具上升空间的赢家。</div>
+        <div class="tweet-foot">
+          <span>likes 102 / retweets 1 / replies 9 / views 25780</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-03-17 20:38</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$APH</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESI</span><span class="chip red">$CAMT</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$CSCO</span><span class="chip red">$FIT</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$HIMX</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$MXL</span><span class="chip red">$NOK</span><span class="chip red">$ONTO</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SMHN</span><span class="chip red">$SMTC</span><span class="chip red">$SOI</span><span class="chip red">$TEL</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$UMC</span><span class="chip red">$VIAV</span></span>
+        </div>
+        <div class="tweet-text">The upcoming CPO / Silicon Photonics Bottleneck Cheat Sheet:
+
+$SIVE, Sumitomo, $LITE, $COHR, $AVGO, $MTSI, $AAOI - Light Source (CW DFB Lasers)
+$TSEM, $GFS, $UMC, $TSM, $INTC - SiPh foundry
+$NOK, $CIEN, $CSCO, $COHR - DCO  
+$HIMX, FOCI (3363.TWO) - Micro-lens + Fiber Arrays
+$POET - Optical Interposers
+$SOI, $AXTI, Shin...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">The upcoming CPO / Silicon Photonics Bottleneck Cheat Sheet:
+
+$SIVE, Sumitomo, $LITE, $COHR, $AVGO, $MTSI, $AAOI - Light Source (CW DFB Lasers)
+$TSEM, $GFS, $UMC, $TSM, $INTC - SiPh foundry
+$NOK, $CIEN, $CSCO, $COHR - DCO  
+$HIMX, FOCI (3363.TWO) - Micro-lens + Fiber Arrays
+$POET - Optical Interposers
+$SOI, $AXTI, Shin-Etsu  - Substrates
+$FN, $ASX, Innolight, Eoptolink -  Optical Packaging and Assembly
+$MTSI, $SMTC, $MRVL, $MXL - Analog/Mixed-Signal ICs
+$LWLG - Speculative Modulator Materials. 
+$GLW, $APH, $TEL, $FIT, Fujikura - Connectors and Fibers
+$FORM, $KEYS, $VIAV, $AEHR- Test &amp; Measurement
+$BESI, $SMHN, $ONTO, $CAMT - Advanced Packaging &amp; Hybrid Bonding
+
+Many are private companies from Lightmatter, Ayar, Ranovus and others. 
+
+Now... Everyone is asking... How do you profit? 
+
+If you look at the forecast for CPO TAM, it&#x27;s a straight line up, and next year is inflection point for CPO mass deployment. 
+
+The alpha is capturing the rotation:
+
+From the current EML bottlenecks ( $LITE, $COHR type) to SiPh / CW DFB architectural winners for CPO.
+
+Highest upside potential are the ones that aren&#x27;t included in current cycles.
+
+But that are in the next. 
+
+Companies like $SOI, $SIVE, or $AEHR are perfect examples. 
+ 
+Ride the current pluggable bottleneck like $AAOI. 
+
+But the alpha is frontrunning institutions with the next CPO bottleneck. 
+
+The capital rotation is inevitable.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2033885603423785170" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>即将推出的 CPO/硅光子瓶颈备忘单：
+
+$SIVE、Sumitomo、$LITE、$COHR、$AVGO、$MTSI、$AAOI - 光源（CW DFB 激光器）
+$TSEM、$GFS、$UMC、$TSM、$INTC - SiPh 代工厂
+$NOK、$CIEN、$CSCO、$COHR - DCO 
+$HIMX、FOCI (3363.TWO) - 微透镜 + 光纤阵列
+$POET - 光学中介层
+$SOI、$AXTI、信越 - 基板
+$FN、$ASX、旭创科技、新易盛 - 光学封装和组装
+$MTSI、$SMTC、$MRVL、$MXL - 模拟/混合信号 IC
+$LWLG - 投机调制器材料。$GLW、$APH、$TEL、$FIT、Fujikura - 连接器和光纤
+$FORM、$KEYS、$VIAV、$AEHR- 测试与测量
+$BESI、$SMHN、$ONTO、$CAMT - 先进封装和混合接合
+
+其中许多是 Lightmatter、Ayar、Ranovus 等公司的私营公司。现在...每个人都在问...您如何获利？如果你看一下 CPO TAM 的预测，它是直线上升的，明年是 CPO 大规模部署的拐点。alpha 正在捕获旋转：
+
+从当前的 EML 瓶颈（$LITE、$COHR 类型）到 CPO 的 SiPh/CW DFB 架构获胜者。最大的上行潜力是当前周期中未包含的那些。但那是接下来的事了。$SOI、$SIVE 或 $AEHR 等公司就是完美的例子。克服当前的可插入瓶颈，例如 $AAOI。但阿尔法正在领先于下一个 CPO 瓶颈的机构。资本轮动是不可避免的。</div>
+        <div class="tweet-foot">
+          <span>likes 1684 / retweets 246 / replies 87 / views 338839</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-02-27 03:39</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$EWJ</span><span class="chip red">$EWY</span><span class="chip red">$FORM</span><span class="chip red">$HOOD</span><span class="chip red">$IQE</span><span class="chip red">$KLIC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Year to Date post $NVDA earnings:
+
+477.27%.
+
+Majority of the gains are the result of the research I&#x27;ve done the past few months:
+
+From the $AXTI&#x27;s InP chokepoint that went up few hundred percent recently. 
+
+or profiting off Jane Street from $EWY IV vega expansion for Sk Hynix/Samsung. 
+
+Many others were tens of % or hu...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Year to Date post $NVDA earnings:
+
+477.27%.
+
+Majority of the gains are the result of the research I&#x27;ve done the past few months:
+
+From the $AXTI&#x27;s InP chokepoint that went up few hundred percent recently. 
+
+or profiting off Jane Street from $EWY IV vega expansion for Sk Hynix/Samsung. 
+
+Many others were tens of % or hundreds of percent returns each in a short timeframe. 
+
+Like $XLU going up 3% in a week to the epic directional rally of $MU and $SNDK. 
+
+I think people just like to see the end results like this, which is understandably the most eye-catching.
+
+But most of the groundwork for the current returns was laid out months ago from $LITE Google BOM analysis to semi supply chain bottlenecks from Unimicron, Nittobo, and even $TSM last year. 
+
+Even now I’m planting the seeds for the future with analysis on $XLU for the power/grid sector, or understandably higher risk companies like $IQE as a $LITE supplier for the photonics supply chains. 
+
+I typically shift from: 
+
+&gt; Research Posts (Initial thesis post)
+&gt; Map that into actual ideas + trades
+&gt; Follow-Up DDs on Alpha (eg. SMM InP pricing)
+&gt; celebrate when things go up. 
+
+cross-industry, and typically on sectors with momentum. 
+
+Rather than sticking single stocks, or just analysis only (instead of trading).
+
+And I think people might have found this style refreshing. 
+
+I think recently, I’m is just capitalizing on two different trends:
+
+1. Focusing on active bottlenecks in AI supply chains
+
+- Memory like $SNDK, $MU, Sk Hynix, Samsung, $SIMO
+- Photonics like $LITE, $COHR, $AAOI, $IQE, $AXTI, and Yamamura 
+- Power Grid like $XLU
+- Advanced Packaging/Yields - $AMKR, $ONTO, $CAMT, $KLIC, $FORM, and $AEHR
+
+2. Then focusing on Capital Rotation into Taiwan, Japan, Korea. 
+
+Basically past week capital rotation was rotating from US/China -&gt; Korea, Taiwan, Japan.
+
+ETFs like $EWJ or individual stocks from Nanya Plastics have been taking off. 
+
+- Taiwan Equity Funds recently took in over $1 billion in a single week for the first time in months
+
+- For Japan: GS chart&#x27;s +0.37 long buying
+
+- For Korea, foreigners were net buyers of roughly 1.37 trillion won (~$1 billion USD) in the first half of February
+
+While GS chart shows a staggering -1.52 SD in short activity for North America. 
+
+So that&#x27;s probably my assumption on why $HOOD investors haven&#x27;t been doing too well from a lack of Asian equity exposure. 
+
+The reason being Hyperscaler capex trade flows into Asian countries in the supply chains (eg. Some analysts projected Sk Hynix to have 2.2 2027 fwd p/e, which is absurd) -&gt; institutions following the flow with capital rotation.
+
+As for some reflection, I&#x27;m genuinely surprised by how many people read my posts nowadays and it’s really humbling!
+
+I don’t really celebrate this much (last year I only did one time with a 600%+ 1Y return) but I’m amazed by how lucky I am this year with timing and getting a lot my thesis right. 
+
+I’m not perfect, I do get a few things wrong, but what’s more important is I get more green than red every day.
+
+But thanks to everyone, I grew from a little account to 83K in like two or three months!</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027106275881079067" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>年初至今 NVDA 盈利：
+
+477.27%。大部分收获都是我过去几个月所做的研究的结果：
+
+$AXTI 的 InP 瓶颈最近上涨了百分之几百。或者从 Sk Hynix/Samsung 的 $EWY IV vega 扩张中从 Jane Street 中获利。许多其他公司都在短时间内获得了数十％或数百％的回报。就像 $XLU 在一周内上涨 3%，带动 $MU 和 $SNDK 的史诗般的定向反弹。我想人们就是喜欢看到这样的最终结果，这可以理解是最引人注目的。但当前回报的大部分基础都是几个月前奠定的，从 $LITE Google BOM 分析到去年 Unimicron、Nittobo 甚至 $TSM 的半供应链瓶颈。即使现在，我也正在为未来播下种子，分析电力/电网领域的 $XLU，或者可以理解的风险较高的公司，例如 $IQE，作为光子供应链的 $LITE 供应商。我通常会从以下位置转变： 
+
+&gt; 研究职位（初始论文职位）
+&gt; 将其转化为实际的想法+交易
+&gt; Alpha 上的后续 DD（例如 SMM InP 定价）
+&gt; 当事情进展时庆祝。跨行业，通常是有势头的行业。而不是坚持单一股票，或者只是分析（而不是交易）。我想人们可能会觉得这种风格令人耳目一新。我想最近，我只是利用了两种不同的趋势：
+
+1、聚焦人工智能供应链活跃瓶颈
+
+- 内存如 $SNDK、$MU、Sk Hynix、Samsung、$SIMO
+- 光子学，例如 $LITE、$COHR、$AAOI、$IQE、$AXTI 和 Yamamura 
+- 像$XLU这样的电网
+- 先进封装/产量 - $AMKR、$ONTO、$CAMT、$KLIC、$FORM 和 $AEHR
+
+2、然后重点关注台湾、日本、韩国的资本轮动。基本上上周的资本轮换是从美国/中国-&gt;韩国、台湾、日本轮换。$EWJ 等 ETF 或 Nanya Plastics 的个股一直在起飞。- 台湾股票基金最近单周吸纳资金数月来首次超过 10 亿美元
+
+- 日本：GS 图表多头买入 +0.37
+
+- 2 月上半月，韩国的外国人净买家额约为 1.37 万亿韩元（约合 10 亿美元）
+
+而 GS 图表显示北美的空头活动达到惊人的 -1.52 SD。因此，这可能就是我对为什么 $HOOD 投资者由于缺乏亚洲股票敞口而表现不佳的假设。原因是超大规模资本开支贸易流入供应链中的亚洲国家（例如，一些分析师预测 Sk Hynix 的 2027 年预期市盈率为 2.2，这是荒谬的）-&gt; 机构随着资本轮换而跟随流动。至于一些反思，我真的很惊讶现在有这么多人阅读我的帖子，这真的很令人谦卑！我并没有真正庆祝这么多（去年我只做了一次，获得了 600%+ 1 年的回报），但我很惊讶今年我是多么幸运，时机把握得很好，我的论文很多都正确。我并不完美，我确实会犯一些错误，但更重要的是我每天得到的绿色多于红色。但感谢大家，我在两三个月的时间里从一个小账号发展到了83K！</div>
+        <div class="tweet-foot">
+          <span>likes 1570 / retweets 147 / replies 113 / views 416267</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 15:51</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FORM</span><span class="chip red">$HOOD</span><span class="chip red">$KLIC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$RKLB</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Last year I shared my 1 year return: 
+
+630.44% before I even joined X.
+
+Lot of conspiracy theorists out there.
+
+But I do happen to be a decent discretionary trader. 
+
+Large part of it was 
+
+&gt; front-running halving
+&gt; buying $RKLB in the 10’s
+&gt; buying $HOOD in the 10’s
+&gt; catalyst trading Presidential nominations
+&gt; riding...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Last year I shared my 1 year return: 
+
+630.44% before I even joined X.
+
+Lot of conspiracy theorists out there.
+
+But I do happen to be a decent discretionary trader. 
+
+Large part of it was 
+
+&gt; front-running halving
+&gt; buying $RKLB in the 10’s
+&gt; buying $HOOD in the 10’s
+&gt; catalyst trading Presidential nominations
+&gt; riding multiple waves up.
+
+Majority of people don’t rotate and sit on a single stock the entire time.
+
+The trick is to ride every wave up and if earnings start to slow/stop, move on to the next and don’t get too attached to a stock.
+
+It’s the same thing with this year, just different sectors and catalysts.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026565774857613477" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>去年我分享了我的一年回报： 
+
+630.44% 在我加入 X 之前。那里有很多阴谋论者。但我确实是一个不错的全权交易者。其中很大一部分是 
+
+&gt; 抢先减半
+&gt; 在 10 年代购买 $RKLB
+&gt; 在 10 年代购买 $HOOD
+&gt; 催化剂交易总统提名
+&gt; 乘着多重波浪向上。大多数人不会一直轮流持有一只股票。诀窍是驾驭每一波上涨，如果盈利开始放缓/停止，则转向下一波，不要过于依赖股票。今年也是同样的情况，只是行业和催化剂不同。</div>
+        <div class="tweet-foot">
+          <span>likes 1017 / retweets 41 / replies 84 / views 170048</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-02-25 01:02</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FORM</span><span class="chip red">$KLIC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Year to Date: 412.72%
+
+Lot of it is just picking the right sector, profiting off of Jane Street algos weekly, and a bit of luck. 
+
+In terms of bottleneck longs, these are currently my favorite: 
+
+1. Memory -  Samsung, Sk Hynix, $SNDK, $MU, $SIMO 
+
+2. Photonics - $LITE, $COHR, $AAOI, $AXTI, (maybe Yamamura too, but not ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Year to Date: 412.72%
+
+Lot of it is just picking the right sector, profiting off of Jane Street algos weekly, and a bit of luck. 
+
+In terms of bottleneck longs, these are currently my favorite: 
+
+1. Memory -  Samsung, Sk Hynix, $SNDK, $MU, $SIMO 
+
+2. Photonics - $LITE, $COHR, $AAOI, $AXTI, (maybe Yamamura too, but not to the same degree). 
+
+3. Power/Grid - $XLU.
+
+4. Advanced Packaging Capex -  $AMKR, $ONTO, $CAMT, $KLIC, and $FORM.
+
+I’ve talked about all of these before aside from maybe $KLIC?
+
+But most if not all are up like 50-100%+ in a short timeframe, which amplifies overall returns from trading. 
+
+Best lesson I’ve learned this year was to rotate where the money flows and current bottlenecks. Rather than attempting contrarian turnaround plays in sectors like cybersecurity.
+
+I publish all my ideas for free too so hopefully people can take away a thing or two!</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2026341976942195152" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>年初至今：412.72%
+
+其中很多只是选择正确的行业，每周从简街算法中获利，以及一点运气。就瓶颈多头而言，目前我最喜欢的是： 
+
+1. 内存 - 三星、Sk Hynix、$SNDK、$MU、$SIMO 
+
+2. 光子学 - $LITE、$COHR、$AAOI、$AXTI（也许山村也是如此，但程度不同）。3. 电力/电网 - $XLU。4. 先进封装资本开支 - $AMKR、$ONTO、$CAMT、$KLIC 和 $FORM。除了 $KLIC 之外，我之前已经讨论过所有这些？但大多数（如果不是全部）在短时间内上涨了 50-100% 以上，这放大了交易的整体回报。我今年学到的最好的教训是在资金流动和当前瓶颈的地方进行轮换。而不是在网络安全等领域尝试逆势扭转局面。我也免费发布我所有的想法，所以希望人们可以带走一两件事！</div>
+        <div class="tweet-foot">
+          <span>likes 3881 / retweets 177 / replies 198 / views 993734</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-02-21 15:35</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$AIRO</span><span class="chip red">$AVAV</span><span class="chip red">$AXTI</span><span class="chip red">$CIFR</span><span class="chip red">$CPSH</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CVX</span><span class="chip red">$ETOR</span><span class="chip red">$EWY</span><span class="chip red">$FORM</span><span class="chip red">$GLXY</span><span class="chip red">$HOOD</span><span class="chip red">$INFQ</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NBIS</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SMCI</span><span class="chip red">$SOFI</span><span class="chip red">$VLN</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">Year to Date: 316.4%
+
+From January 2026 into February 2026.
+
+Reflection of my short term trades and longs:
+
+&gt; Swing traded tax harvested stocks like $GLXY, $SMCI, and $IREN start of the year
+
+&gt; Rode Venezuela stocks from Gold Reserve, $AVAV, to $CVX (calls) up
+
+&gt; Bought into defense like $LPTH, $OSS, $AIRO after invasi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Year to Date: 316.4%
+
+From January 2026 into February 2026.
+
+Reflection of my short term trades and longs:
+
+&gt; Swing traded tax harvested stocks like $GLXY, $SMCI, and $IREN start of the year
+
+&gt; Rode Venezuela stocks from Gold Reserve, $AVAV, to $CVX (calls) up
+
+&gt; Bought into defense like $LPTH, $OSS, $AIRO after invasion from war + $ONDS “follow the leader” catalyst 
+
+&gt; Catalyst traded $INTC and timed earnings correctly. 
+
+&gt; Swing traded $CRDO off wire color change fears
+
+&gt; Swing traded $MRVL after erroneous reporting on hyperscaler client losses
+
+&gt; Got earnings right like $META
+
+&gt; Portfolio margined into $NBIS and $CIFR on the major selloff to $70 and $11.
+
+&gt; Swing trades things from $HOOD drop to $CRDO drop into recovery.
+
+&gt; Bought Bitcoin dip to $73k and heavy margin on $62k into recovery
+
+&gt; Recovery plays like $ETOR after selloff and ER helped.
+
+&gt; Getting catalysts on companies like $RPI correct
+
+&gt; Time lag arbitrages between Asian equities and European/US time zones.
+
+&gt; IV expansion off $EWY and other indexes.
+
+&gt; Timing rotation into power/grids like $XLU and currently swing trading stuff like $RDDT,
+
+I’m sure I missed a bunch but these were the main ones I posted about!
+
+On the side I would day trade:
+
+Eg. $ORCL 8% selloff from offering into recovery or random 10% selloffs on immaterial $SOFI sellside downgrades. 
+
+I don’t post stuff like these on my main timeline since I don’t want to influence when people buy/sell. 
+
+Just want to give directional ideas and let people come to their own conclusions. 
+
+Aside from that I’m happy everything went up today, including my hedges. 
+
+This is all while my core long portfolio from:
+
+- Photonics and memory from SK Hynix to $AXTI to supply chain bottlenecks like $AEHR and $FORM have been mogging Burry’s $PLTR $415/year returns.
+
+- Longs from Korean/Japanese equities like Nittobo, Kioxia, and Unimicron have hard carried US equity drawdowns.
+
+Not everything in my portfolio is green like $CRCL, $CPSH, $VLN, $NBIS or recently $INFQ.
+
+But what matters is you have more concentration in green than red. This is all while SPY is YTD: .55% and most high beta stocks are heavily red YTD.
+
+I also don’t want people to follow along everything since sector rotation, option arbitrage, and substrate bottlenecks are hard to digest. Since I also rotate around like 30 different stocks based on macro/earning catalysts, whereas most people focus on a few and hold on for years. 
+
+But it does hurt when more if get something wrong with short term drawdowns from Q4 2025 (if people bought short term options) and it’s only now recovered past cost average. 
+
+However, I’m extremely confident in core longs like $NBIS to strongly outperform in due time.
+
+Hopefully people can take away one or two trade ideas that they find interesting or learn something!
+
+——
+
+Just some reflection, i think a reason for my recent popularity is I’m not trying to sell anything. This is also not my full time job (I run a tech company) and I was just doing this for enjoyment, so very surprised by the recent popularity.
+
+I do think my edge is probably information synthesis and mapping -&gt; discovering alpha markets missed -&gt; into actionable long ideas across fintech and semis.
+
+Compared to accounts that publish breaking news or excel in breakdowns of one or two specific stocks. 
+
+Regardless, I publish all my ideas for free just to get fulfillment if I can help others. 
+
+So it does bring me gratitude that people find my ideas interesting or high-signal enough to listen.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2025112091967811613" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>年初至今：316.4%
+
+从2026年1月到2026年2月。我的短期交易和多头交易的反映：
+
+&gt; 年初波动交易的税收股票，如 $GLXY、$SMCI 和 $IREN
+
+&gt; 委内瑞拉股票从黄金储备 $AVAV 上涨至 $CVX（看涨期权）
+
+&gt; 战争入侵后，像 $LPTH、$OSS、$AIRO 一样投入国防 + $ONDS “跟随领导者”催化剂 
+
+&gt; Catalyst 交易 $INTC 并正确计时盈利。&gt; 摇摆交易 $CRDO 线外颜色变化担忧
+
+&gt; 在错误报告超大规模客户损失后，Swing 交易 $MRVL
+
+&gt; 像 $META 一样获得正确的收入
+
+&gt; 在重大抛售中，投资组合保证金达到 $NBIS 和 $CIFR，分别达到 70 美元和 11 美元。&gt; Swing 交易从 $HOOD 下降到 $CRDO 下降进入复苏。&gt; 买入比特币跌至 73,000 美元，并以 62,000 美元的巨额利润进入复苏
+
+&gt; 抛售后的复苏就像 $ETOR 一样，ER 有所帮助。&gt; 让 $RPI 等公司的催化剂正确
+
+&gt; 亚洲股票与欧洲/美国时区之间的时差套利。&gt; $EWY 和其他索引的 IV 扩展。&gt; 定时轮换到电力/电网（例如 $XLU）以及当前的波动交易（例如 $RDDT），
+
+我确信我错过了很多，但这些是我发布的主要内容！另一方面，我会进行日间交易：
+
+例如。$ORCL 因发行进入复苏而遭受 8% 的抛售，或由于 $SOFI 卖方降级而随机发生 10% 的抛售。我不会在我的主时间轴上发布此类内容，因为我不想影响人们的购买/出售时间。只是想给出方向性的想法，让人们得出自己的结论。除此之外，我很高兴今天一切都上涨了，包括我的树篱。这就是我的核心长期投资组合：
+
+- 从 SK Hynix 到 $AXTI 的光子学和内存，再到 $AEHR 和 $FORM 等供应链瓶颈，一直拖累 Burry 的 $PLTR $415/年回报。- Nittobo、Kioxia 和 Unimicron 等韩国/日本股票的多头难以承受美国股票的下跌。我的投资组合中并非所有东西都是绿色的，比如 $CRCL、$CPSH、$VLN、$NBIS 或最近的 $INFQ。但重要的是你对绿色的关注度比对红色的关注度更高。这一切都是在 SPY 年初至今为：0.55% 且大多数高贝塔股票年初至今为严重红色的情况下进行的。我也不希望人们跟随一切，因为行业轮换、期权套利和基板瓶颈很难消化。因为我还会根据宏观/盈利催化剂轮换大约 30 只不同的股票，而大多数人只关注少数股票并持有多年。但如果从 2025 年第四季度开始的短期回撤（如果人们购买短期期权）出现问题，而且现在才恢复到过去的平均成本，那么这确实会造成伤害。然而，我对像 $NBIS 这样的核心多头在适当的时候表现强劲充满信心。希望人们能够带走一两个他们觉得有趣的贸易想法或学到一些东西！——
+
+只是一些反思，我认为我最近受欢迎的一个原因是我不想卖任何东西。这也不是我的全职工作（我经营一家科技公司），我这样做只是为了享受，所以对最近的流行感到非常惊讶。我确实认为我的优势可能是信息合成和映射 -&gt; 发现错过的阿尔法市场 -&gt; 转化为跨金融科技和半导体的可操作的长期想法。与发布突发新闻或擅长一两只特定股票细分的账户相比。无论如何，我免费发布我所有的想法，只是为了在我可以帮助别人的情况下获得满足。因此，人们发现我的想法很有趣或有足够的信号力值得倾听，这确实让我很感激。</div>
+        <div class="tweet-foot">
+          <span>likes 1925 / retweets 52 / replies 157 / views 471374</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2026-02-06 12:49</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$FORM</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$LITE</span><span class="chip red">$PLTR</span><span class="chip red">$SNDK</span><span class="chip red">$SOFI</span></span>
+        </div>
+        <div class="tweet-text">@LivingITMoney Yeah, today’s crash wiped out a lot of retail portfolios that have high concentration in stocks like $HOOD, $SOFI, $HIMS, or $PLTR.
+
+Lot of high beta names are typically the ones that get dragged down first.
+
+Of course others that are in $FORM, $LITE, $AXTI, or $SNDK are chilling https://t.co/5rpa9RHZ9t</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@LivingITMoney Yeah, today’s crash wiped out a lot of retail portfolios that have high concentration in stocks like $HOOD, $SOFI, $HIMS, or $PLTR.
+
+Lot of high beta names are typically the ones that get dragged down first.
+
+Of course others that are in $FORM, $LITE, $AXTI, or $SNDK are chilling https://t.co/5rpa9RHZ9t</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2019634501245338000" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@LivingITMoney 是的，今天的崩盘摧毁了许多高度集中于 $HOOD、$SOFI、$HIMS 或 $PLTR 等股票的零售投资组合。许多高贝塔名字通常是最先被拖垮的。当然，$FORM、$LITE、$AXTI 或 $SNDK 中的其他内容令人不寒而栗 https://t.co/5rpa9RHZ9t</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 5277</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2026-01-25 00:16</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AIRO</span><span class="chip red">$AMBA</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVAV</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BKKT</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$COHR</span><span class="chip red">$COIN</span><span class="chip red">$COPX</span><span class="chip red">$CRCL</span><span class="chip red">$DPRO</span><span class="chip red">$ETOR</span><span class="chip red">$FIG</span><span class="chip red">$FORM</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LASR</span><span class="chip red">$LIT</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$POET</span><span class="chip red">$RDDT</span><span class="chip red">$SKYT</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TTD</span><span class="chip red">$UAVS</span><span class="chip red">$UMAC</span><span class="chip red">$VELO</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">Jan 25th Ratings. Post EU Tariffs and $INTC ER.
+
+Strong Buy:
+$SNAP
+$META
+Samsung Electronics
+SK Hynix
+$MU
+Unimicron
+$TSM
+$CRCL
+$AXTI 
+$LPTH 
+$COPX
+$LIT
+$AEHR
+$FORM
+$AMKR
+$AVGO
+$MRVL
+
+Buy:
+$COIN
+$SMCI
+$GOOGL
+$FIG
+$AMZN
+$IBIT
+$RDDT
+$TTD
+$HIMS
+$HOOD
+$COHR
+$AMBA
+$IREN
+$POET
+$AAOI
+$LASR
+$VPG
+$OSS
+$INTC
+$UMAC
+$ONDS
+$AIRO
+$DP...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Jan 25th Ratings. Post EU Tariffs and $INTC ER.
+
+Strong Buy:
+$SNAP
+$META
+Samsung Electronics
+SK Hynix
+$MU
+Unimicron
+$TSM
+$CRCL
+$AXTI 
+$LPTH 
+$COPX
+$LIT
+$AEHR
+$FORM
+$AMKR
+$AVGO
+$MRVL
+
+Buy:
+$COIN
+$SMCI
+$GOOGL
+$FIG
+$AMZN
+$IBIT
+$RDDT
+$TTD
+$HIMS
+$HOOD
+$COHR
+$AMBA
+$IREN
+$POET
+$AAOI
+$LASR
+$VPG
+$OSS
+$INTC
+$UMAC
+$ONDS
+$AIRO
+$DPRO
+$AVAV
+$BULL
+$ETOR
+VLN
+NBIS
+GLXY
+CIFR
+HUT
+WULF
+
+Questionable
+$VELO
+$SKYT
+
+Avoid
+$UAVS
+$BKKT
+WLMT
+SLNH
+$PLTR
+CRWV
+$ORCL
+$BMNR
+$IONQ , RGTI, QBTS
+
+_
+
+Strong Buy
+
+Snapchat - Bottomed around $7.4, imo very strong at this level. Increased FCF from memory opex reduction and memory monetization into 2027. Just a waiting game for re-rating. 
+
+Meta - 26% Y/Y revenue growth is extremely strong, produced $10B+ FCF last quarter. Expect it to pick up after next quarter earnings due to optics (700%+ Q/Q EPS optics) that caused selloff last time from BBB. 
+
+Samsung Electronics - Holy grail for semis, samsung provides exposure to both hbm and foundry. 
+
+SK Hynix - memory supercycle
+
+Micron - memory supercycle, but with US backing. 
+
+Unimicron - unholy long for hbm, ic substrates, glass core, cowos, and all other bottlenecks.
+
+TSM - money printer, literally can&#x27;t go wrong with this. 
+
+Circle - 2-3x projected rate cuts would likely hurt circle net income a lot, hence why it&#x27;s being priced in. But amazing long at $16B as they print money and should start seeing expansion of USDC. 
+
+AXTI - LPTH: Bottlenecks for InP / Germanium, etc. Will be a huge theme going into 2026. It&#x27;s just a waiting game for both supply chain disruption (in AXT) or made in America w/ black diamond in Lightpath. 
+
+Low downside risk imo due to capacity ramp -&gt; revenue increase, but moonshot HBM type price increases might be questionable. 
+
+COPX - LI: Rare Earths/Materials like Copper, Lithium are great longs for 2026. Similar with bottlenecks above, supply chain disruptions from China will cause money to flow into securing supply + buildout out new supply chains. 
+
+AEHR - Honestly, they sit in two different hot verticals in AI and Robotics. $5.5m Sonoma order might be linked with Micron and SiC Testing. Seems like an extremely good moonshot sub $1B MC. 
+
+FORM - Likely to be important in US supply chains since they do DRAM/HBM, and Foundry/Logic. &amp; Yield is especailyl important w/ hbm4. 
+
+AMKR - extreme beneficiary of made in america us supply chains and tsm -&gt; US
+
+AVGO - Large correction recently post earnings. Strong buy IMO at these levels given hyperscaler ASICs will continue to ramp (even though there&#x27;s been some delays). 
+
+MRVL - Same story with Broadcom, marvell selloff after rumors of Microsoft maia delays. It&#x27;s just a waiting game for ~2x revenue in 2027 and when markets start pricing that in, and after celestial acqusition, they&#x27;re doing great stuff in other segments like interconnects. 
+
+Buy
+
+Coinbase - Recent correction to Crypto makes Coinbase value decent again at $57B. Was never a fan of their exchange portion, but providing infra for Blackrock IBIT etfs + USDC revenue sharing with Circle, gives Coinbase pretty good long term value. 
+
+SMCI - Extreme selloff from the $60&#x27;s+ back to $30&#x27;s presents attractive opportunity here. Markets are extremely concerned about gross margins -&gt; SMCI expanding overseas, especially with soverign AI + buying lower end nvda gpus. and SMCI&#x27;s margins should increase over there. Also likely due to deals to become sticky w/ customers. It&#x27;s not like they&#x27;re dying revenue growth to $36B+. 
+
+GOOGL - Gemini at this point would likely take over chatgpt, so i&#x27;d remain long google. 
+
+Figma - Software selloff provides good opportunity into a lot of the hammered names like Figma which extremely high gross margins + sturdy growth
+
+Amazon - Basically same price as last year, they&#x27;ve been growing, AWS is doing fine, they&#x27;re in robotics + space LEOs, and just seems like a great long going forward
+
+Bitcoin - Always an attractive Long
+
+Reddit - High valuations, but extremely high gross margins and not going anywhere since everyone uses reddit. 
+
+TTD - Selloff from 2025 presents attractive valuations again
+
+HIMS - Honestly extremely attractive for me at $29, might be put into strong buy again, but of course revenue deceleration is very worrysome. Main alpha is that markets arent pricing in Zava acqusition and just from sheer customer base, they can derive a lot of revenue from new customers. 
+ 
+Robinhood - Selloff from $140 back to $100 presents a good opportunity for Robinhood again. They&#x27;re not going anywere, plus new product revenue expansion from banking + others, should present positive tailwinds. 
+
+Coherent - Long US supply chains, esp. for photonics, inp, etc. 
+
+AMBA - Moonshot long for edge AI inference for robotic ramps + edge compute. 
+
+POET - Basically 1/2 cash now, backdoor into marvell + hyperscalers through celestial. Attractive upside at $6.8 given underwriters bought at $7.25
+
+AAOI - long play tethered to msft maia and aws trainium. both of them haven&#x27;t really taken off yet so it&#x27;s just a waiting agme
+
+LASR - energy directed weapons are super cool. i dont quite like the fundamentals like low 20% revenue growth, but the technology is just way too cool. 
+
+VPG - Long play tethered to optimus ramp. we should see industrial use cases EOY 2026 and consumer EOY 2027, so maybe optimus productions starts hitting balance sheet now or q2. 
+
+OSS - Long play on defense sector and edge AI + $200m contract. 
+
+INTC - long on us policy, earnings didn&#x27;t really change any perspective, just short term price. 
+
+UMAC - Great long play at these levels on drone manufacturing in US.
+
+ONDS, Airo, DPRO - Same with AIRO, DPRO, bullish on drone sector. There&#x27;s not much of a massive tailwind compared to a few weeks ago when US was invading venezuela and threatening greenland, but thematically bullish. 
+
+AVAV - selloff from misinformation about converting r&amp;D type contracts -&gt; long term contract presents considerable upside 
+
+BULL - I do like brokerages like robinhood, webull, etc. that have a ton of retail users since there&#x27;s endless ways to monetize once you own the customer base. selloff back to $8 presents attractive upsdie
+
+ETOR - selloff way overblown, high net income y/y, basically 50% cash, low downside risk. just waiting for re-rating per earnings. they&#x27;re doing well too, 70%+ Y/Y AUM, so not sure why they&#x27;re being priced in like this.  
+
+VLN - not quite the same anymore as close to 1:1 assets/nav, at one point they had $11m+ inv (off 63%) gross margins, $93M cash, so would have been closer to 110-120m : $140m MC, which made no sense. That being said still $80m fwd revenue off 63% -&gt; 69% gross margins, seems like considerable opportunity for re-rating. Markets just don&#x27;t seem to like companies eg. Etoro related to a certain country, I guess
+
+Nebius - $15B clickhouse valuation just goes to show Sum of Parts, where I wouldn&#x27;t be surpirsed if their subsidaries like Avride ended up overtaking the main business. That being said, near term selling pressure due to $2B+ ATM being sold on open market. Should ramp up extremely fast as they meet their $7B ARR target EOY 2026. 
+ 
+GLXY, CIFR, HUT, IREN, WULF - Remain long on the colo, and other neocloud sector plays. That being said most are up 30-40%+ since 2025, so they&#x27;re not exactly a strong buy anymore as they&#x27;ve been priced in. But lot of upside remains. 
+
+Questionable
+
+VELO - Lot of people asked my opinion on this since FinX loves this stock. They have really cool customers like SpaceX, but fundamentals look terrible.
+
+~$11.8M cash + $17.5M offering vs. ~$23M. debt. They barely have any runway left and people buying now are likely to be diluted. 
+
+Velo is the perfect example of amazing customer base like IQE (EU for inP supply chain), but terrible fundamentals. 
+
+SKYT - It&#x27;s a great made in america supply chain company for a lot of cool stuff like quantum components or edge. Benefits from CHIP act, but very slow revenue growth. It&#x27;s a lot better speculative long than Velo since it has better fundamenatls. 
+
+Lower gross margins like 24%, very low operating margins, is obviously priced into MC but U.S. pure-play foundry should be a good story for premium. Bottom line are not really growing too fast though. 
+ 
+Avoid
+
+UAVS - Endless dilution machine with over 100%+ of marketcap given over to arbitrage investors that can convert 100%+ of the shares under 25% market value to sell on retail
+
+BKKT - $300m ATM dilution right now while MC is $550m. Endless dilution machine
+
+Walmart - 43 p/e, there&#x27;s no way. 
+
+SLNH - Lot of dilution ahead. 
+
+Palantir - Concern over valuation P/E 
+
+Coreweave - Concerns over large debt, $1B+ in debt interest hurts FCF a ton. Then there&#x27;s allocation/buildout for OpenAI, which has extreme, extreme concerns if they can fulfill contract obligations, especially since gemini is taking over market share of openai. 
+
+Oracle - There might be technical rebound, but seriously, they&#x27;ve spent so much capex just for openai (eg. stargate), and like coreweave, OpenAI, which has extreme concerns over if they can fufill contracts obligations
+
+BMNR - endless dilution machine to fund silly projects like $200m into mr. beast&#x27;s company. Expect long eth staking etfs, short bmnr plays, and premium to go under as $200m cash into mr.  beast&#x27;s company for example is not very liquid. 
+
+IONQ, RGTI, QBTS - Quantum valuations are very stretched. 
+
+_
+
+Overall Thoughts:
+
+I&#x27;m personally staying extremely long, this is just personal thoughts NFI. 
+
+A lot of small caps and speculative companies have already been re-rated since Jan 1st and I don&#x27;t expect many of the 50-100% moves to continue (we&#x27;ve seen a lot of profit taking Friday on some of these names). 
+
+That being said, Trump is trying to cut rates even more (another 2-3x projected), esp. since Midterms is coming up. 
+
+SPY Up = better chance of getting elected. So I&#x27;m staying very long until after Midterms.
+
+That being said a lot of this helps growth, speculative companies etc. But we&#x27;re already seeing this largely priced in like Rocketlab, one of my favorite longs, reaching $45B+ MC off $155m quarterly revenue, so I&#x27;m questioning valuations a bit -&gt; pivoting a lot of positions into more value (eg. software drop or memory supercycle). 
+
+Thematically I&#x27;m extremely bullish on 
+- AI, Memory, Semis
+- Bottlenecks
+- Critical Materials, etc. 
+
+Very bullish on
+- Made in America supply chains 
+
+Bullish on 
+- Defense Sector
+
+And would look for swing trades/recovery/re-rating for stuff like software to social media companies around now given the recent selloff.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2015096496019112151" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>1月25日收视率。发布欧盟关税和 $INTC ER。强力买入：
+$SNAP
+$元
+三星电子
+SK海力士
+$MU
+欣兴微光
+$TSM
+$CRCL
+$AXTI 
+$LPTH 
+$COPX
+$LIT
+$AEHR
+$表格
+$AMKR
+$AVGO
+$MRVL
+
+购买：
+$硬币
+$SMCI
+$GOOGL
+$无花果
+$AMZN
+$IBIT
+$RDDT
+$TTD
+$HIMS
+$引擎盖
+$COHR
+$AMBA
+$IREN
+$POET
+$AAOI
+$LASR
+$VPG
+$OSS
+$INTC
+$UMAC
+$ONDS
+$艾罗
+$DPRO
+$AVAV
+$牛市
+$ETOR
+VLN
+NBIS
+GLXY
+CIFR
+小屋
+武尔夫
+
+有疑问
+$VELO
+$天空
+
+避免
+$无人机
+$BKKT
+世界LMT
+SLNH
+$PLTR
+CRWV
+$ORCL
+$BMNR
+$IONQ、RGTI、QBTS
+
+_
+
+强力买入
+
+Snapchat - 触底于 7.4 美元左右，我认为在这个水平上非常强劲。到 2027 年，由于内存运营支出减少和内存货币化，自由现金流增加。只是等待重新评级的游戏。Meta - 26% 的同比收入增长非常强劲，上季度产生了 10B+ FCF。由于光学器件（700%+ Q/Q EPS 光学器件）导致了上次 BBB 的抛售，预计下一季度收益将会回升。三星电子 - 半成品的圣杯，三星提供了 HBM 和代工厂的机会。SK Hynix - 内存超级周期
+
+美光——内存超级周期，但有美国的支持。Unimicron——对 HBM、IC 基板、玻璃芯、cocos 和所有其他瓶颈的渴望。TSM——印钞机，这绝对不会出错。Circle - 预计降息 2-3 倍可能会严重损害 Circle 的净收入，因此它被定价。但在 $16B 上做多令人惊讶，因为他们印钞并且应该开始看到 USDC 的扩张。AXTI - LPTH：InP / 锗等的瓶颈。将成为 2026 年的一个巨大主题。这只是供应链中断（在 AXT 中）或在 Lightpath 中使用黑钻石在美国制造的等待游戏。在我看来，由于产能提升 -&gt; 收入增加，下行风险较低，但登月 HBM 类型的价格上涨可能值得怀疑。COPX - LI：到 2026 年，稀土/铜、锂等材料的需求很大。与上述瓶颈类似，来自中国的供应链中断将导致资金流入确保供应+建设新的供应链。AEHR - 老实说，他们位于人工智能和机器人技术的两个不同的热门垂直领域。550 万美元的索诺玛订单可能与美光和 SiC 测试相关。看起来像是一个非常好的登月计划 $1B MC。FORM - 可能在美国供应链中很重要，因为它们生产 DRAM/HBM 和代工/逻辑。&amp; 对于 hbm4，产量尤其重要。AMKR - 美国制造美国供应链和 tsm 的极端受益者 -&gt; 美国
+
+AVGO - 最近公布收益后出现大幅调整。鉴于超大规模 ASIC 将继续增长（尽管存在一些延迟），IMO 在这些水平上强烈买入。MRVL - 与 Broadcom 的情况相同，在有关 Microsoft maia 延迟的传言之后，Marvell 遭到抛售。这只是一场等待 2027 年约 2 倍收入的游戏，当市场开始定价时，在天体收购之后，他们在互连等其他领域做出了伟大的贡献。购买
+
+Coinbase - 最近对加密货币的调整使 Coinbase 的价值再次达到 $57B。从来不喜欢他们的交易部分，但为 Blackrock IBIT etfs 提供基础设施 + USDC 与 Circle 分享收入，为 Coinbase 带来了相当不错的长期价值。SMCI - 从 60 美元以上回到 30 美元的极度抛售在这里提供了诱人的机会。市场极其关注毛利率-&gt; SMCI 向海外扩张，尤其是主权 AI + 购买低端英伟达 GPU。SMCI 在那里的利润率应该会增加。也可能是由于交易对客户产生了粘性。他们并没有将收入增长限制在 36B+ 美元以上。GOOGL - Gemini 此时可能会接管 chatgpt，所以我会继续做多 google。Figma - 软件抛售为许多像 Figma 这样的知名公司提供了良好的机会，这些公司毛利率极高+增长强劲
+
+亚马逊 - 价格与去年基本相同，它们一直在增长，AWS 做得很好，它们在机器人 + 太空 LEO 领域，而且似乎是一个伟大的长期发展
+
+比特币 - 总是有吸引力的多头
+
+Reddit - 高估值，但毛利率极高，而且由于每个人都使用 Reddit，所以不会有任何进展。TTD - 2025 年起的抛售再次呈现有吸引力的估值
+
+HIMS - 老实说，29 美元对我来说非常有吸引力，可能会再次强力购买，但当然收入减速是非常令人担忧的。主要的阿尔法是，市场并未对 Zava 的收购进行定价，仅凭纯粹的客户群，他们就可以从新客户那里获得大量收入。Robinhood - 从 140 美元跌回 100 美元再次为 Robinhood 提供了一个好机会。他们不会离开，再加上银行业和其他方面的新产品收入扩张，应该会带来积极的推动力。Coherent - 漫长的美国供应链，尤其是。用于光子学、inp 等 
+
+AMBA - Moonshot 渴望用于机器人坡道+边缘计算的边缘人工智能推理。POET - 现在基本上是 1/2 现金，通过 celestial 进入 Marvell + Hyperscalers。鉴于承销商以 7.25 美元的价格买入，6.8 美元的上涨空间颇具吸引力
+
+AAOI - 与 msft maia 和 aws trainium 相关的长期游戏。他们俩都还没有真正起飞，所以这只是一个等待的agme
+
+LASR - 能量定向武器非常酷。我不太喜欢 20% 的低收入增长等基本面，但这项技术实在是太酷了。VPG - 与 Optimus 坡道相连的长游戏。我们应该会看到 2026 年 EOY 的工业用例和 2027 年 EOY 的消费者用例，所以也许 Optimus Productions 现在或第二季度就开始触及资产负债表。OSS - 国防部门和边缘人工智能的长期发展 + 2 亿美元的合同。INTC - 长期看好美国政策，收益并没有真正改变任何观点，只是短期价格。UMAC——美国无人机制造在这些层面上发挥着巨大的作用。ONDS、Airo、DPRO - 与 AIRO、DPRO 相同，看好无人机行业。与几周前美国入侵委内瑞拉并威胁格陵兰时相比，没有太大的推动力，但主题看涨。AVAV - 有关转换研发类型合同的错误信息导致抛售 -&gt; 长期合同呈现相当大的上涨空间 
+
+BULL - 我确实喜欢像 robinhood、webull 等拥有大量零售用户的经纪公司，因为一旦你拥有了客户群，就有无穷无尽的盈利方式。抛售回至 8 美元带来有吸引力的上涨
+
+ETOR - 抛售方式被夸大了，同比净利润较高，基本上是 50% 现金，下行风险较低。只是等待每股收益的重新评级。他们也做得很好，同比资产管理规模超过 70%，所以不确定为什么他们的定价是这样的。VLN - 不再完全相同，接近 1:1 资产/资产净值，在某一时刻，他们拥有 1100 万美元以上的投资（下降 63%）毛利率，9300 万美元现金，因此接近 1.10-1.2 亿美元：1.4 亿美元的 MC，这是没有意义的。话虽如此，预计毛利率仍为 8000 万美元，毛利率为 63% -&gt; 69%，这似乎是重新评级的绝佳机会。市场似乎不喜欢公司，例如。我猜 Etoro 与某个国家有关
+
+Nebius - $15B clickhouse 估值只是显示各部分的总和，如果他们的子公司（如 Avride）最终超过了主营业务，我不会感到惊讶。话虽如此，由于公开市场上出售 2B+ 美元的 ATM 机，近期出现抛售压力。当他们达到 2026 年 EOY 70 美元的 ARR 目标时，应该会非常快地增长。GLXY、CIFR、HUT、IREN、WULF - 继续看好 colo 和其他 neocloud 领域的股票。话虽这么说，自 2025 年以来，大多数股票的涨幅都在 30-40% 以上，因此，它们不再是一个值得强烈买入的股票，因为它们已经被定价了。但仍有很大的上涨空间。有疑问
+
+VELO - 很多人问我对此的看法，因为 FinX 喜欢这只股票。他们拥有像 SpaceX 这样非常酷的客户，但基本面看起来很糟糕。约 1180 万美元现金 + 1750 万美元发行对比约 2300 万美元。债务。他们几乎没有剩下任何跑道，现在购买的人可能会被稀释。Velo 是像 IQE（欧盟 inP 供应链）这样令人惊叹的客户群的完美例子，但基本面却很糟糕。SKYT - 这是一家伟大的美国制造供应链公司，提供许多很酷的东西，例如量子组件或边缘。受益于CHIP法案，但收入增长非常缓慢。它比 Velo 更具投机性，因为它具有更好的基本面。较低的毛利率（如 24%）和非常低的营业利润率显然已纳入 MC 的定价，但美国的纯晶圆代工厂应该是溢价的好故事。但底线并没有真正增长得太快。避免
+
+UAVS - 无限稀释机，将超过 100% 以上的市值交给套利投资者，他们可以将 100% 以上的低于 25% 市值的股票转换为零售出售
+
+BKKT - 目前 ATM 稀释为 3 亿美元，而 MC 为 5.5 亿美元。无限稀释机
+
+沃尔玛 - 43 p/e，没办法。SLNH - 未来将有大量稀释。Palantir - 对估值市盈率的担忧 
+
+Coreweave - 对巨额债务的担忧，10 亿美元以上的债务利息对 FCF 造成了很大的伤害。然后是 OpenAI 的分配/扩建，如果他们能够履行合同义务，它会非常非常担心，特别是因为 Gemini 正在接管 OpenAI 的市场份额。Oracle - 可能会出现技术反弹，但说真的，他们为 openai（例如 stargate）花费了如此多的资本开支，与 coreweave 一样，OpenAI 也非常担心是否能够履行合同义务
+
+BMNR - 无尽的稀释机，为愚蠢的项目提供资金，例如向先生投资 2 亿美元。野兽的公司。预计多头 ETH 质押 ETF、空头 BMNR 交易以及溢价将低于 2 亿美元现金投入 Mr. 例如，野兽公司的流动性就不是很好。IONQ、RGTI、QBTS - 量子估值非常高。_
+
+总体想法：
+
+我个人会待很长时间，这只是个人想法 NFI。自 1 月 1 日以来，许多小盘股和投机性公司已经重新评级，我预计 50-100% 的波动不会持续下去（周五我们已经看到其中一些公司出现大量获利了结）。话虽这么说，特朗普正试图进一步降息（预计再降息 2-3 倍），尤其是在 2017 年。因为期中考试快到了。SPY Up = 当选的机会更大。所以我会待很长时间直到期中考试结束。话虽这么说，这在很大程度上有助于增长、投机公司等。但我们已经看到，像 Rocketlab 这样的价格很大程度上是我最喜欢的多头之一，季度收入达到 45B+ MC，季度收入为 1.55 亿美元，所以我对估值有点质疑 -&gt; 将很多头寸转向更高的价值（例如，软件下降或内存超级周期）。从主题上来说，我非常看好 
+- 人工智能、内存、半成品
+- 瓶颈
+- 关键材料等 
+
+非常看好
+- 美国制造供应链 
+
+看好 
+- 国防部门
+
+鉴于最近的抛售，现在会寻找诸如软件之类的社交媒体公司的摇摆交易/恢复/重新评级。</div>
+        <div class="tweet-foot">
+          <span>likes 945 / retweets 99 / replies 83 / views 125590</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">对手方 / 融资质量谱系</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2026-01-24 00:08</span>
+          <span><span class="chip red">$ACLS</span><span class="chip red">$ADEA</span><span class="chip red">$AMKR</span><span class="chip red">$FORM</span><span class="chip red">$KLAC</span><span class="chip red">$MKSI</span><span class="chip red">$MTSI</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$PLAB</span><span class="chip red">$RMBS</span><span class="chip red">$SMTC</span><span class="chip red">$TER</span><span class="chip red">$VECO</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;ve hold positions in the $MU that markets sleep on:
+
+Unimicron.
+
+This one is an incredible long at $16B as they&#x27;re foundational for:
+
+- $MU and Samsung memory substrates
+- $NVDA Rubin/Blackwell
+- TSMC for CoWoS process
+- Apple (iPhones and M-series)
+- Google TPUs
+- AMZN/Hyperscaler ASICs
+- Intel for ABF substrates
+- ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;ve hold positions in the $MU that markets sleep on:
+
+Unimicron.
+
+This one is an incredible long at $16B as they&#x27;re foundational for:
+
+- $MU and Samsung memory substrates
+- $NVDA Rubin/Blackwell
+- TSMC for CoWoS process
+- Apple (iPhones and M-series)
+- Google TPUs
+- AMZN/Hyperscaler ASICs
+- Intel for ABF substrates
+- Amkor that buys Unimicron substrates
+- and all the world&#x27;s semis.
+
+Unimicron is one of the most significant &quot;choke points&quot; in the global AI supply chain as they provide the future:
+
+- IC Substrates for HBM4 / Memory (DRAM/NAND) + GPUs/CPUs
+- The &quot;S&quot; (substrate) in TSM CoWoS
+- Glass Core Substrates for CoPoS
+
+for 2026-2028
+
+and all the foundational parts for customer devices like IPhones and semiconductors used today.
+
+They&#x27;re in the center of the memory bottleneck, CoWoS bottleneck, and interconnects bottleneck for Hyperscaler ASiCs.
+
+As well as the future cycles with Glass Core substrates and more.
+
+AI revolves around the other Micron and you get exposure to most popular bottlenecks like HBM today and tomorrow.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2014731960418238574" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我持有市场所依赖的 $MU 头寸：
+
+欣兴微电子。这是一个令人难以置信的多头，价格为 $16B，因为它们是以下方面的基础：
+
+- $MU 和三星内存基板
+- $NVDA 鲁宾/布莱克威尔
+- 台积电CoWoS工艺
+- Apple（iPhone 和 M 系列）
+- 谷歌 TPU
+- AMZN/超大规模 ASIC
+- 英特尔 ABF 基板
+- Amkor 购买 Unimicron 基板
+- 以及世界上所有的半决赛。欣兴微电子是全球人工智能供应链中最重要的“瓶颈”之一，因为它们提供了未来：
+
+- HBM4 / 内存 (DRAM/NAND) + GPU/CPU 的 IC 基板
+- TSM CoWoS 中的“S”（基材）
+- CoPoS 玻璃芯基板
+
+2026-2028 年
+
+以及当今使用的 iPhone 和半导体等客户设备的所有基础部件。它们处于内存瓶颈、CoWoS 瓶颈和超大规模 ASIC 互连瓶颈的中心。以及玻璃芯基板的未来周期等。AI 围绕着其他 Micron 展开，您会遇到当今和未来最流行的瓶颈，例如 HBM。</div>
+        <div class="tweet-foot">
+          <span>likes 454 / retweets 26 / replies 25 / views 110202</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2026-01-23 00:02</span>
+          <span><span class="chip red">$ACLS</span><span class="chip red">$ADEA</span><span class="chip red">$AMKR</span><span class="chip red">$FORM</span><span class="chip red">$INTC</span><span class="chip red">$KLAC</span><span class="chip red">$MKSI</span><span class="chip red">$MTSI</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$PLAB</span><span class="chip red">$RMBS</span><span class="chip red">$SMTC</span><span class="chip red">$TER</span><span class="chip red">$VECO</span></span>
+        </div>
+        <div class="tweet-text">Memory Supercycle Supply Chain TLDR:
+
+US Sleeper HBM4/Memory alpha picks that benefit from $MU and SK/Samsung:
+
+$VECO ($2B) -Laser annealing
+$PLAB ($2.1B) - Lithography photomask
+$ADEA ($2.18B) - Hybrid bonding
+$ACLS ($2.9B) - Ion implantation
+$FORM ($6.43B) - HBM wafer testing
+$ONTO ($10.6B) - Packaging metrology
+$AMK...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Memory Supercycle Supply Chain TLDR:
+
+US Sleeper HBM4/Memory alpha picks that benefit from $MU and SK/Samsung:
+
+$VECO ($2B) -Laser annealing
+$PLAB ($2.1B) - Lithography photomask
+$ADEA ($2.18B) - Hybrid bonding
+$ACLS ($2.9B) - Ion implantation
+$FORM ($6.43B) - HBM wafer testing
+$ONTO ($10.6B) - Packaging metrology
+$AMKR ($13.1B) -Advanced packaging
+$RMBS ($13.55B) - Memory IP
+$MKSI ($14.9B) - Laser subsystems
+
+Didn&#x27;t include big players like $TER and $KLAC since just wanted to focus on lesser known ones. 
+
+There&#x27;s some indirect beneficiaries too like $SMTC and $MTSI. Markets definitely haven&#x27;t priced some of these in yet. 
+
+Let me know if I missed any. 
+
+Just wanted to publish these in case you find any of them interesting.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2014368177682292774" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>内存超级周期供应链 TLDR：
+
+US Sleeper HBM4/Memory alpha 选择受益于 $MU 和 SK/Samsung：
+
+$VECO ($2B) - 激光退火
+$PLAB ($2.1B) - 光刻光掩模
+$ADEA ($2.18B) - 混合键合
+$ACLS ($2.9B) - 离子注入
+$FORM ($6.43B) - HBM 晶圆测试
+$ONTO ($10.6B) - 包装计量
+$AMKR ($13.1B) - 高级封装
+$RMBS ($13.55B) - 内存 IP
+$MKSI ($14.9B) - 激光子系统
+
+不包括像 $TER 和 $KLAC 这样的大玩家，因为只是想关注不太知名的玩家。还有一些间接受益者，例如 $SMTC 和 $MTSI。市场肯定还没有消化其中的一些因素。如果我错过了什么，请告诉我。只是想发布这些内容，以防您发现其中任何有趣的内容。</div>
+        <div class="tweet-foot">
+          <span>likes 1178 / retweets 170 / replies 54 / views 319004</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=FORM">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

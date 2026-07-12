@@ -1,0 +1,1252 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$RTX 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$RTX 历史推文</h1>
+      <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b>16</b></div>
+        <div class="stat-card"><span>历史推文</span><b>16</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-01-03</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-05-23</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射 3</span><span class="chip blue">瓶颈狩猎（核心透镜） 3</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-05-23 13:58</span>
+          <span><span class="chip red">$RTX</span><span class="chip red">$SIVE</span><span class="chip red">$YSS</span></span>
+        </div>
+        <div class="tweet-text">Markets are kinda realizing US Gov is heavily backing $SIVE as you can see with direct US CHIPS Act funding. 
+
+Since you see Sivers in $YSS Golden Dome supply chains (from allspace), and $RTX defense supply chains (chips act). 
+
+But yeah Ericsson and SIvers are probably the two more noticable ones benefiting from US x ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Markets are kinda realizing US Gov is heavily backing $SIVE as you can see with direct US CHIPS Act funding. 
+
+Since you see Sivers in $YSS Golden Dome supply chains (from allspace), and $RTX defense supply chains (chips act). 
+
+But yeah Ericsson and SIvers are probably the two more noticable ones benefiting from US x Sweden tech MOU.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058064950116130919" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>市场已经意识到美国政府正在大力支持 $SIVE，正如您通过美国 CHIPS 法案的直接资助所看到的那样。因为你在 $YSS Golden Dome 供应链（来自 allspace）和 $RTX 国防供应链（芯片法案）中看到 Sivers。但是，爱立信和 SIvers 可能是受益于美国与瑞典科技谅解备忘录的两个更引人注目的公司。</div>
+        <div class="tweet-foot">
+          <span>likes 154 / retweets 6 / replies 5 / views 11452</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-05-05 15:36</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AEVA</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ERIC</span><span class="chip red">$GFS</span><span class="chip red">$GOOGL</span><span class="chip red">$JBL</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$POET</span><span class="chip red">$RTX</span><span class="chip red">$SIVE</span><span class="chip red">$YSS</span></span>
+        </div>
+        <div class="tweet-text">Just a recap of recent information discovery + likely mapping with $SIVE:
+ 
+-&gt; $JBL 1.6T
+-&gt; Lightmatter
+-&gt; Ayar
+-&gt; $MRVL Celestial
+-&gt; Lightelligence 
+-&gt; $POET 
+-&gt; $GFS ecosystem
+-&gt; $AMD CPO
+-&gt; O-Net / Enablence
+-&gt; $AAPL Silicon Photonics
+_
+-&gt; $YSS Golden Dome/DoD
+-&gt; $RTX / $ERIC (Space)
+-&gt; Bae Systems
+-&gt; $AEVA 
+
+With $...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a recap of recent information discovery + likely mapping with $SIVE:
+ 
+-&gt; $JBL 1.6T
+-&gt; Lightmatter
+-&gt; Ayar
+-&gt; $MRVL Celestial
+-&gt; Lightelligence 
+-&gt; $POET 
+-&gt; $GFS ecosystem
+-&gt; $AMD CPO
+-&gt; O-Net / Enablence
+-&gt; $AAPL Silicon Photonics
+_
+-&gt; $YSS Golden Dome/DoD
+-&gt; $RTX / $ERIC (Space)
+-&gt; Bae Systems
+-&gt; $AEVA 
+
+With $JBL to Ayar feeding into hyperscalers like $MSFT, $GOOGL, $AMZN, $META.
+
+With likely Lightelligence to O-Net feeding into Asian Hyperscalers like Tencent, Bytedance, and Baidu.
+
+On top of that... the overarching TAM with CPO from the GS report goes from 0 -&gt;  $91B. 
+
+And Sivers happens to be the bleeding edge for CPO (also starting from 0). 
+
+This is definitely high-beta and volatile. 
+
+But if Win volume ramps alongside $SIVE, I see them both becoming $10B+ companies next year. 
+
+This is just extremely early on (H1) before the CPO supercycle starts H2 2026.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051566667009073315" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是回顾一下最近的信息发现 + 可能与 $SIVE 的映射：
+ 
+-&gt; $JBL 1.6T
+-&gt; 光物质
+-&gt; 阿亚尔
+-&gt; $MRVL 天体
+-&gt; 灯光智能 
+-&gt; $诗人 
+-&gt; $GFS 生态系统
+-&gt; $AMD CPO
+-&gt; 昂纳/Enablence
+-&gt; $AAPL 硅光子学
+_
+-&gt; $YSS 金顶/国防部
+-&gt; $RTX / $ERIC（空格）
+-&gt; 裴系统公司
+-&gt; $AEVA 
+
+通过 $JBL 到 Ayar 为 $MSFT、$GOOGL、$AMZN、$META 等超大规模提供商提供服务。Lightelligence 和 O-Net 可能会进入腾讯、字节跳动和百度等亚洲超大云厂商。最重要的是... GS 报告中的总体 TAM 和 CPO 从 0 -&gt; $91B。而 Sivers 恰好是 CPO 的前沿（也是从 0 开始）。这绝对是高贝塔值且不稳定。但如果 Win 的销量与 $SIVE 一起增长，我预计它们明年都会成为 $10B+ 公司。这只是 CPO 超级周期在 2026 年下半年开始之前的极早时间 (上半年)。</div>
+        <div class="tweet-foot">
+          <span>likes 1424 / retweets 105 / replies 94 / views 218999</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-05-01 14:02</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMAT</span><span class="chip red">$AMD</span><span class="chip red">$COHR</span><span class="chip red">$ERIC</span><span class="chip red">$INTC</span><span class="chip red">$JBL</span><span class="chip red">$KLA</span><span class="chip red">$LCRX</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$RTX</span><span class="chip red">$SIVE</span><span class="chip red">$TSM</span><span class="chip red">$YSS</span></span>
+        </div>
+        <div class="tweet-text">As for 3x brrrs these levels: 
+
+1. $SIVE
+2. MSSCORP (6830)
+3. Auros (322310)
+
+Are my best guesses. Here&#x27;s my thought process: 
+
+1. $SIVE: I genuinely do see them being $10B+ next year, they&#x27;re the literal bleeding edge for CPO lasers alongside $LITE and $COHR.
+
+At a $1.3B MC... For likely mapping: 
+
+Photonics: $AMD CPO...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">As for 3x brrrs these levels: 
+
+1. $SIVE
+2. MSSCORP (6830)
+3. Auros (322310)
+
+Are my best guesses. Here&#x27;s my thought process: 
+
+1. $SIVE: I genuinely do see them being $10B+ next year, they&#x27;re the literal bleeding edge for CPO lasers alongside $LITE and $COHR.
+
+At a $1.3B MC... For likely mapping: 
+
+Photonics: $AMD CPO, $MRVL Celestial CPO, $JBL 1.6T, Lightmatter, Ayar, ALChip, GUC, O-Net (ELS), $POET.
+
+For Space + Defense: Golden Dome via $YSS, $RTX / $ERIC / Bae Systems.
+
+Silicon Photonics: $AAPL (Apple Watches). 
+
+This is just a stupid amount of customers and it&#x27;s still increasing. 
+
+They can always TAM expansion downstream through IP acquisitions or vertically integrate to speedrun $LITE&#x27;s $60B MC one day once they get more funding. 
+
+2. MSSCORP (6830): CPO monopoly over inspection at ~$1.2B. 
+
+100% monopoly over CPO yields, $TSM, $AMAT, $NVDA, $LCRX, $INTC, and others are all likely customers. 
+
+&quot;The company’s goal is to seize a 90 percent share of the CPO inspection market&quot;
+
+This basically means 100%, they just don&#x27;t want antitrust.  If they defend their monopoly and CPO ramps, can easily see this worth ~$5B-$9B from $1.2B
+
+3. Auros (322310): Samsung / SK Hynix supplier at ~$210M for Hybrid Bonding Metrology.
+
+Basically pure play on two products: 
+-&gt; HBM4 / HBM4e / HBM5 cycles, that $KLA had a monoply over for IR metrology. 
+---&gt;  Getting qualified now likely in Samsung factories, H2 volume ramp est. Sk Hynix likely qualifying too when they upgrade to hybrid bonding.  
+-&gt; Thin-film thickness measurement.  
+---&gt; Getting qualified now, with &quot;major domestic chipmaker&quot; (either Samsung/Sk hynix), targets mass supply this year. 
+
+They&#x27;ve been developing for the past decade, only to volume ramp two products from years of qualification H2 this year.
+
+Seems extremely likely to 3x to $630M if they switch to volume ramp, feels like an undiscovered gem in the Korean market? 
+
+Of course, not sure how they play out and this is all speculative but high confidence supply chain mapping.
+
+But off the top of my head these three that I own are the most likely ones at this level.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2050093551313469467" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>至于 3x brrrs 这些级别： 
+
+1.$SIVE
+2.MSSCORP (6830)
+3.奥罗斯（322310）
+
+是我最好的猜测。这是我的思考过程： 
+
+1. $SIVE：我确实认为它们明年的价格将达到 $10B+，它们与 $LITE 和 $COHR 一起是 CPO 激光器的真正前沿。在 $1.3B MC...对于可能的映射： 
+
+光子学：$AMD CPO、$MRVL Celestial CPO、$JBL 1.6T、Lightmatter、Ayar、ALChip、GUC、昂纳 (ELS)、$POET。对于太空+国防：Golden Dome，通过 $YSS、$RTX / $ERIC / Bae Systems。硅光子学：$AAPL（苹果手表）。这只是一个愚蠢的客户数量，而且还在增加。一旦他们获得更多资金，他们总是可以通过 IP 收购向下游进行 TAM 扩张，或者垂直整合以加速 $LITE 的 $60B MC。2. MSSCORP (6830)：CPO 对检验的垄断，价格约为 $1.2B。对 CPO 收益率 100% 垄断，$TSM、$AMAT、$NVDA、$LCRX、$INTC 等都是可能的客户。“公司的目标是抢占CPO检验市场90%的份额”
+
+这基本上意味着100%，他们只是不想要反垄断。如果他们捍卫自己的垄断和 CPO 坡道，可以很容易地看到它的价值从 $1.2B 到 $5B-$9B
+
+3. Auros (322310)：三星/SK Hynix 混合键合计量供应商，售价约 2.1 亿美元。基本上纯粹玩两种产品： 
+-&gt; HBM4 / HBM4e / HBM5 循环，$KLA 垄断了红外计量。---&gt; 现在很可能在三星工厂获得资格，H2 销量预计将大幅增加。Sk Hynix 在升级到混合键合后也可能获得资格。-&gt; 薄膜厚度测量。---&gt; 现在已获得“国内主要芯片制造商”（三星/SK海力士）的资格，目标是今年大规模供货。他们在过去十年里一直在开发，今年仅在多年的 H2 资格认证中增加了两款产品的产量。如果他们转向销量增长，似乎极有可能增加 3 倍至 6.3 亿美元，感觉就像韩国市场上一颗未被发现的宝石？当然，不确定它们如何发挥作用，这都是推测，但高度可信的供应链映射。但从我的角度来看，我拥有的这三个是这个级别最有可能的。</div>
+        <div class="tweet-foot">
+          <span>likes 1865 / retweets 178 / replies 131 / views 574445</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 15:11</span>
+          <span><span class="chip red">$ERIC</span><span class="chip red">$RTX</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Hint... $SIVE CHIPS Act round 2 incoming soon (consistent with the CHIPS Act renewal cycle)
+
+The U.S. government doesn&#x27;t just give out funding to random $1B Swedish companies.
+
+It&#x27;s highly unusual. And there&#x27;s probably something markets are missing. 
+
+Since they got funding for: 
+
+-&gt; $RTX and $ERIC Beamformers (space/t...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Hint... $SIVE CHIPS Act round 2 incoming soon (consistent with the CHIPS Act renewal cycle)
+
+The U.S. government doesn&#x27;t just give out funding to random $1B Swedish companies.
+
+It&#x27;s highly unusual. And there&#x27;s probably something markets are missing. 
+
+Since they got funding for: 
+
+-&gt; $RTX and $ERIC Beamformers (space/telecom). 
+-&gt; BAE Systems for STAR duplex arrays (radar jamming during electronic warfare)
+
+Defense Primes are likely using Sivers microchip IP to build the final products with this. 
+
+As for the final products... What other space + military contractor applications are there involving LEO satellites? And I think you can guess. 
+
+The defense primes aren&#x27;t trying to play Taylor Swift Youtube videos in space...   
+
+But the commercial spinoff can also be used for SpaceX/Amazon LEO Kuiper type applications. 
+
+Regardless, you have the side of the AI photonics story, which is the core growth vertical. 
+
+I&#x27;m most excited for photonics... but you also happen to get a company backed with U.S. CHIPS ACT embedded in Raytheon and BAE Systems for whatever black magic they want to do in Space. 
+
+Just nobody knows exact timeline + applications because due to the nature of CHIPS ACT defense contracts. 
+
+But it might appear randomly in financial statements down the road.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049386026460942645" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>提示... $SIVE CHIPS 法案第二轮即将到来（与 CHIPS 法案更新周期一致）
+
+美国政府不只是随机向价值 10 亿美元的瑞典公司提供资金。这是非常不寻常的。市场可能缺少一些东西。自从他们获得资金以来： 
+
+-&gt; $RTX 和 $ERIC Beamformers（太空/电信）。-&gt; BAE Systems for STAR 双工阵列（电子战期间的雷达干扰）
+
+Defense Prime 可能会使用 Sivers 微芯片 IP 来构建最终产品。至于最终产品……还有哪些其他涉及低轨卫星的太空+军事承包商应用？我想你可以猜到。防御素人并没有尝试在太空中播放泰勒·斯威夫特（Taylor Swift）的 Youtube 视频...... 
+
+但商业衍生产品也可用于 SpaceX/Amazon LEO Kuiper 类型的应用。无论如何，人工智能光子学故事的一面是核心垂直增长。我对光子学最感兴趣……但你也碰巧得到了一家获得美国 CHIPS ACT 支持的公司，该公司嵌入雷神公司和 BAE 系统公司，以实现他们想要在太空中实现的任何黑魔法。由于 CHIPS ACT 防御合同的性质，没有人知道确切的时间表和申请。但它可能会随机出现在未来的财务报表中。</div>
+        <div class="tweet-foot">
+          <span>likes 731 / retweets 67 / replies 40 / views 175526</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-03-31 09:09</span>
+          <span><span class="chip red">$LASR</span><span class="chip red">$LMT</span><span class="chip red">$RTX</span></span>
+        </div>
+        <div class="tweet-text">Or... instead of spending billions on &quot;cheaper missiles&quot;. 
+
+Since blowing $3-4M Patriots to down cheap drones isn&#x27;t working.
+
+We start to do more research and deploy Energy Directed Weapons like $LASR and HPM?
+
+With HEL (High Energy Lasers):
+
+ It&#x27;s a beam of light... pew pew. $3.50 per shot. 
+
+With HPM (High Powered Mi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Or... instead of spending billions on &quot;cheaper missiles&quot;. 
+
+Since blowing $3-4M Patriots to down cheap drones isn&#x27;t working.
+
+We start to do more research and deploy Energy Directed Weapons like $LASR and HPM?
+
+With HEL (High Energy Lasers):
+
+ It&#x27;s a beam of light... pew pew. $3.50 per shot. 
+
+With HPM (High Powered Microwaves) - It&#x27;s a cone of energy for drone swarms. 
+
+Maybe ~$0.05 per burst? Ammo is basically free and infinite. 
+
+Even though $LMT and $RTX are developing these too... it&#x27;s like we just keep buying expensive missiles to line their pockets at this point. 
+
+More funding around this infinite ammo new tech, instead used for all those missiles...
+
+Probably could have made energy weapons better by now (eg. fixing problems with dwell time, weather changes, range, power). 
+
+Firing billions of dollars of missiles at cheap drones clearly is not sustainable for extended conflicts in Iran.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2038785650632397005" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>或者......而不是花费数十亿美元购买“更便宜的导弹”。因为花费 3-400 万美元爱国者队来击落廉价无人机是行不通的。我们开始做更多研究并部署能量定向武器，例如 $LASR 和 HPM？使用 HEL（高能激光器）：
+
+ 这是一束光……呜呜。每次射击 3.50 美元。HPM（高功率微波）——它是无人机群的能量锥。也许每次突发约 0.05 美元？弹药基本上是免费且无限的。尽管 $LMT 和 $RTX 也在开发这些……这就像我们现在只是不断购买昂贵的导弹来中饱私囊。围绕这种无限弹药新技术的更多资金，而不是用于所有这些导弹......
+
+也许现在可以让能量武器变得更好（例如解决停留时间、天气变化、射程、功率等问题）。对于伊朗的长期冲突来说，向廉价无人机发射价值数十亿美元的导弹显然是不可持续的。</div>
+        <div class="tweet-foot">
+          <span>likes 266 / retweets 11 / replies 20 / views 36219</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-03-24 11:51</span>
+          <span><span class="chip red">$ACLS</span><span class="chip red">$AKTS</span><span class="chip red">$ALMU</span><span class="chip red">$AMZN</span><span class="chip red">$ATOM</span><span class="chip red">$BA</span><span class="chip red">$BLG</span><span class="chip red">$ERIC</span><span class="chip red">$INFN</span><span class="chip red">$META</span><span class="chip red">$MRAM</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NVTS</span><span class="chip red">$ORCL</span><span class="chip red">$PDFS</span><span class="chip red">$QUBT</span><span class="chip red">$RGTI</span><span class="chip red">$RTX</span><span class="chip red">$SIVE</span><span class="chip red">$SKYT</span><span class="chip red">$SLVC</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">If you didn&#x27;t know by now $SIVE is important to US national security via CHIPS act. 
+
+But especially, as the light source for hyperscaler AI supply chains.
+
+They got two CHIPS acts grants ~$11.6M so far:
+
+1. FR3 beamformer ICs with $ERIC and Raytheon $RTX.
+2. EW Tech with $BA (LSE) BAE Systems
+
+With more coming funding...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you didn&#x27;t know by now $SIVE is important to US national security via CHIPS act. 
+
+But especially, as the light source for hyperscaler AI supply chains.
+
+They got two CHIPS acts grants ~$11.6M so far:
+
+1. FR3 beamformer ICs with $ERIC and Raytheon $RTX.
+2. EW Tech with $BA (LSE) BAE Systems
+
+With more coming funding from CHIPS in 2026 hinted by the CEO.
+
+Small caps almost never get this sort of support from the US government.
+
+You have a company sitting at $330M:
+
+That&#x27;s critical to US National Security for their Semi arm.
+
+and
+
+Critical to Hyperscaler supply chains ( $MSFT, $META, $AMZN, $ORCL, etc) for Photonics through $MRVL Celestial, Ayar, Jabil, ONet, and others...
+
+The main question regarding scale vs. capex is now answered by Win Semi partnership. 
+
+And the question regarding &quot;CPO waiting&quot; opportunity cost is now answered by the Jabil 1.6T pluggable ramp from OFC.
+
+$SIVE of the most unknown gems in the photonics space and I personally think this company should be $2B+ today.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2036289688227684729" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>如果您现在还不知道 $SIVE 通过 CHIPS 法案对美国国家安全很重要。但尤其是作为超大规模人工智能供应链的光源。到目前为止，他们获得了两项 CHIPS 法案拨款约 1160 万美元：
+
+1. FR3 波束形成器 IC 与 $ERIC 和 Raytheon $RTX。2. EW Tech 与 $BA (LSE) BAE Systems
+
+首席执行官暗示，2026 年 CHIPS 将提供更多资金。小盘股几乎从未获得美国政府的此类支持。您有一家价值 3.3 亿美元的公司：
+
+这对于他们的 Semi 部门的美国国家安全至关重要。和
+
+通过 $MRVL Celestial、Ayar、Jabil、ONet 等对光子学的超大规模供应链（$MSFT、$META、$AMZN、$ORCL 等）至关重要...
+
+关于规模与资本开支的主要问题现在由 Win Semi 合作伙伴回答。关于“CPO 等待”机会成本的问题现在由 OFC 的捷普 1.6T 可插拔坡道得到解答。光子学领域最不为人知的瑰宝，我个人认为这家公司今天的股价应该达到 20 亿美元以上。</div>
+        <div class="tweet-foot">
+          <span>likes 427 / retweets 42 / replies 22 / views 89494</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-03-11 06:27</span>
+          <span><span class="chip red">$CODA</span><span class="chip red">$GD</span><span class="chip red">$RTX</span></span>
+        </div>
+        <div class="tweet-text">@barbell_ideas Yeah just double checked $CODA gross margins are 66.5% to 67.6%, which is extremely high for the industry.
+
+Defense contractors like $GD or $RTX typically range around 10-20%.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@barbell_ideas Yeah just double checked $CODA gross margins are 66.5% to 67.6%, which is extremely high for the industry.
+
+Defense contractors like $GD or $RTX typically range around 10-20%.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2031497121468383529" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@barbell_ideas 是的，刚刚仔细检查过 $CODA 毛利率为 66.5% 至 67.6%，这对于行业来说是非常高的。$GD 或 $RTX 等国防承包商通常在 10-20% 左右。</div>
+        <div class="tweet-foot">
+          <span>likes 24 / retweets 1 / replies 2 / views 4089</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-03-02 23:49</span>
+          <span><span class="chip red">$DRS</span><span class="chip red">$LASR</span><span class="chip red">$RTX</span></span>
+        </div>
+        <div class="tweet-text">$LASR is the only US publicly traded, pure-play Energy Directed Weapons stock. 
+
+$LASR is the laser engine for Rafael&#x27;s Iron Beam. 
+
+And markets may have missed the the two-hop relation to NLight.
+
+The Iron Beam was live for the first time today and wildly successful. 
+
+An article: &quot;America’s ongoing quest to stop firi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$LASR is the only US publicly traded, pure-play Energy Directed Weapons stock. 
+
+$LASR is the laser engine for Rafael&#x27;s Iron Beam. 
+
+And markets may have missed the the two-hop relation to NLight.
+
+The Iron Beam was live for the first time today and wildly successful. 
+
+An article: &quot;America’s ongoing quest to stop firing $4 million missiles at $30,000 drones&quot; was also put out today:
+
+&quot;For years, laser weapons were the novelty tool of the defense industry, always five years away and ten billion dollars over budget. Since late 2025, the dream is officially operational, baking threats in mid-air like dinner rolls.
+
+The appeal is pure, unadulterated Einsteinian art. Instead of launching a sophisticated interceptor that  requires a PhD to maintain, the Iron Beam focuses a 100kW high-energy laser onto a target until its structural integrity ceases to exist.
+
+There is no explosion, no exhaust trail to track, and, magically, no reload time. As long as the generator has that sweet, sweet diesel, you have an infinite  magazine.&quot;
+
+$LASR is the pure play exposure for the future of warfare at a tiny $3.5B MC.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028497913979302109" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$LASR 是美国唯一一只公开交易的纯能源定向武器股票。$LASR 是拉斐尔铁束的激光引擎。市场可能错过了与 NLight 的两跳关系。铁梁今天首次上线并取得了巨大成功。今天还发布了一篇文章：“美国正在寻求停止向价值 3 万美元的无人机发射价值 400 万美元的导弹”：
+
+“多年来，激光武器一直是国防工业的新奇工具，总是需要五年时间，而且预算超支 100 亿美元。自 2025 年底以来，这个梦想正式开始实施，将威胁像餐卷一样在半空中烘烤。吸引力是纯粹的、不掺杂任何杂质的爱因斯坦艺术。铁束不是发射需要博士学位才能维护的复杂拦截器，而是将 100kW 高能激光聚焦到目标上，直到其结构完整性不再存在。没有爆炸，没有可追踪的废气痕迹，而且神奇的是，没有装弹时间。只要发电机有甜甜的柴油，你就有了无限的杂志。”
+
+$LASR 是在小型 $3.5B MC 上对未来战争的纯粹游戏曝光。</div>
+        <div class="tweet-foot">
+          <span>likes 730 / retweets 75 / replies 41 / views 244074</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-03-02 21:25</span>
+          <span><span class="chip red">$DRS</span><span class="chip red">$ESLT</span><span class="chip red">$LASR</span><span class="chip red">$RTX</span></span>
+        </div>
+        <div class="tweet-text">@geokoutalidis Yep great shout! There&#x27;s other large players out there, like $DRS or $RTX and $ESLT. But nothing publicly traded really has pure play exposure to energy directed weapons aside from $LASR AFAIK.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@geokoutalidis Yep great shout! There&#x27;s other large players out there, like $DRS or $RTX and $ESLT. But nothing publicly traded really has pure play exposure to energy directed weapons aside from $LASR AFAIK.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028461742783893827" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@geokoutalidis 是的，很棒的喊声！还有其他大型参与者，例如 $DRS 或 $RTX 和 $ESLT。但除了 $LASR AFAIK 之外，没有任何一家公开交易的公司真正纯粹接触能量定向武器。</div>
+        <div class="tweet-foot">
+          <span>likes 29 / retweets 0 / replies 2 / views 4520</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-03-02 21:01</span>
+          <span><span class="chip red">$DRS</span><span class="chip red">$LASR</span><span class="chip red">$RTX</span></span>
+        </div>
+        <div class="tweet-text">$LASR Energy Directed Weapons from the Iron Beam. 
+
+Is probably the single largest beneficiary and validation from the US / Israel vs. Iran conflict. 
+
+Hezbollah Fired Rockets into Israel. 
+
+-&gt; $LASR (Nlight) laser engine inside of Rafael&#x27;s Iron Beam shot them down. 
+
+It&#x27;s absolutely wild to see it in action. 
+
+Lot of ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$LASR Energy Directed Weapons from the Iron Beam. 
+
+Is probably the single largest beneficiary and validation from the US / Israel vs. Iran conflict. 
+
+Hezbollah Fired Rockets into Israel. 
+
+-&gt; $LASR (Nlight) laser engine inside of Rafael&#x27;s Iron Beam shot them down. 
+
+It&#x27;s absolutely wild to see it in action. 
+
+Lot of defense funds will now probably be pouring into Energy Directed Weapons in the near future given validation just now. 
+
+Especially to zap down hypersonic missiles with the HELSI initiative.  
+
+There&#x27;s a few large player exposure like $DRS or $RTX but there&#x27;s only one $3.1B MC pure-play energy directed weapons stock.
+
+Which also happens to be a known critical supplier for the Iron Beam.
+
+Ended up taking positions in $LASR at $3B MC.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2028455727996752242" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$LASR 能量引导铁光束武器。可能是美国/以色列与伊朗冲突的最大受益者和验证者。真主党向以色列发射火箭。-&gt; 拉斐尔铁束内部的 $LASR（夜光）激光引擎将他们击落。看到它的实际应用真是太疯狂了。鉴于刚才的验证，在不久的将来，大量国防资金可能会涌入能量定向武器。特别是利用 HELSI 计划击落高超音速导弹。有一些大型玩家曝光，例如 $DRS 或 $RTX，但只有一种 $3.1B MC 纯能量定向武器库存。这也恰好是著名的铁梁关键供应商。最终以 $3B MC 的价格持有 $LASR 头寸。</div>
+        <div class="tweet-foot">
+          <span>likes 412 / retweets 38 / replies 33 / views 195490</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-02-28 14:52</span>
+          <span><span class="chip red">$AVAV</span><span class="chip red">$CVX</span><span class="chip red">$FRO</span><span class="chip red">$LASR</span><span class="chip red">$LMT</span><span class="chip red">$LPTH</span><span class="chip red">$NOC</span><span class="chip red">$RTX</span><span class="chip red">$STNG</span><span class="chip red">$XLE</span><span class="chip red">$XOM</span></span>
+        </div>
+        <div class="tweet-text">Hope you all hedged with Pistachios.
+
+Israel is now airstriking Iran. 
+
+Immediate Beneficiaries: 
+Oil (Energy) - $XLE, $CVX, $XOM, 
+Defense - $AVAV, $NOC, $LASR, $LPTH, $RTX, $AVAV, $LMT, $NOC
+Save Haven Assets - Gold, Silver
+Shipping - $FRO, $STNG
+Pistachios
+
+This might just be a case of trading blows 
+
+-&gt; Israel fire...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Hope you all hedged with Pistachios.
+
+Israel is now airstriking Iran. 
+
+Immediate Beneficiaries: 
+Oil (Energy) - $XLE, $CVX, $XOM, 
+Defense - $AVAV, $NOC, $LASR, $LPTH, $RTX, $AVAV, $LMT, $NOC
+Save Haven Assets - Gold, Silver
+Shipping - $FRO, $STNG
+Pistachios
+
+This might just be a case of trading blows 
+
+-&gt; Israel fires some shows
+-&gt; Iran fires some back 
+-&gt; they get shot down by the US so they can claim they retaliated
+
+Then all is well. 
+
+My opinion is markets freak out for the weekend and overnight but recover shortly after they realize war is bullish for America. 
+
+But if US follows-up and invades, then the Military/Oil trade is back.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2027637911097839997" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>希望大家都用开心果来对冲。以色列现在正在空袭伊朗。直接受益人： 
+石油（能源）- $XLE、$CVX、$XOM、 
+防御 - $AVAV、$NOC、$LASR、$LPTH、$RTX、$AVAV、$LMT、$NOC
+拯救避风港资产 - 黄金、白银
+运费 - $FRO、$STNG
+开心果
+
+这可能只是一个交易打击的案例 
+
+-&gt; 以色列发射了一些节目
+-&gt; 伊朗进行了一些还击 
+-&gt; 他们被美国击落，这样他们就可以声称他们进行了报复
+
+那么一切都很好。我的观点是，市场在周末和隔夜感到恐慌，但在意识到战争对美国有利后不久就会恢复。但如果美国跟进并入侵，那么军事/石油贸易就会回归。</div>
+        <div class="tweet-foot">
+          <span>likes 846 / retweets 61 / replies 0 / views 100171</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-01-30 01:09</span>
+          <span><span class="chip red">$CPSH</span><span class="chip red">$LMT</span><span class="chip red">$NVDA</span><span class="chip red">$RTX</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;ve initiated positions in $CPSH as a US AlSiC pure play chokepoint.
+
+They represent ~25% of the near-term semi-grade AlSiC market. 
+
+Their customers:
+
+- U.S. Navy (War)
+- U.S. Army (War)
+- U.S. Dept. of Energy (Energy / Nuclear)
+- U.S. Space Force / NASA (Space)
+- Lockheed Martin ( $LMT ) 
+- Raytheon ( $RTX ) 
+- Nort...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;ve initiated positions in $CPSH as a US AlSiC pure play chokepoint.
+
+They represent ~25% of the near-term semi-grade AlSiC market. 
+
+Their customers:
+
+- U.S. Navy (War)
+- U.S. Army (War)
+- U.S. Dept. of Energy (Energy / Nuclear)
+- U.S. Space Force / NASA (Space)
+- Lockheed Martin ( $LMT ) 
+- Raytheon ( $RTX ) 
+- Northrop Grumman
+- General Dynamics
+
+- The U.S. Navy uses $CPSH for ballistic protection systems of the newest carriers (like the USS Gerald R. Ford and USS Abraham Lincoln). As well as other fleets like the Danish Navy through Lockheed.
+
+- US Army uses $CPSH for 40mm Tungsten Warheads and UH-60 Black Hawk Helicopters. 
+
+- The US Dpt of Energy uses $CPSH for impact limiters when transferring nuclear fuel (SNF) and high-level radioactive waste via rail. 
+
+- U.S. Space Force / NASA uses $CPSH for GPS satellites and it sits in many electronic systems in the International Space Station. (Also not including Mars Rover missions)
+
+- Lockheed, Raytheon, Northrop, and General Dynamics uses $CPSH for missile heat-shielding components. AlSiC housings for radar systems, and thermal management materials. 
+
+AlSiC or (aluminum silicon carbide) is a well known material composite that handles extreme thermal conditions for many applications above from space to defense. 
+
+But as architectures from $NVDA Rubin to scale up to 2300-2500W in 2027-2028, that same material may be used AI due to heat warpage.
+
+My thoughts were that the tiny TAM material used to handle extreme changes in heat from hypersonic missiles to rocket nose cones may likely be used for AI deployments. 
+
+This is similar to how InP (niche TAM for Telecom) became a bottleneck as photonics scaled up. Or how Toto&#x27;s fine ceramics for toilets were critical to memory.
+
+AlSiC (esp. post-processing) may become a potential chokepoint as AI ramps up to Rubin generation chips.  
+
+Majority of the world&#x27;s AlSiC production still originates in East Asia (Denka,Sumitomo, BYD, JFC).
+
+But CPS is currently the primary &quot;US/Western hedge&quot; and CPSH states they represent roughly 25% of the near-term available AlSiC market (CPS Technologies AGM Presentation). 
+
+And that percentage of the supply chain is only worth ~$100 MC right now. 
+
+Their balance sheet:
+
+$12.7M – $13.8M (pro-forma) cash. Almost 0 debt. Inventory ~5.4M, Liabilities: ~$5.06M (eg. $3.53M for aluminum and silicon carbide)
+
+Y/Y revenue is 8.8M, up +107.29%. 
+Y/Y Net income is up 207.96K (+119.94%). 
+
+Healthy balance sheet and US Government strategic interest + Defense Contractors gives $CPSH low downside risk at $100M or even at $200M as the leading Western AlSiC supply chain. 
+
+There were new contracts eg. $15.5M order from the leading Semi likely ~Infineon last October, that more visibility into revenue upside. And they are expanding production (funded by their Oct 25th raise), which hints to higher demand. 
+
+&quot;We believe we are the world leader in the design and manufacture of AlSiC... Many of our products are designed specifically for a single customer application, making us the sole-source provider for those components.&quot; (10-K filings)
+
+TLDR: The AI upside depends entirely on a material pivot by big tech. Similar to the Toto toilet maker for memory type but the AI fit seems strong. 
+
+But the benefit is that its existing list of US DoD contractors gives the company lower downside risk.
+
+This is just my own personal thesis I wanted to share. 
+
+But personally I&#x27;ve taken positions in $CPSH as an AlSiC play (and long US supply chains) as it may play an important role with thermal warpage with AI in 2027-2028 as we expand to 2000W+.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2016921538780680402" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我已在 $CPSH 中设立了职位，将其作为美国 AlSiC 纯游戏的瓶颈。它们约占近期半级 AlSiC 市场的 25%。他们的客户：
+
+- 美国海军（战争）
+- 美国陆军（战争）
+- 美国能源部（能源/核）
+- 美国太空部队/NASA（太空）
+- 洛克希德·马丁公司 ($LMT) 
+- 雷神公司 ($RTX) 
+——诺斯罗普·格鲁曼公司
+- 通用动力公司
+
+- 美国海军将 $CPSH 用于最新航母（例如杰拉尔德·R·福特号航空母舰和亚伯拉罕·林肯号航空母舰）的弹道防护系统。以及其他舰队，例如丹麦海军通过洛克希德公司。- 美国陆军将 $CPSH 用于 40 毫米钨弹头和 UH-60 黑鹰直升机。- 美国能源部在通过铁路运输核燃料 (SNF) 和高放射性废物时使用 $CPSH 作为影响限制器。- 美国太空部队/NASA 使用 $CPSH 作为 GPS 卫星，它存在于国际空间站的许多电子系统中。（也不包括火星漫游者任务）
+
+- 洛克希德、雷神、诺斯罗普和通用动力公司将 $CPSH 用于导弹隔热组件。用于雷达系统的 AlSiC 外壳和热管理材料。AlSiC 或（铝碳化硅）是一种众所周知的材料复合材料，可以处理从太空到国防等许多应用的极端热条件。但随着 NVDA Rubin 的架构在 2027 年至 2028 年扩大到 2300-2500W，由于热变形，相同的材料可能会用于 AI。我的想法是，用于处理从高超音速导弹到火箭鼻锥的极端热量变化的微小 TAM 材料可能会用于人工智能部署。这类似于 InP（电信领域的 TAM）随着光子学规模的扩大而成为瓶颈。或者托托的精美马桶陶瓷如何对记忆至关重要。随着 AI 逐渐向 Rubin 一代芯片发展，AlSiC（尤其是后处理）可能会成为潜在的瓶颈。世界上大部分 AlSiC 生产仍然源自东亚（Denka、Sumitomo、BYD、JFC）。但 CPS 目前是主要的“美国/西方对冲”，CPSH 表示它们约占近期可用 AlSiC 市场的 25%（CPS Technologies 年度股东大会演示）。而供应链的这一比例目前仅值约 100 美元 MC。他们的资产负债表：
+
+1270 万美元 – 1380 万美元（预计）现金。几乎是0债务。库存约 540 万美元，负债：约 506 万美元（例如铝和碳化硅 353 万美元）
+
+同比收入为 880 万，增长 +107.29%。净利润同比增长 207.96K (+119.94%)。健康的资产负债表和美国政府战略利益+国防承包商使 CPSH 作为西方领先的 AlSiC 供应链的下行风险较低，为 1 亿美元甚至 2 亿美元。有新的合同，例如。去年 10 月，来自领先的 Semi 的英飞凌可能会获得 1550 万美元的订单，这让我们更清楚地看到收入的增长。他们正在扩大生产（由 10 月 25 日加薪提供资金），这暗示着需求的增加。“我们相信我们是 AlSiC 设计和制造领域的世界领先者......我们的许多产品都是专门为单一客户应用而设计的，这使我们成为这些组件的唯一供应商。” （10-K 申请）
+
+TLDR：人工智能的优势完全取决于大型科技的物质支点。类似于 Toto 马桶制造商的记忆类型，但人工智能适配似乎很强。但好处是，其现有的美国国防部承包商名单使该公司的下行风险较低。这只是我想分享的我自己的个人论文。但就我个人而言，我将 $CPSH 视为 AlSiC 的一部分（以及美国的长供应链），因为随着我们扩展到 2000W+，它可能在 2027-2028 年人工智能的热翘曲方面发挥重要作用。</div>
+        <div class="tweet-foot">
+          <span>likes 382 / retweets 32 / replies 38 / views 96558</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-01-13 18:57</span>
+          <span><span class="chip red">$AVAV</span><span class="chip red">$BA</span><span class="chip red">$KTOS</span><span class="chip red">$NOC</span><span class="chip red">$OSS</span><span class="chip red">$RTX</span></span>
+        </div>
+        <div class="tweet-text">Urgent: US Government: “Leave Iran Now”.
+
+This implies direct US intervention. 
+
+The last event was with GBU-57A/B MOPs.
+
+Here’s how to profit off US invading Iran.
+
+Department of War stocks:
+
+$OSS - Edge AI
+$AVAV - Drone Strikes
+$BA, $NOC, $RTX - Bunker Bombs
+$KTOS - Valkyries for drawing enemy fire, jam radars, and l...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Urgent: US Government: “Leave Iran Now”.
+
+This implies direct US intervention. 
+
+The last event was with GBU-57A/B MOPs.
+
+Here’s how to profit off US invading Iran.
+
+Department of War stocks:
+
+$OSS - Edge AI
+$AVAV - Drone Strikes
+$BA, $NOC, $RTX - Bunker Bombs
+$KTOS - Valkyries for drawing enemy fire, jam radars, and lead F-35s and B-21s
+
+It’s pretty simple. Especially following US invasion of Venezuela. 
+
+There’s likely a lot of market volatility but the largest beneficiaries are pure play War verticals.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2011029875361218700" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>紧急：美国政府：“立即离开伊朗”。这意味着美国的直接干预。最后一次活动是使用 GBU-57A/B MOP。以下是如何从美国入侵伊朗中获利。战争部股票：
+
+$OSS - 边缘人工智能
+$AVAV - 无人机袭击
+$BA、$NOC、$RTX - 地堡炸弹
+$KTOS - Valkyries 用于吸引敌方火力、干扰雷达并引导 F-35 和 B-21
+
+这很简单。特别是在美国入侵委内瑞拉之后。市场可能会出现很大波动，但最大的受益者是纯粹的战争垂直行业。</div>
+        <div class="tweet-foot">
+          <span>likes 291 / retweets 27 / replies 24 / views 50264</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-01-04 18:18</span>
+          <span><span class="chip red">$ASHM</span><span class="chip red">$AVAV</span><span class="chip red">$BA</span><span class="chip red">$CF</span><span class="chip red">$CVE</span><span class="chip red">$CVX</span><span class="chip red">$GDRZF</span><span class="chip red">$HII</span><span class="chip red">$HON</span><span class="chip red">$LDOS</span><span class="chip red">$LHX</span><span class="chip red">$OI</span><span class="chip red">$RTX</span><span class="chip red">$TRGP</span><span class="chip red">$VLO</span></span>
+        </div>
+        <div class="tweet-text">Maduro is now captured in NY, facing charges. 
+
+The first thing that came to everyone&#x27;s mind is:
+
+How do you profit off the US invasion of Venezuela and Regime Change?
+
+Here&#x27;s how.
+
+This is the &quot;Nation Building&quot; port:
+
+1. $GDRZF @$1.68 - $8B+ claims, $200m MC. (30%)
+
+2. $ASHM @ £175.10 - 3x NAV bonds recovery (20%)
+
+3....</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Maduro is now captured in NY, facing charges. 
+
+The first thing that came to everyone&#x27;s mind is:
+
+How do you profit off the US invasion of Venezuela and Regime Change?
+
+Here&#x27;s how.
+
+This is the &quot;Nation Building&quot; port:
+
+1. $GDRZF @$1.68 - $8B+ claims, $200m MC. (30%)
+
+2. $ASHM @ £175.10 - 3x NAV bonds recovery (20%)
+
+3. $CVX @ $155.90 - Most obvious oil play from locked up assets + $17T in oil (15% allocation / calls)
+
+4. $TRGP @ $186.77 - Diluent exporter to Venezuela (10% allocation / calls)
+
+5. $AVAV @ $256.19  - Maritime operations and post $1T funding for defense.  ( 10% allocation)
+
+6. $CF @ $80.13 - Disruption of Trinidad &amp; Tobago ammonia exports.  (5% allocation)
+
+7. $HII @ $349.7 - Profiting off the blockade from shipbuilding (5% allocation)
+
+8. $OI @ $15.16 - Claims ~$700M, 35% cash injection relative to market cap (5% allocation)
+
+This setup looks to be the optimal way to capitalize on the US invasion of Venezuela - from profiting off the blockade to the new $17T+ in oil resources now owned by the United States. 
+
+&quot;Nation Building&quot; is the most underrated theme going into 2027. 
+
+Watch what happens on Monday and the following months.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2007758407948788162" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>马杜罗现已在纽约被捕，面临指控。大家首先想到的就是：
+
+您如何从美国入侵委内瑞拉和政权更迭中获利？方法如下。这是“国家大厦”港口：
+
+1. $GDRZF @$1.68 - $8B+ 索赔，$2 亿 MC。(30%)
+
+2. $ASHM @ £175.10 - 3 倍资产净值债券回收 (20%)
+
+3. $CVX @ $155.90 - 最明显的石油发挥来自锁定资产 + $17T 石油（15% 分配/看涨期权）
+
+4. $TRGP @ $186.77 - 委内瑞拉稀释剂出口商（10%分配/调用）
+
+5. $AVAV @ $256.19 - 海上行动和 1 万亿美元的国防资金。（10%分配）
+
+6. $CF @ $80.13 - 特立尼达和多巴哥氨出口中断。（5%分配）
+
+7. $HII @ $349.7 - 从造船业的封锁中获利（5％分配）
+
+8. $OI @ $15.16 - 索赔约 7 亿美元，相对于市值的 35% 现金注入（5% 分配）
+
+这种设置看起来是利用美国入侵委内瑞拉的最佳方式——从封锁中获利，到美国现在拥有的新的 17T+ 石油资源。“国家建设”是进入 2027 年最被低估的主题。观察周一和接下来的几个月会发生什么。</div>
+        <div class="tweet-foot">
+          <span>likes 875 / retweets 82 / replies 28 / views 238814</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-01-04 00:31</span>
+          <span><span class="chip red">$ASHM</span><span class="chip red">$AVAV</span><span class="chip red">$BA</span><span class="chip red">$CF</span><span class="chip red">$CVE</span><span class="chip red">$CVX</span><span class="chip red">$GHM</span><span class="chip red">$HII</span><span class="chip red">$HLI</span><span class="chip red">$HON</span><span class="chip red">$LAZ</span><span class="chip red">$LDOS</span><span class="chip red">$LHX</span><span class="chip red">$PSX</span><span class="chip red">$RTX</span><span class="chip red">$TRGP</span><span class="chip red">$VLO</span></span>
+        </div>
+        <div class="tweet-text">US has now toppled Maduro&#x27;s regime in Venezuela.
+
+Everyone&#x27;s first thought is:
+
+How do I profit off Nation Building in Venezuela?
+
+Here&#x27;s how:
+
+1. Distressed Debt + Bonds ( $ASHM, $HLI, $LAZ )
+
+2x–3x multiple from &quot;pure play&quot; distressed Venezuelan debt owned by Ashmore $ASHM. They are the largest institutional holders ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">US has now toppled Maduro&#x27;s regime in Venezuela.
+
+Everyone&#x27;s first thought is:
+
+How do I profit off Nation Building in Venezuela?
+
+Here&#x27;s how:
+
+1. Distressed Debt + Bonds ( $ASHM, $HLI, $LAZ )
+
+2x–3x multiple from &quot;pure play&quot; distressed Venezuelan debt owned by Ashmore $ASHM. They are the largest institutional holders of Venezuelan debt. 
+
+Bonds trade in the 10–20 cent range (depending on sanctions flux). In a regime change scenario, analysts (Citi, Allianz) est a recovery of 30–55 cents on the dollar. ~2x–3x multiple on book of assets that are marked down. 
+
+$HLI -  IB is the primary financial advisor to the Venezuela Creditor Committee. In sovereign restructurings, the advisors are paid &quot;success fees&quot;, and are the &quot;picks and shovels&quot; play for restructuring.
+
+$LAZ - sovereign debt restructuring (advised Greece, Ukraine). This firm benefit from the complexity of the deal, and Venezuela&#x27;s debt stack is arguably the most complex in history.
+
+2. Heavy Crude Transplant ( Paris: TE, $GHM)
+
+Technip - Historical architect of Venezuela’s critical infrastructure. The new gov will likely award &quot;no-bid&quot; or &quot;sole-source&quot; service contracts to the OEM to expedite repairs, as bringing in a new firm to reverse-engineer the plants would take years.
+
+$GHM - The small-cap industrial firm manufactures the vacuum ejector systems used in refineries and upgraders. To upgrade Venezuela&#x27;s heavy oil, you must distill it under a vacuum to prevent it from turning into solid coke.  
+
+3. Dilutents ( $TRGP )
+
+Before Venezuela can export high volumes of oil, it must import high volumes of diluent (naphtha or natural gasoline) to make the heavy crude flow through pipelines.
+
+$TRGP operates the Galena Park Marine Terminal, the primary hub for sending diluents to Venezuela.
+
+Reverting to US supplies means Targa’s Galena Park Marine Terminal (a major LPG/Naphtha export hub in Houston) would see an immediate massive spike in volume to displace the Iranian supply.
+
+4. Banking Plays ( Panama: MVZ.A / MVZ.B)
+
+Mercantil is a unique anomaly, a Venezuelan bank holding company that listed in Panama and has a US presence (Amerant was spun off, but Mercantil remains). 
+
+It is the most logical &quot;bridge&quot; for dollarized flows, remittances, and aid money moving from the US/Miami back into a reconstructed Caracas.
+
+5. Energy Sector ( $CVX, $VLO, $PSX) 
+
+The most obvious beneficiary of regime change and nation building in Venezuela is Chevron $CVX. Unlike other US majors that left, Chevron has maintained a presence in Venezuela. They have the staff, the licenses (via OFAC), and the fields (Petroboscan, Petropiar) ready to ramp up immediately.
+
+Gulf Coast Refiners $VLO and $PSX would stand to benefit as well as their Texas and Louisiana refineries were specifically built to process Venezuela&#x27;s heavy, sour crude. Since sanctions hit, they have had to buy more expensive heavy crude from elsewhere.  A flood of Venezuelan oil would drastically lower their feedstock costs, widening their profit margins. 
+
+Artificial intelligence was one of the most profitable trades in 2025 and moving forward to 2026. 
+
+Given the unexpected turn of events with a fast regime change, investing in Nation Building from banks to oil processing might become the most profitable trade in 2026.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2007489901877436756" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>美国现已推翻了委内瑞拉马杜罗政权。大家第一个想到的就是：
+
+我如何从委内瑞拉的国家建设中获利？方法如下：
+
+1.不良债务+债券（$ASHM、$HLI、$LAZ）
+
+Ashmore $ASHM 拥有的“纯粹”委内瑞拉不良债务的 2 倍至 3 倍。他们是委内瑞拉债务的最大机构持有者。债券交易价格在 10-20 美分范围内（取决于制裁变化）。在政权更迭的情况下，分析师（花旗、安联）预计美元汇率将上涨 30-55 美分。减价资产账簿的约 2 倍至 3 倍。$HLI - IB 是委内瑞拉债权人委员会的主要财务顾问。在主权重组中，顾问们获得“成功费”，并成为重组的“镐和铲子”。$LAZ - 主权债务重组（建议希腊、乌克兰）。该公司受益于交易的复杂性，而委内瑞拉的债务负担可以说是历史上最复杂的。2.重质原油移植（巴黎：TE，$GHM）
+
+德希尼普 - 委内瑞拉关键基础设施的历史建筑师。新政府可能会向原始设备制造商授予“无投标”或“独家”服务合同，以加快维修速度，因为引入一家新公司对工厂进行逆向工程需要数年时间。$GHM - 这家小型工业公司生产用于炼油厂和升级厂的真空喷射系统。要升级委内瑞拉的重油，必须在真空下蒸馏，以防止其变成固体焦炭。3. 稀释剂 ($TRGP)
+
+在委内瑞拉能够出口大量石油之前，它必须进口大量稀释剂（石脑油或天然汽油）以使重质原油通过管道流动。$TRGP 运营加利纳公园海运码头，该码头是向委内瑞拉发送稀释剂的主要枢纽。恢复美国供应意味着塔尔加的加利纳公园海运码头（休斯顿的主要液化石油气/石脑油出口中心）的产量将立即大幅增加，以取代伊朗的供应。4. 银行业（巴拿马：MVZ.A / MVZ.B）
+
+Mercantil 是一个独特的异常现象，它是一家在巴拿马上市并在美国开展业务的委内瑞拉银行控股公司（Amerant 被剥离，但 Mercantil 仍然存在）。对于美元化的资金流、汇款和援助资金从美国/迈阿密流回重建后的加拉加斯来说，这是最合乎逻辑的“桥梁”。5.能源行业（$CVX、$VLO、$PSX） 
+
+委内瑞拉政权更迭和国家建设最明显的受益者是雪佛龙$CVX。与其他离开的美国石油巨头不同，雪佛龙一直在委内瑞拉保持存在。他们拥有员工、许可证（通过 OFAC）和油田（Petroboscan、Petropiar），准备立即投入使用。墨西哥湾沿岸炼油商 $VLO 和 $PSX 将从中受益，而且他们的德克萨斯州和路易斯安那州炼油厂是专门为加工委内瑞拉重质高硫原油而建造的。自制裁生效以来，他们不得不从其他地方购买更昂贵的重质原油。委内瑞拉石油的大量供应将大大降低其原料成本，扩大其利润率。人工智能是 2025 年乃至 2026 年最赚钱的行业之一。鉴于政权快速更迭所带来的意想不到的事态发展，从银行到石油加工的国家建设投资可能会成为 2026 年最赚钱的行业。</div>
+        <div class="tweet-foot">
+          <span>likes 4102 / retweets 432 / replies 105 / views 1509809</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-01-03 17:43</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AIRO</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVAV</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BA</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CF</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CVE</span><span class="chip red">$DJT</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLY</span><span class="chip red">$GEMI</span><span class="chip red">$GLXY</span><span class="chip red">$HII</span><span class="chip red">$HIMS</span><span class="chip red">$HON</span><span class="chip red">$HUT</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LDOS</span><span class="chip red">$LHX</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$RTX</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$VLO</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span></span>
+        </div>
+        <div class="tweet-text">US has now invaded Venezuela.
+
+Everyone is probably wondering the same thing:
+
+How do you profit off the situation?
+
+1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE).
+
+These are Venezuela&#x27;s biggest exports.
+
+Most people will buy generic oil ETFs or light sweet crude producers. This is inefficie...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">US has now invaded Venezuela.
+
+Everyone is probably wondering the same thing:
+
+How do you profit off the situation?
+
+1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE).
+
+These are Venezuela&#x27;s biggest exports.
+
+Most people will buy generic oil ETFs or light sweet crude producers. This is inefficient because light oil is not a perfect substitute for heavy oil in complex refineries. If Caribbean ammonia is stranded, the global price of nitrogen spikes. The biggest beneficiary is a US-domestic producer that uses cheap US  natural gas and doesn&#x27;t rely on Caribbean shipping lanes
+
+2. Dirty Crude Processing ( $VLO ) - If competitors are starved of Venezuelan oil, Valero’s ability to source heavy crude from diverse locations (and its leverage  to diesel margins) makes it resilient.
+
+3. Naval Warfare ( $LDOS) - While retail investors buy Lockheed Martin (F-35s), the operations in the Caribbean focuses on maritime surveillance, warfare,  and autonomous patrolling to enforce blockades without risking US personnel. Companies like Leidos provide these tpyes of naval tech.
+
+4. Defense and aerospace from $AVAV to $HII and $LHX also benefit.
+
+- $AVAV recently unveiled the Red Dragon and updated Switchblade 600 variants specifically for maritime operations
+
+- $LHX provides the sensors and communications gear that link the drones ($AVAV) to the ships ($HII) and the jets ($BA).
+
+- A blockade requires significant maritime surveillance and naval assets, which benefits shipbuilders ( $HII )
+
+5. Direct Suppliers of recent military operation:
+
+- F/A-18E/F Super Hornet from $BA (Precision strikes on Caracas)
+
+- B-1B Lancer from $BA
+
+- UAS (Drone), MQ-9 Reaper - $RTX (MTS-B Sensors), $HON Honeywell for the Engine
+
+- Tomahawk (TLAM), $RTX
+
+So far:
+
+$AVAV - 5.91%+
+$BA - 4.91%
+$LHX - 3.72%
+$CF - 3.61%+
+$CVE - 3.61%+
+$HII  - +2.85%
+$RTX - 2.1%
+$VLO - 1.55%+
+$LDOS - 1.7%+
+$HON - .4%+</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2007387427820978510" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>美国现在已经入侵委内瑞拉。想必大家都想知道同样的事情：
+
+你如何从这种情况中获利？1. 重酸肥、氨肥和氮肥中断（$CF、$CVE）。这些是委内瑞拉最大的出口产品。大多数人会购买通用石油 ETF 或轻质低硫原油生产商。这是低效的，因为在复杂的炼油厂中，轻油并不是重油的完美替代品。如果加勒比氨滞留，全球氮价格就会飙升。最大的受益者是一家使用廉价美国天然气且不依赖加勒比海航线的美国国内生产商
+
+2. 脏原油加工（$VLO）——如果竞争对手缺乏委内瑞拉石油，瓦莱罗从不同地点采购重质原油的能力（及其对柴油利润的杠杆作用）使其具有弹性。3. 海战（$LDOS）——虽然散户投资者购买洛克希德·马丁公司（F-35），但加勒比地区的行动重点是海上监视、战争和自主巡逻，以在不危及美国人员的情况下实施封锁。像 Leidos 这样的公司提供这些类型的海军技术。4.从$AVAV到$HII和$LHX的国防和航空航天也受益。- $AVAV 最近推出了 Red Dragon 和更新的 Switchblade 600 型号，专门用于海上作业
+
+- $LHX 提供将无人机 ($AVAV) 与船舶 ($HII) 和喷气式飞机 ($BA) 连接的传感器和通信设备。- 封锁需要大量海上监视和海军资产，这对造船商有利（$HII）
+
+5.近期军事行动的直接供应商：
+
+- $BA 的 F/A-18E/F 超级大黄蜂（对加拉加斯进行精确打击）
+
+- 来自 $BA 的 B-1B 枪骑兵
+
+- UAS（无人机）、MQ-9 Reaper - $RTX（MTS-B 传感器）、$HON Honeywell 发动机
+
+- 战斧（TLAM），$RTX
+
+到目前为止：
+
+AVAV 美元 - 5.91%+
+$BA - 4.91%
+$LHX - 3.72%
+$CF - 3.61%+
+$CVE - 3.61%+
+HII 美元 - +2.85%
+RTX 美元 - 2.1%
+$VLO - 1.55%+
+$LDOS - 1.7%+
+$HON - .4%+</div>
+        <div class="tweet-foot">
+          <span>likes 10935 / retweets 965 / replies 180 / views 3904694</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=RTX">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

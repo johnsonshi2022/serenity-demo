@@ -1,0 +1,2710 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$LPK 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$LPK 历史推文</h1>
+      <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b>58</b></div>
+        <div class="stat-card"><span>历史推文</span><b>55</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-04-03</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-06-22</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 17</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 15</span><span class="chip blue">认证周期 vs TTM 营收 10</span><span class="chip blue">信念分层、仓位与时点 4</span><span class="chip blue">GAAP 毛利率之战 2</span><span class="chip blue">关税 / 宏观冲击买点 2</span><span class="chip blue">稀释 / ATM 日历否决项 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 待接入行情，60D 待接入行情。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-06-22 18:33</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">As for $LPK: Maybe $3B-$5B seems reasonable when they fully volume ramp if I had to guess. 
+
+Feels more asymmetrical to me personally since it&#x27;s just a waiting game and they have the customers for glass substrates. 
+
+Small machine supplier chokepoints usually cap out from TAM though and don&#x27;t go to $20B+ unless you&#x27;re ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">As for $LPK: Maybe $3B-$5B seems reasonable when they fully volume ramp if I had to guess. 
+
+Feels more asymmetrical to me personally since it&#x27;s just a waiting game and they have the customers for glass substrates. 
+
+Small machine supplier chokepoints usually cap out from TAM though and don&#x27;t go to $20B+ unless you&#x27;re ASML or hold many chokepoints like KLAC. 
+
+Not many dominant &quot;monopolies&quot; like these out there right before volume ramp this small: 
+
+Maybe you have stuff like: 
+- Aixtron (MOCVD) ~$8B
+- Towa (compression bonding) ~$2B 
+- Techwing (memory handler/cube probes) ~$1.5B
+- MSScorps (CPO inspection), but pre-ramp. $850M
+- Riber (quantum MBE), very pre-ramp ~$350M 
+
+Then LPK Laser for glass core substrates (about to ramp) at ~$730M, which thematically should have more premiums than memory. (eg. major advanced packaging shift, CPO adjacent, etc). 
+
+Lot of obscure chemical monopolies I know of, but those don&#x27;t get as much attention cause BOM is much lower than equipment. 
+
+But for lpk you have:
+
+eg. “80% of customers among major global players have selected LPKF equipment”.  
+
+70% of LIDE market share target for TGV in the glass-core ramp, should be very material. (disclosure: own, the listed names above aside from techwing/aixtron, NFI).
+
+Just kinda the path they go if you follow $AEHR at ~$3.5B now:
+
+- &lt;$500m: &quot;Oh they have no customers!&quot; 
+---&gt; (probably somewhere in the middle here).
+- &lt; $1.5B: &quot;Maybe volume comes soon!&quot; 
+- $3B+ onward: &quot;Looks like they&#x27;re starting to volume ramp. 
+
+Just a lesson for the cycle of the chokepoint machine suppliers from my personal experiences.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2069005921318281566" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>至于 $LPK：如果我不得不猜测的话，当它们完全成交量上升时，也许 $3B-$5B 似乎是合理的。我个人感觉更不对称，因为这只是一场等待游戏，而且他们有玻璃基板的客户。小型机器供应商的瓶颈通常会受到 TAM 的限制，并且不会达到 $20B+，除非您是 ASML 或拥有许多像 KLAC 这样的瓶颈。在交易量增长如此之小之前，像这样的主导“垄断”并不多： 
+
+也许你有类似的东西： 
+- 爱思强 (MOCVD) ~$8B
+- Towa（压缩粘合）~$2B 
+- Techwing（内存处理程序/立方体探针）~$1.5B
+- MSScorps（CPO 检查），但在坡道前。8.5 亿美元
+- Riber（量子MBE），非常预斜坡〜3.5亿美元 
+
+然后用于玻璃芯基板的 LPK 激光器（即将增加）价格约为 7.3 亿美元，从主题上讲，其溢价应该比内存更高。（例如，主要先进封装转移、CPO 相邻等）。我知道有很多不起眼的化学垄断企业，但这些企业并没有受到太多关注，因为 BOM 远低于设备。但对于 lpk 你有：
+
+例如。“全球主要企业中80%的客户都选择了LPKF设备”。LIDE 玻璃芯坡道 TGV 市场份额的 70% 目标应该是非常重要的。（披露：拥有，上面列出的名称除了 techwing/aixtron、NFI）。如果你现在以 ~$3.5B 的价格关注 $AEHR，他们就会走这样的路：
+
+- &lt; 5 亿美元：“哦，他们没有客户！” 
+---&gt; （可能在中间的某个地方）。- &lt; $1.5B：“也许销量很快就会到来！” 
+- $3B+ 起：“看起来他们开始增加销量。这只是我个人经历给阻塞点机器供应商周期的一个教训。</div>
+        <div class="tweet-foot">
+          <span>likes 906 / retweets 61 / replies 154 / views 550389</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-06-21 11:32</span>
+          <span><span class="chip red">$ASML</span><span class="chip red">$LPK</span><span class="chip red">$TOWA</span></span>
+        </div>
+        <div class="tweet-text">Trump administration is prob realizing now that the key to winning Trade Wars:
+
+Is through frontier supply chains like Quantum, AI, Robotics.
+
+Not cheap Nike sock exports.
+
+With $ASML, $TOWA, $LPK, Ajinomoto,  
+over in Japan, EU, TW, Korea, and others holding all the cards…
+
+Since each country holds different monopolie...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Trump administration is prob realizing now that the key to winning Trade Wars:
+
+Is through frontier supply chains like Quantum, AI, Robotics.
+
+Not cheap Nike sock exports.
+
+With $ASML, $TOWA, $LPK, Ajinomoto,  
+over in Japan, EU, TW, Korea, and others holding all the cards…
+
+Since each country holds different monopolies and chokepoints needed to make each industry work.
+
+Which all happens to be OUTSIDE the US.
+
+Tariffing all our partners turned out to be not a great idea. 
+
+But not too late imo to repair relations and weaponize global supply chains through partners if Trump wants better trade deals.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2068537478131118438" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>特朗普政府现在可能意识到赢得贸易战的关键：
+
+是通过量子、人工智能、机器人等前沿供应链。耐克出口的袜子并不便宜。与 $ASML、$TOWA、$LPK、味之素、 
+在日本、欧盟、台湾、韩国和其他拥有所有优势的国家……
+
+由于每个国家都拥有不同的垄断和每个行业运转所需的瓶颈。这一切都发生在美国境外。事实证明，对我们所有的合作伙伴征收关税并不是一个好主意。但如果特朗普想要更好的贸易协议，在我看来修复关系并通过合作伙伴将全球供应链武器化还为时不晚。</div>
+        <div class="tweet-foot">
+          <span>likes 1258 / retweets 69 / replies 167 / views 210068</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-06-19 21:11</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">Wow, I completely missed this with $LPK meeting notes. 
+
+And I think markets did too. My biggest takeaway:
+
+- NASDAQ listing is actively on their radar and are in discussions.
+- 70% market share targeted, unholy target. 
+- TAM greatly exceeds former projections.
+- See a 4-5 base case of players this year with orders. 
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Wow, I completely missed this with $LPK meeting notes. 
+
+And I think markets did too. My biggest takeaway:
+
+- NASDAQ listing is actively on their radar and are in discussions.
+- 70% market share targeted, unholy target. 
+- TAM greatly exceeds former projections.
+- See a 4-5 base case of players this year with orders. 
+- Industry is ready for high volume ramps. 
+
+I do think LPK is very undervalued based on these discussions (disclosure: own positions).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2067958378488623499" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>哇，我完全错过了 $LPK 会议记录。我认为市场也是如此。我最大的收获：
+
+- 纳斯达克上市正受到他们的积极关注并正在进行讨论。- 70%的市场份额目标，邪恶的目标。- TAM 大大超出了之前的预测。- 查看今年有订单的 4-5 名玩家的基本情况。- 行业已准备好迎接高产量的增长。根据这些讨论，我确实认为 LPK 的价值被严重低估（披露：自己的立场）。</div>
+        <div class="tweet-foot">
+          <span>likes 1462 / retweets 105 / replies 179 / views 552227</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-06-19 20:19</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$HPS.A</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNAP</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TTD</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">I think something to highlight also is not all my ideas are green, especially on short term timeframes!
+
+My core three themes are Neoclouds (Energy), Memory, and Photonics. 
+
+And I&#x27;m glad I chose the literal top performers for each segment from $NBIS to $EWY leaps to $SIVE. 
+
+However, I still have pretty large losses f...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I think something to highlight also is not all my ideas are green, especially on short term timeframes!
+
+My core three themes are Neoclouds (Energy), Memory, and Photonics. 
+
+And I&#x27;m glad I chose the literal top performers for each segment from $NBIS to $EWY leaps to $SIVE. 
+
+However, I still have pretty large losses following the false analyst report on CPO delays that $NVDA refuted:
+
+That nuked 3 of my TW CPO longs from Foci, Msscorp, Xintec and others. (which are heavily red). Shunsin / Win Semi are holding up much better though. 
+
+Some of the other ones in Japan that I&#x27;ve mentioned like Towa, Harmonic Drive, NCI, etc. are performing much better following short-term volatility. 
+
+As for Korea yes I have PTSD for from Auros and now Foosung that are both both red (I didn&#x27;t own 093370 though, just got PTSD watching price action). 
+
+Idk if I&#x27;ll touch Korea again, just way too volatile. But I still think those will end up green eventually following Sk hynix/samsung qualifications + HVM, and the future japanese supply chain shutdown. 
+
+I also did change some of my previous long ideas like $XLU following the Iran War nuking all chances of rate cuts from 3-4 down to 0, and that didn&#x27;t play out too well. Three software names I mentioned previously like $TTD, $META ended up red. $SNAP, I also changed my thesis after noticing the endless SBC accounting methods. $RDDT idea was finally in the green from $130 -&gt; $170 after a long time. 
+
+But I think the vast majority of my ideas like $MRVL, $NBIS, $ARM, $INTC, $MU, $LITE, SK Hynix, Samsung, for larger cap. 
+
+Down to $AXTI, $LITE, $AAOI, $RPI, $IQE, and others for smaller cap positions directionally play out pretty well. 
+
+With random stuff like $SIMO, $HPS.A, $TSEM, $AEHR, $LPK, $SOI, $ALRIB, and so on all ended up turning out aight too. 
+
+The blended average is kinda overwhelmingly green since majority of my long ideas are triple digit YTD.  
+
+But I&#x27;ve definitely missed a few. 
+
+Also entry point is really important too... I mentioned $AAOI at $30 or $AXTI at ~$13, but not everyone has the same entry point. So if someone bought AOI at $220 and it dropped to $160, I&#x27;d feel bad. 
+
+But regardless, I&#x27;d prefer to judge how ideas play out on medium term timeframes over a few months rather than a few weeks.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2067945397923037693" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我认为需要强调的是，并非我所有的想法都是绿色的，尤其是在短期时间范围内！我的三个核心主题是 AI 算力云公司（能源）、Memory 和 Photonics。我很高兴我为从 $NBIS 到 $EWY 到 $SIVE 的每个细分市场选择了真正的最佳表现者。然而，在 $NVDA 驳斥了有关 CPO 延误的虚假分析师报告后，我仍然遭受了相当大的损失：
+
+这摧毁了我从 Foci、Msscorp、Xintec 等公司购买的 3 个 TW CPO 多头头寸。（呈深红色）。Shusin / Win Semi 的表现要好得多。我提到的日本其他一些公司，如 Towa、Harmonic Drive、NCI 等，在经历短期波动后表现要好得多。至于韩国，是的，我有来自 Auros 的 PTSD，现在 Foosung 都是红色的（虽然我没有 093370，只是在观察价格走势时有 PTSD）。我不知道我是否会再次接触韩国，因为太不稳定了。但我仍然认为，在 Sk hynix/三星资质 + HVM 以及未来日本供应链关闭之后，这些最终将成为绿色。我也确实改变了我之前的一些长期想法，例如伊朗战争后的 $XLU，将所有降息机会从 3-4 降至 0，但效果不太好。我之前提到的三个软件名称如 $TTD、$META 最终变成了红色。$SNAP，在注意到无穷无尽的SBC会计方法后，我也改变了我的论文。经过很长一段时间后，$RDDT 的想法终于从 130 美元变为 170 美元。但我认为我的绝大多数想法都是为了更大的上限，比如$MRVL、$NBIS、$ARM、$INTC、$MU、$LITE、SK Hynix、三星。降至 $AXTI、$LITE、$AAOI、$RPI、$IQE 和其他较小盘头寸的方向表现相当不错。随机的东西，比如 $SIMO、$HPS.A、$TSEM、$AEHR、$LPK、$SOI、$ALRIB 等等，最终也都得到了正确的结果。混合平均值几乎是绿色的，因为我的大部分长期想法今年迄今都是三位数。但我确实错过了一些。另外，切入点也非常重要...我提到了 $AAOI 的价格为 30 美元，$AXTI 的价格约为 13 美元，但并非每个人都有相同的切入点。因此，如果有人以 220 美元的价格购买 AOI，然后它跌至 160 美元，我会感觉很糟糕。但无论如何，我更愿意判断想法在几个月而不是几周的中期时间框架内如何发挥作用。</div>
+        <div class="tweet-foot">
+          <span>likes 2324 / retweets 147 / replies 235 / views 724908</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-06-17 20:01</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">I mean... if i had to guess, $LPK did claim &quot;80% of customers among major global players have selected LPKF equipment&quot;.
+
+Kinda clear glass substrates is the next packaging shift! 
+
+From est. timelines, major players like Absolics is ramping H2 2026, Samsung Electro Mechanics 2027 + their partners.  
+
+Then there&#x27;s major...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I mean... if i had to guess, $LPK did claim &quot;80% of customers among major global players have selected LPKF equipment&quot;.
+
+Kinda clear glass substrates is the next packaging shift! 
+
+From est. timelines, major players like Absolics is ramping H2 2026, Samsung Electro Mechanics 2027 + their partners.  
+
+Then there&#x27;s major shifts like TSM CoPoS 2028 (seems possible $LPK upstream exposure, unconfirmed). 
+
+Just that claim of 80% is staggering and my personal expectation was markets might price it in eventually  as they volume ramp (disclosure, own LPK). 
+
+Don&#x27;t think there needs to be any major news, probably just getting closer to HVM timelines.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2067216066905088237" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我的意思是...如果我不得不猜测的话，$LPK 确实声称“全球主要参与者中 80% 的客户都选择了 LPKF 设备”。有点透明的玻璃基板是下一个包装转变！从预计的时间表来看，Absolics 等主要参与者正在 2026 年下半年，三星电机及其合作伙伴将在 2027 年加大力度。然后还有像 TSM CoPoS 2028 这样的重大转变（似乎可能有 $LPK 上游风险敞口，未经证实）。光是 80% 的说法就令人震惊，我个人的预期是，随着销量的增加，市场最终可能会对其进行定价（披露，拥有 LPK）。我认为不需要有任何重大新闻，可能只是距离 HVM 时间表越来越近而已。</div>
+        <div class="tweet-foot">
+          <span>likes 1096 / retweets 172 / replies 119 / views 459129</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-06-15 22:56</span>
+          <span><span class="chip red">$ALRIB</span><span class="chip red">$IQE</span><span class="chip red">$LPK</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">Just as a recap, these were all my core European longs:
+
+1. $SIVE
+2. $LPK
+3. $SOI
+4. $RPI 
+5. $IQE
+6. $ALRIB
+7. $XFAB
+
+Sivers: As you know by now, core laser chokepoint over next generation photonics, from 1.6T pluggables to CPO.
+
+Embedded in many hyperscaler suppliers from Jabil to Ayar. Should go brrr 2027 but market...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just as a recap, these were all my core European longs:
+
+1. $SIVE
+2. $LPK
+3. $SOI
+4. $RPI 
+5. $IQE
+6. $ALRIB
+7. $XFAB
+
+Sivers: As you know by now, core laser chokepoint over next generation photonics, from 1.6T pluggables to CPO.
+
+Embedded in many hyperscaler suppliers from Jabil to Ayar. Should go brrr 2027 but markets are forward looking, so ramps + qualifications should get priced in now. 
+
+LPK Laser - Glass core substrate &quot;monopoly&quot; with LIDE. 
+
+&quot;More than 80% of major global players have selected our equipment for process validation, learning and scaling to mass production&quot;
+
+Soitec - Silicon photonics SoI substrate pure monopoly while coming out of legacy drag segments.  
+
+Raspberry Pi - Was my fun idea around Raspberry Pis being used for AI hardware deployments. 
+
+Previously this thing was mainly educational or hobby boards, but now used for edge/local AI. Just thought revenue increase would be extremely material and it played out well. 
+
+IQE - Critical epiwafer player for your Western photonics like Macom, Tower, Lumentum, and others. 
+
+Was kinda going under, but thought their latent capacity relative to Landmark was undervalued. 
+
+Also given how important it was, I thought that your downstream players + Govs wouldn&#x27;t let it go under, so it was more of a moonshot idea earlier in the year. 
+
+Lot more derisked now, very important.
+
+Riber - Kinda monopoly in the MBE space, exposure to Quantum / quantum dot + silicon photonics. 
+
+Found out from OSINT help from a friend latentvalue that Microsoft Quantum was buying their machines, so this was direct hyperscaler validation + kinda de-risked at current MCs.
+
+XFab - SiC foundry backed by EU/US CHIPS Act with power semi upside. (152% Y/Y growth for their sic vertical). 
+
+Main growth was their silicon photonics foundry past 2027 that&#x27;s getting evaled by nvidia. And that they&#x27;re leading Europe&#x27;s value chain efforts in photonics, kinda like an early tower semi. 
+
+We&#x27;ll see how this plays out, thought power semi exposure + low P/B would derisk the company until they scale their photbunchonics efforts. 
+
+From my own personal thoughts:
+
+Out of the  maybe $SOI has already been re-rated the most? But I&#x27;m holding anyway. 
+
+$LPK and $ALRIB I think are still undervalued despite their monopolies. 
+
+$RPI is just kinda seeing how things go at this point, would be hilarious if they ended up like a mini nvidia for low end edge ai. 
+
+$IQE probably has a long way to go given new tower long term agreement, alongside macom. And if they convert latent capacity, I still think it has a chance of rerating like landmark. 
+
+$XFAB idk if im missing something or are markets missing something. you have nvidia as a direct eval of their silicon photonics foundry, and it&#x27;s trading below replacement P/B. i think im right though. 
+
+$SIVE I see has the highest upside out of all of them given laser company ability to vertically integrate, acquire companies downstream to make their lasers more valuable, etc. Just like coherent/lumentum. 
+
+There&#x27;s like 1-2 more random ones that aren&#x27;t really material, but just in general.
+
+These are the ones I&#x27;ve liked the most.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2066535221554733278" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>回顾一下，这些都是我的核心欧洲多头：
+
+1.$SIVE
+2.$LPK
+3.$SOI
+4.零售价格指数 
+5.$IQE
+6.$ALRIB
+7.$XFAB
+
+Sivers：正如您现在所知，核心激光是下一代光子学的瓶颈，从 1.6T 可插拔到 CPO。嵌入从 Jabil 到 Ayar 的许多超大规模供应商中。应该是 2027 年，但市场是前瞻性的，所以坡道 + 资格现在应该定价。LPK激光器——玻璃芯基板与LIDE“垄断”。“超过 80% 的全球主要企业选择了我们的设备进行工艺验证、学习和扩大规模生产”
+
+Soitec - 硅光子 SoI 衬底完全垄断，同时摆脱了传统的阻力领域。Raspberry Pi - 我关于将 Raspberry Pi 用于 AI 硬件部署的有趣想法。以前这个东西主要是教育或兴趣爱好板，但现在用于边缘/本地人工智能。只是认为收入增长将是非常实质性的，而且效果很好。IQE - 西方光子学的关键外延片播放器，例如 Macom、Tower、Lumentum 等。有点陷入困境，但认为他们相对于地标的潜在能力被低估了。另外考虑到它的重要性，我认为你的下游玩家和政府不会让它消失，所以这更像是今年早些时候的一个登月想法。现在风险更大了，非常重要。Riber - MBE 领域有点垄断，接触量子/量子点 + 硅光子学。从朋友 Latentvalue 的 OSINT 帮助中发现 Microsoft Quantum 正在购买他们的机器，因此这是直接的超大规模验证 + 在当前 MC 上有点降低风险。XFab - SiC 代工厂受到欧盟/美国芯片法案的支持，具有半功率优势。（其 sic 垂直领域同比增长 152%）。2027 年之后的主要增长点是他们的硅光子代工厂，英伟达对此进行了评估。他们正在引领欧洲光子学价值链的发展，有点像早期的塔式半成品。我们将看看这将如何发挥作用，认为功率半曝光+低市盈率将使公司面临风险，直到他们扩大其光电子技术的努力。从我个人的想法来看：
+
+也许 $SOI 已被重新评级最多？但我还是坚持着。我认为 $LPK 和 $ALRIB 尽管具有垄断地位，但仍被低估。$RPI 只是看到了目前情况的发展情况，如果它们最终像低端边缘人工智能的迷你英伟达那样，那就太搞笑了。考虑到新塔与 macom 的长期协议，$IQE 可能还有很长的路要走。如果他们转换潜在产能，我仍然认为它有机会像里程碑一样重新评级。$XFAB idk 如果我遗漏了什么或者市场遗漏了什么。你有英伟达作为其硅光子代工厂的直接评估，它的交易价格低于替代品的市净率。我认为我是对的。我认为 $SIVE 在所有这些中具有最高的优势，因为激光公司有能力进行垂直整合、收购下游公司以使其激光器更有价值等。就像相干/Lumentum 一样。还有大约 1-2 个随机的，并不是真正重要的，但只是一般性的。这些是我最喜欢的。</div>
+        <div class="tweet-foot">
+          <span>likes 2422 / retweets 298 / replies 267 / views 645507</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-06-11 16:46</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">Just thought this was interesting: $LPK is an unknown SpaceX supplier.
+
+You can find it in SpaceX US import logs.  
+
+It&#x27;s fun information discovery ahead of Space&#x27;x IPO this week. Though, not sure what the exact contract entails. 
+
+Disclosure: I have positions in LPK, NFA, credit to my follower Albert_TheVoid for the D...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just thought this was interesting: $LPK is an unknown SpaceX supplier.
+
+You can find it in SpaceX US import logs.  
+
+It&#x27;s fun information discovery ahead of Space&#x27;x IPO this week. Though, not sure what the exact contract entails. 
+
+Disclosure: I have positions in LPK, NFA, credit to my follower Albert_TheVoid for the DM!
+
+Especially since everyone seems to be talking about about SpaceX with Velo... 
+
+Just a fun, new direct relationship between $LPK and SpaceX if people want to do more digging.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2064992691902140603" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是觉得这很有趣：$LPK 是一家不知名的 SpaceX 供应商。您可以在 SpaceX 美国进口日志中找到它。在本周 Space&#x27;x IPO 之前，这是一次有趣的信息发现。不过，不确定确切的合同内容是什么。披露：我在 LPK、NFA 都有头寸，感谢我的追随者 Albert_TheVoid 的 DM！尤其是因为每个人似乎都在谈论 SpaceX 和 Velo…… 
+
+如果人们想要进行更多挖掘，$LPK 和 SpaceX 之间就会建立一种有趣的、新的直接关系。</div>
+        <div class="tweet-foot">
+          <span>likes 1331 / retweets 98 / replies 280 / views 599170</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-06-03 07:56</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">@DeauDeuxsau Just H1 2027 should be glass core substrate volume orders with $LPK, kinda no news aside from waiting on that to happen.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@DeauDeuxsau Just H1 2027 should be glass core substrate volume orders with $LPK, kinda no news aside from waiting on that to happen.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2061960118049411534" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@DeauDeuxsau 2027 年上半年应该会有 $LPK 的玻璃芯基板批量订单，除了等待这件事发生之外，没有任何消息。</div>
+        <div class="tweet-foot">
+          <span>likes 33 / retweets 1 / replies 2 / views 4550</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-06-03 07:51</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">Good times with $AEHR, it’s now ~$3.5B MC.
+
+Haven’t mentioned it as much since there’s nothing too new. 
+
+Just waiting on volume orders for these types of players like $LPK, and others. https://t.co/W8k0ce3RSE</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Good times with $AEHR, it’s now ~$3.5B MC.
+
+Haven’t mentioned it as much since there’s nothing too new. 
+
+Just waiting on volume orders for these types of players like $LPK, and others. https://t.co/W8k0ce3RSE</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2061958857132585076" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>与 $AEHR 一起度过美好时光，现在 MC 约为 $3.5B。没有提及太多，因为没有什么太新的东西。只需等待 $LPK 等此类玩家的批量订单即可。https://t.co/W8k0ce3RSE</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0 / views 384531</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-06-01 23:13</span>
+          <span><span class="chip red">$ALRIB</span><span class="chip red">$IQE</span><span class="chip red">$LPK</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">A special thank you to the only European stock green today: $IQE. 
+
+Up to $54, from when I went long at $12-13, 4 months ago. 
+
+Unfortunately lot of volatility with the other ones from $LPK, $SOI, $XFAB, and $ALRIB. https://t.co/FysZyHk5OK</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">A special thank you to the only European stock green today: $IQE. 
+
+Up to $54, from when I went long at $12-13, 4 months ago. 
+
+Unfortunately lot of volatility with the other ones from $LPK, $SOI, $XFAB, and $ALRIB. https://t.co/FysZyHk5OK</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2061466217911853429" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>特别感谢今天唯一的绿色欧洲股票：$IQE。从 4 个月前我在 12-13 美元做多开始，一直上涨到 54 美元。不幸的是，$LPK、$SOI、$XFAB 和 $ALRIB 的其他产品波动很大。https://t.co/FysZyHk5OK</div>
+        <div class="tweet-foot">
+          <span>likes 295 / retweets 14 / replies 196 / views 73332</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-05-31 18:23</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">@aiizisw77940 @talethdabm89 Nope, it’s still the same with $LPK, just waiting on volume ramp to start.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@aiizisw77940 @talethdabm89 Nope, it’s still the same with $LPK, just waiting on volume ramp to start.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2061030685566235030" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@aiizisw77940 @talethdabm89 不，它仍然与 $LPK 相同，只是等待音量增加开始。</div>
+        <div class="tweet-foot">
+          <span>likes 0 / retweets 0 / replies 0</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-05-31 05:44</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">@talethdabm89 The research firm got their glass core substrate timelines off.
+
+H2 2026 should be production start (SKC Absolics), not 2028. And TAM figures seems off toward 2040, so thought it was better not to cite it. 
+
+Even though it’s not full value chain like $LPK and GCS in specific https://t.co/ixjeKpe3YH</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@talethdabm89 The research firm got their glass core substrate timelines off.
+
+H2 2026 should be production start (SKC Absolics), not 2028. And TAM figures seems off toward 2040, so thought it was better not to cite it. 
+
+Even though it’s not full value chain like $LPK and GCS in specific https://t.co/ixjeKpe3YH</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2060839806582829059" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@talethdabm89 该研究公司取消了玻璃芯基板的时间表。2026 年下半年应该开始生产（SKC Absolics），而不是 2028 年。TAM 的数据似乎接近 2040 年，所以认为最好不要引用它。尽管它不是特定的 $LPK 和 GCS 等完整价值链 https://t.co/ixjeKpe3YH</div>
+        <div class="tweet-foot">
+          <span>likes 30 / retweets 1 / replies 12 / views 2145</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-05-28 20:53</span>
+          <span><span class="chip red">$LPK</span><span class="chip red">$RPI</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">Just in case people are wondering about my track record with European equities:
+
+$RPI: $280 -&amp;gt; $800 (agentic AI hardware demand thesis).
+
+$LPK: ~$6, thesis at $13 -&amp;gt; $24.2 (glass cores substrates close monopoly) 
+
+$SOI: $44 -&amp;gt; $181 (silicon photonics, monopoly over substrates) https://t.co/EWWaVL7Y49</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just in case people are wondering about my track record with European equities:
+
+$RPI: $280 -&amp;gt; $800 (agentic AI hardware demand thesis).
+
+$LPK: ~$6, thesis at $13 -&amp;gt; $24.2 (glass cores substrates close monopoly) 
+
+$SOI: $44 -&amp;gt; $181 (silicon photonics, monopoly over substrates) https://t.co/EWWaVL7Y49</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2059981363684802708" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>以防万一人们想知道我在欧洲股票方面的记录：
+
+$RPI：$280 -&gt; $800（代理人工智能硬件需求论文）。$LPK：~$6，论文价格为 $13 -&gt; $24.2（玻璃芯基板接近垄断） 
+
+$SOI：$44 -&gt; $181（硅光子学，衬底垄断）https://t.co/EWWaVL7Y49</div>
+        <div class="tweet-foot">
+          <span>likes 224 / retweets 19 / replies 110 / views 14893</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-05-25 19:54</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$LPK</span><span class="chip red">$LPKFF</span><span class="chip red">$LPTH</span><span class="chip red">$MTRN</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">$LPK turned out pretty well. https://t.co/mZlTyd4oUO</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$LPK turned out pretty well. https://t.co/mZlTyd4oUO</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058879435726836152" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$LPK 结果相当不错。https://t.co/mZlTyd4oUO</div>
+        <div class="tweet-foot">
+          <span>likes 305 / retweets 14 / replies 51 / views 48424</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-05-25 00:20</span>
+          <span><span class="chip red">$LPK</span><span class="chip red">$NVTS</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">Four critical themes for h2 2026 if you want long ideas:
+
+1. CPO, #1 #1 #1 #1 favorite theme. I cannot stress how much markets misunderstand this. 
+
+Everyone I&#x27;ve talked in SV are privately funding optical startups right now and it&#x27;s a big signal of what&#x27;s to come. 
+
+2. 800 VDC power semis. I think other analysts kinda...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Four critical themes for h2 2026 if you want long ideas:
+
+1. CPO, #1 #1 #1 #1 favorite theme. I cannot stress how much markets misunderstand this. 
+
+Everyone I&#x27;ve talked in SV are privately funding optical startups right now and it&#x27;s a big signal of what&#x27;s to come. 
+
+2. 800 VDC power semis. I think other analysts kinda convinced me on this. 
+
+I was in $NVTS for a tiny bit, low concentration. But this almost doubled to my surprise. But after doing more research, it&#x27;s a pretty seismic shift in terms of what players become important
+
+3. Physical AI Humanoids/Robotics. As you know $VPG basically tripled, and there&#x27;s a lot of other players I&#x27;ve been trying to find longs on.
+
+Most downstream of interest are private sector... Then components are mainly in China/Japan. 
+
+4. Maybe Glass Substrate / advanced packaging stuff still eg. $LPK. Memory got pushed down on the list given how much players have re-rated recently, lot of opportunity still with niche hbm4 players.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058584021681250411" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>如果您想要长期想法，2026 年下半年的四个关键主题：
+
+1. CPO，#1 #1 #1 #1 最喜欢的主题。我无法强调市场对此有多么误解。我在 SV 中谈过的每个人现在都在私下资助光学初创公司，这是未来发展的一个重要信号。2. 800 VDC 电源半成品。我认为其他分析师在这一点上让我信服了。我在 $NVTS 中呆了一点点，注意力不集中。但令我惊讶的是，这几乎翻了一番。但经过更多研究后，就玩家的重要性而言，这是一个相当大的转变
+
+3. 物理人工智能人形/机器人。如你所知，$VPG 基本上增加了两倍，而且我一直在寻找很多其他玩家的多头机会。最感兴趣的下游是私营部门......然后组件主要在中国/日本。4. 也许玻璃基板/先进的封装材料仍然是例如。$LPK。考虑到最近有多少玩家重新评级，内存在列表中被推后，小众 hbm4 玩家仍然有很多机会。</div>
+        <div class="tweet-foot">
+          <span>likes 1233 / retweets 74 / replies 127 / views 113461</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-05-24 10:28</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">Photonics is nuanced and using ChatGPT/Gemini makes you miss all of it: 
+
+1. $SIVE is actually a chokepoint and partially a bottleneck. 
+
+The reason it&#x27;s a chokepoint is leading CPO/optical hyperscaler players go through Sivers, likely: 
+
+Ayar. Celestial. Lightmatter. Lightelligence. Poet. 
+
+If you take out Sivers, you...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Photonics is nuanced and using ChatGPT/Gemini makes you miss all of it: 
+
+1. $SIVE is actually a chokepoint and partially a bottleneck. 
+
+The reason it&#x27;s a chokepoint is leading CPO/optical hyperscaler players go through Sivers, likely: 
+
+Ayar. Celestial. Lightmatter. Lightelligence. Poet. 
+
+If you take out Sivers, you literally can&#x27;t make some of their products + delay their roadmap by years. 
+
+As many are sole/primary source but are heading the direction on multi-source. 
+
+As for the bottleneck argument: Win Semi is the bottleneck for scaling laser production. 
+
+But... the nuance is when you have capacity allocated for the next few years. 
+
+You become part of the bottleneck itself if players fight you for allocation of finished lasers. 
+
+That&#x27;s the nuance people miss with capacity allocation dynamics. 
+
+It&#x27;s like saying $SNDK is not part of the NAND bottleneck when Kioxia makes all of it. 
+
+But when Sandisk has the ultimate control of output supply, they become the bottleneck + have all the pricing power. 
+
+Sivers controls output supply of CW lasers given allocations, and as seen with $LITE earnings, CW laser is currently bottlenecked as everyone seems to be stuck producing EMLs. 
+
+2. Like how LLMs always uses em-dashes. 
+
+You can tell when people use AI when they always use the same &quot;CW is a dumb interchangeable laser&quot; argument or compare &quot;power&quot; specs after conflating different architectures. 
+
+That&#x27;s why your &quot;analysts&quot; using AI will get this wrong over and over. 
+
+There&#x27;s CW lasers... and then there&#x27;s a specific architectural design that Sivers achieves with DFB lasers.  
+
+If you compare power specs with $LITE vs. Sivers, Lumentum wins in isolation. But they&#x27;re completely different laser architectures. 
+
+All the leading CPO players like Ayar, chose $SIVE for an architectural reason for high power, low thermal, laser arrays. $JBL 1.6T LRO also made one of the most dramatic moats cited by their fireside chat, using Sivers lasers. 
+
+If you think CW lasers are interchangeable with Sumitomo/Furukawa, and others. And can be plug-and-play... i don&#x27;t know what to tell you?  
+
+Again: $SIVE makes architecturally unique CW lasers for leading CPO players. 
+
+3. I&#x27;m not sure how many times I need to say this:
+
+$SIVE for 2024-2025 has been going through development contracts. People using TTM revenue or former P/S metrics are using completely the wrong metrics, when there&#x27;s volume ramp in 2027. 
+
+It&#x27;s the same with $AAOI which volume ramps in H1 2027. 
+
+$AEHR which volume ramps after qualification.  
+
+$LPK that volume ramps after qualification. 
+
+This is just missing qualification cycles in semiconductors and how to model financials currently. 
+
+As for the $LITE comparisons (which was also my long last year):
+
+$LITE literally started off selling laser dies before acquisition of Cloud Lite and other downstream optical engine components.
+
+This is where $SIVE is at today with starting off in the laser chokepoint for CPO: 
+
+People are modeling laser revenue off very isolated TAM projections. Meanwhile Sivers is targeting M&amp;A to expand revenue for TAM projections. 
+
+This is not a simple component FAU + ramp valuation modeling over with a Taiwanese company.
+
+Since Laser companies like $LITE, $COHR are known to downstream expand to make their lasers more valuable, then vertically integrate (fabs, assembly) afterward. 
+
+Again, Sivers worked with Ayar and these types of companies before they all became billion dollar companies. I have high conviction knowing they know what to acquire down the ELS/optical engine stack + pluggable transceiver for TAM expansion.
+
+It&#x27;s just annoying when I get people who don&#x27;t understand the nuances backseat commenting wrong things about my longs.  
+
+I got the same thing about $AXTI is not a bottleneck! InP isn&#x27;t needed! China! back at $14. 
+
+Now it&#x27;s $140
+
+I got the same thing about $AAOI &quot;is going down 50%!&quot; back at $65. or &quot;AOI management is shady at $30&quot;.
+
+Now it&#x27;s $170
+
+I got the &quot;there&#x27;s nothing new with $SOI&quot; back at $45. 
+
+Now it&#x27;s $170. 
+
+I think I&#x27;m one of the few who actually understands the nuances with photonics, since I did call out $LITE, $TSEM, Innolight, $AXTI, $AAOI, $SOI, that outperformed both photonics markets and overall markets over the past year. 
+
+And now I&#x27;m long on $SIVE.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058374522353672558" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>光子学是微妙的，使用 ChatGPT/Gemini 会让您错过所有它： 
+
+1. $SIVE 实际上是一个阻塞点，部分是一个瓶颈。它之所以成为一个瓶颈，是因为领先的 CPO/光学超大规模厂商都经历了 Sivers，可能是： 
+
+阿亚尔。天上的。光物质。灯光情报。诗人。如果你拿掉Sivers，你实际上就无法生产他们的一些产品+将他们的路线图延迟数年。由于许多是唯一/主要来源，但正朝着多来源方向发展。至于瓶颈论点：Win Semi 是扩大激光生产规模的瓶颈。但是……细微差别在于您为未来几年分配了容量。如果玩家与你争夺成品激光器的分配，你本身就会成为瓶颈的一部分。这就是人们忽略的容量分配动态的细微差别。这就像说 $SNDK 不是 NAND 瓶颈的一部分，而 Kioxia 却制造了这一切。但当Sandisk拥有对产量供应的最终控制权时，他们就成为瓶颈+拥有所有定价权。Sivers 在给定分配的情况下控制 CW 激光器的输出供应，从 $LITE 收益中可以看出，CW 激光器目前遇到了瓶颈，因为每个人似乎都被困在生产 EML 上。2. 就像法学硕士总是使用破折号一样。当人们总是使用相同的“CW 是一种愚蠢的可互换激光器”论点或在合并不同架构后比较“功率”规格时，您可以看出人们何时使用人工智能。这就是为什么使用人工智能的“分析师”会一次又一次犯这个错误。有 CW 激光器……还有 Sivers 使用 DFB 激光器实​​现的特定架构设计。如果将 $LITE 的功率规格与 Sivers 进行比较，Lumentum 单独获胜。但它们是完全不同的激光架构。所有领先的 CPO 参与者（例如 Ayar）都出于高功率、低热量激光阵列的架构原因而选择 $SIVE。$JBL 1.6T LRO 还使用 Sivers 激光器打造了炉边谈话中提到的最引人注目的护城河之一。如果您认为 CW 激光器可以与住友/古河等公司互换。并且可以即插即用...我不知道该告诉你什么？再说一遍：$SIVE 为领先的 CPO 厂商制造结构独特的 CW 激光器。3. 我不知道我需要说多少次：
+
+$SIVE 2024-2025 年的开发合同已经完成。当 2027 年销量出现增长时，使用 TTM 收入或以前的 P/S 指标的人们正在使用完全错误的指标。$AAOI 的情况也是如此，其交易量在 2027 年上半年有所上升。$AEHR 其数量在资格后会增加。$LPK 资格后成交量会增加。这只是缺少半导体的资格周期以及目前如何建立财务模型。至于 $LITE 比较（这也是我去年的长期比较）：
+
+在收购 Cloud Lite 和其他下游光学引擎组件之前，$LITE 实际上是从销售激光模具开始的。这就是 $SIVE 今天所处的位置，从 CPO 的激光阻塞点开始： 
+
+人们根据非常孤立的 TAM 预测对激光收入进行建模。与此同时，Sivers 的目标是并购，以扩大 TAM 预测的收入。这不是一个简单的组件 FAU + 斜坡估值模型与一家台湾公司。众所周知，像 $LITE、$COHR 这样的激光公司会向下游扩张，使他们的激光器更有价值，然后进行垂直整合（晶圆厂、组装）。Sivers再次与阿亚尔和这些类型的公司合作，然后它们才成为价值数十亿美元的公司。我非常确信他们知道从 ELS/光学引擎堆栈 + 可插拔收发器中获取什么以进行 TAM 扩展。当我让那些不理解其中细微差别的人对我的多头做出错误的评论时，我真的很烦人。我对 $AXTI 不是瓶颈也有类似看法！不需要 InP！中国！回到 14 美元。现在是 140 美元
+
+我对 $AAOI 也有类似看法“将下跌 50%！”回到 65 美元。或“AOI 管理在 30 美元下是可疑的”。现在是 170 美元
+
+我以 45 美元的价格得到了“$SOI 没什么新意”的信息。现在是 170 美元。我想我是少数真正了解光子学细微差别的人之一，因为我确实指出了 $LITE、$TSEM、Innolight、$AXTI、$AAOI、$SOI，这些公司在过去一年中的表现均优于光子学市场和整体市场。现在我看多 $SIVE。</div>
+        <div class="tweet-foot">
+          <span>likes 1512 / retweets 109 / replies 115 / views 167219</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-05-24 00:55</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$OSS</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">I don&#x27;t post dollar amounts because they don&#x27;t matter. 
+
+What matters is return %. Speaking of that... 
+
+YTD: 3840.39%. 
+
+I&#x27;m probably the only one in the world. Who called out multiple names that 10x&#x27;d in a short timeframe. 
+
+Do you remember these thesis anon?
+
+1. $AXTI
+2. $SIVE
+3. $AAOI
+4. $LITE
+5. $IQE
+6. $AEHR
+7. $...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I don&#x27;t post dollar amounts because they don&#x27;t matter. 
+
+What matters is return %. Speaking of that... 
+
+YTD: 3840.39%. 
+
+I&#x27;m probably the only one in the world. Who called out multiple names that 10x&#x27;d in a short timeframe. 
+
+Do you remember these thesis anon?
+
+1. $AXTI
+2. $SIVE
+3. $AAOI
+4. $LITE
+5. $IQE
+6. $AEHR
+7. $CRCL
+8. $EWY
+9. Unimicron
+10. Nitto Boseki
+11. $OSS
+12. $GDRZF
+13. $RPI
+14. $SOI
+15. $ALRIB
+16. $SNDK
+17. $SIMO
+18. $VPG
+19. $TSEM
+20. $ARM
+21. $MRVL
+22. $INTC
+23. $LPK
+24. $NBIS
+25. $MU
+
+They&#x27;re all up 100-1000%+, because... 
+
+1. I post a thesis. 
+2. People can see how the stock performs months later. 
+3. They turn out right (thesis validation) because they&#x27;re up hundreds of percent + hold their returns. 
+
+I really dislike the traditional X influencer who shows large dollar amounts or fancy watches/cars/private jets.  
+
+Then use that to get more by selling expensive subscriptions rather than through market returns. 
+
+So trying to set a new trend off pure information discovery/synthesis from free thesis posts and the results that follow in terms of return percentages.
+
+TLDR: Market returns in terms of percentages matter the most to validate a thesis.
+
+Not the dollar amount made.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058230354063102028" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我不会发布美元金额，因为它们并不重要。重要的是回报率。说到那... 
+
+年初至今：3840.39%。我可能是世界上唯一的一个。他在短时间内说出了十倍的多个名字。你还记得这些论文吗？1.$AXTI
+2.$SIVE
+3.$AAOI
+4.$精简版
+5.$IQE
+6.$AEHR
+7.$CRCL
+8.$EWY
+9.欣兴微电子
+10.日东博士
+11.$OSS
+12.$GDRZF
+13.$零售价格指数
+14.$SOI
+15.$ALRIB
+16.$SNDK
+17.$SIMO
+18.$VPG
+19.$TSEM
+20.$ARM
+21.$MRVL
+22.$INTC
+23.$LPK
+24.$NBIS
+25. $MU
+
+它们都上涨了 100-1000%+，因为...... 
+
+1.我发表论文。2.人们可以看到几个月后股票的表现。3. 他们的结果是正确的（论文验证），因为他们上涨了数百% + 保持了回报。我真的不喜欢传统的 X 影响者展示大量美元或精美的手表/汽车/私人飞机。然后利用它通过销售昂贵的订阅而不是通过市场回报来获得更多。因此，试图从免费论文帖子中纯粹的信息发现/合成以及回报率方面的结果中开创出一种新趋势。TLDR：以百分比表示的市场回报对于验证论文最重要。不是所赚的美元金额。</div>
+        <div class="tweet-foot">
+          <span>likes 3728 / retweets 185 / replies 342 / views 736677</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="17">
+        <div class="tweet-head">
+          <span class="mono">2026-05-22 22:09</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
+        </div>
+        <div class="tweet-text">People keep asking:
+
+Hey why do have new longs with Taiwan/EU stocks recently like $LPK or Foci?
+
+And not much with new US ones?
+
+It&#x27;s partly because the list of US stocks I&#x27;ve liked from $INTC to $NBIS hasn&#x27;t changed. 
+
+You can always just let the ones you like grow. https://t.co/ostZWjOAAm</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">People keep asking:
+
+Hey why do have new longs with Taiwan/EU stocks recently like $LPK or Foci?
+
+And not much with new US ones?
+
+It&#x27;s partly because the list of US stocks I&#x27;ve liked from $INTC to $NBIS hasn&#x27;t changed. 
+
+You can always just let the ones you like grow. https://t.co/ostZWjOAAm</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057826212257685733" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>人们不断地问：
+
+嘿，为什么最近有台湾/欧盟股票的新多头，例如$LPK或Foci？美国的新产品不多吗？部分原因是我喜欢的美国股票列表从 $INTC 到 $NBIS 没有改变。你总是可以让你喜欢的人成长。https://t.co/ostZWjOAAm</div>
+        <div class="tweet-foot">
+          <span>likes 1136 / retweets 66 / replies 134 / views 422462</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="18">
+        <div class="tweet-head">
+          <span class="mono">2026-05-22 17:53</span>
+          <span><span class="chip red">$ALRIB</span><span class="chip red">$IQE</span><span class="chip red">$LPK</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">European quantum/optical/glass chokepoints go BRRR?
+
+$ALRIB +8.35%
+$LPK +3.21%
+$IQE +5.68%
+$SOI +4.98%
+
+As a side thought, it’s a nice vote of confidence to retail that the LPKF CEO bought shares off the market. 
+
+More CEOs should do the same, even if it’s small. https://t.co/BwxBnd2wDm</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">European quantum/optical/glass chokepoints go BRRR?
+
+$ALRIB +8.35%
+$LPK +3.21%
+$IQE +5.68%
+$SOI +4.98%
+
+As a side thought, it’s a nice vote of confidence to retail that the LPKF CEO bought shares off the market. 
+
+More CEOs should do the same, even if it’s small. https://t.co/BwxBnd2wDm</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2057761720710631573" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>欧洲量子/光学/玻璃瓶颈走向BRRR？$ALRIB +8.35%
+LPK 美元 +3.21%
+$IQE +5.68%
+美元SOI +4.98%
+
+从侧面来看，LPKF 首席执行官从市场上购买股票是对零售业投下的一张很好的信任票。更多的首席执行官应该这样做，即使规模很小。https://t.co/BwxBnd2wDm</div>
+        <div class="tweet-foot">
+          <span>likes 1059 / retweets 72 / replies 80 / views 136248</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="19">
+        <div class="tweet-head">
+          <span class="mono">2026-05-17 09:28</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMD</span><span class="chip red">$ASML</span><span class="chip red">$COHR</span><span class="chip red">$DGXX</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$KOPN</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NVDA</span><span class="chip red">$PENG</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">When I see comments like this (and there are a lot) from retail investors:
+
+I immediately think they lack the technical depth. 
+
+I&#x27;ll walk through each one from $SIVE to $LPK: 
+
+1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling past 2030 as it&#x27;s the next generation a...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">When I see comments like this (and there are a lot) from retail investors:
+
+I immediately think they lack the technical depth. 
+
+I&#x27;ll walk through each one from $SIVE to $LPK: 
+
+1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling past 2030 as it&#x27;s the next generation architecture of choice.
+
+It&#x27;s not going away in 1 year. It&#x27;s not going away in 3 years, which is why $LITE premiums keep going higher since they&#x27;re backlogged into 2028.
+
+$SIVE supplies CW lasers and is highly tethered to CPO and now pluggable transcivers for 1.6T and 3.2...
+
+For expected companies like $JBL, Ayar, Lightmatter, Lightelligence, $POET, $MRVL Celestial, and $AMD. 
+
+This isn&#x27;t a &quot;trade&quot;, it&#x27;s the core chokepoint and IP holder for the next generation of photonics. 
+
+And it&#x27;s a comfortable hold for the next few years as they scale to become the next $LITE.
+
+The risk I personally see (since they&#x27;re already qualified with so many players), it&#x27;s mainly how much TAM they can capture of the overall optical supercycle. (And potential risks with Win Semi volume ramp, but Win is massive so I can sleep tightly there). 
+
+As just supplying lasers isn&#x27;t enough to justify valuation.
+
+It&#x27;s TAM expansion downward into making the entire ELS or entire pluggable transceiver that makes these laser companies so valuable.  
+
+Then afterward, they can vertically integrating upward for gross margin expansion upward like $COHR into doing the laser fabs or even substrate level.  
+
+And that in my view is a very asymmetric risk/reward ratio as we&#x27;ve already seen this done with $LITE as they went from $2B to $80B. 
+
+ 2. $LPK - Is the purest exposure, without the messy financials of SKC Absolics, as the next advanced packaging shift for glass substrates.
+
+Almost every single major semi company from $INTC to Samsung are adopting glass substrates. 
+
+$LPK is basically $ASML of this chokepoint, since they supply to ~80% of the global players currently. 
+
+Yes, there&#x27;s &quot;trade cycles&quot; for equipment suppliers like $ASML, where if there&#x27;s more foundry capex, ASML scales up. But if there&#x27;s downturns, these tend to perform poorly, and don&#x27;t capture all the volume ramp that happens after. 
+
+However, if the MC is $650m and they&#x27;re making $100-200M, revenue per costumer volume ramped, the amount they make from the glass substrate cycle will likely exceed current valuations.
+
+And they&#x27;ll have baseline fundamentals (as more companies adopt the packaging shift), that keeps their valuation up. 
+
+It&#x27;s just a waiting game for volume ramp at this point. 
+
+3. $AAOI - This is literally $INTC but for America + Photonics. It&#x27;s like saying Intel is not a long term investment.
+
+Guess where all your optical transcivers are made?
+
+China. Thailand. Malaysia. If you look at Innolight, Eoptolink, $FN, and others.  
+
+AOI is building the largest Made in America supply chains for both CW laser fab, as well as 800g, 1.6T assembly. 
+
+Yes, there are pluggable cycle ups and downs to this as well. There&#x27;s going to be a wave for 1.6T next year, then CPO cannibalizes pluggables down the road.
+
+But since they make the entire supply chain in house, they have extreme optionality for other segments. And like $NVDA older gen-GPUs, there&#x27;s going to be sovereign DC requirements for older gen pluggables from names like $AAOI.  
+
+It&#x27;s likely going to keep rising as it hits that $400m+/month revenue target H2 2026. 
+
+There&#x27;s just a lot of different short term volatility along the way like the $600m dilution. 
+
+4. $IQE - ??? It&#x27;s one of the most important players in the Western word for epiwafers.
+
+$MTSI went out of their way to pay off IQE&#x27;s debt because they can&#x27;t have them going under. $IQE is also supplying to $LITE. 
+
+The world is currently bottlenecked both on the epiwafer level from Landmark comments and InP substrate levels. 
+
+Their financials were track but the raw book value, and value they hold to the entire Western supply chain... completely justifies their valuation. And other optical companies will not let their core upstream supply chain go under.
+
+As these tens of millions worth of materials would screw up tens of billions worth of downstream products. 
+
+Again photonics is the next generation architecture required to scale AI. It&#x27;s not Quantum where it&#x27;s just &quot;In development&quot;.
+
+It&#x27;s literally here and the architecture of choice by $NVDA. 
+
+I would not be surprised if all of these are a lot higher in 3-4 years time. 
+
+People who think it&#x27;s one and done in 3 months time  &quot;only because I mentioned it&quot; don&#x27;t know what they&#x27;re talking about.
+
+Institutions would have bought up the name eventually (like Point 72 on $IQE) and retail would only find out after their valuations are 600% higher.
+
+Should really do the research before adding comments like these:
+
+These are all forward growth companies that require in-depth supply chain knowledge.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2055822766600016238" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>当我看到散户投资者这样的评论（而且有很多）时：
+
+我立即认为他们缺乏技术深度。我将从 $SIVE 到 $LPK 逐一介绍： 
+
+1. 光子学 TAM 在短短两年内从 $14B -&gt; $154B 增长，并且它很可能会在 2030 年之后继续扩展，因为它是下一代架构的选择。它不会在 1 年内消失。这种情况不会在 3 年内消失，这就是 $LITE 保费持续走高的原因，因为它们积压到了 2028 年。$SIVE 供应 CW 激光器，与 CPO 高度相关，现在可插拔收发器用于 1.6T 和 3.2...
+
+对于 $JBL、Ayar、Lightmatter、Lightelligence、$POET、$MRVL Celestial 和 $AMD 等预期公司。这不是“交易”，而是下一代光子学的核心瓶颈和知识产权持有者。在接下来的几年里，随着他们规模扩大成为下一个 $LITE，这是一个舒适的选择。我个人看到的风险（因为他们已经有这么多玩家晋级），主要是他们可以捕获整个光学超级周期的 TAM 量。（还有 Win Semi 销量增加的潜在风险，但 Win 很大，所以我可以在那里睡得很香）。因为仅仅提供激光器并不足以证明估值合理。正是 TAM 向下扩展，制造整个 ELS 或整个可插拔收发器，使这些激光公司变得如此有价值。然后，他们可以垂直向上整合，以实现毛利率向上扩张，就像 $COHR 进入激光工厂甚至基板层面。在我看来，这是一个非常不对称的风险/回报比，因为我们已经看到 $LITE 做到了这一点，因为它们从 $2B 到 $80B。2. $LPK - 是最纯粹的曝光，没有 SKC Absolics 混乱的财务状况，作为玻璃基板的下一个先进封装转变。从 $INTC 到三星，几乎每家大型半导体公司都在采用玻璃基板。$LPK 基本上是这个瓶颈的 $ASML，因为它们目前为全球约 80% 的参与者供货。是的，像 $ASML 这样的设备供应商存在“贸易周期”，如果代工资本开支更多，ASML 就会扩大规模。但如果出现经济低迷，这些产品往往表现不佳，并且无法捕捉到随后发生的所有销量增长。然而，如果 MC 的成本为 6.5 亿美元，而他们的收入为 100-2 亿美元，单位客户数量的收入大幅增加，那么他们从玻璃基板周期中获得的收入可能会超过当前的估值。他们将拥有基线基本面（随着越来越多的公司采用包装转变），这可以保持他们的估值上升。此时，这只是一场等待音量提升的游戏。3. $AAOI - 这实际上是 $INTC，但适用于 America + Photonics。这就像说英特尔不是一项长期投资。猜猜你们所有的光收发器都是哪里制造的？中国。泰国。马来西亚。如果你看看旭创科技、新易盛、$FN 等。AOI 正在为 CW 激光晶圆厂以及 800g、1.6T 装配建立最大的美国制造供应链。是的，这也存在可插入循环的起伏。明年将会出现 1.6T 的浪潮，然后 CPO 会蚕食可插拔的产品。但由于他们在内部生产整个供应链，因此他们对其他细分市场拥有极大的选择权。与 $NVDA 老一代 GPU 一样，$AAOI 等老一代可插拔设备也将面临主权 DC 要求。随着 2026 年下半年达到 4 亿美元以上/月的收入目标，它可能会继续增长。在此过程中会出现很多不同的短期波动，例如 6 亿美元的稀释。4. $IQE - （疑问语气）它是西方外延片领域最重要的参与者之一。$MTSI 竭尽全力偿还 IQE 的债务，因为他们不能让它们破产。$IQE 还向 $LITE 供货。目前，世界在 Landmark 评论的外延片水平和 InP 衬底水平上都面临着瓶颈。他们的财务状况良好，但原始账面价值以及他们对整个西方供应链的价值……完全证明了他们的估值是合理的。而其他光学企业不会让自己的核心上游供应链垮掉。因为这几千万的材料，会搞砸价值几百亿的下游产品。同样，光子学是扩展人工智能所需的下一代架构。这不是 Quantum，它只是“正在开发中”。它确实在这里，也是 $NVDA 选择的架构。如果所有这些在 3 到 4 年内都会更高，我不会感到惊讶。“仅仅因为我提到过”，那些认为这是一件在 3 个月内完成的人并不知道他们在说什么。机构最终会买下这个名字（就像 $IQE 上的 Point 72），而散户只有在估值高出 600% 后才会发现这一点。在添加这样的评论之前应该真正进行研究：
+
+这些都是向前发展的公司，需要深入的供应链知识。</div>
+        <div class="tweet-foot">
+          <span>likes 2730 / retweets 260 / replies 153 / views 622835</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">认证周期 vs TTM 营收</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="20">
+        <div class="tweet-head">
+          <span class="mono">2026-05-16 05:34</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$MRVL</span><span class="chip red">$OSS</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$VPG</span></span>
+        </div>
+        <div class="tweet-text">Leopold Aschenbrenner is a legend, but I&#x27;m not quite sure he can beat 3152.77% YTD in the Serenity Awareness fund. 
+
+That being said, I&#x27;ve hit 23 different longs this year with 100-1000%+ YTD.
+
+1. $AXTI 
+2. $AAOI 
+3. $SIVE 
+4. $LITE 
+5. $IQE
+6. $AEHR
+7. $CRCL
+8. $EWY
+9. Unimicron 
+10. Nitto Boseki 
+11. $OSS
+12. $GDRZF
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Leopold Aschenbrenner is a legend, but I&#x27;m not quite sure he can beat 3152.77% YTD in the Serenity Awareness fund. 
+
+That being said, I&#x27;ve hit 23 different longs this year with 100-1000%+ YTD.
+
+1. $AXTI 
+2. $AAOI 
+3. $SIVE 
+4. $LITE 
+5. $IQE
+6. $AEHR
+7. $CRCL
+8. $EWY
+9. Unimicron 
+10. Nitto Boseki 
+11. $OSS
+12. $GDRZF
+13. $RPI
+14. $SOI
+15. $ALRIB
+16. $SNDK
+17. $SIMO
+18. $VPG 
+19. $TSEM 
+20. $ARM 
+21. $MRVL 
+22. $INTC 
+23. $LPK 
+
+Do you remember all of these anon?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2055401446397690311" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>Leopold Aschenbrenner 是一位传奇人物，但我不太确定他能在 Serenity Awareness 基金中击败年初至今的 3152.77%。话虽这么说，今年我已经建立了 23 种不同的多头头寸，年初至今的收益率为 100-1000% 以上。1.$AXTI 
+2.$AAOI 
+3.$SIVE 
+4.$精简版 
+5.$IQE
+6.$AEHR
+7.$CRCL
+8.$EWY
+9.欣兴微电子 
+10.日东博士 
+11.$OSS
+12.$GDRZF
+13.$零售价格指数
+14.$SOI
+15.$ALRIB
+16.$SNDK
+17.$SIMO
+18.$VPG 
+19.$TSEM 
+20.$ARM 
+21.$MRVL 
+22.$INTC 
+23.$LPK 
+
+你还记得所有这些吗？</div>
+        <div class="tweet-foot">
+          <span>likes 4826 / retweets 275 / replies 314 / views 1386160</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="21">
+        <div class="tweet-head">
+          <span class="mono">2026-05-13 09:17</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">I pick a theme I’m extraordinarily bullish on, then I pick the most compelling players to long.
+
+The largest upside theme is CPO over the next two years, I have extraordinarily high confidence in that statement.
+
+I think memory is tail end of supercycle where returns are probably less but still compelling.
+
+Long term 5...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I pick a theme I’m extraordinarily bullish on, then I pick the most compelling players to long.
+
+The largest upside theme is CPO over the next two years, I have extraordinarily high confidence in that statement.
+
+I think memory is tail end of supercycle where returns are probably less but still compelling.
+
+Long term 5+ years it’s space and humanoids. 
+
+There’s little trades in between like glass substrate shifts with $LPK over next 6 months.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2054370502446309762" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我选择一个我非常看好的主题，然后选择最引人注目的长期参与者。未来两年最大的上行主题是CPO，我对这一说法抱有极高的信心。我认为记忆是超级周期的末端，回报可能较少，但仍然引人注目。长期来看，5年以上是太空和人形机器人。两者之间几乎没有交易，例如未来 6 个月玻璃基板随 $LPK 的变化。</div>
+        <div class="tweet-foot">
+          <span>likes 257 / retweets 18 / replies 15 / views 80714</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2026-05-13 05:41</span>
+          <span><span class="chip red">$LPK</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">Woah, rough day for Europe. 
+
+Looks like everything from $SOI to $LPK and others are down 10-20% from overwhelmingly macro.
+
+Fun thing if war sentiment flips, as they often do with our president… lot of these names should go a lot higher. https://t.co/7JYmFAzcTv</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Woah, rough day for Europe. 
+
+Looks like everything from $SOI to $LPK and others are down 10-20% from overwhelmingly macro.
+
+Fun thing if war sentiment flips, as they often do with our president… lot of these names should go a lot higher. https://t.co/7JYmFAzcTv</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2054316135592706291" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>哇，欧洲的日子不好过。看起来从 $SOI 到 $LPK 等所有商品都比宏观价格下跌了 10-20%。如果战争情绪发生转变，就像他们经常对我们的总统所做的那样……很多这样的名字应该更高。https://t.co/7JYmFAzcTv</div>
+        <div class="tweet-foot">
+          <span>likes 812 / retweets 34 / replies 114 / views 129221</span>
+        </div>
+        <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2026-05-12 07:27</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$FLNC</span><span class="chip red">$GOOGL</span><span class="chip red">$LPK</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span></span>
+        </div>
+        <div class="tweet-text">Not sure why people ask these types of questions across every single stock from $AAOI to $LPK under every post? 
+
+I&#x27;ve already said multiple times, I have positions after $FLNC earnings announced 2 new hyperscaler deals.
+
+But I do think $FLNC Is compelling since hyperscalers from $GOOGL to $AMZN don&#x27;t sign small deals ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Not sure why people ask these types of questions across every single stock from $AAOI to $LPK under every post? 
+
+I&#x27;ve already said multiple times, I have positions after $FLNC earnings announced 2 new hyperscaler deals.
+
+But I do think $FLNC Is compelling since hyperscalers from $GOOGL to $AMZN don&#x27;t sign small deals in general. 
+
+Especially when you look at $MSFT contract with $NBIS a lot of it is a major surprise.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053980270135738816" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>不知道为什么人们在每个帖子下都会针对从 $AAOI 到 $LPK 的每只股票提出这些类型的问题？我已经多次说过，在 $FLNC 收益宣布 2 项新的超大规模交易后，我持有仓位。但我确实认为 $FLNC 很有吸引力，因为从 $GOOGL 到 $AMZN 的超大云厂商一般不会签署小额交易。尤其是当你查看 $MSFT 与 $NBIS 的合同时，其中很多内容令人大吃一惊。</div>
+        <div class="tweet-foot">
+          <span>likes 84 / retweets 3 / replies 2 / views 13564</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
+        <div class="tweet-head">
+          <span class="mono">2026-05-11 16:15</span>
+          <span><span class="chip red">$ARM</span><span class="chip red">$HPS.A</span><span class="chip red">$LPK</span><span class="chip red">$SIMO</span></span>
+        </div>
+        <div class="tweet-text">And now $LPK is #19 on the list of my individual stocks that returned 100-1000%+ YTD.
+
+After going up +4.57% today.
+
+Usually 1 or 2 is good, but I’ve written about and went long on 19 different stocks this year that went up triple digits.
+
+I’m kinda impressed with myself ngl? https://t.co/s9FLfTWHGd</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">And now $LPK is #19 on the list of my individual stocks that returned 100-1000%+ YTD.
+
+After going up +4.57% today.
+
+Usually 1 or 2 is good, but I’ve written about and went long on 19 different stocks this year that went up triple digits.
+
+I’m kinda impressed with myself ngl? https://t.co/s9FLfTWHGd</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053750731103150472" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>现在，$LPK 在我的个股名单上排名第 19，年初至今回报率超过 100-1000%。今天上涨了+4.57%。通常 1 或 2 只股票就不错，但今年我已经写过并做多了 19 只不同的股票，这些股票的涨幅达到了三位数。我对自己有点印象 ngl？https://t.co/s9FLfTWHGd</div>
+        <div class="tweet-foot">
+          <span>likes 1184 / retweets 49 / replies 105 / views 208401</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="25">
+        <div class="tweet-head">
+          <span class="mono">2026-05-10 15:30</span>
+          <span><span class="chip red">$ASGLY</span><span class="chip red">$DSCSY</span><span class="chip red">$GLW</span><span class="chip red">$KLAC</span><span class="chip red">$LPK</span><span class="chip red">$LRCX</span><span class="chip red">$NIDGY</span><span class="chip red">$ONTO</span><span class="chip red">$SMHSF</span></span>
+        </div>
+        <div class="tweet-text">“Leading” Glass Substrate players that were name dropped if you’re curious: 
+
+• $LPK — TGV Equipment
+• $GLW — Glass Materials
+• $ASGLY (5201 T)— Glass Materials
+• $NIDGY (5214 T) — Glass Materials
+• $LRCX — Etching Systems
+• $DSCSY (6146 T)— Dicing Equipment
+• $SMHSF — Bonding Systems
+• $ONTO — Inspection Tools
+• $KLAC...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">“Leading” Glass Substrate players that were name dropped if you’re curious: 
+
+• $LPK — TGV Equipment
+• $GLW — Glass Materials
+• $ASGLY (5201 T)— Glass Materials
+• $NIDGY (5214 T) — Glass Materials
+• $LRCX — Etching Systems
+• $DSCSY (6146 T)— Dicing Equipment
+• $SMHSF — Bonding Systems
+• $ONTO — Inspection Tools
+• $KLAC — Inspection Tools
+
+Fun to see the stuff I’ve called out early in the year like LPK at ~$150m MC get mentioned as a critical player by Trendforce and others.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053377238532329611" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>如果您好奇的话，“领先的”玻璃基板厂商的名字已经被提及： 
+
+• $LPK — TGV 设备
+• $GLW — 玻璃材料
+• $ASGLY (5201 T)— 玻璃材料
+• $NIDGY (5214 T) — 玻璃材料
+• $LRCX — 蚀刻系统
+• $DSCSY (6146 T)— 划片设备
+• $SMHSF — 粘合系统
+• $ONTO — 检查工具
+• $KLAC — 检查工具
+
+很高兴看到我在今年早些时候提出的东西，比如 LPK，MC 的价格约为 1.5 亿美元，被 Trendforce 和其他人称为关键参与者。</div>
+        <div class="tweet-foot">
+          <span>likes 2024 / retweets 198 / replies 102 / views 344948</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="26">
+        <div class="tweet-head">
+          <span class="mono">2026-05-10 04:07</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$INTC</span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Just a TLDR of recent semi developments:
+
+1. $TSM pushing hard CoPoS - VisEra/others might go brrr earlier than expected.
+
+2. $AAPL goes with $INTC for semi production, which is a major shift cause they normally go with TSM. Made in America go like Intel go brrr. 
+
+3. $NVDA Vera Rubin reportedly makes changes to coolin...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a TLDR of recent semi developments:
+
+1. $TSM pushing hard CoPoS - VisEra/others might go brrr earlier than expected.
+
+2. $AAPL goes with $INTC for semi production, which is a major shift cause they normally go with TSM. Made in America go like Intel go brrr. 
+
+3. $NVDA Vera Rubin reportedly makes changes to cooling architectures very recently. 
+
+&quot;Taiwan&#x27;s thermal management suppliers are emerging as one of the fastest-growing segments in the AI hardware ecosystem&quot; - From Last Month.
+
+&quot;Vera Rubin server architecture is expected to drive a fundamental shift in data center cooling and system design&quot;
+
+Will cover thermal ecosystem later, maybe it&#x27;s time to take a look?
+
+4. 2D NAND shortage spirals after Samsung, Micron, and rivals exit market 
+
+Macronix, Windbond go brrr. implications for GigaDevice and other niche players. 
+
+5. &quot;Big Tech reportedly offers to fund SK Hynix fabs and EUV&quot;
+
+- Memory that badly bottlenecked that mag7 wants to pay for it, so $MU, SK Hynix, Samsung go brr. 
+
+6. $TSM 2026 net revenue $12.6B for April 2026. Revenue up 30%, Semis keep going brr.
+
+7. Anthropic needs compute -&gt;  SpaceX.
+
+So implications for compute demand is extreme here which is BRRR $NBIS and others.
+
+But it&#x27;s very interesting they sidestepped Neoclouds and went with SpaceX. 
+
+8. &quot;SKC to Accelerate Mass Production of Glass Substrates for U.S. Clients by the End of the Year&quot;
+
+&quot;the end of the year, ahead of its original plan, it has been announced&quot;
+
+Glass Core substrates players like $LPK for mass production and other related players like SKC go brrr. 
+
+Glass timelines moved up. heavy brrr glass. 
+
+9. &quot;Power chip shortages deepen as AI server demand and GaN battles escalate&quot;
+
+Maybe time to look into the power chip bottleneck anon?
+
+10. &quot;Adata said DRAM and NAND flash contract prices will each climb more than 40% in the second quarter of 2026&quot; 
+
+Another positive for $MU, SK Hynix, Samsung, $SNDK, and others.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2053205192980721797" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是最近半开发的 TLDR：
+
+1. $TSM 大力推动 CoPoS - VisEra/其他人可能会比预期更早出现。2. $AAPL 与 $INTC 一起进行半生产，这是一个重大转变，因为它们通常与 TSM 一起使用。美国制造就像英特尔一样。3. 据报道，$NVDA Vera Rubin 最近对冷却架构进行了更改。“台湾的热管理供应商正在成为人工智能硬件生态系统中增长最快的细分市场之一” - 上个月。“Vera Rubin 服务器架构预计将推动数据中心冷却和系统设计的根本转变”
+
+稍后会介绍热生态系统，也许是时候看看？4. 三星、美光及竞争对手退出市场后，2D NAND短缺加剧 
+
+Macronix、Windbond 继续前进。对 GigaDevice 和其他利基市场参与者的影响。5.“据报道，大型科技公司愿意为 SK 海力士晶圆厂和 EUV 提供资金”
+
+- 内存严重瓶颈，mag7想要为此付出代价，所以$MU、SK Hynix、三星都去brr。6. 2026 年 4 月 $TSM 2026 净收入 $12.6B。收入增长 30%，Semis 继续保持增长。7. 人类需要计算 -&gt; SpaceX。因此，这里对算力需求的影响是极端的，即 BRRR $NBIS 和其他。但非常有趣的是，他们避开了 AI 算力云公司，选择了 SpaceX。8.《SKC将于年底加速为美国客户量产玻璃基板》
+
+“年底了，提前原定计划，已经公布了”
+
+玻璃芯基板厂商（例如用于大规模生产的 $LPK）和其他相关厂商（例如 SKC）将走向 brrr。玻璃时间线提前了。厚重的玻璃。9.“随着AI服务器需求和GaN之战升级，电源芯片短缺加剧”
+
+也许是时候立即研究电源芯片瓶颈了？10.“威刚表示，2026年第二季度DRAM和NAND闪存合约价格将分别上涨40%以上” 
+
+这对 $MU、SK 海力士、三星、$SNDK 等公司来说是另一个利好。</div>
+        <div class="tweet-foot">
+          <span>likes 2112 / retweets 153 / replies 147 / views 310854</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">Mag7 客户集中度过滤</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="27">
+        <div class="tweet-head">
+          <span class="mono">2026-05-08 11:38</span>
+          <span><span class="chip red">$LPK</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">Unreal… I’m over halfway there to Elon in subscriber count.
+
+24K more and I’ll be #1 on the entire X platform!
+
+Feels surreal that a random person sharing their thoughts about niche AI ideas from $LPK to $SOI ….
+
+Has a chance to be the most popular one on the largest platform? https://t.co/MsuqG95Y3p</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Unreal… I’m over halfway there to Elon in subscriber count.
+
+24K more and I’ll be #1 on the entire X platform!
+
+Feels surreal that a random person sharing their thoughts about niche AI ideas from $LPK to $SOI ….
+
+Has a chance to be the most popular one on the largest platform? https://t.co/MsuqG95Y3p</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052593835440771114" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>不真实……我的订户数量已经超过埃隆的一半了。再多 24K，我就会成为整个 X 平台上的#1！一个随机的人分享他们对从 $LPK 到 $SOI 等利基人工智能想法的想法，感觉很超现实……。有机会成为最大平台上最受欢迎的人吗？https://t.co/MsuqG95Y3p</div>
+        <div class="tweet-foot">
+          <span>likes 1954 / retweets 34 / replies 154 / views 199388</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="28">
+        <div class="tweet-head">
+          <span class="mono">2026-05-07 16:45</span>
+          <span><span class="chip red">$GLW</span><span class="chip red">$INTC</span><span class="chip red">$LPK</span><span class="chip red">$LPKK</span><span class="chip red">$ONTO</span><span class="chip red">$SHMD</span></span>
+        </div>
+        <div class="tweet-text">$LPK up 80% in the last two weeks. Not too shabby at ~$687M MC?
+
+It&#x27;s probably one of the cleaner ways to play the next Glass Substrate supercycle. 
+
+50-100 machines per customer at scale, with &quot;start of 2027 as mass production&quot; across likely $INTC, $GLW, SKC, and others (since they captured ~80% of the major players)....</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$LPK up 80% in the last two weeks. Not too shabby at ~$687M MC?
+
+It&#x27;s probably one of the cleaner ways to play the next Glass Substrate supercycle. 
+
+50-100 machines per customer at scale, with &quot;start of 2027 as mass production&quot; across likely $INTC, $GLW, SKC, and others (since they captured ~80% of the major players). 
+
+Maybe ~€2M average per machine. 
+
+€400M–€1B+ across just 5 players in 2027 (could be more)?  Since they basically supply to everyone as a chokepoint. Off ~67.6% blended gross margins. 
+
+Seems promising for volume ramp wait time.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052308880961810532" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>过去两周，$LPK 上涨了 80%。MC 的价值约为 6.87 亿美元，是不是太寒酸了？这可能是玩下一个玻璃基板超级循环的更干净的方式之一。每个客户规模为 50-100 台机器，“从 2027 年开始大规模生产”，可能涉及 $INTC、$GLW、SKC 和其他公司（因为他们占据了约 80% 的主要参与者）。每台机器平均约为 200 万欧元。2027 年，5 名玩家的收入为 4 亿欧元 - 1B+（可能更多）？因为它们基本上是作为一个阻塞点向每个人供应。综合毛利率下降约 67.6%。销量增加等待时间似乎很有希望。</div>
+        <div class="tweet-foot">
+          <span>likes 910 / retweets 75 / replies 61 / views 276825</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="29">
+        <div class="tweet-head">
+          <span class="mono">2026-05-07 08:37</span>
+          <span><span class="chip red">$INTC</span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">No. $LPK is probably my favorite exposure right now since they supply to everyone. 
+
+I&#x27;m just saying if people are long glass core substrates, Samsung, $INTC, and others are probably a bit bigger.
+
+SKC is probably the lowest MC leader in that space. 
+
+Then if you see them succeeding, then HB gets a piggyback + probably...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">No. $LPK is probably my favorite exposure right now since they supply to everyone. 
+
+I&#x27;m just saying if people are long glass core substrates, Samsung, $INTC, and others are probably a bit bigger.
+
+SKC is probably the lowest MC leader in that space. 
+
+Then if you see them succeeding, then HB gets a piggyback + probably ends up supplying yields related stuff to the other players.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052186100266148313" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>不。$LPK 可能是我目前最喜欢的曝光，因为它们向每个人提供。我只是说如果人家是长玻璃芯基板的话，三星、$INTC之类的可能会大一点。SKC可能是该领域最低的MC领导者。然后，如果你看到他们成功，那么 HB 就会获得支持 + 可能最终会向其他玩家提供与收益相关的东西。</div>
+        <div class="tweet-foot">
+          <span>likes 112 / retweets 8 / replies 6 / views 15520</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="30">
+        <div class="tweet-head">
+          <span class="mono">2026-05-07 08:34</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">@tw_crypto_ Yeah I have highest concentration in $LPK... feels like more upstream suppliers like HB/LPK are more derisked than SKC.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@tw_crypto_ Yeah I have highest concentration in $LPK... feels like more upstream suppliers like HB/LPK are more derisked than SKC.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052185311351079359" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@tw_crypto_ 是的，我对 $LPK 的关注度最高...感觉像 HB/LPK 这样的上游供应商比 SKC 的风险更大。</div>
+        <div class="tweet-foot">
+          <span>likes 102 / retweets 3 / replies 7 / views 12583</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="31">
+        <div class="tweet-head">
+          <span class="mono">2026-05-07 04:40</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$OSS</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVEF</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span></span>
+        </div>
+        <div class="tweet-text">I guess, post earnings when $ARM touched $268...
+
+$ARM is now #18 on the individual stock list that I went long on that hit 100%-1000%+ YTD?
+
+I&#x27;ve lost count TBH. Some others like $LPK and $SIMO and $HPS.A are getting really close now. 
+
+But feels like I&#x27;m one of the few ones out there on X with actual receipts of all ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I guess, post earnings when $ARM touched $268...
+
+$ARM is now #18 on the individual stock list that I went long on that hit 100%-1000%+ YTD?
+
+I&#x27;ve lost count TBH. Some others like $LPK and $SIMO and $HPS.A are getting really close now. 
+
+But feels like I&#x27;m one of the few ones out there on X with actual receipts of all the returns + original thesis post.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2052126435721318528" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我猜，当 ARM 触及 268 美元时，公布收益......
+
+$ARM 现在在我做多的个股名单上排名第 18，今年迄今股价达到 100%-1000%+？我已经记不清了。其他一些像 $LPK、$SIMO 和 $HPS.A 现在已经非常接近了。但感觉我是 X 上少数几个拥有所有退货+原始论文帖子实际收据的人之一。</div>
+        <div class="tweet-foot">
+          <span>likes 1154 / retweets 40 / replies 108 / views 472577</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="32">
+        <div class="tweet-head">
+          <span class="mono">2026-05-06 13:08</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">@tw_crypto_ Yeah $LPK is going in a vertical line up, fun times for the glass ecosystem.
+
+Photonics is down today, but memory + glass helps balance it out.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@tw_crypto_ Yeah $LPK is going in a vertical line up, fun times for the glass ecosystem.
+
+Photonics is down today, but memory + glass helps balance it out.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051891789481808326" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@tw_crypto_ 是的，$LPK 正在垂直排列，这是玻璃生态系统的欢乐时光。光子学今天表现不佳，但内存+玻璃有助于平衡它。</div>
+        <div class="tweet-foot">
+          <span>likes 90 / retweets 3 / replies 8 / views 16652</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="33">
+        <div class="tweet-head">
+          <span class="mono">2026-05-06 12:59</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">I feel like institutions are just buying everything glass core substrate related today? 
+
+Stuff like:
+- Philoptics, limit up
+- HB technologies, limit up (SKC supplier)
+- YCCHEM +20%
+
+Then there&#x27;s $LPK over in Europe. 
+
+Wonder if I missed any major news.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I feel like institutions are just buying everything glass core substrate related today? 
+
+Stuff like:
+- Philoptics, limit up
+- HB technologies, limit up (SKC supplier)
+- YCCHEM +20%
+
+Then there&#x27;s $LPK over in Europe. 
+
+Wonder if I missed any major news.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051889611216195909" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我觉得机构今天只是购买所有与玻璃芯基板相关的东西？像这样的东西：
+- Philoptics，涨停
+- HB Technologies，涨停（SKC供应商）
+- YCCHEM +20%
+
+然后欧洲就有$LPK。不知道我是否错过了什么重大新闻。</div>
+        <div class="tweet-foot">
+          <span>likes 1101 / retweets 48 / replies 73 / views 215936</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="34">
+        <div class="tweet-head">
+          <span class="mono">2026-05-04 15:28</span>
+          <span><span class="chip red">$LPK</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">Honestly not too bad?
+
+Cool to see markets validate my thesis posts…
+
+With $SOI (silicon photonic substrates) to $LPK (glass core substrates) going in a straight line up . https://t.co/yQbidG44we</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Honestly not too bad?
+
+Cool to see markets validate my thesis posts…
+
+With $SOI (silicon photonic substrates) to $LPK (glass core substrates) going in a straight line up . https://t.co/yQbidG44we</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2051202378058346567" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>老实说还不错吧？很高兴看到市场验证我的论文帖子......
+
+随着$SOI（硅光子基板）到$LPK（玻璃芯基板）的直线上升。https://t.co/yQbidG44we</div>
+        <div class="tweet-foot">
+          <span>likes 1029 / retweets 40 / replies 92 / views 292333</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="35">
+        <div class="tweet-head">
+          <span class="mono">2026-05-01 14:13</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">@Jos1984482 $LPK is runner up for 3x potential if I had to give a 4th spot to a name.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@Jos1984482 $LPK is runner up for 3x potential if I had to give a 4th spot to a name.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2050096188557529440" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@Jos1984482 如果我必须给一个名字一个第四名的话，$LPK 将以 3 倍的潜力获得亚军。</div>
+        <div class="tweet-foot">
+          <span>likes 177 / retweets 9 / replies 8 / views 41634</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="36">
+        <div class="tweet-head">
+          <span class="mono">2026-05-01 00:07</span>
+          <span><span class="chip red">$ALMU</span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">@jpm7019 $LPK not exactly. $ALMU fits the definition more of speculation just going off development.
+
+$LPK is already dominates a chokepoint and is qualifying with almost every semi.
+
+It’s just guessing what volume ramp looks like for all the semi companies and how that affects MC.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@jpm7019 $LPK not exactly. $ALMU fits the definition more of speculation just going off development.
+
+$LPK is already dominates a chokepoint and is qualifying with almost every semi.
+
+It’s just guessing what volume ramp looks like for all the semi companies and how that affects MC.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049883280909185483" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@jpm7019 $LPK 不完全是。$ALMU 更符合猜测的定义，只是开发而已。$LPK 已经占据了一个咽喉要道，并且几乎在每场半决赛中都取得了资格。这只是猜测所有半导体公司的销量增长情况以及这对 MC 的影响。</div>
+        <div class="tweet-foot">
+          <span>likes 51 / retweets 1 / replies 1 / views 10487</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="37">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 23:40</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$LPK</span><span class="chip red">$LPKFF</span></span>
+        </div>
+        <div class="tweet-text">Thoughts on LPKF Laser &lt; $LPK / $LPKFF&gt; earnings:
+
+Very nuanced, here&#x27;s what markets might have missed:
+
+If you look at the financials in isolation and don&#x27;t understand qualification cycles, it&#x27;s bad. 
+
+The earnings call for volume ramp indicators are what&#x27;s actually important. 
+
+1. &quot;Potential volume orders in Advanced...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Thoughts on LPKF Laser &lt; $LPK / $LPKFF&gt; earnings:
+
+Very nuanced, here&#x27;s what markets might have missed:
+
+If you look at the financials in isolation and don&#x27;t understand qualification cycles, it&#x27;s bad. 
+
+The earnings call for volume ramp indicators are what&#x27;s actually important. 
+
+1. &quot;Potential volume orders in Advanced Packaging are not included in this baseline guidance&quot;
+
+Any volume production equipment order that lands H2 will act as an immediate upside surprise to their projections. (positive)
+
+2. &quot;LIDE is currently in use by numerous semiconductor customers in test and R&amp;D environments; the expected follow-up orders...&quot;
+
+Confirmation of what we expected, with many semiconductor companies qualifying $LPK. (positive)
+
+3. &quot;First production orders expected this year&quot;
+
+Inflection point of volume ramp confirmation H2 2026, this is probably the biggest signal markets missed + no projections included around that.  (very positive)
+
+From previous interviews we can stitch together:
+
+Q: 2027 as the start of mass production for glass substrates. Does this timeline still hold?
+
+&quot;Yes. Market players are preparing orders for production equipment, and initial orders have already been recorded in the first quarter. While challenges remain, I still expect 2027 to mark the beginning of mass  production.&quot;
+
+2027 is mass production of glass core substrates, but H2 2026 is start of mass production orders for $LPK, **which is not included in any forecasts**. 
+
+We got confirmation of timelines from earnings. 
+
+Basically:
+
+-&gt; You won&#x27;t see any projections/financials around glass core substrate related VOLUME RAMP which is the only thing American investors care about with this company.
+
+-&gt; Earnings in isolation were objectively terrible, but you only care about this as a European if you model based on previous 12 months only (instead of future growth). 
+
+-&gt; Confirmation of volume ramp starting H2. Glass Core substrate mass production 2027.  
+
+If anything, this was extremely positive for the core thesis about volume ramp for glass core substrates. 
+
+We&#x27;ll see how much the orders are though.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049876593674440706" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>对 LPKF Laser &lt; $LPK / $LPKFF&gt; 收益的思考：
+
+非常微妙，以下是市场可能忽略的内容：
+
+如果你孤立地看待财务数据而不了解资格周期，那是很糟糕的。销量增长指标的财报电话会议实际上很重要。1.“本基准指南不包括先进封装领域的潜在批量订单”
+
+下半年的任何批量生产设备订单都将立即对他们的预测产生惊喜。（正）
+
+2.“LIDE目前已被众多半导体客户在测试和研发环境中使用；预计后续订单......”
+
+许多半导体公司获得了 $LPK 资格，这证实了我们的预期。（正）
+
+3.“预计今年首批生产订单”
+
+2026 年下半年成交量增长的拐点确认，这可能是市场错过的最大信号 + 没有对此进行预测。（非常积极）
+
+从之前的采访中，我们可以拼凑出：
+
+问：2027年玻璃基板开始量产。这个时间线还成立吗？“是的。市场参与者正在准备生产设备的订单，第一季度已经录得初步订单。尽管挑战仍然存在，但我仍然预计2027年将标志着大规模生产的开始。”
+
+2027 年是玻璃芯基板的量产，但 2026 年下半年是 $LPK 订单量产的开始，**不包含在任何预测中**。我们从收益中得到了时间表的确认。基本上：
+
+-&gt; 您不会看到任何与玻璃芯基板相关的 VOLUME RAMP 相关的预测/财务信息，这是美国投资者对该公司唯一关心的事情。-&gt; 孤立的收益客观上很糟糕，但如果您仅基于过去 12 个月（而不是未来的增长）进行建模，那么作为欧洲人，您只会关心这一点。-&gt; 确认从 H2 开始的体积变化。玻璃芯基板2027年量产。如果说有什么不同的话，那就是这对于关于玻璃芯基板体积斜坡的核心论文是非常积极的。我们将看看订单有多少。</div>
+        <div class="tweet-foot">
+          <span>likes 575 / retweets 53 / replies 63 / views 179230</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="38">
+        <div class="tweet-head">
+          <span class="mono">2026-04-30 14:26</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$LPK</span><span class="chip red">$LPKFF</span></span>
+        </div>
+        <div class="tweet-text">$LPK / $LPKFF earnings are out. 
+
+Seeing a lot of very dumb commentary on X. If you&#x27;re wondering how to analyze qualification-cycle players, it&#x27;s the same as $AEHR. 
+
+Nobody cares about current earnings unless there&#x27;s something extremely bad. If your revenue declines -8M euros before any volume ramp, it doesn&#x27;t mean an...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$LPK / $LPKFF earnings are out. 
+
+Seeing a lot of very dumb commentary on X. If you&#x27;re wondering how to analyze qualification-cycle players, it&#x27;s the same as $AEHR. 
+
+Nobody cares about current earnings unless there&#x27;s something extremely bad. If your revenue declines -8M euros before any volume ramp, it doesn&#x27;t mean anything. 
+
+The only reason why LPKF is a long anyway is 2027 LIDE glass core substrate mass production. 
+
+Main thing to look at is earnings call in 2 hours not current financials and indication of high volume production + customers. 
+
+People made this same mistake with $AEHR selling off on previous financials instead of listening to the call.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049737227677421908" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$LPK / $LPKFF 收益已出炉。看到很多关于 X 的非常愚蠢的评论。如果你想知道如何分析资格周期球员，它与 $AEHR 相同。没有人关心当前的收入，除非有什么非常糟糕的事情。如果您的收入在任何销量增加之前下降 -800 万欧元，那没有任何意义。LPKF无论如何长的唯一原因是2027年LIDE玻璃芯基板量产。主要要看的是 2 小时内的财报电话会议，而不是当前的财务状况以及大批量生产和客户的迹象。人们也犯了同样的错误，他们抛售了之前的财务数据，而不是听从电话。</div>
+        <div class="tweet-foot">
+          <span>likes 653 / retweets 33 / replies 61 / views 330405</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="39">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 15:38</span>
+          <span><span class="chip red">$INTC</span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">@MickaelLacoste2 No. Glass substrates are the next advanced packaging wave.
+
+And $LPK has a functional monopoly over laser induced deep etching. 
+
+It’s more of pure play exposure to the next packaging paradigm without the drag SKC has or other segments $INTC has.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@MickaelLacoste2 No. Glass substrates are the next advanced packaging wave.
+
+And $LPK has a functional monopoly over laser induced deep etching. 
+
+It’s more of pure play exposure to the next packaging paradigm without the drag SKC has or other segments $INTC has.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049392965391695891" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@MickaelLacoste2 不。玻璃基板是下一个先进封装浪潮。$LPK 在激光诱导深度蚀刻方面具有功能垄断。这更多的是纯粹的接触下一个封装范例，没有 SKC 或 $INTC 的其他细分市场的拖累。</div>
+        <div class="tweet-foot">
+          <span>likes 74 / retweets 5 / replies 7 / views 13256</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="40">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 15:30</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">I guess markets agree with my take on $LPK?
+
+-&amp;gt; When you have glass core substrates as the next advanced packaging wave
+-&amp;gt; be a monopoly chokepoint
+-&amp;gt; add in CPO applications.
+
+It typically goes brrr. https://t.co/46u7msyDIl</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I guess markets agree with my take on $LPK?
+
+-&amp;gt; When you have glass core substrates as the next advanced packaging wave
+-&amp;gt; be a monopoly chokepoint
+-&amp;gt; add in CPO applications.
+
+It typically goes brrr. https://t.co/46u7msyDIl</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049390824673456494" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我猜市场同意我对 $LPK 的看法？-&gt; 当玻璃芯基板成为下一个先进封装浪潮时
+-&gt; 成为垄断的瓶颈
+-&gt; 添加 CPO 申请。它通常会发生 brrr 。https://t.co/46u7msyDIl</div>
+        <div class="tweet-foot">
+          <span>likes 645 / retweets 51 / replies 55 / views 151971</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="41">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 03:39</span>
+          <span><span class="chip red">$AEHR</span><span class="chip red">$LPK</span><span class="chip red">$LPKF</span></span>
+        </div>
+        <div class="tweet-text">I do really like $LPK.
+
+Critical monopoly chokepoint in glass substrates…
+
+Which are used for advanced packaging and CPO. 
+
+I flagged it as a potential 10x back in Jan, but thought it was a bit early. 
+
+However… time seems right now?
+
+&quot;About four years ago, we began collaborating with a semiconductor company to develop...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I do really like $LPK.
+
+Critical monopoly chokepoint in glass substrates…
+
+Which are used for advanced packaging and CPO. 
+
+I flagged it as a potential 10x back in Jan, but thought it was a bit early. 
+
+However… time seems right now?
+
+&quot;About four years ago, we began collaborating with a semiconductor company to develop mass-production equipment for direct 3D waveguide formation,&quot;  Lee said. 
+
+“The customer has already installed LPKF&#x27;s equipment.&quot; 
+
+Maybe Samsung or SKC Absolics since this was in Korea?
+
+Seems like momentum is ramping up now though like $AEHR pre-earnings, not quite high volume (2027), but around this time felt compelling for me.
+
+During the transition from qualification/pilot -&gt; high volume.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049212010660049008" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我真的很喜欢$LPK。玻璃基板的关键垄断瓶颈……
+
+用于先进封装和CPO。我在一月份就将其标记为潜在的 10 倍，但认为现在有点早。不过……现在似乎是时候了？“大约四年前，我们开始与一家半导体公司合作开发用于直接 3D 波导形成的量产设备，”Lee 说。“客户已经安装了LPKF的设备。” 
+
+也许是三星或 SKC Absolics，因为这是在韩国？看起来现在的势头正在增强，尽管像 AEHR 预收益一样，交易量不是很高（2027 年），但在这个时候对我来说感觉很有吸引力。从资格/试点到高产量的转变过程中。</div>
+        <div class="tweet-foot">
+          <span>likes 764 / retweets 64 / replies 48 / views 372619</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="42">
+        <div class="tweet-head">
+          <span class="mono">2026-04-29 02:47</span>
+          <span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">@snmart $LPK is one of my favorite names, I tend to be a fan of functional monopolies in new sectors like glass substrates.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@snmart $LPK is one of my favorite names, I tend to be a fan of functional monopolies in new sectors like glass substrates.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2049198798694719719" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@snmart $LPK 是我最喜欢的名字之一，我倾向于支持玻璃基板等新领域的功能性垄断。</div>
+        <div class="tweet-foot">
+          <span>likes 141 / retweets 7 / replies 5 / views 15827</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="43">
+        <div class="tweet-head">
+          <span class="mono">2026-04-28 07:58</span>
+          <span><span class="chip red">$ASML</span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">So just putting it out there: Towa (6315), at $1.35B...
+
+Is a rare, living definition of monopoly over HBM4 (compression molding).
+
+It&#x27;s been kinda flat YTD, but every memory company like $MU, Sk Hynix, Samsung are their customers. And each of the memory company earnings signaled massive capex increases. 
+
+Even as seen...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So just putting it out there: Towa (6315), at $1.35B...
+
+Is a rare, living definition of monopoly over HBM4 (compression molding).
+
+It&#x27;s been kinda flat YTD, but every memory company like $MU, Sk Hynix, Samsung are their customers. And each of the memory company earnings signaled massive capex increases. 
+
+Even as seen with $TSM earnings, every major semi is going through a massive capex cycle to meet AI demand. 
+
+And all three memory makers have printed from hbm3e and nand... so the next capex cycle is probably not like the last (meaning a lot more spend).  
+
+Like $ASML, this is hyper-cyclical but I wanted exposure to the upcoming HBM4 capex ramp over these next few months.
+
+Thought I&#x27;d put this name on people&#x27;s radar alongside $LPK (glass core substrates) as a functional monopoly. 
+
+But I do feel like this timing is about right while every machine supplier is having a massive re-rating yet this was relatively flat. 
+
+Not exactly a new find, since a few other analysts + random followers had this name but hope I get the timing right. 
+
+(Disclaimer: I do hold positions, this just TLDR of my own thoughts, please don’t copy trade)</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048914800533721376" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>所以只是把它放在那里：Towa (6315)，价格为 $1.35B...
+
+是对 HBM4（压缩成型）垄断的罕见而生动的定义。今年以来的表现有点平淡，但像 $MU、Sk Hynix、三星这样的每家内存公司都是他们的客户。每家存储器公司的盈利都表明资本开支大幅增加。即使从 TSM 的收益来看，每家主要的半导体公司都在经历大规模的资本开支周期来满足人工智能需求。所有三个内存制造商都使用 hbm3e 和 nand 进行打印...因此下一个资本开支周期可能与上一个不同（意味着更多的支出）。与 $ASML 一样，这是超周期性的，但我希望在接下来的几个月内接触即将到来的 HBM4 资本开支增长。我想我应该将这个名字与 $LPK（玻璃芯基板）一起作为功能性垄断而进入人们的视野。但我确实觉得这个时机恰到好处，虽然每个机器供应商都在进行大规模的重新评级，但评级相对平稳。不完全是一个新发现，因为其他一些分析师+随机追随者也有这个名字，但希望我能找到正确的时机。（免责声明：我确实持仓，这只是我自己的想法，请不要复制交易）</div>
+        <div class="tweet-foot">
+          <span>likes 1436 / retweets 102 / replies 80 / views 437728</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="44">
+        <div class="tweet-head">
+          <span class="mono">2026-04-28 03:27</span>
+          <span><span class="chip red">$EWY</span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Memory names from $MU to $EWY (SK Hynix, Samsung) and $SNDK are going brrrr lately.
+
+Aside from the big three, then your NAND
+or TW names like Nanya.
+
+Might be a good time to look at names like Towa (6315) to capture upstream monopoly capex cycles for hbm4? https://t.co/VZPwzB0SFK</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Memory names from $MU to $EWY (SK Hynix, Samsung) and $SNDK are going brrrr lately.
+
+Aside from the big three, then your NAND
+or TW names like Nanya.
+
+Might be a good time to look at names like Towa (6315) to capture upstream monopoly capex cycles for hbm4? https://t.co/VZPwzB0SFK</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048846462164045991" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>从 $MU 到 $EWY（SK 海力士、三星）和 $SNDK 的内存名称最近变得很火爆。除了三巨头，那么你的NAND
+或像 Nanya 这样的台湾名字。也许是关注东和（6315）这样的名字来捕捉 hbm4 上游垄断资本开支周期的好时机？https://t.co/VZPwzB0SFK</div>
+        <div class="tweet-foot">
+          <span>likes 850 / retweets 50 / replies 73 / views 234290</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="45">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 16:57</span>
+          <span><span class="chip red">$ALRIB</span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">European “monopolies” like $LPK (Glass Core Substrates) have also been going brrr lately. 
+
+$ALRIB is technically a duopoly but it’s there too… (Quantum / MBE)
+
+Then there’s some over in Japan like Towa for (HBM4/compression molding) too that I own.  
+
+Usually monopolies get higher multiples. 
+
+I&#x27;ll mention some more o...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">European “monopolies” like $LPK (Glass Core Substrates) have also been going brrr lately. 
+
+$ALRIB is technically a duopoly but it’s there too… (Quantum / MBE)
+
+Then there’s some over in Japan like Towa for (HBM4/compression molding) too that I own.  
+
+Usually monopolies get higher multiples. 
+
+I&#x27;ll mention some more over time, just gotta find them all.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048687868919611836" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$LPK（玻璃芯基板）等欧洲“垄断”最近也一直在发展。$ALRIB 从技术上讲是双头垄断，但它也在那里……（Quantum / MBE）
+
+我在日本也拥有一些类似 Towa 的产品（HBM4/压缩成型）。通常垄断企业的市盈率更高。随着时间的推移我会提到更多，只是要把它们全部找到。</div>
+        <div class="tweet-foot">
+          <span>likes 790 / retweets 56 / replies 64 / views 256267</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="46">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 12:40</span>
+          <span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Markets are looking at CPUs right now and kinda forgot about memory. 
+
+But... there&#x27;s increased capex spend with Sk Hynix, $MU, Samsung around now, with Samsung starting HMB4 production recently. 
+
+$TSM also signaled record capex across the board. 
+
+But just like $LPK in glass core substrates... 
+ 
+There&#x27;s a decent amo...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Markets are looking at CPUs right now and kinda forgot about memory. 
+
+But... there&#x27;s increased capex spend with Sk Hynix, $MU, Samsung around now, with Samsung starting HMB4 production recently. 
+
+$TSM also signaled record capex across the board. 
+
+But just like $LPK in glass core substrates... 
+ 
+There&#x27;s a decent amount of structural monopolies over in the HBM camp markets that I&#x27;m thinking about in places like Japan. 
+
+That markets may have forgotten? They would largely benefit from current HBM4 capex cycles. 
+
+Over in Korea, things like Hanmi Semi (KRX: 042700) have been taking off, up 27.6%+ today, so I&#x27;d guess the other companies around the world might play catchup soon.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048623230416761019" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>市场现在关注的是 CPU，有点忘记了内存。但是……现在 Sk Hynix、$MU、三星的资本开支有所增加，三星最近开始 HMB4 生产。$TSM 也标志着全面创纪录的资本开支。但就像玻璃芯基板中的 $LPK 一样...... 
+ 
+我正在考虑日本等地的 HBM 阵营市场存在相当多的结构性垄断。市场可能已经忘记了？他们将在很大程度上受益于当前的 HBM4 资本开支周期。在韩国，像 Hanmi Semi (KRX: 042700) 这样的公司一直在起飞，今天上涨了 27.6% 以上，所以我猜世界各地的其他公司可能很快就会迎头赶上。</div>
+        <div class="tweet-foot">
+          <span>likes 1086 / retweets 55 / replies 69 / views 414796</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="47">
+        <div class="tweet-head">
+          <span class="mono">2026-04-27 01:48</span>
+          <span><span class="chip red">$HPS.A</span><span class="chip red">$LPK</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">@wdh37 $SIVE for CPO/1.6T lasers
+$LPK for glass core substrates
+Shunsin for optical test/packaging.
+
+Many others I like though like $HPS.A or $SOI.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@wdh37 $SIVE for CPO/1.6T lasers
+$LPK for glass core substrates
+Shunsin for optical test/packaging.
+
+Many others I like though like $HPS.A or $SOI.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2048459173185327358" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@wdh37 $SIVE 用于 CPO/1.6T 激光器
+$LPK 用于玻璃芯基板
+Shunsin 用于光学测试/封装。还有很多我喜欢的，比如 $HPS.A 或 $SOI。</div>
+        <div class="tweet-foot">
+          <span>likes 399 / retweets 24 / replies 19 / views 59393</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="48">
+        <div class="tweet-head">
+          <span class="mono">2026-04-24 05:23</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">Not the best idea to feel FOMO about the new “bottleneck” in every news cycle.
+
+It’s going from:
+
+$NVDA GPUs -&gt; $MU Memory -&gt; $IREN Power -&gt; $LITE EMLs -&gt; $SNDK Memory -&gt; GPUs -&gt; $AAOI transceivers -&gt; Advanced Packaging -&gt; Transformers -&gt; $INTC CPUs… etc 
+
+And next would be stuff like $LPK glass substrates or some rand...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Not the best idea to feel FOMO about the new “bottleneck” in every news cycle.
+
+It’s going from:
+
+$NVDA GPUs -&gt; $MU Memory -&gt; $IREN Power -&gt; $LITE EMLs -&gt; $SNDK Memory -&gt; GPUs -&gt; $AAOI transceivers -&gt; Advanced Packaging -&gt; Transformers -&gt; $INTC CPUs… etc 
+
+And next would be stuff like $LPK glass substrates or some random niche material from Japan.
+
+Most of these span multi-years. 
+
+If $LITE is sold out into 2028 and it’s H1 2026. Hyperscalers are buying out anything $AAOI can make.
+
+It’s probably good idea to just be patient with your existing positions.
+
+Because there’s likely going to be some random green candle that you miss out on chasing the current news cycle.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047426124586893566" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>对每个新闻周期中的新“瓶颈”感到害怕并不是最好的主意。它来自：
+
+$NVDA GPU -&gt; $MU 内存 -&gt; $IREN Power -&gt; $LITE EML -&gt; $SNDK 内存 -&gt; GPU -&gt; $AAOI 收发器 -&gt; 高级封装 -&gt; Transformers -&gt; $INTC CPU...等等 
+
+接下来是诸如 $LPK 玻璃基板或来自日本的一些随机利基材料之类的东西。其中大多数跨越多年。如果 $LITE 在 2028 年售完，那就是 2026 年上半年。超大云厂商正在收购 $AAOI 能生产的任何产品。对现有职位保持耐心可能是个好主意。因为您可能会错过一些随机的绿色蜡烛来追踪当前的新闻周期。</div>
+        <div class="tweet-foot">
+          <span>likes 2822 / retweets 197 / replies 115 / views 334230</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="49">
+        <div class="tweet-head">
+          <span class="mono">2026-04-23 12:37</span>
+          <span><span class="chip red">$AMD</span><span class="chip red">$LPK</span><span class="chip red">$MRVL</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Hmmm. Probably $SIVE or $LPK for CPO/Glass Substrates since those are emerging technological shifts in 2027. 
+
+I really don&#x27;t think markets understand yet what&#x27;s up and coming with Sivers for CPO/1.6T optical transceivers... even if I show mapping to $AMD or $MRVL CPO programs. 
+
+LPKF Laser feels de-risked since we kno...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Hmmm. Probably $SIVE or $LPK for CPO/Glass Substrates since those are emerging technological shifts in 2027. 
+
+I really don&#x27;t think markets understand yet what&#x27;s up and coming with Sivers for CPO/1.6T optical transceivers... even if I show mapping to $AMD or $MRVL CPO programs. 
+
+LPKF Laser feels de-risked since we know glass core substrates are up and coming and they hold a fundamental chokepoint at tiny valuations.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047172919495983573" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>嗯。CPO/玻璃基板的价格可能为 SIVE 或 LPK，因为这些是 2027 年新兴的技术变革。我真的不认为市场还了解 Sivers 用于 CPO/1.6T 光收发器的最新情况和未来...即使我展示了与 $AMD 或 $MRVL CPO 计划的映射。LPKF Laser 感觉风险已降低，因为我们知道玻璃芯基板正在兴起，并且它们在估值极低的情况下处于基本瓶颈。</div>
+        <div class="tweet-foot">
+          <span>likes 213 / retweets 16 / replies 3 / views 38452</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="50">
+        <div class="tweet-head">
+          <span class="mono">2026-04-23 08:29</span>
+          <span><span class="chip red">$ALRIB</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$INTC</span><span class="chip red">$LPK</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">There&#x27;s a reason I spotlight EU small caps.
+
+This my investment thesis that I haven&#x27;t publicly stated yet.
+
+And I hope people spend the time to read:
+
+From $ALRIB (quantum/MBE), $LPK (glass substrate), or $SIVE (DFB Lasers). Or even Asian names like Nippon Chemical. 
+
+It&#x27;s to prevent hostile actors from taking over or ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">There&#x27;s a reason I spotlight EU small caps.
+
+This my investment thesis that I haven&#x27;t publicly stated yet.
+
+And I hope people spend the time to read:
+
+From $ALRIB (quantum/MBE), $LPK (glass substrate), or $SIVE (DFB Lasers). Or even Asian names like Nippon Chemical. 
+
+It&#x27;s to prevent hostile actors from taking over or disrupting critical chokepoints required by America.  
+
+FiconTEC (Europe) as one example (though private) was acquired by Chinese CCP affiliated companies. 
+
+Not even sure how this was legal and Germany should 100% seize it back from China. 
+
+They were a quasi-monopoly over testing for CPO/SiPH needed for AI and LIDAR. It&#x27;s clients include the most critical players in AI and semiconductors, such as $NVDA, $TSM, $AVGO, and $INTC. 
+
+Over time, significant intellectual property and technological IP transfer to China is highly likely after these acquisitions and they&#x27;ll have more control over US supply chains. 
+
+With enough American ownership enough spotlight on  these companies: we would be in a worse shape with hidden CCP ownership/takeovers.
+
+Or we would have more backdoors on American supply chains like with $AXTI and InP substrates (if we weren&#x27;t building up independent capacity now). 
+
+The EU has allowed upstream supply chain chokepoints (like specialized testing or substrate manufacturing) to be bought out or have their IP transferred by geopolitical rivals.
+
+While America still not might realize a lot of these vulnerabilities. 
+
+This is the most I can do as a retail investor to prevent this from happening. 
+
+Eventually policymakers will pay attention and prevent this from happening if all the movement happens from grassroots (retail) and bottom up.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2047110496999137730" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我关注欧盟小盘股是有原因的。这是我尚未公开声明的投资论点。我希望人们花时间阅读：
+
+来自 $ALRIB（量子/MBE）、$LPK（玻璃基板）或 $SIVE（DFB 激光器）。甚至是日本化学等亚洲品牌。这是为了防止敌对行为者接管或破坏美国所需的关键阻塞点。FiconTEC（欧洲）就是一个例子（虽然是私人的），被中共附属公司收购。甚至不知道这是如何合法的，德国应该100%从中国手中夺回它。他们几乎垄断了人工智能和激光雷达所需的 CPO/SiPH 测试。其客户包括人工智能和半导体领域最重要的参与者，例如 $NVDA、$TSM、$AVGO 和 $INTC。随着时间的推移，在这些收购之后，大量知识产权和技术知识产权很可能转移到中国，并且他们将对美国供应链拥有更多控制权。如果美国拥有足够多的所有权，那么这些公司就会受到足够的关注：如果中共隐藏所有权/收购，我们的处境将会更糟。或者我们会在美国供应链上有更多后门，例如 $AXTI 和 InP 衬底（如果我们现在不建立独立产能）。欧盟允许上游供应链的瓶颈（如专门测试或基板制造）被地缘政治竞争对手收购或转让其知识产权。尽管美国可能还没有意识到其中很多漏洞。这是我作为散户投资者为防止这种情况发生所能做的最大努力。如果所有的运动都是从草根（零售）和自下而上发生的，那么政策制定者最终会注意到并阻止这种情况的发生。</div>
+        <div class="tweet-foot">
+          <span>likes 1109 / retweets 73 / replies 65 / views 273842</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="51">
+        <div class="tweet-head">
+          <span class="mono">2026-04-22 18:11</span>
+          <span><span class="chip red">$ALRIB</span><span class="chip red">$IQE</span><span class="chip red">$LPK</span><span class="chip red">$MRVL</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">Europe seems to be having a fun time from AI.
+
+$LPK +20.69% - (glass core substrates) +20.69%
+$IQE - 12.22% - (InP epiwafers)
+$SOI +11.02% - (silicon photonics substrates) 
+$ALRIB +5.8% - (MBE / Quantum)
+
+Then there’s $SIVE down -4.7% from a local Swedish hit piece, while $POET is up 40%+ after Marvell supplier confirm...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Europe seems to be having a fun time from AI.
+
+$LPK +20.69% - (glass core substrates) +20.69%
+$IQE - 12.22% - (InP epiwafers)
+$SOI +11.02% - (silicon photonics substrates) 
+$ALRIB +5.8% - (MBE / Quantum)
+
+Then there’s $SIVE down -4.7% from a local Swedish hit piece, while $POET is up 40%+ after Marvell supplier confirmation.
+
+But I’m very bullish on $SIVE since markets haven’t pieced together the connection to $POET and $MRVL yet.
+
+Regardless, Europe has something to be happy about from being important to American hyperscalers.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046894773706035638" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>欧洲似乎正享受着人工智能带来的乐趣。$LPK +20.69% - (玻璃芯基板) +20.69%
+$IQE - 12.22% -（InP 外延片）
+$SOI +11.02% -（硅光子衬底） 
+$ALRIB +5.8% - (MBE / 量子)
+
+然后，瑞典当地热门作品的 $SIVE 下跌了 -4.7%，而在 Marvell 供应商确认后，$POET 上涨了 40% 以上。但我非常看好 $SIVE，因为市场还没有拼凑出 $POET 和 $MRVL 的联系。无论如何，欧洲对美国超大云厂商的重要性是值得高兴的。</div>
+        <div class="tweet-foot">
+          <span>likes 917 / retweets 65 / replies 71 / views 359975</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="52">
+        <div class="tweet-head">
+          <span class="mono">2026-04-22 08:34</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$LPK</span></span>
+        </div>
+        <div class="tweet-text">I’m genuinely impressed one of you copy traded your way into managing a hedge fund.
+
+But please don’t blindly copy stuff I talk about like $AXTI or $LPK.
+
+That’s the main reason I haven’t done copy-trading apps or tell people when I sell.
+
+I just want to publish interesting thoughts / research for free as I go along my...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I’m genuinely impressed one of you copy traded your way into managing a hedge fund.
+
+But please don’t blindly copy stuff I talk about like $AXTI or $LPK.
+
+That’s the main reason I haven’t done copy-trading apps or tell people when I sell.
+
+I just want to publish interesting thoughts / research for free as I go along my journey. 
+
+With the goal of helping you all synthesize complex information to build your own thesis/conviction.
+
+Happy to help share my thoughts for free though.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046749502326071427" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我对你们中的一位通过复制交易进入管理对冲基金的经历印象深刻。但请不要盲目复制我谈论的东西，比如 $AXTI 或 $LPK。这是我没有使用复制交易应用程序或在出售时告诉人们的主要原因。我只是想在我的旅程中免费发布有趣的想法/研究。目标是帮助大家综合复杂的信息来建立自己的论文/信念。不过，很高兴免费帮助分享我的想法。</div>
+        <div class="tweet-foot">
+          <span>likes 1513 / retweets 30 / replies 85 / views 158697</span>
+        </div>
+        <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="53">
+        <div class="tweet-head">
+          <span class="mono">2026-04-22 00:00</span>
+          <span><span class="chip red">$GLW</span><span class="chip red">$INTC</span><span class="chip red">$LPK</span><span class="chip red">$LPKK</span><span class="chip red">$ONTO</span><span class="chip red">$SHMD</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">I guess markets like glass core substrate exposure like $LPK?
+
+It is pretty rare to find these types of companies that hold positions that resemble $SOI.
+
+Like a Shiny Zigzagoon… finding these chokepoints. https://t.co/pjsjxgDhTa</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I guess markets like glass core substrate exposure like $LPK?
+
+It is pretty rare to find these types of companies that hold positions that resemble $SOI.
+
+Like a Shiny Zigzagoon… finding these chokepoints. https://t.co/pjsjxgDhTa</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046620208387981538" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我猜市场喜欢像 $LPK 这样的玻璃芯基板曝光？持有类似 $SOI 头寸的此类公司非常罕见。就像闪亮的锯齿形......找到这些阻塞点。https://t.co/pjsjxgDhTa</div>
+        <div class="tweet-foot">
+          <span>likes 676 / retweets 60 / replies 76 / views 490216</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="54">
+        <div class="tweet-head">
+          <span class="mono">2026-04-21 12:43</span>
+          <span><span class="chip red">$AXTI</span><span class="chip red">$GLW</span><span class="chip red">$INTC</span><span class="chip red">$LPK</span><span class="chip red">$LPKFF</span><span class="chip red">$LPKK</span><span class="chip red">$LPTH</span><span class="chip red">$MTRN</span><span class="chip red">$ONTO</span><span class="chip red">$SHMD</span><span class="chip red">$WOLF</span></span>
+        </div>
+        <div class="tweet-text">People nonstop ask me about $LPKK / $LPK for my opinion
+
+Yes, I mentioned they&#x27;re like a chokepoint for glass core substrates for LIDE (laser induced deep etching) way back when. 
+
+Biggest known partner is $ONTO (LIDE with Onto metrology for glass core mass production).
+
+Then as for market share: &quot;more than 80% of cust...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">People nonstop ask me about $LPKK / $LPK for my opinion
+
+Yes, I mentioned they&#x27;re like a chokepoint for glass core substrates for LIDE (laser induced deep etching) way back when. 
+
+Biggest known partner is $ONTO (LIDE with Onto metrology for glass core mass production).
+
+Then as for market share: &quot;more than 80% of customers among major global players have selected LPKF equipment&quot; for process validation.
+
+So that probably includes:
+- Samsung Electronics/Electro-Mechanics
+- $INTC (Receives a Major Order from a Leading Chip Manufacturer... installed a first LIDE system at the beginning of 2020... now ordered further LIDE systems to start volume production)
+- SKC (Absolics)
+- $GLW, AGC, Schott. 
+- Nippon electric glass. 
+
+Of course this is evaluation, so that 80% could be lower in actual ramp. 
+
+As for some personal FWD P/E calculations:
+
+- 2027: ~11-12.5x and ~7.8x for 2028, which looks very compelling. 
+- Total Cash: ~€10.0M, debt was around ~€3.0M. debt to equity: ~3.8%
+
+So very clean-asset light balance sheet, no dilution overhang like $SHMD. 
+
+~$362m MC, conclusion: great upside long imo, hard to see institutions not buying this name down the road. 
+
+Even if the 80% of players managed to design another way, even a fraction would probably be very material to the MC. 
+
+It was probably a bit early few months ago, but glass core roadmaps have been speeding up like CPO. 
+
+Disclosure: I do have positions. This are just my thoughts. 
+
+People on X did their homework.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2046449839626670369" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>人们不停地问我关于 $LPKK / $LPK 的意见
+
+是的，我提到过它们就像是 LIDE（激光诱导深蚀刻）玻璃芯基板的一个咽喉要道。最大的知名合作伙伴是 $ONTO（LIDE 与 Onto 计量技术，用于玻璃芯批量生产）。至于市场份额：“全球主要企业中超过80%的客户都选择了LPKF设备”进行工艺验证。所以这可能包括：
+- 三星电子/机电
+- $INTC（收到领先芯片制造商的大订单...在 2020 年初安装了第一个 LIDE 系统...现在订购了更多 LIDE 系统以开始批量生产）
+- SKC（绝对）
+- $GLW、AGC、肖特。- 日本电玻璃。当然，这是评估，因此实际斜坡中 80% 可能会更低。至于一些个人FWD P/E计算：
+
+- 2027 年：~11-12.5 倍，2028 年~7.8 倍，看起来非常引人注目。- 现金总额：约 1000 万欧元，债务约为 300 万欧元。债务股本比：~3.8%
+
+因此，资产负债表非常清洁，没有像 $SHMD 那样的稀释悬而未决。~$3.62 亿美元的 MC，结论：在我看来，长期的上涨空间很大，很难看到机构会不买这个名字。即使 80% 的玩家设法设计出另一种方式，即使是一小部分对 MC 来说也可能非常重要。几个月前可能有点早，但玻璃芯路线图一直在像 CPO 一样加速发展。披露：我确实有职位。这只是我的想法。X 上的人们做了他们的功课。</div>
+        <div class="tweet-foot">
+          <span>likes 721 / retweets 57 / replies 46 / views 667135</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=LPK">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>

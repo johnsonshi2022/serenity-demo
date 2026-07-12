@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$CCXI 历史推文 - Serenity Analysis</title>
+  <style>
+      :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
+    </style>
+</head>
+<body>
+  <div class="top-wrap">
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#stocks">
+          <span class="brand-mark">SX</span>
+          <span><span class="brand-title">Serenity Analysis</span><span class="brand-subtitle">动态投研终端</span></span>
+        </a>
+        <a class="back" href="../index.html#stocks">返回股票池</a>
+      </header>
+    </div>
+  </div>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Ticker Detail</span>
+      <h1>$CCXI 历史推文</h1>
+      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <div class="stats">
+        
+        <div class="stat-card"><span>累计提及</span><b>17</b></div>
+        <div class="stat-card"><span>历史推文</span><b>17</b></div>
+        <div class="stat-card"><span>首次提及</span><b>2026-06-30</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-07-10</b></div>
+        <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
+        <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
+            
+      </div>
+      <div class="chips"><span class="chip blue">信念分层、仓位与时点 2</span></div>
+    </section>
+    <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
+    
+      <section class="panel" id="core-overview">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Overview</p>
+            <h2 class="panel-title">核心结论</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box">
+            <h3>Serenity 观点</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>新增信号</h3>
+            <p>24h 提及 -；7D 提及 -；新闻/披露需与原始链接交叉核验。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>证据摘要</h3>
+            <p>首次基准 待接入行情；当前价 待接入行情；迄今 待接入行情。基本面最新期 待接入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>作者立场</h3>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>情绪与市场</h3>
+            <p>首次提及以来 待接入行情，1W 待接入行情，20D 未到期，60D 未到期。 简易动量：若 1W/20D/60D 均为正，视为趋势强化；若短期转负而中期仍强，视为高波动回撤。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>行业与主题</h3>
+            <p>待拆分产业链层级：需要结合具体业务拆分到材料、设备、设计、制造、封装、模块、系统或需求侧基础设施。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>市场地位/份额口径</h3>
+            <p>暂无精确市占率；先用收入敞口、客户认证、订单能见度、毛利率和同业排序描述市场地位，避免硬凑。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>A股映射</h3>
+            <p>暂无直接 A 股对标；保留为空比硬凑更好，后续只在能明确产业链环节、竞争关系和验证路径时加入。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>上中下游</h3>
+            <p>上游：原材料、设备、晶圆制造、封装测试、服务器和电力资源。 中游/自身：待根据主营业务拆分到设计、制造、封测、模块、系统或基础设施。 下游：云厂商、AI 应用、企业客户、消费电子或工业客户。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>股票分析提醒</h3>
+            <p>仅当新闻、公告、推文或价格信号出现边际变化时单独上提；否则与基本面、情绪面和历史推文一起并入本页分析。</p>
+          </article>
+          <article class="analysis-box">
+            <h3>研究问题</h3>
+            <p>订单、客户 capex、产能和毛利率是否能共同确认？ 融资结构、摊薄、现金 runway 和每股价值是否会改变普通股回报？ 最新推文、新闻、披露和价格趋势是否指向同一个方向？ A股映射是否有真实业务敞口，而不是只因为名字或概念相似？</p>
+          </article>
+        </div>
+      </section>
+    
+    <section class="panel" id="price-timeline">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Price Timeline</p>
+          <h2 class="panel-title">Serenity 时间线：股价走势与推文时间点</h2>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="empty-state">暂无足够行情数据绘制走势图。</div>
+      </div>
+    </section>
+        
+    <section class="panel" id="historical-tweets">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Historical Tweets</p>
+          <h2 class="panel-title">历史推文</h2>
+        </div>
+        <span class="small-note">先展示 20 条，每次追加 100 条</span>
+      </div>
+      <div class="panel-body">
+        
+        <div class="tweet-list">
+          
+      <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-07-10 20:27</span>
+          <span><span class="chip red">$CCXI</span><span class="chip red">$JBL</span></span>
+        </div>
+        <div class="tweet-text">Mitsubishi Motors joins robotics race to deploy humanoid workers by 2027. 
+
+Pairing with Highlanders, a Japanese robotics company.
+
+- Agility $CCXI x Foxconn, Toyota
+- Apptronik x $JBL, Mercedes
+- Highlanders x Mitsubishi
+- Figure × BMW
+- Boston Dynamics x Hyundai (subsidiaries) https://t.co/jkG6RgNrjG</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Mitsubishi Motors joins robotics race to deploy humanoid workers by 2027. 
+
+Pairing with Highlanders, a Japanese robotics company.
+
+- Agility $CCXI x Foxconn, Toyota
+- Apptronik x $JBL, Mercedes
+- Highlanders x Mitsubishi
+- Figure × BMW
+- Boston Dynamics x Hyundai (subsidiaries) https://t.co/jkG6RgNrjG</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2075557588159058076" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>三菱汽车加入机器人竞赛，到 2027 年部署人形工人。与日本机器人公司 Highlanders 合作。- Agility $CCXI x 富士康、丰田
+- Apptronik x $JBL、梅赛德斯
+- 高地人 x 三菱
+- 图×宝马
+- 波士顿动力 x 现代（子公司）https://t.co/jkG6RgNrjG</div>
+        <div class="tweet-foot">
+          <span>likes 191 / retweets 14 / replies 88 / views 53471</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-07-10 03:50</span>
+          <span><span class="chip red">$CCXI</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">@NullContex1s It&#x27;s nuanced, IMO: 
+
+- $TSLA has the clearest path to close the gap between US/China in mass production. But to get this done, majority of components seem sourced from China? 
+
+- $CCXI right now has a RoboFab for 10K+ units/year, and 75%+ of components sourced from the US. 
+
+So</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@NullContex1s It&#x27;s nuanced, IMO: 
+
+- $TSLA has the clearest path to close the gap between US/China in mass production. But to get this done, majority of components seem sourced from China? 
+
+- $CCXI right now has a RoboFab for 10K+ units/year, and 75%+ of components sourced from the US. 
+
+So</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2075306506585813108" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@NullContex1s 这是微妙的，IMO： 
+
+- $TSLA 拥有缩小中美大规模生产差距的最清晰路径。但要做到这一点，大部分零部件似乎都来自中国？- $CCXI 目前拥有每年超过 10K 台的 RoboFab，其中 75% 以上的组件来自美国。所以</div>
+        <div class="tweet-foot">
+          <span>likes 99 / retweets 4 / replies 7 / views 24938</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-07-08 01:52</span>
+          <span><span class="chip red">$CCXI</span><span class="chip red">$SPCX</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">@stockshop199020 Literally just Elon. 
+
+- The guy + $SPCX is basically the only reason why US is in the lead with Space.
+- $TSLA led EV commercialization in US
+
+He&#x27;s sometimes off with timeframes, but right directionally, so pretty sure he can make US robotics #1 again. 
+
+I personally own $CCXI</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@stockshop199020 Literally just Elon. 
+
+- The guy + $SPCX is basically the only reason why US is in the lead with Space.
+- $TSLA led EV commercialization in US
+
+He&#x27;s sometimes off with timeframes, but right directionally, so pretty sure he can make US robotics #1 again. 
+
+I personally own $CCXI</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2074552062382338069" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@stockshop199020 字面意思就是埃隆。- 这个家伙+ $SPCX 基本上是美国在太空领域领先的唯一原因。- $TSLA 引领美国电动汽车商业化
+
+他有时会偏离时间表，但方向正确，所以非常确定他可以再次让美国机器人技术排名第一。我个人拥有 $CCXI</div>
+        <div class="tweet-foot">
+          <span>likes 18 / retweets 1 / replies 1 / views 3050</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-07-08 01:39</span>
+          <span><span class="chip red">$CCXI</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">How is the US so far behind?
+
+Xinhua: China&#x27;s output of humanoids are expected to hit 100,000+ this year. 
+
+Even Morgan Stanley originally projected 14,000 for 2026... 
+
+Really need Elon&#x27;s $TSLA, $CCXI (Agility), Apptronik, and Figure to catchup. And for more US Gov. subsidies to https://t.co/y38EIhiUaB</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">How is the US so far behind?
+
+Xinhua: China&#x27;s output of humanoids are expected to hit 100,000+ this year. 
+
+Even Morgan Stanley originally projected 14,000 for 2026... 
+
+Really need Elon&#x27;s $TSLA, $CCXI (Agility), Apptronik, and Figure to catchup. And for more US Gov. subsidies to https://t.co/y38EIhiUaB</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2074548850996707412" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>美国怎么落后这么远？新华社：今年中国人形机器人产量预计将达到10万只以上。甚至摩根士丹利最初预计 2026 年为 14,000 人…… 
+
+确实需要 Elon 的 $TSLA、$CCXI（Agility）、Apptronik 和 Figure 来赶上。如需更多美国政府补贴，请访问 https://t.co/y38EIhiUaB</div>
+        <div class="tweet-foot">
+          <span>likes 206 / retweets 12 / replies 106 / views 50390</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-07-07 03:31</span>
+          <span><span class="chip red">$CCXI</span></span>
+        </div>
+        <div class="tweet-text">It’s interesting to witness psychology around valuation anchoring + scarcity.
+
+Retail, for example, are buying Figure, last valued at ~$39B through CEFs…
+
+At $158B, since it’s private, round 4x valuations. 
+
+Then Agility Robotics $CCXI, which has broader commercialization. 
+
+Is</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It’s interesting to witness psychology around valuation anchoring + scarcity.
+
+Retail, for example, are buying Figure, last valued at ~$39B through CEFs…
+
+At $158B, since it’s private, round 4x valuations. 
+
+Then Agility Robotics $CCXI, which has broader commercialization. 
+
+Is</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2074214669808717906" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>见证围绕估值锚定+稀缺性的心理是很有趣的。例如，零售业正在通过 CEF 购买Figure，最后估值约为 $39B……
+
+价格为 $158B，由于它是私人的，估值约为 4 倍。然后是 Agility Robotics $CCXI，其商业化范围更广。是</div>
+        <div class="tweet-foot">
+          <span>likes 683 / retweets 29 / replies 184 / views 204888</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
+          <span class="mono">2026-07-06 19:05</span>
+          <span><span class="chip red">$CCXI</span></span>
+        </div>
+        <div class="tweet-text">@haybee940 Yep, we finally have the brain with OpenAi/Anthropic breakthroughs.
+
+Now it’s time for robots (which have been backflipping for the past 10 years) like Boston Dynamics / $CCXI to come to life.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@haybee940 Yep, we finally have the brain with OpenAi/Anthropic breakthroughs.
+
+Now it’s time for robots (which have been backflipping for the past 10 years) like Boston Dynamics / $CCXI to come to life.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2074087304688497118" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@haybee940 是的，我们终于有了 OpenAi/Anthropic 突破的大脑。现在是像波士顿动力 / $CCXI 这样的机器人（在过去 10 年里一直在后空翻）诞生的时候了。</div>
+        <div class="tweet-foot">
+          <span>likes 83 / retweets 0 / replies 5 / views 21881</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-07-06 04:32</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$CCXI</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">Came across an interesting report from SVRC Research called &quot;State of Robotics 2026&quot;, published in April. 
+
+Which listed:
+
+1. Figure AI 
+2. Agility Robotics $CCXI
+3. Apptronik 
+4. $TSLA 
+5. Boston Dynamics
+6. Physical Intelligence 
+7. 1X Technologies
+8. $AMZN Robotics
+9. https://t.co/AmCFokQYxl</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Came across an interesting report from SVRC Research called &quot;State of Robotics 2026&quot;, published in April. 
+
+Which listed:
+
+1. Figure AI 
+2. Agility Robotics $CCXI
+3. Apptronik 
+4. $TSLA 
+5. Boston Dynamics
+6. Physical Intelligence 
+7. 1X Technologies
+8. $AMZN Robotics
+9. https://t.co/AmCFokQYxl</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2073867745243127973" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我看到一份 SVRC Research 在 4 月发布的有意思报告《State of Robotics 2026》。报告列出了 Figure AI、Agility Robotics（$CCXI）、Apptronik、$TSLA、Boston Dynamics、Physical Intelligence、1X Technologies、$AMZN Robotics 等机器人相关公司。</div>
+        <div class="tweet-foot">
+          <span>likes 1438 / retweets 143 / replies 189 / views 388281</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-07-03 14:08</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$CCXI</span><span class="chip red">$META</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">@ontrialperiod when global and US markets crash off misinformation and out of context quotes from $META. I probably want to clear that up?
+
+That thing said, $AAOI, $SIVE, and $CCXI do make up large concentration in my portfolio.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@ontrialperiod when global and US markets crash off misinformation and out of context quotes from $META. I probably want to clear that up?
+
+That thing said, $AAOI, $SIVE, and $CCXI do make up large concentration in my portfolio.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072925550608523738" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@ontrialperiod 当全球和美国市场因为错误信息、以及断章取义的 $META 引述而下跌时，我当然想把它澄清。话虽如此，$AAOI、$SIVE 和 $CCXI 确实是我组合中的大仓位。</div>
+        <div class="tweet-foot">
+          <span>likes 50 / retweets 2 / replies 6 / views 6326</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
+        <div class="tweet-head">
+          <span class="mono">2026-07-03 13:22</span>
+          <span><span class="chip red">$CCXI</span></span>
+        </div>
+        <div class="tweet-text">LeaderDrive (688017) is now at all time highs after hitting a 20% limit up today. 
+
+Looks like robotics sector excitement is palpable…
+
+Largely driven by US and China’s frontier humanoid companies with $CCXI / Agility Robotics
+
+As well as Unitree (STAR listing approved today) https://t.co/GCqizzzuTQ</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">LeaderDrive (688017) is now at all time highs after hitting a 20% limit up today. 
+
+Looks like robotics sector excitement is palpable…
+
+Largely driven by US and China’s frontier humanoid companies with $CCXI / Agility Robotics
+
+As well as Unitree (STAR listing approved today) https://t.co/GCqizzzuTQ</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072913865458004014" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>LeaderDrive (688017) 今天触及 20% 的涨停，目前创历史新高。看起来机器人行业的兴奋是显而易见的……
+
+主要由美国和中国的前沿人形机器人公司（$CCXI / Agility Robotics）推动
+
+以及 Unitree（今日获批 STAR 上市）均已上市。</div>
+        <div class="tweet-foot">
+          <span>likes 106 / retweets 6 / replies 52 / views 50116</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="9">
+        <div class="tweet-head">
+          <span class="mono">2026-07-03 03:33</span>
+          <span><span class="chip red">$CCXI</span></span>
+        </div>
+        <div class="tweet-text">Just this hour:
+
+BlueCrest Capital Management and its Billionaire Michael Platt crossed the threshold and disclosed a 5.6% stake in $CCXI.
+
+I knew Agility Robotics would be popular… https://t.co/n7bqpmCykd</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just this hour:
+
+BlueCrest Capital Management and its Billionaire Michael Platt crossed the threshold and disclosed a 5.6% stake in $CCXI.
+
+I knew Agility Robotics would be popular… https://t.co/n7bqpmCykd</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072765527764971642" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>就在这个小时：
+
+BlueCrest Capital Management 及其亿万富翁 Michael Platt 跨过门槛，披露了 $CCXI 5.6% 的股份。我知道敏捷机器人会很受欢迎...... https://t.co/n7bqpmCykd</div>
+        <div class="tweet-foot">
+          <span>likes 445 / retweets 37 / replies 113 / views 145420</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="10">
+        <div class="tweet-head">
+          <span class="mono">2026-07-03 02:40</span>
+          <span><span class="chip red">$CCXI</span><span class="chip red">$RKLB</span></span>
+        </div>
+        <div class="tweet-text">@SUOHA_AI I remember first investing in $RKLB back at $15 or so. 
+
+It just find it rare to get exposure to a downstream + frontier sector leader. So I’m personally not missing this chance again with $CCXI.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@SUOHA_AI I remember first investing in $RKLB back at $15 or so. 
+
+It just find it rare to get exposure to a downstream + frontier sector leader. So I’m personally not missing this chance again with $CCXI.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072752326147031494" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@SUOHA_AI 我记得自己最早大概在 15 美元买入 $RKLB。我觉得能同时获得下游和前沿行业龙头敞口的机会很少。所以这一次在 $CCXI 上，我个人不想再错过。</div>
+        <div class="tweet-foot">
+          <span>likes 45 / retweets 3 / replies 4 / views 6938</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="11">
+        <div class="tweet-head">
+          <span class="mono">2026-07-03 01:57</span>
+          <span><span class="chip red">$CCXI</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">Agility Robotics is literally the #1 humanoid player in the US in terms of commercialization today imo. 
+
+Personal Rankings:
+
+1. Agility Robotics via $CCXI 
+2. $TSLA Optimus ($1T+ company)
+3. Figure at $39B from 2025, likely higher now.
+
+With Tesla likely taking the lead a year</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Agility Robotics is literally the #1 humanoid player in the US in terms of commercialization today imo. 
+
+Personal Rankings:
+
+1. Agility Robotics via $CCXI 
+2. $TSLA Optimus ($1T+ company)
+3. Figure at $39B from 2025, likely higher now.
+
+With Tesla likely taking the lead a year</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072741541404406008" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>在我看来，就当今的商业化而言，Agility Robotics 确实是美国排名第一的人形机器人公司。个人排名：
+
+1.Agility Robotics，来自 $CCXI 
+2.$TSLA Optimus（超过 1 万亿美元 公司）
+3. 从 2025 年开始，该数字为 $39B，现在可能更高。一年后，特斯拉可能会占据领先地位。因此，在 16 美元的价格下，您就拥有了一位约 4B 美元的 MC 预付费人形玩家。它已经在 $AMZN 和 $MELI 中（在逐步实现通用之前开始的理想用例），$AMZN、$NVDA、软银、富士康和其他公司都是投资者。NFA，但按照这些估值......今天第一个人形玩家可以直接曝光，这可能比商业化的数字更进一步。对 Robostrategy 没有什么不好的感觉，但它的资产净值超过 4 倍以上： 
+
+这将使Figure的价值达到$156B...... 
+
+今天排名第一的商业化人形玩家敏捷性价格为 4B 美元。所以我个人偏好是$CCXI。</div>
+        <div class="tweet-foot">
+          <span>likes 306 / retweets 21 / replies 126 / views 93823</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-07-02 19:02</span>
+          <span><span class="chip red">$CCXI</span><span class="chip red">$TSLA</span></span>
+        </div>
+        <div class="tweet-text">@blkslymn I’m personally long $CCXI and have highest concentration in Agility Robotics (NFA). It’s currently around a ~$4.9B valuation.
+
+Figure’s last round was $39B last year, and that was before the increasing interest in humanoids/robotics this year.
+
+Then a large part of $TSLA $1T+</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@blkslymn I’m personally long $CCXI and have highest concentration in Agility Robotics (NFA). It’s currently around a ~$4.9B valuation.
+
+Figure’s last round was $39B last year, and that was before the increasing interest in humanoids/robotics this year.
+
+Then a large part of $TSLA $1T+</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072636916173066624" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@blkslymn 我个人做多 $CCXI，并且在 Agility Robotics 上仓位最高（非投资建议）。目前估值约 49 亿美元。Figure 去年最后一轮估值是 390 亿美元，而且那还是今年人形机器人/机器人热度升温之前。$TSLA 超过 1 万亿美元的叙事中，也有很大一部分来自机器人期权。</div>
+        <div class="tweet-foot">
+          <span>likes 92 / retweets 8 / replies 11 / views 22359</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
+        <div class="tweet-head">
+          <span class="mono">2026-07-02 01:09</span>
+          <span><span class="chip red">$CCXI</span></span>
+        </div>
+        <div class="tweet-text">Just dropping these 3 slides from Agility Robotics ( $CCXI ) presentations.
+
+For the US robotic program doomposters:
+
+1. “75% of parts” - sourced from the USA
+
+2. Just eyeballing the graph, looks like &amp;lt;$30k BOM mass production.
+
+People were just looking at the ~$145K cost. 
+
+3. https://t.co/zs2msucOk6</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just dropping these 3 slides from Agility Robotics ( $CCXI ) presentations.
+
+For the US robotic program doomposters:
+
+1. “75% of parts” - sourced from the USA
+
+2. Just eyeballing the graph, looks like &amp;lt;$30k BOM mass production.
+
+People were just looking at the ~$145K cost. 
+
+3. https://t.co/zs2msucOk6</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072367082248040621" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>作者贴出 Agility Robotics（$CCXI）演示材料里的 3 张幻灯片，回应对美国机器人产业的唱衰：1）约 75% 零部件来自美国；2）粗看图表，量产 BOM 可能低于 3 万美元；3）市场此前过度盯着约 14.5 万美元的单台成本。 https://t.co/zs2msucOk6</div>
+        <div class="tweet-foot">
+          <span>likes 127 / retweets 8 / replies 40 / views 26065</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="14">
+        <div class="tweet-head">
+          <span class="mono">2026-07-01 19:07</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$CCXI</span><span class="chip red">$GOOGL</span><span class="chip red">$NVDA</span></span>
+        </div>
+        <div class="tweet-text">Just a random thought, leading US humanoid players strangely me of the current LLM dynamics:
+
+Agility ( $CCXI ) kinda feels like Anthropic for robotics.
+
+With $AMZN and $NVDA heavily backing it, ingrained with $GOOGL Deepmind (like TPUs). And it starts off with enterprise</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a random thought, leading US humanoid players strangely me of the current LLM dynamics:
+
+Agility ( $CCXI ) kinda feels like Anthropic for robotics.
+
+With $AMZN and $NVDA heavily backing it, ingrained with $GOOGL Deepmind (like TPUs). And it starts off with enterprise</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072275805330362648" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是一个随机的想法，导致美国人形玩家对当前的 LLM 动态感到奇怪：
+
+Agility ($CCXI) 有点像机器人的 Anthropic。得到 $AMZN 和 $NVDA 的大力支持，并与 $GOOGL Deepmind（如 TPU）根深蒂固。它从企业开始</div>
+        <div class="tweet-foot">
+          <span>likes 112 / retweets 2 / replies 36 / views 24325</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="15">
+        <div class="tweet-head">
+          <span class="mono">2026-07-01 18:14</span>
+          <span><span class="chip red">$AEVA</span><span class="chip red">$BE</span><span class="chip red">$CCXI</span><span class="chip red">$FCEL</span><span class="chip red">$OUST</span></span>
+        </div>
+        <div class="tweet-text">@AleksandarGenov Probably Agility Robotics going public with $CCXI and all the media narratives around it was the catalyst.
+
+Feels like $OUST, $AEVA and other names were pretty flat until the announcement.
+
+As for energy like $FCEL, $BE, seems pretty fundamental with new upsized contracts</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@AleksandarGenov Probably Agility Robotics going public with $CCXI and all the media narratives around it was the catalyst.
+
+Feels like $OUST, $AEVA and other names were pretty flat until the announcement.
+
+As for energy like $FCEL, $BE, seems pretty fundamental with new upsized contracts</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2072262479179284686" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@AleksandarGenov 也许 Agility Robotics 与 $CCXI 一起上市以及所有围绕它的媒体叙述是催化剂。在宣布之前，感觉 $OUST、$AEVA 和其他名称相当平淡。至于像 $FCEL、$BE 这样的能源，对于新的大型合同来说似乎相当重要</div>
+        <div class="tweet-foot">
+          <span>likes 48 / retweets 2 / replies 6 / views 10706</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="16">
+        <div class="tweet-head">
+          <span class="mono">2026-07-01 00:34</span>
+          <span><span class="chip red">$CCXI</span></span>
+        </div>
+        <div class="tweet-text">Yep! Agility Robotics is currently my favorite humanoid/robotics position.
+
+They&#x27;re set to be listed on NASDAQ via $CCXI as early as September (per Digitimes).
+
+Just for informational purposes: Their V4 humanoid robot is already operating in sites like Amazon. And have V5 slated https://t.co/e76CV1wOhv</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Yep! Agility Robotics is currently my favorite humanoid/robotics position.
+
+They&#x27;re set to be listed on NASDAQ via $CCXI as early as September (per Digitimes).
+
+Just for informational purposes: Their V4 humanoid robot is already operating in sites like Amazon. And have V5 slated https://t.co/e76CV1wOhv</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2071995924172394695" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>是的！敏捷机器人是目前我最喜欢的人形/机器人职位。他们最早将于 9 月份通过 $CCXI 在纳斯达克上市（据 Digitimes 报道）。仅供参考：他们的 V4 人形机器人已经在亚马逊等网站上运行。并已预定 V5 https://t.co/e76CV1wOhv</div>
+        <div class="tweet-foot">
+          <span>likes 331 / retweets 34 / replies 91 / views 97185</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+        </div>
+        <div class="load-more-wrap"><button class="load-more" type="button" id="detailMore"></button></div>
+      </div>
+    </section>
+        
+      <section class="panel analysis-panel" id="analysis-supplement">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Fundamental / Sentiment / News / Filings</p>
+            <h2 class="panel-title">股票分析补充（暂无新增新闻/公告）</h2>
+          </div>
+        </div>
+        <div class="analysis-grid panel-body">
+          <article class="analysis-box" id="fundamentals">
+            <h3>基本面证据</h3>
+            <div class="mini-grid">
+              <div class="stat-card"><span>年度</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收</span><b>待接入</b></div>
+              <div class="stat-card"><span>营收同比</span><b>待接入</b></div>
+              <div class="stat-card"><span>毛利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润率</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利率</span><b>待接入</b></div>
+              <div class="stat-card"><span>EPS</span><b>待接入</b></div>
+              <div class="stat-card"><span>经营利润</span><b>待接入</b></div>
+              <div class="stat-card"><span>净利润</span><b>待接入</b></div>
+            </div>
+            <div style="margin-top:12px;">
+              <h4>三年明细</h4>
+              <div class="empty-state">年度明细待接入。</div>
+              
+              <div class="sub-block"><h4>摊薄观察</h4><div class="empty-state">摊薄股数待接入。</div></div>
+              <div class="sub-block"><h4>市值与估值</h4><div class="empty-state">待接入</div></div>
+            </div>
+          </article>
+          <article class="analysis-box" id="sentiment">
+            <h3>情绪面</h3>
+            <div class="mini-grid"><div class="stat-card"><span>52周高</span><b>待接入</b></div><div class="stat-card"><span>52周低</span><b>待接入</b></div><div class="stat-card"><span>距52周高点</span><b>待接入</b></div><div class="stat-card"><span>20日年化波动</span><b>待接入</b></div><div class="stat-card"><span>RSI14</span><b>待接入</b></div><div class="stat-card"><span>50日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>200日均线偏离</span><b>待接入</b></div><div class="stat-card"><span>首提以来最大回撤</span><b>待接入</b></div></div><p>波动数据待接入</p>
+            <div class="sub-block"><h4>期权 / IV</h4><div class="empty-state">待接入；该模块不生成情绪结论。</div></div>
+            <div class="sub-block"><h4>论坛第一页观点</h4><p class="stat-line"><b>口径</b>社区讨论仅作噪声参考（方法论第14条：通常应忽略群体情绪）。</p><div class="empty-state">论坛源待接入；当前不根据外部社区讨论生成情绪结论。</div></div>
+          </article>
+          <article class="analysis-box" id="news">
+            <h3>消息面</h3>
+            <div class="empty-state">暂无自动抓取到的相关新闻；不单独生成新结论，先并入上方股票分析。</div>
+          </article>
+          <article class="analysis-box" id="filings">
+            <h3>披露信息</h3>
+            <p class="stat-line"><b>媒体/卖方财报口径</b>暂未在自动新闻源中识别到明确的财报/卖方标题；需回到公告、电话会或正式研报核验。</p>
+            <div class="empty-state">暂无 SEC/证监会可映射公告；非美股需后续接入本地交易所公告源，当前不单独分析。</div>
+          </article>
+        </div>
+        <div class="panel-body">
+          <a class="back" href="../index.html#methodology?check=CCXI">用 14 问检查清单核对此标的</a>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+    let visibleTweets = 20;
+    const batchSize = 100;
+    const cards = Array.from(document.querySelectorAll('[data-tweet-index]'));
+    const button = document.getElementById('detailMore');
+    function updateTweets() {
+      cards.forEach((card, idx) => card.classList.toggle('is-hidden', idx >= visibleTweets));
+      const remaining = Math.max(0, cards.length - visibleTweets);
+      if (button) {
+        button.style.display = remaining ? 'inline-flex' : 'none';
+        button.textContent = `展示更多推文（剩余 ${remaining.toLocaleString('zh-CN')} 条）`;
+      }
+    }
+    if (button) {
+      button.addEventListener('click', () => {
+        visibleTweets = Math.min(visibleTweets + batchSize, cards.length);
+        updateTweets();
+      });
+    }
+    updateTweets();
+  </script>
+</body>
+</html>
