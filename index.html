@@ -1458,6 +1458,28 @@
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.35;
     }
     .catalyst-window { color: var(--amber); font-size: 12px; font-weight: 700; }
+    #catalystPanel { min-width: 0; }
+    .catalyst-compact { display: grid; gap: 14px; width: 100%; min-width: 0; }
+    .catalyst-compact-block { min-width: 0; max-width: 100%; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #fff; padding: 13px; }
+    .catalyst-compact-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+    .catalyst-compact-head h3 { margin: 0; color: var(--ink); font-size: 15px; }
+    .catalyst-compact-head span { color: var(--muted); font-size: 11px; }
+    .catalyst-chip-strip { display: flex; gap: 7px; width: 100%; min-width: 0; max-width: 100%; overflow-x: auto; margin-top: 10px; padding-bottom: 3px; scrollbar-width: thin; }
+    .catalyst-chip-link { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 6px; min-height: 35px; border: 1px solid var(--line); border-radius: 999px; background: #f8fafc; color: #334155; padding: 0 10px; text-decoration: none; }
+    .catalyst-chip-link:hover, .catalyst-chip-link:focus-visible { border-color: #93c5fd; background: #eff6ff; outline: 0; }
+    .catalyst-chip-link b { color: var(--ink); font-family: "Cascadia Mono", "Consolas", monospace; font-size: 12px; }
+    .catalyst-chip-link small { color: var(--muted); font-size: 10px; }
+    .catalyst-day { display: inline-flex; min-width: 38px; min-height: 23px; align-items: center; justify-content: center; border-radius: 999px; font-family: "Cascadia Mono", "Consolas", monospace; font-size: 10px; font-weight: 850; }
+    .catalyst-day.is-soon { background: #fee2e2; color: #b91c1c; }
+    .catalyst-day.is-mid { background: #fef3c7; color: #92400e; }
+    .catalyst-day.is-later { background: #e0f2fe; color: #075985; }
+    .catalyst-intel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; min-width: 0; }
+    .catalyst-intel-list { display: grid; gap: 7px; margin-top: 10px; }
+    .catalyst-intel-item { display: grid; gap: 4px; border-top: 1px solid #eef2f7; padding-top: 8px; color: inherit; text-decoration: none; }
+    .catalyst-intel-item:first-child { border-top: 0; padding-top: 0; }
+    .catalyst-intel-item b { color: var(--ink); font-size: 12.5px; line-height: 1.45; }
+    .catalyst-intel-item p { margin: 0; color: #475569; font-size: 11.5px; line-height: 1.55; }
+    .catalyst-intel-meta { color: var(--muted); font-size: 10px; }
     .catalyst-stock-pool {
       margin-top: 14px;
       border: 1px solid #bfdbfe;
@@ -2841,17 +2863,16 @@
     body.v9 #overview { order: 0; }
     body.v9 #daily-article { order: 1; }
     body.v9 #tweets { order: 2; }
-    body.v9 #shortlist { order: 3; }
-    body.v9 #stocks { order: 4; }
-    body.v9 #performance { order: 5; }
-    body.v9 #methodology { order: 6; }
-    body.v9 #supply-chain { order: 7; }
-    body.v9 #semiconductor-chain { order: 8; }
-    body.v9 #bom-value { order: 9; }
-    body.v9 #a-share-review { order: 10; }
-    body.v9 #catalysts { order: 11; }
-    body.v9 #industries { order: 12; }
-    body.v9 #consensus { order: 13; }
+    body.v9 #catalysts { order: 3; }
+    body.v9 #shortlist { order: 4; }
+    body.v9 #stocks { order: 5; }
+    body.v9 #performance { order: 6; }
+    body.v9 #methodology { order: 7; }
+    body.v9 #supply-chain { order: 8; }
+    body.v9 #semiconductor-chain { order: 9; }
+    body.v9 #bom-value { order: 10; }
+    body.v9 #a-share-review { order: 11; }
+    body.v9 #consensus { order: 12; }
     body.v9 #sources { order: 14; }
     body.v9 .footer { order: 15; }
     .research-funnel {
@@ -2987,7 +3008,6 @@
     body.v9 .nav a:hover { background: rgba(0,0,0,.045); color: #1d1d1f; }
     body.v9 .nav a.active { background: #1d1d1f; color: #fff; }
     body.v9 .nav a:active { transform: scale(.96); transition-duration: .08s; }
-    body.v9 .nav a[href="#catalysts"],
     body.v9 .nav a[href="#mentions"],
     body.v9 .nav a[href="#semiconductor-chain"],
     body.v9 .nav a[href="#a-share-review"],
@@ -3430,6 +3450,7 @@
       .daily-article-card h3 { font-size: 25px; }
       .daily-article-reader > summary { min-height: 58px; }
       .daily-article-full-section p { font-size: 13.5px; }
+      .catalyst-intel-grid { grid-template-columns: 1fr; }
     }
     body.v9 .daily-main-card.daily-article-card > h3 { font-size: clamp(25px, 3vw, 38px); line-height: 1.2; letter-spacing: -.025em; }
     body.v9 .daily-main-card.daily-article-card > .daily-article-dek { color: var(--muted); font-size: 15px; line-height: 1.8; }
@@ -3467,8 +3488,8 @@
             <a href="#daily-article"><span class="nav-dot"></span>前瞻报告</a>
             <a href="#tweets"><span class="nav-dot"></span>推文解析</a>
 
-            <a href="#shortlist"><span class="nav-dot"></span>候选标的</a>
             <a href="#catalysts"><span class="nav-dot"></span>催化剂</a>
+            <a href="#shortlist"><span class="nav-dot"></span>候选标的</a>
             <a href="#methodology"><span class="nav-dot"></span>方法论</a>
             <a href="#stocks"><span class="nav-dot"></span>股票池</a>
             <a href="#mentions"><span class="nav-dot"></span>提及表现</a>
@@ -3533,10 +3554,10 @@
     <section class="section panel" id="catalysts">
       <div class="panel-head">
         <div>
-          <p class="panel-kicker">Catalysts</p>
-          <h2 class="panel-title">催化剂日历 · 未来 90 天</h2>
+          <p class="panel-kicker">Near-term Catalysts</p>
+          <h2 class="panel-title">近期催化 · 财报 / 行业事件 / 评级</h2>
         </div>
-        <span class="small-note">财报日来自 Yahoo 实时抓取（预估日标"预估"）；行业例会只给典型档期、需自行核验官方日程</span>
+        <span class="small-note">财报仅保留30天内窗口；行业事件来自AI Signal一线来源；评级线索来自近期外资研报摘要</span>
       </div>
       <div class="panel-body" id="catalystPanel"></div>
     </section>
@@ -3670,18 +3691,7 @@
       <div class="panel-body" id="bomValuePanel"></div>
     </section>
 
-    <section class="section panel" id="industries">
-      <div class="panel-head">
-        <div>
-          <p class="panel-kicker">Industries</p>
-          <h2 class="panel-title">主题热度与月度迁移</h2>
-        </div>
-      </div>
-      <div class="panel-body">
-        <div class="trend-wrap" id="trendChart"></div>
-        <div class="bars" id="topicBars"></div>
-      </div>
-    </section>
+
 
     <section class="section panel" id="performance">
       <div class="panel-head">
@@ -3720,7 +3730,7 @@
   </main>
 
   <nav class="mobile-nav" aria-label="Mobile">
-    <a class="active" href="#overview">总览</a><a href="#daily-article">报告</a><a href="#tweets">推文</a><a href="#shortlist">候选</a><a href="#stocks">股票池</a><a href="#performance">战绩</a><a href="#methodology">方法论</a><a href="#supply-chain">产业链</a><a href="#bom-value">BOM</a><a href="#consensus">定价</a>
+    <a class="active" href="#overview">总览</a><a href="#daily-article">报告</a><a href="#tweets">推文</a><a href="#catalysts">催化</a><a href="#shortlist">候选</a><a href="#stocks">股票池</a><a href="#performance">战绩</a><a href="#methodology">方法论</a><a href="#supply-chain">产业链</a><a href="#bom-value">BOM</a><a href="#consensus">定价</a>
   </nav>
 
   <script>
@@ -6584,45 +6594,116 @@
       const target = $('catalystPanel');
       if (!target) return;
       const cal = DATA.catalyst_calendar || {};
-      const dated = arr(cal.dated);
-      const recurring = arr(cal.recurring);
-      const countdownClass = (d) => d <= 7 ? 'cd-red' : d <= 30 ? 'cd-amber' : 'cd-gray';
-      const datedHtml = dated.length ? `
-        <h3 class="consensus-sub">财报催化剂 <span class="small-note">保留未来 90 天已接入日期；预估日单独标注</span></h3>
-        <div class="catalyst-list">
-          ${dated.map((row) => `
-            <a class="catalyst-row" href="${esc(row.detail_url || '#stocks')}">
-              <span class="cd-badge ${countdownClass(row.days_out)}">D-${fmt(row.days_out)}</span>
-              <span class="catalyst-main">
-                <b>${esc(row.ticker)} · ${esc(row.title)}</b>
-                <span class="catalyst-meta">${esc(row.date)}
-                  <span class="chip blue">${esc(row.type)}</span>
-                  ${row.estimated ? '<span class="chip amber" title="Yahoo 预估日，未确认">预估</span>' : ''}
-                </span>
-                <span class="catalyst-why">${esc(row.why)}</span>
-              </span>
+      const earnings30 = arr(cal.dated)
+        .filter((row) => Number(row.days_out) >= 0 && Number(row.days_out) <= 30)
+        .sort((a, b) => Number(a.days_out) - Number(b.days_out));
+      const dayClass = (days) => days <= 7 ? 'is-soon' : days <= 14 ? 'is-mid' : 'is-later';
+      const shortDate = (value) => {
+        const text = String(value || '');
+        return /^\d{4}-\d{2}-\d{2}$/.test(text) ? text.slice(5) : text;
+      };
+      const earningsHtml = earnings30.length ? `
+        <div class="catalyst-chip-strip" aria-label="未来30天财报日">
+          ${earnings30.map((row) => `
+            <a class="catalyst-chip-link" href="${esc(row.detail_url || tickerUrl(row.ticker) || '#stocks')}" title="${esc(row.why || row.title || '')}">
+              <span class="catalyst-day ${dayClass(Number(row.days_out))}">D-${fmt(row.days_out)}</span>
+              <b>${esc(row.ticker || '-')}</b>
+              <small>${esc(shortDate(row.date))}${row.estimated ? ' · 预估' : ''}</small>
             </a>
           `).join('')}
         </div>
-      ` : '<div class="stock-change-empty">近 90 天暂无已确认的财报日（行情源未返回或不在窗口内）。</div>';
-      const recurringHtml = recurring.length ? `
-        <div class="catalyst-recurring">
-          <h3>行业例会（需核验具体日期）</h3>
-          ${recurring.map((ev) => `
-            <div class="catalyst-rec-row">
-              <b>${esc(ev.name)}</b>
-              <span class="catalyst-window">${esc(ev.typical_window || '档期待补充')}</span>
-              <div class="chips">
-                ${arr(ev.tickers).slice(0, 6).map((t) => `<a class="chip green" href="${esc(tickerUrl(t))}">${esc(t)}</a>`).join('')}
-              </div>
-              <span class="catalyst-why" title="${esc(ev.why || '')}">${esc(short(ev.why || '', 42))}</span>
-            </div>
-          `).join('')}
+      ` : '<div class="stock-change-empty">未来30天暂无已接入的财报日期。</div>';
+
+      const aiRank = (item) => {
+        const source = String(item.source_name || '');
+        const claim = `${item.title || ''} ${item.core_claim || ''}`;
+        if (/NVIDIA/i.test(source)) return 1;
+        if (/Sam Altman/i.test(source)) return 2;
+        if (/Boris Cherny/i.test(source)) return 3;
+        if (/Google Labs/i.test(source)) return 4;
+        if (/Vercel/i.test(source) && /token flow|Gateway/i.test(claim)) return 5;
+        if (/SemiAnalysis/i.test(source)) return 6;
+        if (/Latent Space/i.test(source)) return 7;
+        if (/a16z/i.test(source)) return 8;
+        return 99;
+      };
+      const aiChinese = (item) => {
+        const source = String(item.source_name || '');
+        const claim = `${item.title || ''} ${item.core_claim || ''}`;
+        if (/NVIDIA/i.test(source)) return ['AI基础设施性能需从系统维度衡量', '英伟达强调，单一性能数字只能解释部分问题，判断基础设施竞争力还需结合系统吞吐、能耗与可交付性。'];
+        if (/Sam Altman/i.test(source)) return ['推理需求仍在高速增长', 'OpenAI仍在继续扩充推理供给，但短期可能出现容量波动，算力、网络与供电需求的高景气逻辑尚未结束。'];
+        if (/Boris Cherny/i.test(source)) return ['软件工程流程正转向 Agent 自动化', 'Claude Code团队观察到，工程师正在把更多重复工作交给Agent，可能继续放大推理调用和开发工具基础设施需求。'];
+        if (/Google Labs/i.test(source)) return ['Gemini东南亚活跃用户一年翻倍', 'Google披露当地活跃用户增长、多语种和多模态使用数据，为AI应用从文本向语音、图像和视频渗透提供新样本。'];
+        if (/Vercel/i.test(source) && /token flow|Gateway/i.test(claim)) return ['Vercel开放AI Gateway词元流数据', '公开的模型调用结构可作为观察推理需求、模型份额与应用侧活跃度的新增高频指标。'];
+        if (/Latent Space/i.test(source)) return ['AI工程进入“围绕Agent构建系统”阶段', '行业讨论重心正从单点调用模型，转向围绕Agent搭建完整工作流、权限、评测与基础设施。'];
+        if (/a16z/i.test(source)) return ['AI芯片与基础设施竞争格局再审视', '行业继续讨论英伟达之外的定制芯片、网络与系统级替代路径，关注增量而非简单判断谁会取代谁。'];
+        return ['AI一线信号更新', '该信息暂作为技术方向和需求变化线索，仍需由订单、财报或公开经营数据进一步验证。'];
+      };
+      const aiSeen = new Set();
+      const aiItems = arr((DATA.ai_signal_brief || {}).items)
+        .filter((item) => ['x', 'podcast'].includes(String(item.source_type || '').toLowerCase()))
+        .sort((a, b) => aiRank(a) - aiRank(b) || String(b.published_at || '').localeCompare(String(a.published_at || '')))
+        .filter((item) => {
+          const key = String(item.source_name || '').replace(/\s*\(.+?\)\s*/g, '').trim();
+          if (aiSeen.has(key) || aiRank(item) >= 99) return false;
+          aiSeen.add(key);
+          return true;
+        })
+        .slice(0, 4);
+      const aiHtml = aiItems.map((item) => {
+        const [title, summary] = aiChinese(item);
+        return `
+          <a class="catalyst-intel-item" href="${esc(item.source_url || '#')}" target="_blank" rel="noopener noreferrer">
+            <span class="catalyst-intel-meta">${esc(item.source_name || 'AI Signal')} · ${esc(String(item.published_at || '').slice(0, 10))}</span>
+            <b>${esc(title)}</b>
+            <p>${esc(summary)}</p>
+          </a>
+        `;
+      }).join('') || '<div class="stock-change-empty">暂无可展示的AI/行业重要事件。</div>';
+
+      const reportLabel = (row) => {
+        const title = String(row.title || '').replace(/\.pdf$/i, '');
+        if (/建滔|覆铜板/.test(title)) return ['花旗：覆铜板涨价超预期并上调目标价', '6月覆铜板涨价幅度被视为超预期，提示高端材料价格传导仍值得跟踪。'];
+        if (/藤仓/.test(title) && /高盛/.test(title)) return ['高盛：光通信指引上修，维持买入', '供应扰动消退后，公司上修经营指引；投行同步提高目标价，关注利润兑现与资本开支延续性。'];
+        if (/藤仓/.test(title)) return ['大摩：光通信公司大幅上修经营指引', '经营指引上修强化了AI光互连需求仍具韧性的判断，后续验证点转向交付与盈利兑现。'];
+        if (/华润微/.test(title)) return ['高盛：功率半导体评级与目标价上调', '报告将AI需求列为后续增长支撑；A股部分仅作产业映射观察，不延伸为具体交易建议。'];
+        if (/ASIC|定制芯片/.test(title)) return ['摩根大通：AI定制芯片市场更新', '云厂商定制芯片继续扩张，增量机会可能向先进封装、高速网络和芯片设计服务扩散。'];
+        if (/HBM4|存储/.test(title)) return ['伯恩斯坦：HBM4放量出现早期信号', '韩国存储出口与HBM4进展提供新的景气验证，关注供给爬坡、良率和价格变化。'];
+        return [short(title, 54), '该观点作为近期机构预期变化线索，仍需结合公开数据验证。'];
+      };
+      const reports = arr((DATA.research_report_digest || {}).top_reports)
+        .filter((row) => !/^会议/.test(String(row.title || '')))
+        .filter((row) => /上调|下调|目标价|买入|增持|评级|维持|ASIC|定制芯片|HBM4|存储/.test(String(row.title || '')))
+        .slice(0, 5);
+      const reportHtml = reports.map((row) => {
+        const [title, summary] = reportLabel(row);
+        return `
+          <article class="catalyst-intel-item">
+            <span class="catalyst-intel-meta">${esc(row.publish_date || '-')} · 外资投行观点</span>
+            <b>${esc(title)}</b>
+            <p>${esc(summary)}</p>
+          </article>
+        `;
+      }).join('') || '<div class="stock-change-empty">暂无符合筛选条件的近期投行评级或行业报告。</div>';
+
+      target.innerHTML = `
+        <div class="catalyst-compact">
+          <section class="catalyst-compact-block">
+            <div class="catalyst-compact-head"><h3>30天内财报</h3><span>按临近程度标色 · 横向滑动</span></div>
+            ${earningsHtml}
+          </section>
+          <div class="catalyst-intel-grid">
+            <section class="catalyst-compact-block">
+              <div class="catalyst-compact-head"><h3>AI / 行业重要事件</h3><span>来自 AI Signal 一线信源</span></div>
+              <div class="catalyst-intel-list">${aiHtml}</div>
+            </section>
+            <section class="catalyst-compact-block">
+              <div class="catalyst-compact-head"><h3>近期投行评级与研报</h3><span>只保留预期变化</span></div>
+              <div class="catalyst-intel-list">${reportHtml}</div>
+            </section>
+          </div>
         </div>
-      ` : '';
-      target.innerHTML = (dated.length || recurring.length)
-        ? datedHtml + recurringHtml
-        : '<div class="stock-change-empty">近 90 天暂无已确认的财报日；行业例会待补充。</div>';
+      `;
     }
 
     function renderConsensus() {
