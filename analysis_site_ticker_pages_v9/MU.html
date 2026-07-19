@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$MU 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -25,18 +26,18 @@
     <section class="hero">
       <span class="eyebrow">Ticker Detail</span>
       <h1>$MU 历史推文</h1>
-      <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+      <p>近期观点：高波动，需同时看基本面与交易结构。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>204</b></div>
-        <div class="stat-card"><span>历史推文</span><b>204</b></div>
+        <div class="stat-card"><span>累计提及</span><b>214</b></div>
+        <div class="stat-card"><span>历史推文</span><b>214</b></div>
         <div class="stat-card"><span>首次提及</span><b>2025-09-25</b></div>
-        <div class="stat-card"><span>最近提及</span><b>2026-07-07</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-07-17</b></div>
         <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
         <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
             
       </div>
-      <div class="chips"><span class="chip blue">关税 / 宏观冲击买点 37</span><span class="chip blue">瓶颈狩猎（核心透镜） 34</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 29</span><span class="chip blue">签约 ARR vs 市值错配 21</span><span class="chip blue">Mag7 客户集中度过滤 11</span><span class="chip blue">信念分层、仓位与时点 9</span><span class="chip blue">认证周期 vs TTM 营收 9</span><span class="chip blue">Vega / IV 错定价（高阶，慎用） 8</span></div>
+      <div class="chips"><span class="chip blue">关税 / 宏观冲击买点 38</span><span class="chip blue">瓶颈狩猎（核心透镜） 35</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 31</span><span class="chip blue">签约 ARR vs 市值错配 23</span><span class="chip blue">Mag7 客户集中度过滤 11</span><span class="chip blue">Vega / IV 错定价（高阶，慎用） 9</span><span class="chip blue">信念分层、仓位与时点 9</span><span class="chip blue">认证周期 vs TTM 营收 9</span></div>
     </section>
     <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
     
@@ -50,7 +51,7 @@
         <div class="analysis-grid panel-body">
           <article class="analysis-box">
             <h3>Serenity 观点</h3>
-            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
           </article>
           <article class="analysis-box">
             <h3>新增信号</h3>
@@ -62,7 +63,7 @@
           </article>
           <article class="analysis-box">
             <h3>作者立场</h3>
-            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
           </article>
           <article class="analysis-box">
             <h3>情绪与市场</h3>
@@ -121,6 +122,259 @@
           
       <article class="tweet-card" data-tweet-index="0">
         <div class="tweet-head">
+          <span class="mono">2026-07-17 11:16</span>
+          <span><span class="chip red">$INTC</span><span class="chip red">$MU</span><span class="chip red">$SKHY</span></span>
+        </div>
+        <div class="tweet-text">Kim Sunwoo of Meritz Securities: &quot;This Is Not the Time to Sell Samsung Electronics and $SKHY&quot;
+
+They claim markets are excessively misunderstanding the situation with semis. And that DRAM shortage will intensify in the second half of this year.  
+
+- H2 2026: &quot;suppliers can fulfill only 75%–80% of DRAM demand&quot;. 
+- 2027: ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Kim Sunwoo of Meritz Securities: &quot;This Is Not the Time to Sell Samsung Electronics and $SKHY&quot;
+
+They claim markets are excessively misunderstanding the situation with semis. And that DRAM shortage will intensify in the second half of this year.  
+
+- H2 2026: &quot;suppliers can fulfill only 75%–80% of DRAM demand&quot;. 
+- 2027: &quot;fulfillment is expected to fall into the 60% range.&quot;
+
+In the article, they attached market forecasts that show SK Hynix with a 2027 3.5x P/E and Samsung a 3.9x P/E. 
+
+Think the $INTC CEO said it best around timeframes with his quote &quot;no relief in memory supply or pricing until at least 2028&quot;. 
+
+Especially after $MU 16 LTAs with favorable take or pay volume contracts... memory demand seems structural.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2077955479742173422" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>Meritz 证券公司的 Kim Sunwoo：“现在不是出售三星电子和 $SKHY 的时候”
+
+他们声称市场过度误解了半决赛的情况。今年下半年，DRAM 短缺现象将会加剧。- 2026 年下半年：“供应商只能满足 DRAM 需求的 75%–80%”。- 2027年：“预计履行率将落入60%范围内。”
+
+在文章中，他们附上了市场预测，显示 SK 海力士 2027 年市盈率为 3.5 倍，三星为 3.9 倍市盈率。认为 $INTC 首席执行官所说的最好是在时间范围内，他的名言是“至少在 2028 年之前内存供应或定价不会缓解”。尤其是在签订了 16 美元的长期协议以及有利的照付不议合同之后……内存需求似乎是结构性的。</div>
+        <div class="tweet-foot">
+          <span>likes 1599 / retweets 145 / replies 191 / views 481840</span>
+        </div>
+        <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-07-16 21:54</span>
+          <span><span class="chip red">$MU</span><span class="chip red">$QCOM</span></span>
+        </div>
+        <div class="tweet-text">Today, $MU announced it signed memory LTAs with $QCOM.
+
+Interesting reaction to see Micron proceeded to drop 5.37% right after.
+
+Doesn’t quite feel like there’s anything individually wrong with memory or AI names with all these structural agreements signed?
+
+More like the tail end of deleveraging / margin cascades.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Today, $MU announced it signed memory LTAs with $QCOM.
+
+Interesting reaction to see Micron proceeded to drop 5.37% right after.
+
+Doesn’t quite feel like there’s anything individually wrong with memory or AI names with all these structural agreements signed?
+
+More like the tail end of deleveraging / margin cascades.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2077753660592033828" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>今天，$MU 宣布与 $QCOM 签署存储长期协议，但 Micron 随后仍下跌 5.37%。在这些结构性协议持续签署的情况下，我不觉得存储或 AI 公司各自的基本面突然出了问题；这更像是去杠杆和保证金连锁平仓进入尾声。</div>
+        <div class="tweet-foot">
+          <span>likes 2204 / retweets 155 / replies 290 / views 664895</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-07-16 00:01</span>
+          <span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
+        </div>
+        <div class="tweet-text">@michaelsikand DRAM 20%+ hike for next quarter, $SNDK LTAs with $META, $MU 16+ LTAs.
+
+Market: proceeds to sell off memory.
+
+800G transceiver revision sharply upward? Lasers completely sold out into early 2029? 
+
+Market: sells off photonics and laser companies.</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">@michaelsikand DRAM 20%+ hike for next quarter, $SNDK LTAs with $META, $MU 16+ LTAs.
+
+Market: proceeds to sell off memory.
+
+800G transceiver revision sharply upward? Lasers completely sold out into early 2029? 
+
+Market: sells off photonics and laser companies.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2077423269066784942" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>@michaelsikand DRAM 下一季度加息 20% 以上，$SNDK 长期协议与 $META，$MU 16+ 长期协议。市场：抛售内存收益。800G光模块修正大幅上行？激光器到 2029 年初就完全售空了吗？市场：出售光子和激光公司。</div>
+        <div class="tweet-foot">
+          <span>likes 295 / retweets 7 / replies 14 / views 31223</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-07-15 11:08</span>
+          <span><span class="chip red">$MU</span></span>
+        </div>
+        <div class="tweet-text">Well, looks like SLC NAND is forcasted to rise up 120-170% for H2 2026 per Trendforce. 
+
+There&#x27;s $MU (21%), Kioxia (20%) as largest share, but clearer beneficiaries appears to be:
+
+1. Winbond (2344): ~15% of the SLC NAND market
+2. Macronix (2337): ~11% market share
+3. SkyHigh Memory via Puya Semi: ~14% market share
+
+Gi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Well, looks like SLC NAND is forcasted to rise up 120-170% for H2 2026 per Trendforce. 
+
+There&#x27;s $MU (21%), Kioxia (20%) as largest share, but clearer beneficiaries appears to be:
+
+1. Winbond (2344): ~15% of the SLC NAND market
+2. Macronix (2337): ~11% market share
+3. SkyHigh Memory via Puya Semi: ~14% market share
+
+Given Micron at $1T and others are a bit large relative to SLC NAND TAM. 
+
+(source: Q1 2026 Winbond presentation/Trendforce).</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2077228758491386121" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>根据 Trendforce 的预测，2026 年下半年 SLC NAND 将上涨 120-170%。$MU (21%)、Kioxia (20%) 占据最大份额，但更明确的受益者似乎是：
+
+1. 华邦电子 (2344)：约占 SLC NAND 市场的 15%
+2.旺宏电子（2337）：~11%市场份额
+3.普亚半导体的SkyHigh Memory：约14%的市场份额
+
+鉴于美光的价格为 1 万亿美元，其他产品相对于 SLC NAND TAM 来说有点大。（来源：2026 年第一季度华邦演示/Trendforce）。</div>
+        <div class="tweet-foot">
+          <span>likes 1043 / retweets 79 / replies 123 / views 398703</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-07-13 08:45</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMKR</span><span class="chip red">$AVGO</span><span class="chip red">$GLW</span><span class="chip red">$INTC</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SPCX</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Just a semi recap TLDR:
+
+- $GLW glass bridge per Morgan Stanley has potential, but hard to displace FAU (like FOCI) in short term
+
+- $SPCX Starlink Gen 3 is scaling to 100,000 units (10x prev gen) creating possible capacity constraints for suppliers of switches to CCL.
+
+- PCB supply shortages are projected to persist u...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a semi recap TLDR:
+
+- $GLW glass bridge per Morgan Stanley has potential, but hard to displace FAU (like FOCI) in short term
+
+- $SPCX Starlink Gen 3 is scaling to 100,000 units (10x prev gen) creating possible capacity constraints for suppliers of switches to CCL.
+
+- PCB supply shortages are projected to persist until 2028, and component shortages/price hikes are already forcing ODMs like Inventec to issue  conservative H2 shipment
+
+- DeepSeek and Zhipu are developing custom ASICs to bypass $NVDA (kinda expected by now). 
+
+- Anthropic has achieved a $30B ARR and is projected to hit &gt;$1B in Q3 profit. Turns out these frontier labs are more profitable than people think. 
+
+- US admin pressured $AAPL to source from $INTC, in exchange for tariff exception. Kinda pressuring alignment away from TSM.  
+
+- $TSM plans a 30x expansion of its Photonic Integrated Circuit (PIC)  capacity by 2028, growing from 500 to 25,000 wafers per month
+
+- Hanmi Semiconductor is entering the CoWoS packaging equipment market
+
+- $NVDA and NTT hosting a conference July 24th to discuss CPO strategies. 
+
+- 5x general NAND flash price hike this year, market size $489B by next year triggered by RAG/inference. Samsung and SK Hynix make emergency fab investments, NAND equipment suppliers go brrrr.  
+
+- Gas turbine bottleneck, 40% supply gap accompanied by staggering 5-year delivery cycles (mega-fabs need them for mass production).
+
+- AI probe card assembly has hit a severe bottleneck apparently. Which is attempted to by solved with things like Innovation Service&#x27;s machines. 
+
+- Nanya, 79.5% gross margins reported, memory go brr. 4x capex for capacity/advanced packaging. 
+
+- CXMT&#x27;s STAR Market IPO on July 16, so should bring a lot of attention to memory players in that supply chain. 
+
+- KYEC $1.4B investment into US for $TSM Arizona output test facilities. Lot of these players like $AMKR and others should go brr in 2028.
+
+- $INTC CEO warned last month that helium could hinder the manufacturing costs and delivery times of AI chips
+
+- 3D NAND word lines are shifting from Tungsten to Molybdenum starting at the 375-layer node
+
+- SambaNova secured JPM for AI inference and raised $1B at an $11B valuation.
+
+- HBM prices projections to double in 2027 as $NVDA Rubin platform drives demand.
+
+- $MU provides $500 million in funding to support GlobalWafers&#x27; US manufacturing capacity 
+
+- $META &#x27;Iris&#x27; will enter mass production in September  via $AVGO and TSMC and Meta aims to double computing power to 14GW by 2027.
+
+- Largan Precision has secured its first CPO FAU order, mass production slated for middle of next year (kinda indication around Foci and others). 
+
+- Samsung and SK Hynix have delayed the implementation of hybrid bonding packaging technology for HBM4 apparently 
+
+- Memory costs (DRAM/NAND) have reached 60% of the BOM for sub-$400 smartphones, causing a severe volume contraction.
+
+- SK Hynix successfully rasied $26.5 billion through a Nasdaq ADR
+
+- $TSLA issued procurement guidelines requiring suppliers to reach weekly production of 1,000 units by September and double to 2,000-2,500 by year end for its 3rd gen Optimus robot. Apparently Alliance Technology and A-Link may be in this supply chain harmonic reducers and vision lenses?
+
+Kinda go through all this stuff every day, but don&#x27;t wanna be a news reporter so just consolidated stuff I found interesting.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2076467953995071881" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>简单回顾一下 TLDR：
+
+- 摩根士丹利的 GLW 玻璃桥具有潜力，但短期内很难取代 FAU（如 FOCI）
+
+- $SPCX Starlink Gen 3 正在扩展到 100,000 台（上一代的 10 倍），这可能为 CCL 交换机供应商带来产能限制。- PCB供应短缺预计将持续到2028年，而元件短缺/价格上涨已经迫使英业达等ODM厂商发布保守的H2出货量
+
+- DeepSeek 和zhipu 正在开发定制 ASIC 来绕过 $NVDA（现在有点预期）。- Anthropic 的 ARR 已达到 30B 美元，预计第三季度利润将达到 10 亿美元以上。事实证明，这些前沿实验室的利润比人们想象的要高。- 美国行政部门向 $AAPL 施压，要求其从 $INTC 采购，以换取关税豁免。有点压力，远离TSM。- $TSM 计划到 2028 年将其光子集成电路 (PIC) 产能扩大 30 倍，从每月 500 片晶圆增加到 25,000 片晶圆
+
+- Hanmi Semiconductor正在进军CoWoS封装设备市场
+
+- $NVDA 和 NTT 于 7 月 24 日举办会议讨论 CPO 策略。- 今年 NAND 闪存价格普遍上涨 5 倍，由 RAG/inference 触发，明年市场规模将达到 $489B。三星和SK海力士紧急投资晶圆厂，NAND设备供应商陷入困境。- 燃气轮机瓶颈，40% 的供应缺口，以及惊人的 5 年交付周期（大型晶圆厂需要它们进行大规模生产）。- AI探针卡组装显然已经遇到了严重的瓶颈。人们试图通过创新服务的机器之类的东西来解决这个问题。- Nanya，报告毛利率为 79.5%，内存运行良好。容量/先进封装的 4 倍资本开支。- 长鑫存储将于 7 月 16 日科创板 IPO，因此应该会引起该供应链内存厂商的广泛关注。- KYEC 向美国投资 1.4B 美元用于 $TSM Arizona 输出测试设施。很多像 $AMKR 和其他人这样的玩家应该会在 2028 年离开。- $INTC 首席执行官上个月警告说，氦气可能会阻碍人工智能芯片的制造成本和交付时间
+
+- 从 375 层节点开始，3D NAND 字线从钨转向钼
+
+- SambaNova 获得了 JPM 的人工智能推理服务，并以 11B 美元的估值筹集了 1B 美元。- 由于 NVDA Rubin 平台推动需求，HBM 预计 2027 年价格将翻倍。- $MU 提供 5 亿美元资金支持 GlobalWfers 在美国的制造能力 
+
+- $META“Iris”将于 9 月通过 $AVGO 和台积电进入量产，Meta 的目标是到 2027 年将算力翻倍至 14GW。- 大立光电已获得首个 CPO FAU 订单，预计将于明年中期量产（Foci 等公司有类似迹象）。- 三星和SK海力士明显推迟了HBM4混合键合封装技术的实施 
+
+- 对于 400 美元以下的智能手机，内存成本 (DRAM/NAND) 已达到 BOM 的 60%，导致销量严重萎缩。- SK Hynix 通过纳斯达克 ADR 成功筹集 265 亿美元
+
+- TSLA 发布了采购指南，要求供应商在 9 月份之前达到每周生产 1,000 台的目标，并在年底前将第三代 Optimus 机器人的产量翻一番，达到 2,000-2,500 台。显然Alliance Technology和A-Link可能在这个供应链中谐波减速器和视觉镜片？有点每天都要经历所有这些东西，但不想成为一名新闻记者，所以只是整合了我发现有趣的东西。</div>
+        <div class="tweet-foot">
+          <span>likes 2039 / retweets 169 / replies 195 / views 659919</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
+        <div class="tweet-head">
           <span class="mono">2026-07-07 22:03</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span></span>
         </div>
@@ -132,7 +386,7 @@ Which are all down -4% to -10%+ today so far.
 
 Probably doesn&#x27;t have anything to do with individual fundamentals. 
 
-Indiscriminate selloffs from</div>
+Indiscriminate selloffs from things like cascading margin liquidations...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -144,7 +398,7 @@ Which are all down -4% to -10%+ today so far.
 
 Probably doesn&#x27;t have anything to do with individual fundamentals. 
 
-Indiscriminate selloffs from</div>
+Indiscriminate selloffs from things like cascading margin liquidations, usually provide compelling opportunities if the underlying improves.</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2074494514061017508" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
@@ -152,15 +406,71 @@ Indiscriminate selloffs from</div>
 
 如果 $NBIS、$MRVL、$INTC、$SNDK、$AMD、$SIVE、$MU、$LITE 等所有内容一起崩溃...... 
 
-到目前为止，今天的跌幅都在 -4% 到 -10%+ 之间。可能和个人的基本面没有什么关系。不加区别的抛售</div>
+到目前为止，今天的跌幅都在 -4% 到 -10%+ 之间。可能和个人的基本面没有什么关系。如果基本面改善，诸如级联保证金清算之类的不加选择的抛售通常会提供令人信服的机会。</div>
         <div class="tweet-foot">
-          <span>likes 3120 / retweets 179 / replies 345 / views 442416</span>
+          <span>likes 5096 / retweets 294 / replies 403 / views 1225943</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="1">
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-07-07 05:14</span>
+          <span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$RDDT</span></span>
+        </div>
+        <div class="tweet-text">Was a sad few months for $RDDT. But glad it&#x27;s finally back above $200. 
+
+Reddit was doing:
+- $663M revenue w/ 91.5% gross margins
+- $204M GAAP net income
+- 45%+ fwd Y/Y growth after 69%+ growth.
+- Net profit is ~30.7% of revenue
+
+Felt very weird to see a profitable company get dragged down after earnings. 
+
+But in hind...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Was a sad few months for $RDDT. But glad it&#x27;s finally back above $200. 
+
+Reddit was doing:
+- $663M revenue w/ 91.5% gross margins
+- $204M GAAP net income
+- 45%+ fwd Y/Y growth after 69%+ growth.
+- Net profit is ~30.7% of revenue
+
+Felt very weird to see a profitable company get dragged down after earnings. 
+
+But in hindsight, given the increase hyperscaler capex, the drop felt more like it&#x27;s more relative opportunity cost more than fundamentals?
+
+Since a lot of inflow poured into $MU / Sk Hynix that are bottlenecked into 2029. Or with laser bottlenecks like $LITE that last into 2029 as well. 
+
+Same thing happens in reverse after selloffs ig, even if fundamentals didn&#x27;t change. 
+
+Been seeing a lot of noise with memory optimization or Chinese players... but don&#x27;t quite think you sign 16T+ LTAs if memory was getting flooded or not used anytime soon. 
+
+Same with optical players... if in earnings, they state anything they make gets bought, I don&#x27;t quite think a lot of the noise has material effect on their fundamentals. 
+
+Regardless, nice to see some recovery with familiar faces like $HOOD, $HIMS, and $RDDT though.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2074240512593481955" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>对于 $RDDT 来说这是悲伤的几个月。但很高兴它终于回到了 200 美元以上。Reddit 正在做：
+- 收入 6.63 亿美元，毛利率 91.5%
+- 2.04 亿美元 GAAP 净利润
+- 在增长 69% 以上之后，同比增长 45% 以上。- 净利润约占收入的30.7%
+
+看到一家盈利的公司在盈利后被拖垮，感觉很奇怪。但事后看来，考虑到超大规模资本开支的增加，这种下降感觉更像是相对机会成本高于基本面？由于大量资金流入 $MU / Sk Hynix，这些瓶颈一直持续到 2029 年。或者像 $LITE 这样的激光瓶颈也会持续到 2029 年。即使基本面没有改变，在抛售之后也会发生同样的事情。已经看到很多有关内存优化或中国玩家的噪音……但如果内存被淹没或短期内没有使用，不太认为您会签署 16T+ LTA。与光学玩家一样......如果在收益中，他们声称自己生产的任何东西都会被购买，我不太认为很多噪音会对他们的基本面产生实质性影响。无论如何，很高兴看到 $HOOD、$HIMS 和 $RDDT 等熟悉面孔的恢复。</div>
+        <div class="tweet-foot">
+          <span>likes 829 / retweets 51 / replies 180 / views 362964</span>
+        </div>
+        <div class="chips"><span class="chip blue">GAAP 毛利率之战</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
         <div class="tweet-head">
           <span class="mono">2026-07-06 19:01</span>
           <span><span class="chip red">$MU</span></span>
@@ -189,7 +499,7 @@ It’s like if I said OpenAI optimized memory compression so $MU TAM drops 80%.<
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="2">
+      <article class="tweet-card" data-tweet-index="8">
         <div class="tweet-head">
           <span class="mono">2026-07-06 14:35</span>
           <span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -218,16 +528,16 @@ I’m personally just listening to $NVDA direct statements and</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="3">
+      <article class="tweet-card" data-tweet-index="9">
         <div class="tweet-head">
           <span class="mono">2026-07-05 23:36</span>
-          <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
+          <span><span class="chip red">$MU</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span></span>
         </div>
         <div class="tweet-text">Just some consolidated updates on memory: 
 
 -  $MU leads new 1.5T Yen investment in Hiroshima ~$9.3B. (bullish read through for Disco, Advantest, Resonac, Towa) since capex is localized.
 
-- Morgan Stanley pointed out NAND will continue to be in short supply into 2027 so $SNDK /</div>
+- Morgan Stanley pointed out NAND will continue to be in short supply into 2027 so $SNDK / Kioxia type players are happy alongisde $...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -235,7 +545,25 @@ I’m personally just listening to $NVDA direct statements and</div>
 
 -  $MU leads new 1.5T Yen investment in Hiroshima ~$9.3B. (bullish read through for Disco, Advantest, Resonac, Towa) since capex is localized.
 
-- Morgan Stanley pointed out NAND will continue to be in short supply into 2027 so $SNDK /</div>
+- Morgan Stanley pointed out NAND will continue to be in short supply into 2027 so $SNDK / Kioxia type players are happy alongisde $SIMO and upstream.
+
+- MS remains especially positive on Macronix/Winbond
+
+- UBS expects the average price of DDR contracts in the Q3 2026 to increase 32% | 18% Q4, vs. 17% and 12% est. 
+
+- UBS expects NAND flash to be raised 30% from prev quarter. 
+
+- Samsung reportedly plans 20% DRAM hike Q3. TrendForce recently forecast DRAM contract prices to rise 13 to 18 percent in the third quarter from the previous quarter, so this hike beats expectations.
+
+Something to note:
+
+Lot people see 20%... and don&#x27;t think it&#x27;s a lot compared to the 70-80% from previous quarters. 
+
+But if you hike something by 100%, then hike something by 100%, then hike something by 30%, it&#x27;s a lot more than people estimate since it&#x27;s compounded. Similar to tracking inflation. 
+
+I&#x27;ve already made projections going into 2028 from the start of the year on my memory names... 
+
+I&#x27;m just sitting back and watching things play out through all the &quot;memory optimization&quot; and &quot;they can&#x27;t keep price hiking like this!&quot; noise.</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2073793206408667392" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
@@ -251,13 +579,13 @@ I’m personally just listening to $NVDA direct statements and</div>
 
 我只是坐下来看着事情通过所有“内存优化”和“他们不能让价格像这样上涨！”噪音。</div>
         <div class="tweet-foot">
-          <span>likes 2196 / retweets 141 / replies 204 / views 616544</span>
+          <span>likes 2269 / retweets 145 / replies 204 / views 690276</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="4">
+      <article class="tweet-card" data-tweet-index="10">
         <div class="tweet-head">
           <span class="mono">2026-06-26 15:47</span>
           <span><span class="chip red">$MU</span></span>
@@ -280,13 +608,13 @@ He probably has higher visibility into the memory bottleneck than others… http
         </div>
         <div class="tweet-zh"><b>中文译文：</b>只是埃隆·马斯克漫不经心地敲响了警报。关于 MU / SK 海力士 / 三星内存相对于供应的巨大需求 + 价格上涨。他可能比其他人对内存瓶颈有更高的了解...... https://t.co/iszX0YJHuS</div>
         <div class="tweet-foot">
-          <span>likes 268 / retweets 23 / replies 81 / views 61833</span>
+          <span>likes 2416 / retweets 207 / replies 215 / views 1085838</span>
         </div>
         <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="5">
+      <article class="tweet-card" data-tweet-index="11">
         <div class="tweet-head">
           <span class="mono">2026-06-26 00:55</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$WEN</span></span>
@@ -309,13 +637,13 @@ Cheering on Japan though, hoping Sweden gets mogged with a 2-0 to represent the 
         </div>
         <div class="tweet-zh"><b>中文译文：</b>不，要填写一份工作申请表并支付 $WEN，然后在垃圾箱后面扎营。即使今天 $MU 和 $SNDK 荒谬的表现也无法拯救我的端口。不过还是为日本加油吧，希望瑞典能以 2-0 的比分击败日本，代表着 20% 的降幅。</div>
         <div class="tweet-foot">
-          <span>likes 179 / retweets 2 / replies 67 / views 41334</span>
+          <span>likes 1013 / retweets 24 / replies 275 / views 537901</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="6">
+      <article class="tweet-card" data-tweet-index="12">
         <div class="tweet-head">
           <span class="mono">2026-06-25 22:51</span>
           <span><span class="chip red">$ASTS</span><span class="chip red">$AXTI</span><span class="chip red">$CRM</span><span class="chip red">$MU</span><span class="chip red">$PLTR</span><span class="chip red">$RKLB</span><span class="chip red">$SIVE</span></span>
@@ -358,7 +686,7 @@ Is memory like $MU, indexes, or large cap semis like Intel so far.
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="7">
+      <article class="tweet-card" data-tweet-index="13">
         <div class="tweet-head">
           <span class="mono">2026-06-25 11:45</span>
           <span><span class="chip red">$MU</span></span>
@@ -389,7 +717,7 @@ Is memory like $MU, indexes, or large cap semis like Intel so far.
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="8">
+      <article class="tweet-card" data-tweet-index="14">
         <div class="tweet-head">
           <span class="mono">2026-06-25 05:16</span>
           <span><span class="chip red">$MU</span></span>
@@ -444,7 +772,7 @@ EPS: $30.00 to $32.00, vs. $25.31.
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="9">
+      <article class="tweet-card" data-tweet-index="15">
         <div class="tweet-head">
           <span class="mono">2026-06-23 23:42</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$DRAM</span><span class="chip red">$FLNC</span><span class="chip red">$IQE</span><span class="chip red">$KORU</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOXL</span><span class="chip red">$TSEM</span></span>
@@ -511,7 +839,7 @@ MRVL 美元：-8.3%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="10">
+      <article class="tweet-card" data-tweet-index="16">
         <div class="tweet-head">
           <span class="mono">2026-06-23 22:08</span>
           <span><span class="chip red">$INTC</span><span class="chip red">$MU</span><span class="chip red">$TSM</span></span>
@@ -540,7 +868,7 @@ If institutions really believed 3 rate hike sellside</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="11">
+      <article class="tweet-card" data-tweet-index="17">
         <div class="tweet-head">
           <span class="mono">2026-06-19 20:19</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$HPS.A</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNAP</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TTD</span><span class="chip red">$XLU</span></span>
@@ -593,13 +921,13 @@ But regardless, I&#x27;d prefer to judge how ideas play out on medium term timef
 
 这摧毁了我从 Foci、Msscorp、Xintec 等公司购买的 3 个 TW CPO 多头头寸。（呈深红色）。Shusin / Win Semi 的表现要好得多。我提到的日本其他一些公司，如 Towa、Harmonic Drive、NCI 等，在经历短期波动后表现要好得多。至于韩国，是的，我有来自 Auros 的 PTSD，现在 Foosung 都是红色的（虽然我没有 093370，只是在观察价格走势时有 PTSD）。我不知道我是否会再次接触韩国，因为太不稳定了。但我仍然认为，在 Sk hynix/三星资质 + HVM 以及未来日本供应链关闭之后，这些最终将成为绿色。我也确实改变了我之前的一些长期想法，例如伊朗战争后的 $XLU，将所有降息机会从 3-4 降至 0，但效果不太好。我之前提到的三个软件名称如 $TTD、$META 最终变成了红色。$SNAP，在注意到无穷无尽的SBC会计方法后，我也改变了我的论文。经过很长一段时间后，$RDDT 的想法终于从 130 美元变为 170 美元。但我认为我的绝大多数想法都是为了更大的上限，比如$MRVL、$NBIS、$ARM、$INTC、$MU、$LITE、SK Hynix、三星。降至 $AXTI、$LITE、$AAOI、$RPI、$IQE 和其他较小盘头寸的方向表现相当不错。随机的东西，比如 $SIMO、$HPS.A、$TSEM、$AEHR、$LPK、$SOI、$ALRIB 等等，最终也都得到了正确的结果。混合平均值几乎是绿色的，因为我的大部分长期想法今年迄今都是三位数。但我确实错过了一些。另外，切入点也非常重要...我提到了 $AAOI 的价格为 30 美元，$AXTI 的价格约为 13 美元，但并非每个人都有相同的切入点。因此，如果有人以 220 美元的价格购买 AOI，然后它跌至 160 美元，我会感觉很糟糕。但无论如何，我更愿意判断想法在几个月而不是几周的中期时间框架内如何发挥作用。</div>
         <div class="tweet-foot">
-          <span>likes 2324 / retweets 147 / replies 235 / views 724908</span>
+          <span>likes 2378 / retweets 151 / replies 233 / views 849796</span>
         </div>
         <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="12">
+      <article class="tweet-card" data-tweet-index="18">
         <div class="tweet-head">
           <span class="mono">2026-06-18 22:54</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -650,13 +978,13 @@ SK 海力士 849K -&gt; 268.5 万韩元 (+215.5%)
 
 如果你看到一堆关于内存名称的预测，比如三星将在 2028 年成为世界上最赚钱的公司。在“石油、液化天然气、氦气、伊朗等”等当时的叙述之外独立思考可能是个好主意。现在，光学名称及其对 2027 年、2028 年的预测可能也是同样的情况。我确实认为光子学和存储是两个最重要的主题，而光学则处于超级周期的早期。</div>
         <div class="tweet-foot">
-          <span>likes 2222 / retweets 210 / replies 251 / views 749341</span>
+          <span>likes 2241 / retweets 209 / replies 245 / views 805188</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="13">
+      <article class="tweet-card" data-tweet-index="19">
         <div class="tweet-head">
           <span class="mono">2026-06-16 21:00</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CBRS</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span></span>
@@ -719,16 +1047,16 @@ So I think the music will keep playing for this year at the bare minimum.</div>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>只是一些随意的想法，我确实认为人工智能是人类历史上最具颠覆性的技术。达到农业或工业革命的水平。自 Anthropic 以来，OpenAi、XAI 和其他公司都在竞相构建超级智能。如果人工智能有助于找到癌症的治疗方法或加速量子计算的发现，其经济影响的大小是无法衡量的。或者，如果人工智能最终取代劳动力，从而提高公司的盈利能力。美国政府也完全有动力继续进行扩建，因为如果中国带头，战争和网络安全的影响也是不可估量的。因此，即使没有足够的利润衍生法学硕士培训/推理，也可能会获得激励和补贴。至于可持续性，当你向上游看时，$GOOGL 能够主要用自己的现金流为其提供资金，与 $AMZN、$MSFT 一样。$META 上更加冷淡。关于 $ORCL 非常不确定。但我确实看到一些围绕债务利息形成的泡沫，例如 $CRWV。也许循环估值正在发生在 OpenAI 积压协议或与 AI 算力云公司 购买 GPU 的 NVDA / AMD 协议中。但正如 $MSFT 所见，OpenAI 成为积压的主要部分，它确实纠正了信息，因此尽管整体市场在增长，但像这样的“泡沫”确实会破裂。从 $LITE 到 Sk Hynix 的上游半导体绝对不会出现泡沫，因为他们从扩建中获得的利润可能会难以弥补资本开支的下降。OpenAI 实际上是我对传染的最大恐惧，例如。$CRWV、$CBRS 等等，但他们只是筹集了很多。因此，认为再花 1 1/2 年的资本开支就可以了，特别是如果他们今年 IPO。尽管有“预测”，我也不认为美联储会大规模收紧货币政策，因为这将引发蔓延，因为许多参与者严重依赖债务。尽管美联储是独立的，但不要认为特朗普会支持违背其政府目标的人。至于半导体估值每天都在上涨，如 $AMD 或 $MU，可能会出现一些调整。一切都一起上升有点不健康。无法确定资本开支高峰的时间，但仅从 $AVGO 和其他预测来看，资本开支只会在 2028 年呈指数级加速。特别是当每个人都开始签署多年协议时。OpenAI 蔓延/超大规模资本开支减少/美联储紧缩是我正在寻找的，但目前还没有任何明显的迹象。所以我认为今年音乐至少会继续播放。</div>
         <div class="tweet-foot">
-          <span>likes 1618 / retweets 158 / replies 260 / views 362202</span>
+          <span>likes 2380 / retweets 234 / replies 312 / views 768058</span>
         </div>
         <div class="chips"><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">对手方 / 融资质量谱系</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="14">
+      <article class="tweet-card" data-tweet-index="20">
         <div class="tweet-head">
           <span class="mono">2026-06-16 15:54</span>
-          <span><span class="chip red">$EWY</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span></span>
+          <span><span class="chip red">$EWY</span><span class="chip red">$INTC</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span></span>
         </div>
         <div class="tweet-text">I did say $MU looked like the next $NVDA. Now we&#x27;re at a $1.23T MC.
 
@@ -756,13 +1084,13 @@ Hope people had fun with $EWY longs too, those are up a lot.</div>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>我确实说过 $MU 看起来就像下一个 $NVDA。现在我们的 MC 价格为 1.23T 美元。早在 2025 年就开始更多地谈论三星电子/Sk Hynix。今年 1 月，将更多精力放在 $SNDK 等内存主题上。我很高兴我对 Micron + 内存的预测得到了很好的结果！希望人们也能享受 $EWY 多头的乐趣，这些多头已经上涨了很多。</div>
         <div class="tweet-foot">
-          <span>likes 1675 / retweets 102 / replies 245 / views 534209</span>
+          <span>likes 2089 / retweets 139 / replies 270 / views 862434</span>
         </div>
         <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="15">
+      <article class="tweet-card" data-tweet-index="21">
         <div class="tweet-head">
           <span class="mono">2026-06-15 22:02</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$EWY</span><span class="chip red">$IREN</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span></span>
@@ -803,13 +1131,105 @@ And $MU / SK Hynix / Samsung potentially end up like a mini $NVDA if memory dema
 
 新云、光子学和内存。现在，坐下来看着我所有的论文想法从 $AAOI 到 $EWY 再到 $NBIS 发挥作用是很有趣的。即使我的警告也正确，由于 ATM 持续的 6B 美元抛售压力，$IREN 仍然停滞不前，而 $NBIS 则达到 ATH。但持有者仍然不愿意承认这一点。认为核心部分是了解市场接下来的主题，然后选择获胜者+高度集中于其中。如果你做多软件并选择了理想的股票，你最终可能不会那么高兴？光子学可能仍然是这三者中最早的。但我可以看到有一天 Nebius 最终会像 AWS 一样。如果内存需求是结构性的，那么 $MU / SK Hynix / Samsung 可能最终会像迷你 $NVDA 一样。</div>
         <div class="tweet-foot">
-          <span>likes 2309 / retweets 206 / replies 302 / views 422910</span>
+          <span>likes 2349 / retweets 193 / replies 301 / views 481178</span>
         </div>
         <div class="chips"><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">信念分层、仓位与时点</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="16">
+      <article class="tweet-card" data-tweet-index="22">
+        <div class="tweet-head">
+          <span class="mono">2026-06-15 09:24</span>
+          <span><span class="chip red">$GOOGL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$VRT</span></span>
+        </div>
+        <div class="tweet-text">$NVDA and $GOOGL lead 800V DC ahead of schedule. 
+
+&quot;Ahead of schedule&quot;, pulled up to Q3 2026 with small volume shipments starting . 
+
+- Delta Electronics (2308), $VRT
+- Song Chuan Precision (7788)
+- Schneider Electric, Eaton, Siemens.
+
+All flagged as beneficiaries. 
+
+&quot;Market sources indicate that Nvidia’s Vera Rubin pl...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$NVDA and $GOOGL lead 800V DC ahead of schedule. 
+
+&quot;Ahead of schedule&quot;, pulled up to Q3 2026 with small volume shipments starting . 
+
+- Delta Electronics (2308), $VRT
+- Song Chuan Precision (7788)
+- Schneider Electric, Eaton, Siemens.
+
+All flagged as beneficiaries. 
+
+&quot;Market sources indicate that Nvidia’s Vera Rubin platform and Google’s next-generation AI data centers will be the first to adopt the technology&quot;
+
+Source: Commercial Times 
+
+The power semi trade should be happy to hear this.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2066331049605627951" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$NVDA 和 $GOOGL 提前领先 800V DC。“提前”，拉至 2026 年第三季度，开始小批量发货。- 台达电子 (2308)，$VRT
+- 松川精密 (7788)
+- 施耐德电气、伊顿、西门子。所有人都被标记为受益人。“市场消息显示，英伟达的 Vera Rubin 平台和谷歌的下一代 AI 数据中心将率先采用该技术”
+
+来源：商报 
+
+电力半贸易应该很高兴听到这个消息。</div>
+        <div class="tweet-foot">
+          <span>likes 1352 / retweets 193 / replies 215 / views 933972</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="23">
+        <div class="tweet-head">
+          <span class="mono">2026-06-12 00:49</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">If you haven’t noticed too with my other investment themes with 800V DC and CPO recently.
+
+It’s investing in $NVDA, America’s national champion in AI, and securing their supply chains. 
+
+Many things feel technologically difficult with yields to substrate supply. 
+
+People can always bear post laser capacity or export co...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you haven’t noticed too with my other investment themes with 800V DC and CPO recently.
+
+It’s investing in $NVDA, America’s national champion in AI, and securing their supply chains. 
+
+Many things feel technologically difficult with yields to substrate supply. 
+
+People can always bear post laser capacity or export control bottlenecks and tell people to short Nvidia’s supply chains due to difficulties. 
+
+But by investing in the critical companies to give them more capex spend for FAU capacity / yields.
+
+Or funding upstream red phosphorus/InP substrate capacity or SiC/GaN capacity. 
+
+It builds up Western supply chains to make what’s technologically challenging, possible.
+
+Also I believe in Jensen.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2065114293767741950" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>如果你还没有注意到我最近的其他投资主题，800V DC 和 CPO。它正在投资美国人工智能领域的国家冠军企业 $NVDA，并确保其供应链的安全。在基板供应的良率方面，许多事情在技术上都感觉困难。人们总是可以忍受激光产能或出口管制瓶颈，并告诉人们由于困难而缩短英伟达的供应链。但通过投资关键公司，为他们提供更多资本开支，以提高 FAU 产能/收益率。或者资助上游红磷/InP衬底产能或SiC/GaN产能。它建立了西方供应链，使技术上具有挑战性的事情成为可能。我也相信詹森。</div>
+        <div class="tweet-foot">
+          <span>likes 983 / retweets 47 / replies 179 / views 515467</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="24">
         <div class="tweet-head">
           <span class="mono">2026-06-12 00:13</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$MU</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
@@ -854,13 +1274,13 @@ US/EU don&#x27;t just hand out subsidies or CHIPS act grants to anyone.</div>
 
 如果您现在还没有注意到，它们对美国供应链都至关重要。他们每个人都在获得补贴以确保西方供应链的安全。之前的主要交易是做空美国/西方发展中国家股票，然后用受补贴的外国股票进行对冲。正如破产的能源/太阳能公司所见，这对多年后的美国人工智能基础设施和电网产生了很大的反作用。我想帮助改变这种心态，因为我相信投资建立当今光子学等关键的西方供应链是非常积极的。特别是如果 $AAOI 在将生产转移到美国后达到每月 4.71 亿美元的预测。与其寄希望于它们失败，并将供应链中的关键节点称为模因股/泡沫，不如稍微改变一下心态，这样我们就不会在几年后看到美国太阳能行业的重演。美国/欧盟不只是向任何人提供补贴或 CHIPS 法案拨款。</div>
         <div class="tweet-foot">
-          <span>likes 1669 / retweets 106 / replies 225 / views 687072</span>
+          <span>likes 1691 / retweets 109 / replies 225 / views 755352</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="17">
+      <article class="tweet-card" data-tweet-index="25">
         <div class="tweet-head">
           <span class="mono">2026-06-10 18:47</span>
           <span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -887,13 +1307,13 @@ Since the selloff from their claim $MU had 0 share of Nvidia HBM4 https://t.co/Y
         </div>
         <div class="tweet-zh"><b>中文译文：</b>摩根士丹利：$NVDA 否认了 800V DC 已被推迟的报道。最近的 SemiAnalysis 报告与我们在 Computex 的检查结果相反。兄弟，这一定是我见过的最愚蠢的 CPO/800V 抛售。自从他们声称 $MU 拥有 0 份 Nvidia HBM4 的抛售以来 https://t.co/YX9apQSVLT</div>
         <div class="tweet-foot">
-          <span>likes 1548 / retweets 158 / replies 245 / views 545944</span>
+          <span>likes 1663 / retweets 165 / replies 247 / views 1314829</span>
         </div>
         <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="18">
+      <article class="tweet-card" data-tweet-index="26">
         <div class="tweet-head">
           <span class="mono">2026-06-10 09:33</span>
           <span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -946,13 +1366,13 @@ $NVDA 网络高级副总裁：“我们将在今年下半年增加 CPO”。无�
 
 我认为，那些因这份不正确的报告而长期关注临时桥梁架构的人不会太高兴。不过，还是要珍惜这个购买机会。</div>
         <div class="tweet-foot">
-          <span>likes 1644 / retweets 142 / replies 364 / views 616153</span>
+          <span>likes 1677 / retweets 155 / replies 361 / views 703046</span>
         </div>
         <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="19">
+      <article class="tweet-card" data-tweet-index="27">
         <div class="tweet-head">
           <span class="mono">2026-06-07 20:45</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
@@ -981,7 +1401,7 @@ What a bullish read through on the SiPH supply chain from $SIVE (now upstream Nv
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="20">
+      <article class="tweet-card" data-tweet-index="28">
         <div class="tweet-head">
           <span class="mono">2026-06-07 19:28</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$INTC</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -1010,7 +1430,7 @@ $MU and $EWY (Samsung/SK Hynix) operating profit projections aren’t looking to
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="21">
+      <article class="tweet-card" data-tweet-index="29">
         <div class="tweet-head">
           <span class="mono">2026-06-05 23:58</span>
           <span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$PL</span></span>
@@ -1051,7 +1471,7 @@ Broadcom projected https://t.co/D1cE7sjKBs</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="22">
+      <article class="tweet-card" data-tweet-index="30">
         <div class="tweet-head">
           <span class="mono">2026-06-04 15:30</span>
           <span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -1080,7 +1500,7 @@ CEO of $NVDA and $MU sell shares all the time but nobody bats</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="23">
+      <article class="tweet-card" data-tweet-index="31">
         <div class="tweet-head">
           <span class="mono">2026-06-02 07:51</span>
           <span><span class="chip red">$AVGO</span><span class="chip red">$BRK.A</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$TSM</span></span>
@@ -1117,7 +1537,46 @@ Upstream ecosystem from $LITE to $AVGO to Mediatek to $TSM to $MU should go brrr
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="24">
+      <article class="tweet-card" data-tweet-index="32">
+        <div class="tweet-head">
+          <span class="mono">2026-06-01 23:30</span>
+          <span><span class="chip red">$EWY</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">And a few months later... my $EWY leaps are now up 485%. 
+
+From IV expansion and directional memory longs. 
+
+Unfortunately I did see a lot of people sell during the Iran volatility, due to doomposting everywhere on X.
+
+But returns going long on the memory sector from Samsing SK Hynix / $MU have been absolutely disgusti...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">And a few months later... my $EWY leaps are now up 485%. 
+
+From IV expansion and directional memory longs. 
+
+Unfortunately I did see a lot of people sell during the Iran volatility, due to doomposting everywhere on X.
+
+But returns going long on the memory sector from Samsing SK Hynix / $MU have been absolutely disgusting to watch. 
+
+If you can model Samsung / SK Hynix becoming the most profitable companies in the world in 2028... 
+
+Maybe it&#x27;s a good idea to just embrace the volatility and let that thesis play out.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2061470490083143996" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>几个月后……我的 $EWY 飞跃现在增长了 485%。来自 IV 扩展和定向记忆长。不幸的是，我确实看到很多人在伊朗波动期间抛售，因为 X 上到处都是厄运帖。但Samsing SK Hynix / $MU 在内存领域做多的回报绝对令人厌恶。如果你能模拟三星/SK海力士在2028年成为全球最赚钱的公司...... 
+
+也许接受波动性并让这一论点发挥作用是个好主意。</div>
+        <div class="tweet-foot">
+          <span>likes 655 / retweets 43 / replies 125 / views 285741</span>
+        </div>
+        <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="33">
         <div class="tweet-head">
           <span class="mono">2026-05-27 01:09</span>
           <span><span class="chip red">$INTC</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -1146,7 +1605,48 @@ This stock probably made a lot of millionaires going from $80 to $887. https://t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="25">
+      <article class="tweet-card" data-tweet-index="34">
+        <div class="tweet-head">
+          <span class="mono">2026-05-26 00:08</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$APPL</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$IQE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">$RPI, close to ~3x returns. 
+
+Off the media branded &quot;Meme Stock&quot;. 
+
+I think after retail saw institutions bear post my thesis posts. 
+
+Then ended up paper handing $AXTI, then $RPI,  then $IQE, then $EWY, then $SNDK, then $AAOI, then $SOI.
+
+And them watch them all go up 3x-15x+ after institutions bought up the float. 
+
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$RPI, close to ~3x returns. 
+
+Off the media branded &quot;Meme Stock&quot;. 
+
+I think after retail saw institutions bear post my thesis posts. 
+
+Then ended up paper handing $AXTI, then $RPI,  then $IQE, then $EWY, then $SNDK, then $AAOI, then $SOI.
+
+And them watch them all go up 3x-15x+ after institutions bought up the float. 
+
+Retail finally learned not to trust them with anymore with names like $SIVE?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058943283234316632" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$RPI，接近 3 倍回报。关闭媒体品牌“Meme Stock”。我想在零售看到机构发表我的论文帖子之后。然后最终纸质交$AXTI，然后$RPI，然后$IQE，然后$EWY，然后$SNDK，然后$AAOI，然后$SOI。在机构买入流通股后，他们看着它们全部上涨 3 倍至 15 倍以上。零售业终于学会不再相信像 $SIVE 这样的名字了？</div>
+        <div class="tweet-foot">
+          <span>likes 888 / retweets 51 / replies 130 / views 364275</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="35">
         <div class="tweet-head">
           <span class="mono">2026-05-25 02:39</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$IQE</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span></span>
@@ -1196,7 +1696,7 @@ We&#x27;re witnessing the next industrial revolution with Artificial Intelligenc
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="26">
+      <article class="tweet-card" data-tweet-index="36">
         <div class="tweet-head">
           <span class="mono">2026-05-24 00:55</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$OSS</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$VPG</span></span>
@@ -1313,7 +1813,7 @@ Not the dollar amount made.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="27">
+      <article class="tweet-card" data-tweet-index="37">
         <div class="tweet-head">
           <span class="mono">2026-05-22 13:04</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$IREN</span><span class="chip red">$MU</span><span class="chip red">$RDDT</span></span>
@@ -1348,7 +1848,7 @@ The lack of technical literacy is exactly why I got banned from there. https://t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="28">
+      <article class="tweet-card" data-tweet-index="38">
         <div class="tweet-head">
           <span class="mono">2026-05-16 05:42</span>
           <span><span class="chip red">$MU</span><span class="chip red">$NBIS</span></span>
@@ -1369,7 +1869,7 @@ The lack of technical literacy is exactly why I got banned from there. https://t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="29">
+      <article class="tweet-card" data-tweet-index="39">
         <div class="tweet-head">
           <span class="mono">2026-05-12 11:26</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$SNDK</span></span>
@@ -1408,7 +1908,7 @@ But it is up triple digits now half a year later when there’s enough time for 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="30">
+      <article class="tweet-card" data-tweet-index="40">
         <div class="tweet-head">
           <span class="mono">2026-05-12 05:14</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -1506,7 +2006,7 @@ Towa 前瞻性指引预测销售额为 64.0B 日元（同比增长 17.7%），�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="31">
+      <article class="tweet-card" data-tweet-index="41">
         <div class="tweet-head">
           <span class="mono">2026-05-11 10:06</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -1547,7 +2047,7 @@ Anyway, $EWY longs are now up 350%+, just goes to show how much noise there is n
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="32">
+      <article class="tweet-card" data-tweet-index="42">
         <div class="tweet-head">
           <span class="mono">2026-05-10 22:42</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$INTC</span><span class="chip red">$MU</span><span class="chip red">$RDDT</span></span>
@@ -1574,7 +2074,7 @@ Or does it feel like everyone on X or $RDDT made millions off of $INTC, $MU, and
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="33">
+      <article class="tweet-card" data-tweet-index="43">
         <div class="tweet-head">
           <span class="mono">2026-05-10 04:07</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$INTC</span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -1661,7 +2161,7 @@ Macronix、Windbond 继续前进。对 GigaDevice 和其他利基市场参与者
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="34">
+      <article class="tweet-card" data-tweet-index="44">
         <div class="tweet-head">
           <span class="mono">2026-05-07 08:51</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$MU</span><span class="chip red">$TOWA</span></span>
@@ -1692,7 +2192,7 @@ Maybe going directly with $EWY longs calls would have been more exciting? https:
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="35">
+      <article class="tweet-card" data-tweet-index="45">
         <div class="tweet-head">
           <span class="mono">2026-05-06 00:21</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -1723,7 +2223,7 @@ Uhhh… YTD is getting a little ridiculous. https://t.co/FJKQjq8YJk</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="36">
+      <article class="tweet-card" data-tweet-index="46">
         <div class="tweet-head">
           <span class="mono">2026-05-05 19:41</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -1748,7 +2248,7 @@ Fun to see this idea age well. https://t.co/wx9hQYzJGT</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="37">
+      <article class="tweet-card" data-tweet-index="47">
         <div class="tweet-head">
           <span class="mono">2026-05-01 05:12</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -1777,7 +2277,7 @@ I did it for Micron earlier as an example and got reported gross margins spot on
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="38">
+      <article class="tweet-card" data-tweet-index="48">
         <div class="tweet-head">
           <span class="mono">2026-04-30 08:25</span>
           <span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$TOWA</span><span class="chip red">$TOWCF</span><span class="chip red">$VIAV</span></span>
@@ -1826,7 +2326,7 @@ Just my thoughts, but if my guess is right... it should show up in earnings on t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="39">
+      <article class="tweet-card" data-tweet-index="49">
         <div class="tweet-head">
           <span class="mono">2026-04-28 07:58</span>
           <span><span class="chip red">$ASML</span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$TSM</span></span>
@@ -1873,7 +2373,7 @@ Not exactly a new find, since a few other analysts + random followers had this n
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="40">
+      <article class="tweet-card" data-tweet-index="50">
         <div class="tweet-head">
           <span class="mono">2026-04-28 03:27</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -1905,7 +2405,7 @@ Might be a good time to look at names like Towa (6315) to capture upstream monop
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="41">
+      <article class="tweet-card" data-tweet-index="51">
         <div class="tweet-head">
           <span class="mono">2026-04-27 12:40</span>
           <span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$TSM</span></span>
@@ -1948,7 +2448,7 @@ Over in Korea, things like Hanmi Semi (KRX: 042700) have been taking off, up 27.
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="42">
+      <article class="tweet-card" data-tweet-index="52">
         <div class="tweet-head">
           <span class="mono">2026-04-24 05:23</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span></span>
@@ -1993,7 +2493,7 @@ $NVDA GPU -&gt; $MU 内存 -&gt; $IREN Power -&gt; $LITE EML -&gt; $SNDK 内存 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="43">
+      <article class="tweet-card" data-tweet-index="53">
         <div class="tweet-head">
           <span class="mono">2026-04-15 06:37</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$APPL</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -2036,7 +2536,7 @@ It&#x27;s now being re-rated as an AI hardware company.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="44">
+      <article class="tweet-card" data-tweet-index="54">
         <div class="tweet-head">
           <span class="mono">2026-04-03 10:35</span>
           <span><span class="chip red">$DRAM</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$WDC</span></span>
@@ -2096,7 +2596,7 @@ And I’d encourage more institutions to make ETFs like this.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="45">
+      <article class="tweet-card" data-tweet-index="55">
         <div class="tweet-head">
           <span class="mono">2026-04-01 23:34</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$MU</span></span>
@@ -2121,7 +2621,7 @@ I’m just annoyed how they weaponized contractual obligations to get there</div
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="46">
+      <article class="tweet-card" data-tweet-index="56">
         <div class="tweet-head">
           <span class="mono">2026-03-31 17:38</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -2166,7 +2666,7 @@ $RPI 新分析师预测：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="47">
+      <article class="tweet-card" data-tweet-index="57">
         <div class="tweet-head">
           <span class="mono">2026-03-30 23:13</span>
           <span><span class="chip red">$META</span><span class="chip red">$MU</span></span>
@@ -2205,7 +2705,7 @@ Especially as a limited ground invasion might begin anytime… this might foresh
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="48">
+      <article class="tweet-card" data-tweet-index="58">
         <div class="tweet-head">
           <span class="mono">2026-03-30 10:32</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$MU</span></span>
@@ -2234,7 +2734,7 @@ So individual performance won&#x27;t matter as much if there&#x27;s a global ene
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="49">
+      <article class="tweet-card" data-tweet-index="59">
         <div class="tweet-head">
           <span class="mono">2026-03-30 10:19</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
@@ -2300,7 +2800,7 @@ $MRVL（自保）、$AVGO（自保）、$TSM 和 $NOK 也都这样做，但它�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="50">
+      <article class="tweet-card" data-tweet-index="60">
         <div class="tweet-head">
           <span class="mono">2026-03-28 23:55</span>
           <span><span class="chip red">$COHR</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -2325,7 +2825,7 @@ I&#x27;m just saying my personal preferences in what I expect to outperform.</di
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="51">
+      <article class="tweet-card" data-tweet-index="61">
         <div class="tweet-head">
           <span class="mono">2026-03-26 01:47</span>
           <span><span class="chip red">$ARM</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -2404,7 +2904,7 @@ Feels more like a narrative headwind than anything material to earnings.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="52">
+      <article class="tweet-card" data-tweet-index="62">
         <div class="tweet-head">
           <span class="mono">2026-03-25 02:55</span>
           <span><span class="chip red">$MU</span></span>
@@ -2429,7 +2929,7 @@ Lot of LNG/helium/crude fears don’t really impact opex much. And demand looks 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="53">
+      <article class="tweet-card" data-tweet-index="63">
         <div class="tweet-head">
           <span class="mono">2026-03-21 11:13</span>
           <span><span class="chip red">$MU</span></span>
@@ -2454,7 +2954,7 @@ I&#x27;m just saying if people like myself were able to model in $MU gross margi
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="54">
+      <article class="tweet-card" data-tweet-index="64">
         <div class="tweet-head">
           <span class="mono">2026-03-21 11:02</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -2511,7 +3011,7 @@ So it&#x27;s not a &quot;Surprise Result&quot; when even people like myself coul
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="55">
+      <article class="tweet-card" data-tweet-index="65">
         <div class="tweet-head">
           <span class="mono">2026-03-21 10:40</span>
           <span><span class="chip red">$MU</span></span>
@@ -2536,7 +3036,7 @@ If there weren&#x27;t a War in Iran and markets were pricing in rate cuts, it wo
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="56">
+      <article class="tweet-card" data-tweet-index="66">
         <div class="tweet-head">
           <span class="mono">2026-03-21 10:30</span>
           <span><span class="chip red">$MU</span></span>
@@ -2561,7 +3061,7 @@ If there were no Iran war $MU would likely be tons higher, but the core point st
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="57">
+      <article class="tweet-card" data-tweet-index="67">
         <div class="tweet-head">
           <span class="mono">2026-03-21 10:28</span>
           <span><span class="chip red">$MU</span></span>
@@ -2606,7 +3106,7 @@ Earnings is just confirmation of that.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="58">
+      <article class="tweet-card" data-tweet-index="68">
         <div class="tweet-head">
           <span class="mono">2026-03-21 10:21</span>
           <span><span class="chip red">$MU</span></span>
@@ -2689,7 +3189,7 @@ All the profit to be made is before information is known and priced in by the br
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="59">
+      <article class="tweet-card" data-tweet-index="69">
         <div class="tweet-head">
           <span class="mono">2026-03-18 14:51</span>
           <span><span class="chip red">$MU</span></span>
@@ -2714,7 +3214,7 @@ I’m very bullish on $MU but it’s a bit strange SK Hynix trades at a lower va
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="60">
+      <article class="tweet-card" data-tweet-index="70">
         <div class="tweet-head">
           <span class="mono">2026-03-18 14:43</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -2770,7 +3270,7 @@ The vast, vast majority of X are extreme noise.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="61">
+      <article class="tweet-card" data-tweet-index="71">
         <div class="tweet-head">
           <span class="mono">2026-03-17 22:34</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -2795,7 +3295,7 @@ Glad to see it’s finally getting some attention by other analysts. https://t.c
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="62">
+      <article class="tweet-card" data-tweet-index="72">
         <div class="tweet-head">
           <span class="mono">2026-03-17 14:27</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -2834,7 +3334,7 @@ So they get free price-hike reign now off legacy nodes that Samsung, SK Hynix, a
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="63">
+      <article class="tweet-card" data-tweet-index="73">
         <div class="tweet-head">
           <span class="mono">2026-03-17 05:06</span>
           <span><span class="chip red">$COST</span><span class="chip red">$EWY</span><span class="chip red">$GOOGL</span><span class="chip red">$LMT</span><span class="chip red">$MU</span><span class="chip red">$NOC</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -2895,7 +3395,7 @@ Over a Middle East conflict.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="64">
+      <article class="tweet-card" data-tweet-index="74">
         <div class="tweet-head">
           <span class="mono">2026-03-16 15:35</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -2947,7 +3447,7 @@ $MU：+19.66% 1W
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="65">
+      <article class="tweet-card" data-tweet-index="75">
         <div class="tweet-head">
           <span class="mono">2026-03-16 07:13</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -3054,7 +3554,7 @@ AI has fundamentally changed what the &quot;commodity&quot; memory is, similar t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="66">
+      <article class="tweet-card" data-tweet-index="76">
         <div class="tweet-head">
           <span class="mono">2026-03-15 05:20</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMZN</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BE</span><span class="chip red">$COHR</span><span class="chip red">$COPX</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span><span class="chip red">$XLU</span></span>
@@ -3161,7 +3661,7 @@ AVGO 美元：-7.32%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="67">
+      <article class="tweet-card" data-tweet-index="77">
         <div class="tweet-head">
           <span class="mono">2026-03-15 03:15</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMZN</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BE</span><span class="chip red">$COHR</span><span class="chip red">$COPX</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span><span class="chip red">$XLU</span></span>
@@ -3298,7 +3798,7 @@ $AXTI、$COPX、$SOI
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="68">
+      <article class="tweet-card" data-tweet-index="78">
         <div class="tweet-head">
           <span class="mono">2026-03-13 08:59</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$INTC</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -3345,7 +3845,7 @@ The explosive increase in operating margins from memory makers across the board 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="69">
+      <article class="tweet-card" data-tweet-index="79">
         <div class="tweet-head">
           <span class="mono">2026-03-11 11:07</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$HIMS</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -3407,7 +3907,7 @@ $COHR：+4.86%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="70">
+      <article class="tweet-card" data-tweet-index="80">
         <div class="tweet-head">
           <span class="mono">2026-03-10 15:34</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -3448,7 +3948,7 @@ Available inventory is becoming non-existent, with hyperscalers and companies wi
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="71">
+      <article class="tweet-card" data-tweet-index="81">
         <div class="tweet-head">
           <span class="mono">2026-03-09 11:57</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span></span>
@@ -3493,7 +3993,7 @@ This comes following the Department of Commerce denying the false reports around
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="72">
+      <article class="tweet-card" data-tweet-index="82">
         <div class="tweet-head">
           <span class="mono">2026-03-06 07:29</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -3530,7 +4030,7 @@ Certainly someone needs to be held accountable? https://t.co/YaBNpl8nFB</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="73">
+      <article class="tweet-card" data-tweet-index="83">
         <div class="tweet-head">
           <span class="mono">2026-03-06 02:58</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AXTI</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$TSM</span></span>
@@ -3593,7 +4093,7 @@ However, people do have a right to be worried about the implications.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="74">
+      <article class="tweet-card" data-tweet-index="84">
         <div class="tweet-head">
           <span class="mono">2026-03-05 17:43</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$LITE</span><span class="chip red">$MU</span></span>
@@ -3680,7 +4180,7 @@ To me: Yes, Unequivocally.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="75">
+      <article class="tweet-card" data-tweet-index="85">
         <div class="tweet-head">
           <span class="mono">2026-03-02 16:04</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$CRDO</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -3719,7 +4219,7 @@ Might not need to be. https://t.co/qKReNvBMYh</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="76">
+      <article class="tweet-card" data-tweet-index="86">
         <div class="tweet-head">
           <span class="mono">2026-03-01 15:25</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRDO</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span><span class="chip red">$XLU</span></span>
@@ -3761,7 +4261,7 @@ ASIC - $AVGO、$MRVL
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="77">
+      <article class="tweet-card" data-tweet-index="87">
         <div class="tweet-head">
           <span class="mono">2026-03-01 04:14</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$CRDO</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -3865,7 +4365,7 @@ $AAOI ($5.6B MC) 2027 年下半年：$4.35B ARR。他们的增长预测实际上
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="78">
+      <article class="tweet-card" data-tweet-index="88">
         <div class="tweet-head">
           <span class="mono">2026-02-28 04:58</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -3914,7 +4414,7 @@ But this is one example where you look at fundamentals over chart.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="79">
+      <article class="tweet-card" data-tweet-index="89">
         <div class="tweet-head">
           <span class="mono">2026-02-28 02:14</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -3983,7 +4483,7 @@ $25-30B MC projections sound surreal but that&#x27;s how wild the earnings was i
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="80">
+      <article class="tweet-card" data-tweet-index="90">
         <div class="tweet-head">
           <span class="mono">2026-02-27 03:39</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$EWJ</span><span class="chip red">$EWY</span><span class="chip red">$FORM</span><span class="chip red">$HOOD</span><span class="chip red">$IQE</span><span class="chip red">$KLIC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$XLU</span></span>
@@ -4104,7 +4604,7 @@ $AXTI 的 InP 瓶颈最近上涨了百分之几百。或者从 Sk Hynix/Samsung 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="81">
+      <article class="tweet-card" data-tweet-index="91">
         <div class="tweet-head">
           <span class="mono">2026-02-25 15:51</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FORM</span><span class="chip red">$HOOD</span><span class="chip red">$KLIC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$RKLB</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$XLU</span></span>
@@ -4167,7 +4667,7 @@ It’s the same thing with this year, just different sectors and catalysts.</div
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="82">
+      <article class="tweet-card" data-tweet-index="92">
         <div class="tweet-head">
           <span class="mono">2026-02-25 01:41</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$APH</span><span class="chip red">$AVGO</span><span class="chip red">$BESIY</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$ETN</span><span class="chip red">$GLW</span><span class="chip red">$IFNNY</span><span class="chip red">$INTC</span><span class="chip red">$KLAC</span><span class="chip red">$LITE</span><span class="chip red">$MOD</span><span class="chip red">$MPWR</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$ON</span><span class="chip red">$ONTO</span><span class="chip red">$QLCM</span><span class="chip red">$SBGSY</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$VICR</span></span>
@@ -4192,7 +4692,7 @@ https://t.co/9RsyIarQgM</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="83">
+      <article class="tweet-card" data-tweet-index="93">
         <div class="tweet-head">
           <span class="mono">2026-02-25 01:02</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$FORM</span><span class="chip red">$KLIC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$XLU</span></span>
@@ -4247,7 +4747,7 @@ I publish all my ideas for free too so hopefully people can take away a thing or
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="84">
+      <article class="tweet-card" data-tweet-index="94">
         <div class="tweet-head">
           <span class="mono">2026-02-24 10:38</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span></span>
@@ -4284,7 +4784,7 @@ $EWY - Vega 扩张的尾部，IV 可能会使其稍微走高。但如果您购�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="85">
+      <article class="tweet-card" data-tweet-index="95">
         <div class="tweet-head">
           <span class="mono">2026-02-24 10:23</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$IBKR</span><span class="chip red">$INTC</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBCLF</span><span class="chip red">$SNDK</span></span>
@@ -4305,7 +4805,7 @@ $EWY - Vega 扩张的尾部，IV 可能会使其稍微走高。但如果您购�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="86">
+      <article class="tweet-card" data-tweet-index="96">
         <div class="tweet-head">
           <span class="mono">2026-02-20 23:54</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -4348,7 +4848,7 @@ Especially when MMs are looking at historical 10 year flat periods for Korea.</d
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="87">
+      <article class="tweet-card" data-tweet-index="97">
         <div class="tweet-head">
           <span class="mono">2026-02-20 22:26</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$EWY</span><span class="chip red">$GOOGL</span><span class="chip red">$KORU</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -4411,7 +4911,7 @@ TLDR: $EWY calls likely benefit from vega expansion as MMs aren&#x27;t pricing i
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="88">
+      <article class="tweet-card" data-tweet-index="98">
         <div class="tweet-head">
           <span class="mono">2026-02-18 23:41</span>
           <span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SIMO</span><span class="chip red">$WDC</span></span>
@@ -4479,7 +4979,7 @@ At a $4.56B MC and under 20x forward earnings (assuming, $1.2B rev/$6.5 EPS), it
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="89">
+      <article class="tweet-card" data-tweet-index="99">
         <div class="tweet-head">
           <span class="mono">2026-02-18 07:37</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -4518,7 +5018,7 @@ Into an AI hardware company that sells mass producible boards for AI Agent Orche
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="90">
+      <article class="tweet-card" data-tweet-index="100">
         <div class="tweet-head">
           <span class="mono">2026-02-17 17:10</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -4543,7 +5043,7 @@ $RPI up another 19.34%, from yesterday&#x27;s 8.1%. https://t.co/DRQTCjIlmQ</div
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="91">
+      <article class="tweet-card" data-tweet-index="101">
         <div class="tweet-head">
           <span class="mono">2026-02-16 23:12</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -4650,7 +5150,7 @@ TLDR: People are openly buying Raspberry Pis and Apple Mac Minis for Openclaw/Pi
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="92">
+      <article class="tweet-card" data-tweet-index="102">
         <div class="tweet-head">
           <span class="mono">2026-02-16 17:46</span>
           <span><span class="chip red">$EBAY</span><span class="chip red">$INTC</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NTAP</span><span class="chip red">$NVDA</span><span class="chip red">$PSTG</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$STX</span><span class="chip red">$WDC</span></span>
@@ -4695,7 +5195,7 @@ The memory demand for AI looks structural and exponentially growing.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="93">
+      <article class="tweet-card" data-tweet-index="103">
         <div class="tweet-head">
           <span class="mono">2026-02-16 17:22</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -4724,7 +5224,7 @@ Biggest is memory like $MU or $SNDK. Photonics from $LITE to $AAOI command a dec
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="94">
+      <article class="tweet-card" data-tweet-index="104">
         <div class="tweet-head">
           <span class="mono">2026-02-16 17:09</span>
           <span><span class="chip red">$EBAY</span><span class="chip red">$INTC</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NTAP</span><span class="chip red">$NVDA</span><span class="chip red">$PSTG</span><span class="chip red">$SIMO</span><span class="chip red">$SNDK</span><span class="chip red">$STX</span><span class="chip red">$WDC</span></span>
@@ -4824,7 +5324,7 @@ Memory demand is structural. No supply end in sight. $INTC CEO confirmed this la
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="95">
+      <article class="tweet-card" data-tweet-index="105">
         <div class="tweet-head">
           <span class="mono">2026-02-15 22:02</span>
           <span><span class="chip red">$MU</span></span>
@@ -4849,7 +5349,7 @@ $10.8B (2025) -&amp;gt; $46.5B (2026) -&amp;gt; ~$63.5B (2027) were some estimat
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="96">
+      <article class="tweet-card" data-tweet-index="106">
         <div class="tweet-head">
           <span class="mono">2026-02-13 21:36</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -4878,7 +5378,7 @@ But if we look at MS&#x27;s steep operating income projections on Samsung/Sk Hyn
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="97">
+      <article class="tweet-card" data-tweet-index="107">
         <div class="tweet-head">
           <span class="mono">2026-02-12 11:08</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$APH</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESIY</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$ETN</span><span class="chip red">$GLW</span><span class="chip red">$IFNNY</span><span class="chip red">$INTC</span><span class="chip red">$KLAC</span><span class="chip red">$LITE</span><span class="chip red">$MOD</span><span class="chip red">$MPWR</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$NVT</span><span class="chip red">$ON</span><span class="chip red">$ONTO</span><span class="chip red">$QLCM</span><span class="chip red">$SBGSY</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$VICR</span><span class="chip red">$VRT</span></span>
@@ -4990,7 +5490,7 @@ $INTC：+1.62%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="98">
+      <article class="tweet-card" data-tweet-index="108">
         <div class="tweet-head">
           <span class="mono">2026-02-11 11:05</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMKR</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
@@ -5051,7 +5551,7 @@ $AXTI 位于光子学的基材/原料水平，随机利基参与者如 $AAOI 位
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="99">
+      <article class="tweet-card" data-tweet-index="109">
         <div class="tweet-head">
           <span class="mono">2026-02-10 09:07</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -5109,7 +5609,7 @@ But we can see this potentially reflected in derviatve  like 7N indium on SMM.</
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="100">
+      <article class="tweet-card" data-tweet-index="110">
         <div class="tweet-head">
           <span class="mono">2026-02-10 02:04</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -5138,7 +5638,7 @@ It’s mainly a matter if they’re going to do it or not.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="101">
+      <article class="tweet-card" data-tweet-index="111">
         <div class="tweet-head">
           <span class="mono">2026-02-09 10:22</span>
           <span><span class="chip red">$MU</span></span>
@@ -5163,7 +5663,7 @@ $MU is setting up a $9.6B HBM plant in Hiroshima but it’s more indirect (eg. T
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="102">
+      <article class="tweet-card" data-tweet-index="112">
         <div class="tweet-head">
           <span class="mono">2026-02-09 09:59</span>
           <span><span class="chip red">$MU</span></span>
@@ -5198,7 +5698,7 @@ We’re starting to see sector specific rallies (especially the AI trade) from i
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="103">
+      <article class="tweet-card" data-tweet-index="113">
         <div class="tweet-head">
           <span class="mono">2026-02-08 06:10</span>
           <span><span class="chip red">$AEHR</span><span class="chip red">$AIRO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$COIN</span><span class="chip red">$CPSH</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DPRO</span><span class="chip red">$ETOR</span><span class="chip red">$GLXY</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$OSS</span><span class="chip red">$POET</span><span class="chip red">$QQQ</span><span class="chip red">$RDDT</span><span class="chip red">$SNDK</span><span class="chip red">$SOL</span><span class="chip red">$TSM</span><span class="chip red">$TTD</span><span class="chip red">$VIX</span><span class="chip red">$VLN</span><span class="chip red">$VPG</span></span>
@@ -5357,7 +5857,7 @@ _
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="104">
+      <article class="tweet-card" data-tweet-index="114">
         <div class="tweet-head">
           <span class="mono">2026-02-07 21:44</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$APH</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESIY</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$ETN</span><span class="chip red">$GLW</span><span class="chip red">$IFNNY</span><span class="chip red">$INTC</span><span class="chip red">$KLAC</span><span class="chip red">$LITE</span><span class="chip red">$MOD</span><span class="chip red">$MPWR</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$NVT</span><span class="chip red">$ON</span><span class="chip red">$ONTO</span><span class="chip red">$QLCM</span><span class="chip red">$SBGSY</span><span class="chip red">$SNDK</span><span class="chip red">$STM</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$VICR</span><span class="chip red">$VPG</span><span class="chip red">$VRT</span></span>
@@ -5452,7 +5952,7 @@ Elon 专注于：“惯性测量、GPS 信号、其他数据，将其与视频�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="105">
+      <article class="tweet-card" data-tweet-index="115">
         <div class="tweet-head">
           <span class="mono">2026-02-07 18:53</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$APH</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESIY</span><span class="chip red">$CAMT</span><span class="chip red">$COHR</span><span class="chip red">$ETN</span><span class="chip red">$GLW</span><span class="chip red">$IFNNY</span><span class="chip red">$INTC</span><span class="chip red">$KLAC</span><span class="chip red">$LITE</span><span class="chip red">$MOD</span><span class="chip red">$MPWR</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$NVT</span><span class="chip red">$ON</span><span class="chip red">$ONTO</span><span class="chip red">$QLCM</span><span class="chip red">$SBGSY</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$VICR</span><span class="chip red">$VRT</span></span>
@@ -5556,7 +6056,7 @@ Semivision的总结：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="106">
+      <article class="tweet-card" data-tweet-index="116">
         <div class="tweet-head">
           <span class="mono">2026-02-07 02:51</span>
           <span><span class="chip red">$COIN</span><span class="chip red">$CRCL</span><span class="chip red">$ETOR</span><span class="chip red">$GLXY</span><span class="chip red">$MSTR</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -5616,7 +6116,7 @@ $MSTR $132 起 $434
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="107">
+      <article class="tweet-card" data-tweet-index="117">
         <div class="tweet-head">
           <span class="mono">2026-02-05 09:09</span>
           <span><span class="chip red">$ANET</span><span class="chip red">$AVGO</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$PYPL</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span></span>
@@ -5661,7 +6161,7 @@ Spending money for future return on equity delivers much more value than short-t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="108">
+      <article class="tweet-card" data-tweet-index="118">
         <div class="tweet-head">
           <span class="mono">2026-02-05 08:15</span>
           <span><span class="chip red">$ANET</span><span class="chip red">$AVGO</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span></span>
@@ -5698,7 +6198,7 @@ Disclosure: Have no positions.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="109">
+      <article class="tweet-card" data-tweet-index="119">
         <div class="tweet-head">
           <span class="mono">2026-02-05 06:48</span>
           <span><span class="chip red">$ANET</span><span class="chip red">$AVGO</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span></span>
@@ -5761,7 +6261,7 @@ Long AI supply chains.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="110">
+      <article class="tweet-card" data-tweet-index="120">
         <div class="tweet-head">
           <span class="mono">2026-02-05 04:32</span>
           <span><span class="chip red">$CRDO</span><span class="chip red">$MU</span><span class="chip red">$RKLB</span><span class="chip red">$SNDK</span></span>
@@ -5794,7 +6294,7 @@ I’m happy holding it through any volatility. https://t.co/IskCechnmA</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="111">
+      <article class="tweet-card" data-tweet-index="121">
         <div class="tweet-head">
           <span class="mono">2026-02-05 02:57</span>
           <span><span class="chip red">$CRDO</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -5823,7 +6323,7 @@ What a wild selloff. https://t.co/tytlogNw5o</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="112">
+      <article class="tweet-card" data-tweet-index="122">
         <div class="tweet-head">
           <span class="mono">2026-02-04 17:24</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -5856,7 +6356,7 @@ $SNDK 的忠实粉丝。SSD 和后来的 hbf 让我想起了最初的建设，�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="113">
+      <article class="tweet-card" data-tweet-index="123">
         <div class="tweet-head">
           <span class="mono">2026-02-04 17:00</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$BRK</span><span class="chip red">$DUOL</span><span class="chip red">$FIG</span><span class="chip red">$GOOGL</span><span class="chip red">$JPM</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$PYPL</span></span>
@@ -5895,7 +6395,7 @@ Sometimes the best thing to do is just join in on the no-brainer trades and live
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="114">
+      <article class="tweet-card" data-tweet-index="124">
         <div class="tweet-head">
           <span class="mono">2026-02-04 05:05</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -5930,7 +6430,7 @@ Intel CEO talking about $MU, SK Hynix, Samsung bottleneck that there&#x27;s no r
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="115">
+      <article class="tweet-card" data-tweet-index="125">
         <div class="tweet-head">
           <span class="mono">2026-02-03 23:11</span>
           <span><span class="chip red">$MU</span></span>
@@ -5985,7 +6485,7 @@ CXMT - DoD 第 1260H 部分列表。军事链接列表。美国商务部可能�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="116">
+      <article class="tweet-card" data-tweet-index="126">
         <div class="tweet-head">
           <span class="mono">2026-02-03 13:37</span>
           <span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$HY9H</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SNDK</span></span>
@@ -6056,7 +6556,7 @@ My thesis might be early, or perhaps this may very well be the inflection point.
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="117">
+      <article class="tweet-card" data-tweet-index="127">
         <div class="tweet-head">
           <span class="mono">2026-02-03 10:06</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$BRK</span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$GOOGL</span><span class="chip red">$HY9H</span><span class="chip red">$JPM</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -6100,7 +6600,7 @@ SK 海力士 ~4.3x
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="118">
+      <article class="tweet-card" data-tweet-index="128">
         <div class="tweet-head">
           <span class="mono">2026-02-03 02:25</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span><span class="chip red">$TSLA</span><span class="chip red">$VPG</span></span>
@@ -6142,7 +6642,7 @@ My robotics moonshot pick. Watch and learn https://t.co/a8J8aUtlSL</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="119">
+      <article class="tweet-card" data-tweet-index="129">
         <div class="tweet-head">
           <span class="mono">2026-02-03 01:00</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -6173,7 +6673,7 @@ The AI demand + price hikes looks like the new structural norm. https://t.co/6RG
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="120">
+      <article class="tweet-card" data-tweet-index="130">
         <div class="tweet-head">
           <span class="mono">2026-02-02 17:48</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -6261,7 +6761,7 @@ SK海力士|年初至今 +22.6%：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="121">
+      <article class="tweet-card" data-tweet-index="131">
         <div class="tweet-head">
           <span class="mono">2026-02-02 12:49</span>
           <span><span class="chip red">$BABA</span><span class="chip red">$BMNR</span><span class="chip red">$BOA</span><span class="chip red">$BTC</span><span class="chip red">$CRCL</span><span class="chip red">$ETH</span><span class="chip red">$EZU</span><span class="chip red">$GOOGL</span><span class="chip red">$JD</span><span class="chip red">$JPM</span><span class="chip red">$MELI</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$PYPL</span><span class="chip red">$QBTS</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$RUT</span><span class="chip red">$SNAP</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span><span class="chip red">$VGK</span></span>
@@ -6367,7 +6867,7 @@ Fundamentals haven&#x27;t changed but optics have and short-term liquidity have.
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="122">
+      <article class="tweet-card" data-tweet-index="132">
         <div class="tweet-head">
           <span class="mono">2026-02-02 07:27</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$BRK</span><span class="chip red">$GOOGL</span><span class="chip red">$JPM</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -6438,7 +6938,7 @@ The memory supercyle from $MU, Samsung, and SK Hynix is here clearly here.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="123">
+      <article class="tweet-card" data-tweet-index="133">
         <div class="tweet-head">
           <span class="mono">2026-02-01 19:14</span>
           <span><span class="chip red">$BOA</span><span class="chip red">$BTC</span><span class="chip red">$CRCL</span><span class="chip red">$EZU</span><span class="chip red">$JPM</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RUT</span><span class="chip red">$VGK</span></span>
@@ -6608,7 +7108,7 @@ Warsh 是一位 AI 公牛。2025 年末，他认为人工智能是一股强大�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="124">
+      <article class="tweet-card" data-tweet-index="134">
         <div class="tweet-head">
           <span class="mono">2026-01-31 00:49</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -6643,7 +7143,7 @@ The supply shock feels inevitable.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="125">
+      <article class="tweet-card" data-tweet-index="135">
         <div class="tweet-head">
           <span class="mono">2026-01-30 12:49</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -6702,7 +7202,7 @@ Phison 与 Sandisk 做了同样的事情，带有闪存（库存）。Macronix �
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="126">
+      <article class="tweet-card" data-tweet-index="136">
         <div class="tweet-head">
           <span class="mono">2026-01-29 09:13</span>
           <span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -6747,7 +7247,7 @@ Some other interesting ones are Tokyo Electron for NAND/DRAM equipment for indir
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="127">
+      <article class="tweet-card" data-tweet-index="137">
         <div class="tweet-head">
           <span class="mono">2026-01-28 20:55</span>
           <span><span class="chip red">$MU</span><span class="chip red">$WMT</span></span>
@@ -6782,7 +7282,7 @@ $WMT，这家袜子经销商的远期市盈率约为 40，并且与通货膨胀�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="128">
+      <article class="tweet-card" data-tweet-index="138">
         <div class="tweet-head">
           <span class="mono">2026-01-28 20:52</span>
           <span><span class="chip red">$MU</span></span>
@@ -6807,7 +7307,7 @@ $MU is less volatile than Nanyna just given geopolitics so I do portfolio weight
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="129">
+      <article class="tweet-card" data-tweet-index="139">
         <div class="tweet-head">
           <span class="mono">2026-01-28 20:34</span>
           <span><span class="chip red">$MU</span></span>
@@ -6842,7 +7342,7 @@ They&#x27;re just one-upping each other on who can hike prices the most at this 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="130">
+      <article class="tweet-card" data-tweet-index="140">
         <div class="tweet-head">
           <span class="mono">2026-01-28 20:22</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$IBKR</span><span class="chip red">$INTC</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBCLF</span><span class="chip red">$SNDK</span></span>
@@ -6925,7 +7425,7 @@ SK Hynix - 几乎完全专注于 HBM4 和服务器级 DRAM。三星 - 将 30-40%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="131">
+      <article class="tweet-card" data-tweet-index="141">
         <div class="tweet-head">
           <span class="mono">2026-01-27 20:59</span>
           <span><span class="chip red">$MU</span></span>
@@ -6954,7 +7454,7 @@ Whereas $MU is tariff-exempt + gets CHIPS Act subsidies, and doesn&#x27;t have c
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="132">
+      <article class="tweet-card" data-tweet-index="142">
         <div class="tweet-head">
           <span class="mono">2026-01-27 20:41</span>
           <span><span class="chip red">$CBT</span><span class="chip red">$ENTG</span><span class="chip red">$FEAM</span><span class="chip red">$INTC</span><span class="chip red">$MTL</span><span class="chip red">$MU</span><span class="chip red">$SOLV</span></span>
@@ -7015,7 +7515,7 @@ CMP 浆料和纯度过滤器
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="133">
+      <article class="tweet-card" data-tweet-index="143">
         <div class="tweet-head">
           <span class="mono">2026-01-27 20:28</span>
           <span><span class="chip red">$INTC</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -7078,7 +7578,7 @@ $MU 远期市盈率可能约为 8.2-8.5，毛利率为 75-77%。随后特朗普�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="134">
+      <article class="tweet-card" data-tweet-index="144">
         <div class="tweet-head">
           <span class="mono">2026-01-26 06:16</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$IBKR</span><span class="chip red">$INTC</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBCLF</span><span class="chip red">$SNDK</span></span>
@@ -7145,7 +7645,7 @@ Nitto Boseki 等公司在美国也有类似的场外交易，例如 $NBCLF。如
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="135">
+      <article class="tweet-card" data-tweet-index="145">
         <div class="tweet-head">
           <span class="mono">2026-01-26 03:24</span>
           <span><span class="chip red">$BBW</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -7197,7 +7697,7 @@ While you&#x27;re fighting for crumbs in the GPU/Memory/Copper supply chains, yo
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="136">
+      <article class="tweet-card" data-tweet-index="146">
         <div class="tweet-head">
           <span class="mono">2026-01-25 18:04</span>
           <span><span class="chip red">$MU</span></span>
@@ -7228,7 +7728,7 @@ The valuation can’t keep up with the stock price</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="137">
+      <article class="tweet-card" data-tweet-index="147">
         <div class="tweet-head">
           <span class="mono">2026-01-25 11:52</span>
           <span><span class="chip red">$MU</span></span>
@@ -7253,7 +7753,7 @@ Micron fundamentally keeps getting cheaper every day and stock price can’t kee
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="138">
+      <article class="tweet-card" data-tweet-index="148">
         <div class="tweet-head">
           <span class="mono">2026-01-25 00:16</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AIRO</span><span class="chip red">$AMBA</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVAV</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BKKT</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$COHR</span><span class="chip red">$COIN</span><span class="chip red">$COPX</span><span class="chip red">$CRCL</span><span class="chip red">$DPRO</span><span class="chip red">$ETOR</span><span class="chip red">$FIG</span><span class="chip red">$FORM</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LASR</span><span class="chip red">$LIT</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$POET</span><span class="chip red">$RDDT</span><span class="chip red">$SKYT</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TTD</span><span class="chip red">$UAVS</span><span class="chip red">$UMAC</span><span class="chip red">$VELO</span><span class="chip red">$VPG</span></span>
@@ -7660,7 +8160,7 @@ BMNR - 无尽的稀释机，为愚蠢的项目提供资金，例如向先生投�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="139">
+      <article class="tweet-card" data-tweet-index="149">
         <div class="tweet-head">
           <span class="mono">2026-01-24 00:40</span>
           <span><span class="chip red">$AEHR</span><span class="chip red">$MU</span></span>
@@ -7681,7 +8181,7 @@ BMNR - 无尽的稀释机，为愚蠢的项目提供资金，例如向先生投�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="140">
+      <article class="tweet-card" data-tweet-index="150">
         <div class="tweet-head">
           <span class="mono">2026-01-24 00:08</span>
           <span><span class="chip red">$ACLS</span><span class="chip red">$ADEA</span><span class="chip red">$AMKR</span><span class="chip red">$FORM</span><span class="chip red">$KLAC</span><span class="chip red">$MKSI</span><span class="chip red">$MTSI</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$PLAB</span><span class="chip red">$RMBS</span><span class="chip red">$SMTC</span><span class="chip red">$TER</span><span class="chip red">$VECO</span></span>
@@ -7765,7 +8265,7 @@ AI revolves around the other Micron and you get exposure to most popular bottlen
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="141">
+      <article class="tweet-card" data-tweet-index="151">
         <div class="tweet-head">
           <span class="mono">2026-01-23 00:16</span>
           <span><span class="chip red">$MRAM</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -7786,7 +8286,7 @@ AI revolves around the other Micron and you get exposure to most popular bottlen
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="142">
+      <article class="tweet-card" data-tweet-index="152">
         <div class="tweet-head">
           <span class="mono">2026-01-23 00:11</span>
           <span><span class="chip red">$MU</span><span class="chip red">$RMBS</span></span>
@@ -7815,7 +8315,7 @@ They don&#x27;t quite get the same pricing power like the big three do but it sh
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="143">
+      <article class="tweet-card" data-tweet-index="153">
         <div class="tweet-head">
           <span class="mono">2026-01-23 00:02</span>
           <span><span class="chip red">$ACLS</span><span class="chip red">$ADEA</span><span class="chip red">$AMKR</span><span class="chip red">$FORM</span><span class="chip red">$INTC</span><span class="chip red">$KLAC</span><span class="chip red">$MKSI</span><span class="chip red">$MTSI</span><span class="chip red">$MU</span><span class="chip red">$ONTO</span><span class="chip red">$PLAB</span><span class="chip red">$RMBS</span><span class="chip red">$SMTC</span><span class="chip red">$TER</span><span class="chip red">$VECO</span></span>
@@ -7880,7 +8380,7 @@ $MKSI ($14.9B) - 激光子系统
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="144">
+      <article class="tweet-card" data-tweet-index="154">
         <div class="tweet-head">
           <span class="mono">2026-01-22 23:09</span>
           <span><span class="chip red">$ARM</span><span class="chip red">$MU</span><span class="chip red">$RMBS</span></span>
@@ -7915,7 +8415,7 @@ Id expect it to get rerated as well over this year</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="145">
+      <article class="tweet-card" data-tweet-index="155">
         <div class="tweet-head">
           <span class="mono">2026-01-22 18:34</span>
           <span><span class="chip red">$MU</span><span class="chip red">$WMT</span></span>
@@ -7950,7 +8450,7 @@ Stocks make ATHs every day.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="146">
+      <article class="tweet-card" data-tweet-index="156">
         <div class="tweet-head">
           <span class="mono">2026-01-22 18:21</span>
           <span><span class="chip red">$INTC</span><span class="chip red">$MU</span></span>
@@ -7989,7 +8489,7 @@ This is the easiest long on US policy.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="147">
+      <article class="tweet-card" data-tweet-index="157">
         <div class="tweet-head">
           <span class="mono">2026-01-22 18:06</span>
           <span><span class="chip red">$INTC</span><span class="chip red">$MU</span></span>
@@ -8032,7 +8532,7 @@ Don&#x27;t overthink things with Micron. https://t.co/LBhbVjoKGz</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="148">
+      <article class="tweet-card" data-tweet-index="158">
         <div class="tweet-head">
           <span class="mono">2026-01-22 05:09</span>
           <span><span class="chip red">$INTC</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -8067,7 +8567,7 @@ As with the demand side, they&#x27;re sold out for 2026 and into 2027. I see a s
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="149">
+      <article class="tweet-card" data-tweet-index="159">
         <div class="tweet-head">
           <span class="mono">2026-01-22 04:48</span>
           <span><span class="chip red">$MU</span><span class="chip red">$TSM</span></span>
@@ -8088,7 +8588,7 @@ As with the demand side, they&#x27;re sold out for 2026 and into 2027. I see a s
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="150">
+      <article class="tweet-card" data-tweet-index="160">
         <div class="tweet-head">
           <span class="mono">2026-01-22 04:10</span>
           <span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -8113,7 +8613,7 @@ Now it’s starting to feel the same with $MU in round 2.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="151">
+      <article class="tweet-card" data-tweet-index="161">
         <div class="tweet-head">
           <span class="mono">2026-01-22 04:04</span>
           <span><span class="chip red">$MU</span></span>
@@ -8138,7 +8638,7 @@ It’s your decision in the end but in my opinion there’s a lot of re-rating t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="152">
+      <article class="tweet-card" data-tweet-index="162">
         <div class="tweet-head">
           <span class="mono">2026-01-22 03:04</span>
           <span><span class="chip red">$INTC</span><span class="chip red">$MU</span></span>
@@ -8198,7 +8698,7 @@ In 2027, wouldn&#x27;t be surprised if Micron was trading at $1.5T.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="153">
+      <article class="tweet-card" data-tweet-index="163">
         <div class="tweet-head">
           <span class="mono">2026-01-21 01:52</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AIRO</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DJT</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLY</span><span class="chip red">$GEMI</span><span class="chip red">$GLXY</span><span class="chip red">$HIMS</span><span class="chip red">$HUT</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span></span>
@@ -8231,7 +8731,7 @@ https://t.co/QxAketGwML</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="154">
+      <article class="tweet-card" data-tweet-index="164">
         <div class="tweet-head">
           <span class="mono">2026-01-18 00:48</span>
           <span><span class="chip red">$MU</span><span class="chip red">$TSM</span></span>
@@ -8256,7 +8756,7 @@ I do like Elon, but we&#x27;ll see how markets price in the lawsuit impacting Op
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="155">
+      <article class="tweet-card" data-tweet-index="165">
         <div class="tweet-head">
           <span class="mono">2026-01-12 19:07</span>
           <span><span class="chip red">$AIRO</span><span class="chip red">$AXTI</span><span class="chip red">$MU</span><span class="chip red">$OSS</span><span class="chip red">$VLN</span></span>
@@ -8289,7 +8789,7 @@ Again, alpha is when you discover things majority of markets miss. You miss out 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="156">
+      <article class="tweet-card" data-tweet-index="166">
         <div class="tweet-head">
           <span class="mono">2026-01-12 18:55</span>
           <span><span class="chip red">$AXT</span><span class="chip red">$AXTI</span><span class="chip red">$MU</span></span>
@@ -8335,7 +8835,7 @@ Institutions are validating the thesis, but are trailing both the price and alph
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="157">
+      <article class="tweet-card" data-tweet-index="167">
         <div class="tweet-head">
           <span class="mono">2026-01-12 02:42</span>
           <span><span class="chip red">$MU</span><span class="chip red">$TSM</span></span>
@@ -8360,7 +8860,7 @@ Is this Pokemon Card and Towel reseller supposed to be growing faster than $TSM 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="158">
+      <article class="tweet-card" data-tweet-index="168">
         <div class="tweet-head">
           <span class="mono">2026-01-09 10:04</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$DOWA</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span></span>
@@ -8397,7 +8897,7 @@ This $1B company controls two different bottleneck for the AI buildout. I&#x27;m
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="159">
+      <article class="tweet-card" data-tweet-index="169">
         <div class="tweet-head">
           <span class="mono">2026-01-09 08:59</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$GOOGL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -8432,7 +8932,7 @@ License volatility was always a risk factor. But again, any delays would just bo
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="160">
+      <article class="tweet-card" data-tweet-index="170">
         <div class="tweet-head">
           <span class="mono">2026-01-08 16:11</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$MU</span></span>
@@ -8481,7 +8981,7 @@ Looks like markets are starting to find out. https://t.co/rxGkcHYBtS</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="161">
+      <article class="tweet-card" data-tweet-index="171">
         <div class="tweet-head">
           <span class="mono">2026-01-07 20:55</span>
           <span><span class="chip red">$AIRO</span><span class="chip red">$CRDO</span><span class="chip red">$MU</span><span class="chip red">$SNDK</span></span>
@@ -8512,7 +9012,7 @@ We&#x27;ll see if my interpretation is correct though, I have a fun time testing
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="162">
+      <article class="tweet-card" data-tweet-index="172">
         <div class="tweet-head">
           <span class="mono">2026-01-07 20:43</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$LITE</span><span class="chip red">$MU</span></span>
@@ -8543,7 +9043,7 @@ https://t.co/d6eDk7K204</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="163">
+      <article class="tweet-card" data-tweet-index="173">
         <div class="tweet-head">
           <span class="mono">2026-01-07 04:16</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$MU</span></span>
@@ -8592,7 +9092,7 @@ $AXTI ($1B)
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="164">
+      <article class="tweet-card" data-tweet-index="174">
         <div class="tweet-head">
           <span class="mono">2026-01-06 16:24</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AIRO</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVAV</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DJT</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLY</span><span class="chip red">$GEMI</span><span class="chip red">$GLXY</span><span class="chip red">$HIMS</span><span class="chip red">$HUT</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span></span>
@@ -8653,7 +9153,7 @@ So, I’ve taken a position in $AIRO just to see where it goes.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="165">
+      <article class="tweet-card" data-tweet-index="175">
         <div class="tweet-head">
           <span class="mono">2026-01-05 20:34</span>
           <span><span class="chip red">$ASTS</span><span class="chip red">$AXTI</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$ONDS</span><span class="chip red">$POET</span><span class="chip red">$RKLB</span><span class="chip red">$SKYT</span><span class="chip red">$TE</span><span class="chip red">$ZETA</span></span>
@@ -8768,7 +9268,7 @@ FinX 15 回报率（1 周）：11.3%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="166">
+      <article class="tweet-card" data-tweet-index="176">
         <div class="tweet-head">
           <span class="mono">2026-01-03 17:43</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AIRO</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVAV</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BA</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CF</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CVE</span><span class="chip red">$DJT</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLY</span><span class="chip red">$GEMI</span><span class="chip red">$GLXY</span><span class="chip red">$HII</span><span class="chip red">$HIMS</span><span class="chip red">$HON</span><span class="chip red">$HUT</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LDOS</span><span class="chip red">$LHX</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$RTX</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$VLO</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span></span>
@@ -8873,7 +9373,7 @@ $HON - .4%+</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="167">
+      <article class="tweet-card" data-tweet-index="177">
         <div class="tweet-head">
           <span class="mono">2026-01-02 20:46</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AIRO</span><span class="chip red">$AKAM</span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ASOZF</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BMNR</span><span class="chip red">$BOA</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWD</span><span class="chip red">$CSCO</span><span class="chip red">$DJT</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLY</span><span class="chip red">$GEMI</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PATH</span><span class="chip red">$PLTR</span><span class="chip red">$POET</span><span class="chip red">$PYPL</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$V</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span><span class="chip red">$XRP</span></span>
@@ -9195,7 +9695,7 @@ Circle、Etoro、AIRO、Klarna、Figma 等 IPO 名称在 2026 年下降+税收�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="168">
+      <article class="tweet-card" data-tweet-index="178">
         <div class="tweet-head">
           <span class="mono">2025-12-28 12:00</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$MU</span></span>
@@ -9230,7 +9730,7 @@ If a $700m tiny company is now the single point of failure for the growth-cycle 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="169">
+      <article class="tweet-card" data-tweet-index="179">
         <div class="tweet-head">
           <span class="mono">2025-12-26 23:16</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$MU</span></span>
@@ -9261,7 +9761,7 @@ It could be a huge market opportunity for investors for stuff like $AXTI, but ju
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="170">
+      <article class="tweet-card" data-tweet-index="180">
         <div class="tweet-head">
           <span class="mono">2025-12-19 23:36</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
@@ -9303,7 +9803,7 @@ NBIS 美元：+10.28%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="171">
+      <article class="tweet-card" data-tweet-index="181">
         <div class="tweet-head">
           <span class="mono">2025-12-17 18:36</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
@@ -9390,7 +9890,7 @@ Go long on the AI sector.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="172">
+      <article class="tweet-card" data-tweet-index="182">
         <div class="tweet-head">
           <span class="mono">2025-12-16 07:26</span>
           <span><span class="chip red">$MU</span><span class="chip red">$NBIS</span></span>
@@ -9419,7 +9919,7 @@ Go long on the AI sector.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="173">
+      <article class="tweet-card" data-tweet-index="183">
         <div class="tweet-head">
           <span class="mono">2025-12-15 07:58</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$APLD</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FRMI</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LGN</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MOD</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RMBS</span><span class="chip red">$SEI</span><span class="chip red">$SNDK</span><span class="chip red">$SOFI</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
@@ -9517,7 +10017,7 @@ $NBIS | -6.99%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="174">
+      <article class="tweet-card" data-tweet-index="184">
         <div class="tweet-head">
           <span class="mono">2025-12-14 22:16</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$ASTS</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$RKLB</span><span class="chip red">$SOFI</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span></span>
@@ -9582,7 +10082,7 @@ I’m confident Finx Retail stock “bubbles” might not be right in shorter ti
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="175">
+      <article class="tweet-card" data-tweet-index="185">
         <div class="tweet-head">
           <span class="mono">2025-12-13 04:22</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SMCI</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span><span class="chip red">$WULF</span></span>
@@ -9653,7 +10153,7 @@ Broadcom 的 ER 为“双倍”，营收为 18.02B 美元（同比增长 28%）�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="176">
+      <article class="tweet-card" data-tweet-index="186">
         <div class="tweet-head">
           <span class="mono">2025-11-29 07:53</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$CLS</span><span class="chip red">$CRDO</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span><span class="chip red">$STX</span><span class="chip red">$TE</span><span class="chip red">$TSM</span><span class="chip red">$VST</span><span class="chip red">$WULF</span></span>
@@ -9768,7 +10268,7 @@ Google TPU、AWS Trainium、Meta MTIA、Microsoft Maia 和定制超大规模芯�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="177">
+      <article class="tweet-card" data-tweet-index="187">
         <div class="tweet-head">
           <span class="mono">2025-11-25 19:38</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$CLS</span><span class="chip red">$COIN</span><span class="chip red">$CRDO</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FTX</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NET</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span><span class="chip red">$SOL</span><span class="chip red">$STX</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$UBER</span><span class="chip red">$VST</span><span class="chip red">$WULF</span></span>
@@ -9875,7 +10375,7 @@ AI 算力云公司：$CIFR、$NBIS、$WULF、$IREN、
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="178">
+      <article class="tweet-card" data-tweet-index="188">
         <div class="tweet-head">
           <span class="mono">2025-11-20 18:23</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COIN</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$KRUS</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$SBET</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOL</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WLAC</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -10047,7 +10547,7 @@ $CIFR 是 AI 算力云公司 领域我第二喜欢的股票。据我记忆，该
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="179">
+      <article class="tweet-card" data-tweet-index="189">
         <div class="tweet-head">
           <span class="mono">2025-11-07 01:19</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRCLQUANTUM</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$ETH</span><span class="chip red">$FLNC</span><span class="chip red">$HXSCL</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MSTR</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SOL</span><span class="chip red">$TE</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span></span>
@@ -10092,7 +10592,7 @@ This is likely a short-term correction pricing in a few things such as no third 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="180">
+      <article class="tweet-card" data-tweet-index="190">
         <div class="tweet-head">
           <span class="mono">2025-11-05 16:34</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRCLQUANTUM</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$ETH</span><span class="chip red">$FLNC</span><span class="chip red">$HXSCL</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MSTR</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$OSS</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SOL</span><span class="chip red">$TE</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span></span>
@@ -10177,7 +10677,7 @@ OSS 是 Andruil 的供应商。如果 OSS 是 Anduril 的供应商，并从 650 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="181">
+      <article class="tweet-card" data-tweet-index="191">
         <div class="tweet-head">
           <span class="mono">2025-11-05 02:04</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRCLQUANTUM</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$ETH</span><span class="chip red">$FLNC</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$HXSCL</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MINT</span><span class="chip red">$MSFT</span><span class="chip red">$MSTR</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SOL</span><span class="chip red">$SPY</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -10304,7 +10804,7 @@ $元：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="182">
+      <article class="tweet-card" data-tweet-index="192">
         <div class="tweet-head">
           <span class="mono">2025-11-03 13:23</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$CRDO</span><span class="chip red">$MINT</span><span class="chip red">$MU</span></span>
@@ -10333,7 +10833,7 @@ $MINT was just asymmetrical upside.  To @Neat_Lama, here&#x27;s another song #2 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="183">
+      <article class="tweet-card" data-tweet-index="193">
         <div class="tweet-head">
           <span class="mono">2025-10-29 13:03</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$ASML</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$CCCX</span><span class="chip red">$CIFR</span><span class="chip red">$CLS</span><span class="chip red">$CLSK</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DGXX</span><span class="chip red">$DLO</span><span class="chip red">$DRFT</span><span class="chip red">$EOSE</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$GOOGL</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$KTOS</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SLNH</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TE</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -10473,7 +10973,7 @@ AI 算力云公司 - 我们已经看到 $META x $CRWV 交易、$WULF x $GOOGL x 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="184">
+      <article class="tweet-card" data-tweet-index="194">
         <div class="tweet-head">
           <span class="mono">2025-10-22 09:01</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$RKLB</span><span class="chip red">$TSM</span></span>
@@ -10502,7 +11002,7 @@ It&#x27;s a special skill to convince yourself to do the opposite.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="185">
+      <article class="tweet-card" data-tweet-index="195">
         <div class="tweet-head">
           <span class="mono">2025-10-20 22:59</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$BITF</span><span class="chip red">$BLSKY</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$EOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$QBTS</span><span class="chip red">$RBRK</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TE</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -10537,7 +11037,7 @@ Sometimes just need to take the leap of faith with a sector and trust DD of peer
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="186">
+      <article class="tweet-card" data-tweet-index="196">
         <div class="tweet-head">
           <span class="mono">2025-10-20 02:21</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$BITF</span><span class="chip red">$BLSKY</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRRR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$QBTS</span><span class="chip red">$RBRK</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -10848,7 +11348,7 @@ _
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="187">
+      <article class="tweet-card" data-tweet-index="197">
         <div class="tweet-head">
           <span class="mono">2025-10-19 07:07</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$BZAI</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$CRM</span><span class="chip red">$CRWV</span><span class="chip red">$DFLI</span><span class="chip red">$EOSE</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRAB</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NKLR</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$OPAD</span><span class="chip red">$ORCL</span><span class="chip red">$RBRK</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -11025,7 +11525,7 @@ Overall,  so far so good! I&#x27;ve lost count of how many 100%+ returns I&#x27;
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="188">
+      <article class="tweet-card" data-tweet-index="198">
         <div class="tweet-head">
           <span class="mono">2025-10-16 01:20</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$BZAI</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DFLI</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NKLR</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$RBRK</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -11050,7 +11550,7 @@ Overall,  so far so good! I&#x27;ve lost count of how many 100%+ returns I&#x27;
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="189">
+      <article class="tweet-card" data-tweet-index="199">
         <div class="tweet-head">
           <span class="mono">2025-10-15 20:13</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$BZAI</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DFLI</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NKLR</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$RBRK</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SMR</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -11077,7 +11577,7 @@ WSJ: &quot;US Army to Power Bases with Nuclear Reactors&quot; https://t.co/COEte
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="190">
+      <article class="tweet-card" data-tweet-index="200">
         <div class="tweet-head">
           <span class="mono">2025-10-15 15:42</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$BZAI</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DFLI</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRAB</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NKLR</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$RBRK</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -11378,7 +11878,7 @@ UNH - 医疗保健股未受大豆影响，但出现调整。可能会在一个�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="191">
+      <article class="tweet-card" data-tweet-index="201">
         <div class="tweet-head">
           <span class="mono">2025-10-13 23:51</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BKSY</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWD</span><span class="chip red">$DELL</span><span class="chip red">$DKNG</span><span class="chip red">$ELOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NET</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$QUBT</span><span class="chip red">$RBRK</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -11457,7 +11957,7 @@ TLDR: Great buy for cybersecurity sector, better opportunities elsewhere.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="192">
+      <article class="tweet-card" data-tweet-index="202">
         <div class="tweet-head">
           <span class="mono">2025-10-13 01:36</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BKSY</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$DKNG</span><span class="chip red">$ELOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$QUBT</span><span class="chip red">$RBRK</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -11508,7 +12008,7 @@ Dip buying opportunity https://t.co/2sUEV7Dg8s</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="193">
+      <article class="tweet-card" data-tweet-index="203">
         <div class="tweet-head">
           <span class="mono">2025-10-12 07:42</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$MU</span><span class="chip red">$QLCM</span><span class="chip red">$TSM</span></span>
@@ -11537,7 +12037,7 @@ Of course I’m not sure how macro risk will play out with Trump being a wild ca
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="194">
+      <article class="tweet-card" data-tweet-index="204">
         <div class="tweet-head">
           <span class="mono">2025-10-12 02:32</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BITF</span><span class="chip red">$BKSY</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DELL</span><span class="chip red">$DKNG</span><span class="chip red">$ELOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRAB</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$QUBT</span><span class="chip red">$RBRK</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -11856,7 +12356,7 @@ QBTS - 市值与估值脱节
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="195">
+      <article class="tweet-card" data-tweet-index="205">
         <div class="tweet-head">
           <span class="mono">2025-10-11 06:06</span>
           <span><span class="chip red">$BTC</span><span class="chip red">$CDNS</span><span class="chip red">$CIFR</span><span class="chip red">$DKNG</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$MU</span><span class="chip red">$NKE</span><span class="chip red">$QLCM</span><span class="chip red">$UNH</span></span>
@@ -11905,7 +12405,7 @@ TLDR：可能会出现短期关税冲击、温和的宏观风险以及因恐惧�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="196">
+      <article class="tweet-card" data-tweet-index="206">
         <div class="tweet-head">
           <span class="mono">2025-10-09 06:50</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$DFLI</span><span class="chip red">$DLFI</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$LULU</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$SEI</span><span class="chip red">$SNAP</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span></span>
@@ -11947,7 +12447,7 @@ $FLY ECLIPSE 可重复使用中型火箭发射，目标是 2026 年。$4.5B 市�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="197">
+      <article class="tweet-card" data-tweet-index="207">
         <div class="tweet-head">
           <span class="mono">2025-10-09 05:21</span>
           <span><span class="chip red">$MU</span></span>
@@ -11968,7 +12468,7 @@ $FLY ECLIPSE 可重复使用中型火箭发射，目标是 2026 年。$4.5B 市�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="198">
+      <article class="tweet-card" data-tweet-index="208">
         <div class="tweet-head">
           <span class="mono">2025-10-09 05:12</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$DFLI</span><span class="chip red">$DLFI</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$IREN</span><span class="chip red">$LULU</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$SEI</span><span class="chip red">$SNAP</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span></span>
@@ -12095,7 +12595,7 @@ $ORCL - 在 GPU 构建方面遇到麻烦，只是为了展示超大规模和像 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="199">
+      <article class="tweet-card" data-tweet-index="209">
         <div class="tweet-head">
           <span class="mono">2025-10-08 01:20</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$BTC</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$EOSE</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$PLTR</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$SNAP</span><span class="chip red">$SPRB</span><span class="chip red">$TSM</span><span class="chip red">$VIRT</span><span class="chip red">$WYFI</span></span>
@@ -12186,7 +12686,7 @@ TLDR：（来自谣言）
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="200">
+      <article class="tweet-card" data-tweet-index="210">
         <div class="tweet-head">
           <span class="mono">2025-10-07 06:29</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASML</span><span class="chip red">$AVGO</span><span class="chip red">$BTC</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$EOSE</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$PLTR</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$SNAP</span><span class="chip red">$SPRB</span><span class="chip red">$TSM</span><span class="chip red">$VIRT</span></span>
@@ -12243,7 +12743,7 @@ Then again, I don&#x27;t know where OpenAI is getting all this money to promise 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="201">
+      <article class="tweet-card" data-tweet-index="211">
         <div class="tweet-head">
           <span class="mono">2025-10-06 06:40</span>
           <span><span class="chip red">$MU</span></span>
@@ -12264,7 +12764,7 @@ Then again, I don&#x27;t know where OpenAI is getting all this money to promise 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="202">
+      <article class="tweet-card" data-tweet-index="212">
         <div class="tweet-head">
           <span class="mono">2025-10-05 06:58</span>
           <span><span class="chip red">$MU</span></span>
@@ -12285,7 +12785,7 @@ Then again, I don&#x27;t know where OpenAI is getting all this money to promise 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="203">
+      <article class="tweet-card" data-tweet-index="213">
         <div class="tweet-head">
           <span class="mono">2025-09-26 00:25</span>
           <span><span class="chip red">$MU</span><span class="chip red">$OKLO</span><span class="chip red">$OPEN</span></span>

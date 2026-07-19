@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$WULF 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -25,18 +26,18 @@
     <section class="hero">
       <span class="eyebrow">Ticker Detail</span>
       <h1>$WULF 历史推文</h1>
-      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <p>近期观点：谨慎，重点跟踪融资结构、稀释和现金流质量。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>117</b></div>
-        <div class="stat-card"><span>历史推文</span><b>117</b></div>
+        <div class="stat-card"><span>累计提及</span><b>119</b></div>
+        <div class="stat-card"><span>历史推文</span><b>119</b></div>
         <div class="stat-card"><span>首次提及</span><b>2025-09-03</b></div>
         <div class="stat-card"><span>最近提及</span><b>2026-07-06</b></div>
         <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
         <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
             
       </div>
-      <div class="chips"><span class="chip blue">签约 ARR vs 市值错配 41</span><span class="chip blue">关税 / 宏观冲击买点 29</span><span class="chip blue">Mag7 客户集中度过滤 27</span><span class="chip blue">对手方 / 融资质量谱系 12</span><span class="chip blue">信念分层、仓位与时点 9</span><span class="chip blue">GAAP 毛利率之战 8</span><span class="chip blue">机构滞后 / 暗池与资金流 6</span><span class="chip blue">稀释 / ATM 日历否决项 6</span></div>
+      <div class="chips"><span class="chip blue">签约 ARR vs 市值错配 41</span><span class="chip blue">关税 / 宏观冲击买点 29</span><span class="chip blue">Mag7 客户集中度过滤 27</span><span class="chip blue">对手方 / 融资质量谱系 12</span><span class="chip blue">信念分层、仓位与时点 10</span><span class="chip blue">GAAP 毛利率之战 8</span><span class="chip blue">稀释 / ATM 日历否决项 7</span><span class="chip blue">机构滞后 / 暗池与资金流 6</span></div>
     </section>
     <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
     
@@ -50,7 +51,7 @@
         <div class="analysis-grid panel-body">
           <article class="analysis-box">
             <h3>Serenity 观点</h3>
-            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+            <p>近期观点：谨慎，重点跟踪融资结构、稀释和现金流质量。</p>
           </article>
           <article class="analysis-box">
             <h3>新增信号</h3>
@@ -62,7 +63,7 @@
           </article>
           <article class="analysis-box">
             <h3>作者立场</h3>
-            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+            <p>近期观点：谨慎，重点跟踪融资结构、稀释和现金流质量。</p>
           </article>
           <article class="analysis-box">
             <h3>情绪与市场</h3>
@@ -138,13 +139,42 @@ Probably a very positive tailwind for the Neocloud/Colo sector. https://t.co/82t
         </div>
         <div class="tweet-zh"><b>中文译文：</b>$WULF 今天与 Anthropic 签下 190 亿美元的数据中心租赁协议。这大概率会成为 AI 算力云公司/Colocation 板块的非常积极的顺风。</div>
         <div class="tweet-foot">
-          <span>likes 1197 / retweets 77 / replies 168 / views 310605</span>
+          <span>likes 1308 / retweets 82 / replies 170 / views 397925</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
       <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-06-17 22:57</span>
+          <span><span class="chip red">$ACN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SHOP</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">And 7 months later... $NBIS is all time highs. 
+
+While $IREN bagholders are still funding the $6,000,000,000 ATM and stuck at the same price back in November. 
+
+Guess this settles the debate? https://t.co/wYvbhw4xK3</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">And 7 months later... $NBIS is all time highs. 
+
+While $IREN bagholders are still funding the $6,000,000,000 ATM and stuck at the same price back in November. 
+
+Guess this settles the debate? https://t.co/wYvbhw4xK3</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2067260268166713561" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>7 个月后...$NBIS 创历史新高。而 $IREN 的持有者仍在为 6,000,000,000 美元的 ATM 机提供资金，并在 11 月份保持相同的价格。你猜这会解决争论吗？https://t.co/wYvbhw4xK3</div>
+        <div class="tweet-foot">
+          <span>likes 2353 / retweets 184 / replies 207 / views 702215</span>
+        </div>
+        <div class="chips"><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
         <div class="tweet-head">
           <span class="mono">2026-06-12 01:54</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$HUT</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -155,7 +185,7 @@ Such as $WULF, $CIFR, $WYFI, $HUT and others (not named yet).
 
 As Anthropic is pursuing its first DC leases. 
 
-&quot;The AI company has signed more than a dozen letters of intent with U.S. developers&quot; per The Information.</div>
+&quot;The AI company has signed more than a dozen letters of intent with U.S. developers&quot; https://t.co/LIkHo2QgRs</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -165,19 +195,60 @@ Such as $WULF, $CIFR, $WYFI, $HUT and others (not named yet).
 
 As Anthropic is pursuing its first DC leases. 
 
-&quot;The AI company has signed more than a dozen letters of intent with U.S. developers&quot; per The Information.</div>
+&quot;The AI company has signed more than a dozen letters of intent with U.S. developers&quot; https://t.co/LIkHo2QgRs</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2065130589204992048" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
-        <div class="tweet-zh"><b>中文译文：</b>新的 Anthropic 消息看起来像是 AI 算力云公司 托管领域的潜在推动力。例如$WULF、$CIFR、$WYFI、$HUT 等（尚未命名）。Anthropic 正在寻求其首个 DC 租赁。据 The Information 报道，“这家人工智能公司已与美国开发商签署了十几份意向书”。</div>
+        <div class="tweet-zh"><b>中文译文：</b>新的 Anthropic 消息看起来像是 AI 算力云公司 托管领域的潜在推动力。例如$WULF、$CIFR、$WYFI、$HUT 等（尚未命名）。Anthropic 正在寻求其首个 DC 租赁。“这家人工智能公司已与美国开发商签署了十几份意向书” https://t.co/LIkHo2QgRs</div>
         <div class="tweet-foot">
-          <span>likes 1323 / retweets 83 / replies 217 / views 384969</span>
+          <span>likes 1388 / retweets 96 / replies 221 / views 444127</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="2">
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
+          <span class="mono">2026-06-03 18:17</span>
+          <span><span class="chip red">$ACN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SHOP</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
+        </div>
+        <div class="tweet-text">Fun to see my highest conviction Neocloud pick in $NBIS age well.
+
+I wrote a thesis last year on the Neocloud sector becoming a major theme.
+
+And then picked the King.
+
+-&amp;gt; Nebius is #1 out of the entire sector from $IREN to $CRWV.
+
+$84 -&amp;gt; $260.
+
+Thesis validated by markets. https://t.co/RGOt3GSNjW</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Fun to see my highest conviction Neocloud pick in $NBIS age well.
+
+I wrote a thesis last year on the Neocloud sector becoming a major theme.
+
+And then picked the King.
+
+-&amp;gt; Nebius is #1 out of the entire sector from $IREN to $CRWV.
+
+$84 -&amp;gt; $260.
+
+Thesis validated by markets. https://t.co/RGOt3GSNjW</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2062116398210703462" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>很高兴看到我最坚信的 AI 算力云公司 在 $NBIS 中的选择已经很成熟了。我去年写了一篇论文，主题是 AI 算力云公司 领域。然后选了国王。-&gt; Nebius 在从 $IREN 到 $CRWV 的整个领域中排名第一。84 美元 -&gt; 260 美元。论文得到了市场的验证。https://t.co/RGOt3GSNjW</div>
+        <div class="tweet-foot">
+          <span>likes 1900 / retweets 103 / replies 193 / views 622302</span>
+        </div>
+        <div class="chips"><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="4">
         <div class="tweet-head">
           <span class="mono">2026-06-02 07:56</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -202,7 +273,7 @@ $GOOGL has done a lot of Fluidstack deals with $CIFR to $WULF for more Colo. my 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="3">
+      <article class="tweet-card" data-tweet-index="5">
         <div class="tweet-head">
           <span class="mono">2026-05-22 00:47</span>
           <span><span class="chip red">$ACN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SHOP</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -227,7 +298,7 @@ Did you listen anon? https://t.co/WVFKh8d3vy</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="4">
+      <article class="tweet-card" data-tweet-index="6">
         <div class="tweet-head">
           <span class="mono">2026-03-10 14:27</span>
           <span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$RIOT</span><span class="chip red">$WULF</span></span>
@@ -256,7 +327,7 @@ That being said, just floating this trade idea out after doing more research, I 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="5">
+      <article class="tweet-card" data-tweet-index="7">
         <div class="tweet-head">
           <span class="mono">2026-03-07 03:28</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$WULF</span></span>
@@ -281,7 +352,7 @@ It comes without a $6B new share dilution, and all that selling pressure against
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="6">
+      <article class="tweet-card" data-tweet-index="8">
         <div class="tweet-head">
           <span class="mono">2026-03-01 15:25</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRDO</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span><span class="chip red">$XLU</span></span>
@@ -323,7 +394,7 @@ ASIC - $AVGO、$MRVL
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="7">
+      <article class="tweet-card" data-tweet-index="9">
         <div class="tweet-head">
           <span class="mono">2026-02-20 03:06</span>
           <span><span class="chip red">$BE</span><span class="chip red">$BEPC</span><span class="chip red">$CEG</span><span class="chip red">$CIFR</span><span class="chip red">$D</span><span class="chip red">$ETN</span><span class="chip red">$FLNC</span><span class="chip red">$FSLR</span><span class="chip red">$GEV</span><span class="chip red">$IREN</span><span class="chip red">$KMI</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$NRG</span><span class="chip red">$NRGV</span><span class="chip red">$PWR</span><span class="chip red">$TE</span><span class="chip red">$TLN</span><span class="chip red">$TSLA</span><span class="chip red">$VRT</span><span class="chip red">$VST</span><span class="chip red">$WMB</span><span class="chip red">$WULF</span></span>
@@ -348,7 +419,7 @@ https://t.co/rIKoKRyQOu</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="8">
+      <article class="tweet-card" data-tweet-index="10">
         <div class="tweet-head">
           <span class="mono">2026-02-15 23:48</span>
           <span><span class="chip red">$BE</span><span class="chip red">$BEPC</span><span class="chip red">$CEG</span><span class="chip red">$CIFR</span><span class="chip red">$D</span><span class="chip red">$ETN</span><span class="chip red">$FLNC</span><span class="chip red">$FSLR</span><span class="chip red">$GEV</span><span class="chip red">$IREN</span><span class="chip red">$KMI</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$NRG</span><span class="chip red">$NRGV</span><span class="chip red">$PWR</span><span class="chip red">$TE</span><span class="chip red">$TLN</span><span class="chip red">$TSLA</span><span class="chip red">$VRT</span><span class="chip red">$VST</span><span class="chip red">$WMB</span><span class="chip red">$WULF</span></span>
@@ -403,7 +474,7 @@ Their message: Invest in American Energy.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="9">
+      <article class="tweet-card" data-tweet-index="11">
         <div class="tweet-head">
           <span class="mono">2026-02-10 10:47</span>
           <span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -432,7 +503,7 @@ That being said don’t really care too much about SI if fundamentals are strong
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="10">
+      <article class="tweet-card" data-tweet-index="12">
         <div class="tweet-head">
           <span class="mono">2026-02-05 07:00</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -457,7 +528,7 @@ Looks like Google is primarily shifting to TPUs now. Don&#x27;t think $NBIS is a
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="11">
+      <article class="tweet-card" data-tweet-index="13">
         <div class="tweet-head">
           <span class="mono">2026-01-28 12:13</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$WULF</span></span>
@@ -502,7 +573,7 @@ Nvidia doesn&#x27;t lose much if and when Coreweave goes under with just a ton o
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="12">
+      <article class="tweet-card" data-tweet-index="14">
         <div class="tweet-head">
           <span class="mono">2026-01-21 01:52</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AIRO</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DJT</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLY</span><span class="chip red">$GEMI</span><span class="chip red">$GLXY</span><span class="chip red">$HIMS</span><span class="chip red">$HUT</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span></span>
@@ -535,7 +606,7 @@ https://t.co/QxAketGwML</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="13">
+      <article class="tweet-card" data-tweet-index="15">
         <div class="tweet-head">
           <span class="mono">2026-01-17 08:36</span>
           <span><span class="chip red">$APLD</span><span class="chip red">$WULF</span></span>
@@ -560,7 +631,7 @@ With data centers like $WULF or $APLD, a lot of interest is just hedging / conve
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="14">
+      <article class="tweet-card" data-tweet-index="16">
         <div class="tweet-head">
           <span class="mono">2026-01-06 16:24</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AIRO</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVAV</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DJT</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLY</span><span class="chip red">$GEMI</span><span class="chip red">$GLXY</span><span class="chip red">$HIMS</span><span class="chip red">$HUT</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span></span>
@@ -621,7 +692,7 @@ So, I’ve taken a position in $AIRO just to see where it goes.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="15">
+      <article class="tweet-card" data-tweet-index="17">
         <div class="tweet-head">
           <span class="mono">2026-01-06 02:07</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -646,7 +717,7 @@ The other colo players have been doing well, like $HUT, $CIFR, $WULF. The only a
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="16">
+      <article class="tweet-card" data-tweet-index="18">
         <div class="tweet-head">
           <span class="mono">2026-01-03 17:43</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AIRO</span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVAV</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BA</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CF</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CVE</span><span class="chip red">$DJT</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLY</span><span class="chip red">$GEMI</span><span class="chip red">$GLXY</span><span class="chip red">$HII</span><span class="chip red">$HIMS</span><span class="chip red">$HON</span><span class="chip red">$HUT</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LDOS</span><span class="chip red">$LHX</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$RTX</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$VLO</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span></span>
@@ -751,7 +822,7 @@ $HON - .4%+</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="17">
+      <article class="tweet-card" data-tweet-index="19">
         <div class="tweet-head">
           <span class="mono">2026-01-02 20:57</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -778,7 +849,7 @@ $WYFI 与 NScale 的 8.65 亿美元协议有点 T2。但它的估值从 40 美�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="18">
+      <article class="tweet-card" data-tweet-index="20">
         <div class="tweet-head">
           <span class="mono">2026-01-02 20:46</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AIRO</span><span class="chip red">$AKAM</span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ASOZF</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BMNR</span><span class="chip red">$BOA</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWD</span><span class="chip red">$CSCO</span><span class="chip red">$DJT</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLY</span><span class="chip red">$GEMI</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PATH</span><span class="chip red">$PLTR</span><span class="chip red">$POET</span><span class="chip red">$PYPL</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$V</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span><span class="chip red">$XRP</span></span>
@@ -1100,7 +1171,7 @@ Circle、Etoro、AIRO、Klarna、Figma 等 IPO 名称在 2026 年下降+税收�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="19">
+      <article class="tweet-card" data-tweet-index="21">
         <div class="tweet-head">
           <span class="mono">2025-12-30 22:42</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -1165,7 +1236,7 @@ TLDR: If Neoclouds can execute with their projected margins, scale, and create t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="20">
+      <article class="tweet-card" data-tweet-index="22">
         <div class="tweet-head">
           <span class="mono">2025-12-19 23:36</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
@@ -1207,7 +1278,7 @@ NBIS 美元：+10.28%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="21">
+      <article class="tweet-card" data-tweet-index="23">
         <div class="tweet-head">
           <span class="mono">2025-12-17 20:17</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -1236,7 +1307,7 @@ Hut8 is up 25.28% on the news and now trades at a $3.98B market cap https://t.co
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="22">
+      <article class="tweet-card" data-tweet-index="24">
         <div class="tweet-head">
           <span class="mono">2025-12-17 18:36</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
@@ -1323,7 +1394,7 @@ Go long on the AI sector.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="23">
+      <article class="tweet-card" data-tweet-index="25">
         <div class="tweet-head">
           <span class="mono">2025-12-17 11:38</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -1412,7 +1483,7 @@ Whether it passes legislation in the House is what every investor should be watc
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="24">
+      <article class="tweet-card" data-tweet-index="26">
         <div class="tweet-head">
           <span class="mono">2025-12-16 05:39</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$APLD</span><span class="chip red">$AVGO</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FRMI</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$LGN</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MOD</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$RMBS</span><span class="chip red">$SEI</span><span class="chip red">$SNDK</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
@@ -1437,7 +1508,7 @@ They’re both trading a lot lower than when they first announced Mag7 contracts
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="25">
+      <article class="tweet-card" data-tweet-index="27">
         <div class="tweet-head">
           <span class="mono">2025-12-15 07:58</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$APLD</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FRMI</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$LGN</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MOD</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RMBS</span><span class="chip red">$SEI</span><span class="chip red">$SNDK</span><span class="chip red">$SOFI</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
@@ -1535,7 +1606,7 @@ $NBIS | -6.99%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="26">
+      <article class="tweet-card" data-tweet-index="28">
         <div class="tweet-head">
           <span class="mono">2025-12-13 04:22</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$COHR</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SMCI</span><span class="chip red">$TSM</span><span class="chip red">$VRT</span><span class="chip red">$WULF</span></span>
@@ -1606,7 +1677,7 @@ Broadcom 的 ER 为“双倍”，营收为 18.02B 美元（同比增长 28%）�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="27">
+      <article class="tweet-card" data-tweet-index="29">
         <div class="tweet-head">
           <span class="mono">2025-12-12 06:10</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$ALAB</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
@@ -1679,7 +1750,7 @@ The market is currently re-rating heavily with photonics players and assigning a
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="28">
+      <article class="tweet-card" data-tweet-index="30">
         <div class="tweet-head">
           <span class="mono">2025-12-11 10:09</span>
           <span><span class="chip red">$ALPD</span><span class="chip red">$CIFR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -1722,7 +1793,7 @@ It&#x27;s an extremely nuanced sector, but whol sector selloff/fears like OpenAI
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="29">
+      <article class="tweet-card" data-tweet-index="31">
         <div class="tweet-head">
           <span class="mono">2025-12-11 09:53</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -1757,7 +1828,7 @@ But other companies in the sector like $NBIS, $CIFR, $WULF are backstopped by AA
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="30">
+      <article class="tweet-card" data-tweet-index="32">
         <div class="tweet-head">
           <span class="mono">2025-12-11 09:18</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CLS</span><span class="chip red">$COHR</span><span class="chip red">$COIN</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$ETH</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$KRUS</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MPWR</span><span class="chip red">$MSFT</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$NFLX</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$WLAC</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span></span>
@@ -1844,7 +1915,7 @@ $ORCL（大部分）、$CRWV（25% 积压）是两个主要依赖 OpenAI 的参�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="31">
+      <article class="tweet-card" data-tweet-index="33">
         <div class="tweet-head">
           <span class="mono">2025-12-11 04:06</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CLS</span><span class="chip red">$COHR</span><span class="chip red">$COIN</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$ETH</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$KRUS</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MPWR</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$NFLX</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$TTD</span><span class="chip red">$WLAC</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span></span>
@@ -2166,7 +2237,7 @@ ORCL - 大部分远期积压都依赖于 openai，如果 openai 的市场份额�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="32">
+      <article class="tweet-card" data-tweet-index="34">
         <div class="tweet-head">
           <span class="mono">2025-12-06 07:21</span>
           <span><span class="chip red">$IREN</span><span class="chip red">$WULF</span></span>
@@ -2187,7 +2258,7 @@ ORCL - 大部分远期积压都依赖于 openai，如果 openai 的市场份额�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="33">
+      <article class="tweet-card" data-tweet-index="35">
         <div class="tweet-head">
           <span class="mono">2025-12-01 01:52</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$WULF</span></span>
@@ -2218,7 +2289,7 @@ imo markets will price things in correctly in due time, I do think both $NBIS an
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="34">
+      <article class="tweet-card" data-tweet-index="36">
         <div class="tweet-head">
           <span class="mono">2025-11-29 07:53</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$CLS</span><span class="chip red">$CRDO</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span><span class="chip red">$STX</span><span class="chip red">$TE</span><span class="chip red">$TSM</span><span class="chip red">$VST</span><span class="chip red">$WULF</span></span>
@@ -2333,7 +2404,7 @@ Google TPU、AWS Trainium、Meta MTIA、Microsoft Maia 和定制超大规模芯�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="35">
+      <article class="tweet-card" data-tweet-index="37">
         <div class="tweet-head">
           <span class="mono">2025-11-26 06:06</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -2362,7 +2433,7 @@ But they&#x27;re all under that new category of small players acting as AWS for 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="36">
+      <article class="tweet-card" data-tweet-index="38">
         <div class="tweet-head">
           <span class="mono">2025-11-25 22:55</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -2393,7 +2464,7 @@ Regardless, AI is here to stay, and anything Mag7 related ( $GOOGL -&gt; $CIFR, 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="37">
+      <article class="tweet-card" data-tweet-index="39">
         <div class="tweet-head">
           <span class="mono">2025-11-25 19:38</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AVGO</span><span class="chip red">$CIFR</span><span class="chip red">$CLS</span><span class="chip red">$COIN</span><span class="chip red">$CRDO</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FTX</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NET</span><span class="chip red">$NVDA</span><span class="chip red">$SNDK</span><span class="chip red">$SOL</span><span class="chip red">$STX</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$UBER</span><span class="chip red">$VST</span><span class="chip red">$WULF</span></span>
@@ -2500,7 +2571,7 @@ AI 算力云公司：$CIFR、$NBIS、$WULF、$IREN、
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="38">
+      <article class="tweet-card" data-tweet-index="40">
         <div class="tweet-head">
           <span class="mono">2025-11-24 23:51</span>
           <span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$COIN</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$DGDX</span><span class="chip red">$FTX</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRRR</span><span class="chip red">$HIVE</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NET</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$SOL</span><span class="chip red">$TSLA</span><span class="chip red">$UBER</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -2596,7 +2667,7 @@ $NBIS is only valued at $21B and the market is sleeping on this opportunity.</di
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="39">
+      <article class="tweet-card" data-tweet-index="41">
         <div class="tweet-head">
           <span class="mono">2025-11-23 02:44</span>
           <span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$WULF</span></span>
@@ -2621,7 +2692,7 @@ Posting that with no explanation is not very helpful.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="40">
+      <article class="tweet-card" data-tweet-index="42">
         <div class="tweet-head">
           <span class="mono">2025-11-22 18:42</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$COIN</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRWV</span><span class="chip red">$DELL</span><span class="chip red">$DGDX</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRRR</span><span class="chip red">$HIMS</span><span class="chip red">$HIVE</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RDDT</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -2700,7 +2771,7 @@ f.当前市值相对于收入增长和基础设施价值
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="41">
+      <article class="tweet-card" data-tweet-index="43">
         <div class="tweet-head">
           <span class="mono">2025-11-20 19:24</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -2753,7 +2824,7 @@ $IREN 最初的护城河是 GW 容量 + 垂直整合。$NBIS 的护城河是全�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="42">
+      <article class="tweet-card" data-tweet-index="44">
         <div class="tweet-head">
           <span class="mono">2025-11-20 18:23</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COIN</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$KRUS</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$SBET</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOL</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WLAC</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -2925,7 +2996,7 @@ $CIFR 是 AI 算力云公司 领域我第二喜欢的股票。据我记忆，该
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="43">
+      <article class="tweet-card" data-tweet-index="45">
         <div class="tweet-head">
           <span class="mono">2025-11-20 01:04</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$HIMS</span><span class="chip red">$NBIS</span><span class="chip red">$SNAP</span><span class="chip red">$WULF</span></span>
@@ -2967,7 +3038,7 @@ $SNAP 前困惑交易。黑色星期五提早股市</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="44">
+      <article class="tweet-card" data-tweet-index="46">
         <div class="tweet-head">
           <span class="mono">2025-11-19 02:13</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$IBIT</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -2996,7 +3067,7 @@ I need to catchup on a lot of names and I&#x27;ll make another post like that th
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="45">
+      <article class="tweet-card" data-tweet-index="47">
         <div class="tweet-head">
           <span class="mono">2025-11-19 01:11</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$CIFR</span><span class="chip red">$IBIT</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$SNAP</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -3021,7 +3092,7 @@ I&#x27;m sure there&#x27;s more I missed out but the selloff was broad so it&#x2
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="46">
+      <article class="tweet-card" data-tweet-index="48">
         <div class="tweet-head">
           <span class="mono">2025-11-19 00:13</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
@@ -3050,7 +3121,7 @@ But it does have a large impact on the overall AI trade as well + directly affec
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="47">
+      <article class="tweet-card" data-tweet-index="49">
         <div class="tweet-head">
           <span class="mono">2025-11-18 22:34</span>
           <span><span class="chip red">$ACN</span><span class="chip red">$ALAB</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NET</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$SHOP</span><span class="chip red">$SLNH</span><span class="chip red">$SNAP</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -3130,7 +3201,7 @@ $NBIS 将 ARR 指导从分析师预测的 4B 美元标记上调至 7-9B 美元�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="48">
+      <article class="tweet-card" data-tweet-index="50">
         <div class="tweet-head">
           <span class="mono">2025-11-18 16:05</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -3174,7 +3245,7 @@ For customers that pay for bare metal for $NBIS and others, they are paying for 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="49">
+      <article class="tweet-card" data-tweet-index="51">
         <div class="tweet-head">
           <span class="mono">2025-11-18 02:50</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -3199,7 +3270,7 @@ That doesn&#x27;t mean I&#x27;m not bullish on $CIFR, $WULF, and others though.<
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="50">
+      <article class="tweet-card" data-tweet-index="52">
         <div class="tweet-head">
           <span class="mono">2025-11-18 00:12</span>
           <span><span class="chip red">$ACN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SHOP</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -3252,7 +3323,7 @@ Nebius 的未来目标是：明年的中点 ARR 为 8B 美元、现金为 4.7B+ 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="51">
+      <article class="tweet-card" data-tweet-index="53">
         <div class="tweet-head">
           <span class="mono">2025-11-15 16:15</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span></span>
@@ -3313,7 +3384,7 @@ Fintel 的数据接近 46.3%。Nebius 是一个价值 21B 美元的 MC 全栈 AI
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="52">
+      <article class="tweet-card" data-tweet-index="54">
         <div class="tweet-head">
           <span class="mono">2025-11-15 05:23</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$GOOGL</span><span class="chip red">$WULF</span></span>
@@ -3338,7 +3409,7 @@ Meanwhile markets are selling off indiscriminately for the wrong reasons. https:
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="53">
+      <article class="tweet-card" data-tweet-index="55">
         <div class="tweet-head">
           <span class="mono">2025-11-15 03:25</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -3385,7 +3456,7 @@ $IREN、$NBIS、$CIFR、$WULF 实际上没有受到影响，因为它们是由 M
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="54">
+      <article class="tweet-card" data-tweet-index="56">
         <div class="tweet-head">
           <span class="mono">2025-11-15 03:00</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -3418,7 +3489,7 @@ It&#x27;s a good thing that we&#x27;re starting to see emerging winners after th
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="55">
+      <article class="tweet-card" data-tweet-index="57">
         <div class="tweet-head">
           <span class="mono">2025-11-15 00:26</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -3445,7 +3516,7 @@ Mag7 capex as we&#x27;ve seen is increasing, but it&#x27;s funneling into winner
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="56">
+      <article class="tweet-card" data-tweet-index="58">
         <div class="tweet-head">
           <span class="mono">2025-11-14 23:21</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span></span>
@@ -3556,7 +3627,7 @@ AI 算力云公司 是 Mag7 AI 计算的支柱。这个论点没有改变，我�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="57">
+      <article class="tweet-card" data-tweet-index="59">
         <div class="tweet-head">
           <span class="mono">2025-11-14 22:14</span>
           <span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -3581,7 +3652,7 @@ $NBIS, $CIFR, $WULF balance sheets are still healthy.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="58">
+      <article class="tweet-card" data-tweet-index="60">
         <div class="tweet-head">
           <span class="mono">2025-11-14 21:57</span>
           <span><span class="chip red">$APLD</span><span class="chip red">$AWS</span><span class="chip red">$CIFR</span><span class="chip red">$CORZ</span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -3632,7 +3703,7 @@ I think just based on market conditions, it&#x27;s safer to go with confirmed hi
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="59">
+      <article class="tweet-card" data-tweet-index="61">
         <div class="tweet-head">
           <span class="mono">2025-11-13 23:33</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$OKLO</span><span class="chip red">$WULF</span></span>
@@ -3693,7 +3764,7 @@ But when the forward growth backs up any market cap projections, it’s just a m
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="60">
+      <article class="tweet-card" data-tweet-index="62">
         <div class="tweet-head">
           <span class="mono">2025-11-13 03:37</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -3743,7 +3814,7 @@ If stocks like NEbius get sold off despite improving fundamentals, it&#x27;s a b
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="61">
+      <article class="tweet-card" data-tweet-index="63">
         <div class="tweet-head">
           <span class="mono">2025-11-13 03:00</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRCL</span><span class="chip red">$ETH</span><span class="chip red">$HIMS</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$PYPL</span><span class="chip red">$RKLB</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$WULF</span></span>
@@ -3834,7 +3905,7 @@ $WULF -15.09%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="62">
+      <article class="tweet-card" data-tweet-index="64">
         <div class="tweet-head">
           <span class="mono">2025-11-11 12:41</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -3861,7 +3932,7 @@ https://t.co/2x4vlVv6RU</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="63">
+      <article class="tweet-card" data-tweet-index="65">
         <div class="tweet-head">
           <span class="mono">2025-11-11 08:58</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$ORCL</span><span class="chip red">$WULF</span></span>
@@ -3932,7 +4003,7 @@ $WULF - ER 为正，来自 520 MW HPC 产能的 TCV 为 $17B。位于德克萨�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="64">
+      <article class="tweet-card" data-tweet-index="66">
         <div class="tweet-head">
           <span class="mono">2025-11-05 02:04</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRCLQUANTUM</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$ETH</span><span class="chip red">$FLNC</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$HXSCL</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MINT</span><span class="chip red">$MSFT</span><span class="chip red">$MSTR</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$SMCI</span><span class="chip red">$SOL</span><span class="chip red">$SPY</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -4059,7 +4130,7 @@ $元：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="65">
+      <article class="tweet-card" data-tweet-index="67">
         <div class="tweet-head">
           <span class="mono">2025-11-03 21:15</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$DGXX</span><span class="chip red">$GOOGL</span><span class="chip red">$HIVE</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -4100,7 +4171,7 @@ $IREN - IREN 与 Microsoft 签订了价值 9.7B 美元的 GPU 云合同，包括
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="66">
+      <article class="tweet-card" data-tweet-index="68">
         <div class="tweet-head">
           <span class="mono">2025-11-03 10:41</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$MINT</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$SPY</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
@@ -4292,7 +4363,7 @@ ______________
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="67">
+      <article class="tweet-card" data-tweet-index="69">
         <div class="tweet-head">
           <span class="mono">2025-11-03 02:04</span>
           <span><span class="chip red">$APLD</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -4331,7 +4402,7 @@ $APLD 构建具有强大电力容量的数据中心，然后将该基础设施�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="68">
+      <article class="tweet-card" data-tweet-index="70">
         <div class="tweet-head">
           <span class="mono">2025-11-01 11:42</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$GOOGL</span><span class="chip red">$WULF</span></span>
@@ -4360,7 +4431,7 @@ However, the sad reality of the situation is not every single HPC miner pivot wi
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="69">
+      <article class="tweet-card" data-tweet-index="71">
         <div class="tweet-head">
           <span class="mono">2025-11-01 10:52</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$WULF</span></span>
@@ -4391,7 +4462,7 @@ Commentary about stuff like margins vs. bare metal do have material impacts on h
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="70">
+      <article class="tweet-card" data-tweet-index="72">
         <div class="tweet-head">
           <span class="mono">2025-11-01 02:03</span>
           <span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -4422,7 +4493,7 @@ You&#x27;re free to disagree and that&#x27;s fair.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="71">
+      <article class="tweet-card" data-tweet-index="73">
         <div class="tweet-head">
           <span class="mono">2025-11-01 00:17</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -4525,7 +4596,7 @@ _
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="72">
+      <article class="tweet-card" data-tweet-index="74">
         <div class="tweet-head">
           <span class="mono">2025-10-29 23:01</span>
           <span><span class="chip red">$API</span><span class="chip red">$APLD</span><span class="chip red">$GLXY</span><span class="chip red">$NNE</span><span class="chip red">$WULF</span></span>
@@ -4554,7 +4625,7 @@ If those are your top picks, then great! (i personally like $WULF and $GLXY on t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="73">
+      <article class="tweet-card" data-tweet-index="75">
         <div class="tweet-head">
           <span class="mono">2025-10-29 13:03</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$ASML</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$CCCX</span><span class="chip red">$CIFR</span><span class="chip red">$CLS</span><span class="chip red">$CLSK</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DGXX</span><span class="chip red">$DLO</span><span class="chip red">$DRFT</span><span class="chip red">$EOSE</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$GOOGL</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$KTOS</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ONDS</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SLNH</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TE</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -4694,7 +4765,7 @@ AI 算力云公司 - 我们已经看到 $META x $CRWV 交易、$WULF x $GOOGL x 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="74">
+      <article class="tweet-card" data-tweet-index="76">
         <div class="tweet-head">
           <span class="mono">2025-10-29 00:14</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CLSK</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -4725,7 +4796,7 @@ I&#x27;m simply highlighting execution risk and pointing out that the lens peopl
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="75">
+      <article class="tweet-card" data-tweet-index="77">
         <div class="tweet-head">
           <span class="mono">2025-10-28 21:45</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$IREN</span><span class="chip red">$WULF</span></span>
@@ -4750,7 +4821,7 @@ Just pointing out realistic downside risk in that not all execution will be pret
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="76">
+      <article class="tweet-card" data-tweet-index="78">
         <div class="tweet-head">
           <span class="mono">2025-10-28 20:44</span>
           <span><span class="chip red">$WULF</span></span>
@@ -4775,7 +4846,7 @@ It was over 25 years I think so revenue ramp likely really slow (compared to a 5
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="77">
+      <article class="tweet-card" data-tweet-index="79">
         <div class="tweet-head">
           <span class="mono">2025-10-28 06:44</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$CRM</span><span class="chip red">$ETOR</span><span class="chip red">$FLY</span><span class="chip red">$GRRR</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$OPAD</span><span class="chip red">$RDDT</span><span class="chip red">$SG</span><span class="chip red">$SNAP</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -4802,7 +4873,7 @@ https://t.co/tzom3aAdSk</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="78">
+      <article class="tweet-card" data-tweet-index="80">
         <div class="tweet-head">
           <span class="mono">2025-10-28 06:04</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$GRRR</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -4872,7 +4943,7 @@ $HUT 33.16 → 49.95 (+50.6%)
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="79">
+      <article class="tweet-card" data-tweet-index="81">
         <div class="tweet-head">
           <span class="mono">2025-10-28 05:37</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -4911,7 +4982,7 @@ $WULF：+.08%</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="80">
+      <article class="tweet-card" data-tweet-index="82">
         <div class="tweet-head">
           <span class="mono">2025-10-27 15:45</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -4940,7 +5011,7 @@ https://t.co/TnUqmvvFdd</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="81">
+      <article class="tweet-card" data-tweet-index="83">
         <div class="tweet-head">
           <span class="mono">2025-10-27 10:28</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$IREN</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -4989,7 +5060,7 @@ Cheap power wins next quarter, efficient orchestration becomes the next AWS.</di
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="82">
+      <article class="tweet-card" data-tweet-index="84">
         <div class="tweet-head">
           <span class="mono">2025-10-26 23:59</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span></span>
@@ -5026,7 +5097,7 @@ Nebius is #1 from the very start, even beating out $CRWV (from their most recent
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="83">
+      <article class="tweet-card" data-tweet-index="85">
         <div class="tweet-head">
           <span class="mono">2025-10-26 20:46</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$SLNH</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -5177,7 +5248,7 @@ Nebius 不是权力游戏。这是软件利润的游戏，硬件也有优势。�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="84">
+      <article class="tweet-card" data-tweet-index="86">
         <div class="tweet-head">
           <span class="mono">2025-10-25 15:07</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CRWV</span><span class="chip red">$IREN</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -5224,7 +5295,7 @@ So just wanted to say: Nebius is THE Neocloud. 🫳🎙️</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="85">
+      <article class="tweet-card" data-tweet-index="87">
         <div class="tweet-head">
           <span class="mono">2025-10-23 21:24</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$GRRR</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$ORCL</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -5374,7 +5445,7 @@ EV/EBITDA 15–25×：$23.4B | $39B
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="86">
+      <article class="tweet-card" data-tweet-index="88">
         <div class="tweet-head">
           <span class="mono">2025-10-22 08:33</span>
           <span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -5403,7 +5474,7 @@ Google/Mag7 is compute limited, and this is only a bigger catalyst for Nebius (w
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="87">
+      <article class="tweet-card" data-tweet-index="89">
         <div class="tweet-head">
           <span class="mono">2025-10-20 22:59</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$BITF</span><span class="chip red">$BLSKY</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$EOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$QBTS</span><span class="chip red">$RBRK</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TE</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -5438,7 +5509,7 @@ Sometimes just need to take the leap of faith with a sector and trust DD of peer
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="88">
+      <article class="tweet-card" data-tweet-index="90">
         <div class="tweet-head">
           <span class="mono">2025-10-20 02:21</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$BITF</span><span class="chip red">$BLSKY</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRRR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$QBTS</span><span class="chip red">$RBRK</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -5749,7 +5820,7 @@ _
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="89">
+      <article class="tweet-card" data-tweet-index="91">
         <div class="tweet-head">
           <span class="mono">2025-10-19 07:07</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$BZAI</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$CRM</span><span class="chip red">$CRWV</span><span class="chip red">$DFLI</span><span class="chip red">$EOSE</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRAB</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NKLR</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$OPAD</span><span class="chip red">$ORCL</span><span class="chip red">$RBRK</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -5926,7 +5997,7 @@ Overall,  so far so good! I&#x27;ve lost count of how many 100%+ returns I&#x27;
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="90">
+      <article class="tweet-card" data-tweet-index="92">
         <div class="tweet-head">
           <span class="mono">2025-10-18 08:38</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$GRRR</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -5987,7 +6058,7 @@ Make money off the markets, not off followers.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="91">
+      <article class="tweet-card" data-tweet-index="93">
         <div class="tweet-head">
           <span class="mono">2025-10-17 15:28</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BTC</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$FLNC</span><span class="chip red">$GLD</span><span class="chip red">$GOGL</span><span class="chip red">$GOOGL</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
@@ -6047,7 +6118,7 @@ _
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="92">
+      <article class="tweet-card" data-tweet-index="94">
         <div class="tweet-head">
           <span class="mono">2025-10-17 06:45</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$BTC</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$FLNC</span><span class="chip red">$GLD</span><span class="chip red">$GOGL</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$ORCL</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span></span>
@@ -6157,7 +6228,7 @@ _
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="93">
+      <article class="tweet-card" data-tweet-index="95">
         <div class="tweet-head">
           <span class="mono">2025-10-16 14:55</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$GRRR</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$TSM</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -6210,7 +6281,7 @@ Amazing growth and profit as a mega cap.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="94">
+      <article class="tweet-card" data-tweet-index="96">
         <div class="tweet-head">
           <span class="mono">2025-10-16 01:20</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$BZAI</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DFLI</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NKLR</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$RBRK</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -6235,7 +6306,7 @@ Amazing growth and profit as a mega cap.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="95">
+      <article class="tweet-card" data-tweet-index="97">
         <div class="tweet-head">
           <span class="mono">2025-10-15 20:13</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$BZAI</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DFLI</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NKLR</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$RBRK</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SMR</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -6262,7 +6333,7 @@ WSJ: &quot;US Army to Power Bases with Nuclear Reactors&quot; https://t.co/COEte
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="96">
+      <article class="tweet-card" data-tweet-index="98">
         <div class="tweet-head">
           <span class="mono">2025-10-15 15:42</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$BZAI</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DFLI</span><span class="chip red">$EOSE</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRAB</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NKLR</span><span class="chip red">$NVDA</span><span class="chip red">$OKLO</span><span class="chip red">$ORCL</span><span class="chip red">$RBRK</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEA</span><span class="chip red">$SEI</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$VIRT</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -6563,7 +6634,7 @@ UNH - 医疗保健股未受大豆影响，但出现调整。可能会在一个�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="97">
+      <article class="tweet-card" data-tweet-index="99">
         <div class="tweet-head">
           <span class="mono">2025-10-15 07:51</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$FLNC</span><span class="chip red">$GLXY</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -6596,7 +6667,7 @@ $NBIS is the new infra of AI and Mag7 with 1400% Y/Y forward revenue.
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="98">
+      <article class="tweet-card" data-tweet-index="100">
         <div class="tweet-head">
           <span class="mono">2025-10-15 03:37</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$FLNC</span><span class="chip red">$GLXY</span><span class="chip red">$GRRR</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -6659,7 +6730,7 @@ When all five are in your port, Sydney Sweeney descends from the Neocloud https:
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="99">
+      <article class="tweet-card" data-tweet-index="101">
         <div class="tweet-head">
           <span class="mono">2025-10-14 07:25</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$GOOGL</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -6692,7 +6763,7 @@ Similar $GOOGL contract as $CIFR. https://t.co/0oYU9TtaxV</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="100">
+      <article class="tweet-card" data-tweet-index="102">
         <div class="tweet-head">
           <span class="mono">2025-10-14 05:39</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$GOOGL</span><span class="chip red">$WULF</span></span>
@@ -6721,7 +6792,7 @@ Not too clear how they work with Fluidstack yet, there&#x27;s potential for Mag7
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="101">
+      <article class="tweet-card" data-tweet-index="103">
         <div class="tweet-head">
           <span class="mono">2025-10-14 05:16</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$BTC</span><span class="chip red">$CIFR</span><span class="chip red">$FLY</span><span class="chip red">$GOOGL</span><span class="chip red">$HOOD</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RKLB</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -6765,7 +6836,7 @@ Could IPO anytime in the next two months, it&#x27;s just a waiting game.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="102">
+      <article class="tweet-card" data-tweet-index="104">
         <div class="tweet-head">
           <span class="mono">2025-10-14 03:01</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$FLNC</span><span class="chip red">$GLXY</span><span class="chip red">$GRRR</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -6794,7 +6865,7 @@ $WLAC $CIFR $FLNC $IREN $TSM $AMD $BITF $WYFI $GLXY</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="103">
+      <article class="tweet-card" data-tweet-index="105">
         <div class="tweet-head">
           <span class="mono">2025-10-13 23:51</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BKSY</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWD</span><span class="chip red">$DELL</span><span class="chip red">$DKNG</span><span class="chip red">$ELOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NET</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$QUBT</span><span class="chip red">$RBRK</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -6873,7 +6944,7 @@ TLDR: Great buy for cybersecurity sector, better opportunities elsewhere.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="104">
+      <article class="tweet-card" data-tweet-index="106">
         <div class="tweet-head">
           <span class="mono">2025-10-13 06:02</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$BITF</span><span class="chip red">$BTC</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$FLY</span><span class="chip red">$GOOGL</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$SLNH</span><span class="chip red">$TSM</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -7011,7 +7082,7 @@ $WLAC（$13 | $13）
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="105">
+      <article class="tweet-card" data-tweet-index="107">
         <div class="tweet-head">
           <span class="mono">2025-10-13 01:36</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BKSY</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$DKNG</span><span class="chip red">$ELOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$QUBT</span><span class="chip red">$RBRK</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span></span>
@@ -7062,7 +7133,7 @@ Dip buying opportunity https://t.co/2sUEV7Dg8s</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="106">
+      <article class="tweet-card" data-tweet-index="108">
         <div class="tweet-head">
           <span class="mono">2025-10-12 02:32</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$BITF</span><span class="chip red">$BKSY</span><span class="chip red">$BMNR</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CRWV</span><span class="chip red">$DELL</span><span class="chip red">$DKNG</span><span class="chip red">$ELOSE</span><span class="chip red">$ETH</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GRAB</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IBIT</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$PL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$QUBT</span><span class="chip red">$RBRK</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SEI</span><span class="chip red">$SG</span><span class="chip red">$SLNH</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$TGT</span><span class="chip red">$TSM</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WLAC</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -7381,7 +7452,7 @@ QBTS - 市值与估值脱节
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="107">
+      <article class="tweet-card" data-tweet-index="109">
         <div class="tweet-head">
           <span class="mono">2025-10-10 22:55</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$FLY</span><span class="chip red">$GRRR</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -7469,7 +7540,7 @@ Firefly 是一家与 $RKLB 类似的火箭公司，正在开发可重复使用�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="108">
+      <article class="tweet-card" data-tweet-index="110">
         <div class="tweet-head">
           <span class="mono">2025-10-06 22:23</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$GRRR</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RDDT</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$SNAP</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -7710,7 +7781,7 @@ _
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="109">
+      <article class="tweet-card" data-tweet-index="111">
         <div class="tweet-head">
           <span class="mono">2025-10-05 04:44</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$AVGO</span><span class="chip red">$BE</span><span class="chip red">$BMNR</span><span class="chip red">$CIFR</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$EOSE</span><span class="chip red">$ETOR</span><span class="chip red">$FLNC</span><span class="chip red">$GRAB</span><span class="chip red">$HOOD</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$JOBY</span><span class="chip red">$LTC</span><span class="chip red">$MARA</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$NVO</span><span class="chip red">$OKLO</span><span class="chip red">$OPEN</span><span class="chip red">$ORCL</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RGTI</span><span class="chip red">$RIOT</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOFI</span><span class="chip red">$TGT</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$UPWK</span><span class="chip red">$VIRT</span><span class="chip red">$WULF</span></span>
@@ -7755,7 +7826,7 @@ It hurts to see newcomers blindly fall for this and end up losing their own mone
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="110">
+      <article class="tweet-card" data-tweet-index="112">
         <div class="tweet-head">
           <span class="mono">2025-10-03 02:26</span>
           <span><span class="chip red">$IREN</span><span class="chip red">$WULF</span></span>
@@ -7780,7 +7851,7 @@ IV is extremely high for a reason on stuff because people are expecting a deal t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="111">
+      <article class="tweet-card" data-tweet-index="113">
         <div class="tweet-head">
           <span class="mono">2025-09-30 14:59</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$GRRR</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$RR</span><span class="chip red">$SLNH</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -7813,7 +7884,7 @@ Would be helpful to build a community watchlist for hyperscaling winners. https:
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="112">
+      <article class="tweet-card" data-tweet-index="114">
         <div class="tweet-head">
           <span class="mono">2025-09-28 04:22</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$IREN</span><span class="chip red">$NBIS</span><span class="chip red">$WULF</span></span>
@@ -7838,7 +7909,7 @@ Obviously $NBIS is most asymmetric return but wouldn&#x27;t be bad to have other
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="113">
+      <article class="tweet-card" data-tweet-index="115">
         <div class="tweet-head">
           <span class="mono">2025-09-28 03:11</span>
           <span><span class="chip red">$BITF</span><span class="chip red">$CIFR</span><span class="chip red">$CLSK</span><span class="chip red">$CRWV</span><span class="chip red">$GRRR</span><span class="chip red">$HOOD</span><span class="chip red">$HUT</span><span class="chip red">$IREN</span><span class="chip red">$MARA</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RIOT</span><span class="chip red">$SLNH</span><span class="chip red">$UPWK</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -7954,7 +8025,7 @@ CRDO / ALAB (2024 -&gt;)：超大云厂商获胜 -&gt; 抛物线增长。NBIS/CI
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="114">
+      <article class="tweet-card" data-tweet-index="116">
         <div class="tweet-head">
           <span class="mono">2025-09-18 05:25</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$ASTS</span><span class="chip red">$BMNR</span><span class="chip red">$BTBT</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$DAVE</span><span class="chip red">$DELL</span><span class="chip red">$DLO</span><span class="chip red">$ETOR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$MVST</span><span class="chip red">$NBIS</span><span class="chip red">$NVTS</span><span class="chip red">$ONDS</span><span class="chip red">$OPEN</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RUM</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
@@ -7997,7 +8068,7 @@ $ONDS (1.99B)、$NVTS (1.3B)、$MVST (1B) 或其他建议
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="115">
+      <article class="tweet-card" data-tweet-index="117">
         <div class="tweet-head">
           <span class="mono">2025-09-17 04:38</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$BMNR</span><span class="chip red">$BTBT</span><span class="chip red">$CRDO</span><span class="chip red">$DAVE</span><span class="chip red">$DELL</span><span class="chip red">$DLO</span><span class="chip red">$ETOR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$OPEN</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RUM</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
@@ -8059,7 +8130,7 @@ Anything else I&#x27;m missing?</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="116">
+      <article class="tweet-card" data-tweet-index="118">
         <div class="tweet-head">
           <span class="mono">2025-09-04 04:38</span>
           <span><span class="chip red">$CRWV</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$IREN</span><span class="chip red">$NVO</span><span class="chip red">$RKLB</span><span class="chip red">$UNH</span><span class="chip red">$UPWK</span><span class="chip red">$WULF</span></span>

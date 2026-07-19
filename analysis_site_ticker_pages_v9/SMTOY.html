@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$SMTOY 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -28,10 +29,10 @@
       <p>近期观点：高波动，需同时看基本面与交易结构。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>26</b></div>
-        <div class="stat-card"><span>历史推文</span><b>26</b></div>
+        <div class="stat-card"><span>累计提及</span><b>27</b></div>
+        <div class="stat-card"><span>历史推文</span><b>27</b></div>
         <div class="stat-card"><span>首次提及</span><b>2025-12-26</b></div>
-        <div class="stat-card"><span>最近提及</span><b>2026-05-23</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-06-11</b></div>
         <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
         <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
             
@@ -121,6 +122,31 @@
           
       <article class="tweet-card" data-tweet-index="0">
         <div class="tweet-head">
+          <span class="mono">2026-06-11 13:27</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
+        </div>
+        <div class="tweet-text">Oh look… a new report by Reuters shows China’s control over InP threatens the AI DC buildout.
+
+Who could have guessed $AXTI would have been a major point of failure? https://t.co/mu9sOWGHN6</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Oh look… a new report by Reuters shows China’s control over InP threatens the AI DC buildout.
+
+Who could have guessed $AXTI would have been a major point of failure? https://t.co/mu9sOWGHN6</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2064942505553170886" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>哦，看……路透社的一份新报告显示，中国对 InP 的控制威胁着 AI DC 的建设。谁能想到 $AXTI 会成为一个主要的失败点？https://t.co/mu9sOWGHN6</div>
+        <div class="tweet-foot">
+          <span>likes 1228 / retweets 87 / replies 243 / views 1017118</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
           <span class="mono">2026-05-23 09:52</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SMTOY</span></span>
         </div>
@@ -156,7 +182,7 @@ And that I’m pretty good at guessing intrinsic valuations of companies. https:
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="1">
+      <article class="tweet-card" data-tweet-index="2">
         <div class="tweet-head">
           <span class="mono">2026-05-22 01:47</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -181,7 +207,7 @@ I present to you: $AXTI https://t.co/1i5iXfWhz2</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="2">
+      <article class="tweet-card" data-tweet-index="3">
         <div class="tweet-head">
           <span class="mono">2026-05-18 07:39</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -214,7 +240,7 @@ Guess what anon: it’s on the White House shortage list and one of the major ta
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="3">
+      <article class="tweet-card" data-tweet-index="4">
         <div class="tweet-head">
           <span class="mono">2026-05-16 04:07</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -245,7 +271,7 @@ And US should pressure EU to take back their their photonic monopolies like fico
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="4">
+      <article class="tweet-card" data-tweet-index="5">
         <div class="tweet-head">
           <span class="mono">2026-05-09 01:55</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -274,7 +300,7 @@ And I got banned later after it went up 10 times. https://t.co/6FrSXod6s8</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="5">
+      <article class="tweet-card" data-tweet-index="6">
         <div class="tweet-head">
           <span class="mono">2026-05-07 03:18</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -303,7 +329,7 @@ I think it&#x27;s my proudest one... calling both the 2026 photonics supercycle 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="6">
+      <article class="tweet-card" data-tweet-index="7">
         <div class="tweet-head">
           <span class="mono">2026-05-04 23:25</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -328,7 +354,7 @@ Don’t think this will get beat by anything, now that it’s near ~$5.3B MC. ht
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="7">
+      <article class="tweet-card" data-tweet-index="8">
         <div class="tweet-head">
           <span class="mono">2026-03-23 22:35</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -361,7 +387,7 @@ Then go long. https://t.co/lgmu8p7F5a</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="8">
+      <article class="tweet-card" data-tweet-index="9">
         <div class="tweet-head">
           <span class="mono">2026-03-20 05:26</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -390,7 +416,7 @@ Happy I got this right, gains in a short time blew away holding $NVDA over the y
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="9">
+      <article class="tweet-card" data-tweet-index="10">
         <div class="tweet-head">
           <span class="mono">2026-03-16 19:10</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -419,7 +445,7 @@ Did you listen anon? https://t.co/pPkFqZXmuC</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="10">
+      <article class="tweet-card" data-tweet-index="11">
         <div class="tweet-head">
           <span class="mono">2026-03-13 07:35</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -466,7 +492,7 @@ InP 衬底是光子学的一个巨大瓶颈。并且：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="11">
+      <article class="tweet-card" data-tweet-index="12">
         <div class="tweet-head">
           <span class="mono">2026-03-11 01:04</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -487,7 +513,7 @@ InP 衬底是光子学的一个巨大瓶颈。并且：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="12">
+      <article class="tweet-card" data-tweet-index="13">
         <div class="tweet-head">
           <span class="mono">2026-03-03 05:21</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -520,7 +546,7 @@ Did you listen anon? https://t.co/7Sm08hOQPA</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="13">
+      <article class="tweet-card" data-tweet-index="14">
         <div class="tweet-head">
           <span class="mono">2026-02-26 04:23</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -569,7 +595,7 @@ $AXTI ($2.1B) -&gt; $IQE ($150M) -&gt; $LITE -&gt; 超大规模 ASIC...
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="14">
+      <article class="tweet-card" data-tweet-index="15">
         <div class="tweet-head">
           <span class="mono">2026-02-20 22:45</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -590,7 +616,7 @@ $AXTI ($2.1B) -&gt; $IQE ($150M) -&gt; $LITE -&gt; 超大规模 ASIC...
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="15">
+      <article class="tweet-card" data-tweet-index="16">
         <div class="tweet-head">
           <span class="mono">2026-02-07 09:30</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -663,7 +689,7 @@ But $AXTI is of my most interesting bottleneck longs starting from a tiny $700M 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="16">
+      <article class="tweet-card" data-tweet-index="17">
         <div class="tweet-head">
           <span class="mono">2026-01-07 01:32</span>
           <span><span class="chip red">$SMTOY</span></span>
@@ -688,7 +714,7 @@ But China sent a nuke over to the InP supply chain in Japan with the export cont
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="17">
+      <article class="tweet-card" data-tweet-index="18">
         <div class="tweet-head">
           <span class="mono">2026-01-07 00:52</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -713,7 +739,7 @@ AXT just became the monopoly of the InP substrates. https://t.co/i8FSYPscfx</div
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="18">
+      <article class="tweet-card" data-tweet-index="19">
         <div class="tweet-head">
           <span class="mono">2025-12-29 22:58</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$DOWA</span><span class="chip red">$SMTOY</span></span>
@@ -740,7 +766,7 @@ Has there ever been a company this small ($700M) that controlled a critical bott
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="19">
+      <article class="tweet-card" data-tweet-index="20">
         <div class="tweet-head">
           <span class="mono">2025-12-29 11:44</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$DOWA</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -865,7 +891,7 @@ $同和 - 12%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="20">
+      <article class="tweet-card" data-tweet-index="21">
         <div class="tweet-head">
           <span class="mono">2025-12-28 08:13</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$SMTOY</span></span>
@@ -890,7 +916,7 @@ And when you combine with the fact the AI supply chain is extremely reliant on t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="21">
+      <article class="tweet-card" data-tweet-index="22">
         <div class="tweet-head">
           <span class="mono">2025-12-27 23:24</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>
@@ -1023,7 +1049,7 @@ $NVDA Blackwell、$META MTAI、$GOOGL TPU 和 $MSFT Maia Ramp 的未来与：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="22">
+      <article class="tweet-card" data-tweet-index="23">
         <div class="tweet-head">
           <span class="mono">2025-12-27 14:28</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$SMTOY</span></span>
@@ -1054,7 +1080,7 @@ If trade wars affect $AXTI, there&#x27;s just a complete void of available mater
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="23">
+      <article class="tweet-card" data-tweet-index="24">
         <div class="tweet-head">
           <span class="mono">2025-12-27 09:47</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$LITE</span><span class="chip red">$SMTOY</span></span>
@@ -1089,7 +1115,7 @@ I’m not sure where companies go from here, I’m sure they’ll try and hoard 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="24">
+      <article class="tweet-card" data-tweet-index="25">
         <div class="tweet-head">
           <span class="mono">2025-12-27 02:35</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$SMTOY</span></span>
@@ -1122,7 +1148,7 @@ The future of the entire trillion dollar AI buildout depends on the stability of
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="25">
+      <article class="tweet-card" data-tweet-index="26">
         <div class="tweet-head">
           <span class="mono">2025-12-26 23:08</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$LITE</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SMTOY</span></span>

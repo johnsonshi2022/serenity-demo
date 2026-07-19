@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$XFAB 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -25,18 +26,18 @@
     <section class="hero">
       <span class="eyebrow">Ticker Detail</span>
       <h1>$XFAB 历史推文</h1>
-      <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>29</b></div>
-        <div class="stat-card"><span>历史推文</span><b>29</b></div>
+        <div class="stat-card"><span>累计提及</span><b>34</b></div>
+        <div class="stat-card"><span>历史推文</span><b>34</b></div>
         <div class="stat-card"><span>首次提及</span><b>2026-05-27</b></div>
         <div class="stat-card"><span>最近提及</span><b>2026-07-06</b></div>
         <div class="stat-card"><span>首次基准</span><b>EUR 12.00</b></div>
         <div class="stat-card"><span>迄今</span><b>-35.3%</b></div>
             
       </div>
-      <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射 5</span><span class="chip blue">认证周期 vs TTM 营收 2</span></div>
+      <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射 11</span><span class="chip blue">瓶颈狩猎（核心透镜） 3</span><span class="chip blue">认证周期 vs TTM 营收 3</span><span class="chip blue">信念分层、仓位与时点 2</span></div>
     </section>
     <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
     
@@ -50,7 +51,7 @@
         <div class="analysis-grid panel-body">
           <article class="analysis-box">
             <h3>Serenity 观点</h3>
-            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
           </article>
           <article class="analysis-box">
             <h3>新增信号</h3>
@@ -62,7 +63,7 @@
           </article>
           <article class="analysis-box">
             <h3>作者立场</h3>
-            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
+            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
           </article>
           <article class="analysis-box">
             <h3>情绪与市场</h3>
@@ -112,7 +113,7 @@
         <text x="10" y="29" class="axis-label">12.20</text>
         <text x="10" y="321" class="axis-label">7.16</text>
         <polyline fill="none" class="price-line" points="58.0,303.5 85.8,316.0 113.6,293.1 141.4,296.0 169.2,274.0 197.0,263.8 224.8,210.5 252.6,35.6 280.4,72.7 308.2,107.5 335.9,172.2 363.7,57.1 391.5,24.0 419.3,100.6 447.1,136.5 474.9,104.0 502.7,200.3 530.5,218.9 558.3,170.7 586.1,138.2 613.9,142.9 641.7,163.8 669.5,175.9 697.3,156.8 725.1,198.3 752.9,188.1 780.7,175.4 808.5,220.9 836.3,248.7 864.1,267.9 891.8,269.0 919.6,272.5 947.4,291.1 975.2,313.1 1003.0,275.7 1030.8,228.7 1058.6,283.5 1086.4,294.3 1114.2,268.4 1142.0,281.5" />
-        <circle class="tweet-dot" cx="252.6" cy="35.6" r="4.9"><title>2026-05-27: 2 条推文 / EUR 12.00</title></circle><circle class="tweet-dot" cx="280.4" cy="72.7" r="5.3"><title>2026-05-28: 3 条推文 / EUR 11.36</title></circle><circle class="tweet-dot" cx="335.9" cy="172.2" r="4.5"><title>2026-05-31: 1 条推文 / EUR 9.65</title></circle><circle class="tweet-dot" cx="335.9" cy="172.2" r="5.3"><title>2026-06-01: 3 条推文 / EUR 9.65</title></circle><circle class="tweet-dot" cx="363.7" cy="57.1" r="4.9"><title>2026-06-02: 2 条推文 / EUR 11.63</title></circle><circle class="tweet-dot" cx="391.5" cy="24.0" r="6.2"><title>2026-06-03: 5 条推文 / EUR 12.20</title></circle><circle class="tweet-dot" cx="419.3" cy="100.6" r="4.5"><title>2026-06-04: 1 条推文 / EUR 10.88</title></circle><circle class="tweet-dot" cx="447.1" cy="136.5" r="4.5"><title>2026-06-05: 1 条推文 / EUR 10.26</title></circle><circle class="tweet-dot" cx="474.9" cy="104.0" r="4.9"><title>2026-06-06: 2 条推文 / EUR 10.82</title></circle><circle class="tweet-dot" cx="474.9" cy="104.0" r="4.9"><title>2026-06-08: 2 条推文 / EUR 10.82</title></circle><circle class="tweet-dot" cx="558.3" cy="170.7" r="4.5"><title>2026-06-11: 1 条推文 / EUR 9.67</title></circle><circle class="tweet-dot" cx="586.1" cy="138.2" r="4.5"><title>2026-06-12: 1 条推文 / EUR 10.23</title></circle><circle class="tweet-dot" cx="613.9" cy="142.9" r="4.5"><title>2026-06-15: 1 条推文 / EUR 10.15</title></circle><circle class="tweet-dot" cx="669.5" cy="175.9" r="4.5"><title>2026-06-17: 1 条推文 / EUR 9.58</title></circle><circle class="tweet-dot" cx="780.7" cy="175.4" r="4.9"><title>2026-06-23: 2 条推文 / EUR 9.59</title></circle><circle class="tweet-dot" cx="1030.8" cy="228.7" r="4.5"><title>2026-07-06: 1 条推文 / EUR 8.67</title></circle>
+        <circle class="tweet-dot" cx="252.6" cy="35.6" r="4.9"><title>2026-05-27: 2 条推文 / EUR 12.00</title></circle><circle class="tweet-dot" cx="280.4" cy="72.7" r="5.3"><title>2026-05-28: 3 条推文 / EUR 11.36</title></circle><circle class="tweet-dot" cx="335.9" cy="172.2" r="4.5"><title>2026-05-30: 1 条推文 / EUR 9.65</title></circle><circle class="tweet-dot" cx="335.9" cy="172.2" r="4.5"><title>2026-05-31: 1 条推文 / EUR 9.65</title></circle><circle class="tweet-dot" cx="335.9" cy="172.2" r="5.3"><title>2026-06-01: 3 条推文 / EUR 9.65</title></circle><circle class="tweet-dot" cx="363.7" cy="57.1" r="4.9"><title>2026-06-02: 2 条推文 / EUR 11.63</title></circle><circle class="tweet-dot" cx="391.5" cy="24.0" r="6.2"><title>2026-06-03: 5 条推文 / EUR 12.20</title></circle><circle class="tweet-dot" cx="419.3" cy="100.6" r="4.5"><title>2026-06-04: 1 条推文 / EUR 10.88</title></circle><circle class="tweet-dot" cx="447.1" cy="136.5" r="4.5"><title>2026-06-05: 1 条推文 / EUR 10.26</title></circle><circle class="tweet-dot" cx="474.9" cy="104.0" r="4.9"><title>2026-06-06: 2 条推文 / EUR 10.82</title></circle><circle class="tweet-dot" cx="474.9" cy="104.0" r="4.5"><title>2026-06-07: 1 条推文 / EUR 10.82</title></circle><circle class="tweet-dot" cx="474.9" cy="104.0" r="4.9"><title>2026-06-08: 2 条推文 / EUR 10.82</title></circle><circle class="tweet-dot" cx="558.3" cy="170.7" r="4.5"><title>2026-06-11: 1 条推文 / EUR 9.67</title></circle><circle class="tweet-dot" cx="586.1" cy="138.2" r="4.9"><title>2026-06-12: 2 条推文 / EUR 10.23</title></circle><circle class="tweet-dot" cx="613.9" cy="142.9" r="4.5"><title>2026-06-15: 1 条推文 / EUR 10.15</title></circle><circle class="tweet-dot" cx="669.5" cy="175.9" r="4.5"><title>2026-06-17: 1 条推文 / EUR 9.58</title></circle><circle class="tweet-dot" cx="752.9" cy="188.1" r="4.5"><title>2026-06-20: 1 条推文 / EUR 9.37</title></circle><circle class="tweet-dot" cx="780.7" cy="175.4" r="4.9"><title>2026-06-23: 2 条推文 / EUR 9.59</title></circle><circle class="tweet-dot" cx="919.6" cy="272.5" r="4.5"><title>2026-06-30: 1 条推文 / EUR 7.91</title></circle><circle class="tweet-dot" cx="1030.8" cy="228.7" r="4.5"><title>2026-07-06: 1 条推文 / EUR 8.67</title></circle>
         <text x="58" y="348" class="axis-label">2026-05-18</text>
         <text x="1056" y="348" class="axis-label">2026-07-10</text>
         <text x="872" y="18" class="legend">蓝线=收盘价  绿点=推文日期</text>
@@ -136,13 +137,15 @@
       <article class="tweet-card" data-tweet-index="0">
         <div class="tweet-head">
           <span class="mono">2026-07-06 17:29</span>
-          <span><span class="chip red">$SILEX</span><span class="chip red">$XFAB</span></span>
+          <span><span class="chip red">$NVDA</span><span class="chip red">$SILEX</span><span class="chip red">$XFAB</span></span>
         </div>
         <div class="tweet-text">Kelper upgrades $XFAB to &quot;Buy&quot; citing:
 
 - Melexis demand strengthening “week-after-week, day-after-day” (their lead customer). 
 - AI giving XFAB a structural growth leg with SiC, GaN, and photonics offsetting auto cyclicality. 
-- Scarce Western speciality foundries like $SILEX https://t.co/9lhS4fjKXX</div>
+- Scarce Western speciality foundries like $SILEX commanding higher multiples. 
+
+&quot;X-Fab rema...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -150,7 +153,15 @@
 
 - Melexis demand strengthening “week-after-week, day-after-day” (their lead customer). 
 - AI giving XFAB a structural growth leg with SiC, GaN, and photonics offsetting auto cyclicality. 
-- Scarce Western speciality foundries like $SILEX https://t.co/9lhS4fjKXX</div>
+- Scarce Western speciality foundries like $SILEX commanding higher multiples. 
+
+&quot;X-Fab remains the cheapest specialty foundry peer on every multiple, trading at 4.8x 2027 EV/EBITDA versus a peer median of 14.5x&quot; 
+
+I treat this as good signal for the core fundamentals improving like auto players. 
+
+But in terms of unpriced long term growth vectors, I&#x27;m personally looking at XFAB from a different angle in terms of photonics growth with photonixfab. Given $NVDA as a potential key driver. 
+
+But it&#x27;s hard for traditional firms to price these types of active developments into valuation models until there&#x27;s volume contracts.</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2074063175293809150" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
@@ -158,7 +169,7 @@
 
 - 其主要客户 Melexis 的需求正在“一周比一周、一天比一天”增强。- AI 为 XFAB 增加了结构性增长腿，SiC、GaN 和光子业务可以抵消汽车周期性。- 西方稀缺的特色晶圆代工厂，例如 $SILEX，也具备稀缺性。</div>
         <div class="tweet-foot">
-          <span>likes 610 / retweets 44 / replies 65 / views 205240</span>
+          <span>likes 674 / retweets 47 / replies 66 / views 265390</span>
         </div>
         <div class="chips"></div>
       </article>
@@ -166,36 +177,196 @@
 
       <article class="tweet-card" data-tweet-index="1">
         <div class="tweet-head">
-          <span class="mono">2026-06-23 22:39</span>
-          <span><span class="chip red">$XFAB</span></span>
+          <span class="mono">2026-06-30 09:10</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AXTI</span><span class="chip red">$CBRS</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$XFAB</span></span>
         </div>
-        <div class="tweet-text">Today, $XFAB (1.23B MC) receives €127.4 million from CHIPS ACT for their MEMS Foundry.
+        <div class="tweet-text">I&#x27;ve reached 900k followers, thank you everyone!
 
-&quot;The «Fab4Micro» in Erfurt is a key project for the technological sovereignty of Germany and Europe, explained Thuringia’s head of government.&quot;
+Just some reflection, it&#x27;s actually a nightmare at higher counts...
 
-The production start is planned in 2028 https://t.co/SSSa0EERLD</div>
+Which is new to me, since I started at almost nothing earlier this year.
+
+1. Threats of safety, which I don&#x27;t enjoy.
+
+- Random new accounts sending personal threats
+- Mysterious foreign accounts, sendi...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
-            <div class="tweet-full">Today, $XFAB (1.23B MC) receives €127.4 million from CHIPS ACT for their MEMS Foundry.
+            <div class="tweet-full">I&#x27;ve reached 900k followers, thank you everyone!
+
+Just some reflection, it&#x27;s actually a nightmare at higher counts...
+
+Which is new to me, since I started at almost nothing earlier this year.
+
+1. Threats of safety, which I don&#x27;t enjoy.
+
+- Random new accounts sending personal threats
+- Mysterious foreign accounts, sending coercive messages the moment I mention a foreign ticker
+
+If I hold an opinion about a stock, I&#x27;d prefer not to have anyone show up on the street with a knife at night since it&#x27;s safety risk at this point...
+
+Never felt like I&#x27;d have to take that into consideration for holding an opinion.
+
+2. Egregious media narratives
+
+- Lot of outlets try to dismiss my ideas like $RPI or $SIVE as &quot;meme stocks&quot; or me as &quot;meme trader&quot; when I talk about supply chain chokepoints or fundamental catalysts to revenue due to AI.
+
+Without ever covering the core ideas or hyperscaler mapping I&#x27;ve done.
+
+I let success validate my ideas, but it&#x27;s annoying when they can just pretend their claims like &quot;___ will imminently crash as a fact&quot; which ends up not happening.
+
+Or that &quot;___&quot; is just a retail meme stock without mentioning $JBL, Ayar, $GFS or others for CPO scale up or pluggables.
+
+I&#x27;m grateful to some outlets, like in Belgium for $XFAB coverage, but many others try and paint their own narrative rather than covering a very nuanced thesis objectively.
+
+- When I mention a ticker in a foreign market, some try to frame me as some &quot;adversarial account&quot;!
+
+I&#x27;m just sharing ideas, and I&#x27;ll always disclose positions/financial interest if I have them.
+
+If I say I have none, they just make up some narrative that I&#x27;m some foreign institution or random group inside their country that does.
+
+Some have even tried hilariously forging screenshots of me to harm my reputation, which was annoying to deal with. Since it&#x27;s easier to textedit a photo and spread it around than it is to dispel disinformation.
+
+Lot of institutions know me personally by now.
+
+I just don&#x27;t go broadcasting my identity to random people in the media/public, since personal security gets expensive and I just want to live about my day.
+
+3. Endless X bot spam
+
+- I have endless hundreds of comments a day trying to link external communities pretending they&#x27;re me.
+
+I manually delete, and block thousands of these accounts, sometimes hit regular people by accident.
+
+And it&#x27;s extremely exhausting to the point my fingers cramp certain days. 
+
+Even if I give the most blatant warnings in bio, people still get scammed and think it&#x27;s me. Then I get blamed for it too.
+
+I actually had a conversation where someone asked if a scammer was me.
+
+I said no verbatim, then they double checked like 2-3 more times because they didn&#x27;t believe I said no because someone had the same username on another scam platform.
+
+In another world, maybe we&#x27;ll get automod type tools. But until then,  it&#x27;s mentally exhausting dealing with all of this. But I do so anyways since I don&#x27;t want my followers to get scammed. 
+
+4. Endless engagement baiting
+
+- I have tons of people making up fake stuff about me, tagging me in posts, randomly bashing my ideas while missing any technical nuance in order to get me to comment or farm views.
+
+It&#x27;s a catch 22 since the moment I reply, they get a lot of views, which was their goal. And if I don&#x27;t reply it just looks like I&#x27;m avoiding something (which is not true).
+
+I&#x27;m very transparent, I always try and entertain people who disagree first. But when it gets into personal attacks or leading questions/disinformation rather than substance then I don&#x27;t engage.
+
+It&#x27;s a little sad though when people I&#x27;ve interacted with end up caring more about engagement over relationships down the road. 
+
+5. People missing the nuance
+
+- I share ideas pretty often and I always maintain I don&#x27;t want people to copytrade or blindly follow, which is why I haven&#x27;t set up any copytrading apps.
+
+Before it was just posting with a few $RDDT friends on ideas like $AXTI, $NBIS, or $ALAB, and people were more knowledgeable traders. 
+
+Then seeing if markets validate my guesses like with InP substrate bottlenecks. 
+
+But because many turned out directionally right, to the point it became a central talking point between China/US trade relations, lot of random folks started to follow my account last few months.
+
+But many of them miss nuances with float dilution, or material updates along the way such as rate hikes, and I get blamed if a thesis changes.
+
+Now since there&#x27;s so many random people, even if I share an idea about $CBRS last Friday.
+
+At market open I had people panicking over a 2% drop, asking me if I did something to a $44B+ company, even if it went up 20%+ today.
+
+Now I have compliance review for posts, which delays things a lot but makes sure people don&#x27;t get the wrong idea. And I have to be careful about my timing, so I post new ideas when markets close.
+
+Before, it was just sharing ideas the moment I had them during lunch or in the shower, so this is becoming a headache.
+
+6. I post my core ideas for free. And I&#x27;ve always said this from the start.
+
+I actually made my subscribers chat literally by accident, and set the bare minimum amount on purpose since I didn&#x27;t want to take people&#x27;s money. But kept it so I could avoid the bots and not spam the main timeline with random thoughts/scrapped research.
+
+I think me becoming the #1 most subscribed to person on X was literally by accident.
+
+But lot of weird narratives out there when media or others don&#x27;t believe that I just genuinely want to share my ideas for free.
+
+And that people shouldn&#x27;t need to pay $300 in a paywalled community to see them.
+
+_
+
+Not sure if people want to read it all, but just some things I&#x27;ve gone through.
+
+It&#x27;s not as much fun at higher numbers and it would be nice to go back to when I was smaller.
+
+Regardless, I&#x27;d rather not turn this into a job, or make it feel like one.
+
+Will probably take a break when I hit 1M as a milestone and do something else that will help out the community like sharing my research pipelines and such.
+
+Think a lot of my friends at 10-50K follower counts, seem to experience some of these issues too. But problems get magnified a lot at this level.
+
+I never needed the X creator fees or anything, just wanted to share ideas for fun if people wanted to listen.
+
+And didn&#x27;t expect any popularity, but it&#x27;s nice to see that people find my ideas compelling.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2071763387948859506" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我的粉丝已经达到90万了，谢谢大家！只是一些反思，这实际上是更高计数的噩梦......
+
+这对我来说是新鲜事，因为今年早些时候我几乎一无所有。1. 安全威胁，我不喜欢。- 随机新帐户发送人身威胁
+- 神秘的外国账户，一提到外国股票就发送强制信息
+
+如果我对一只股票持有看法，我宁愿不要有人在晚上拿着刀出现在街上，因为此时存在安全风险......
+
+我从来没有觉得我必须考虑到这一点才能持有意见。2. 恶劣的媒体报道
+
+- 当我谈论人工智能带来的供应链瓶颈或收入的基本催化剂时，许多媒体试图将我的想法（例如 $RPI 或 $SIVE）视为“模因股票”或将我视为“模因交易员”。没有涵盖我所做的核心思想或超大规模映射。我让成功验证了我的想法，但当他们假装他们的主张“___将立即崩溃”而最终没有发生时，这很烦人。或者“___”只是零售 m​​eme 股票，没有提及 $JBL、Ayar、$GFS 或其他用于 CPO 扩展或可插入的内容。我很感谢一些媒体，例如比利时的 $XFAB 报道，但许多其他媒体试图描绘自己的叙述，而不是客观地报道非常微妙的论文。- 当我提到国外市场的股票时，有些人试图将我视为“敌对账户”！我只是分享想法，如果有的话，我总是会披露职位/财务利益。如果我说我没有，他们只是编造一些故事，说我是他们国家的某个外国机构或随机团体。有些人甚至试图搞笑地伪造我的屏幕截图来损害我的声誉，这很难处理。因为用文字编辑照片并将其传播比消除虚假信息更容易。现在很多机构都认识我了。我只是不会向媒体/公众中的随机人广播我的身份，因为个人安全变得昂贵，而且我只想过好自己的一天。3.无尽的X机器人垃圾邮件
+
+- 我每天都会有无数条评论试图链接外部社区，假装他们是我。我手动删除并屏蔽了数千个这样的帐户，有时会不小心碰到普通人。而且有几天我的手指都抽筋了，真是太累了。即使我在生物中给出了最明目张胆的警告，人们仍然会被骗并认为是我。然后我也因此受到指责。事实上，我有过一次谈话，有人问我是不是骗子。我一字不差地说不，然后他们又仔细检查了 2-3 次，因为他们不相信我说不，因为有人在另一个诈骗平台上有相同的用户名。在另一个世界中，也许我们会得到 automod 类型的工具。但在那之前，处理所有这些都会让人精神疲惫。但无论如何我都会这样做，因为我不想让我的追随者被骗。4. 无尽的引诱
+
+- 有很多人编造关于我的虚假信息，在帖子中给我贴上标签，随机攻击我的想法，却忽略了任何技术上的细微差别，以便让我发表评论或发表观点。这是第 22 条军规，因为从我回复的那一刻起，他们就得到了很多浏览量，这就是他们的目标。如果我不回复，看起来就像我在逃避某些事情（这不是真的）。我很透明，我总是先尝试并招待那些不同意的人。但当它涉及人身攻击或引导性问题/虚假信息而不是实质内容时，我就不会参与。不过，当与我交往过的人最终更关心参与度而不是未来的关系时，这有点令人难过。5.人们忽略了细微差别
+
+- 我经常分享想法，并且始终坚称我不希望人们复制交易或盲目跟随，这就是为什么我没有设置任何复制交易应用程序。在此之前，它只是与一些 $RDDT 朋友发布关于 $AXTI、$NBIS 或 $ALAB 等想法的文章，而且人们都是知识渊博的交易者。然后看看市场是否验证了我的猜测，就像 InP 衬底瓶颈一样。但因为很多人的方向是正确的，以至于它成为中美贸易关系之间的一个中心话题，很多随机的人在过去几个月开始关注我的账户。但他们中的许多人错过了浮动稀释的细微差别，或者一路上的材料更新（例如加息），如果论文发生变化，我就会受到指责。现在既然有这么多随机的人，即使我上周五分享了一个关于 $CBRS 的想法。开盘时，人们对 2% 的下跌感到恐慌，问我是否对一家 44B+ 美元的公司做了什么，即使它今天上涨了 20%+。现在我对帖子进行合规性审查，这会延迟很多事情，但可以确保人们不会产生错误的想法。我必须小心我的时机，所以我会在市场收盘时发布新的想法。以前，我只是在午餐或淋浴时分享想法，所以这变得令人头痛。6.我免费发布我的核心想法。我从一开始就一直这么说。实际上，我无意中让我的订阅者聊天，并故意设置了最低金额，因为我不想拿人们的钱。但保留它，这样我就可以避开机器人，而不是用随机的想法/废弃的研究向主时间线发送垃圾邮件。我认为我成为 X 上订阅量第一的人实际上是偶然的。但是，当媒体或其他人不相信我只是真诚地想免费分享我的想法时，就会出现很多奇怪的叙述。人们不需要在付费社区支付 300 美元就能看到它们。_
+
+不确定人们是否想读全部内容，但只是我经历过的一些事情。在更高的数字下就没那么有趣了，如果能回到我更小的时候就好了。无论如何，我不想把它变成一份工作，或者让它感觉像是一份工作。当我达到 100 万里程碑时，我可能会休息一下，并做一些其他可以帮助社区的事情，比如分享我的研究管道等。我想我的很多粉丝数量为 10-50K 的朋友似乎也遇到了其中一些问题。但在这个层面上，问题被放大了很多。我从来不需要 X 创建者费用或任何东西，只是想在人们想听的时候分享有趣的想法。并没有想到会受到欢迎，但很高兴看到人们发现我的想法引人注目。</div>
+        <div class="tweet-foot">
+          <span>likes 3571 / retweets 65 / replies 571 / views 541293</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-06-23 22:39</span>
+          <span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">Today, $XFAB (1.23B MC) receives €127.4 million from CHIPS ACT for their MEMS Foundry. 
 
 &quot;The «Fab4Micro» in Erfurt is a key project for the technological sovereignty of Germany and Europe, explained Thuringia’s head of government.&quot;
 
-The production start is planned in 2028 https://t.co/SSSa0EERLD</div>
+The production start is planned in 2028 (finanzen). 
+
+With Europe&#x27;s new CHIPS ACT 2 as...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Today, $XFAB (1.23B MC) receives €127.4 million from CHIPS ACT for their MEMS Foundry. 
+
+&quot;The «Fab4Micro» in Erfurt is a key project for the technological sovereignty of Germany and Europe, explained Thuringia’s head of government.&quot;
+
+The production start is planned in 2028 (finanzen). 
+
+With Europe&#x27;s new CHIPS ACT 2 as a concurrent fundamental tailwind.</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2069430169300070612" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>今天，$XFAB (1.23B MC) 从 CHIPS ACT 获得 1.274 亿欧元用于其 MEMS 代工厂。图林根州政府首脑解释说：“爱尔福特的‘Fab4Micro’是德国和欧洲技术主权的一个关键项目。”
 
-计划于 2028 年开始生产 https://t.co/SSSa0EERLD</div>
+计划于 2028 年开始生产 (finanzen)。欧洲新推出的 CHIPS ACT 2 是同时的基本面推动因素。</div>
         <div class="tweet-foot">
-          <span>likes 148 / retweets 12 / replies 31 / views 36299</span>
+          <span>likes 977 / retweets 74 / replies 145 / views 518475</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="2">
+      <article class="tweet-card" data-tweet-index="3">
         <div class="tweet-head">
           <span class="mono">2026-06-23 18:55</span>
           <span><span class="chip red">$XFAB</span></span>
@@ -206,7 +377,9 @@ Okay I forgive you Bernstein for Kioxia and Intel.
 
 I still think that’s just reactive PTs off automotive recovery, SiC/power semi ramp up.
 
-And undershooting potential a lot… If markets price in the https://t.co/c8WgJ4jVRQ</div>
+And undershooting potential a lot… If markets price in the possibility of xfab moving to HVM.
+
+On their ...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -216,19 +389,128 @@ Okay I forgive you Bernstein for Kioxia and Intel.
 
 I still think that’s just reactive PTs off automotive recovery, SiC/power semi ramp up.
 
-And undershooting potential a lot… If markets price in the https://t.co/c8WgJ4jVRQ</div>
+And undershooting potential a lot… If markets price in the possibility of xfab moving to HVM.
+
+On their silicon photonics foundry w/ photonixfab / Nvidia + LIGENTEC for TFLN on SOI.
+
+Regardless I’m bullish too on XFAB and curious where it heads.</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2069373894398743000" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
-        <div class="tweet-zh"><b>中文译文：</b>Bernstein 将 $XFAB 的目标价从 5 欧元上调至跑赢大盘，为 12.8 欧元。好吧，我原谅你伯恩斯坦的 Kioxia 和英特尔。我仍然认为这只是汽车复苏后的反应性 PT，SiC/功率半导体的增长。并且远远低于潜力......如果市场价格在 https://t.co/c8WgJ4jVRQ</div>
+        <div class="tweet-zh"><b>中文译文：</b>Bernstein 将 $XFAB 的目标价从 5 欧元上调至跑赢大盘，为 12.8 欧元。好吧，我原谅你伯恩斯坦的 Kioxia 和英特尔。我仍然认为这只是汽车复苏后的反应性 PT，SiC/功率半导体的增长。而且潜力还远远低于……如果市场定价 xfab 转向 HVM 的可能性。他们的硅光子代工厂采用 photonixfab / Nvidia + LIGENTEC，用于 SOI 上的 TFLN。不管怎样，我也看好 XFAB，并好奇它的发展方向。</div>
         <div class="tweet-foot">
-          <span>likes 67 / retweets 2 / replies 12 / views 20717</span>
+          <span>likes 746 / retweets 47 / replies 73 / views 377686</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="3">
+      <article class="tweet-card" data-tweet-index="4">
+        <div class="tweet-head">
+          <span class="mono">2026-06-20 19:52</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$GFS</span><span class="chip red">$HOOD</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$IREN</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSM</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">I think u must be new here. 
+
+Many of my ideas get intense backlash at the start, especially the more original they are.
+
+$AXTI - endless hate to the point I got banned from the $RDDT WSB forum.
+
+They thought it was some scam Chinese company, but Reuters, Epiwafer company earnings, and institutions validated their InP ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I think u must be new here. 
+
+Many of my ideas get intense backlash at the start, especially the more original they are.
+
+$AXTI - endless hate to the point I got banned from the $RDDT WSB forum.
+
+They thought it was some scam Chinese company, but Reuters, Epiwafer company earnings, and institutions validated their InP substrate position many months later.
+
+$RPI - everyone called it some meme stock. 
+
+Literally Bloomberg, Financial Times, and others went out and called it a meme stock with no fundamentals. 
+
+Analysts went and said the idea was stupid and said it was going to crash “as a fact”.
+
+Earnings came out? Blew away any projection with 58% fwd revenue growth. 
+
+But they seem to have forgot all the backlash they threw out at me, while they’re citing it as a high growth ai hardware company no. 
+
+$SIVE? Everyone called it a “meme stock”. I get bunch of hate from Swedish media all the way up.
+
+Bunch of people didn’t understand the technical nuances, and they keep throwing personal attacks for some strange reason.
+
+But as you know it’s probably my most successful idea and it’s validated so far by institutional buying from Fidelity Research, JP Morgan as well as formally announced partnerships from $JBL to $GFS.
+
+Same hate with: 
+
+- $AAOI at $30, when everyone called management a “scam” or “shady”
+
+- $LITE at $300 when everyone called photonics a “bubble”
+
+- $RKLB at $20 when everyone thought it was a low revenue launch company that was a bubble. I actually got temp banned from WSB from posting about Rocketlab since moderators didn’t like the stock.
+
+- $HOOD at $20 when everyone recalled them freezing GME buys/sells
+
+- $IQE at $12 when people thought it was just some random crap $100m company over in the UK with “no actual photonics partnerships”
+
+- $SOI at $44 when European bank analysts thought it was “overvalued”and my thesis wasn’t anything new
+
+- $NBIS at $75 when everyone in the $IREN camp said I was spreading Russian propaganda and that they had no moat
+
+- $INTC at $115 when everyone thought they couldn’t compete with $TSM 
+
+- $MRVL at $85 when everyone thought they were losing ASIC share to Broadcom.
+
+- $AEHR at $35 when everyone misread their earnings and thought they had no revenue 
+
+- $EWY at $115 when everyone was crying KOSPI was a bubble and LNG/helium/oil would disrupt the memory trade
+
+Can go on and on…
+
+I do read a lot of the comments, which is why I remember a lot of the hate (probably either jealously, impression farming, or lacking the technical depth is my guess).
+
+But I think at this point, people can just see each thesis validated over and over again.
+
+And the success in markets drown out the old noise. 
+
+Good thing is markets are the final arbiter of what’s right or wrong, not the angry comments or posts on X.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2068301039946887269" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我想你一定是新来的。我的许多想法一开始就遭到强烈反对，尤其是那些比较原创的想法。$AXTI - 无尽的仇恨以至于我被禁止进入 $RDDT WSB 论坛。他们认为这是一些中国公司的骗局，但几个月后路透社、Epiwafer 公司财报和机构证实了他们的 InP 衬底立场。$RPI - 每个人都称其为模因股票。彭博社、英国《金融时报》和其他媒体都出面称其为“没有基本面的模因股票”。分析师表示这个想法很愚蠢，并表示“事实上”它会崩溃。盈利出来了吗？预期收入增长 58%，超出了任何预期。但他们似乎忘记了他们对我的所有强烈反对，而他们将其视为一家高增长的人工智能硬件公司。$SIVE？每个人都称其为“模因股”。我一直受到瑞典媒体的仇恨。一群人不明白技术上的细微差别，他们总是出于某种奇怪的原因进行人身攻击。但正如你所知，这可能是我最成功的想法，迄今为止，它已通过 Fidelity Research、JP Morgan 的机构购买以及从 $JBL 到 $GFS 正式宣布的合作伙伴关系得到验证。同样的仇恨： 
+
+- $AAOI 为 30 美元，当时每个人都称管理层是“骗局”或“阴暗”
+
+- 当每个人都称光子学为“泡沫”时，LITE 价格为 300 美元
+
+- RKLB 价格为 20 美元，当时每个人都认为这是一家低收入的发射公司，这是一个泡沫。事实上，我被 WSB 临时禁止发布有关 Rocketlab 的帖子，因为版主不喜欢这只股票。- 当每个人都记得他们冻结 GME 买卖时，$HOOD 的价格为 20 美元
+
+- IQE 为 12 美元，当时人们认为这只是英国某家价值 1 亿美元的垃圾公司，“没有实际的光子学合作伙伴关系”
+
+- $SOI 为 44 美元，当时欧洲银行分析师认为它“被高估”，而我的论文也不是什么新鲜事
+
+- $NBIS 价格为 75 美元，而 $IREN 阵营中的每个人都说我在传播俄罗斯宣传并且他们没有护城河
+
+- 当每个人都认为自己无法与 $TSM 竞争时，$INTC 的价格为 $115 
+
+- MRVL 价格为 85 美元，当时每个人都认为他们正在将 ASIC 份额拱手让给 Broadcom。- 当每个人都误读了他们的收入并认为他们没有收入时，$AEHR 的价格为 35 美元 
+
+- $EWY 价格为 115 美元，当时每个人都在哭泣 KOSPI 是泡沫，液化天然气/氦气/石油将扰乱内存贸易
+
+可以继续下去……
+
+我确实读了很多评论，这就是为什么我记得很多仇恨（我猜可能是嫉妒、印象农场或缺乏技术深度）。但我认为在这一点上，人们可以看到每篇论文都被一遍又一遍地验证。市场上的成功淹没了旧有的喧嚣。好消息是市场是正确或错误的最终仲裁者，而不是 X 上的愤怒评论或帖子。</div>
+        <div class="tweet-foot">
+          <span>likes 2258 / retweets 119 / replies 264 / views 723518</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="5">
         <div class="tweet-head">
           <span class="mono">2026-06-17 21:18</span>
           <span><span class="chip red">$XFAB</span></span>
@@ -263,13 +545,13 @@ Regardless, I’m just curious how this plays out.  (Disclosure, own positions)<
         </div>
         <div class="tweet-zh"><b>中文译文：</b>不要认为 $XFAB 有任何新消息。不过，他们的公司需要在营销材料方面做得更好。因为显然没有人认为它们是光学 AI 直流或功率半相邻曝光。然而，我本以为他们通过 PhotonixFab 引领了欧洲硅光子价值链的发展。显然，在《神鬼寓言》出口管制之后，每个人+欧盟都在讨论主权人工智能供应链。人们可能会认为他们是与 IMEC、ligentec 和其他公司一起推动主权人工智能发展的主要受益者？无论如何，市场总是可能存在分歧，或者可能没有将事物联系在一起。无论如何，我只是好奇这会如何发展。（披露，自己的立场）</div>
         <div class="tweet-foot">
-          <span>likes 811 / retweets 134 / replies 137 / views 390832</span>
+          <span>likes 801 / retweets 115 / replies 136 / views 412872</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="4">
+      <article class="tweet-card" data-tweet-index="6">
         <div class="tweet-head">
           <span class="mono">2026-06-15 22:56</span>
           <span><span class="chip red">$ALRIB</span><span class="chip red">$IQE</span><span class="chip red">$LPK</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
@@ -368,13 +650,54 @@ Soitec - 硅光子 SoI 衬底完全垄断，同时摆脱了传统的阻力领域
 
 也许 $SOI 已被重新评级最多？但我还是坚持着。我认为 $LPK 和 $ALRIB 尽管具有垄断地位，但仍被低估。$RPI 只是看到了目前情况的发展情况，如果它们最终像低端边缘人工智能的迷你英伟达那样，那就太搞笑了。考虑到新塔与 macom 的长期协议，$IQE 可能还有很长的路要走。如果他们转换潜在产能，我仍然认为它有机会像里程碑一样重新评级。$XFAB idk 如果我遗漏了什么或者市场遗漏了什么。你有英伟达作为其硅光子代工厂的直接评估，它的交易价格低于替代品的市净率。我认为我是对的。我认为 $SIVE 在所有这些中具有最高的优势，因为激光公司有能力进行垂直整合、收购下游公司以使其激光器更有价值等。就像相干/Lumentum 一样。还有大约 1-2 个随机的，并不是真正重要的，但只是一般性的。这些是我最喜欢的。</div>
         <div class="tweet-foot">
-          <span>likes 2422 / retweets 298 / replies 267 / views 645507</span>
+          <span>likes 2583 / retweets 331 / replies 272 / views 791617</span>
         </div>
         <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="5">
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
+          <span class="mono">2026-06-12 00:49</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">If you haven’t noticed too with my other investment themes with 800V DC and CPO recently.
+
+It’s investing in $NVDA, America’s national champion in AI, and securing their supply chains. 
+
+Many things feel technologically difficult with yields to substrate supply. 
+
+People can always bear post laser capacity or export co...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">If you haven’t noticed too with my other investment themes with 800V DC and CPO recently.
+
+It’s investing in $NVDA, America’s national champion in AI, and securing their supply chains. 
+
+Many things feel technologically difficult with yields to substrate supply. 
+
+People can always bear post laser capacity or export control bottlenecks and tell people to short Nvidia’s supply chains due to difficulties. 
+
+But by investing in the critical companies to give them more capex spend for FAU capacity / yields.
+
+Or funding upstream red phosphorus/InP substrate capacity or SiC/GaN capacity. 
+
+It builds up Western supply chains to make what’s technologically challenging, possible.
+
+Also I believe in Jensen.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2065114293767741950" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>如果你还没有注意到我最近的其他投资主题，800V DC 和 CPO。它正在投资美国人工智能领域的国家冠军企业 $NVDA，并确保其供应链的安全。在基板供应的良率方面，许多事情在技术上都感觉困难。人们总是可以忍受激光产能或出口管制瓶颈，并告诉人们由于困难而缩短英伟达的供应链。但通过投资关键公司，为他们提供更多资本开支，以提高 FAU 产能/收益率。或者资助上游红磷/InP衬底产能或SiC/GaN产能。它建立了西方供应链，使技术上具有挑战性的事情成为可能。我也相信詹森。</div>
+        <div class="tweet-foot">
+          <span>likes 983 / retweets 47 / replies 179 / views 515467</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="8">
         <div class="tweet-head">
           <span class="mono">2026-06-12 00:13</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$MU</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
@@ -419,13 +742,13 @@ US/EU don&#x27;t just hand out subsidies or CHIPS act grants to anyone.</div>
 
 如果您现在还没有注意到，它们对美国供应链都至关重要。他们每个人都在获得补贴以确保西方供应链的安全。之前的主要交易是做空美国/西方发展中国家股票，然后用受补贴的外国股票进行对冲。正如破产的能源/太阳能公司所见，这对多年后的美国人工智能基础设施和电网产生了很大的反作用。我想帮助改变这种心态，因为我相信投资建立当今光子学等关键的西方供应链是非常积极的。特别是如果 $AAOI 在将生产转移到美国后达到每月 4.71 亿美元的预测。与其寄希望于它们失败，并将供应链中的关键节点称为模因股/泡沫，不如稍微改变一下心态，这样我们就不会在几年后看到美国太阳能行业的重演。美国/欧盟不只是向任何人提供补贴或 CHIPS 法案拨款。</div>
         <div class="tweet-foot">
-          <span>likes 1669 / retweets 106 / replies 225 / views 687072</span>
+          <span>likes 1691 / retweets 109 / replies 225 / views 755352</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="6">
+      <article class="tweet-card" data-tweet-index="9">
         <div class="tweet-head">
           <span class="mono">2026-06-11 17:54</span>
           <span><span class="chip red">$GFS</span><span class="chip red">$NVDA</span><span class="chip red">$TSEM</span><span class="chip red">$XFAB</span></span>
@@ -461,13 +784,13 @@ Otherwise people can take the de-risked route with Tower directly (which I also 
         </div>
         <div class="tweet-zh"><b>中文译文：</b>为什么我总是收到这些问题！！！$XFAB 正在构建 $TSEM 和 $GFS 的硅光子代工替代品。并得到欧洲的支持 + NVDA 评估。这需要时间……比如 2026 年 10 月，应该完成开发。然后 2027 年的生产规模扩大到 2028 年（批量生产），因为他们从 2023 年开始就一直在努力。每个人都认为它现在是一家陷入困境的汽车制造商供应商。值得庆幸的是，对于欧洲品牌来说，他们更倾向于关注 TTM 收入而不是未来增长。那么，它以某种方式引领欧盟以~€1.1B MC 创建 $TSEM 硅光子代工厂 + 供应链的努力？ASE 的研发总监引用了其他人作为未来 CPO 路线。我可能对很多事情都还很早，但当然，大部分风险/回报来自于在看到它商业化时采取一点信心飞跃。否则，人们可以直接采用 Tower 的低风险路线（我不久前也写过一篇论文，也很喜欢）。</div>
         <div class="tweet-foot">
-          <span>likes 1086 / retweets 72 / replies 226 / views 413709</span>
+          <span>likes 1119 / retweets 76 / replies 224 / views 460905</span>
         </div>
         <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="7">
+      <article class="tweet-card" data-tweet-index="10">
         <div class="tweet-head">
           <span class="mono">2026-06-08 14:51</span>
           <span><span class="chip red">$AEHR</span><span class="chip red">$AMSC</span><span class="chip red">$AOSL</span><span class="chip red">$ASYS</span><span class="chip red">$BDC</span><span class="chip red">$CWR.L</span><span class="chip red">$ENPH</span><span class="chip red">$EOSE</span><span class="chip red">$FCEL</span><span class="chip red">$HYLN</span><span class="chip red">$IFNNY</span><span class="chip red">$IPWR</span><span class="chip red">$IQE.L</span><span class="chip red">$LFUS</span><span class="chip red">$NVTS</span><span class="chip red">$ON</span><span class="chip red">$PAY.BR</span><span class="chip red">$POET</span><span class="chip red">$POWI</span><span class="chip red">$RELL</span><span class="chip red">$SEDG</span><span class="chip red">$VICR</span><span class="chip red">$VSH</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
@@ -498,7 +821,7 @@ Otherwise people can take the de-risked route with Tower directly (which I also 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="8">
+      <article class="tweet-card" data-tweet-index="11">
         <div class="tweet-head">
           <span class="mono">2026-06-08 14:22</span>
           <span><span class="chip red">$AEHR</span><span class="chip red">$AMSC</span><span class="chip red">$AOSL</span><span class="chip red">$ASYS</span><span class="chip red">$BDC</span><span class="chip red">$CWR.L</span><span class="chip red">$ENPH</span><span class="chip red">$EOSE</span><span class="chip red">$FCEL</span><span class="chip red">$HYLN</span><span class="chip red">$IFNNY</span><span class="chip red">$IPWR</span><span class="chip red">$IQE.L</span><span class="chip red">$LFUS</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$ON</span><span class="chip red">$PAY.BR</span><span class="chip red">$POET</span><span class="chip red">$POWI</span><span class="chip red">$RELL</span><span class="chip red">$SEDG</span><span class="chip red">$VICR</span><span class="chip red">$VSH</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
@@ -572,7 +895,94 @@ We&#x27;ll see how your highest conviction ideas do.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="9">
+      <article class="tweet-card" data-tweet-index="12">
+        <div class="tweet-head">
+          <span class="mono">2026-06-07 11:37</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">I think my personal style of investing is a bit different, just some reflection:
+
+It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences?
+
+If you look at $AXTI, $RPI, $SIVE, $IQE and others. 
+
+Lot of it is guessing on unstructured relationships then seeing if it&#x27;s ri...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I think my personal style of investing is a bit different, just some reflection:
+
+It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences?
+
+If you look at $AXTI, $RPI, $SIVE, $IQE and others. 
+
+Lot of it is guessing on unstructured relationships then seeing if it&#x27;s right or not down the line.   
+
+$RPI is the perfect example:
+
+1. Nobody really thought of Raspberry Pis for AI growth. Mainly people bought one or two just for class + education + hobbyist. 
+2. After OpenClaw, just noticed all my friends and people just buying Apple Mac Minis / RPIs for AI applications. 
+3. Found validation of that trend online with lot of people sharing video tutorials on AI orchestration with RPI. 
+4. AI was their ideal perfect growth vector, did some modeling, and thought it was compelling. 
+
+Earnings comes out and I was right. 
+
+Everyone in media was calling it a meme stock because there&#x27;s nothing online that shows revenue growth from AI (was 14% forecasted revenue growth, turned out to be 58%, my projection was around 55%).  
+
+So it was a mix of guessing next industry trend (AI using lightweight hardware instead of GPU clusters), real life trends, then revenue forecasting off my guess.
+
+ For stuff like $AXTI: 
+
+1. Everyone called it a joke when I bought at ~$12. LLMs would hallucinate and say &quot;hyperscalers/govs would have known about this by now and fixed this vulnerability with InP substrates&quot; 
+2. Or would conflate very nuanced parts of InP substrate stack, where there&#x27;s multiple different chokepoints in upstream processing. 
+3. So part of this was just discretionary based on what I&#x27;ve seen over InP substrate breakdowns, industry trends, etc. 
+4. Then also guessing the major supercycle was photonics (this was before everyone caught onto $LITE, and others). Or before you saw the $141B TAM projections from GS. 
+5. AXT owned 40% of InP supply chain, without them the supply chain just gets cripped). 
+6. All the &quot;analysts&quot; were forecasting steady InP substrate growth, few hundred million TAM, etc. or export controls. 
+7. Everyone kept trying to say $AXTI was overvalued based on TAM estimates. But if it&#x27;s a few hundred million TAM you just think that&#x27;s a joke and go into game theory over allocations. 
+8. Then I just had to guess, how much would this be worth if it were a NAND style bottleneck, what MC could it reach based on control, how much would hyperscalers price it as, etc. 
+
+A lot of the current research outputs from Goldman Sachs, or earnings reports from the Epiwafer companies, were confirmed after I published my piece on AXT. If you did research back then, lot of the same material /framing wouldn&#x27;t have come up. 
+
+With stuff like $XFAB as you&#x27;re seeing now, a lot of it is just pure guessing:
+
+1. Not really any CPO materials, how much their MTP process makes in revenue, etc. Everyone online keeps saying they&#x27;re not a photonics player. 
+2. But if you go through ASE docs or Gov websites, they all kinda cite XFAB as a major emerging player here. 
+3. $NVDA also evaluating them right now (maybe it&#x27;s successful who knows). 
+4. No clear revenue around this area because their main silicon photonics process is still precommercial, but if you guess it&#x27;s trying to create a EU supply chain to compete with $TSEM, once pre-commercial shifts to commercial, maybe similar but less volume contracts? 
+5. Then just seeing updates over the next few months to see if anything confirms this thesis guess. 
+
+_ 
+
+I think a lot of information discovery still can be done with LLMs I&#x27;m seeing online. But it&#x27;s also really hard to make a bunch of unstructured inferences based on unrelated material or even just trends you&#x27;re seeing in real life. 
+
+So probably better to just do what&#x27;s standard, eg. do valuation forecasting based on current numbers
+
+Stuff like $AAOI, if they&#x27;re projecting $471m/M h1 2027 and you see MC at $12B, probably undervalued might be a good idea to go long for next years. 
+
+Stuff like Samsung Electronics is easier, see what people are modeling for operating profits for 2027, 2028 then just seeing if it&#x27;s undervalued or not at current levels. 
+
+Maybe something harder is $JBL. I haven&#x27;t really seen any great volume numbers around 1.6T LRO, but you can just make a guess on how popular that might be then project how that might impact current MCs. 
+
+Or picking just good names everyone kinda agrees like $TSM, $INTC, $MRVL is also solid. 
+
+So a lot of things is just building up your life skills then applying that to markets. I don&#x27;t think it&#x27;s that can be taught with courses and stuff. 
+
+Of course, much of what I&#x27;m doing is just high conviction inference based on unconnected parts. Could always be wrong.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2063465386960736396" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我觉得自己的投资风格有点不同，只是一些反思：
+
+它本质上是主观判断，基于市场还不知道的东西，也是一系列人生经历的累积。如果你看 $AXTI、$RPI、$SIVE、$IQE 等，很多判断都来自对客户、文档、时间线和产业演进的提前推测。</div>
+        <div class="tweet-foot">
+          <span>likes 3148 / retweets 306 / replies 235 / views 1223145</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">信念分层、仓位与时点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="13">
         <div class="tweet-head">
           <span class="mono">2026-06-06 16:50</span>
           <span><span class="chip red">$XFAB</span></span>
@@ -603,7 +1013,7 @@ But I think I&#x27;m right? We&#x27;ll see.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="10">
+      <article class="tweet-card" data-tweet-index="14">
         <div class="tweet-head">
           <span class="mono">2026-06-06 16:37</span>
           <span><span class="chip red">$ASX</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$TSEM</span><span class="chip red">$XFAB</span></span>
@@ -680,7 +1090,7 @@ I think markets are probably missing something here...  there&#x27;s almost 0 va
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="11">
+      <article class="tweet-card" data-tweet-index="15">
         <div class="tweet-head">
           <span class="mono">2026-06-05 17:21</span>
           <span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$TSEM</span><span class="chip red">$XFAB</span></span>
@@ -713,7 +1123,7 @@ Just needs time.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="12">
+      <article class="tweet-card" data-tweet-index="16">
         <div class="tweet-head">
           <span class="mono">2026-06-04 17:53</span>
           <span><span class="chip red">$TSM</span><span class="chip red">$XFAB</span></span>
@@ -750,7 +1160,7 @@ Just little statements like this catch my eye.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="13">
+      <article class="tweet-card" data-tweet-index="17">
         <div class="tweet-head">
           <span class="mono">2026-06-03 20:53</span>
           <span><span class="chip red">$XFAB</span></span>
@@ -781,7 +1191,7 @@ $XFAB is mentioned in some reports. The documents are too long still going throu
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="14">
+      <article class="tweet-card" data-tweet-index="18">
         <div class="tweet-head">
           <span class="mono">2026-06-03 20:27</span>
           <span><span class="chip red">$XFAB</span></span>
@@ -802,7 +1212,7 @@ $XFAB is mentioned in some reports. The documents are too long still going throu
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="15">
+      <article class="tweet-card" data-tweet-index="19">
         <div class="tweet-head">
           <span class="mono">2026-06-03 19:50</span>
           <span><span class="chip red">$POET</span><span class="chip red">$XFAB</span></span>
@@ -850,7 +1260,7 @@ $POET: $2.4B MC
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="16">
+      <article class="tweet-card" data-tweet-index="20">
         <div class="tweet-head">
           <span class="mono">2026-06-03 13:42</span>
           <span><span class="chip red">$NOK</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
@@ -879,7 +1289,7 @@ $SIVE / $XFAB map to policy incentives better, but wouldn&#x27;t be surprised</d
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="17">
+      <article class="tweet-card" data-tweet-index="21">
         <div class="tweet-head">
           <span class="mono">2026-06-03 13:37</span>
           <span><span class="chip red">$SIVE</span><span class="chip red">$XFAB</span></span>
@@ -912,7 +1322,7 @@ This proposes sovereign backing https://t.co/WWBlo5o1tL</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="18">
+      <article class="tweet-card" data-tweet-index="22">
         <div class="tweet-head">
           <span class="mono">2026-06-02 21:46</span>
           <span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
@@ -939,7 +1349,7 @@ Also quite surprised about $XFAB valuations given they seem to be leading Europe
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="19">
+      <article class="tweet-card" data-tweet-index="23">
         <div class="tweet-head">
           <span class="mono">2026-06-02 21:17</span>
           <span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$TSEM</span><span class="chip red">$XFAB</span></span>
@@ -978,10 +1388,10 @@ While leading the</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="20">
+      <article class="tweet-card" data-tweet-index="24">
         <div class="tweet-head">
           <span class="mono">2026-06-01 23:13</span>
-          <span><span class="chip red">$ALRIB</span><span class="chip red">$IQE</span><span class="chip red">$LPK</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
+          <span><span class="chip red">$ALRIB</span><span class="chip red">$AXTI</span><span class="chip red">$IQE</span><span class="chip red">$LPK</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
         </div>
         <div class="tweet-text">A special thank you to the only European stock green today: $IQE. 
 
@@ -1001,13 +1411,13 @@ Unfortunately lot of volatility with the other ones from $LPK, $SOI, $XFAB, and 
         </div>
         <div class="tweet-zh"><b>中文译文：</b>特别感谢今天唯一的绿色欧洲股票：$IQE。从 4 个月前我在 12-13 美元做多开始，一直上涨到 54 美元。不幸的是，$LPK、$SOI、$XFAB 和 $ALRIB 的其他产品波动很大。https://t.co/FysZyHk5OK</div>
         <div class="tweet-foot">
-          <span>likes 295 / retweets 14 / replies 196 / views 73332</span>
+          <span>likes 682 / retweets 38 / replies 227 / views 290341</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="21">
+      <article class="tweet-card" data-tweet-index="25">
         <div class="tweet-head">
           <span class="mono">2026-06-01 15:46</span>
           <span><span class="chip red">$XFAB</span></span>
@@ -1032,10 +1442,10 @@ For Melexis, it’s also a guess we’re near the bottom of automotive cycle for
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="22">
+      <article class="tweet-card" data-tweet-index="26">
         <div class="tweet-head">
           <span class="mono">2026-06-01 15:27</span>
-          <span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$XFAB</span></span>
+          <span><span class="chip red">$GFS</span><span class="chip red">$INTC</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$ON</span><span class="chip red">$POWI</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
         </div>
         <div class="tweet-text">Just some mobile shower thoughts around $XFAB and train of thought:
 
@@ -1043,7 +1453,7 @@ For Melexis, it’s also a guess we’re near the bottom of automotive cycle for
 
 2. $NVTS and other fabless/fab-lite beneficiaries of $NVDA push probably use foundry models 
 
-3. care more about Western supply chains over Asia,</div>
+3. care more about Western supply chains over Asia, want to build up Western capabilities + Wes...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -1053,7 +1463,65 @@ For Melexis, it’s also a guess we’re near the bottom of automotive cycle for
 
 2. $NVTS and other fabless/fab-lite beneficiaries of $NVDA push probably use foundry models 
 
-3. care more about Western supply chains over Asia,</div>
+3. care more about Western supply chains over Asia, want to build up Western capabilities + Western premiums. 
+
+4 China has a lot of capacity, maybe risk into 2028, but again it’s building up Western supply chains 
+
+5. XFAB only high volume SiC foundry in America (others like $ON or Infineon are vertically integrated)
+
+6. advanced 6in SiC, 8in GaN on Si, building out 8in GaN
+
+7. Maybe likely they’re developing 8in SiC from CHIPS backing, just not public material
+
+8. check SiC revenue -&gt; 152% Y/Y growth okay. Probably something markets missed, since blended looks worse from automotive slump, that should come out recovery
+
+9. $NVTS and others turns out to use $XFAB. $POWI cites $XFAB in filings, among others.
+
+10. both are $NVDA power semi explicit partners, great exposure indicator to 800vdc power semi players. 
+
+11. US Dpt. of commerce cites $XFAB as only high volume SiC foundry in the US, $50M PMT
+
+12. validation from US Gov about critical component in supply chains is amazing 
+
+13. EU CHIPS Act gives $XFAB $128M EU, for foundry (MEMS, AI, etc), okay turns out they’re critical MEMS player
+
+14. So that’s validation from EU gov about critical component in supply chains, dual continent subsidies
+
+15. So now we know $XFAB is a critical MEMS foundry so you get SiC capabilities, GaN development, and MEMS upside
+
+16. they also got $47.6M EU funding for leading Silicon Photonics supply chain in EU. So that’s EU funding on multiple angles. 
+
+17. Turns out, I know all the players there from smartphotonics from $GFS deck.
+
+18. $NVDA and $NOK are qualifying them for silicon photonics HVM. I think this is just a government backing angle for success in EU photonics so likely to succeed… kinda like how Us gov encourages everyone to use $INTC. 
+
+19. Okay chips act 2 is coming out next week… so they’ll probably get funding there or more revenue commitments 
+
+20. 1.28 p/b, now that’s probably just book cost? Likely coming out of $SOI type legacy drag cycle.
+
+21. Did some modeling around actually replacement values, true replacement p/b cost likely ~.5/.7.
+
+22. Getting business for free, while having upside from SiC near term into Silicon Photonics / GaN as main growth past H2 2027.
+
+Thoughts: derisked by p/b values + replacement value. maybe like 20% downside from macro.
+
+However, critical dual continent importance. So downside risk seems low, but upside is compelling. 
+
+Lot of capex likely backstopped by upcoming chips act catalyst + national security concerns. 
+
+Maybe 2.5-4x rerating seems possible/likely. 
+
+Not a 10-20x, but recovery from depressed valuations from silicon photonics upside with SiC / GaN bridge.  
+
+TLDR: likely trading lower than replacement value, dual continent subsidies likely subsidize capex.
+
+Gov grants shows importance to Western supply chains, photonics longer term upside, SiC/GaN demand likely near term upside and bridge. 
+
+Don’t control any recent volatility, should shake out anyone not really confident in the thesis though. 
+
+CHIPS act 2 from EU is coming up, $XFAB was listed in earlier blueprints for optical ecosystem, so should get a boost after that comes out as near term event catalysts.
+
+So now is the risk reward seems compelling, we’ll see if this is right or not</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2061348882685243497" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
@@ -1061,15 +1529,37 @@ For Melexis, it’s also a guess we’re near the bottom of automotive cycle for
 
 1. 800vdc $NVDA 推动 GaN/SiC 厂商/功率半导体产品的发展。2. $NVTS 和 $NVDA 推动的其他无晶圆厂/精简晶圆厂受益者可能使用代工模式 
 
-3. 更关心西方供应链而不是亚洲，</div>
+3. 更关心西方供应链而不是亚洲，想要建立西方能力+西方溢价。4 中国拥有大量产能，到 2028 年可能会面临风险，但它再次正在建立西方供应链 
+
+5. XFAB 是美国唯一的大批量 SiC 代工厂（其他公司如 $ON 或 Infineon 是垂直整合的）
+
+6.先进的6in SiC、8in GaN on Si、构建8in GaN
+
+7. 也许他们正在利用 CHIPS 支持开发 8 英寸 SiC，但不是公开材料
+
+8. 检查 SiC 收入 -&gt; 同比增长 152% 正常。也许市场错过了一些东西，因为混合动力看起来因汽车低迷而变得更糟，所以应该会复苏
+
+9. $NVTS 和其他人最终使用 $XFAB。$POWI 在文件等中引用了 $XFAB。10. 两者都是 $NVDA 电源半显式合作伙伴，对于 800vdc 电源半参与者来说是很好的暴露指标。11. 美国部门of commerce 称 $XFAB 是美国唯一一家大批量 SiC 代工厂，PMT 价值 5000 万美元
+
+12. 美国政府对供应链关键组成部分的验证令人惊叹 
+
+13.《欧盟芯片法案》为 $XFAB 提供 1.28 亿美元欧盟资金，用于代工（MEMS、AI 等），好吧，事实证明他们是关键的 MEMS 参与者
+
+14. 这就是欧盟政府对供应链关键组成部分、双大陆补贴的验证
+
+15. 现在我们知道 $XFAB 是一家重要的 MEMS 代工厂，因此您可以获得 SiC 能力、GaN 开发和 MEMS 优势
+
+16.他们还获得了 4760 万美元的欧盟资金，用于建设欧盟领先的硅光子供应链。这就是欧盟从多个角度提供的资金。17. 事实证明，我认识来自 $GFS 牌组的 smartphotonics 的所有玩家。18. $NVDA 和 $NOK 正在使它们符合硅光子 HVM 的资格。我认为这只是政府对欧盟光子学成功的支持角度，因此很可能会成功……有点像美国政府鼓励每个人使用 $INTC。19. 好的筹码第二幕将于下周推出……所以他们可能会在那里获得资金或更多的收入承诺 
+
+20. 1.28 p/b，现在这可能只是书本成本？可能会摆脱 $SOI 类型的传统阻力循环。21. 是否围绕实际重置价值进行了一些建模，真实重置市净率成本可能约为 0.5/.7。22. 免费获得业务，同时短期内从 SiC 进入硅光子/GaN，成为 2027 年下半年的主要增长点。想法：通过市盈率+重置价值来消除风险。宏观方面可能有 20% 的下行空间。然而，双大陆的重要性至关重要。因此，下行风险似乎很低，但上行风险却引人注目。即将到来的芯片法案催化剂+国家安全担忧可能会支撑大量资本开支。也许 2.5-4 倍的重新评级似乎是可能的。不是 10-20 倍，而是从 SiC/GaN 桥硅光子学上涨的低迷估值中恢复过来。TLDR：交易价格可能低于重置价值，双大陆补贴可能会补贴资本开支。政府拨款显示了对西方供应链、光子学长期上涨的重要性，SiC/GaN 需求可能近期上涨和过渡。不要控制最近的任何波动，但应该震动那些对论文不太有信心的人。欧盟的 CHIPS 法案 2 即将出台，$XFAB 已被列入光学生态系统的早期蓝图中，因此在作为近期事件催化剂出现后应该会得到提振。现在风险回报似乎很有吸引力，我们将看看这是否正确</div>
         <div class="tweet-foot">
-          <span>likes 317 / retweets 33 / replies 63 / views 58710</span>
+          <span>likes 964 / retweets 76 / replies 89 / views 371540</span>
         </div>
-        <div class="chips"></div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="23">
+      <article class="tweet-card" data-tweet-index="27">
         <div class="tweet-head">
           <span class="mono">2026-05-31 05:35</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$MRVL</span><span class="chip red">$XFAB</span></span>
@@ -1096,13 +1586,79 @@ Ty KLismont for the photo. https://t.co/1GdLxJHAsN</div>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>非常感谢《De Tijd》的客观报道！很高兴在比利时顶级报纸上看到我的作品。看到一位记者报道 $AAOI、$XFAB、$MRVL Celestial 以及我的 CPO + 光子学供应链论文背后的细微差别，也令人耳目一新。泰·克利斯蒙特拍摄照片。https://t.co/1GdLxJHAsN</div>
         <div class="tweet-foot">
-          <span>likes 334 / retweets 15 / replies 60 / views 39602</span>
+          <span>likes 1726 / retweets 75 / replies 159 / views 882172</span>
         </div>
         <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="24">
+      <article class="tweet-card" data-tweet-index="28">
+        <div class="tweet-head">
+          <span class="mono">2026-05-30 09:39</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$TSM</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">- $AAOI at $12B
+- $SIVE at $2B
+- Foci at $2.8B
+- Shunsin at $2B 
+
+Usually the best risk/reward to me currently. Lot of my answers before like $AXTI already 10x’d, so different lineup this time. 
+
+$AAOI due to absurd H1 2027 revenue projections from capacity ramp, doing everything from laser fab to assembly in America. ...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">- $AAOI at $12B
+- $SIVE at $2B
+- Foci at $2.8B
+- Shunsin at $2B 
+
+Usually the best risk/reward to me currently. Lot of my answers before like $AXTI already 10x’d, so different lineup this time. 
+
+$AAOI due to absurd H1 2027 revenue projections from capacity ramp, doing everything from laser fab to assembly in America. 
+
+$471M/month… that’s in 2027, the TAM increases exponentially in 2028.
+
+$SIVE is also ramping absurdly high, 77% revenue pipeline growth of the entire company’s history to ~$799M
+
+Primarily from photonics… in a single quarter. And they’re projecting 60% gross margins off that.
+
+Foci - $NVDA / $TSM primarily FAU supplier and bottleneck for COUPE. Genuinely not sure how this is $2.8B.
+
+BOM share for their passive components + FAU are massive in 2028. Just a bit early H1 2026.
+
+Shunsin - Legit you see Foxconn get CPO/photonics related orders over and over for $NVDA and others.
+
+Just nobody knows the packaging/testing gets done by Shunsin.
+
+A lot of contracts are also under Shunsin’s subsidiary too.. so markets/algorithms don’t know what’s coming imo.
+
+Runner up is $XFAB, they’ll probably be central to EU CHIPS act 2 for silicon photonics at ~$1.5B MC.
+
+And of course SiC/GaN foundries should go brr with 800vdc push by Nvidia. 
+
+Especially if they’re the only high volume one in United States per Dpt. Of Commerce. 
+
+And it’s such a low price/book ratio so you’re kinda getting the company upside for free, while US Gov/EU Gov subsidize their capex.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2060536520952754374" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>- $AAOI 为 $12B
+- $SIVE 价格为 $2B
+- 焦点 $2.8B
+- 顺信 $2B 
+
+通常对我来说目前是最好的风险/回报。我之前的很多答案，比如 $AXTI 已经是 10 倍了，所以这次的阵容有所不同。$AAOI 是由于产能增加对 2027 年上半年的收入预测荒谬，从激光制造到组装的一切都在美国进行。4.71 亿美元/月……这是 2027 年的数据，2028 年 TAM 将呈指数级增长。$SIVE 的收入增长也高得离谱，占整个公司历史的 77%，达到约 7.99 亿美元
+
+主要来自光子学……在一个季度内。他们预计毛利率将下降 60%。Foci - $NVDA / $TSM 主要是 FAU 供应商和 COUPE 的瓶颈。真的不知道这是怎么$2.8B。到 2028 年，他们的无源元件 + FAU 的 BOM 份额将非常巨大。2026 年上半年还早一点。Shunsin - 合法的，你看到富士康一遍又一遍地以 NVDA 和其他价格获得 CPO/光子相关订单。只是没有人知道包装/测试是由 Shunsin 完成的。很多合同也都在 Shunsin 的子公司之下……所以市场/算法不知道接下来会发生什么。亚军是 $XFAB，它们可能会成为 EU CHIPS Act 2 硅光子学的核心，MC 价格约为 $1.5B。当然，SiC/GaN 代工厂应该紧随 Nvidia 推动的 800vdc。特别是如果它们是美国每个部门唯一一个高产量的。商务部。而且市净率如此之低，所以你可以免费让公司上涨，而美国政府/欧盟政府则补贴他们的资本开支。</div>
+        <div class="tweet-foot">
+          <span>likes 2914 / retweets 318 / replies 250 / views 1009552</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="29">
         <div class="tweet-head">
           <span class="mono">2026-05-28 20:26</span>
           <span><span class="chip red">$XFAB</span></span>
@@ -1135,7 +1691,7 @@ And they’re the first comprehensive https://t.co/4OGXctOv5h</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="25">
+      <article class="tweet-card" data-tweet-index="30">
         <div class="tweet-head">
           <span class="mono">2026-05-28 12:04</span>
           <span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$POWI</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$XFAB</span></span>
@@ -1174,7 +1730,7 @@ I spend a lot of time looking at regulatory filings to find compelling things ma
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="26">
+      <article class="tweet-card" data-tweet-index="31">
         <div class="tweet-head">
           <span class="mono">2026-05-28 00:35</span>
           <span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$POWI</span><span class="chip red">$RPI</span><span class="chip red">$SOI</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
@@ -1223,7 +1779,7 @@ Just because you don’t understand something, don’t just go call it a “meme
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="27">
+      <article class="tweet-card" data-tweet-index="32">
         <div class="tweet-head">
           <span class="mono">2026-05-27 17:05</span>
           <span><span class="chip red">$IQE</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
@@ -1252,7 +1808,7 @@ Looks like formal announcement got pushed back to next week though. https://t.co
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="28">
+      <article class="tweet-card" data-tweet-index="33">
         <div class="tweet-head">
           <span class="mono">2026-05-27 15:29</span>
           <span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$POWI</span><span class="chip red">$XFAB</span></span>

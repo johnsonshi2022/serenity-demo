@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$APPL 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -28,10 +29,10 @@
       <p>近期观点：高波动，需同时看基本面与交易结构。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>27</b></div>
-        <div class="stat-card"><span>历史推文</span><b>27</b></div>
+        <div class="stat-card"><span>累计提及</span><b>28</b></div>
+        <div class="stat-card"><span>历史推文</span><b>28</b></div>
         <div class="stat-card"><span>首次提及</span><b>2025-07-28</b></div>
-        <div class="stat-card"><span>最近提及</span><b>2026-05-05</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-05-25</b></div>
         <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
         <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
             
@@ -121,6 +122,47 @@
           
       <article class="tweet-card" data-tweet-index="0">
         <div class="tweet-head">
+          <span class="mono">2026-05-26 00:08</span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$APPL</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$IQE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span></span>
+        </div>
+        <div class="tweet-text">$RPI, close to ~3x returns. 
+
+Off the media branded &quot;Meme Stock&quot;. 
+
+I think after retail saw institutions bear post my thesis posts. 
+
+Then ended up paper handing $AXTI, then $RPI,  then $IQE, then $EWY, then $SNDK, then $AAOI, then $SOI.
+
+And them watch them all go up 3x-15x+ after institutions bought up the float. 
+
+...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$RPI, close to ~3x returns. 
+
+Off the media branded &quot;Meme Stock&quot;. 
+
+I think after retail saw institutions bear post my thesis posts. 
+
+Then ended up paper handing $AXTI, then $RPI,  then $IQE, then $EWY, then $SNDK, then $AAOI, then $SOI.
+
+And them watch them all go up 3x-15x+ after institutions bought up the float. 
+
+Retail finally learned not to trust them with anymore with names like $SIVE?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2058943283234316632" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$RPI，接近 3 倍回报。关闭媒体品牌“Meme Stock”。我想在零售看到机构发表我的论文帖子之后。然后最终纸质交$AXTI，然后$RPI，然后$IQE，然后$EWY，然后$SNDK，然后$AAOI，然后$SOI。在机构买入流通股后，他们看着它们全部上涨 3 倍至 15 倍以上。零售业终于学会不再相信像 $SIVE 这样的名字了？</div>
+        <div class="tweet-foot">
+          <span>likes 888 / retweets 51 / replies 130 / views 364275</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
           <span class="mono">2026-05-05 19:41</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
         </div>
@@ -144,7 +186,7 @@ Fun to see this idea age well. https://t.co/wx9hQYzJGT</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="1">
+      <article class="tweet-card" data-tweet-index="2">
         <div class="tweet-head">
           <span class="mono">2026-04-15 06:37</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$APPL</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -187,7 +229,7 @@ It&#x27;s now being re-rated as an AI hardware company.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="2">
+      <article class="tweet-card" data-tweet-index="3">
         <div class="tweet-head">
           <span class="mono">2026-03-31 17:38</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -232,7 +274,7 @@ $RPI 新分析师预测：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="3">
+      <article class="tweet-card" data-tweet-index="4">
         <div class="tweet-head">
           <span class="mono">2026-03-17 22:34</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -257,7 +299,7 @@ Glad to see it’s finally getting some attention by other analysts. https://t.c
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="4">
+      <article class="tweet-card" data-tweet-index="5">
         <div class="tweet-head">
           <span class="mono">2026-02-18 07:37</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -296,7 +338,7 @@ Into an AI hardware company that sells mass producible boards for AI Agent Orche
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="5">
+      <article class="tweet-card" data-tweet-index="6">
         <div class="tweet-head">
           <span class="mono">2026-02-17 17:10</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -321,7 +363,7 @@ $RPI up another 19.34%, from yesterday&#x27;s 8.1%. https://t.co/DRQTCjIlmQ</div
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="6">
+      <article class="tweet-card" data-tweet-index="7">
         <div class="tweet-head">
           <span class="mono">2026-02-16 23:12</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -428,7 +470,7 @@ TLDR: People are openly buying Raspberry Pis and Apple Mac Minis for Openclaw/Pi
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="7">
+      <article class="tweet-card" data-tweet-index="8">
         <div class="tweet-head">
           <span class="mono">2026-02-16 23:09</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$RPI</span></span>
@@ -457,7 +499,7 @@ But people are also hoarding Raspberry PIs (550m MC) company. So revenue should 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="8">
+      <article class="tweet-card" data-tweet-index="9">
         <div class="tweet-head">
           <span class="mono">2026-02-14 16:17</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$TSLA</span></span>
@@ -553,7 +595,7 @@ $4.4B -&gt; $8.0B -&gt; $24.0B
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="9">
+      <article class="tweet-card" data-tweet-index="10">
         <div class="tweet-head">
           <span class="mono">2026-02-13 20:16</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$EWY</span><span class="chip red">$GOOGL</span><span class="chip red">$KORU</span><span class="chip red">$TSM</span></span>
@@ -614,7 +656,7 @@ Long calls benefit from vega expansion that weren&#x27;t priced in correctly as 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="10">
+      <article class="tweet-card" data-tweet-index="11">
         <div class="tweet-head">
           <span class="mono">2026-02-13 14:30</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$GOOGL</span></span>
@@ -687,7 +729,7 @@ Sk海力士：约1610亿美元
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="11">
+      <article class="tweet-card" data-tweet-index="12">
         <div class="tweet-head">
           <span class="mono">2026-02-13 08:36</span>
           <span><span class="chip red">$APP</span><span class="chip red">$APPL</span><span class="chip red">$ASTS</span><span class="chip red">$DNKG</span><span class="chip red">$OSS</span><span class="chip red">$PINS</span><span class="chip red">$RDDT</span><span class="chip red">$RDW</span><span class="chip red">$RGTI</span><span class="chip red">$RKLB</span><span class="chip red">$USAR</span></span>
@@ -765,7 +807,7 @@ SPY指数下跌1.54%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="12">
+      <article class="tweet-card" data-tweet-index="13">
         <div class="tweet-head">
           <span class="mono">2026-02-04 17:00</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$BRK</span><span class="chip red">$DUOL</span><span class="chip red">$FIG</span><span class="chip red">$GOOGL</span><span class="chip red">$JPM</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$PYPL</span></span>
@@ -804,7 +846,7 @@ Sometimes the best thing to do is just join in on the no-brainer trades and live
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="13">
+      <article class="tweet-card" data-tweet-index="14">
         <div class="tweet-head">
           <span class="mono">2026-02-03 10:06</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$BRK</span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$GOOGL</span><span class="chip red">$HY9H</span><span class="chip red">$JPM</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -848,7 +890,7 @@ SK 海力士 ~4.3x
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="14">
+      <article class="tweet-card" data-tweet-index="15">
         <div class="tweet-head">
           <span class="mono">2026-02-02 07:27</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$BRK</span><span class="chip red">$GOOGL</span><span class="chip red">$JPM</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span></span>
@@ -919,7 +961,7 @@ The memory supercyle from $MU, Samsung, and SK Hynix is here clearly here.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="15">
+      <article class="tweet-card" data-tweet-index="16">
         <div class="tweet-head">
           <span class="mono">2026-01-29 06:37</span>
           <span><span class="chip red">$APPL</span></span>
@@ -940,7 +982,7 @@ The memory supercyle from $MU, Samsung, and SK Hynix is here clearly here.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="16">
+      <article class="tweet-card" data-tweet-index="17">
         <div class="tweet-head">
           <span class="mono">2026-01-23 09:09</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$ANET</span><span class="chip red">$APPL</span><span class="chip red">$NBCLF</span><span class="chip red">$NVDA</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span></span>
@@ -1017,7 +1059,7 @@ Disclosure: I own positions.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="17">
+      <article class="tweet-card" data-tweet-index="18">
         <div class="tweet-head">
           <span class="mono">2026-01-22 02:39</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$INTC</span><span class="chip red">$NVDA</span></span>
@@ -1042,7 +1084,7 @@ Both the government and all the Mag7 companies like $NVDA and $APPL are just pus
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="18">
+      <article class="tweet-card" data-tweet-index="19">
         <div class="tweet-head">
           <span class="mono">2026-01-14 16:43</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$INTC</span></span>
@@ -1067,7 +1109,7 @@ But I&#x27;d say Trump probably knows a bit more than others as the sitting Pres
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="19">
+      <article class="tweet-card" data-tweet-index="20">
         <div class="tweet-head">
           <span class="mono">2026-01-14 16:23</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$AXTI</span><span class="chip red">$CRDO</span><span class="chip red">$INTC</span><span class="chip red">$VLN</span></span>
@@ -1094,7 +1136,7 @@ Trump accidentally leaked in an interview that $APPL invested. https://t.co/1B8J
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="20">
+      <article class="tweet-card" data-tweet-index="21">
         <div class="tweet-head">
           <span class="mono">2025-12-05 02:05</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$TSLA</span></span>
@@ -1115,7 +1157,7 @@ Trump accidentally leaked in an interview that $APPL invested. https://t.co/1B8J
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="21">
+      <article class="tweet-card" data-tweet-index="22">
         <div class="tweet-head">
           <span class="mono">2025-11-04 23:56</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$NBIS</span><span class="chip red">$QLCM</span></span>
@@ -1144,7 +1186,7 @@ Then again you can point out $APPL vs $QLCM with Apple sucking back up the stack
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="22">
+      <article class="tweet-card" data-tweet-index="23">
         <div class="tweet-head">
           <span class="mono">2025-10-30 21:56</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$DGXX</span><span class="chip red">$FI</span><span class="chip red">$GOOGL</span><span class="chip red">$KRKNF</span><span class="chip red">$LGN</span><span class="chip red">$LYC.AX</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$TSLA</span><span class="chip red">$UNH</span></span>
@@ -1177,7 +1219,7 @@ Might be 2 day flush so cost averaging but this selloff is a huge opportunity. h
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="23">
+      <article class="tweet-card" data-tweet-index="24">
         <div class="tweet-head">
           <span class="mono">2025-10-01 14:43</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$LULU</span><span class="chip red">$NBIS</span><span class="chip red">$VIRT</span><span class="chip red">$VIX</span></span>
@@ -1210,7 +1252,7 @@ Use this golden opportunity to build long positions. https://t.co/HCkIqwCtnd</di
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="24">
+      <article class="tweet-card" data-tweet-index="25">
         <div class="tweet-head">
           <span class="mono">2025-09-23 04:49</span>
           <span><span class="chip red">$APPL</span></span>
@@ -1241,7 +1283,7 @@ $APPL stock crashing after product launch, people panic selling, then Apple usin
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="25">
+      <article class="tweet-card" data-tweet-index="26">
         <div class="tweet-head">
           <span class="mono">2025-09-11 00:00</span>
           <span><span class="chip red">$APPL</span></span>
@@ -1274,7 +1316,7 @@ I quite like the iPhone Air. This play is extremely high risk. https://t.co/d8Y1
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="26">
+      <article class="tweet-card" data-tweet-index="27">
         <div class="tweet-head">
           <span class="mono">2025-07-28 16:19</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$APPL</span><span class="chip red">$GOOGL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NVDA</span><span class="chip red">$SPOT</span></span>

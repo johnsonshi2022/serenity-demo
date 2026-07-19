@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$SPCX 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -25,18 +26,18 @@
     <section class="hero">
       <span class="eyebrow">Ticker Detail</span>
       <h1>$SPCX 历史推文</h1>
-      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <p>近期观点：高波动，需同时看基本面与交易结构。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>22</b></div>
-        <div class="stat-card"><span>历史推文</span><b>21</b></div>
+        <div class="stat-card"><span>累计提及</span><b>26</b></div>
+        <div class="stat-card"><span>历史推文</span><b>25</b></div>
         <div class="stat-card"><span>首次提及</span><b>2026-05-25</b></div>
-        <div class="stat-card"><span>最近提及</span><b>2026-07-08</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-07-17</b></div>
         <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
         <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
             
       </div>
-      <div class="chips"><span class="chip blue">关税 / 宏观冲击买点 3</span></div>
+      <div class="chips"><span class="chip blue">关税 / 宏观冲击买点 4</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 2</span><span class="chip blue">签约 ARR vs 市值错配 2</span></div>
     </section>
     <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
     
@@ -50,7 +51,7 @@
         <div class="analysis-grid panel-body">
           <article class="analysis-box">
             <h3>Serenity 观点</h3>
-            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
           </article>
           <article class="analysis-box">
             <h3>新增信号</h3>
@@ -62,7 +63,7 @@
           </article>
           <article class="analysis-box">
             <h3>作者立场</h3>
-            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+            <p>近期观点：高波动，需同时看基本面与交易结构。</p>
           </article>
           <article class="analysis-box">
             <h3>情绪与市场</h3>
@@ -121,6 +122,178 @@
           
       <article class="tweet-card" data-tweet-index="0">
         <div class="tweet-head">
+          <span class="mono">2026-07-18 01:51</span>
+          <span><span class="chip red">$IREN</span><span class="chip red">$META</span><span class="chip red">$NBIS</span><span class="chip red">$SPCX</span></span>
+        </div>
+        <div class="tweet-text">$META in talks to lease compute to Anthropic in a $10B dollar deal.
+
+Seems like they saw how profitable 
+$SPCX $45B compute deal was.
+
+But just goes to validate Neocloud business models like $NBIS, $IREN, and co if hyperscalers are copying their homework.
+
+Source: NYT https://t.co/3Mu3UXQtFT</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$META in talks to lease compute to Anthropic in a $10B dollar deal.
+
+Seems like they saw how profitable 
+$SPCX $45B compute deal was.
+
+But just goes to validate Neocloud business models like $NBIS, $IREN, and co if hyperscalers are copying their homework.
+
+Source: NYT https://t.co/3Mu3UXQtFT</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2078175882620059719" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$META 正在洽谈以 100 亿美元的交易将计算租赁给 Anthropic。看来他们看到了多么有利可图 
+$SPCX $45B 计算交易是。但如果超大云厂商抄袭他们的作业，就去验证 AI 算力云公司 商业模式，例如 $NBIS、$IREN 等。资料来源：纽约时报 https://t.co/3Mu3UXQtFT</div>
+        <div class="tweet-foot">
+          <span>likes 1020 / retweets 64 / replies 263 / views 224559</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-07-14 22:57</span>
+          <span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$SPCX</span></span>
+        </div>
+        <div class="tweet-text">$NBIS signs $1B+ compute agreement with Reflection AI, for GB300 access through 2029.
+
+Reflection also signed a multi-billion dollar agreement with $SPCX earlier. 
+
+Interesting to say the least, seeing Nebius drop -5% off the news today. 
+
+Also... counterparty to get this done kinda reminds me of OpenAI, where they mig...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">$NBIS signs $1B+ compute agreement with Reflection AI, for GB300 access through 2029.
+
+Reflection also signed a multi-billion dollar agreement with $SPCX earlier. 
+
+Interesting to say the least, seeing Nebius drop -5% off the news today. 
+
+Also... counterparty to get this done kinda reminds me of OpenAI, where they might not have the funds to actually execute on these LTAs yet compared to $META or $MSFT. 
+
+But generally positive long term developments, customer diversification was one of the core strengths of Nebius.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2077044786402660829" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>$NBIS 与 Reflection AI 签署了 1B+ 美元的计算协议，到 2029 年将获得 GB300 的访问权限。Reflection 早些时候还与 $SPCX 签署了一项价值数十亿美元的协议。至少可以说很有趣，看到 Nebius 今天的新闻下降了 -5%。另外......完成这项工作的交易对手有点让我想起 OpenAI，与 $META 或 $MSFT 相比，他们可能没有资金来实际执行这些 LTA。但从总体来看，长期发展积极，客户多元化是 Nebius 的核心优势之一。</div>
+        <div class="tweet-foot">
+          <span>likes 1527 / retweets 98 / replies 218 / views 469585</span>
+        </div>
+        <div class="chips"><span class="chip blue">对手方 / 融资质量谱系</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
+          <span class="mono">2026-07-13 08:45</span>
+          <span><span class="chip red">$AAPL</span><span class="chip red">$AMKR</span><span class="chip red">$AVGO</span><span class="chip red">$GLW</span><span class="chip red">$INTC</span><span class="chip red">$META</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$SPCX</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span></span>
+        </div>
+        <div class="tweet-text">Just a semi recap TLDR:
+
+- $GLW glass bridge per Morgan Stanley has potential, but hard to displace FAU (like FOCI) in short term
+
+- $SPCX Starlink Gen 3 is scaling to 100,000 units (10x prev gen) creating possible capacity constraints for suppliers of switches to CCL.
+
+- PCB supply shortages are projected to persist u...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just a semi recap TLDR:
+
+- $GLW glass bridge per Morgan Stanley has potential, but hard to displace FAU (like FOCI) in short term
+
+- $SPCX Starlink Gen 3 is scaling to 100,000 units (10x prev gen) creating possible capacity constraints for suppliers of switches to CCL.
+
+- PCB supply shortages are projected to persist until 2028, and component shortages/price hikes are already forcing ODMs like Inventec to issue  conservative H2 shipment
+
+- DeepSeek and Zhipu are developing custom ASICs to bypass $NVDA (kinda expected by now). 
+
+- Anthropic has achieved a $30B ARR and is projected to hit &gt;$1B in Q3 profit. Turns out these frontier labs are more profitable than people think. 
+
+- US admin pressured $AAPL to source from $INTC, in exchange for tariff exception. Kinda pressuring alignment away from TSM.  
+
+- $TSM plans a 30x expansion of its Photonic Integrated Circuit (PIC)  capacity by 2028, growing from 500 to 25,000 wafers per month
+
+- Hanmi Semiconductor is entering the CoWoS packaging equipment market
+
+- $NVDA and NTT hosting a conference July 24th to discuss CPO strategies. 
+
+- 5x general NAND flash price hike this year, market size $489B by next year triggered by RAG/inference. Samsung and SK Hynix make emergency fab investments, NAND equipment suppliers go brrrr.  
+
+- Gas turbine bottleneck, 40% supply gap accompanied by staggering 5-year delivery cycles (mega-fabs need them for mass production).
+
+- AI probe card assembly has hit a severe bottleneck apparently. Which is attempted to by solved with things like Innovation Service&#x27;s machines. 
+
+- Nanya, 79.5% gross margins reported, memory go brr. 4x capex for capacity/advanced packaging. 
+
+- CXMT&#x27;s STAR Market IPO on July 16, so should bring a lot of attention to memory players in that supply chain. 
+
+- KYEC $1.4B investment into US for $TSM Arizona output test facilities. Lot of these players like $AMKR and others should go brr in 2028.
+
+- $INTC CEO warned last month that helium could hinder the manufacturing costs and delivery times of AI chips
+
+- 3D NAND word lines are shifting from Tungsten to Molybdenum starting at the 375-layer node
+
+- SambaNova secured JPM for AI inference and raised $1B at an $11B valuation.
+
+- HBM prices projections to double in 2027 as $NVDA Rubin platform drives demand.
+
+- $MU provides $500 million in funding to support GlobalWafers&#x27; US manufacturing capacity 
+
+- $META &#x27;Iris&#x27; will enter mass production in September  via $AVGO and TSMC and Meta aims to double computing power to 14GW by 2027.
+
+- Largan Precision has secured its first CPO FAU order, mass production slated for middle of next year (kinda indication around Foci and others). 
+
+- Samsung and SK Hynix have delayed the implementation of hybrid bonding packaging technology for HBM4 apparently 
+
+- Memory costs (DRAM/NAND) have reached 60% of the BOM for sub-$400 smartphones, causing a severe volume contraction.
+
+- SK Hynix successfully rasied $26.5 billion through a Nasdaq ADR
+
+- $TSLA issued procurement guidelines requiring suppliers to reach weekly production of 1,000 units by September and double to 2,000-2,500 by year end for its 3rd gen Optimus robot. Apparently Alliance Technology and A-Link may be in this supply chain harmonic reducers and vision lenses?
+
+Kinda go through all this stuff every day, but don&#x27;t wanna be a news reporter so just consolidated stuff I found interesting.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2076467953995071881" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>简单回顾一下 TLDR：
+
+- 摩根士丹利的 GLW 玻璃桥具有潜力，但短期内很难取代 FAU（如 FOCI）
+
+- $SPCX Starlink Gen 3 正在扩展到 100,000 台（上一代的 10 倍），这可能为 CCL 交换机供应商带来产能限制。- PCB供应短缺预计将持续到2028年，而元件短缺/价格上涨已经迫使英业达等ODM厂商发布保守的H2出货量
+
+- DeepSeek 和zhipu 正在开发定制 ASIC 来绕过 $NVDA（现在有点预期）。- Anthropic 的 ARR 已达到 30B 美元，预计第三季度利润将达到 10 亿美元以上。事实证明，这些前沿实验室的利润比人们想象的要高。- 美国行政部门向 $AAPL 施压，要求其从 $INTC 采购，以换取关税豁免。有点压力，远离TSM。- $TSM 计划到 2028 年将其光子集成电路 (PIC) 产能扩大 30 倍，从每月 500 片晶圆增加到 25,000 片晶圆
+
+- Hanmi Semiconductor正在进军CoWoS封装设备市场
+
+- $NVDA 和 NTT 于 7 月 24 日举办会议讨论 CPO 策略。- 今年 NAND 闪存价格普遍上涨 5 倍，由 RAG/inference 触发，明年市场规模将达到 $489B。三星和SK海力士紧急投资晶圆厂，NAND设备供应商陷入困境。- 燃气轮机瓶颈，40% 的供应缺口，以及惊人的 5 年交付周期（大型晶圆厂需要它们进行大规模生产）。- AI探针卡组装显然已经遇到了严重的瓶颈。人们试图通过创新服务的机器之类的东西来解决这个问题。- Nanya，报告毛利率为 79.5%，内存运行良好。容量/先进封装的 4 倍资本开支。- 长鑫存储将于 7 月 16 日科创板 IPO，因此应该会引起该供应链内存厂商的广泛关注。- KYEC 向美国投资 1.4B 美元用于 $TSM Arizona 输出测试设施。很多像 $AMKR 和其他人这样的玩家应该会在 2028 年离开。- $INTC 首席执行官上个月警告说，氦气可能会阻碍人工智能芯片的制造成本和交付时间
+
+- 从 375 层节点开始，3D NAND 字线从钨转向钼
+
+- SambaNova 获得了 JPM 的人工智能推理服务，并以 11B 美元的估值筹集了 1B 美元。- 由于 NVDA Rubin 平台推动需求，HBM 预计 2027 年价格将翻倍。- $MU 提供 5 亿美元资金支持 GlobalWfers 在美国的制造能力 
+
+- $META“Iris”将于 9 月通过 $AVGO 和台积电进入量产，Meta 的目标是到 2027 年将算力翻倍至 14GW。- 大立光电已获得首个 CPO FAU 订单，预计将于明年中期量产（Foci 等公司有类似迹象）。- 三星和SK海力士明显推迟了HBM4混合键合封装技术的实施 
+
+- 对于 400 美元以下的智能手机，内存成本 (DRAM/NAND) 已达到 BOM 的 60%，导致销量严重萎缩。- SK Hynix 通过纳斯达克 ADR 成功筹集 265 亿美元
+
+- TSLA 发布了采购指南，要求供应商在 9 月份之前达到每周生产 1,000 台的目标，并在年底前将第三代 Optimus 机器人的产量翻一番，达到 2,000-2,500 台。显然Alliance Technology和A-Link可能在这个供应链中谐波减速器和视觉镜片？有点每天都要经历所有这些东西，但不想成为一名新闻记者，所以只是整合了我发现有趣的东西。</div>
+        <div class="tweet-foot">
+          <span>likes 2039 / retweets 169 / replies 195 / views 659919</span>
+        </div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="3">
+        <div class="tweet-head">
           <span class="mono">2026-07-09 06:08</span>
           <span><span class="chip red">$SPCX</span></span>
         </div>
@@ -128,7 +301,9 @@
 
 That’s much more cost efficient as well… 
 
-Kinda emulating what Chinese vendors have been doing to compete on pricing + adoption. (Which is an ideal thing given Chinese model growth https://t.co/8M5Yx3kbTg</div>
+Kinda emulating what Chinese vendors have been doing to compete on pricing + adoption. (Which is an ideal thing given Chinese model growth among US companies recently)
+
+Never doubt...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -136,21 +311,25 @@ Kinda emulating what Chinese vendors have been doing to compete on pricing + ado
 
 That’s much more cost efficient as well… 
 
-Kinda emulating what Chinese vendors have been doing to compete on pricing + adoption. (Which is an ideal thing given Chinese model growth https://t.co/8M5Yx3kbTg</div>
+Kinda emulating what Chinese vendors have been doing to compete on pricing + adoption. (Which is an ideal thing given Chinese model growth among US companies recently)
+
+Never doubt Elon, maybe they might end up leapfrogging Anthropic + Mythos?</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2074979055410266452" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>哇，看起来 $SPCX 的 Elon + xAI 成功地使用 Grok 4.5 构建了 Anthropic Opus 级别的 LLM。这也更具成本效益...... 
 
-有点模仿中国供应商在定价和采用方面竞争的做法。（考虑到中国模型的增长，这是一件理想的事情 https://t.co/8M5Yx3kbTg</div>
+有点模仿中国供应商在定价和采用方面竞争的做法。（考虑到中国模式最近在美国公司中的增长，这是一件理想的事情）
+
+永远不要怀疑埃隆，也许他们最终可能会超越人类+神话？</div>
         <div class="tweet-foot">
-          <span>likes 230 / retweets 6 / replies 95 / views 33617</span>
+          <span>likes 2138 / retweets 155 / replies 262 / views 441584</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="1">
+      <article class="tweet-card" data-tweet-index="4">
         <div class="tweet-head">
           <span class="mono">2026-07-08 01:52</span>
           <span><span class="chip red">$CCXI</span><span class="chip red">$SPCX</span><span class="chip red">$TSLA</span></span>
@@ -187,7 +366,7 @@ I personally own $CCXI</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="2">
+      <article class="tweet-card" data-tweet-index="5">
         <div class="tweet-head">
           <span class="mono">2026-07-07 20:13</span>
           <span><span class="chip red">$SPCX</span></span>
@@ -210,13 +389,64 @@ No words. Jokes about “institutional” notes for retail write themselves. htt
         </div>
         <div class="tweet-zh"><b>中文译文：</b>Raymond James 开始对 $SPCX 进行“强力买入”报道。给予 800 美元的 PT，对 SpaceX 的估值约为 10T 美元。没有言语。关于零售业“机构”票据的笑话是他们自己写的。https://t.co/B0uRojaNJZ</div>
         <div class="tweet-foot">
-          <span>likes 357 / retweets 21 / replies 128 / views 67221</span>
+          <span>likes 1117 / retweets 59 / replies 171 / views 336101</span>
         </div>
         <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="3">
+      <article class="tweet-card" data-tweet-index="6">
+        <div class="tweet-head">
+          <span class="mono">2026-07-07 03:31</span>
+          <span><span class="chip red">$AMZN</span><span class="chip red">$CCXI</span><span class="chip red">$NVDA</span><span class="chip red">$SPCX</span></span>
+        </div>
+        <div class="tweet-text">It’s interesting to witness psychology around valuation anchoring + scarcity.
+
+Retail, for example, are buying Figure, last valued at ~$39B through CEFs…
+
+At $158B, since it’s private, round 4x valuations. 
+
+Then Agility Robotics $CCXI, which has broader commercialization. 
+
+Is at ~$4.3B pre-money and publicly availabl...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">It’s interesting to witness psychology around valuation anchoring + scarcity.
+
+Retail, for example, are buying Figure, last valued at ~$39B through CEFs…
+
+At $158B, since it’s private, round 4x valuations. 
+
+Then Agility Robotics $CCXI, which has broader commercialization. 
+
+Is at ~$4.3B pre-money and publicly available before the name change. At closer pricing that $AMZN, $NVDA, SoftBank, and Foxconn vaulted it at.
+
+Yet some end up paying 4-5x prices of already hiked private investor rounds for exposure…
+
+I’m convinced if Agility raised a very small private round at $39B as well from $2.5B (which it definitely could), to set a valuation anchor.
+
+Investors would be foaming in the mouth for a private allocation, just due to psychology rather than underlying fundamentals. 
+
+We’ve also seen this anchoring with $SPCX recently at $1.75T.
+
+Peak market inefficiency? Or lack of knowledge from retail?</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2074214669808717906" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>见证围绕估值锚定+稀缺性的心理是很有趣的。例如，零售业正在通过 CEF 购买Figure，最后估值约为 $39B……
+
+价格为 $158B，由于它是私人的，估值约为 4 倍。然后是 Agility Robotics $CCXI，其商业化范围更广。预付款价格约为 4.3B 美元，并在更名前公开发布。更接近的定价是 $AMZN、$NVDA、软银和富士康的定价。然而，有些人最终支付了已经上涨的私人投资者轮次价格 4-5 倍的价格来获得曝光……
+
+我相信，如果 Agility 也能以 39B 美元的价格从 2.5B 美元（这绝对可以）筹集到 39B 美元的非常小规模的私募资金，就能设定一个估值锚点。投资者可能会因为私人配置而口吐白沫，这只是出于心理因素，而不是基本面因素。我们最近还看到 $SPCX 锚定在 $1.75T。高峰期市场效率低下？还是缺乏零售知识？</div>
+        <div class="tweet-foot">
+          <span>likes 971 / retweets 41 / replies 199 / views 389931</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
         <div class="tweet-head">
           <span class="mono">2026-07-03 02:13</span>
           <span><span class="chip red">$CBRS</span><span class="chip red">$SPCX</span></span>
@@ -245,7 +475,7 @@ That allow retail access at the same</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="4">
+      <article class="tweet-card" data-tweet-index="8">
         <div class="tweet-head">
           <span class="mono">2026-06-29 18:43</span>
           <span><span class="chip red">$ASTS</span><span class="chip red">$SPCX</span></span>
@@ -264,16 +494,16 @@ That allow retail access at the same</div>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>据 Digitimes/Nikkei 报道，日本乐天公司将与 $ASTS 成立合资企业，为日本建设 LEO 卫星网络。“此举被广泛视为对 $SPCX Starlink 在日本日益增长的影响力的战略回应” https://t.co/RDFvgQNVsp</div>
         <div class="tweet-foot">
-          <span>likes 584 / retweets 56 / replies 133 / views 99676</span>
+          <span>likes 1670 / retweets 149 / replies 223 / views 493285</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="5">
+      <article class="tweet-card" data-tweet-index="9">
         <div class="tweet-head">
           <span class="mono">2026-06-29 13:26</span>
-          <span><span class="chip red">$RKLB</span><span class="chip red">$SPCX</span></span>
+          <span><span class="chip red">$EOS.ASX</span><span class="chip red">$LITE</span><span class="chip red">$RKLB</span><span class="chip red">$SPCX</span><span class="chip red">$TSLA</span></span>
         </div>
         <div class="tweet-text">Honestly this decade from 2020-2030 might be the most goated in human history.
 
@@ -281,7 +511,9 @@ That allow retail access at the same</div>
 
 - on the cusp of ASI and recursive learning with Anthropic and OpenAI 
 
-- Backflipping Boston Dynamics and Unitree</div>
+- Backflipping Boston Dynamics and Unitree humanoids to replace the human workforce
+
+- Star...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -291,24 +523,40 @@ That allow retail access at the same</div>
 
 - on the cusp of ASI and recursive learning with Anthropic and OpenAI 
 
-- Backflipping Boston Dynamics and Unitree</div>
+- Backflipping Boston Dynamics and Unitree humanoids to replace the human workforce
+
+- Star Wars laser beams from $EOS.ASX to AI DC lasers like $LITE.
+
+- Waymo and $TSLA self driving cars everywhere in urban cities
+
+- and we get industry Quantum commercialization end of decade
+
+This is kinda crazy to be an investor in this timeframe. Feels like every movie from the Star Wars Death Star to Skynet is coming to life.
+
+What’s next?</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2071465314794233905" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>老实说，2020 年至 2030 年这十年可能是人类历史上最艰难的十年。- 使用 $RKLB 到 $SPCX 扩展用于轨道计算的大型可重复使用火箭。- 处于 ASI 和 Anthropic 和 OpenAI 递归学习的风口浪尖 
 
-- Boston Dynamics和 Unitree 的后空翻</div>
+- 倒转 Boston Dynamics 和 Unitree 人形机器人以取代人类劳动力
+
+- 星球大战激光束从 $EOS.ASX 到 AI DC 激光器，如 $LITE。- Waymo 和 $TSLA 自动驾驶汽车遍布城市
+
+- 我们在十年末实现了行业量子商业化
+
+在这个时间范围内作为投资者有点疯狂。感觉就像从星球大战死星到天网的每一部电影都栩栩如生。接下来是什么？</div>
         <div class="tweet-foot">
-          <span>likes 271 / retweets 20 / replies 91 / views 34750</span>
+          <span>likes 3012 / retweets 268 / replies 343 / views 586071</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="6">
+      <article class="tweet-card" data-tweet-index="10">
         <div class="tweet-head">
           <span class="mono">2026-06-27 10:11</span>
-          <span><span class="chip red">$SIVE</span><span class="chip red">$SPCX</span></span>
+          <span><span class="chip red">$LITE</span><span class="chip red">$MTSI</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SPCX</span></span>
         </div>
         <div class="tweet-text">$SPCX / Elon Musk acquires Mesh, an optical networking startup.
 
@@ -316,7 +564,7 @@ Which is working on 1.6T OSFP (pluggable).
 
 It’s seems they own the optical engine/packaging side of things, but likely sources CW DFB lasers off merchant companies. 
 
-$SIVE is one of the more startup friendly https://t.co/A1H7Bd6ZU4</div>
+$SIVE is one of the more startup friendly plausible merchant suppliers as seen with Aya...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -326,19 +574,29 @@ Which is working on 1.6T OSFP (pluggable).
 
 It’s seems they own the optical engine/packaging side of things, but likely sources CW DFB lasers off merchant companies. 
 
-$SIVE is one of the more startup friendly https://t.co/A1H7Bd6ZU4</div>
+$SIVE is one of the more startup friendly plausible merchant suppliers as seen with Ayar to $POET?
+
+Maybe $LITE and $MTSI that were have a little history too, but less so.
+
+Regardless it’s very positive a lot of startups recently like Celestial have been acquired by Marvell.
+
+For both merchant laser supplier revenue (working with startups -&gt; having hyperscalers like SpaceX drive revenue after being designed in already).
+
+As well as valuations from M&amp;A desirability.
+
+Goes to show how optical interconnects is the right direction if Elon Musk is directly buying these companies.</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2070691462354993543" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
-        <div class="tweet-zh"><b>中文译文：</b>$SPCX / Elon Musk 收购了光网络初创公司 Mesh。它正在 1.6T OSFP（可插拔）上运行。他们似乎拥有光学引擎/封装方面的所有权，但很可能从商业公司采购 CW DFB 激光器。$SIVE 是对初创公司更友好的之一 https://t.co/A1H7Bd6ZU4</div>
+        <div class="tweet-zh"><b>中文译文：</b>$SPCX / Elon Musk 收购了光网络初创公司 Mesh。它正在 1.6T OSFP（可插拔）上运行。他们似乎拥有光学引擎/封装方面的所有权，但很可能从商业公司采购 CW DFB 激光器。$SIVE 是对初创公司更友好的商业供应商之一，正如 Ayar 到 $POET 所看到的那样？也许 $LITE 和 $MTSI 也有一些历史，但历史较少。不管怎样，最近有很多像 Celestial 这样的初创公司被 Marvell 收购，这是非常积极的。对于商业激光供应商的收入（与初创公司合作 -&gt; 让像 SpaceX 这样的超大云厂商在设计完成后推动收入）。以及来自并购意愿的估值。去证明如果埃隆·马斯克直接收购这些公司，光互连是正确的方向。</div>
         <div class="tweet-foot">
-          <span>likes 606 / retweets 42 / replies 84 / views 128360</span>
+          <span>likes 1793 / retweets 136 / replies 154 / views 655929</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="7">
+      <article class="tweet-card" data-tweet-index="11">
         <div class="tweet-head">
           <span class="mono">2026-06-22 22:43</span>
           <span><span class="chip red">$SPCX</span></span>
@@ -363,13 +621,13 @@ Inverse Cramer would have returned ~21% in 3 trading days, outperforming a year 
 
 自从吉姆·克莱默 (Jim Cramer) 在 210 美元发出看涨预测后。亲眼目睹真是太神奇了。Inverse Cramer 会在 3 个交易日内实现约 21% 的回报，超过您最大指数的一年表现？https://t.co/IhNtFAH99s</div>
         <div class="tweet-foot">
-          <span>likes 92 / retweets 7 / replies 25 / views 16567</span>
+          <span>likes 1615 / retweets 77 / replies 347 / views 786104</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="8">
+      <article class="tweet-card" data-tweet-index="12">
         <div class="tweet-head">
           <span class="mono">2026-06-18 21:45</span>
           <span><span class="chip red">$SPCX</span></span>
@@ -388,13 +646,13 @@ Even $SPCX can’t withstand his blessing. https://t.co/8Hr7898NmA</div>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>我认为吉姆·克莱默定律需要在历史书中研究。就连$SPCX也经不起他的加持。https://t.co/8Hr7898NmA</div>
         <div class="tweet-foot">
-          <span>likes 1785 / retweets 82 / replies 259 / views 529473</span>
+          <span>likes 1792 / retweets 79 / replies 257 / views 559853</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="9">
+      <article class="tweet-card" data-tweet-index="13">
         <div class="tweet-head">
           <span class="mono">2026-06-17 23:46</span>
           <span><span class="chip red">$SPCX</span></span>
@@ -409,13 +667,13 @@ Even $SPCX can’t withstand his blessing. https://t.co/8Hr7898NmA</div>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>Jim Cramer 向 $SPCX 表示祝福。https://t.co/DSbyBt9f0D</div>
         <div class="tweet-foot">
-          <span>likes 1799 / retweets 149 / replies 224 / views 1082918</span>
+          <span>likes 1787 / retweets 140 / replies 224 / views 1830129</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="10">
+      <article class="tweet-card" data-tweet-index="14">
         <div class="tweet-head">
           <span class="mono">2026-06-16 19:01</span>
           <span><span class="chip red">$SPCX</span></span>
@@ -444,16 +702,16 @@ I’m sure Elon has a plan in mind, the Twitter acquisition paid extreme dividen
 
 也许网络效应或改进模型的数据变得无价？我确信埃隆心里有一个计划，收购 Twitter 会带来极大的红利。https://t.co/FoZ1wb6DI9</div>
         <div class="tweet-foot">
-          <span>likes 1096 / retweets 74 / replies 269 / views 226528</span>
+          <span>likes 1386 / retweets 79 / replies 288 / views 392149</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="11">
+      <article class="tweet-card" data-tweet-index="15">
         <div class="tweet-head">
           <span class="mono">2026-06-16 08:19</span>
-          <span><span class="chip red">$SPCX</span></span>
+          <span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$SPCX</span></span>
         </div>
         <div class="tweet-text">Apparently, $SPCX is a $2.5T company now. 
 
@@ -475,13 +733,13 @@ I guess everything in Murica go brrr. https://t.co/QAKU0D9EIH</div>
 
 我猜穆里卡的一切都很好。https://t.co/QAKU0D9EIH</div>
         <div class="tweet-foot">
-          <span>likes 1838 / retweets 80 / replies 338 / views 662183</span>
+          <span>likes 1936 / retweets 76 / replies 343 / views 830915</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="12">
+      <article class="tweet-card" data-tweet-index="16">
         <div class="tweet-head">
           <span class="mono">2026-06-15 11:21</span>
           <span><span class="chip red">$LITE</span><span class="chip red">$SPCX</span><span class="chip red">$WOLF</span></span>
@@ -524,13 +782,13 @@ But basically: Murica go brrrr.</div>
 
 （韩国/台湾最初与 Sk Hynix 直接与原油期货相关，但一段时间后不再关心）。但基本上：穆里卡去吧。</div>
         <div class="tweet-foot">
-          <span>likes 1659 / retweets 110 / replies 221 / views 635364</span>
+          <span>likes 1682 / retweets 116 / replies 223 / views 706975</span>
         </div>
         <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="13">
+      <article class="tweet-card" data-tweet-index="17">
         <div class="tweet-head">
           <span class="mono">2026-06-14 23:27</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$GFS</span><span class="chip red">$IREN</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$SIVE</span><span class="chip red">$SPCE</span><span class="chip red">$SPCX</span></span>
@@ -585,13 +843,13 @@ For determining where the stock heads, just throw the tyrannosaurs rex omega-gre
 
 过去，人们一直在 $IREN 上提取 120 美元以上的 TA，不知道有多少个月，当需要先通过一台 60 亿美元的 ATM 机购买时，这些废话都无关紧要了。它按主题（例如 $LITE 到 $AAOI 关系）、影响远期收入、预测、宏观新闻、收益、浮动动态等的任何新闻催化剂。然后你就可以得出该公司应该担任什么MC。所以对于入口点，当然可以使用TA。为了确定股票的走向，只需将霸王龙欧米茄绿色蜡烛指标扔出窗外即可。</div>
         <div class="tweet-foot">
-          <span>likes 2698 / retweets 278 / replies 521 / views 803864</span>
+          <span>likes 2693 / retweets 265 / replies 515 / views 846969</span>
         </div>
         <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">签约 ARR vs 市值错配</span><span class="chip blue">稀释 / ATM 日历否决项</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">反模式清单（他明确反对的）</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="14">
+      <article class="tweet-card" data-tweet-index="18">
         <div class="tweet-head">
           <span class="mono">2026-06-14 06:51</span>
           <span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$SPCX</span></span>
@@ -630,13 +888,13 @@ Not enough data on other places yet like Latin America, but will have some soon 
 
 韩国🇰🇷：杠杆德根斯。我从未见过如此波动的市场。相当于 50 倍的超流动性交易者，但涉及股票市场。日本🇯🇵：不知何故对一切都支持，以前没见过日本人积极地承担职位和做空股票。拉丁美洲等其他地方的数据还不够，但很快就会有一些数据。</div>
         <div class="tweet-foot">
-          <span>likes 3460 / retweets 335 / replies 546 / views 1423067</span>
+          <span>likes 3464 / retweets 313 / replies 547 / views 1623097</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="15">
+      <article class="tweet-card" data-tweet-index="19">
         <div class="tweet-head">
           <span class="mono">2026-06-12 23:55</span>
           <span><span class="chip red">$SPCX</span></span>
@@ -655,13 +913,13 @@ And it’s now over $2.15T+ MC. https://t.co/HLQ8ZkbBvi</div>
         </div>
         <div class="tweet-zh"><b>中文译文：</b>$SPCX 现已开始交易！现在 MC 已超过 2.15T+ 美元。https://t.co/HLQ8ZkbBvi</div>
         <div class="tweet-foot">
-          <span>likes 1533 / retweets 55 / replies 287 / views 344462</span>
+          <span>likes 1665 / retweets 140 / replies 285 / views 438888</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="16">
+      <article class="tweet-card" data-tweet-index="20">
         <div class="tweet-head">
           <span class="mono">2026-06-12 22:00</span>
           <span><span class="chip red">$SNDK</span><span class="chip red">$SPCX</span></span>
@@ -684,13 +942,13 @@ That aside feels like everyone is just waiting for the $SPCX IPO in a few hours.
         </div>
         <div class="tweet-zh"><b>中文译文：</b>所有 $SNDK 卖空者都灭绝了。不敢相信现在已经快2000美元了？除此之外，感觉每个人都在等待几个小时后 $SPCX 的 IPO。https://t.co/EahzuEy1KE</div>
         <div class="tweet-foot">
-          <span>likes 1200 / retweets 69 / replies 208 / views 588837</span>
+          <span>likes 1271 / retweets 71 / replies 198 / views 719418</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="17">
+      <article class="tweet-card" data-tweet-index="21">
         <div class="tweet-head">
           <span class="mono">2026-06-11 23:05</span>
           <span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$SPCX</span></span>
@@ -719,13 +977,13 @@ Anyone know? https://t.co/sTLjsGq95V</div>
 
 有人知道吗？https://t.co/sTLjsGq95V</div>
         <div class="tweet-foot">
-          <span>likes 1080 / retweets 61 / replies 288 / views 744456</span>
+          <span>likes 1089 / retweets 64 / replies 295 / views 826733</span>
         </div>
         <div class="chips"><span class="chip blue">关税 / 宏观冲击买点</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="18">
+      <article class="tweet-card" data-tweet-index="22">
         <div class="tweet-head">
           <span class="mono">2026-06-11 22:07</span>
           <span><span class="chip red">$SPCX</span></span>
@@ -756,13 +1014,13 @@ Don&#x27;t think there&#x27;s been any historical precedence like this yet? http
 
 您认为历史上还没有这样的先例吗？https://t.co/W2apWN6QG4</div>
         <div class="tweet-foot">
-          <span>likes 1018 / retweets 67 / replies 348 / views 939904</span>
+          <span>likes 1030 / retweets 68 / replies 344 / views 1026340</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="19">
+      <article class="tweet-card" data-tweet-index="23">
         <div class="tweet-head">
           <span class="mono">2026-05-31 03:31</span>
           <span><span class="chip red">$RDDT</span><span class="chip red">$SPCE</span><span class="chip red">$SPCX</span></span>
@@ -795,7 +1053,7 @@ I guess this just goes to show how much retail demand there is for SpaceX’s IP
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="20">
+      <article class="tweet-card" data-tweet-index="24">
         <div class="tweet-head">
           <span class="mono">2026-05-26 01:49</span>
           <span><span class="chip red">$LASR</span><span class="chip red">$PL</span><span class="chip red">$RKLB</span><span class="chip red">$SIVE</span><span class="chip red">$SPCX</span><span class="chip red">$TSLA</span></span>

@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$NOK 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -28,15 +29,15 @@
       <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>22</b></div>
-        <div class="stat-card"><span>历史推文</span><b>22</b></div>
+        <div class="stat-card"><span>累计提及</span><b>23</b></div>
+        <div class="stat-card"><span>历史推文</span><b>23</b></div>
         <div class="stat-card"><span>首次提及</span><b>2026-02-18</b></div>
         <div class="stat-card"><span>最近提及</span><b>2026-06-09</b></div>
         <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
         <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
             
       </div>
-      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 6</span><span class="chip blue">认证周期 vs TTM 营收 4</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 3</span><span class="chip blue">信念分层、仓位与时点 2</span><span class="chip blue">关税 / 宏观冲击买点 2</span></div>
+      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 6</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 4</span><span class="chip blue">认证周期 vs TTM 营收 4</span><span class="chip blue">关税 / 宏观冲击买点 3</span><span class="chip blue">信念分层、仓位与时点 2</span></div>
     </section>
     <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
     
@@ -207,7 +208,7 @@ Still feels like many of these have room to go.</div>
 
 我提到了很多较小的想法，但这只是为了追求巨大的回报。仍然感觉其中许多还有空间。</div>
         <div class="tweet-foot">
-          <span>likes 1758 / retweets 190 / replies 372 / views 732701</span>
+          <span>likes 1862 / retweets 204 / replies 368 / views 876487</span>
         </div>
         <div class="chips"></div>
       </article>
@@ -420,6 +421,123 @@ While leading the</div>
 
       <article class="tweet-card" data-tweet-index="6">
         <div class="tweet-head">
+          <span class="mono">2026-06-01 15:27</span>
+          <span><span class="chip red">$GFS</span><span class="chip red">$INTC</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$ON</span><span class="chip red">$POWI</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">Just some mobile shower thoughts around $XFAB and train of thought:
+
+1. 800vdc $NVDA push look for GaN/SiC players / power semis.
+
+2. $NVTS and other fabless/fab-lite beneficiaries of $NVDA push probably use foundry models 
+
+3. care more about Western supply chains over Asia, want to build up Western capabilities + Wes...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Just some mobile shower thoughts around $XFAB and train of thought:
+
+1. 800vdc $NVDA push look for GaN/SiC players / power semis.
+
+2. $NVTS and other fabless/fab-lite beneficiaries of $NVDA push probably use foundry models 
+
+3. care more about Western supply chains over Asia, want to build up Western capabilities + Western premiums. 
+
+4 China has a lot of capacity, maybe risk into 2028, but again it’s building up Western supply chains 
+
+5. XFAB only high volume SiC foundry in America (others like $ON or Infineon are vertically integrated)
+
+6. advanced 6in SiC, 8in GaN on Si, building out 8in GaN
+
+7. Maybe likely they’re developing 8in SiC from CHIPS backing, just not public material
+
+8. check SiC revenue -&gt; 152% Y/Y growth okay. Probably something markets missed, since blended looks worse from automotive slump, that should come out recovery
+
+9. $NVTS and others turns out to use $XFAB. $POWI cites $XFAB in filings, among others.
+
+10. both are $NVDA power semi explicit partners, great exposure indicator to 800vdc power semi players. 
+
+11. US Dpt. of commerce cites $XFAB as only high volume SiC foundry in the US, $50M PMT
+
+12. validation from US Gov about critical component in supply chains is amazing 
+
+13. EU CHIPS Act gives $XFAB $128M EU, for foundry (MEMS, AI, etc), okay turns out they’re critical MEMS player
+
+14. So that’s validation from EU gov about critical component in supply chains, dual continent subsidies
+
+15. So now we know $XFAB is a critical MEMS foundry so you get SiC capabilities, GaN development, and MEMS upside
+
+16. they also got $47.6M EU funding for leading Silicon Photonics supply chain in EU. So that’s EU funding on multiple angles. 
+
+17. Turns out, I know all the players there from smartphotonics from $GFS deck.
+
+18. $NVDA and $NOK are qualifying them for silicon photonics HVM. I think this is just a government backing angle for success in EU photonics so likely to succeed… kinda like how Us gov encourages everyone to use $INTC. 
+
+19. Okay chips act 2 is coming out next week… so they’ll probably get funding there or more revenue commitments 
+
+20. 1.28 p/b, now that’s probably just book cost? Likely coming out of $SOI type legacy drag cycle.
+
+21. Did some modeling around actually replacement values, true replacement p/b cost likely ~.5/.7.
+
+22. Getting business for free, while having upside from SiC near term into Silicon Photonics / GaN as main growth past H2 2027.
+
+Thoughts: derisked by p/b values + replacement value. maybe like 20% downside from macro.
+
+However, critical dual continent importance. So downside risk seems low, but upside is compelling. 
+
+Lot of capex likely backstopped by upcoming chips act catalyst + national security concerns. 
+
+Maybe 2.5-4x rerating seems possible/likely. 
+
+Not a 10-20x, but recovery from depressed valuations from silicon photonics upside with SiC / GaN bridge.  
+
+TLDR: likely trading lower than replacement value, dual continent subsidies likely subsidize capex.
+
+Gov grants shows importance to Western supply chains, photonics longer term upside, SiC/GaN demand likely near term upside and bridge. 
+
+Don’t control any recent volatility, should shake out anyone not really confident in the thesis though. 
+
+CHIPS act 2 from EU is coming up, $XFAB was listed in earlier blueprints for optical ecosystem, so should get a boost after that comes out as near term event catalysts.
+
+So now is the risk reward seems compelling, we’ll see if this is right or not</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2061348882685243497" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是一些关于 $XFAB 的移动淋浴想法和思路：
+
+1. 800vdc $NVDA 推动 GaN/SiC 厂商/功率半导体产品的发展。2. $NVTS 和 $NVDA 推动的其他无晶圆厂/精简晶圆厂受益者可能使用代工模式 
+
+3. 更关心西方供应链而不是亚洲，想要建立西方能力+西方溢价。4 中国拥有大量产能，到 2028 年可能会面临风险，但它再次正在建立西方供应链 
+
+5. XFAB 是美国唯一的大批量 SiC 代工厂（其他公司如 $ON 或 Infineon 是垂直整合的）
+
+6.先进的6in SiC、8in GaN on Si、构建8in GaN
+
+7. 也许他们正在利用 CHIPS 支持开发 8 英寸 SiC，但不是公开材料
+
+8. 检查 SiC 收入 -&gt; 同比增长 152% 正常。也许市场错过了一些东西，因为混合动力看起来因汽车低迷而变得更糟，所以应该会复苏
+
+9. $NVTS 和其他人最终使用 $XFAB。$POWI 在文件等中引用了 $XFAB。10. 两者都是 $NVDA 电源半显式合作伙伴，对于 800vdc 电源半参与者来说是很好的暴露指标。11. 美国部门of commerce 称 $XFAB 是美国唯一一家大批量 SiC 代工厂，PMT 价值 5000 万美元
+
+12. 美国政府对供应链关键组成部分的验证令人惊叹 
+
+13.《欧盟芯片法案》为 $XFAB 提供 1.28 亿美元欧盟资金，用于代工（MEMS、AI 等），好吧，事实证明他们是关键的 MEMS 参与者
+
+14. 这就是欧盟政府对供应链关键组成部分、双大陆补贴的验证
+
+15. 现在我们知道 $XFAB 是一家重要的 MEMS 代工厂，因此您可以获得 SiC 能力、GaN 开发和 MEMS 优势
+
+16.他们还获得了 4760 万美元的欧盟资金，用于建设欧盟领先的硅光子供应链。这就是欧盟从多个角度提供的资金。17. 事实证明，我认识来自 $GFS 牌组的 smartphotonics 的所有玩家。18. $NVDA 和 $NOK 正在使它们符合硅光子 HVM 的资格。我认为这只是政府对欧盟光子学成功的支持角度，因此很可能会成功……有点像美国政府鼓励每个人使用 $INTC。19. 好的筹码第二幕将于下周推出……所以他们可能会在那里获得资金或更多的收入承诺 
+
+20. 1.28 p/b，现在这可能只是书本成本？可能会摆脱 $SOI 类型的传统阻力循环。21. 是否围绕实际重置价值进行了一些建模，真实重置市净率成本可能约为 0.5/.7。22. 免费获得业务，同时短期内从 SiC 进入硅光子/GaN，成为 2027 年下半年的主要增长点。想法：通过市盈率+重置价值来消除风险。宏观方面可能有 20% 的下行空间。然而，双大陆的重要性至关重要。因此，下行风险似乎很低，但上行风险却引人注目。即将到来的芯片法案催化剂+国家安全担忧可能会支撑大量资本开支。也许 2.5-4 倍的重新评级似乎是可能的。不是 10-20 倍，而是从 SiC/GaN 桥硅光子学上涨的低迷估值中恢复过来。TLDR：交易价格可能低于重置价值，双大陆补贴可能会补贴资本开支。政府拨款显示了对西方供应链、光子学长期上涨的重要性，SiC/GaN 需求可能近期上涨和过渡。不要控制最近的任何波动，但应该震动那些对论文不太有信心的人。欧盟的 CHIPS 法案 2 即将出台，$XFAB 已被列入光学生态系统的早期蓝图中，因此在作为近期事件催化剂出现后应该会得到提振。现在风险回报似乎很有吸引力，我们将看看这是否正确</div>
+        <div class="tweet-foot">
+          <span>likes 964 / retweets 76 / replies 89 / views 371540</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">关税 / 宏观冲击买点</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="7">
+        <div class="tweet-head">
           <span class="mono">2026-05-28 22:15</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$AMD</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NOK</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$YSS</span></span>
         </div>
@@ -555,7 +673,7 @@ Only thing I’m looking at are:
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="7">
+      <article class="tweet-card" data-tweet-index="8">
         <div class="tweet-head">
           <span class="mono">2026-05-28 12:04</span>
           <span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$POWI</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$XFAB</span></span>
@@ -594,7 +712,7 @@ I spend a lot of time looking at regulatory filings to find compelling things ma
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="8">
+      <article class="tweet-card" data-tweet-index="9">
         <div class="tweet-head">
           <span class="mono">2026-05-28 00:35</span>
           <span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$POWI</span><span class="chip red">$RPI</span><span class="chip red">$SOI</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
@@ -643,7 +761,7 @@ Just because you don’t understand something, don’t just go call it a “meme
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="9">
+      <article class="tweet-card" data-tweet-index="10">
         <div class="tweet-head">
           <span class="mono">2026-05-23 13:51</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$LITE</span><span class="chip red">$NOK</span><span class="chip red">$SIVE</span></span>
@@ -678,7 +796,7 @@ They just lacked the funding before the recent market interest in Sivers. But I&
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="10">
+      <article class="tweet-card" data-tweet-index="11">
         <div class="tweet-head">
           <span class="mono">2026-05-15 15:04</span>
           <span><span class="chip red">$AEVA</span><span class="chip red">$AMZN</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$NOK</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
@@ -717,7 +835,7 @@ $AMZN 与 AlChip 进行了新的私募。可能意味着未来 Trainium 的设�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="11">
+      <article class="tweet-card" data-tweet-index="12">
         <div class="tweet-head">
           <span class="mono">2026-05-14 18:17</span>
           <span><span class="chip red">$AEVA</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$NOK</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span></span>
@@ -813,7 +931,7 @@ $AEVA 第四季度开始量产，$SIVE = 对两者都看涨。LIDAR 的收入下
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="12">
+      <article class="tweet-card" data-tweet-index="13">
         <div class="tweet-head">
           <span class="mono">2026-03-31 08:35</span>
           <span><span class="chip red">$AMKR</span><span class="chip red">$ANSS</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$CDNS</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$GOOGL</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$SIVE</span><span class="chip red">$SNPS</span><span class="chip red">$TER</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
@@ -1015,7 +1133,7 @@ Ansys &lt;$ANSS&gt;
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="13">
+      <article class="tweet-card" data-tweet-index="14">
         <div class="tweet-head">
           <span class="mono">2026-03-30 10:19</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
@@ -1081,7 +1199,7 @@ $MRVL（自保）、$AVGO（自保）、$TSM 和 $NOK 也都这样做，但它�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="14">
+      <article class="tweet-card" data-tweet-index="15">
         <div class="tweet-head">
           <span class="mono">2026-03-30 10:01</span>
           <span><span class="chip red">$AVGO</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$INTC</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$TSM</span></span>
@@ -1158,7 +1276,7 @@ TLDR：下一步是扩大 CPO。认为分析师的报告遗漏了一堆上游名
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="15">
+      <article class="tweet-card" data-tweet-index="16">
         <div class="tweet-head">
           <span class="mono">2026-03-27 01:06</span>
           <span><span class="chip red">$NOK</span></span>
@@ -1183,7 +1301,7 @@ There’s some rules to the universe.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="16">
+      <article class="tweet-card" data-tweet-index="17">
         <div class="tweet-head">
           <span class="mono">2026-03-20 16:56</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AIXA</span><span class="chip red">$APH</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESI</span><span class="chip red">$CAMT</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$CSCO</span><span class="chip red">$FN</span><span class="chip red">$FOCI</span><span class="chip red">$FORM</span><span class="chip red">$GLW</span><span class="chip red">$HIMX</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$MXL</span><span class="chip red">$NOK</span><span class="chip red">$ONTO</span><span class="chip red">$OXINF</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SMHN</span><span class="chip red">$SMTC</span><span class="chip red">$SOI</span><span class="chip red">$TEL</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$UMC</span><span class="chip red">$VIAV</span></span>
@@ -1333,7 +1451,7 @@ $电话：-14.93%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="17">
+      <article class="tweet-card" data-tweet-index="18">
         <div class="tweet-head">
           <span class="mono">2026-03-19 02:52</span>
           <span><span class="chip red">$NOK</span></span>
@@ -1354,7 +1472,7 @@ $电话：-14.93%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="18">
+      <article class="tweet-card" data-tweet-index="19">
         <div class="tweet-head">
           <span class="mono">2026-03-18 07:58</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$APH</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESI</span><span class="chip red">$CAMT</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$CSCO</span><span class="chip red">$FIT</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$HIMX</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$MXL</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$ONTO</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SMHN</span><span class="chip red">$SMTC</span><span class="chip red">$SOI</span><span class="chip red">$TEL</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$UMC</span><span class="chip red">$VIAV</span></span>
@@ -1413,7 +1531,7 @@ Then price them in.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="19">
+      <article class="tweet-card" data-tweet-index="20">
         <div class="tweet-head">
           <span class="mono">2026-03-17 20:38</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$APH</span><span class="chip red">$ASX</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$BESI</span><span class="chip red">$CAMT</span><span class="chip red">$CIEN</span><span class="chip red">$COHR</span><span class="chip red">$CSCO</span><span class="chip red">$FIT</span><span class="chip red">$FN</span><span class="chip red">$FORM</span><span class="chip red">$GFS</span><span class="chip red">$GLW</span><span class="chip red">$HIMX</span><span class="chip red">$INTC</span><span class="chip red">$KEYS</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MTSI</span><span class="chip red">$MXL</span><span class="chip red">$NOK</span><span class="chip red">$ONTO</span><span class="chip red">$POET</span><span class="chip red">$SIVE</span><span class="chip red">$SMHN</span><span class="chip red">$SMTC</span><span class="chip red">$SOI</span><span class="chip red">$TEL</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$UMC</span><span class="chip red">$VIAV</span></span>
@@ -1492,7 +1610,7 @@ $BESI、$SMHN、$ONTO、$CAMT - 先进封装和混合接合
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="20">
+      <article class="tweet-card" data-tweet-index="21">
         <div class="tweet-head">
           <span class="mono">2026-03-14 05:59</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMX</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$POET</span><span class="chip red">$SHMN</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
@@ -1623,7 +1741,7 @@ $AXTI 衬底/原料、$IQE 外延片、$AAOI 收发器供应链
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="21">
+      <article class="tweet-card" data-tweet-index="22">
         <div class="tweet-head">
           <span class="mono">2026-02-18 17:56</span>
           <span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span></span>

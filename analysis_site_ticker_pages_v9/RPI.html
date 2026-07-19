@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$RPI 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -28,15 +29,15 @@
       <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>89</b></div>
-        <div class="stat-card"><span>历史推文</span><b>88</b></div>
+        <div class="stat-card"><span>累计提及</span><b>90</b></div>
+        <div class="stat-card"><span>历史推文</span><b>89</b></div>
         <div class="stat-card"><span>首次提及</span><b>2026-02-16</b></div>
-        <div class="stat-card"><span>最近提及</span><b>2026-06-20</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-06-30</b></div>
         <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
         <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
             
       </div>
-      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 13</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 10</span><span class="chip blue">GAAP 毛利率之战 6</span><span class="chip blue">信念分层、仓位与时点 5</span><span class="chip blue">认证周期 vs TTM 营收 5</span><span class="chip blue">Vega / IV 错定价（高阶，慎用） 4</span><span class="chip blue">关税 / 宏观冲击买点 3</span><span class="chip blue">机构滞后 / 暗池与资金流 2</span></div>
+      <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜） 14</span><span class="chip blue">多跳 BOM / OSINT 供应链映射 12</span><span class="chip blue">GAAP 毛利率之战 6</span><span class="chip blue">信念分层、仓位与时点 6</span><span class="chip blue">认证周期 vs TTM 营收 5</span><span class="chip blue">Vega / IV 错定价（高阶，慎用） 4</span><span class="chip blue">关税 / 宏观冲击买点 3</span><span class="chip blue">机构滞后 / 暗池与资金流 2</span></div>
     </section>
     <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
     
@@ -121,8 +122,164 @@
           
       <article class="tweet-card" data-tweet-index="0">
         <div class="tweet-head">
+          <span class="mono">2026-06-30 09:10</span>
+          <span><span class="chip red">$ALAB</span><span class="chip red">$AXTI</span><span class="chip red">$CBRS</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$XFAB</span></span>
+        </div>
+        <div class="tweet-text">I&#x27;ve reached 900k followers, thank you everyone!
+
+Just some reflection, it&#x27;s actually a nightmare at higher counts...
+
+Which is new to me, since I started at almost nothing earlier this year.
+
+1. Threats of safety, which I don&#x27;t enjoy.
+
+- Random new accounts sending personal threats
+- Mysterious foreign accounts, sendi...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">I&#x27;ve reached 900k followers, thank you everyone!
+
+Just some reflection, it&#x27;s actually a nightmare at higher counts...
+
+Which is new to me, since I started at almost nothing earlier this year.
+
+1. Threats of safety, which I don&#x27;t enjoy.
+
+- Random new accounts sending personal threats
+- Mysterious foreign accounts, sending coercive messages the moment I mention a foreign ticker
+
+If I hold an opinion about a stock, I&#x27;d prefer not to have anyone show up on the street with a knife at night since it&#x27;s safety risk at this point...
+
+Never felt like I&#x27;d have to take that into consideration for holding an opinion.
+
+2. Egregious media narratives
+
+- Lot of outlets try to dismiss my ideas like $RPI or $SIVE as &quot;meme stocks&quot; or me as &quot;meme trader&quot; when I talk about supply chain chokepoints or fundamental catalysts to revenue due to AI.
+
+Without ever covering the core ideas or hyperscaler mapping I&#x27;ve done.
+
+I let success validate my ideas, but it&#x27;s annoying when they can just pretend their claims like &quot;___ will imminently crash as a fact&quot; which ends up not happening.
+
+Or that &quot;___&quot; is just a retail meme stock without mentioning $JBL, Ayar, $GFS or others for CPO scale up or pluggables.
+
+I&#x27;m grateful to some outlets, like in Belgium for $XFAB coverage, but many others try and paint their own narrative rather than covering a very nuanced thesis objectively.
+
+- When I mention a ticker in a foreign market, some try to frame me as some &quot;adversarial account&quot;!
+
+I&#x27;m just sharing ideas, and I&#x27;ll always disclose positions/financial interest if I have them.
+
+If I say I have none, they just make up some narrative that I&#x27;m some foreign institution or random group inside their country that does.
+
+Some have even tried hilariously forging screenshots of me to harm my reputation, which was annoying to deal with. Since it&#x27;s easier to textedit a photo and spread it around than it is to dispel disinformation.
+
+Lot of institutions know me personally by now.
+
+I just don&#x27;t go broadcasting my identity to random people in the media/public, since personal security gets expensive and I just want to live about my day.
+
+3. Endless X bot spam
+
+- I have endless hundreds of comments a day trying to link external communities pretending they&#x27;re me.
+
+I manually delete, and block thousands of these accounts, sometimes hit regular people by accident.
+
+And it&#x27;s extremely exhausting to the point my fingers cramp certain days. 
+
+Even if I give the most blatant warnings in bio, people still get scammed and think it&#x27;s me. Then I get blamed for it too.
+
+I actually had a conversation where someone asked if a scammer was me.
+
+I said no verbatim, then they double checked like 2-3 more times because they didn&#x27;t believe I said no because someone had the same username on another scam platform.
+
+In another world, maybe we&#x27;ll get automod type tools. But until then,  it&#x27;s mentally exhausting dealing with all of this. But I do so anyways since I don&#x27;t want my followers to get scammed. 
+
+4. Endless engagement baiting
+
+- I have tons of people making up fake stuff about me, tagging me in posts, randomly bashing my ideas while missing any technical nuance in order to get me to comment or farm views.
+
+It&#x27;s a catch 22 since the moment I reply, they get a lot of views, which was their goal. And if I don&#x27;t reply it just looks like I&#x27;m avoiding something (which is not true).
+
+I&#x27;m very transparent, I always try and entertain people who disagree first. But when it gets into personal attacks or leading questions/disinformation rather than substance then I don&#x27;t engage.
+
+It&#x27;s a little sad though when people I&#x27;ve interacted with end up caring more about engagement over relationships down the road. 
+
+5. People missing the nuance
+
+- I share ideas pretty often and I always maintain I don&#x27;t want people to copytrade or blindly follow, which is why I haven&#x27;t set up any copytrading apps.
+
+Before it was just posting with a few $RDDT friends on ideas like $AXTI, $NBIS, or $ALAB, and people were more knowledgeable traders. 
+
+Then seeing if markets validate my guesses like with InP substrate bottlenecks. 
+
+But because many turned out directionally right, to the point it became a central talking point between China/US trade relations, lot of random folks started to follow my account last few months.
+
+But many of them miss nuances with float dilution, or material updates along the way such as rate hikes, and I get blamed if a thesis changes.
+
+Now since there&#x27;s so many random people, even if I share an idea about $CBRS last Friday.
+
+At market open I had people panicking over a 2% drop, asking me if I did something to a $44B+ company, even if it went up 20%+ today.
+
+Now I have compliance review for posts, which delays things a lot but makes sure people don&#x27;t get the wrong idea. And I have to be careful about my timing, so I post new ideas when markets close.
+
+Before, it was just sharing ideas the moment I had them during lunch or in the shower, so this is becoming a headache.
+
+6. I post my core ideas for free. And I&#x27;ve always said this from the start.
+
+I actually made my subscribers chat literally by accident, and set the bare minimum amount on purpose since I didn&#x27;t want to take people&#x27;s money. But kept it so I could avoid the bots and not spam the main timeline with random thoughts/scrapped research.
+
+I think me becoming the #1 most subscribed to person on X was literally by accident.
+
+But lot of weird narratives out there when media or others don&#x27;t believe that I just genuinely want to share my ideas for free.
+
+And that people shouldn&#x27;t need to pay $300 in a paywalled community to see them.
+
+_
+
+Not sure if people want to read it all, but just some things I&#x27;ve gone through.
+
+It&#x27;s not as much fun at higher numbers and it would be nice to go back to when I was smaller.
+
+Regardless, I&#x27;d rather not turn this into a job, or make it feel like one.
+
+Will probably take a break when I hit 1M as a milestone and do something else that will help out the community like sharing my research pipelines and such.
+
+Think a lot of my friends at 10-50K follower counts, seem to experience some of these issues too. But problems get magnified a lot at this level.
+
+I never needed the X creator fees or anything, just wanted to share ideas for fun if people wanted to listen.
+
+And didn&#x27;t expect any popularity, but it&#x27;s nice to see that people find my ideas compelling.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2071763387948859506" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>我的粉丝已经达到90万了，谢谢大家！只是一些反思，这实际上是更高计数的噩梦......
+
+这对我来说是新鲜事，因为今年早些时候我几乎一无所有。1. 安全威胁，我不喜欢。- 随机新帐户发送人身威胁
+- 神秘的外国账户，一提到外国股票就发送强制信息
+
+如果我对一只股票持有看法，我宁愿不要有人在晚上拿着刀出现在街上，因为此时存在安全风险......
+
+我从来没有觉得我必须考虑到这一点才能持有意见。2. 恶劣的媒体报道
+
+- 当我谈论人工智能带来的供应链瓶颈或收入的基本催化剂时，许多媒体试图将我的想法（例如 $RPI 或 $SIVE）视为“模因股票”或将我视为“模因交易员”。没有涵盖我所做的核心思想或超大规模映射。我让成功验证了我的想法，但当他们假装他们的主张“___将立即崩溃”而最终没有发生时，这很烦人。或者“___”只是零售 m​​eme 股票，没有提及 $JBL、Ayar、$GFS 或其他用于 CPO 扩展或可插入的内容。我很感谢一些媒体，例如比利时的 $XFAB 报道，但许多其他媒体试图描绘自己的叙述，而不是客观地报道非常微妙的论文。- 当我提到国外市场的股票时，有些人试图将我视为“敌对账户”！我只是分享想法，如果有的话，我总是会披露职位/财务利益。如果我说我没有，他们只是编造一些故事，说我是他们国家的某个外国机构或随机团体。有些人甚至试图搞笑地伪造我的屏幕截图来损害我的声誉，这很难处理。因为用文字编辑照片并将其传播比消除虚假信息更容易。现在很多机构都认识我了。我只是不会向媒体/公众中的随机人广播我的身份，因为个人安全变得昂贵，而且我只想过好自己的一天。3.无尽的X机器人垃圾邮件
+
+- 我每天都会有无数条评论试图链接外部社区，假装他们是我。我手动删除并屏蔽了数千个这样的帐户，有时会不小心碰到普通人。而且有几天我的手指都抽筋了，真是太累了。即使我在生物中给出了最明目张胆的警告，人们仍然会被骗并认为是我。然后我也因此受到指责。事实上，我有过一次谈话，有人问我是不是骗子。我一字不差地说不，然后他们又仔细检查了 2-3 次，因为他们不相信我说不，因为有人在另一个诈骗平台上有相同的用户名。在另一个世界中，也许我们会得到 automod 类型的工具。但在那之前，处理所有这些都会让人精神疲惫。但无论如何我都会这样做，因为我不想让我的追随者被骗。4. 无尽的引诱
+
+- 有很多人编造关于我的虚假信息，在帖子中给我贴上标签，随机攻击我的想法，却忽略了任何技术上的细微差别，以便让我发表评论或发表观点。这是第 22 条军规，因为从我回复的那一刻起，他们就得到了很多浏览量，这就是他们的目标。如果我不回复，看起来就像我在逃避某些事情（这不是真的）。我很透明，我总是先尝试并招待那些不同意的人。但当它涉及人身攻击或引导性问题/虚假信息而不是实质内容时，我就不会参与。不过，当与我交往过的人最终更关心参与度而不是未来的关系时，这有点令人难过。5.人们忽略了细微差别
+
+- 我经常分享想法，并且始终坚称我不希望人们复制交易或盲目跟随，这就是为什么我没有设置任何复制交易应用程序。在此之前，它只是与一些 $RDDT 朋友发布关于 $AXTI、$NBIS 或 $ALAB 等想法的文章，而且人们都是知识渊博的交易者。然后看看市场是否验证了我的猜测，就像 InP 衬底瓶颈一样。但因为很多人的方向是正确的，以至于它成为中美贸易关系之间的一个中心话题，很多随机的人在过去几个月开始关注我的账户。但他们中的许多人错过了浮动稀释的细微差别，或者一路上的材料更新（例如加息），如果论文发生变化，我就会受到指责。现在既然有这么多随机的人，即使我上周五分享了一个关于 $CBRS 的想法。开盘时，人们对 2% 的下跌感到恐慌，问我是否对一家 44B+ 美元的公司做了什么，即使它今天上涨了 20%+。现在我对帖子进行合规性审查，这会延迟很多事情，但可以确保人们不会产生错误的想法。我必须小心我的时机，所以我会在市场收盘时发布新的想法。以前，我只是在午餐或淋浴时分享想法，所以这变得令人头痛。6.我免费发布我的核心想法。我从一开始就一直这么说。实际上，我无意中让我的订阅者聊天，并故意设置了最低金额，因为我不想拿人们的钱。但保留它，这样我就可以避开机器人，而不是用随机的想法/废弃的研究向主时间线发送垃圾邮件。我认为我成为 X 上订阅量第一的人实际上是偶然的。但是，当媒体或其他人不相信我只是真诚地想免费分享我的想法时，就会出现很多奇怪的叙述。人们不需要在付费社区支付 300 美元就能看到它们。_
+
+不确定人们是否想读全部内容，但只是我经历过的一些事情。在更高的数字下就没那么有趣了，如果能回到我更小的时候就好了。无论如何，我不想把它变成一份工作，或者让它感觉像是一份工作。当我达到 100 万里程碑时，我可能会休息一下，并做一些其他可以帮助社区的事情，比如分享我的研究管道等。我想我的很多粉丝数量为 10-50K 的朋友似乎也遇到了其中一些问题。但在这个层面上，问题被放大了很多。我从来不需要 X 创建者费用或任何东西，只是想在人们想听的时候分享有趣的想法。并没有想到会受到欢迎，但很高兴看到人们发现我的想法引人注目。</div>
+        <div class="tweet-foot">
+          <span>likes 3571 / retweets 65 / replies 571 / views 541293</span>
+        </div>
+        <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">稀释 / ATM 日历否决项</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
           <span class="mono">2026-06-20 19:52</span>
-          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$GFS</span><span class="chip red">$HOOD</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$IREN</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSM</span></span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$GFS</span><span class="chip red">$HOOD</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$IREN</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSM</span><span class="chip red">$XFAB</span></span>
         </div>
         <div class="tweet-text">I think u must be new here. 
 
@@ -218,13 +375,13 @@ Good thing is markets are the final arbiter of what’s right or wrong, not the 
 
 我确实读了很多评论，这就是为什么我记得很多仇恨（我猜可能是嫉妒、印象农场或缺乏技术深度）。但我认为在这一点上，人们可以看到每篇论文都被一遍又一遍地验证。市场上的成功淹没了旧有的喧嚣。好消息是市场是正确或错误的最终仲裁者，而不是 X 上的愤怒评论或帖子。</div>
         <div class="tweet-foot">
-          <span>likes 2058 / retweets 109 / replies 262 / views 534460</span>
+          <span>likes 2258 / retweets 119 / replies 264 / views 723518</span>
         </div>
         <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="1">
+      <article class="tweet-card" data-tweet-index="2">
         <div class="tweet-head">
           <span class="mono">2026-06-19 20:19</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$HPS.A</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNAP</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TTD</span><span class="chip red">$XLU</span></span>
@@ -277,13 +434,13 @@ But regardless, I&#x27;d prefer to judge how ideas play out on medium term timef
 
 这摧毁了我从 Foci、Msscorp、Xintec 等公司购买的 3 个 TW CPO 多头头寸。（呈深红色）。Shusin / Win Semi 的表现要好得多。我提到的日本其他一些公司，如 Towa、Harmonic Drive、NCI 等，在经历短期波动后表现要好得多。至于韩国，是的，我有来自 Auros 的 PTSD，现在 Foosung 都是红色的（虽然我没有 093370，只是在观察价格走势时有 PTSD）。我不知道我是否会再次接触韩国，因为太不稳定了。但我仍然认为，在 Sk hynix/三星资质 + HVM 以及未来日本供应链关闭之后，这些最终将成为绿色。我也确实改变了我之前的一些长期想法，例如伊朗战争后的 $XLU，将所有降息机会从 3-4 降至 0，但效果不太好。我之前提到的三个软件名称如 $TTD、$META 最终变成了红色。$SNAP，在注意到无穷无尽的SBC会计方法后，我也改变了我的论文。经过很长一段时间后，$RDDT 的想法终于从 130 美元变为 170 美元。但我认为我的绝大多数想法都是为了更大的上限，比如$MRVL、$NBIS、$ARM、$INTC、$MU、$LITE、SK Hynix、三星。降至 $AXTI、$LITE、$AAOI、$RPI、$IQE 和其他较小盘头寸的方向表现相当不错。随机的东西，比如 $SIMO、$HPS.A、$TSEM、$AEHR、$LPK、$SOI、$ALRIB 等等，最终也都得到了正确的结果。混合平均值几乎是绿色的，因为我的大部分长期想法今年迄今都是三位数。但我确实错过了一些。另外，切入点也非常重要...我提到了 $AAOI 的价格为 30 美元，$AXTI 的价格约为 13 美元，但并非每个人都有相同的切入点。因此，如果有人以 220 美元的价格购买 AOI，然后它跌至 160 美元，我会感觉很糟糕。但无论如何，我更愿意判断想法在几个月而不是几周的中期时间框架内如何发挥作用。</div>
         <div class="tweet-foot">
-          <span>likes 2324 / retweets 147 / replies 235 / views 724908</span>
+          <span>likes 2378 / retweets 151 / replies 233 / views 849796</span>
         </div>
         <div class="chips"><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">GAAP 毛利率之战</span><span class="chip blue">关税 / 宏观冲击买点</span><span class="chip blue">Vega / IV 错定价（高阶，慎用）</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="2">
+      <article class="tweet-card" data-tweet-index="3">
         <div class="tweet-head">
           <span class="mono">2026-06-15 22:56</span>
           <span><span class="chip red">$ALRIB</span><span class="chip red">$IQE</span><span class="chip red">$LPK</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$XFAB</span></span>
@@ -382,16 +539,16 @@ Soitec - 硅光子 SoI 衬底完全垄断，同时摆脱了传统的阻力领域
 
 也许 $SOI 已被重新评级最多？但我还是坚持着。我认为 $LPK 和 $ALRIB 尽管具有垄断地位，但仍被低估。$RPI 只是看到了目前情况的发展情况，如果它们最终像低端边缘人工智能的迷你英伟达那样，那就太搞笑了。考虑到新塔与 macom 的长期协议，$IQE 可能还有很长的路要走。如果他们转换潜在产能，我仍然认为它有机会像里程碑一样重新评级。$XFAB idk 如果我遗漏了什么或者市场遗漏了什么。你有英伟达作为其硅光子代工厂的直接评估，它的交易价格低于替代品的市净率。我认为我是对的。我认为 $SIVE 在所有这些中具有最高的优势，因为激光公司有能力进行垂直整合、收购下游公司以使其激光器更有价值等。就像相干/Lumentum 一样。还有大约 1-2 个随机的，并不是真正重要的，但只是一般性的。这些是我最喜欢的。</div>
         <div class="tweet-foot">
-          <span>likes 2422 / retweets 298 / replies 267 / views 645507</span>
+          <span>likes 2583 / retweets 331 / replies 272 / views 791617</span>
         </div>
         <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="3">
+      <article class="tweet-card" data-tweet-index="4">
         <div class="tweet-head">
           <span class="mono">2026-06-07 11:37</span>
-          <span><span class="chip red">$AXTI</span><span class="chip red">$IQE</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span></span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$XFAB</span></span>
         </div>
         <div class="tweet-text">I think my personal style of investing is a bit different, just some reflection:
 
@@ -399,7 +556,7 @@ It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. 
 
 If you look at $AXTI, $RPI, $SIVE, $IQE and others. 
 
-Lot of it is guessing on</div>
+Lot of it is guessing on unstructured relationships then seeing if it&#x27;s ri...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -409,7 +566,59 @@ It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. 
 
 If you look at $AXTI, $RPI, $SIVE, $IQE and others. 
 
-Lot of it is guessing on</div>
+Lot of it is guessing on unstructured relationships then seeing if it&#x27;s right or not down the line.   
+
+$RPI is the perfect example:
+
+1. Nobody really thought of Raspberry Pis for AI growth. Mainly people bought one or two just for class + education + hobbyist. 
+2. After OpenClaw, just noticed all my friends and people just buying Apple Mac Minis / RPIs for AI applications. 
+3. Found validation of that trend online with lot of people sharing video tutorials on AI orchestration with RPI. 
+4. AI was their ideal perfect growth vector, did some modeling, and thought it was compelling. 
+
+Earnings comes out and I was right. 
+
+Everyone in media was calling it a meme stock because there&#x27;s nothing online that shows revenue growth from AI (was 14% forecasted revenue growth, turned out to be 58%, my projection was around 55%).  
+
+So it was a mix of guessing next industry trend (AI using lightweight hardware instead of GPU clusters), real life trends, then revenue forecasting off my guess.
+
+ For stuff like $AXTI: 
+
+1. Everyone called it a joke when I bought at ~$12. LLMs would hallucinate and say &quot;hyperscalers/govs would have known about this by now and fixed this vulnerability with InP substrates&quot; 
+2. Or would conflate very nuanced parts of InP substrate stack, where there&#x27;s multiple different chokepoints in upstream processing. 
+3. So part of this was just discretionary based on what I&#x27;ve seen over InP substrate breakdowns, industry trends, etc. 
+4. Then also guessing the major supercycle was photonics (this was before everyone caught onto $LITE, and others). Or before you saw the $141B TAM projections from GS. 
+5. AXT owned 40% of InP supply chain, without them the supply chain just gets cripped). 
+6. All the &quot;analysts&quot; were forecasting steady InP substrate growth, few hundred million TAM, etc. or export controls. 
+7. Everyone kept trying to say $AXTI was overvalued based on TAM estimates. But if it&#x27;s a few hundred million TAM you just think that&#x27;s a joke and go into game theory over allocations. 
+8. Then I just had to guess, how much would this be worth if it were a NAND style bottleneck, what MC could it reach based on control, how much would hyperscalers price it as, etc. 
+
+A lot of the current research outputs from Goldman Sachs, or earnings reports from the Epiwafer companies, were confirmed after I published my piece on AXT. If you did research back then, lot of the same material /framing wouldn&#x27;t have come up. 
+
+With stuff like $XFAB as you&#x27;re seeing now, a lot of it is just pure guessing:
+
+1. Not really any CPO materials, how much their MTP process makes in revenue, etc. Everyone online keeps saying they&#x27;re not a photonics player. 
+2. But if you go through ASE docs or Gov websites, they all kinda cite XFAB as a major emerging player here. 
+3. $NVDA also evaluating them right now (maybe it&#x27;s successful who knows). 
+4. No clear revenue around this area because their main silicon photonics process is still precommercial, but if you guess it&#x27;s trying to create a EU supply chain to compete with $TSEM, once pre-commercial shifts to commercial, maybe similar but less volume contracts? 
+5. Then just seeing updates over the next few months to see if anything confirms this thesis guess. 
+
+_ 
+
+I think a lot of information discovery still can be done with LLMs I&#x27;m seeing online. But it&#x27;s also really hard to make a bunch of unstructured inferences based on unrelated material or even just trends you&#x27;re seeing in real life. 
+
+So probably better to just do what&#x27;s standard, eg. do valuation forecasting based on current numbers
+
+Stuff like $AAOI, if they&#x27;re projecting $471m/M h1 2027 and you see MC at $12B, probably undervalued might be a good idea to go long for next years. 
+
+Stuff like Samsung Electronics is easier, see what people are modeling for operating profits for 2027, 2028 then just seeing if it&#x27;s undervalued or not at current levels. 
+
+Maybe something harder is $JBL. I haven&#x27;t really seen any great volume numbers around 1.6T LRO, but you can just make a guess on how popular that might be then project how that might impact current MCs. 
+
+Or picking just good names everyone kinda agrees like $TSM, $INTC, $MRVL is also solid. 
+
+So a lot of things is just building up your life skills then applying that to markets. I don&#x27;t think it&#x27;s that can be taught with courses and stuff. 
+
+Of course, much of what I&#x27;m doing is just high conviction inference based on unconnected parts. Could always be wrong.</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2063465386960736396" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
@@ -417,13 +626,13 @@ Lot of it is guessing on</div>
 
 它本质上是主观判断，基于市场还不知道的东西，也是一系列人生经历的累积。如果你看 $AXTI、$RPI、$SIVE、$IQE 等，很多判断都来自对客户、文档、时间线和产业演进的提前推测。</div>
         <div class="tweet-foot">
-          <span>likes 509 / retweets 33 / replies 97 / views 79186</span>
+          <span>likes 3148 / retweets 306 / replies 235 / views 1223145</span>
         </div>
-        <div class="chips"></div>
+        <div class="chips"><span class="chip blue">瓶颈狩猎（核心透镜）</span><span class="chip blue">多跳 BOM / OSINT 供应链映射</span><span class="chip blue">信念分层、仓位与时点</span></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="4">
+      <article class="tweet-card" data-tweet-index="5">
         <div class="tweet-head">
           <span class="mono">2026-06-05 17:16</span>
           <span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
@@ -448,7 +657,7 @@ Then get embarrassed over and over. Idk if they’re going to learn</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="5">
+      <article class="tweet-card" data-tweet-index="6">
         <div class="tweet-head">
           <span class="mono">2026-06-05 17:10</span>
           <span><span class="chip red">$RPI</span></span>
@@ -481,7 +690,7 @@ Was actually was backed by https://t.co/5dCCgWTDDp</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="6">
+      <article class="tweet-card" data-tweet-index="7">
         <div class="tweet-head">
           <span class="mono">2026-05-29 19:22</span>
           <span><span class="chip red">$RPI</span></span>
@@ -512,7 +721,7 @@ Was actually was backed by https://t.co/5dCCgWTDDp</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="7">
+      <article class="tweet-card" data-tweet-index="8">
         <div class="tweet-head">
           <span class="mono">2026-05-29 01:09</span>
           <span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
@@ -559,7 +768,7 @@ $SOI is now up 342% since by the way.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="8">
+      <article class="tweet-card" data-tweet-index="9">
         <div class="tweet-head">
           <span class="mono">2026-05-28 23:00</span>
           <span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
@@ -626,7 +835,7 @@ Amount of media slander from $SOI to $SIVE has been pretty incredible.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="9">
+      <article class="tweet-card" data-tweet-index="10">
         <div class="tweet-head">
           <span class="mono">2026-05-28 20:53</span>
           <span><span class="chip red">$LPK</span><span class="chip red">$RPI</span><span class="chip red">$SOI</span></span>
@@ -663,7 +872,7 @@ $SOI：$44 -&gt; $181（硅光子学，衬底垄断）https://t.co/EWWaVL7Y49</d
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="10">
+      <article class="tweet-card" data-tweet-index="11">
         <div class="tweet-head">
           <span class="mono">2026-05-28 00:35</span>
           <span><span class="chip red">$NOK</span><span class="chip red">$NVDA</span><span class="chip red">$NVTS</span><span class="chip red">$POWI</span><span class="chip red">$RPI</span><span class="chip red">$SOI</span><span class="chip red">$WOLF</span><span class="chip red">$XFAB</span></span>
@@ -712,10 +921,10 @@ Just because you don’t understand something, don’t just go call it a “meme
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="11">
+      <article class="tweet-card" data-tweet-index="12">
         <div class="tweet-head">
           <span class="mono">2026-05-26 00:08</span>
-          <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$IQE</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span></span>
+          <span><span class="chip red">$AAOI</span><span class="chip red">$APPL</span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$IQE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span></span>
         </div>
         <div class="tweet-text">$RPI, close to ~3x returns. 
 
@@ -725,7 +934,9 @@ I think after retail saw institutions bear post my thesis posts.
 
 Then ended up paper handing $AXTI, then $RPI,  then $IQE, then $EWY, then $SNDK, then $AAOI, then $SOI.
 
-And them watch them all go up 3x-15x+ https://t.co/SZj4bAAIMH</div>
+And them watch them all go up 3x-15x+ after institutions bought up the float. 
+
+...</div>
         <div class="tweet-actions">
           <details>
             <summary>展开原文 / 收起</summary>
@@ -737,19 +948,21 @@ I think after retail saw institutions bear post my thesis posts.
 
 Then ended up paper handing $AXTI, then $RPI,  then $IQE, then $EWY, then $SNDK, then $AAOI, then $SOI.
 
-And them watch them all go up 3x-15x+ https://t.co/SZj4bAAIMH</div>
+And them watch them all go up 3x-15x+ after institutions bought up the float. 
+
+Retail finally learned not to trust them with anymore with names like $SIVE?</div>
           </details>
           <a href="https://x.com/aleabitoreddit/status/2058943283234316632" target="_blank" rel="noopener noreferrer">跳转原文</a>
         </div>
-        <div class="tweet-zh"><b>中文译文：</b>$RPI，接近 3 倍回报。关闭媒体品牌“Meme Stock”。我想在零售看到机构发表我的论文帖子之后。然后最终纸质交$AXTI，然后$RPI，然后$IQE，然后$EWY，然后$SNDK，然后$AAOI，然后$SOI。他们看着它们全部上涨 3 倍至 15 倍以上 https://t.co/SZj4bAAIMH</div>
+        <div class="tweet-zh"><b>中文译文：</b>$RPI，接近 3 倍回报。关闭媒体品牌“Meme Stock”。我想在零售看到机构发表我的论文帖子之后。然后最终纸质交$AXTI，然后$RPI，然后$IQE，然后$EWY，然后$SNDK，然后$AAOI，然后$SOI。在机构买入流通股后，他们看着它们全部上涨 3 倍至 15 倍以上。零售业终于学会不再相信像 $SIVE 这样的名字了？</div>
         <div class="tweet-foot">
-          <span>likes 161 / retweets 13 / replies 71 / views 28604</span>
+          <span>likes 888 / retweets 51 / replies 130 / views 364275</span>
         </div>
         <div class="chips"></div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="12">
+      <article class="tweet-card" data-tweet-index="13">
         <div class="tweet-head">
           <span class="mono">2026-05-24 00:55</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$MRVL</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$OSS</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$VPG</span></span>
@@ -866,7 +1079,7 @@ Not the dollar amount made.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="13">
+      <article class="tweet-card" data-tweet-index="14">
         <div class="tweet-head">
           <span class="mono">2026-05-19 12:43</span>
           <span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span></span>
@@ -891,7 +1104,7 @@ It’s eerily similar to price rises on info synthesis -&amp;gt; institutions pu
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="14">
+      <article class="tweet-card" data-tweet-index="15">
         <div class="tweet-head">
           <span class="mono">2026-05-16 05:34</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$MRVL</span><span class="chip red">$OSS</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$VPG</span></span>
@@ -980,7 +1193,7 @@ Do you remember all of these anon?</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="15">
+      <article class="tweet-card" data-tweet-index="16">
         <div class="tweet-head">
           <span class="mono">2026-05-12 18:09</span>
           <span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
@@ -1027,7 +1240,7 @@ The ones focusing on actual fundamentals are the ones they&#x27;re mocking.</div
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="16">
+      <article class="tweet-card" data-tweet-index="17">
         <div class="tweet-head">
           <span class="mono">2026-05-07 04:40</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$LPK</span><span class="chip red">$OSS</span><span class="chip red">$RPI</span><span class="chip red">$SIMO</span><span class="chip red">$SIVEF</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span></span>
@@ -1062,7 +1275,7 @@ $ARM 现在在我做多的个股名单上排名第 18，今年迄今股价达到
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="17">
+      <article class="tweet-card" data-tweet-index="18">
         <div class="tweet-head">
           <span class="mono">2026-05-05 19:41</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -1087,7 +1300,7 @@ Fun to see this idea age well. https://t.co/wx9hQYzJGT</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="18">
+      <article class="tweet-card" data-tweet-index="19">
         <div class="tweet-head">
           <span class="mono">2026-05-02 01:24</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SNDK</span><span class="chip red">$TSM</span></span>
@@ -1128,7 +1341,7 @@ My $EWY longs are now up ~3x.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="19">
+      <article class="tweet-card" data-tweet-index="20">
         <div class="tweet-head">
           <span class="mono">2026-04-21 16:33</span>
           <span><span class="chip red">$AMD</span><span class="chip red">$GFS</span><span class="chip red">$JBL</span><span class="chip red">$MRVL</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
@@ -1167,7 +1380,7 @@ At least this volatility helps transfer control over to US investors/institution
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="20">
+      <article class="tweet-card" data-tweet-index="21">
         <div class="tweet-head">
           <span class="mono">2026-04-21 05:03</span>
           <span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
@@ -1216,7 +1429,7 @@ A thesis should live and die based on merit, not the authority of who is comes f
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="21">
+      <article class="tweet-card" data-tweet-index="22">
         <div class="tweet-head">
           <span class="mono">2026-04-20 09:47</span>
           <span><span class="chip red">$ALRIB</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MTSI</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
@@ -1257,7 +1470,7 @@ $SIVE 供应链中的很多东西都非常引人注目。胜半(3105)每天只�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="22">
+      <article class="tweet-card" data-tweet-index="23">
         <div class="tweet-head">
           <span class="mono">2026-04-20 07:11</span>
           <span><span class="chip red">$ALRIB</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$GOOGL</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LWLG</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MTSI</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
@@ -1338,7 +1551,7 @@ Of course, it&#x27;s good to barbell with other uncorrelated companies to AI sup
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="23">
+      <article class="tweet-card" data-tweet-index="24">
         <div class="tweet-head">
           <span class="mono">2026-04-20 04:40</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AMD</span><span class="chip red">$AMKR</span><span class="chip red">$AMZN</span><span class="chip red">$ARM</span><span class="chip red">$AVGO</span><span class="chip red">$AXTI</span><span class="chip red">$CEG</span><span class="chip red">$COHR</span><span class="chip red">$CRCL</span><span class="chip red">$CVX</span><span class="chip red">$DRAM</span><span class="chip red">$FN</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$INTC</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MOG.A</span><span class="chip red">$MP</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span><span class="chip red">$NEE</span><span class="chip red">$POWL</span><span class="chip red">$RKLB</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SMTC</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VPG</span><span class="chip red">$XLU</span></span>
@@ -1379,7 +1592,7 @@ But the reason they’re not new is because markets have validated the thesis an
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="24">
+      <article class="tweet-card" data-tweet-index="25">
         <div class="tweet-head">
           <span class="mono">2026-04-19 12:51</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$RPI</span></span>
@@ -1404,7 +1617,7 @@ If my thesis is originally unique like $RPI or $AXTI I’m going to victory lap 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="25">
+      <article class="tweet-card" data-tweet-index="26">
         <div class="tweet-head">
           <span class="mono">2026-04-18 03:52</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$IQE</span><span class="chip red">$IREN</span><span class="chip red">$LITE</span><span class="chip red">$MSFT</span><span class="chip red">$OSS</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIVEF</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span></span>
@@ -1491,7 +1704,7 @@ Comments like this do make it helpful to stay on X, and I do enjoy taking victor
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="26">
+      <article class="tweet-card" data-tweet-index="27">
         <div class="tweet-head">
           <span class="mono">2026-04-17 03:44</span>
           <span><span class="chip red">$AEHR</span><span class="chip red">$AXTI</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
@@ -1528,7 +1741,7 @@ Idk... whenever you&#x27;re first to something, it&#x27;s just a ton of hate com
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="27">
+      <article class="tweet-card" data-tweet-index="28">
         <div class="tweet-head">
           <span class="mono">2026-04-17 03:36</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ALRIB</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$GDRZF</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$OSS</span><span class="chip red">$RPI</span><span class="chip red">$SIVEF</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span></span>
@@ -1611,7 +1824,7 @@ But helps me keep motivated to keep posting with these positive comments.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="28">
+      <article class="tweet-card" data-tweet-index="29">
         <div class="tweet-head">
           <span class="mono">2026-04-17 00:55</span>
           <span><span class="chip red">$ALRIB</span><span class="chip red">$AXTI</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SLOIF</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
@@ -1652,7 +1865,7 @@ Why does everything around me keep doubling? https://t.co/ttgmKWEhhU</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="29">
+      <article class="tweet-card" data-tweet-index="30">
         <div class="tweet-head">
           <span class="mono">2026-04-16 03:00</span>
           <span><span class="chip red">$ALRIB</span><span class="chip red">$AVGO</span><span class="chip red">$IQE</span><span class="chip red">$JBL</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$VECO</span></span>
@@ -1721,7 +1934,7 @@ This is a completely different model than the same institutions telling you to b
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="30">
+      <article class="tweet-card" data-tweet-index="31">
         <div class="tweet-head">
           <span class="mono">2026-04-16 02:31</span>
           <span><span class="chip red">$ALRIB</span><span class="chip red">$IQE</span><span class="chip red">$LWLG</span><span class="chip red">$MSFT</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span></span>
@@ -1790,7 +2003,7 @@ SOI 美元年初至今上涨 208%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="31">
+      <article class="tweet-card" data-tweet-index="32">
         <div class="tweet-head">
           <span class="mono">2026-04-15 06:37</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$APPL</span><span class="chip red">$LITE</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -1833,7 +2046,7 @@ It&#x27;s now being re-rated as an AI hardware company.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="32">
+      <article class="tweet-card" data-tweet-index="33">
         <div class="tweet-head">
           <span class="mono">2026-04-11 04:30</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$EWY</span><span class="chip red">$FORM</span><span class="chip red">$GDRZF</span><span class="chip red">$HOOD</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$NBIS</span><span class="chip red">$OSS</span><span class="chip red">$RKLB</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$TSEM</span></span>
@@ -1917,7 +2130,7 @@ $AEHR -&gt; 2x
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="33">
+      <article class="tweet-card" data-tweet-index="34">
         <div class="tweet-head">
           <span class="mono">2026-04-10 18:59</span>
           <span><span class="chip red">$RPI</span></span>
@@ -1942,7 +2155,7 @@ Knight Serenity sounds kinda cool</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="34">
+      <article class="tweet-card" data-tweet-index="35">
         <div class="tweet-head">
           <span class="mono">2026-04-08 11:16</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AEHR</span><span class="chip red">$ARM</span><span class="chip red">$COHR</span><span class="chip red">$HPS.A</span><span class="chip red">$IQE</span><span class="chip red">$LASR</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$NBIS</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span></span>
@@ -1986,7 +2199,7 @@ Apart from those, names I&#x27;ve positively mentioned like $MRVL, $AAOI, $RDDT,
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="35">
+      <article class="tweet-card" data-tweet-index="36">
         <div class="tweet-head">
           <span class="mono">2026-04-01 00:16</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span></span>
@@ -2007,7 +2220,7 @@ Apart from those, names I&#x27;ve positively mentioned like $MRVL, $AAOI, $RDDT,
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="36">
+      <article class="tweet-card" data-tweet-index="37">
         <div class="tweet-head">
           <span class="mono">2026-03-31 23:13</span>
           <span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span></span>
@@ -2078,7 +2291,7 @@ If it is structural demand and Raspberry Pi is the $NVDA for consumer agentic ha
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="37">
+      <article class="tweet-card" data-tweet-index="38">
         <div class="tweet-head">
           <span class="mono">2026-03-31 21:19</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2103,7 +2316,7 @@ Now $RPI is trading at roughly 2 fwd p/s as a fabless ai hardware company.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="38">
+      <article class="tweet-card" data-tweet-index="39">
         <div class="tweet-head">
           <span class="mono">2026-03-31 21:14</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2128,7 +2341,7 @@ $RPI ended up hitting 58%.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="39">
+      <article class="tweet-card" data-tweet-index="40">
         <div class="tweet-head">
           <span class="mono">2026-03-31 21:05</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2171,7 +2384,7 @@ Raspberry Pi 已成为 OpenClaw 首选的快速加速 AI 编排硬件。</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="40">
+      <article class="tweet-card" data-tweet-index="41">
         <div class="tweet-head">
           <span class="mono">2026-03-31 19:38</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span></span>
@@ -2225,7 +2438,7 @@ If you want a later stage pick, you can look at $LITE that already ran 3800%.</d
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="41">
+      <article class="tweet-card" data-tweet-index="42">
         <div class="tweet-head">
           <span class="mono">2026-03-31 18:58</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$COHR</span><span class="chip red">$LITE</span><span class="chip red">$MRVL</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span></span>
@@ -2288,7 +2501,7 @@ The other is designed into Jabil and Celestial for a reason.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="42">
+      <article class="tweet-card" data-tweet-index="43">
         <div class="tweet-head">
           <span class="mono">2026-03-31 18:43</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2317,7 +2530,7 @@ I just got a ton of endless sht over $RPI from everyone outside my follower base
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="43">
+      <article class="tweet-card" data-tweet-index="44">
         <div class="tweet-head">
           <span class="mono">2026-03-31 18:41</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2346,7 +2559,7 @@ Regardless, finally vindicated from earnings. 58% Y/Y growth is phenomenal, just
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="44">
+      <article class="tweet-card" data-tweet-index="45">
         <div class="tweet-head">
           <span class="mono">2026-03-31 18:22</span>
           <span><span class="chip red">$GME</span><span class="chip red">$RPI</span></span>
@@ -2375,7 +2588,7 @@ $RPI is likely going to be repriced upward a lot after the 58% growth estimate r
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="45">
+      <article class="tweet-card" data-tweet-index="46">
         <div class="tweet-head">
           <span class="mono">2026-03-31 18:15</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2406,7 +2619,7 @@ Now they&#x27;re all silent, and then just updated their models on an AI fabless
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="46">
+      <article class="tweet-card" data-tweet-index="47">
         <div class="tweet-head">
           <span class="mono">2026-03-31 18:02</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$RPI</span></span>
@@ -2445,7 +2658,7 @@ Now $RPI is at ~19x-23.8x fwd p/e, with revenue acceleration due to OpenClaw.</d
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="47">
+      <article class="tweet-card" data-tweet-index="48">
         <div class="tweet-head">
           <span class="mono">2026-03-31 17:38</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -2490,7 +2703,7 @@ $RPI 新分析师预测：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="48">
+      <article class="tweet-card" data-tweet-index="49">
         <div class="tweet-head">
           <span class="mono">2026-03-20 21:00</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AXTI</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$HOOD</span><span class="chip red">$LPTH</span><span class="chip red">$NBIS</span><span class="chip red">$OSS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$RPI</span><span class="chip red">$SIVE</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span><span class="chip red">$VLN</span></span>
@@ -2551,7 +2764,7 @@ People can say anything they want but markets are the final arbiter of truth.</d
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="49">
+      <article class="tweet-card" data-tweet-index="50">
         <div class="tweet-head">
           <span class="mono">2026-03-17 22:34</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -2576,7 +2789,7 @@ Glad to see it’s finally getting some attention by other analysts. https://t.c
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="50">
+      <article class="tweet-card" data-tweet-index="51">
         <div class="tweet-head">
           <span class="mono">2026-03-15 10:09</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$EWY</span><span class="chip red">$GOOGL</span><span class="chip red">$IQE</span><span class="chip red">$LITE</span><span class="chip red">$RPI</span><span class="chip red">$SOI</span></span>
@@ -2659,7 +2872,7 @@ Excited to see what&#x27;s to come in the future and I&#x27;m happy X gave me th
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="51">
+      <article class="tweet-card" data-tweet-index="52">
         <div class="tweet-head">
           <span class="mono">2026-03-12 08:54</span>
           <span><span class="chip red">$AXTI</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SLOIF</span><span class="chip red">$SOI</span><span class="chip red">$TSEM</span><span class="chip red">$TSM</span></span>
@@ -2712,7 +2925,7 @@ $SOI 几乎垄断了 CPO 的衬底层。我计划在未来一两年内继续持�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="52">
+      <article class="tweet-card" data-tweet-index="53">
         <div class="tweet-head">
           <span class="mono">2026-03-04 21:50</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2737,7 +2950,7 @@ One of the heavy underperformers. https://t.co/Ww00UZhb3U</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="53">
+      <article class="tweet-card" data-tweet-index="54">
         <div class="tweet-head">
           <span class="mono">2026-03-03 17:47</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2762,7 +2975,7 @@ Feels like I’m still seeing openclaw posts every day so as long as AI agent ar
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="54">
+      <article class="tweet-card" data-tweet-index="55">
         <div class="tweet-head">
           <span class="mono">2026-03-03 02:21</span>
           <span><span class="chip red">$AAOI</span><span class="chip red">$AXTI</span><span class="chip red">$LASR</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$XLU</span></span>
@@ -2807,7 +3020,7 @@ Large part of it is riding the momentum.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="55">
+      <article class="tweet-card" data-tweet-index="56">
         <div class="tweet-head">
           <span class="mono">2026-02-25 01:35</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2832,7 +3045,7 @@ Hope OpenClaw serves as a good long term catalyst. https://t.co/rTgP8DNDZn</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="56">
+      <article class="tweet-card" data-tweet-index="57">
         <div class="tweet-head">
           <span class="mono">2026-02-24 22:54</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2857,7 +3070,7 @@ Seems like other themes like software and cybersecurity aren’t doing too well 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="57">
+      <article class="tweet-card" data-tweet-index="58">
         <div class="tweet-head">
           <span class="mono">2026-02-24 15:03</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span></span>
@@ -2882,7 +3095,7 @@ Ever stop to wonder if there’s something structural with OpenClaw demand if ev
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="58">
+      <article class="tweet-card" data-tweet-index="59">
         <div class="tweet-head">
           <span class="mono">2026-02-22 02:47</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2915,7 +3128,7 @@ I’d rather not have a profitable fabless semi like Raspberry Pi turn into a me
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="59">
+      <article class="tweet-card" data-tweet-index="60">
         <div class="tweet-head">
           <span class="mono">2026-02-22 02:41</span>
           <span><span class="chip red">$RPI</span></span>
@@ -2944,7 +3157,7 @@ Even with that statement it’s probably more true than the commentary they made
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="60">
+      <article class="tweet-card" data-tweet-index="61">
         <div class="tweet-head">
           <span class="mono">2026-02-22 02:39</span>
           <span><span class="chip red">$DELL</span><span class="chip red">$RPI</span></span>
@@ -2969,7 +3182,7 @@ Clearly a lot of the market writers have no clue what they’re talking about</d
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="61">
+      <article class="tweet-card" data-tweet-index="62">
         <div class="tweet-head">
           <span class="mono">2026-02-22 02:19</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$GME</span><span class="chip red">$RPI</span></span>
@@ -3036,7 +3249,7 @@ This was a fundamental, highly-specific argument, but multiple media outlets jus
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="62">
+      <article class="tweet-card" data-tweet-index="63">
         <div class="tweet-head">
           <span class="mono">2026-02-21 15:35</span>
           <span><span class="chip red">$AEHR</span><span class="chip red">$AIRO</span><span class="chip red">$AVAV</span><span class="chip red">$AXTI</span><span class="chip red">$CIFR</span><span class="chip red">$CPSH</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$CVX</span><span class="chip red">$ETOR</span><span class="chip red">$EWY</span><span class="chip red">$FORM</span><span class="chip red">$GLXY</span><span class="chip red">$HOOD</span><span class="chip red">$INFQ</span><span class="chip red">$INTC</span><span class="chip red">$IREN</span><span class="chip red">$LPTH</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$NBIS</span><span class="chip red">$ONDS</span><span class="chip red">$ORCL</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$RDDT</span><span class="chip red">$RPI</span><span class="chip red">$SMCI</span><span class="chip red">$SOFI</span><span class="chip red">$VLN</span><span class="chip red">$XLU</span></span>
@@ -3171,7 +3384,7 @@ So it does bring me gratitude that people find my ideas interesting or high-sign
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="63">
+      <article class="tweet-card" data-tweet-index="64">
         <div class="tweet-head">
           <span class="mono">2026-02-19 16:57</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$GME</span><span class="chip red">$RPI</span></span>
@@ -3249,7 +3462,7 @@ Framing it as $GME-type rally around squeezing opposition shorts, when there&#x2
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="64">
+      <article class="tweet-card" data-tweet-index="65">
         <div class="tweet-head">
           <span class="mono">2026-02-19 03:00</span>
           <span><span class="chip red">$PLTR</span><span class="chip red">$RPI</span></span>
@@ -3278,7 +3491,7 @@ Wild times we live in where journalists from Reuters to Bloomberg cite your post
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="65">
+      <article class="tweet-card" data-tweet-index="66">
         <div class="tweet-head">
           <span class="mono">2026-02-18 21:44</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3307,7 +3520,7 @@ I’m not sure if UK companies move as fast as US hyperscalers but we’ll see.<
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="66">
+      <article class="tweet-card" data-tweet-index="67">
         <div class="tweet-head">
           <span class="mono">2026-02-18 21:36</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3336,7 +3549,7 @@ That being said even with the new OpenClaw catalysts, it’s still down 31% sinc
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="67">
+      <article class="tweet-card" data-tweet-index="68">
         <div class="tweet-head">
           <span class="mono">2026-02-18 21:09</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span></span>
@@ -3371,7 +3584,7 @@ I’m just commentating on structural shifts people miss in plain sight, as we e
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="68">
+      <article class="tweet-card" data-tweet-index="69">
         <div class="tweet-head">
           <span class="mono">2026-02-18 16:47</span>
           <span><span class="chip red">$META</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span></span>
@@ -3440,7 +3653,7 @@ And we’re witnessing that real possibility for the first time with different O
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="69">
+      <article class="tweet-card" data-tweet-index="70">
         <div class="tweet-head">
           <span class="mono">2026-02-18 09:50</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3481,7 +3694,7 @@ But going back to the earlier point, it&#x27;s the equivalent of choosing an iph
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="70">
+      <article class="tweet-card" data-tweet-index="71">
         <div class="tweet-head">
           <span class="mono">2026-02-18 08:50</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span><span class="chip red">$S</span><span class="chip red">$TWLO</span></span>
@@ -3510,7 +3723,7 @@ Will need to take a look into $S.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="71">
+      <article class="tweet-card" data-tweet-index="72">
         <div class="tweet-head">
           <span class="mono">2026-02-18 08:43</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span></span>
@@ -3557,7 +3770,7 @@ That being said, the rest depends on the company&#x27;s execution to grow into t
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="72">
+      <article class="tweet-card" data-tweet-index="73">
         <div class="tweet-head">
           <span class="mono">2026-02-18 07:55</span>
           <span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span></span>
@@ -3590,7 +3803,7 @@ But I see the market opportunity, so I&#x27;m along for the ride to see where it
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="73">
+      <article class="tweet-card" data-tweet-index="74">
         <div class="tweet-head">
           <span class="mono">2026-02-18 07:37</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -3629,7 +3842,7 @@ Into an AI hardware company that sells mass producible boards for AI Agent Orche
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="74">
+      <article class="tweet-card" data-tweet-index="75">
         <div class="tweet-head">
           <span class="mono">2026-02-17 22:15</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3658,7 +3871,7 @@ They&#x27;ve been price hiking boards like RPI 5 so they don&#x27;t eat up memor
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="75">
+      <article class="tweet-card" data-tweet-index="76">
         <div class="tweet-head">
           <span class="mono">2026-02-17 22:13</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3687,7 +3900,7 @@ Turns out that has another use case in AI agent swarms.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="76">
+      <article class="tweet-card" data-tweet-index="77">
         <div class="tweet-head">
           <span class="mono">2026-02-17 20:47</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3712,7 +3925,7 @@ But that&#x27;s very cheap to me considering $RPI has become the leader for AI a
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="77">
+      <article class="tweet-card" data-tweet-index="78">
         <div class="tweet-head">
           <span class="mono">2026-02-17 20:37</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3741,7 +3954,7 @@ Regardless, my thought process is that even if they can&#x27;t scale up capacity
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="78">
+      <article class="tweet-card" data-tweet-index="79">
         <div class="tweet-head">
           <span class="mono">2026-02-17 20:31</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3770,7 +3983,7 @@ That being said, not quite sure how markets will price this in but I&#x27;m alon
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="79">
+      <article class="tweet-card" data-tweet-index="80">
         <div class="tweet-head">
           <span class="mono">2026-02-17 20:18</span>
           <span><span class="chip red">$META</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span></span>
@@ -3819,7 +4032,7 @@ $NVDA 从用于游戏玩家的 GPU 转变为用于 AI 推理/训练的 GPU。并
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="80">
+      <article class="tweet-card" data-tweet-index="81">
         <div class="tweet-head">
           <span class="mono">2026-02-17 17:20</span>
           <span><span class="chip red">$AAPL</span><span class="chip red">$RPI</span></span>
@@ -3844,7 +4057,7 @@ My guess is that it should have a material impact on revenue compared to the mac
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="81">
+      <article class="tweet-card" data-tweet-index="82">
         <div class="tweet-head">
           <span class="mono">2026-02-17 17:10</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -3869,7 +4082,7 @@ $RPI up another 19.34%, from yesterday&#x27;s 8.1%. https://t.co/DRQTCjIlmQ</div
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="82">
+      <article class="tweet-card" data-tweet-index="83">
         <div class="tweet-head">
           <span class="mono">2026-02-17 01:46</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3894,7 +4107,7 @@ It&#x27;s a fun trade with potential upside if the openclaw demand is not a cycl
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="83">
+      <article class="tweet-card" data-tweet-index="84">
         <div class="tweet-head">
           <span class="mono">2026-02-17 01:38</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3927,7 +4140,7 @@ Don&#x27;t think $RPI hiked prices enough on their models (did a massive hike ~F
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="84">
+      <article class="tweet-card" data-tweet-index="85">
         <div class="tweet-head">
           <span class="mono">2026-02-16 23:55</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3956,7 +4169,7 @@ It’s a fun idea that nobody shared yet tying it to Openclaw variants. Hope it�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="85">
+      <article class="tweet-card" data-tweet-index="86">
         <div class="tweet-head">
           <span class="mono">2026-02-16 23:23</span>
           <span><span class="chip red">$RPI</span></span>
@@ -3985,7 +4198,7 @@ People seem to be buying/hoarding the product, but nobody I&#x27;ve talked to kn
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="86">
+      <article class="tweet-card" data-tweet-index="87">
         <div class="tweet-head">
           <span class="mono">2026-02-16 23:12</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$MU</span><span class="chip red">$NVDA</span><span class="chip red">$RPI</span><span class="chip red">$SNDK</span></span>
@@ -4092,7 +4305,7 @@ TLDR: People are openly buying Raspberry Pis and Apple Mac Minis for Openclaw/Pi
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="87">
+      <article class="tweet-card" data-tweet-index="88">
         <div class="tweet-head">
           <span class="mono">2026-02-16 23:09</span>
           <span><span class="chip red">$APPL</span><span class="chip red">$RPI</span></span>

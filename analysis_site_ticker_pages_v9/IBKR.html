@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$IBKR 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -25,18 +26,18 @@
     <section class="hero">
       <span class="eyebrow">Ticker Detail</span>
       <h1>$IBKR 历史推文</h1>
-      <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+      <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>55</b></div>
-        <div class="stat-card"><span>历史推文</span><b>55</b></div>
+        <div class="stat-card"><span>累计提及</span><b>57</b></div>
+        <div class="stat-card"><span>历史推文</span><b>57</b></div>
         <div class="stat-card"><span>首次提及</span><b>2025-09-16</b></div>
-        <div class="stat-card"><span>最近提及</span><b>2026-05-20</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-06-26</b></div>
         <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
         <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
             
       </div>
-      <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用） 4</span><span class="chip blue">关税 / 宏观冲击买点 3</span><span class="chip blue">机构滞后 / 暗池与资金流 3</span><span class="chip blue">Mag7 客户集中度过滤 2</span><span class="chip blue">信念分层、仓位与时点 2</span><span class="chip blue">签约 ARR vs 市值错配 2</span></div>
+      <div class="chips"><span class="chip blue">Vega / IV 错定价（高阶，慎用） 4</span><span class="chip blue">机构滞后 / 暗池与资金流 4</span><span class="chip blue">关税 / 宏观冲击买点 3</span><span class="chip blue">Mag7 客户集中度过滤 2</span><span class="chip blue">信念分层、仓位与时点 2</span><span class="chip blue">签约 ARR vs 市值错配 2</span></div>
     </section>
     <nav class="detail-tabs" aria-label="Ticker detail sections"><a href="#core-overview">核心结论</a><a href="#price-timeline">走势</a><a href="#historical-tweets">历史推文</a><a href="#fundamentals">基本面</a><a href="#sentiment">情绪面</a><a href="#news">消息面</a><a href="#filings">披露信息</a></nav>
     
@@ -50,7 +51,7 @@
         <div class="analysis-grid panel-body">
           <article class="analysis-box">
             <h3>Serenity 观点</h3>
-            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
           </article>
           <article class="analysis-box">
             <h3>新增信号</h3>
@@ -62,7 +63,7 @@
           </article>
           <article class="analysis-box">
             <h3>作者立场</h3>
-            <p>近期观点：观察，等待更多一手证据确认边际变化。</p>
+            <p>近期观点：偏积极，重点核验是否是真卡点以及订单/毛利率传导。</p>
           </article>
           <article class="analysis-box">
             <h3>情绪与市场</h3>
@@ -121,6 +122,97 @@
           
       <article class="tweet-card" data-tweet-index="0">
         <div class="tweet-head">
+          <span class="mono">2026-06-26 21:06</span>
+          <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
+        </div>
+        <div class="tweet-text">just throwing out a random thought, the UBS report is anecdotally true + and it&#x27;s interesting there&#x27;s more Chinese reports on Anthropic distillation.  
+
+Many US startups/companies using AI:
+
+Are using Chinese models like DeepSeek since they’re much cheaper than Gemini/OpenAI/Anthropic reasoning models for cost per task...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">just throwing out a random thought, the UBS report is anecdotally true + and it&#x27;s interesting there&#x27;s more Chinese reports on Anthropic distillation.  
+
+Many US startups/companies using AI:
+
+Are using Chinese models like DeepSeek since they’re much cheaper than Gemini/OpenAI/Anthropic reasoning models for cost per task.
+
+Kinda a catch 22 when US is built on capitalism and everyone goes for the cheaper options.
+
+I think the US just has to get good and out innovate here:
+
+- both with heavy KYC-auth frontier models for US only like Mythos given those are being distilled by competitors. and amybe staggered tiers for allied partners so US is always ahead
+
+Maybe something like dedicated AI Google auth like FaceID + Persona would do the trick before access/key creation for the newer models, then short lived scopes.
+
+At least addressing those simpler fake/stolen account + pool allegations, requiring biometrics before use.
+
+Then US Gov drafting new regulations making it illegal for sharing access similar to identity forgery with bank accounts.
+
+- then the most obvious one is just heavily optimized reasoning models that mogs DeepSeek and others.
+
+Kinda good Trump admin paused Fable/Mythos access, imo not quite sure why a trillion dollar company keeps letting itself get distilled over and over again.
+
+There should be friction added if you’re accessing something close to ASI.
+
+TLDR: US just needs to good at cheap inference and add bank-grade authentication to AI model access. Easier said than done tho.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2070493783804813451" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>只是抛出一个随机的想法，瑞银的报告据说是真实的+而且有趣的是中国有更多关于人择蒸馏的报告。许多使用人工智能的美国初创公司/公司：
+
+正在使用像 DeepSeek 这样的中国模型，因为它们的每项任务成本比 Gemini/OpenAI/Anthropic 推理模型便宜得多。当美国建立在资本主义基础上并且每个人都追求更便宜的选择时，这有点像第二十二条军规。我认为美国必须在这方面取得进步并进行创新：
+
+- 两者都具有重型 KYC 验证前沿模型，仅适用于美国，例如 Mythos，因为这些模型正在被竞争对手提炼。和 amybe 为盟友交错了层级，因此美国始终领先
+
+也许像 FaceID + Persona 这样的专用 AI Google 身份验证之类的东西可以在为新模型创建访问/密钥之前解决这个问题，然后是短暂的范围。至少解决那些更简单的假/被盗帐户+矿池指控，在使用前需要进行生物识别。随后，美国政府起草了新法规，规定与银行账户共享类似于身份伪造的访问权限是非法的。- 那么最明显的一个就是深度优化的推理模型，它影响了 DeepSeek 和其他模型。特朗普政府暂停了《寓言/神话》的访问，我不太清楚为什么一家价值数万亿美元的公司不断让自己一次又一次地被提炼。如果您访问接近 ASI 的内容，应该会增加摩擦。TLDR：美国只需要擅长廉价推理，并为人工智能模型访问添加银行级身份验证。说起来容易做起来难。</div>
+        <div class="tweet-foot">
+          <span>likes 746 / retweets 45 / replies 189 / views 587121</span>
+        </div>
+        <div class="chips"></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
+        <div class="tweet-head">
+          <span class="mono">2026-06-06 07:59</span>
+          <span><span class="chip red">$IBKR</span><span class="chip red">$SIVE</span></span>
+        </div>
+        <div class="tweet-text">Sigh. 
+
+I keep telling retail + Swedish Hedge Funds how important $SIVE is to CPO, but people don’t listen.
+
+Enough retail holders got shaken off, and 
+now JP Morgan managed to buy up a massive stake in Sivers (purely institutional).
+
+JP Morgan went from .4% ownership last month to 5%+ ownership this month…</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">Sigh. 
+
+I keep telling retail + Swedish Hedge Funds how important $SIVE is to CPO, but people don’t listen.
+
+Enough retail holders got shaken off, and 
+now JP Morgan managed to buy up a massive stake in Sivers (purely institutional).
+
+JP Morgan went from .4% ownership last month to 5%+ ownership this month…</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2063048067432239598" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>叹息。我一直告诉零售+瑞典对冲基金 $SIVE 对 CPO 有多么重要，但人们不听。足够多的零售持有者被甩掉了，并且 
+现在，摩根大通成功收购了Sivers的大量股份（纯机构）。摩根大通的持股比例从上个月的 0.4% 增至本月的 5% 以上……</div>
+        <div class="tweet-foot">
+          <span>likes 2364 / retweets 134 / replies 436 / views 1571507</span>
+        </div>
+        <div class="chips"><span class="chip blue">机构滞后 / 暗池与资金流</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="2">
+        <div class="tweet-head">
           <span class="mono">2026-05-20 21:10</span>
           <span><span class="chip red">$IBKR</span></span>
         </div>
@@ -144,7 +236,7 @@ Costs a tiny fee though.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="1">
+      <article class="tweet-card" data-tweet-index="3">
         <div class="tweet-head">
           <span class="mono">2026-05-17 07:47</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -183,7 +275,7 @@ And I hope whatever I do sets a lasting example for X about the positive sum nat
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="2">
+      <article class="tweet-card" data-tweet-index="4">
         <div class="tweet-head">
           <span class="mono">2026-05-10 06:16</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -212,7 +304,7 @@ But names like Goldman Sachs are institutional.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="3">
+      <article class="tweet-card" data-tweet-index="5">
         <div class="tweet-head">
           <span class="mono">2026-05-10 05:56</span>
           <span><span class="chip red">$IBKR</span><span class="chip red">$SIVE</span></span>
@@ -364,7 +456,7 @@ $SIVE 来自多数派：
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="4">
+      <article class="tweet-card" data-tweet-index="6">
         <div class="tweet-head">
           <span class="mono">2026-05-08 17:18</span>
           <span><span class="chip red">$BOA</span><span class="chip red">$FNF</span><span class="chip red">$IBKR</span><span class="chip red">$SCHW</span><span class="chip red">$SIVE</span></span>
@@ -446,7 +538,7 @@ Nordnet Pensionsförsäkring AB - 2.73
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="5">
+      <article class="tweet-card" data-tweet-index="7">
         <div class="tweet-head">
           <span class="mono">2026-05-04 06:45</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -479,7 +571,7 @@ They had their chance to innovate but focused on Melania Coin integrations</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="6">
+      <article class="tweet-card" data-tweet-index="8">
         <div class="tweet-head">
           <span class="mono">2026-04-29 14:18</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -510,7 +602,7 @@ Hope $HOOD pivots to the right direction.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="7">
+      <article class="tweet-card" data-tweet-index="9">
         <div class="tweet-head">
           <span class="mono">2026-04-29 13:53</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -539,7 +631,7 @@ But just current execution (remove payment order flow for options) and lack of i
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="8">
+      <article class="tweet-card" data-tweet-index="10">
         <div class="tweet-head">
           <span class="mono">2026-04-29 13:29</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -580,7 +672,7 @@ Maybe things would have gone better despite digital asset downturn.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="9">
+      <article class="tweet-card" data-tweet-index="11">
         <div class="tweet-head">
           <span class="mono">2026-04-29 08:54</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -609,7 +701,7 @@ Long only equity in Asia/EU shouldn&#x27;t be treated the same as US short dated
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="10">
+      <article class="tweet-card" data-tweet-index="12">
         <div class="tweet-head">
           <span class="mono">2026-04-29 08:46</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -638,7 +730,7 @@ Even going long with options has less maintenance margin lol.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="11">
+      <article class="tweet-card" data-tweet-index="13">
         <div class="tweet-head">
           <span class="mono">2026-04-29 08:42</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -671,7 +763,7 @@ Do you guys just use prime brokers or something to get around this?</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="12">
+      <article class="tweet-card" data-tweet-index="14">
         <div class="tweet-head">
           <span class="mono">2026-04-28 11:01</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -700,7 +792,7 @@ Their UI can use a lot of work though.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="13">
+      <article class="tweet-card" data-tweet-index="15">
         <div class="tweet-head">
           <span class="mono">2026-04-28 10:42</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -729,7 +821,7 @@ This is going to be fun, I had a lot of ideas in mind I couldn’t long.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="14">
+      <article class="tweet-card" data-tweet-index="16">
         <div class="tweet-head">
           <span class="mono">2026-04-23 17:02</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -750,7 +842,7 @@ This is going to be fun, I had a lot of ideas in mind I couldn’t long.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="15">
+      <article class="tweet-card" data-tweet-index="17">
         <div class="tweet-head">
           <span class="mono">2026-04-23 16:58</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -775,7 +867,7 @@ But it legitimately is the better brokerage right now, I’m surprised $HOOD doe
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="16">
+      <article class="tweet-card" data-tweet-index="18">
         <div class="tweet-head">
           <span class="mono">2026-04-21 02:52</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -800,7 +892,7 @@ But I do think all the retail accounts only account for a slight boost relative 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="17">
+      <article class="tweet-card" data-tweet-index="19">
         <div class="tweet-head">
           <span class="mono">2026-04-18 01:18</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -825,7 +917,7 @@ About time, stop letting DeepSeek, Moonshoot, and MiniMax have a free pass to di
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="18">
+      <article class="tweet-card" data-tweet-index="20">
         <div class="tweet-head">
           <span class="mono">2026-04-07 12:04</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -846,7 +938,7 @@ About time, stop letting DeepSeek, Moonshoot, and MiniMax have a free pass to di
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="19">
+      <article class="tweet-card" data-tweet-index="21">
         <div class="tweet-head">
           <span class="mono">2026-04-03 20:05</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -871,7 +963,7 @@ It&#x27;s blue when you go to USD values on $IBKR.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="20">
+      <article class="tweet-card" data-tweet-index="22">
         <div class="tweet-head">
           <span class="mono">2026-03-27 13:02</span>
           <span><span class="chip red">$IBKR</span><span class="chip red">$SIVE</span></span>
@@ -892,7 +984,7 @@ It&#x27;s blue when you go to USD values on $IBKR.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="21">
+      <article class="tweet-card" data-tweet-index="23">
         <div class="tweet-head">
           <span class="mono">2026-03-24 23:50</span>
           <span><span class="chip red">$IBKR</span><span class="chip red">$SIVE</span></span>
@@ -913,7 +1005,7 @@ It&#x27;s blue when you go to USD values on $IBKR.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="22">
+      <article class="tweet-card" data-tweet-index="24">
         <div class="tweet-head">
           <span class="mono">2026-03-24 15:21</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span><span class="chip red">$IQE</span><span class="chip red">$SIVE</span></span>
@@ -954,7 +1046,7 @@ What a wild timeline.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="23">
+      <article class="tweet-card" data-tweet-index="25">
         <div class="tweet-head">
           <span class="mono">2026-03-22 20:59</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -975,7 +1067,7 @@ What a wild timeline.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="24">
+      <article class="tweet-card" data-tweet-index="26">
         <div class="tweet-head">
           <span class="mono">2026-03-19 15:05</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$GOOGL</span><span class="chip red">$IBKR</span><span class="chip red">$JBL</span><span class="chip red">$META</span><span class="chip red">$MSFT</span><span class="chip red">$SIVE</span></span>
@@ -1008,7 +1100,7 @@ They’re a huge player.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="25">
+      <article class="tweet-card" data-tweet-index="27">
         <div class="tweet-head">
           <span class="mono">2026-03-19 03:02</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -1033,7 +1125,7 @@ So didn&#x27;t really care much about 1-2% limit fill differences.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="26">
+      <article class="tweet-card" data-tweet-index="28">
         <div class="tweet-head">
           <span class="mono">2026-03-18 08:34</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -1058,7 +1150,7 @@ $IBKR has access to most stocks compared to $HOOD and others.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="27">
+      <article class="tweet-card" data-tweet-index="29">
         <div class="tweet-head">
           <span class="mono">2026-03-02 00:25</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -1079,7 +1171,7 @@ $IBKR has access to most stocks compared to $HOOD and others.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="28">
+      <article class="tweet-card" data-tweet-index="30">
         <div class="tweet-head">
           <span class="mono">2026-02-25 01:40</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -1100,7 +1192,7 @@ $IBKR has access to most stocks compared to $HOOD and others.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="29">
+      <article class="tweet-card" data-tweet-index="31">
         <div class="tweet-head">
           <span class="mono">2026-02-24 13:25</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -1125,7 +1217,7 @@ But that brokerage has access to international stocks.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="30">
+      <article class="tweet-card" data-tweet-index="32">
         <div class="tweet-head">
           <span class="mono">2026-02-24 10:23</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$IBKR</span><span class="chip red">$INTC</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBCLF</span><span class="chip red">$SNDK</span></span>
@@ -1146,7 +1238,7 @@ But that brokerage has access to international stocks.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="31">
+      <article class="tweet-card" data-tweet-index="33">
         <div class="tweet-head">
           <span class="mono">2026-02-24 03:12</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -1199,7 +1291,7 @@ KYC 验证。从 $HOOD 到 $IBKR 的每个金融机构都会这样做来跟踪�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="32">
+      <article class="tweet-card" data-tweet-index="34">
         <div class="tweet-head">
           <span class="mono">2026-02-20 12:51</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -1224,7 +1316,7 @@ Just in case people think this is one-off returns. https://t.co/Z9jr5ttd51</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="33">
+      <article class="tweet-card" data-tweet-index="35">
         <div class="tweet-head">
           <span class="mono">2026-02-17 18:33</span>
           <span><span class="chip red">$IBKR</span><span class="chip red">$RPBPF</span></span>
@@ -1249,7 +1341,7 @@ $IBKR accounts should be really quick to setup.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="34">
+      <article class="tweet-card" data-tweet-index="36">
         <div class="tweet-head">
           <span class="mono">2026-02-17 18:24</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -1270,7 +1362,7 @@ $IBKR accounts should be really quick to setup.</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="35">
+      <article class="tweet-card" data-tweet-index="37">
         <div class="tweet-head">
           <span class="mono">2026-02-17 16:42</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -1299,7 +1391,7 @@ Using $IBKR or others, you get better execution, and it goes direct to exchanges
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="36">
+      <article class="tweet-card" data-tweet-index="38">
         <div class="tweet-head">
           <span class="mono">2026-02-11 17:36</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -1350,7 +1442,7 @@ Don’t think relying on prediction markets is the right choice to go down. It�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="37">
+      <article class="tweet-card" data-tweet-index="39">
         <div class="tweet-head">
           <span class="mono">2026-02-03 15:00</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -1371,7 +1463,7 @@ Don’t think relying on prediction markets is the right choice to go down. It�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="38">
+      <article class="tweet-card" data-tweet-index="40">
         <div class="tweet-head">
           <span class="mono">2026-01-28 21:50</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -1396,7 +1488,7 @@ Pretty sure @vladtenev should make this his #1 priority. https://t.co/ne4ZdKaZYy
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="39">
+      <article class="tweet-card" data-tweet-index="41">
         <div class="tweet-head">
           <span class="mono">2026-01-28 20:39</span>
           <span><span class="chip red">$IBKR</span></span>
@@ -1417,7 +1509,7 @@ Pretty sure @vladtenev should make this his #1 priority. https://t.co/ne4ZdKaZYy
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="40">
+      <article class="tweet-card" data-tweet-index="42">
         <div class="tweet-head">
           <span class="mono">2026-01-28 20:22</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$IBKR</span><span class="chip red">$INTC</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBCLF</span><span class="chip red">$SNDK</span></span>
@@ -1500,7 +1592,7 @@ SK Hynix - 几乎完全专注于 HBM4 和服务器级 DRAM。三星 - 将 30-40%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="41">
+      <article class="tweet-card" data-tweet-index="43">
         <div class="tweet-head">
           <span class="mono">2026-01-26 06:26</span>
           <span><span class="chip red">$HY9H</span><span class="chip red">$IBKR</span></span>
@@ -1521,7 +1613,7 @@ SK Hynix - 几乎完全专注于 HBM4 和服务器级 DRAM。三星 - 将 30-40%
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="42">
+      <article class="tweet-card" data-tweet-index="44">
         <div class="tweet-head">
           <span class="mono">2026-01-26 06:16</span>
           <span><span class="chip red">$EWY</span><span class="chip red">$FLKR</span><span class="chip red">$IBKR</span><span class="chip red">$INTC</span><span class="chip red">$LPTH</span><span class="chip red">$MU</span><span class="chip red">$NBCLF</span><span class="chip red">$SNDK</span></span>
@@ -1588,7 +1680,7 @@ Nitto Boseki 等公司在美国也有类似的场外交易，例如 $NBCLF。如
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="43">
+      <article class="tweet-card" data-tweet-index="45">
         <div class="tweet-head">
           <span class="mono">2026-01-24 02:34</span>
           <span><span class="chip red">$IBKR</span><span class="chip red">$TTMI</span></span>
@@ -1617,7 +1709,7 @@ Also I talk about a lot of things, there&#x27;s tons of other opportunities out 
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="44">
+      <article class="tweet-card" data-tweet-index="46">
         <div class="tweet-head">
           <span class="mono">2026-01-04 13:15</span>
           <span><span class="chip red">$ASHM</span><span class="chip red">$GRZ.V</span><span class="chip red">$IBKR</span></span>
@@ -1646,7 +1738,7 @@ For that reason, lot of these are not on Nasdaq / NYSE because of small marketca
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="45">
+      <article class="tweet-card" data-tweet-index="47">
         <div class="tweet-head">
           <span class="mono">2025-11-20 18:23</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMD</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$BULL</span><span class="chip red">$CIFR</span><span class="chip red">$COIN</span><span class="chip red">$CORZ</span><span class="chip red">$CRCL</span><span class="chip red">$CRDO</span><span class="chip red">$DELL</span><span class="chip red">$ETOR</span><span class="chip red">$FISV</span><span class="chip red">$FLNC</span><span class="chip red">$FLY</span><span class="chip red">$GLXY</span><span class="chip red">$GOOGL</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IONQ</span><span class="chip red">$IREN</span><span class="chip red">$KRKNF</span><span class="chip red">$KRUS</span><span class="chip red">$LTC</span><span class="chip red">$META</span><span class="chip red">$MRVL</span><span class="chip red">$MSFT</span><span class="chip red">$MU</span><span class="chip red">$NBIS</span><span class="chip red">$NVDA</span><span class="chip red">$OSS</span><span class="chip red">$PLTR</span><span class="chip red">$QBTS</span><span class="chip red">$RDDT</span><span class="chip red">$RKLB</span><span class="chip red">$SBET</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$SNAP</span><span class="chip red">$SOL</span><span class="chip red">$TE</span><span class="chip red">$TSLA</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WLAC</span><span class="chip red">$WMT</span><span class="chip red">$WULF</span><span class="chip red">$WYFI</span></span>
@@ -1818,7 +1910,7 @@ $CIFR 是 AI 算力云公司 领域我第二喜欢的股票。据我记忆，该
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="46">
+      <article class="tweet-card" data-tweet-index="48">
         <div class="tweet-head">
           <span class="mono">2025-11-14 21:30</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$CIFR</span><span class="chip red">$GOOGL</span><span class="chip red">$IBKR</span><span class="chip red">$MSFT</span><span class="chip red">$NBIS</span></span>
@@ -1847,7 +1939,7 @@ But missing one or two huge rebound days after a selloff can cost the biggest re
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="47">
+      <article class="tweet-card" data-tweet-index="49">
         <div class="tweet-head">
           <span class="mono">2025-10-29 00:25</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span><span class="chip red">$MSFT</span><span class="chip red">$SPY</span></span>
@@ -1882,7 +1974,7 @@ Again it&#x27;s kinda nuanced depending on what exactly you&#x27;re aiming to do
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="48">
+      <article class="tweet-card" data-tweet-index="50">
         <div class="tweet-head">
           <span class="mono">2025-10-02 04:27</span>
           <span><span class="chip red">$ETOR</span><span class="chip red">$IBKR</span></span>
@@ -1903,7 +1995,7 @@ Again it&#x27;s kinda nuanced depending on what exactly you&#x27;re aiming to do
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="49">
+      <article class="tweet-card" data-tweet-index="51">
         <div class="tweet-head">
           <span class="mono">2025-09-29 02:28</span>
           <span><span class="chip red">$CIFR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span><span class="chip red">$NBIS</span></span>
@@ -2055,7 +2147,7 @@ IV 为 92%，这对于期权销售来说非常好。你会得到更多的溢价�
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="50">
+      <article class="tweet-card" data-tweet-index="52">
         <div class="tweet-head">
           <span class="mono">2025-09-27 04:45</span>
           <span><span class="chip red">$HOOD</span><span class="chip red">$IBKR</span></span>
@@ -2105,7 +2197,7 @@ Generally great advice overall for traders to learn.  Just my thoughts and nuanc
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="51">
+      <article class="tweet-card" data-tweet-index="53">
         <div class="tweet-head">
           <span class="mono">2025-09-21 02:57</span>
           <span><span class="chip red">$ETOR</span><span class="chip red">$IBKR</span></span>
@@ -2134,7 +2226,7 @@ But ~800+ net cash, 3.6B marketcap, growing 22% y/y like $IBKR, profitable, down
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="52">
+      <article class="tweet-card" data-tweet-index="54">
         <div class="tweet-head">
           <span class="mono">2025-09-18 05:25</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$APLD</span><span class="chip red">$ASTS</span><span class="chip red">$BMNR</span><span class="chip red">$BTBT</span><span class="chip red">$CIFR</span><span class="chip red">$CRDO</span><span class="chip red">$DAVE</span><span class="chip red">$DELL</span><span class="chip red">$DLO</span><span class="chip red">$ETOR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$MVST</span><span class="chip red">$NBIS</span><span class="chip red">$NVTS</span><span class="chip red">$ONDS</span><span class="chip red">$OPEN</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RUM</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
@@ -2177,7 +2269,7 @@ $ONDS (1.99B)、$NVTS (1.3B)、$MVST (1B) 或其他建议
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="53">
+      <article class="tweet-card" data-tweet-index="55">
         <div class="tweet-head">
           <span class="mono">2025-09-17 04:38</span>
           <span><span class="chip red">$ALAB</span><span class="chip red">$AMZN</span><span class="chip red">$ASTS</span><span class="chip red">$BMNR</span><span class="chip red">$BTBT</span><span class="chip red">$CRDO</span><span class="chip red">$DAVE</span><span class="chip red">$DELL</span><span class="chip red">$DLO</span><span class="chip red">$ETOR</span><span class="chip red">$HIMS</span><span class="chip red">$HOOD</span><span class="chip red">$IBIT</span><span class="chip red">$IBKR</span><span class="chip red">$IREN</span><span class="chip red">$LTC</span><span class="chip red">$LULU</span><span class="chip red">$MRVL</span><span class="chip red">$MSTR</span><span class="chip red">$NBIS</span><span class="chip red">$OPEN</span><span class="chip red">$ORCL</span><span class="chip red">$RKLB</span><span class="chip red">$RUM</span><span class="chip red">$SG</span><span class="chip red">$SMCI</span><span class="chip red">$TSM</span><span class="chip red">$TSSI</span><span class="chip red">$WULF</span></span>
@@ -2239,7 +2331,7 @@ Anything else I&#x27;m missing?</div>
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="54">
+      <article class="tweet-card" data-tweet-index="56">
         <div class="tweet-head">
           <span class="mono">2025-09-17 02:57</span>
           <span><span class="chip red">$ETOR</span><span class="chip red">$GOOGL</span><span class="chip red">$IBKR</span><span class="chip red">$UPWK</span></span>

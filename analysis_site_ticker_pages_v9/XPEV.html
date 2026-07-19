@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$XPEV 历史推文 - Serenity Analysis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22%231d1d1f%22/%3E%3Ctext%20x=%2232%22%20y=%2241%22%20text-anchor=%22middle%22%20font-family=%22Arial%22%20font-size=%2224%22%20font-weight=%22700%22%20fill=%22white%22%3ESX%3C/text%3E%3C/svg%3E" />
   <style>
       :root{--bg:#f8fafc;--panel:#fff;--ink:#020617;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff;--red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;--radius:8px}
       *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;letter-spacing:0}.shell{width:min(1280px,calc(100vw - 24px));margin:0 auto}.top-wrap{position:sticky;top:0;z-index:20;padding:12px 0 0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px)}.topbar{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--line);background:rgba(255,255,255,.96);border-radius:999px;padding:8px 12px}.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.brand-mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:8px;background:#020617;color:#fff;font-size:13px;font-weight:800}.brand-title{display:block;font-size:14px;font-weight:800;color:var(--ink)}.brand-subtitle{display:block;margin-top:2px;color:var(--muted);font-size:12px}.back{display:inline-flex;min-height:36px;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;padding:0 12px;text-decoration:none;font-size:12px;font-weight:800}main{padding:16px 0 80px}.hero,.panel,.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.hero{padding:22px;margin-bottom:14px}.eyebrow{display:inline-flex;min-height:24px;align-items:center;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#64748b;padding:0 8px;font-size:11px;font-weight:800;text-transform:uppercase}h1{margin:12px 0 0;color:var(--ink);font-size:36px;line-height:1.12;font-weight:850}.hero p{margin:9px 0 0;color:#475569;font-size:14px;line-height:1.7}.detail-tabs{position:sticky;top:76px;z-index:14;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}.detail-tabs a{display:inline-flex;min-height:30px;align-items:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 10px;text-decoration:none;font-size:12px;font-weight:800}.detail-tabs a:hover,.detail-tabs a:focus-visible{outline:0;border-color:#2563eb;background:#dbeafe}#core-overview,#price-timeline,#historical-tweets,#analysis-supplement,#fundamentals,#sentiment,#news,#filings{scroll-margin-top:126px}.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.stat-card{padding:10px}.stat-card span{display:block;color:#64748b;font-size:10px;font-weight:800}.stat-card b{display:block;margin-top:5px;color:#0f172a;font-size:12px;overflow-wrap:anywhere}.panel{overflow:hidden;margin-top:14px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(248,250,252,.8);padding:14px 16px}.panel-kicker{margin:0 0 4px;color:#64748b;font-size:11px;font-weight:800;text-transform:uppercase}.panel-title{margin:0;color:var(--ink);font-size:16px;line-height:1.35;font-weight:800}.panel-body{padding:14px}.tweet-list{display:grid;gap:12px}.tweet-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:12px}.tweet-card.is-hidden{display:none}.tweet-head,.tweet-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#64748b;font-size:11px;margin-bottom:8px}.mono{font-family:"Cascadia Mono","Consolas",monospace;font-size:12px;color:#0f172a;font-weight:750}.tweet-text,.tweet-full,.tweet-zh,.tweet-history{margin-top:9px;border:1px solid var(--line);border-radius:7px;background:#f8fafc;padding:10px;color:#334155;font-size:13px;line-height:1.65;white-space:pre-wrap}.tweet-text{border-color:#e2e8f0;background:#fff}.tweet-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.tweet-actions details{width:100%;order:2}.tweet-actions summary{cursor:pointer;color:#1d4ed8;font-size:12px;font-weight:800;list-style:none}.tweet-actions a{color:#1d4ed8;font-weight:800;text-decoration:none;font-size:12px}.tweet-zh{border-color:#bfdbfe;background:#eff6ff;color:#1e3a8a}.tweet-history{border-color:#fde68a;background:#fffbeb;color:#78350f}.tweet-foot{margin-top:9px;margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:6px;background:#f8fafc;color:#475569;padding:3px 7px;font-size:11px;font-weight:650}.chip.red{border-color:#fecaca;background:#fef2f2;color:#b91c1c}.chip.blue{border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8}.chart-wrap{padding:14px}.price-chart{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#f8fafc}.price-line{stroke:#2563eb;stroke-width:2.4}.tweet-dot{fill:#16a34a;stroke:#fff;stroke-width:2}.grid-line{stroke:#e2e8f0;stroke-width:1}.axis-line{stroke:#94a3b8;stroke-width:1}.axis-label,.legend{fill:#64748b;font-size:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.analysis-box{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:12px}.analysis-box h3{margin:0 0 10px;color:#0f172a;font-size:14px}.analysis-box h4{margin:0 0 8px;color:#0f172a;font-size:13px}.analysis-box p{margin:8px 0 0;color:#334155;font-size:13px;line-height:1.65}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mini-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;font-size:12px}.mini-table th,.mini-table td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.mini-table th{background:#f8fafc;color:#64748b;font-size:11px}.mini-table tr:last-child td{border-bottom:0}.stat-line{margin:10px 0 0;color:#334155;font-size:13px;line-height:1.6}.stat-line b{display:inline-block;margin-right:4px;color:#0f172a}.sub-block{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.share-row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;padding:8px 10px;margin-top:8px;font-size:12px}.share-row span{color:#64748b;font-weight:700}.share-row em{font-style:normal;font-weight:800}.risk-red{display:inline-flex;align-items:center;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;padding:1px 7px;font-weight:800}.risk-note{margin:8px 0 0;color:#b91c1c;font-size:12px;line-height:1.6}.resource-row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#0f172a;text-decoration:none;padding:9px 10px;margin-top:8px;font-size:13px}.resource-row b{color:#1d4ed8;white-space:nowrap}.empty-state{border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;background:#f8fafc;padding:14px;font-size:13px}.load-more{display:inline-flex;min-height:36px;align-items:center;justify-content:center;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;padding:0 14px;font-size:12px;font-weight:800;cursor:pointer}.load-more-wrap{display:flex;justify-content:center;margin-top:14px}@media(max-width:900px){.stats,.analysis-grid,.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.share-row{grid-template-columns:1fr}h1{font-size:28px}.topbar{border-radius:16px}.detail-tabs{top:72px;border-radius:16px}.detail-tabs a{flex:1;justify-content:center;min-width:86px}}
@@ -28,10 +29,10 @@
       <p>近期观点：中性观察，名单更像研究入口，不应直接当交易信号。</p>
       <div class="stats">
         
-        <div class="stat-card"><span>累计提及</span><b>3</b></div>
-        <div class="stat-card"><span>历史推文</span><b>3</b></div>
+        <div class="stat-card"><span>累计提及</span><b>4</b></div>
+        <div class="stat-card"><span>历史推文</span><b>4</b></div>
         <div class="stat-card"><span>首次提及</span><b>2025-12-22</b></div>
-        <div class="stat-card"><span>最近提及</span><b>2026-05-12</b></div>
+        <div class="stat-card"><span>最近提及</span><b>2026-07-12</b></div>
         <div class="stat-card"><span>首次基准</span><b>待接入行情</b></div>
         <div class="stat-card"><span>迄今</span><b>待接入行情</b></div>
             
@@ -120,6 +121,108 @@
         <div class="tweet-list">
           
       <article class="tweet-card" data-tweet-index="0">
+        <div class="tweet-head">
+          <span class="mono">2026-07-12 18:12</span>
+          <span><span class="chip red">$CCXI</span><span class="chip red">$TSLA</span><span class="chip red">$XPEV</span></span>
+        </div>
+        <div class="tweet-text">So there&#x27;s a IBK Research report on Boston Dynamics value chains from last month. 
+
+Just a summary: 
+
+IBK maps these companies to Atlas as suppliers:
+- Hwashin (010690) / body, arms, legs
+- LG Energy (373220) / battery 
+- Hyundai Autoever (307950) / integration
+- Hyundai Mobis (012330) / actuators
+
+As for humanoid volu...</div>
+        <div class="tweet-actions">
+          <details>
+            <summary>展开原文 / 收起</summary>
+            <div class="tweet-full">So there&#x27;s a IBK Research report on Boston Dynamics value chains from last month. 
+
+Just a summary: 
+
+IBK maps these companies to Atlas as suppliers:
+- Hwashin (010690) / body, arms, legs
+- LG Energy (373220) / battery 
+- Hyundai Autoever (307950) / integration
+- Hyundai Mobis (012330) / actuators
+
+As for humanoid volume ramps: 
+
+They&#x27;re modeling for, 11.29K in 2028, 20k 2029, 30k in 2030... 40k in 2031, and 50k in 2032. 
+
+Not quite sure why IBK and other institutions are a fan of linearly modeling S-curve volume ramps... 
+
+Like adding +10K per year, don&#x27;t quite think it&#x27;s volume ramp is going to work like that... if I had to guess it would look more like: 
+
+- 15-20k 2028
+- 40k-70k 2029
+- 90k-140k for 2030
+
+Since Boston Dynamics is projecting 30k capacity by 2028 (I&#x27;m sure they&#x27;d aim to get more online by 2029-2030), as China collectively is already doing 100k EOY in 2026.  
+
+In terms of competitive landscape they name:
+
+- $TSLA, Figure, Apptronik, $CCXI (Agility), as US  players. Then Boston Dynamics (Korea parent owned now)
+- Unitree, Fourier, AGibot, UBtech, $XPEV as the Chinese leaders. 
+- Neura, Pal Robotics, Wandercraft, Oversonic, as the EU leaders.  
+
+They also did quite a lot of valuation modeling around Hyundai Mobis/Hyundai Autoever/Glovis. 
+
+Regarding the BD economic ownership from 27.9% from Hyundai Motor, 11.3% from Mobis, and 11.3% from Glovis. So at least institution are valuing humanoid segments inside companies lot more now. 
+
+Then from report assumptions:
+- 31 actuators per Atlas
+- $1K per actuator in 2028
+- $134K Atlas ASP,
+
+Which implies actuator cost of final selling price is roughly 23–28%. 
+
+Probably the more interesting statement was IBK stated that actuator capacity is biggest signal for volume ramp. eg. every 310,000 units of actuator capacity supports 10,000 more robots. 
+
+So tracking actuator outputs, yields, ASP is a cleaner read on 2028-2030 ramp.
+
+I didn&#x27;t have much personal takeaways, but hopefully others find it interesting, maybe around Hwashin as a core supplier or around actuator capacity as an indicator.</div>
+          </details>
+          <a href="https://x.com/aleabitoreddit/status/2076248337863639506" target="_blank" rel="noopener noreferrer">跳转原文</a>
+        </div>
+        <div class="tweet-zh"><b>中文译文：</b>上个月有一份关于波士顿动力价值链的 IBK 研究报告。只是一个总结： 
+
+IBK 将这些公司作为供应商映射到 Atlas：
+- 和信 (010690) / 身体、手臂、腿
+- LG 能源 (373220) / 电池 
+- 现代 Autoever (307950) / 整合
+- 现代摩比斯 (012330) / 执行器
+
+至于人形体积斜坡： 
+
+他们正在为 2028 年 11.29K、2029 年 20K、2030 年 30K……2031 年 40K、2032 年 50K 进行建模。不太清楚为什么 IBK 和其他机构热衷于线性建模 S 曲线成交量斜坡...... 
+
+就像每年增加+10K一样，不太认为它的销量增长会像那样工作......如果我不得不猜测它看起来更像是： 
+
+- 15-20k 2028
+- 40k-70k 2029
+- 2030 年 90k-140k
+
+由于Boston Dynamics预计到 2028 年产能将达到 3 万个（我相信他们的目标是在 2029 年至 2030 年之前实现更多在线产能），而中国在 2026 年的总产能已达到 10 万个。在竞争格局方面，他们指出：
+
+- $TSLA、Figure、Apptronik、$CCXI（Agility），作为美国玩家。然后是Boston Dynamics（现为韩国母公司所有）
+- Unitree、Fourier、AGibot、UBtech、$XPEV 为中国领先者。- Neura、Pal Robotics、Wandercraft、Oversonic 为欧盟领导者。他们还围绕现代摩比斯/现代 Autoever/Glovis 进行了大量估值建模。BD经济所有权方面，现代汽车占27.9%，摩比斯占11.3%，格洛维斯占11.3%。因此，至少机构现在更加重视公司内部的人形部分。然后根据报告假设：
+- 每个 Atlas 31 个执行器
+- 2028 年每个执行器将达到 1,000 美元
+- 13.4 万美元 Atlas ASP，
+
+这意味着最终售价的执行器成本大约为 23-28%。也许更有趣的说法是 IBK 表示执行器容量是成交量增长的最大信号。例如。每31万个执行器容量可支持1万个以上的机器人。因此，跟踪执行器输出、产量、ASP 是 2028-2030 年斜坡的更清晰的解读。我没有太多个人收获，但希望其他人觉得它很有趣，也许围绕和信作为核心供应商，或者围绕执行器容量作为指标。</div>
+        <div class="tweet-foot">
+          <span>likes 756 / retweets 70 / replies 113 / views 344516</span>
+        </div>
+        <div class="chips"><span class="chip blue">认证周期 vs TTM 营收</span></div>
+      </article>
+    
+
+      <article class="tweet-card" data-tweet-index="1">
         <div class="tweet-head">
           <span class="mono">2026-05-13 07:00</span>
           <span><span class="chip red">$ABB</span><span class="chip red">$ACUVI</span><span class="chip red">$AEVA</span><span class="chip red">$ALNT</span><span class="chip red">$AMBA</span><span class="chip red">$AMBQ</span><span class="chip red">$ARBE</span><span class="chip red">$ATOM</span><span class="chip red">$AUR</span><span class="chip red">$BAM</span><span class="chip red">$BOT</span><span class="chip red">$BSL</span><span class="chip red">$CATL</span><span class="chip red">$CGNX</span><span class="chip red">$CTH.V</span><span class="chip red">$HG</span><span class="chip red">$HLIT</span><span class="chip red">$HSYDF</span><span class="chip red">$IMSR</span><span class="chip red">$INDI</span><span class="chip red">$ISRG</span><span class="chip red">$KDK</span><span class="chip red">$KITT</span><span class="chip red">$KLIC</span><span class="chip red">$LSCC</span><span class="chip red">$MBLY</span><span class="chip red">$MKA</span><span class="chip red">$MRAM</span><span class="chip red">$MRLN</span><span class="chip red">$NEO</span><span class="chip red">$NOVT</span><span class="chip red">$OUST</span><span class="chip red">$PDY</span><span class="chip red">$RKLB</span><span class="chip red">$RR</span><span class="chip red">$SERV</span><span class="chip red">$SHA.DE</span><span class="chip red">$SYM</span><span class="chip red">$TSLA</span><span class="chip red">$VPG</span><span class="chip red">$XBOT</span><span class="chip red">$XPEV</span><span class="chip red">$ZBRA</span></span>
@@ -283,7 +386,7 @@ Harmonic Drive、$OUST、$BOT、$VPG、$MBLY 和 Ubtech 出现最多。将开始
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="1">
+      <article class="tweet-card" data-tweet-index="2">
         <div class="tweet-head">
           <span class="mono">2026-01-02 01:26</span>
           <span><span class="chip red">$AMZN</span><span class="chip red">$RR</span><span class="chip red">$TSLA</span><span class="chip red">$XPEV</span></span>
@@ -310,7 +413,7 @@ There&#x27;s some like $RR, but they&#x27;re nowhere close to the types of verti
       </article>
     
 
-      <article class="tweet-card" data-tweet-index="2">
+      <article class="tweet-card" data-tweet-index="3">
         <div class="tweet-head">
           <span class="mono">2025-12-22 14:12</span>
           <span><span class="chip red">$BYD</span><span class="chip red">$XPEV</span></span>
