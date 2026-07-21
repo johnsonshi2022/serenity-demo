@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="高盛大幅上修中际旭创，大摩则把CPO时间显式放进概率模型。结合Serenity的卡点研究与Oracle资本强度，重新判断算力、存储和光模块的利润归属。">
+  <title>AI链进入利润验证期：高盛强牛、大摩CPO风险与Serenity框架 - Serenity 往日报告</title>
+  <style>
+    :root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(1060px,calc(100vw - 28px));margin:0 auto}.top{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(246,248,251,.94);backdrop-filter:blur(10px)}
+    .top-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{color:var(--ink);font-weight:900;text-decoration:none}.back{display:inline-flex;align-items:center;min-height:36px;border:1px solid #bfdbfe;border-radius:999px;background:#fff;padding:0 13px;text-decoration:none;font-size:13px;font-weight:800}
+    main{padding:34px 0 72px}.hero,.panel,.history-card,.reader-version{border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hero{padding:30px}.eyebrow,.part{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:900px;margin:10px 0 0;color:var(--ink);font-size:clamp(30px,5vw,52px);line-height:1.13;letter-spacing:-.035em}.hero>p{max-width:850px;margin:14px 0 0;color:#475569;font-size:15px;line-height:1.85}
+    .meta,.topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#f8fafc;padding:5px 9px;color:#475569;font-size:11px;font-weight:750}.chip.blue{border-color:#bfdbfe;background:var(--blue-soft);color:#1d4ed8}
+    .search{width:100%;margin-top:18px;border:1px solid #cbd5e1;border-radius:13px;background:#fff;padding:13px 15px;color:var(--ink);font:inherit;outline:none}.search:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}
+    .history-list{display:grid;gap:14px;margin-top:18px}.history-card{padding:20px}.history-card h2{margin:8px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.history-card p{margin:9px 0 0;line-height:1.75}.history-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.history-actions a{font-weight:850;text-decoration:none}
+    .empty{display:none;margin-top:18px;border:1px dashed #cbd5e1;border-radius:14px;background:#fff;padding:24px;text-align:center;color:var(--muted)}
+    .article-header{padding:28px}.article-header h1{font-size:clamp(28px,4vw,45px)}.versions{display:grid;gap:16px;margin-top:18px}.reader-version{overflow:hidden}.reader-version>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;cursor:pointer;list-style:none}.reader-version>summary::-webkit-details-marker{display:none}.reader-version>summary span{min-width:0}.reader-version>summary strong{display:block;color:var(--ink);font-size:17px}.reader-version>summary small{display:block;margin-top:5px;color:var(--muted);line-height:1.55}.reader-version>summary b{color:var(--blue);font-size:12px;white-space:nowrap}
+    .version-head{border-top:1px solid var(--line);background:var(--blue-soft);padding:23px}.version-head h2{margin:0;color:var(--ink);font-size:27px;line-height:1.35}.version-head p{margin:10px 0 0;line-height:1.75}.article-section{border-top:1px solid var(--line);padding:25px 23px}.article-section h3{margin:7px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.article-section p,.article-section li{font-size:15px;line-height:1.9}.article-section ul{padding-left:22px}code{border-radius:5px;background:#eef2f7;padding:2px 5px}
+    .sources{display:grid;gap:10px}.sources h3{margin-bottom:2px}.source-card{border:1px solid var(--line);border-radius:12px;background:#f8fafc;padding:13px}.source-card a,.source-card strong{font-weight:850}.source-card p{margin:7px 0 0;font-size:13px;line-height:1.7}.source-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.55}
+    .deep-report{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}.deep-report>summary{padding:19px 21px;cursor:pointer;color:var(--ink);font-weight:900}.markdown-body{border-top:1px solid var(--line);padding:24px;overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{color:var(--ink);line-height:1.4}.markdown-body h1{font-size:28px}.markdown-body h2{margin-top:34px;font-size:23px}.markdown-body h3{margin-top:27px;font-size:19px}.markdown-body p,.markdown-body li{line-height:1.85}.markdown-body table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.markdown-body blockquote{margin:16px 0;border-left:4px solid #93c5fd;background:#eff6ff;padding:10px 15px;color:#475569}.markdown-body pre{overflow:auto;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px}
+    footer{padding:24px 0 45px;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:680px){.top-inner{min-height:58px}main{padding-top:18px}.hero,.article-header{padding:21px}.history-card{padding:17px}.reader-version>summary{align-items:flex-start;padding:17px}.version-head,.article-section,.markdown-body{padding:18px}.article-section p,.article-section li{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell top-inner"><a class="brand" href="index.html">Serenity 往日报告</a><a class="back" href="../index.html#daily-article">返回当前首页</a></div></header>
+  <main class="shell">
+    <article class="article-header panel">
+      <span class="eyebrow">Approved Homepage Archive</span>
+      <h1>AI链进入利润验证期：高盛强牛、大摩CPO风险与Serenity框架</h1>
+      <p>高盛大幅上修中际旭创，大摩则把CPO时间显式放进概率模型。结合Serenity的卡点研究与Oracle资本强度，重新判断算力、存储和光模块的利润归属。</p>
+      <div class="meta"><span class="chip blue">截至 2026-07-18</span><span class="chip">批准于 2026-07-18T21:30:00+08:00</span><span class="chip">归档 ID：2026-07-18_213000_fc5962970e</span></div>
+      <div class="topics"><span class="chip">AI资本开支 / 信用</span><span class="chip">中际旭创 / 高盛大摩</span><span class="chip">Oracle CDS待核 / 债券</span><span class="chip">算力 / Neocloud</span><span class="chip">存储 / HBM</span><span class="chip">光模块 / CPO</span><span class="chip">去杠杆 / 信用重估</span></div>
+      <div class="history-actions"><a href="index.html">← 返回历史文章列表</a></div>
+    </article>
+    <section class="versions"><details class="reader-version" open><summary><span><strong>研究版</strong><small>完整保留获批时的研究结论、证据边界与跟踪指标。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>AI链进入利润验证期：高盛强牛、大摩CPO风险与Serenity框架</h2><p>高盛大幅上修中际旭创，大摩则把CPO时间显式放进概率模型。结合Serenity的卡点研究与Oracle资本强度，重新判断算力、存储和光模块的利润归属。</p></div><section class="article-section"><span class="part">Part 01</span><h3>核心判断：景气需要上调，永久高毛利仍需验证</h3><p>本轮更新最重要的结论是：中际旭创的短中期景气度和盈利弹性需要上调，但不能因此把光模块龙头直接等同于具备永久定价权的平台型资产。高盛给出量、价、份额、毛利率、费用率和估值同时改善的强牛场景；大摩则承认1.6T景气，同时把CPO商用时间和NPO对冲能力放进概率模型。</p><p>Oracle FY2026收入673.57亿美元，同比增长17.3%；经营现金流319.77亿美元，同比增长53.6%；RPO（剩余履约义务）达到6380亿美元，同比增长363%。但同期资本开支达到556.63亿美元，同比增长162.4%，简化自由现金流为-236.86亿美元，债务总额升至1295.41亿美元。资本开支相当于收入的82.6%，约为经营现金流的1.74倍。</p><p>这组数字意味着Oracle并非经营业务失血，也不等于即将违约；它面对的是更典型的高增长资本结构问题：未来收入可见度很强，但需要大量提前建设，现金支出先于收入确认，资本市场因而提高对融资、客户信用和合同兑现的风险补偿。</p><p>截至2026年7月16日，FRED的ICE BofA美国投资级公司债OAS为78bp，高收益债OAS为271bp，分别只处于近五年约16.5%和9.8%分位。广义信用市场仍然平静。由于Oracle单名CDS尚未由Wind、Bloomberg或ICE复核，首页不再用截图点位计算违约概率或给Oracle做颜色预警。</p><ul><li>一句话框架：高盛定义上行空间，大摩定义尾部风险，Serenity负责验证产业卡点和利润归属。</li><li>近期暴跌不能只解释为错杀：去杠杆决定下跌速度，久期和信用重估决定估值压缩。</li><li>下一阶段最重要的不是总需求，而是订单质量、正常化毛利率、现金流和新架构中的价值保留。</li></ul></section><section class="article-section"><span class="part">Part 02</span><h3>CDS可以用，但当前必须降级为待核观察项</h3><p>CDS是信用温度计，不是股票短线择时器。它对重资产、负自由现金流、依赖再融资且客户集中的neocloud和数据中心运营商有价值；对模块供应商，则主要用于判断大客户Capex可持续性，而不是判断模块公司的产品竞争力。</p><p>一个可用的单名CDS信号至少需要可靠数据源、最新时间戳、1Y/3Y/5Y/10Y曲线、1日/1周/1月变化、同业与CDX IG相对差，以及债券OAS或新债发行利差交叉确认。此前约198.58bp截图不满足这些条件，所以不进入事实基线、违约概率、风险等级或配置阈值。</p><p>Wind数据补齐前，信用层先看Oracle的Capex/CFO、自由现金流、净债务、利息覆盖、客户预付款和RPO转化，再看FRED广义IG/HY利差、Oracle主要美元债成交和评级变化。</p><p>只有经核验的单名CDS、债券OAS、评级、合同进度和财务现金流至少三类同步恶化，才把公司级压力升级为产业风险。</p><ul><li>现在可用：SEC、Oracle IR、FRED、FINRA TRACE和评级机构公开信息。</li><li>以后接入：Oracle与同业CDS期限曲线、变化速度和历史分位。</li><li>研究纪律：没有可靠报价，就不从单一截图推导精确风险结论。</li></ul></section><section class="article-section"><span class="part">Part 03</span><h3>Oracle案例：RPO很强，为什么市场仍提高风险补偿</h3><p>Oracle官方披露，FY2026 RPO达到6380亿美元，Q3和Q4的大部分新增RPO来自大型AI合同。表面看，这应当降低未来收入不确定性；但信用市场关心的不只是合同金额，还关心预付款比例、客户集中度、上电进度、利用率、云服务毛利率、融资成本以及资产折旧。</p><p>大型合同中客户预付或客户提供硬件的部分累计约750亿美元，是重要缓冲，但也使研究重点转向合同对手方。客户信用强、预付充足、取消赔偿明确的RPO，价值远高于由未来融资能力支持、运营商需要先承担全部Capex的名义backlog。</p><p>Oracle FY2026现金及现金等价物312.89亿美元，债务总额1295.41亿美元，净债务约982.52亿美元，相当于经营现金流约3.07倍；营业利润约206.06亿美元，利息费用约45.99亿美元，营业利润/利息费用约4.48倍。这不是迫在眉睫的偿付危机，但已足以让资本市场重新评估信用安全垫。</p><p>所以研究Oracle不能在“RPO 6380亿”和“FCF -237亿”中二选一。正确公式应当是：合同名义规模 × 预付款比例 × 客户信用 × 上电进度 × 利用率 × 服务毛利率，减去融资成本、折旧和迭代风险。可靠CDS数据接入后可以把这些担忧压缩为连续价格，财报和合同仍负责解释这个价格。</p><ul><li>正面确认：RPO持续转化收入、客户预付款增加、利用率提高、经营现金流增速超过Capex。</li><li>负面确认：CDS与债券OAS同步扩大、评级展望下调、合同延期、预付款减少、融资结构继续恶化。</li><li>系统性升级：微软、亚马逊、谷歌、Meta及CDX IG也同步恶化，而不是只有Oracle承压。</li></ul></section><section class="article-section"><span class="part">Part 04</span><h3>Serenity的信用框架：这不是外加指标，而是原有论点的量化</h3><p>Serenity在2025年12月分析Oracle时已经写道：‘The drop was rational: The sell-off was driven by a rational repricing of credit risk and capital intensity.’ 中文可译为：‘这次下跌是有理性的，抛售来自市场对信用风险和资本密集度的重新定价。’ 他还把Oracle、CoreWeave对OpenAI的依赖，与部分由微软、谷歌等现金流更强客户支持的neocloud区分开来。</p><p>Serenity最新推文称：‘Meta正在洽谈一笔约100亿美元的算力租赁交易，把算力出租给Anthropic……如果连hyperscaler都开始照着这种模式做，这确实验证了NBIS、IREN等neocloud的商业逻辑。’ 这能验证算力租赁市场存在，却不会自动验证每家neocloud的利润率。Hyperscaler资金成本更低、软件生态更强，也可能成为直接竞争者。</p><p>在近期暴跌中，Serenity公开表示组合月内回撤约49.4%，并在暴跌后降低杠杆。这一点很重要：长期产业方向正确，不等于带杠杆的资本路径正确。公司层面同理，长期RPO和需求正确，也可能因为短期融资、债务期限和客户履约问题造成永久资本损失。</p><p>存储方面，他把美光与高通签署长期协议后股价仍下跌，理解为去杠杆和保证金连锁平仓的尾声。我们的补充是：长期协议能提高需求可见度，但不能取消存储周期；同样，RPO能提高Oracle收入可见度，但不能取消客户信用和融资风险。</p><ul><li>Serenity的优势：沿BOM寻找真实物理卡点，并持续跟踪产能、良率、认证和长期协议。</li><li>需要补上的层：客户信用、融资成本、资本强度、正常化毛利率和自由现金流。</li><li>新的研究原则：需求用订单验证，订单用客户信用验证，利润用毛利率验证，估值用自由现金流验证。</li></ul></section><section class="article-section"><span class="part">Part 05</span><h3>算力、存储和光模块，是三个不同的利润系统</h3><p><strong>算力首先要区分平台和资产运营。</strong> GPU/系统平台的壁垒来自软件生态、开发者迁移成本和系统设计，主要风险是自研ASIC、平台份额和性能成本变化；neocloud、数据中心和算力租赁的壁垒则来自GPU获取、电力、建设、运维和合同，主要风险是利用率、客户信用、融资成本、债务期限和GPU折旧。Oracle CDS对NVIDIA的直接解释力有限，对Oracle、CoreWeave及高杠杆neocloud的解释力很强。</p><p><strong>存储的壁垒强，但周期不会消失。</strong> DRAM/HBM原厂数量少，工艺、资本、良率和认证门槛高，供给受限时利润弹性很强；危险在于全行业看见短缺后同步扩产。价格仍上涨而库存下降停止、Capex/收入快速抬升、客户减少超额采购，往往是周期后半段信号。</p><p><strong>光模块需求可能最强，利润防御却未必最强。</strong> 上游InP、外延、EML/CW激光器、光芯片和部分DSP/driver更接近真实物理卡点；先进封装、耦合、热管理、测试和高良率生产具有复合制造壁垒；标准化模块集成更容易受到扩产、第二供应商和年度降价压力。</p><p>用户关于模块组装环节更容易竞争、利润率可能快速回落的方向性判断是成立的，但把中际旭创、新易盛等头部厂商简单称为低端组装商不准确。它们的客户认证、良率、供应链调度、自动化制造和规模交付均有真实壁垒，只是长期议价权通常弱于GPU平台的软件生态，也弱于DRAM/HBM原厂的工艺和寡头壁垒。</p><ul><li>算力看平台生态或资产回报；平台公司与neocloud不能使用同一种估值方法。</li><li>存储看合约价、库存、Capex纪律、产品组合和毛利率，不能用静态市盈率判断完整周期。</li><li>光模块看1.6T增量能否跑赢800G降价、客户份额、良率、毛利率、经营现金流和CPO价值迁移。</li><li>光模块最危险组合：收入高增，但毛利率连续两个季度下降，库存和Capex上升，经营现金流明显弱于净利润。</li></ul></section><section class="article-section"><span class="part">Part 06</span><h3>高盛强牛场景、大摩CPO框架与中际旭创的验证表</h3><p>知识星球转述的高盛2026年7月17日报告维持中际旭创买入，将目标价从1187元上调至2581元；2026—2028年盈利预测分别上调65%/108%/119%，预计同期收入和净利润CAGR为64%/69%，2027E目标PE从34.2倍提高到35.8倍。它隐含硅光出货、scale-up/across连接增量、产品结构、毛利率、费用率和估值多数同时改善，是高斜率的强牛市场景。</p><p>目前能确认的大摩报告日期是2026年2月26日，并非7月新报告。大摩维持增持，将目标价从500元上调至650元，2026E盈利上调16%，但2027E盈利下调4%以反映CPO风险；预计高端800G/1.6T模块需求从2025年2000万只增至2026年5300万只、2027年7100万只。</p><p>大摩为CPO设置基准50%、牛市30%、熊市20%的概率，基准假设2027年技术突破、2027H2或2028年开始规模商用，并把NPO视为中际旭创对冲价值迁移的重要变量。高盛适合作为上行空间，大摩的概率加权方法更适合作为首页基准。</p><p>两份报告共同确认AI网络从scale-out向scale-up和scale-across扩展，分歧在于中际旭创能否把代际领先转化为持续高毛利，以及CPO/NPO/XPO迁移后价值量是否仍留在公司体系内。</p><ul><li>量价验证：1.6T出货和溢价能否跑赢800G降价与客户年降。</li><li>份额验证：核心客户份额、第二/第三供应商导入和地区客户集中度。</li><li>利润验证：毛利率改善来自硅光占比、良率、紧缺涨价、汇率还是一次性结构。</li><li>现金流验证：经营现金流与净利润匹配，库存、预付款、应收和在建工程不能长期快于收入。</li><li>架构验证：NPO、XPO、OCS、CPO的送样、认证、量产时间与公司可保留价值量。</li></ul></section><section class="article-section"><span class="part">Part 07</span><h3>信用传导与2026H2—2028情景：谁会先受影响</h3><p>模型公司或云厂商融资条件恶化后，新数据中心项目的资金成本上升、上电节奏延迟。GPU和服务器订单先看合同、预付款和取消保护；存储需求再看长协、产品结构和库存缓冲；光模块由于多供应商、年度降价和相对较短交付周期，更容易在需求仍增长时先出现毛利率压缩。</p><p>基准情景是Oracle资本开支高于经营现金流，但融资渠道、客户预付款和RPO转化没有明显恶化，广义信用稳定，AI需求继续向GPU、存储、网络、电力和散热扩散。市场先出现高beta反弹，随后按客户信用、现金流和利润率重新分化；光模块仍有景气弹性，但估值不宜用峰值毛利率外推。</p><p>乐观情景是Oracle债券相对利差收窄，RPO持续转化收入，经营现金流增速快于资本开支；若CDS数据补齐，则期限曲线同步改善。1.6T、HBM/服务器DRAM和数据中心网络同时放量，中际旭创毛利率和现金流继续验证高盛强牛假设。</p><p>悲观情景是经核验的Oracle单名CDS或债券OAS持续扩大，评级下调、合同延期和现金流恶化，并向现金流更强的hyperscaler和CDX IG扩散；同时中际旭创出现毛利率连续下降、库存与Capex上升、客户份额正常化或CPO提前商用。最先受压的是高杠杆算力运营商和依赖远期高毛利的估值。</p><ul><li>最优合同：客户信用强，有预付款或take-or-pay，价格覆盖融资和折旧，合同与债务期限匹配，资产可转移。</li><li>最危险合同：名义backlog很大，但客户现金能力弱、运营商先承担Capex、债务期限短、资产难以转移。</li><li>订单规模应升级为‘信用调整后的订单质量’，不能只看RPO或backlog总额。</li></ul></section><section class="article-section"><span class="part">Part 08</span><h3>下一阶段的配置与首页跟踪框架</h3><p>组合研究应从‘AI主题配置’升级为‘价值链配置’。核心层放在平台生态强、内部现金流覆盖资本开支、客户分散的公司；周期层放在存储原厂和结构性产品，但必须持续跟踪价格、库存和Capex；弹性层包括高速光模块和neocloud，仓位应与毛利率、现金流、融资和客户信用相匹配；卡点层关注InP/激光器、先进封装、测试、电力和散热等扩产慢、认证长的节点。</p><p>首页应形成四层仪表盘。市场流动性层跟踪SOX/纳指相对强弱、融资余额、强平、相关性和波动率；信用层先跟踪债券OAS、新债利差、评级和FRED IG/HY，CDS核验后再加入期限曲线与同业比较；产业层跟踪Capex、RPO、预付款、上电、利用率、端口量和存储合约价；利润层跟踪ASP、毛利率、库存、应收、经营现金流和Capex/收入。</p><p>当前公开数据只能确认Oracle资本强度高，不能确认其精确CDS风险等级。待Wind通道可用后，应只读核验Oracle CDS曲线、同业CDS、主要美元债OAS/成交、评级历史和新债发行利差；在此之前不设置橙色或红色阈值。</p><p>下一阶段不会是所有AI股票同步回到前高，而会按客户信用、资本强度、利润率防御和自由现金流重新排序。最重要的执行原则是：不要因为AI需求长期增长，就假定所有承担Capex的人都能获得高回报，也不要因为单家公司CDS恶化，就否定整个供应链需求。</p><ul><li>核心层：平台生态与自我融资能力。</li><li>周期层：存储价格、库存和Capex纪律。</li><li>弹性层：光模块代际、份额、毛利率与现金流；neocloud利用率、融资和客户信用。</li><li>证伪层：信用曲线倒挂、债券OAS扩大、评级下调、合同延期、FCF继续恶化。</li></ul></section><section class="article-section"><span class="part">Part 09</span><h3>证据边界：公众号、知识星球、CDS截图和公开数据如何组合</h3><p>公众号文章的优势是及时捕捉短期洗仓、反弹质量和800G/1.6T市场关注点。其转述的高盛目标价与盈利上修，已经由知识星球中的2026年7月17日报告摘要交叉确认；但完整原始研报和模型表仍未取得，所以作为上行情景而非基准估值。</p><p>知识星球中的高盛和大摩报告摘要、TD Cowen渠道材料、Oracle债券发行/认购、RPO/融资和JPM路演能够提供机构与渠道线索，但不自动等于一级事实。高盛7月报告与大摩2月报告发布日期不同，不应包装成同一时点的一致预期。</p><p>用户截图中的198.58bp只保留为待核线索，不当作正式报价或历史极值。FRED广义信用利差、Oracle SEC披露和公司业绩新闻稿构成本报告的事实基线。AI Signal仅用于发现Agent、主权AI工厂等潜在新需求，不能单独改变信用或投资结论。</p><ul><li>事实层：SEC、Oracle IR、FRED、FINRA TRACE、评级机构公开稿。</li><li>线索层：Serenity推文、公众号、知识星球、卖方渠道和AI Signal。</li><li>升级条件：线索必须被合同、财报、债券、评级或真实部署交叉验证。</li></ul></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm" target="_blank" rel="noopener noreferrer">Oracle FY2026 Q4/FY业绩新闻稿（SEC Exhibit 99.1）</a><p>RPO 6380亿美元、经营现金流319.77亿美元、资本开支556.63亿美元、自由现金流-236.86亿美元、客户预付/供货约750亿美元及FY2027融资计划。</p><small>Oracle官方披露 · 2026-06-10 · 一级公司披露；RPO仍需跟踪收入转化、客户集中和合同条款</small></article><article class="source-card"><a href="https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm" target="_blank" rel="noopener noreferrer">Oracle FY2026 10-K</a><p>收入、债务、现金、营业利润和利息费用的监管口径基线。</p><small>SEC监管披露 · 2026-06-22 · 一级监管披露</small></article><article class="source-card"><a href="https://fred.stlouisfed.org/series/BAMLC0A0CM" target="_blank" rel="noopener noreferrer">FRED｜ICE BofA美国公司债OAS</a><p>截至2026-07-16为0.78个百分点，用于判断Oracle压力是否扩散到广义投资级信用市场。</p><small>公开信用市场数据 · 广义公司债指数，不等于Oracle单名CDS</small></article><article class="source-card"><a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" target="_blank" rel="noopener noreferrer">FRED｜ICE BofA美国高收益债OAS</a><p>截至2026-07-16为2.71个百分点，广义风险信用仍处近五年低分位。</p><small>公开信用市场数据 · 广义高收益债指数，不等于AI行业信用指数</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/1998925429890261130" target="_blank" rel="noopener noreferrer">Serenity｜Oracle信用与资本密集度分析</a><p>Serenity把Oracle下跌归因于信用风险和资本密集度重估，并区分OpenAI相关敞口与现金流更强hyperscaler支持的neocloud。</p><small>Serenity · 2025-12-11 · 一手观点，用于识别其框架；具体数字需公司披露核验</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2078175882620059719" target="_blank" rel="noopener noreferrer">Serenity｜Meta—Anthropic算力租赁</a><p>把hyperscaler出租算力视为neocloud模式的市场验证。</p><small>Serenity · 2026-07-18 · 谈判消息不等于正式合同、收入和利润率</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2078150537074373117" target="_blank" rel="noopener noreferrer">Serenity｜回撤与降低杠杆</a><p>披露组合月内回撤约49.4%，并在暴跌后降低杠杆，体现长期观点与资本路径需要分开。</p><small>Serenity · 2026-07-18 · 个人组合表述，不作为市场强平规模证据</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2077753660592033828" target="_blank" rel="noopener noreferrer">Serenity｜美光长期协议与去杠杆判断</a><p>把美光签署长期协议后仍下跌理解为去杠杆尾声，而不是存储需求同步证伪。</p><small>Serenity · 2026-07-16 · 长期协议需由价格、数量、库存和毛利率验证</small></article><article class="source-card"><a href="https://wx.zsxq.com/group/28855222551821/topic/82255481818851412" target="_blank" rel="noopener noreferrer">高盛｜中际旭创盈利预测与目标价上调摘要</a><p>2026年7月17日报告摘要：维持买入，目标价1187元上调至2581元，2026—2028E盈利上调65%/108%/119%。</p><small>知识星球转述高盛研究 · 2026-07-17 · 已核对报告摘要，但不是完整原始研报；作为强牛场景，不直接作为首页基准估值</small></article><article class="source-card"><a href="https://wx.zsxq.com/group/28855222551821/topic/82811212148254182" target="_blank" rel="noopener noreferrer">摩根士丹利｜中际旭创1.6T与CPO情景摘要</a><p>2026年2月26日报告摘要：目标价500元上调至650元，2026E盈利上调16%、2027E下调4%，并对CPO采用50%/30%/20%情景权重。</p><small>知识星球转述摩根士丹利研究 · 2026-02-26 · 不是7月新报告；摘要用于概率框架，完整模型和原始研报仍需核对</small></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/RD_mXagKb0sAe0-a5Xh-HA" target="_blank" rel="noopener noreferrer">公众号文章｜Serenity最新推文行情解读</a><p>侧重洗仓、反弹质量、800G/1.6T和光模块盈利弹性；其中高盛核心数字已由知识星球报告摘要交叉确认。</p><small>公众号 · 2026-07-18 · 二手综述，用于比较市场关注点</small></article></section></details></section>
+    <details class="deep-report"><summary>展开归档深度报告</summary><div class="markdown-body"><h1>AI链进入利润验证期：高盛强牛假设、大摩CPO风险与Serenity价值链框架</h1>
+<p><strong>更新日期：</strong> 2026-07-18（北京时间）<br>
+<strong>研究对象：</strong> Serenity（X：<a href="https://x.com/aleabitoreddit">@aleabitoreddit</a>）的中长期配置框架，高盛与摩根士丹利对中际旭创的盈利假设，以及 Oracle 资本强度对 AI 产业链的启示<br>
+<strong>核心问题：</strong> 光模块盈利上修是否改变其长期壁垒判断；近期暴跌究竟是去杠杆、信用重估还是产业反转；算力、存储和光模块应如何区别配置<br>
+<strong>证据口径：</strong> Serenity 推文用于识别其本人观点；知识星球和公众号用于取得卖方报告摘要与市场线索；SEC、公司财报和 FRED 用于核验财务及广义信用环境；AI Signal 只作为前沿弱信号。<br>
+<strong>重要限制：</strong> 暂无经 Wind、Bloomberg 或 ICE 复核的 Oracle 单名 CDS 最新报价和连续曲线。此前截图中的约 198.58bp 只保留为待核线索，不进入事实基线、风险分级或配置阈值。高盛和摩根士丹利部分内容来自知识星球对卖方报告的转述，并非完整原始研报，本文只把它们作为情景假设。</p>
+<h2>一、结论先行</h2>
+<p>本轮更新后的核心结论是：<strong>中际旭创的短中期景气度和盈利弹性需要上调，但不能因此把光模块龙头直接等同于具备永久定价权的平台型资产。</strong> 高盛报告给出了非常强的上行情景，大摩报告则用 CPO 商用时间做概率加权；Serenity 的价值在于把两者重新落到产能、良率、器件瓶颈、客户认证和利润归属上。</p>
+<p>但 CDS 的正确用途不是预测下一天股价，也不是看到 200bp 就判断 AI 需求崩溃。它更适合回答四个问题：</p>
+<ol>
+<li>市场是否开始怀疑一家公司的资本开支能够被自身现金流覆盖；</li>
+<li>长期合同的客户是否具备履约能力；</li>
+<li>资本密集型扩张是否需要不断依靠债务、股权和客户预付款续接；</li>
+<li>信用压力是单一公司问题，还是正在扩散为全行业、全市场问题。</li>
+</ol>
+<p>CDS 值得放进首页报告，但现阶段只能作为<strong>待接入的信用验证层</strong>，不能成为正式结论。对于 Oracle、CoreWeave、部分 neocloud 和数据中心资产运营商，它未来可以补足 Serenity 框架中长期缺失的一层：买方信用和资本成本会决定订单能否转化为可持续现金流；但在没有可靠报价、期限曲线和同业比较时，不能用单一截图计算违约概率或给 Oracle 贴上橙色、红色标签。</p>
+<p>截至 2026-07-16，FRED 的 ICE BofA 美国投资级公司债 OAS 为 <strong>0.78 个百分点（78bp）</strong>，美国高收益债 OAS 为 <strong>2.71 个百分点（271bp）</strong>；两者分别只处于近五年约 <strong>16.5%</strong> 和 <strong>9.8%</strong> 分位。可以确认的是广义信用市场尚未进入压力状态；不能确认的是 Oracle 单名信用究竟处于何种精确水平。因此当前更严谨的表述是：</p>
+<blockquote>
+<p><strong>Oracle 的资本强度、自由现金流和融资需求值得公司级跟踪，但是否已经形成异常单名信用压力，仍需可靠 CDS 曲线或债券相对利差确认。</strong></p>
+</blockquote>
+<p>Oracle 的官方数据同时支持“需求很强”和“融资压力上升”两种看似矛盾的结论：</p>
+<table>
+<thead>
+<tr>
+<th>Oracle FY2026 指标</th>
+<th style="text-align: right;">官方数据</th>
+<th>对信用框架的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营业收入</td>
+<td style="text-align: right;">673.57 亿美元，同比 +17.3%</td>
+<td>云与 AI 需求真实增长，并非收入崩塌</td>
+</tr>
+<tr>
+<td>RPO（剩余履约义务）</td>
+<td style="text-align: right;">6,380 亿美元，同比 +363%</td>
+<td>长期合同极强，但兑现周期和客户集中度更重要</td>
+</tr>
+<tr>
+<td>经营现金流</td>
+<td style="text-align: right;">319.77 亿美元，同比 +53.6%</td>
+<td>核心业务现金创造能力仍强</td>
+</tr>
+<tr>
+<td>资本开支</td>
+<td style="text-align: right;">556.63 亿美元，同比 +162.4%</td>
+<td>投资速度远快于经营现金流增长</td>
+</tr>
+<tr>
+<td>简化自由现金流</td>
+<td style="text-align: right;">-236.86 亿美元</td>
+<td>Capex 已超过经营现金流，外部融资仍是关键变量</td>
+</tr>
+<tr>
+<td>债务总额</td>
+<td style="text-align: right;">1,295.41 亿美元，同比 +39.9%</td>
+<td>资本开支正在明显推高资产负债表杠杆</td>
+</tr>
+<tr>
+<td>现金及现金等价物</td>
+<td style="text-align: right;">312.89 亿美元</td>
+<td>流动性缓冲较强，但部分来自融资活动</td>
+</tr>
+<tr>
+<td>净债务</td>
+<td style="text-align: right;">982.52 亿美元</td>
+<td>约为 FY2026 经营现金流的 3.07 倍</td>
+</tr>
+<tr>
+<td>营业利润 / 利息费用</td>
+<td style="text-align: right;">约 4.48 倍</td>
+<td>尚非偿付危机，但利息安全垫明显值得持续跟踪</td>
+</tr>
+</tbody>
+</table>
+<p>更关键的是，Oracle 官方披露，FY2026 大型 AI 合同中由客户预付 GPU 资金或由客户直接提供 GPU 的硬件部分累计约 <strong>750 亿美元</strong>；FY2026 已融资约 <strong>430 亿美元债务 + 50 亿美元股权</strong>，FY2027 预计再通过债务和股权筹集约 <strong>400 亿美元</strong>，其中包括此前宣布的 200 亿美元 ATM 股权发行。这说明：</p>
+<blockquote>
+<p><strong>即使未来核实 CDS 上升，也不等于融资市场已经关闭；它更可能表示市场要求更高风险补偿。客户预付款降低了 Oracle 的净资金需求，却也把研究重点推向客户信用、合同条款和客户集中度。</strong></p>
+</blockquote>
+<p>因此，本报告对当前环境的总判断是：</p>
+<ul>
+<li>近期暴跌有明显去杠杆和强平成分，但市场也在重新评估远期现金流、资本效率和客户信用；</li>
+<li>AI 资本开支仍可能保持高位，供应商订单繁荣与购买方信用恶化可以同时发生；</li>
+<li>普通 hyperscaler 的广义融资环境仍较健康；只有经核验的 Oracle 单名利差、MSFT/AMZN/GOOGL/META 同业利差与 CDX IG 同步恶化，才应把问题升级为系统性 AI Capex 风险；</li>
+<li>对下一阶段投资最重要的问题，不再只是“AI 需求是否增长”，而是“新增利润最终留在哪一层，以及谁需要为增长承担最多资本和信用风险”。</li>
+</ul>
+<h2>二、公众号文章与我们关注点的差异</h2>
+<p>用户提供的<a href="https://mp.weixin.qq.com/s/RD_mXagKb0sAe0-a5Xh-HA">公众号文章</a>更接近一篇“最新推文行情解读”，优势是抓住市场情绪、洗仓、反弹质量、800G/1.6T 和头部光模块公司的盈利弹性，阅读节奏快，适合回答“近期市场在交易什么”。我们随后在知识星球“资讯站”找到了对应的高盛报告摘要：报告日期为 2026-07-17，维持买入，将目标价从 1,187 元上调至 2,581 元，并将 2026—2028 年盈利预测上调 65%/108%/119%。因此，公众号引用的核心数字已经取得第二来源确认，不再简单归类为无出处传闻；但由于仍未获得完整原始研报及模型表，它只能作为<strong>已核对的卖方摘要和上行情景</strong>，不能直接成为我们的基准估值。</p>
+<p>我们的重点不同：</p>
+<table>
+<thead>
+<tr>
+<th>比较维度</th>
+<th>公众号文章</th>
+<th>本报告</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时间尺度</td>
+<td>偏短期行情、洗仓和反弹</td>
+<td>2026H2—2028 的利润与现金流路径</td>
+</tr>
+<tr>
+<td>光模块</td>
+<td>强调 800G/1.6T、龙头盈利上修</td>
+<td>拆分光芯片/激光器/封装/模块集成，重点看利润归属</td>
+</tr>
+<tr>
+<td>暴跌解释</td>
+<td>更强调去杠杆、情绪错杀</td>
+<td>去杠杆 + 久期重估 + 信用与资本效率重估</td>
+</tr>
+<tr>
+<td>Oracle/Neocloud</td>
+<td>不是主要中心</td>
+<td>先用财报、债券与广义利差判断资本开支可持续性，CDS待核后补入</td>
+</tr>
+<tr>
+<td>估值锚</td>
+<td>卖方目标价和盈利上修</td>
+<td>情景现金流、毛利率、资本开支和证伪条件</td>
+</tr>
+<tr>
+<td>数据边界</td>
+<td>以推文和市场信息为主</td>
+<td>SEC/FRED 为事实基线，星球和公众号作为线索层</td>
+</tr>
+</tbody>
+</table>
+<p>两者并非互相否定。公众号更像“市场层”，Serenity 提供“产业层”，卖方报告提供“盈利与估值假设层”，债券与财报补上“信用和现金流层”。四层合并后，才能避免两个极端：一是把暴跌全部解释成错杀，二是把盈利预测上调直接外推成永久高毛利。</p>
+<h2>三、CDS 可以用，但目前只能列入待核观察层</h2>
+<p>CDS 是信用温度计，不是股票短线择时器。它对重资产、自由现金流为负、依赖再融资、客户集中的 neocloud 和数据中心运营商很有价值；对净现金平台公司，它更多反映需求方融资环境；对光模块供应商，它主要用于判断大客户的 Capex 可持续性，而不是判断模块公司的产品竞争力。</p>
+<p>但一个可用的 CDS 信号必须至少包含：可靠数据源、最新时间戳、1Y/3Y/5Y/10Y 曲线、1 日/1 周/1 月变化、与同业及 CDX IG 的相对差、以及债券 OAS 或新债发行利差的交叉确认。此前截图不具备这些条件，所以本文删除了基于约 198.58bp 推导的风险中性违约概率，也取消“Oracle 已处于橙色预警”的正式表述。</p>
+<p>在 Wind 数据补齐前，信用层按以下顺序工作：</p>
+<ol>
+<li><strong>事实基线：</strong> Oracle 的 Capex/CFO、自由现金流、净债务、利息覆盖、客户预付款和 RPO 转化；</li>
+<li><strong>公开市场确认：</strong> FRED 的美国 IG/HY OAS、Oracle 主要美元债成交与评级变化；</li>
+<li><strong>单名信用待核：</strong> Oracle 及 MSFT、AMZN、GOOGL、META 的 CDS 水平、变化和期限结构；</li>
+<li><strong>升级条件：</strong> 单名 CDS、债券 OAS、评级、合同进度和财务现金流至少三类同步恶化，才把公司级压力升级为产业风险。</li>
+</ol>
+<p>这一降级不会削弱报告，反而使框架更稳健：我们仍然研究资本强度和客户信用，只是不再让一个未核报价主导结论。</p>
+<h2>四、Oracle 案例：订单繁荣与信用收缩为何能够共存</h2>
+<p>Oracle 的案例揭示了 AI 资本开支最容易被忽略的会计与融资逻辑：<strong>供应商收入和订单可以增长，购买方自由现金流却可能恶化。</strong></p>
+<p>FY2026，Oracle 资本开支 556.63 亿美元，相当于收入的约 82.6%，是经营现金流的约 1.74 倍。资本开支同比增长 162.4%，远高于收入和经营现金流增速。公司仍有 206.06 亿美元营业利润，经营现金流 319.77 亿美元，因此它不是经营失血型危机；问题在于建设速度超过了内部现金生成速度。</p>
+<p>与此同时，RPO 达 6,380 亿美元，且 Q3、Q4 的大部分新增 RPO 来自大型 AI 合同。客户预付 GPU 资金或直接提供 GPU 的硬件部分累计约 750 亿美元。这个结构既是缓冲，也是新的研究风险：</p>
+<ul>
+<li>缓冲在于，客户承担了一部分最昂贵的硬件支出，Oracle 不必为所有 Capex 自行融资；</li>
+<li>风险在于，合同价值更集中于少数大型 AI 客户，RPO 的质量取决于这些客户的融资、市场份额和履约能力；</li>
+<li>若客户预付款具有重大融资成分，经营现金流会提前受益，不能机械地把全部现金流增长理解为成熟云业务的经常性盈利；</li>
+<li>若客户直接提供 GPU，Oracle 的收入、资产、折旧和资本回报口径也需要区别于完全自有资产模式。</li>
+</ul>
+<p>因此，研究 Oracle 不能只看“RPO 6380 亿”或“FCF -237 亿”中的一项。更合理的拆解是：</p>
+<blockquote>
+<p><strong>合同名义规模 × 预付款比例 × 客户信用 × 上电进度 × 利用率 × 云服务毛利率 - 融资成本 - 折旧与迭代风险。</strong></p>
+</blockquote>
+<p>这也是未来接入 CDS 最有价值的地方：它能把市场对这些变量的综合担忧压缩成一个连续、可比较的价格，但最终仍需要回到合同和现金流解释。</p>
+<h2>五、这不是外加指标，而是 Serenity 原有信用论点的量化延伸</h2>
+<p>Serenity 早在 2025-12-11 就把 Oracle 下跌与信用风险、资本密集度和 OpenAI 对手方信用联系起来，而不是只用收入不及预期解释。</p>
+<p><strong>推文原文节选：</strong></p>
+<blockquote>
+<p>“The drop was rational: The sell-off was driven by a rational repricing of credit risk and capital intensity.”</p>
+</blockquote>
+<p><strong>中文翻译：</strong></p>
+<blockquote>
+<p>“这次下跌是有理性的：抛售来自市场对信用风险和资本密集度的重新定价。”</p>
+</blockquote>
+<p><a href="https://x.com/aleabitoreddit/status/1998925429890261130">原推文</a></p>
+<p>同一篇推文中，他明确提出 Oracle 与 CoreWeave 更依赖 OpenAI，而与微软、谷歌等现金流更强客户绑定的部分 neocloud 可能被板块联动误伤。这一论点的价值在于把“算力需求”拆成了不同信用质量的需求：</p>
+<ul>
+<li>现金流强、能够自我融资的 hyperscaler 合同；</li>
+<li>依赖外部融资但有长期客户合同的 neocloud；</li>
+<li>由模型公司未来融资能力支持的超长期承诺；</li>
+<li>需要运营商先承担 Capex、客户后续逐步付款的供应商融资结构。</li>
+</ul>
+<p>Serenity 最新的算力租赁推文延续了这个框架。</p>
+<p><strong>推文原文：</strong></p>
+<blockquote>
+<p>“$META in talks to lease compute to Anthropic in a $10B dollar deal… But just goes to validate Neocloud business models like $NBIS, $IREN, and co if hyperscalers are copying their homework.”</p>
+</blockquote>
+<p><strong>中文翻译：</strong></p>
+<blockquote>
+<p>“Meta 正在洽谈一笔约 100 亿美元的算力租赁交易，把算力出租给 Anthropic……如果连 hyperscaler 都开始照着这种模式做，这确实验证了 NBIS、IREN 等 neocloud 的商业逻辑。”</p>
+</blockquote>
+<p><a href="https://x.com/aleabitoreddit/status/2078175882620059719">原推文</a></p>
+<p>但这里需要对 Serenity 的推断再加一层约束：Meta 出租算力能验证“市场存在”，不自动验证所有 neocloud 的利润率。大型 hyperscaler 资金成本更低、软件生态更完整，还可能成为 neocloud 的直接竞争者。真正需要比较的是利用率、租赁价格、合同期限、客户信用、GPU 折旧和债务期限匹配。</p>
+<p>在近期暴跌中，Serenity 同时承认自身杠杆路径风险。</p>
+<p><strong>推文原文节选：</strong></p>
+<blockquote>
+<p>“Feels bad, -49.4% drawdown this month… But reduced leverage recently from the crash.”</p>
+</blockquote>
+<p><strong>中文翻译：</strong></p>
+<blockquote>
+<p>“这个月回撤约 49.4%，确实很难受……但我在这次暴跌后已经降低了杠杆。”</p>
+</blockquote>
+<p><a href="https://x.com/aleabitoreddit/status/2078150537074373117">原推文</a></p>
+<p>这是一项重要思想升级：长期产业方向正确，并不能保证带杠杆的资本路径正确。CDS、债券利差和融资条件正好把这一点从个人组合层面扩展到公司资产负债表层面。</p>
+<p>存储方面，Serenity 对美光与高通长期协议的解读也说明他倾向于把近期下跌视为去杠杆，而不是需求证伪。</p>
+<p><strong>推文原文节选：</strong></p>
+<blockquote>
+<p>“$MU announced it signed memory LTAs with $QCOM… More like the tail end of deleveraging / margin cascades.”</p>
+</blockquote>
+<p><strong>中文翻译：</strong></p>
+<blockquote>
+<p>“美光宣布与高通签署存储长期协议后，股价仍下跌约 5.37%。这不像存储或 AI 个股自身出了问题，更像去杠杆和保证金连锁平仓的尾声。”</p>
+</blockquote>
+<p><a href="https://x.com/aleabitoreddit/status/2077753660592033828">原推文</a></p>
+<p>我们的修正是：长协能提高需求可见度，却不能取消存储周期；同样，RPO 能提高 Oracle 收入可见度，却不能取消融资和客户信用风险。</p>
+<h2>六、算力、存储和光模块：三个完全不同的利润系统</h2>
+<p>用户关于光模块的直觉大体正确：模块集成环节的进入壁垒和长期利润防御性，通常弱于 GPU 平台的软件生态，也弱于 DRAM/HBM 原厂的工艺、资本和寡头壁垒。行业扩产、标准化、第二供应商和客户年度降价，确实可能使利润率在需求仍增长时先见顶。</p>
+<p>但把中际旭创、新易盛等头部高速光模块厂简单定义为“低端组装商”仍不准确。头部公司的竞争力包括高速产品共同设计、客户认证、供应链调度、自动化制造、耦合封装、热管理、测试、良率爬坡和大规模稳定交付。这些不是零壁垒，只是其壁垒的<strong>长期可复制性和议价权</strong>弱于平台生态与存储原厂。</p>
+<h3>1. 算力：必须先区分平台和资产运营</h3>
+<p>算力不是一个商业模式。</p>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>核心壁垒</th>
+<th>最大风险</th>
+<th>CDS 敏感度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPU/系统平台</td>
+<td>软件生态、开发者迁移成本、系统设计和供应链</td>
+<td>自研 ASIC、平台份额、性能/成本变化</td>
+<td>低到中，更多看客户 Capex</td>
+</tr>
+<tr>
+<td>服务器 ODM/组装</td>
+<td>交付速度、采购和客户关系</td>
+<td>低毛利、客户集中、营运资金</td>
+<td>中</td>
+</tr>
+<tr>
+<td>数据中心/机房</td>
+<td>电力、土地、并网、建设和运营</td>
+<td>上电延迟、利用率、项目融资</td>
+<td>高</td>
+</tr>
+<tr>
+<td>Neocloud/算力租赁</td>
+<td>GPU 获取、合同、运维、资金成本</td>
+<td>客户信用、融资、GPU 折旧、租价</td>
+<td>很高</td>
+</tr>
+</tbody>
+</table>
+<p>平台型算力的利润来自生态与系统锁定，资产型算力的利润来自利用率和资本结构。两者不能使用同一种估值方法。经核验的 Oracle CDS 对 NVIDIA 的直接解释力有限，却能显著改变对 Oracle、CoreWeave 和部分 neocloud 远期现金流的折现率。</p>
+<h3>2. 存储：壁垒强，但周期不会消失</h3>
+<p>存储原厂的进入壁垒来自少数厂商、巨额 Capex、工艺、良率、产品认证和长期客户关系。HBM 还叠加 TSV、先进封装和测试难度，因此在供给受限阶段，利润弹性可以非常强。</p>
+<p>但存储的危险在于“所有人都看见短缺后开始扩产”。当合约价仍上涨、库存下降停止、Capex/收入快速上升、客户减少超额采购时，往往已进入周期后半段。长期协议也必须拆分价格、数量、期限、预付款和 take-or-pay，不能把名义合同金额直接等同于利润。</p>
+<p>存储最关键的指标是：</p>
+<ul>
+<li>DRAM/NAND 合约价与现货价；</li>
+<li>HBM/服务器 DRAM 长协和供给满足率；</li>
+<li>原厂库存天数、Capex/收入和新增有效产能；</li>
+<li>产品组合、毛利率和经营现金流；</li>
+<li>客户是否从抢货转向消化库存。</li>
+</ul>
+<h3>3. 光模块：需求可能最强，利润防御却未必最强</h3>
+<p>光互联需要分层：</p>
+<ul>
+<li>上游 InP 衬底、外延、EML/CW 激光器、光芯片和部分 DSP/driver，可能是真正物理卡点；</li>
+<li>中游先进封装、耦合、热管理、测试和高良率生产，具有复合制造壁垒；</li>
+<li>下游标准化模块集成最容易受到扩产、第二供应商和客户降价压力；</li>
+<li>CPO/ELS 普及后，价值量可能向光引擎、激光光源、封装平台和交换芯片迁移。</li>
+</ul>
+<p>因此，中际旭创、新易盛等模块龙头的核心研究问题，不是“有没有技术”，而是：</p>
+<ol>
+<li>1.6T 增量能否持续快于 800G ASP 下降；</li>
+<li>扩产后良率、交付和客户份额能否保持；</li>
+<li>客户是否增加第二、第三供应商；</li>
+<li>上游紧缺器件的成本能否转嫁；</li>
+<li>毛利率和经营现金流能否跟上收入；</li>
+<li>CPO 导入后，现有模块公司的价值量保留多少。</li>
+</ol>
+<p>最值得警惕的组合是：<strong>收入仍然高增长，但毛利率连续两个季度下降，库存和资本开支上升，经营现金流明显弱于净利润。</strong> 这往往比订单新闻更早提示利润率正在正常化。</p>
+<h3>4. 三板块的本质差异</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>算力平台/运营</th>
+<th>存储原厂</th>
+<th>光模块集成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>长期壁垒来源</td>
+<td>软件生态或资金/电力/合同</td>
+<td>工艺、资本、寡头和良率</td>
+<td>认证、良率、交付和供应链</td>
+</tr>
+<tr>
+<td>供给扩张速度</td>
+<td>平台慢，资产建设中等</td>
+<td>慢，但一旦形成产能周期影响大</td>
+<td>相对更快，尤其模块组装</td>
+</tr>
+<tr>
+<td>利润主要变量</td>
+<td>份额、利用率、融资成本</td>
+<td>价格、库存、Capex 纪律</td>
+<td>产品代际、ASP、良率、客户压价</td>
+</tr>
+<tr>
+<td>最危险风险</td>
+<td>客户信用和资产折旧</td>
+<td>过度扩产和库存反转</td>
+<td>标准化、扩产和多供应商</td>
+</tr>
+<tr>
+<td>CDS 的研究价值</td>
+<td>Neocloud/IDC 很高，平台较低</td>
+<td>对客户需求有间接价值</td>
+<td>主要用于判断大客户 Capex，而非模块公司本身</td>
+</tr>
+<tr>
+<td>更合适的估值锚</td>
+<td>平台看生态，运营看资产回报</td>
+<td>中周期盈利与重置成本</td>
+<td>正常化毛利率和自由现金流</td>
+</tr>
+</tbody>
+</table>
+<p>一句话概括：</p>
+<blockquote>
+<p><strong>算力看平台生态或资产回报，存储看寡头纪律与价格周期，光模块看代际、份额和利润率防守。</strong></p>
+</blockquote>
+<h2>七、高盛与大摩如何改变我们对中际旭创的判断</h2>
+<h3>1. 高盛：这是一个收入、利润率和估值同时上修的强牛市场景</h3>
+<p>知识星球“资讯站”转述的高盛 2026-07-17 报告维持中际旭创买入评级，将 12 个月目标价由 <strong>1,187 元上调至 2,581 元</strong>。报告现价为 1,113 元，对应约 131.9% 的隐含上行空间；2026—2028 年盈利预测分别上调 <strong>65%/108%/119%</strong>，预计同期收入和净利润 CAGR 分别为 <strong>64%/69%</strong>。目标估值仍以 2027 年盈利为基础，但目标 PE 从 34.2 倍提高到 35.8 倍。</p>
+<p>这不是普通的“出货量调高”，而是四项假设同时变得更乐观：</p>
+<ol>
+<li>AI 服务器机柜放量使硅光模块出货量显著增加；</li>
+<li>网络需求从 scale-out 扩展到 scale-up 和 scale-across，单位算力所需的高速连接数和带宽上升；</li>
+<li>1.6T 等高端产品提高产品结构，毛利率继续扩张；</li>
+<li>收入增长带来费用率下降，盈利增速快于收入增速，同时市场愿意给予更高估值倍数。</li>
+</ol>
+<p>因此，高盛 2,581 元目标价不能只理解成“AI 需求很好”。它隐含的是<strong>量、价、份额、毛利率、费用率和估值六项变量大体同向</strong>。只要其中两三项没有兑现，目标价的敏感度就会非常高。高盛自己列出的风险——800G 以上需求不及预期、新光器件放量偏慢、市场份额正常化过快、地缘政治和元器件供应——已经说明这是一份高斜率的上行情景，而不是低波动的基准预测。</p>
+<h3>2. 大摩：承认 1.6T 景气，但把 CPO 的时间和冲击显式放进模型</h3>
+<p>目前能确认的大摩报告日期是 <strong>2026-02-26</strong>，并非与高盛同时发布的 7 月新报告。大摩维持增持，将目标价从 <strong>500 元上调至 650 元</strong>，将 2026 年盈利预测上调 <strong>16%</strong>，同时将 2027 年盈利预测下调 <strong>4%</strong>，用来反映 CPO 潜在扰动。</p>
+<p>大摩预计高端 800G/1.6T 模块需求从 2025 年的 <strong>2,000 万只</strong>增至 2026 年的 <strong>5,300 万只</strong>、2027 年的 <strong>7,100 万只</strong>。这同样确认 scale-out、scale-up 和 scale-across 对光连接数量的放大作用。但大摩没有把可插拔模块的增长无限外推，而是为 CPO 设定三种情景：基准 50%、牛市 30%、熊市 20%。基准假设是 2027 年出现技术突破，2027 年下半年或 2028 年开始规模商用；NPO 进展则是中际旭创对冲 CPO 价值迁移的重要牛市变量。</p>
+<p>大摩的价值不在于目标价比高盛低，而在于它揭示了一个更适合首页采用的研究方法：<strong>不要猜 CPO 一定成功或一定失败，而要把商用时间、良率、热管理、成本、生态成熟度、维护性和公司参与新架构的能力分别赋予概率。</strong></p>
+<h3>3. 两家报告并不矛盾，而是观察不同时间和不同尾部风险</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: right;">高盛 2026-07-17</th>
+<th style="text-align: right;">大摩 2026-02-26</th>
+<th>本报告采用方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>评级</td>
+<td style="text-align: right;">买入</td>
+<td style="text-align: right;">增持</td>
+<td>都确认 2026 年景气</td>
+</tr>
+<tr>
+<td>目标价调整</td>
+<td style="text-align: right;">1,187 → 2,581 元</td>
+<td style="text-align: right;">500 → 650 元</td>
+<td>不直接横比，发布日期和模型不同</td>
+</tr>
+<tr>
+<td>盈利调整</td>
+<td style="text-align: right;">2026—2028E +65%/+108%/+119%</td>
+<td style="text-align: right;">2026E +16%，2027E -4%</td>
+<td>高盛作强牛上限，大摩作基准风险框架</td>
+</tr>
+<tr>
+<td>核心驱动</td>
+<td style="text-align: right;">硅光、机柜放量、scale-up/across、结构与费用率</td>
+<td style="text-align: right;">1.6T 高增、CPO 概率、NPO 对冲</td>
+<td>用产业指标逐项验证</td>
+</tr>
+<tr>
+<td>主要隐患</td>
+<td style="text-align: right;">份额正常化、器件供给、需求和地缘风险</td>
+<td style="text-align: right;">CPO 提前商用与价值迁移</td>
+<td>不用峰值毛利率永久化</td>
+</tr>
+</tbody>
+</table>
+<p>两份报告真正共同确认的是：未来网络不只是“更多 GPU 配更多光模块”，而是 AI 集群拓扑本身正在变化，scale-up 和 scale-across 使连接密度、带宽和功耗成为系统级瓶颈。两者真正分歧的是：中际旭创能否把本轮高景气转化为持续更高的利润率，以及 CPO/NPO/XPO 迁移后价值量是否仍留在公司体系内。</p>
+<h3>4. 对“低端组装商”判断的修正：壁垒真实，但需要每季度重新证明</h3>
+<p>用户担心模块集成扩产快、格局混乱、利润率可能暴跌，这一方向性担忧仍然成立。高盛上调盈利并没有否定这一点，反而把验证门槛提高了：当市场已经预期产品结构、良率、费用率和估值同时改善时，只要毛利率停止扩张，股票就可能先于收入见顶。</p>
+<p>但中际旭创不能简单归为低端组装。头部厂商的壁垒包括与客户共同定义产品、关键器件锁产、硅光设计与封装、耦合与测试、热管理、自动化制造、良率爬坡、全球交付和长期认证。它更接近“高端系统制造与光电封装平台”，只是这种壁垒仍比 GPU 软件生态更依赖代际领先和执行，而且会受到客户多源采购与年度降价约束。</p>
+<p>下一阶段应建立一张“高盛假设验证表”，每个季度至少检查：</p>
+<ul>
+<li><strong>量：</strong> 1.6T 实际出货、800G 延续量、scale-up/across 新端口增量；</li>
+<li><strong>价：</strong> 1.6T 溢价能否覆盖 800G ASP 下降和客户年降；</li>
+<li><strong>份额：</strong> 核心客户份额、第二/第三供应商导入、地区与客户集中度；</li>
+<li><strong>毛利率：</strong> 改善究竟来自硅光占比、良率、紧缺涨价、汇率还是一次性产品结构；</li>
+<li><strong>现金流：</strong> 经营现金流与净利润匹配度，存货、预付款、应收和在建工程增速；</li>
+<li><strong>架构迁移：</strong> NPO、XPO、OCS、CPO 的送样、认证、量产时间和公司可保留价值量；</li>
+<li><strong>上游瓶颈：</strong> InP/EML/CW 激光器、DSP/driver、隔离器、封装与测试产能是否继续紧张。</li>
+</ul>
+<p>如果收入继续高增、毛利率稳定或上升、经营现金流跟上净利润、库存增速低于收入、NPO/XPO 获得客户认证，那么高盛情景的可信度会持续上升。反之，如果收入高增但毛利率连续两个季度下降、库存和 Capex 上升、经营现金流明显落后、客户份额开始正常化，即使行业端口量仍增长，也应转向大摩的基准或熊市场景。</p>
+<h2>八、信用如何传导到三大板块</h2>
+<p>AI Capex 的信用传导不是同步的：</p>
+<pre><code class="language-text">模型公司/云厂商融资条件恶化
+        ↓
+新数据中心项目的资金成本上升、上电节奏延迟
+        ↓
+GPU/服务器订单先看合同和预付款保护
+        ↓
+存储需求先看长协、产品结构和库存缓冲
+        ↓
+光模块在多供应商、年度降价和短交付周期下更容易出现毛利率先行压缩
+</code></pre>
+<p>这解释了为什么光模块需求可以保持高增长，但股票估值和毛利率仍可能先调整；也解释了为什么存储价格仍上涨时，需要反向观察原厂 Capex；还解释了为什么 neocloud 的 backlog 很大，却必须同时观察 CDS、债务期限和客户现金能力。</p>
+<p>对供应商而言，最优合同不是名义金额最大，而是具备以下组合：</p>
+<ul>
+<li>客户信用强；</li>
+<li>有预付款、押金或 take-or-pay；</li>
+<li>价格能够覆盖融资和折旧；</li>
+<li>合同期限与债务期限匹配；</li>
+<li>资产可转移给其他客户；</li>
+<li>客户取消时有充分赔偿。</li>
+</ul>
+<p>因此，“订单繁荣”必须升级为“信用调整后的订单质量”。</p>
+<h2>九、2026H2—2028 三种情景推演</h2>
+<h3>基准情景：资本强度受关注，AI 产业需求继续扩散</h3>
+<ul>
+<li>Oracle 财务显示资本开支高于经营现金流，但融资渠道、客户预付款和 RPO 转化没有明显恶化；</li>
+<li>待核的单名 CDS 和债券相对利差没有出现持续、跨市场的异常扩大；</li>
+<li>广义 IG/HY OAS 维持低位，MSFT/AMZN/GOOGL/META 信用稳定；</li>
+<li>Oracle 通过股权、客户预付款和有限新增债务完成建设；</li>
+<li>AI 订单继续向 GPU、存储、光互联、电力和散热扩散；</li>
+<li>股市先反弹，再按客户信用、现金流和毛利率分化。</li>
+</ul>
+<p>这个情景下，最值得配置研究资源的是：自我融资能力强的平台、存储原厂的结构性产品、上游真实光学卡点，以及能够证明自由现金流的供应商。模块集成仍有景气弹性，但估值要使用正常化毛利率，而不是峰值外推。</p>
+<h3>乐观情景：客户预付款和收入兑现改善资本回报预期</h3>
+<ul>
+<li>Oracle 债券相对利差收窄；若 CDS 数据补齐，则曲线同步改善且短端没有倒挂；</li>
+<li>RPO 持续转化为云收入，利用率上升；</li>
+<li>客户预付/客户供货继续降低净 Capex；</li>
+<li>FY2027 经营现金流增长快于资本开支，FCF 缺口收窄；</li>
+<li>1.6T、HBM/服务器 DRAM 和数据中心网络同时放量。</li>
+</ul>
+<p>这个情景下，高 beta neocloud、光模块和存储会有较强利润与估值弹性。但仍应避免把一次信用修复外推为永久高毛利。</p>
+<h3>悲观情景：信用从公司特异性扩散为产业约束</h3>
+<ul>
+<li>经核验的 Oracle 单名 CDS 或债券 OAS 持续扩大，短端显著恶化；</li>
+<li>债券 OAS 扩大、评级展望下调、新债发行困难；</li>
+<li>客户融资不及预期，合同延期、预付款减少；</li>
+<li>Oracle、CoreWeave 等削减或延迟数据中心建设；</li>
+<li>MSFT/AMZN/GOOGL/META 与 CDX IG 也开始走弱。</li>
+</ul>
+<p>这个情景下，首先受压的是高杠杆算力运营商和远期 backlog 估值，其次是依赖少数客户的模块/服务器供应商；存储可能因客户消化库存而从价格上行转向量价压力。只有净现金、低资本强度、客户分散且具备真正物理卡点的公司相对占优。</p>
+<h2>十、下一阶段投资与研究指导</h2>
+<h3>1. 把组合从“主题配置”升级为“价值链配置”</h3>
+<ul>
+<li><strong>核心层：</strong> 平台生态强、内部现金流覆盖资本开支、客户分散的公司；</li>
+<li><strong>周期层：</strong> 存储原厂及结构性产品，但必须跟踪价格、库存和 Capex；</li>
+<li><strong>弹性层：</strong> 高速光模块和 neocloud，仓位应与毛利率、现金流、融资和客户信用相匹配；</li>
+<li><strong>卡点层：</strong> InP/激光器、先进封装、测试、电力和散热等真实扩产慢、认证长的节点；</li>
+<li><strong>回避层：</strong> backlog 很大但客户现金能力弱、债务期限短、资产不可转移的公司。</li>
+</ul>
+<h3>2. 首页建议新增四层仪表盘</h3>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>每周/每月跟踪指标</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场流动性层</td>
+<td>SOX/纳指相对强弱、融资余额、强平、相关性、波动率</td>
+<td>判断去杠杆是否接近尾声</td>
+</tr>
+<tr>
+<td>信用层</td>
+<td>先跟踪债券 OAS、新债利差、评级、FRED IG/HY；CDS 核验后再加入期限曲线和同业比较</td>
+<td>判断是个体风险还是系统性风险</td>
+</tr>
+<tr>
+<td>产业层</td>
+<td>Capex、RPO/backlog、预付款、上电、利用率、端口量、存储合约价</td>
+<td>判断需求是否真正兑现</td>
+</tr>
+<tr>
+<td>利润层</td>
+<td>ASP、毛利率、库存、应收、经营现金流、Capex/收入</td>
+<td>判断利润最终留在哪一层</td>
+</tr>
+</tbody>
+</table>
+<h3>3. Wind 终端待核验清单</h3>
+<p>由于本轮 Windows 屏幕控制通道未连接成功，以下项目没有伪造或用脚本模拟操作，应在 Wind 恢复后直接只读核验：</p>
+<ol>
+<li>Oracle 1Y/3Y/5Y/10Y CDS 的最新值、1D/1W/1M 变化和历史分位；</li>
+<li>MSFT、AMZN、GOOGL、META、IBM、CRM 的同期限 CDS；</li>
+<li>CDX.NA.IG 及 IT/科技行业信用指数；</li>
+<li>Oracle 主要美元债的到期日、OAS、G-spread、成交收益率和 TRACE 成交；</li>
+<li>Oracle 评级、展望和评级机构最新行动；</li>
+<li>新债发行利差、认购倍数与二级破发情况；</li>
+<li>把 CDS 与 ORCL 股价、隐含波动率、RPO、Capex/CFO 和 FCF 做事件时间对齐。</li>
+</ol>
+<p>公开数据源可以持续承担基础层：FRED 提供广义 IG/HY OAS，SEC/Oracle IR 提供财务和合同口径，FINRA TRACE 提供美国公司债成交，评级机构公开稿提供评级变化。单名 CDS 的连续历史仍以 Wind、Bloomberg、ICE 或专业信用数据终端最可靠。</p>
+<h2>十一、最终判断</h2>
+<p>CDS 指标可以用，也应在首页保留观察位；但在准确数据到位前，它只是一项待核任务，而不是当前结论。它未来的价值不是告诉我们“Oracle 明天涨还是跌”，而是提醒我们：</p>
+<blockquote>
+<p><strong>AI Capex 可以同时利好光模块、存储、GPU、服务器和数据中心供应商，却恶化购买方的自由现金流、净债务和融资成本。</strong></p>
+</blockquote>
+<p>这也是对 Serenity 中长期配置论点最重要的补充。Serenity 擅长沿产业链寻找下一处物理卡点，近期又开始强调合同、客户信用、利用率和融资；经过可靠数据核验后，CDS 可以让“客户信用和资本成本”从文字判断变成可持续观测的市场价格。</p>
+<p>对算力、存储和光模块的最终认识应当是：</p>
+<ul>
+<li>算力平台的核心是生态，算力运营的核心是资产回报和信用；</li>
+<li>存储的核心是寡头、工艺和 Capex 纪律，利润强但周期仍在；</li>
+<li>光模块需求可能非常强，但模块集成的长期利润防御性相对弱，必须向上游器件、先进封装、良率和现金流寻找真正卡点；</li>
+<li>高盛的大幅上修提高了中际旭创 2026—2028 年上行情景，但其成立要求量、价、份额、毛利率、费用率和估值多数同时兑现；</li>
+<li>大摩的概率加权框架更适合做首页基准：承认 1.6T 景气，同时持续评估 CPO 时间、NPO 对冲和价值迁移；</li>
+<li>市场暴跌既有去杠杆，也有对 2027—2028 年现金流与信用的合理重估；</li>
+<li>下一阶段不会是所有 AI 股票同步回到前高，而会按<strong>客户信用、资本强度、利润率防御和自由现金流</strong>重新排序。</li>
+</ul>
+<p>最可执行的原则是：</p>
+<blockquote>
+<p><strong>需求用订单验证，订单用客户信用验证，利润用毛利率验证，估值用自由现金流验证。</strong></p>
+</blockquote>
+<h2>主要来源与证据等级</h2>
+<ul>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm">Oracle FY2026 Q4/FY 业绩新闻稿（SEC Exhibit 99.1）</a>：RPO、经营现金流、资本开支、自由现金流、客户预付/供货、融资计划；一级公司披露。</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm">Oracle FY2026 10-K</a>：收入、债务、现金、利息费用等；一级监管披露。</li>
+<li><a href="https://fred.stlouisfed.org/series/BAMLC0A0CM">FRED：ICE BofA 美国公司债 OAS</a>：广义投资级信用环境；公开市场数据。</li>
+<li><a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2">FRED：ICE BofA 美国高收益债 OAS</a>：广义风险信用环境；公开市场数据。</li>
+<li><a href="https://x.com/aleabitoreddit/status/1998925429890261130">Serenity：Oracle 信用与资本密集度分析</a>：用于识别 Serenity 本人信用框架；一手观点，不等于财务事实。</li>
+<li><a href="https://x.com/aleabitoreddit/status/2078175882620059719">Serenity：Meta—Anthropic 算力租赁</a>：用于识别 neocloud 资产化的新观点；合同仍需正式披露。</li>
+<li><a href="https://x.com/aleabitoreddit/status/2078150537074373117">Serenity：回撤与降杠杆</a>：用于识别其对近期暴跌和路径风险的判断。</li>
+<li><a href="https://wx.zsxq.com/group/28855222551821/topic/82255481818851412">高盛：中际旭创盈利预测与目标价上调摘要</a>：知识星球转述的 2026-07-17 高盛报告；确认目标价 1,187→2,581 元、2026—2028E 盈利 +65%/+108%/+119%，但不是完整原始研报。</li>
+<li><a href="https://wx.zsxq.com/group/28855222551821/topic/82811212148254182">摩根士丹利：中际旭创 1.6T 与 CPO 情景摘要</a>：知识星球转述的 2026-02-26 大摩报告；确认 2026E 盈利 +16%、2027E -4%、目标价 500→650 元及 CPO 概率框架，但不是 7 月新报告。</li>
+<li><a href="https://mp.weixin.qq.com/s/RD_mXagKb0sAe0-a5Xh-HA">公众号文章</a>：用于比较市场关注点；其中高盛核心数字已由知识星球报告摘要交叉确认。</li>
+<li>知识星球材料：TD Cowen 渠道判断、Oracle 债券发行/认购、ICE CDS、RPO/融资、JPM 路演等；作为机构与渠道线索，须与公司披露、Wind 和公开债券数据交叉验证。</li>
+<li>用户提供的 Oracle CDS 截图：约 198.58bp；只作为待 Wind 复核的二手市场线索，不用于违约概率、风险等级或配置阈值。</li>
+</ul>
+<hr>
+<p><em>本报告仅用于研究，不构成投资建议。CDS、债券、评级、目标价、盈利预测和产业链订单均可能快速变化；风险中性违约概率不等于实际违约概率。</em></p></div></details>
+    </main>
+  <footer class="shell">历史文章来自本地不可变批准归档；页面用于研究回溯，不构成投资建议。</footer>
+</body>
+</html>
