@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Alphabet财报之后，Serenity没有离开AI资本开支主线，而是把它下沉到更可验证的层级：AMD现场反馈削弱CPO延迟叙事，可插拔、NPO与CPO将长期并行，CW激光与制造能力成为共同瓶颈；CPU、存储与光子长协则把需求证据从季度指引延长到多年合同。">
+  <title>CPO不会一夜替代光模块：Serenity从AMD现场把Capex读穿到激光与长协 - Serenity 往日报告</title>
+  <style>
+    :root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(1060px,calc(100vw - 28px));margin:0 auto}.top{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(246,248,251,.94);backdrop-filter:blur(10px)}
+    .top-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{color:var(--ink);font-weight:900;text-decoration:none}.back{display:inline-flex;align-items:center;min-height:36px;border:1px solid #bfdbfe;border-radius:999px;background:#fff;padding:0 13px;text-decoration:none;font-size:13px;font-weight:800}
+    main{padding:34px 0 72px}.hero,.panel,.history-card,.reader-version{border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hero{padding:30px}.eyebrow,.part{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:900px;margin:10px 0 0;color:var(--ink);font-size:clamp(30px,5vw,52px);line-height:1.13;letter-spacing:-.035em}.hero>p{max-width:850px;margin:14px 0 0;color:#475569;font-size:15px;line-height:1.85}
+    .meta,.topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#f8fafc;padding:5px 9px;color:#475569;font-size:11px;font-weight:750}.chip.blue{border-color:#bfdbfe;background:var(--blue-soft);color:#1d4ed8}
+    .search{width:100%;margin-top:18px;border:1px solid #cbd5e1;border-radius:13px;background:#fff;padding:13px 15px;color:var(--ink);font:inherit;outline:none}.search:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}
+    .history-list{display:grid;gap:14px;margin-top:18px}.history-card{padding:20px}.history-card h2{margin:8px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.history-card p{margin:9px 0 0;line-height:1.75}.history-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.history-actions a{font-weight:850;text-decoration:none}
+    .empty{display:none;margin-top:18px;border:1px dashed #cbd5e1;border-radius:14px;background:#fff;padding:24px;text-align:center;color:var(--muted)}
+    .article-header{padding:28px}.article-header h1{font-size:clamp(28px,4vw,45px)}.versions{display:grid;gap:16px;margin-top:18px}.reader-version{overflow:hidden}.reader-version>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;cursor:pointer;list-style:none}.reader-version>summary::-webkit-details-marker{display:none}.reader-version>summary span{min-width:0}.reader-version>summary strong{display:block;color:var(--ink);font-size:17px}.reader-version>summary small{display:block;margin-top:5px;color:var(--muted);line-height:1.55}.reader-version>summary b{color:var(--blue);font-size:12px;white-space:nowrap}
+    .version-head{border-top:1px solid var(--line);background:var(--blue-soft);padding:23px}.version-head h2{margin:0;color:var(--ink);font-size:27px;line-height:1.35}.version-head p{margin:10px 0 0;line-height:1.75}.article-section{border-top:1px solid var(--line);padding:25px 23px}.article-section h3{margin:7px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.article-section p,.article-section li{font-size:15px;line-height:1.9}.article-section ul{padding-left:22px}code{border-radius:5px;background:#eef2f7;padding:2px 5px}
+    .sources{display:grid;gap:10px}.sources h3{margin-bottom:2px}.source-card{border:1px solid var(--line);border-radius:12px;background:#f8fafc;padding:13px}.source-card a,.source-card strong{font-weight:850}.source-card p{margin:7px 0 0;font-size:13px;line-height:1.7}.source-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.55}
+    .deep-report{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}.deep-report>summary{padding:19px 21px;cursor:pointer;color:var(--ink);font-weight:900}.markdown-body{border-top:1px solid var(--line);padding:24px;overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{color:var(--ink);line-height:1.4}.markdown-body h1{font-size:28px}.markdown-body h2{margin-top:34px;font-size:23px}.markdown-body h3{margin-top:27px;font-size:19px}.markdown-body p,.markdown-body li{line-height:1.85}.markdown-body table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.markdown-body blockquote{margin:16px 0;border-left:4px solid #93c5fd;background:#eff6ff;padding:10px 15px;color:#475569}.markdown-body pre{overflow:auto;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px}
+    footer{padding:24px 0 45px;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:680px){.top-inner{min-height:58px}main{padding-top:18px}.hero,.article-header{padding:21px}.history-card{padding:17px}.reader-version>summary{align-items:flex-start;padding:17px}.version-head,.article-section,.markdown-body{padding:18px}.article-section p,.article-section li{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell top-inner"><a class="brand" href="index.html">Serenity 往日报告</a><a class="back" href="../index.html#daily-article">返回当前首页</a></div></header>
+  <main class="shell">
+    <article class="article-header panel">
+      <span class="eyebrow">Approved Homepage Archive</span>
+      <h1>CPO不会一夜替代光模块：Serenity从AMD现场把Capex读穿到激光与长协</h1>
+      <p>Alphabet财报之后，Serenity没有离开AI资本开支主线，而是把它下沉到更可验证的层级：AMD现场反馈削弱CPO延迟叙事，可插拔、NPO与CPO将长期并行，CW激光与制造能力成为共同瓶颈；CPU、存储与光子长协则把需求证据从季度指引延长到多年合同。</p>
+      <div class="meta"><span class="chip blue">截至 2026-07-27</span><span class="chip">批准于 2026-07-27T01:09:28+08:00</span><span class="chip">归档 ID：2026-07-27_010928_32359918e4</span></div>
+      <div class="topics"><span class="chip">AMD / Helios / CPO</span><span class="chip">可插拔 / NPO / CPO并行架构</span><span class="chip">CW激光 / 产能 / 原材料瓶颈</span><span class="chip">CPU / 存储 / 光子LTA</span><span class="chip">Optimus / Waymo / Physical AI</span><span class="chip">渠道访谈 / 报告转述 / 官方验证</span></div>
+      <div class="history-actions"><a href="index.html">← 返回历史文章列表</a></div>
+    </article>
+    <section class="versions"><details class="reader-version" open><summary><span><strong>研究版 A</strong><small>适合希望区分渠道信号、第三方转述、公司验证和证伪条件的读者。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>CPO不会一夜替代光模块：Serenity从AMD现场把Capex读穿到激光与长协</h2><p>Alphabet财报之后，Serenity没有离开AI资本开支主线，而是把它下沉到更可验证的层级：AMD现场反馈削弱CPO延迟叙事，可插拔、NPO与CPO将长期并行，CW激光与制造能力成为共同瓶颈；CPU、存储与光子长协则把需求证据从季度指引延长到多年合同。</p></div><section class="article-section"><span class="part">Part 01</span><h3>最新变化不是换了主线，而是从Capex总量进入合同和架构</h3><p>Alphabet财报夜，Serenity把Google的资本开支上修读成内存、光通信和代工的上游需求验证。此后两天，她继续追问这些支出如何落地：一端是CPU、DRAM/NAND、EML和CW激光的长期协议，另一端是AMD未来Helios网络采用CPO的现场反馈。</p><p>因此，最新观点并不是从看多转向看空，而是把宏观资本开支拆成更可证伪的研究问题：需求有没有被多年合同锁定，CPO以什么节奏与可插拔和NPO共存，以及谁真正拥有客户资格、产能、原材料和良率。</p><ul><li>原有主线：Hyperscaler资本开支扩大，上游获得收入机会。</li><li>最新增量：合同质量、架构节奏和供应商兑现开始成为主要矛盾。</li></ul></section><section class="article-section"><span class="part">Part 02</span><h3>AMD现场反馈反驳延迟报告，但还不是正式订单</h3><p>Serenity在AMD Advancing AI活动的渠道核查中称，Helios网络合作伙伴预计AMD会在未来几代scale-up网络中采用CPO，另一位参与Hyperscaler CPO项目的基础设施高管表示没有看到供应链延迟迹象。她明确标注，这是非正式评论，不是AMD或合作伙伴的官方指引。</p><p>后续回复把SIVE连接到Ayar和GlobalFoundries的潜在AMD CPO路径，并认为现场反馈对SIVE积极；但她同样承认，出于保密原因无法获得直接供应商确认。当前证据可以削弱单一延迟叙事，却不能确认客户、量产时间和订单金额。</p><ul><li>积极信号：现场参与方未见CPO scale-up供应链延迟。</li><li>证据边界：AMD路线、SIVE客户身份和商业化时间仍待正式披露。</li></ul></section><section class="article-section"><span class="part">Part 03</span><h3>CPO不是马上消灭可插拔，而是多条架构长期并行</h3><p>Serenity引用SIVE CEO播客中的判断：可插拔光模块未来约十年仍会存在，NPO与CPO会成为并行机会，CPO是产业长期北极星。相比“可插拔或CPO”的二选一叙事，这更接近渐进式迁移。</p><p>她进一步指出，主要挑战是制造产能和原材料，可能对应CW激光爬坡。若需求增长快于合格供应商的合计产能，产业早期不一定赢家通吃。AAOI也在开发CPO，只是商业化稍靠后；按她转述的卖方报告，LITE、COHR和SIVE当前拥有较高的CPO激光可见度。</p><ul><li>近端：可插拔市场更大，800G与1.6T仍需继续兑现。</li><li>远端：CPO是方向，但NPO、可插拔与CPO可能共同消耗CW激光能力。</li></ul></section><section class="article-section"><span class="part">Part 04</span><h3>LTA把需求证据从季度Capex延长到多年合同</h3><p>Serenity把INTC和AMD的CPU长期协议，与MU、三星、SNDK、SK海力士的存储长协，以及LITE、COHR的EML长协和潜在CW激光长协放进同一框架。她认为，当需求以多年allocation或take-or-pay形式存在时，AI基础设施就很难只被解释成短期泡沫。</p><p>但LTA不是统一口径。它可能只是价格框架或优先供货，也可能包含最低采购量、预付款和不可取消义务。只有看到期限、数量、定价、取消责任和现金流转化，才能判断需求是否真正被锁定。</p><ul><li>需要确认：原始合同、最低采购量、期限、定价与取消条款。</li><li>需要兑现：收入、产能利用率、毛利率和经营现金流。</li></ul></section><section class="article-section"><span class="part">Part 05</span><h3>供应商图谱要看资格和产能，不急着押注唯一终局</h3><p>Serenity最新公开排序把LITE、COHR和SIVE放在CPO激光可见度较高的位置，把AAOI视为可插拔业务与较晚CPO商业化并存的公司，并把Ayar、GFS视为潜在AMD路线的重要节点。</p><p>真正决定投资兑现的不是技术名词，而是谁已经通过客户认证、谁能拿到原材料、谁能稳定扩产、谁能维持良率和毛利率。第三方报告和现场访谈只能提高研究优先级，不能替代订单、财报和现金流。</p><ul><li>LITE/COHR/SIVE：跟踪CW激光订单、产能、良率与客户集中度。</li><li>AAOI/Ayar/GFS：跟踪首客、认证、量产节点与收入确认。</li></ul></section><section class="article-section"><span class="part">Part 06</span><h3>研究半径扩展到Physical AI：Optimus供应链与Waymo成本曲线</h3><p>Tesla Optimus线索把Serenity的瓶颈框架带到人形机器人。她关注Tesla从零建立内存、金属注射成型件和柔性印刷电路等供应链，以及Micron在合理条款下提供未来allocation，重点仍是寻找被量产需求锁定的新增上游。</p><p>Waymo线索则把问题转向平台利润。Serenity认为Waymo对UBER和LYFT中短期影响有限，但长期自动驾驶与配送机器人可能持续压低成本；如果平台没有中立AV伙伴或垂直整合能力，Waymo可能从合作方变成最强颠覆者。</p><ul><li>Optimus：验证工厂建设、付费部署、供应商订单与单机BOM。</li><li>Waymo：验证车队密度、单英里成本、城市扩张和Uber的应对路径。</li></ul></section><section class="article-section"><span class="part">Part 07</span><h3>未来验证：正式路线、合同条款与利润表必须同时出现</h3><p>支持这套框架的路径是：AMD正式披露Helios CPO路线，SIVE/Ayar/GFS关系出现客户或收入确认，LITE/COHR/SIVE的CW激光订单和产能利用率上升，AAOI确认CPO商业化，同时CPU、存储和光子长协披露具有经济约束的采购条款。</p><p>需要降权的路径是：CPO正式时间表继续后移，供应商关系长期没有订单，CW激光扩产导致价格和毛利率下滑，可插拔需求提前恶化，或LTA可轻易取消且没有转化为现金流。</p><ul><li>当前姿态：方向积极，证据仍以渠道和转述为主。</li><li>升级条件：官方路线、客户认证、订单、产能、利润率和现金流形成闭环。</li></ul></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2080394259535221222" target="_blank" rel="noopener noreferrer">Serenity｜AMD Advancing AI现场CPO渠道核查</a><p>Helios未来代际可能采用CPO，现场参与方未见scale-up供应链延迟。</p><small>Serenity原创帖 · 2026-07-24北京时间 · 非正式评论，不是AMD或合作伙伴官方指引</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2080411863448522994" target="_blank" rel="noopener noreferrer">Serenity｜SIVE、Ayar、GFS与潜在AMD CPO路径</a><p>把SIVE激光供应关系映射到潜在AMD CPO路径。</p><small>Serenity回复 · 2026-07-24北京时间 · 没有直接供应商确认</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2080445777395298454" target="_blank" rel="noopener noreferrer">Serenity｜可插拔、NPO与CPO多架构并行</a><p>转述SIVE CEO播客：可插拔仍将长期存在，CPO是北极星，产能和原材料是瓶颈。</p><small>Serenity原创/引用帖 · 2026-07-24北京时间 · 播客原始音频和逐字稿尚未在本次更新中独立核对</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2080456465509454053" target="_blank" rel="noopener noreferrer">Serenity｜AAOI潜在CPO客户与激光供应商排序</a><p>转述Rosenblatt与Morgan Stanley报告，涉及AAOI、LITE、COHR和SIVE。</p><small>Serenity回复 · 2026-07-24北京时间 · 卖方报告原文尚未独立核对</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2080153334888182065" target="_blank" rel="noopener noreferrer">Serenity｜CPU、存储与光子LTA</a><p>把CPU、DRAM/NAND、EML和CW激光长期协议串成多年需求锁定框架。</p><small>Serenity原创帖 · 2026-07-23北京时间 · Reuters、TrendForce及合同条款尚未独立核对</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2080149813065396454" target="_blank" rel="noopener noreferrer">Serenity｜Tesla Optimus与新供应链</a><p>关注人形机器人TAM、内存、MIM、FPC和从零建立的供应链。</p><small>Serenity原创帖 · 2026-07-23北京时间 · Tesla电话会与历史产能资料尚未逐条回到官方文件复核</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2080750537121874206" target="_blank" rel="noopener noreferrer">Serenity｜Waymo与Uber关系变化</a><p>认为Waymo可能从Uber合作方变成最强颠覆者。</p><small>Serenity原创/引用帖 · 2026-07-25北京时间 · FT报道与潜在拆分安排尚未独立核对</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2080754547757391897" target="_blank" rel="noopener noreferrer">Serenity｜Waymo对UBER/LYFT的长期成本冲击</a><p>中短期影响有限，长期自动驾驶和配送机器人可能压低平台成本与利润空间。</p><small>Serenity回复 · 2026-07-25北京时间 · 属于长期竞争判断，不是公司财务预测</small></article></section></details></section>
+    <details class="deep-report"><summary>展开归档深度报告</summary><div class="markdown-body"><h1>CPO不会一夜替代光模块：Serenity从AMD现场把Capex读穿到激光与长协</h1>
+<blockquote>
+<p>数据截止：2026-07-27（北京时间）<br>
+研究对象：Serenity（X：<a href="https://x.com/aleabitoreddit">@aleabitoreddit</a>）7月23日至25日公开推文<br>
+研究状态：首页候选深度报告，尚未完成用户审批，不构成证券推荐<br>
+证据边界：本次只核对Serenity公开推文；其中提到的Reuters、FT、Rosenblatt、Morgan Stanley、TrendForce、公司播客与现场访谈尚未逐一回到原始文件复核</p>
+</blockquote>
+<h2>核心判断</h2>
+<p>Alphabet财报之后，Serenity并没有离开AI资本开支主线，而是把问题继续往产业链深处推进了两层。</p>
+<p>第一层，从“Hyperscaler会花多少钱”推进到“这些支出是否已经被多年合同锁定”。她把CPU、DRAM/NAND、EML和CW激光的长期协议放进同一张图里，认为当需求以LTA、allocation甚至take-or-pay形式跨越多个年度时，AI基础设施就不能只按短期泡沫交易。</p>
+<p>第二层，从“CPO会不会到来”推进到“CPO如何与可插拔、NPO共同存在”。她在AMD Advancing AI活动的非正式渠道核查中，没有得到CPO scale-up供应链延迟的信号；随后又引用SIVE管理层播客，把框架修正为：可插拔光模块未来约十年仍会存在，NPO和CPO会并行，CPO是长期北极星，而制造产能、原材料和CW激光才是多条架构共同面对的物理瓶颈。</p>
+<p>这意味着最新观点的变化不是从看多转向看空，而是从宏观Capex总量，进入合同质量、架构节奏、供应商资格和产能兑现。</p>
+<h2>一、AMD现场访谈削弱了“CPO供应链延迟”的单一叙事</h2>
+<p>Serenity在7月24日北京时间发布的现场记录称，Helios网络合作伙伴预计AMD会在未来几代Helios scale-up网络中采用CPO，并认为其他Hyperscaler和行业参与者也会走向CPO。一位参与Hyperscaler CPO项目的AI基础设施公司高管表示，没有看到CPO scale-up供应链延迟的迹象。</p>
+<p>这条信息的重要性不在于它等同于AMD官方指引。Serenity自己明确标注，这是非正式评论，不是AMD或合作伙伴的正式指导。因此更合适的证据等级是“渠道反证”：它削弱了第三方延迟报告的确定性，但不能单独确认量产时间、客户、供应商和订单金额。</p>
+<p>后续回复进一步把SIVE连到Ayar和GlobalFoundries的潜在AMD CPO路径。Serenity认为现场反馈对SIVE积极，但也承认无法获得直接供应商确认，因为相关信息属于保密内容。</p>
+<p>所以当前可以成立的结论是：</p>
+<ul>
+<li>CPO延迟不是唯一可信路径，现场参与者给出了相反信号；</li>
+<li>AMD未来Helios采用CPO的概率获得方向性支持；</li>
+<li>SIVE与Ayar/GFS的关系提供了供应链映射，但“AMD直接客户”仍未确认；</li>
+<li>在AMD正式路线图、客户认证或供应商收入披露出现之前，不能把渠道访谈写成确定订单。</li>
+</ul>
+<h2>二、最大的观点变化：CPO不是马上消灭可插拔，而是多架构并行</h2>
+<p>Serenity引用SIVE CEO参与的《Market Insights: Photonics &amp; AI》播客时，抓住了一个与市场二元叙事不同的判断：“Pluggables will be around for the next 10 years.”</p>
+<p>市场常把问题写成“可插拔还是CPO”，并进一步推导CPO会侵蚀可插拔光模块的长期市场。Serenity现在给出的答案更接近产业现实：</p>
+<ol>
+<li>可插拔拥有更大的近端市场和成熟供应链，未来十年仍会存在；</li>
+<li>NPO与CPO会作为未来五年的重要机会并行发展；</li>
+<li>CPO代表长期方向，但不是一夜之间完成替代；</li>
+<li>产能和原材料是当前主要约束，尤其可能指向CW激光爬坡；</li>
+<li>当需求增长快于所有合格供应商的合计产能时，产业不一定立即进入赢家通吃。</li>
+</ol>
+<p>这也改变了对AAOI的读法。Serenity没有把AAOI定义为CPO到来后的受害者，而是认为公司也在开发CPO，只是商业化稍靠后。她转述Rosenblatt 6月30日报告，称AMD可能是AAOI的首个CPO客户；同时转述Morgan Stanley近期报告，把LITE、COHR和SIVE列为当前CPO激光可见度较高的前三方向。</p>
+<p>这些卖方报告尚未在本次更新中回到原文核对，所以它们只能用于理解Serenity如何排序研究优先级，不能替代公司披露。</p>
+<h2>三、从Capex到LTA：需求证据开始跨越季度</h2>
+<p>Serenity把Reuters关于INTC和AMD可能与中国AI数据中心客户签署CPU长期协议的消息，与存储和光子领域的长协放在一起：</p>
+<ul>
+<li>CPU：INTC、AMD与AI数据中心客户的LTA；</li>
+<li>存储：MU、三星、SNDK、SK海力士的DRAM/NAND LTA；</li>
+<li>光子：LITE、COHR的EML LTA，以及AMD和Hyperscaler潜在CW激光LTA；</li>
+<li>更广上游：从MLCC到衬底，可能存在类似的供给锁定。</li>
+</ul>
+<p>这套框架比单看资本开支更接近投资兑现。Capex指引说明客户计划花钱，LTA则可能说明具体品类、时间和供应保障已经进入合同层。</p>
+<p>但“LTA”不是统一口径。长期协议可能是价格框架、优先供货、最低采购量、预付款，也可能包含可取消条款。只有看到期限、数量、价格、取消责任和take-or-pay条件，才能判断它到底是高质量订单，还是较弱的意向安排。</p>
+<p>因此，Serenity“多年take-or-pay使泡沫不易破裂”的判断，需要分两步验证：先确认协议确实存在，再确认它具备不可轻易取消的经济约束。</p>
+<h2>四、当前供应商图谱：资格与产能比单一终局叙事更重要</h2>
+<p>按照Serenity最新公开排序，研究可以拆成四组：</p>
+<table>
+<thead>
+<tr>
+<th>方向</th>
+<th>Serenity最新映射</th>
+<th>当前证据</th>
+<th>仍缺什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPO激光</td>
+<td>LITE、COHR、SIVE</td>
+<td>卖方报告与产业访谈转述</td>
+<td>正式订单、客户、产能、良率、收入贡献</td>
+</tr>
+<tr>
+<td>CPO模块/系统</td>
+<td>AAOI、AMD Helios</td>
+<td>Rosenblatt转述与现场渠道</td>
+<td>AMD正式路线、AAOI首客确认、商业化时间</td>
+</tr>
+<tr>
+<td>关键平台</td>
+<td>Ayar、GFS</td>
+<td>与潜在AMD路线有关</td>
+<td>直接供应商确认、量产节点、晶圆与封装数据</td>
+</tr>
+<tr>
+<td>可插拔/NPO</td>
+<td>AAOI、JBL及其他模块厂</td>
+<td>管理层称近端TAM更大</td>
+<td>800G/1.6T需求、ASP、毛利率与库存</td>
+</tr>
+</tbody>
+</table>
+<p>这个图谱的关键不是马上选出唯一赢家，而是验证谁已经通过客户认证、谁能获得原材料、谁能稳定扩产、谁能把技术位置变成利润和现金流。</p>
+<h2>五、主题横向扩展：从数据中心走向物理世界自动化</h2>
+<p>最新推文还显示Serenity把研究半径从AI基础设施扩展到了两类Physical AI。</p>
+<p>第一类是Tesla Optimus。她引用Elon Musk对人形机器人TAM的高确信度，并关注Tesla供应链管理层提到的内存、金属注射成型件、柔性印刷电路等新投入。她的研究动作不是直接购买所有机器人概念，而是寻找“从零建立供应链”过程中可能新增的上游机会。她同时注意到Tesla对Micron allocation和合理条款的感谢，这又与LTA主线相连。</p>
+<p>第二类是Waymo对网约车平台的成本冲击。Serenity认为，Waymo对UBER和LYFT的中短期影响有限，但长期自动驾驶会压低出行成本，配送机器人还可能侵蚀Uber Eats。如果Waymo减少对Uber分发的依赖，Uber此前与Waymo合作可能反而帮助潜在竞争者完成规模化。她更偏好NBIS旗下Avride等中立伙伴，或平台自身的垂直整合。</p>
+<p>这两条线共同说明，Serenity正在把AI投资框架从“谁提供算力”扩展到“谁能用自动化重写现实世界成本曲线”。</p>
+<h2>六、什么会支持或证伪这篇文章</h2>
+<h3>支持路径</h3>
+<ul>
+<li>AMD或合作伙伴正式披露未来Helios scale-up网络采用CPO；</li>
+<li>Ayar、GFS、SIVE等路径出现客户、认证或收入确认；</li>
+<li>LITE、COHR、SIVE披露CW激光订单、产能利用率和良率提升；</li>
+<li>AAOI确认CPO客户和商业化时间，同时可插拔业务仍保持需求；</li>
+<li>CPU、存储、EML、CW激光长协披露最低采购量或take-or-pay条款；</li>
+<li>Optimus产能建设和新供应链订单兑现；</li>
+<li>Waymo在更多城市证明更低单位成本和独立获客能力。</li>
+</ul>
+<h3>降权路径</h3>
+<ul>
+<li>AMD正式路线图继续推迟CPO，或量产节点显著后移；</li>
+<li>所谓供应商关系长期没有订单、收入或资本开支验证；</li>
+<li>CW激光快速扩产导致价格、利用率和毛利率下滑；</li>
+<li>可插拔需求在1.6T/3.2T时代提前恶化，管理层“十年”判断失效；</li>
+<li>LTA没有最低采购量、可轻易取消，或未转化为现金流；</li>
+<li>Physical AI受监管、可靠性或单位经济性限制，量产继续后移。</li>
+</ul>
+<h2>结论</h2>
+<p>Serenity最新观点最值得记录的变化，是她不再满足于“AI Capex很大、光通信受益”这一层结论。</p>
+<p>她把资本开支继续拆成三个更可验证的问题：需求有没有被长期合同锁定，CPO到底以什么节奏与可插拔/NPO共存，以及谁真正拥有客户资格、产能、原材料和良率。</p>
+<p>在这个框架下，CPO不是一场一夜替代，而是一条长期北极星；可插拔仍拥有较长生命周期；CW激光和制造能力成为多架构共享的瓶颈；LTA则把需求证据从季度指引延长到多年合同。</p>
+<p>当前最严谨的投资姿态不是把渠道访谈当成订单，而是把AMD路线、SIVE/Ayar/GFS关系、LITE/COHR/SIVE产能、AAOI商业化和长协条款列成连续验证清单。推文负责提高研究优先级，正式披露负责决定证据等级。</p>
+<h2>Serenity原帖</h2>
+<ul>
+<li><a href="https://x.com/aleabitoreddit/status/2080394259535221222">AMD Advancing AI现场CPO渠道核查</a></li>
+<li><a href="https://x.com/aleabitoreddit/status/2080411863448522994">SIVE、Ayar、GFS与潜在AMD CPO路径</a></li>
+<li><a href="https://x.com/aleabitoreddit/status/2080445777395298454">可插拔、NPO与CPO多架构并行</a></li>
+<li><a href="https://x.com/aleabitoreddit/status/2080456465509454053">AAOI潜在CPO客户与激光供应商排序</a></li>
+<li><a href="https://x.com/aleabitoreddit/status/2080153334888182065">CPU、存储与光子LTA</a></li>
+<li><a href="https://x.com/aleabitoreddit/status/2080149813065396454">Tesla Optimus与新供应链</a></li>
+<li><a href="https://x.com/aleabitoreddit/status/2080750537121874206">Waymo与Uber关系变化</a></li>
+<li><a href="https://x.com/aleabitoreddit/status/2080754547757391897">Waymo对UBER/LYFT的长期成本冲击</a></li>
+</ul>
+<hr>
+<p>本文为Serenity思想研究和公开信息整理，不构成证券推荐。涉及第三方报告、媒体消息、播客和现场访谈的内容，必须继续回到原始文件、公司公告、财报和订单数据核验。</p></div></details>
+    </main>
+  <footer class="shell">历史文章来自本地不可变批准归档；页面用于研究回溯，不构成投资建议。</footer>
+</body>
+</html>
