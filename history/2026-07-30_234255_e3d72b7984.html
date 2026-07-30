@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="微软一个季度投入410亿美元资本开支，下季度还要超过500亿美元；Azure增长43%，但FY2026传统口径自由现金流反而下降约6%。真正的分水岭不是谁买的GPU更多，而是谁能在折旧到来前，把GPU持续变成云账单、软件订阅和股东现金流。">
+  <title>同一块GPU，为什么微软比Neocloud更不怕过剩？AI Capex真正的分水岭 - Serenity 往日报告</title>
+  <style>
+    :root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(1060px,calc(100vw - 28px));margin:0 auto}.top{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(246,248,251,.94);backdrop-filter:blur(10px)}
+    .top-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{color:var(--ink);font-weight:900;text-decoration:none}.back{display:inline-flex;align-items:center;min-height:36px;border:1px solid #bfdbfe;border-radius:999px;background:#fff;padding:0 13px;text-decoration:none;font-size:13px;font-weight:800}
+    main{padding:34px 0 72px}.hero,.panel,.history-card,.reader-version{border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hero{padding:30px}.eyebrow,.part{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:900px;margin:10px 0 0;color:var(--ink);font-size:clamp(30px,5vw,52px);line-height:1.13;letter-spacing:-.035em}.hero>p{max-width:850px;margin:14px 0 0;color:#475569;font-size:15px;line-height:1.85}
+    .meta,.topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#f8fafc;padding:5px 9px;color:#475569;font-size:11px;font-weight:750}.chip.blue{border-color:#bfdbfe;background:var(--blue-soft);color:#1d4ed8}
+    .search{width:100%;margin-top:18px;border:1px solid #cbd5e1;border-radius:13px;background:#fff;padding:13px 15px;color:var(--ink);font:inherit;outline:none}.search:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}
+    .history-list{display:grid;gap:14px;margin-top:18px}.history-card{padding:20px}.history-card h2{margin:8px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.history-card p{margin:9px 0 0;line-height:1.75}.history-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.history-actions a{font-weight:850;text-decoration:none}
+    .empty{display:none;margin-top:18px;border:1px dashed #cbd5e1;border-radius:14px;background:#fff;padding:24px;text-align:center;color:var(--muted)}
+    .article-header{padding:28px}.article-header h1{font-size:clamp(28px,4vw,45px)}.versions{display:grid;gap:16px;margin-top:18px}.reader-version{overflow:hidden}.reader-version>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;cursor:pointer;list-style:none}.reader-version>summary::-webkit-details-marker{display:none}.reader-version>summary span{min-width:0}.reader-version>summary strong{display:block;color:var(--ink);font-size:17px}.reader-version>summary small{display:block;margin-top:5px;color:var(--muted);line-height:1.55}.reader-version>summary b{color:var(--blue);font-size:12px;white-space:nowrap}
+    .version-head{border-top:1px solid var(--line);background:var(--blue-soft);padding:23px}.version-head h2{margin:0;color:var(--ink);font-size:27px;line-height:1.35}.version-head p{margin:10px 0 0;line-height:1.75}.article-section{border-top:1px solid var(--line);padding:25px 23px}.article-section h3{margin:7px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.article-section p,.article-section li{font-size:15px;line-height:1.9}.article-section ul{padding-left:22px}code{border-radius:5px;background:#eef2f7;padding:2px 5px}
+    .sources{display:grid;gap:10px}.sources h3{margin-bottom:2px}.source-card{border:1px solid var(--line);border-radius:12px;background:#f8fafc;padding:13px}.source-card a,.source-card strong{font-weight:850}.source-card p{margin:7px 0 0;font-size:13px;line-height:1.7}.source-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.55}
+    .deep-report{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}.deep-report>summary{padding:19px 21px;cursor:pointer;color:var(--ink);font-weight:900}.markdown-body{border-top:1px solid var(--line);padding:24px;overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{color:var(--ink);line-height:1.4}.markdown-body h1{font-size:28px}.markdown-body h2{margin-top:34px;font-size:23px}.markdown-body h3{margin-top:27px;font-size:19px}.markdown-body p,.markdown-body li{line-height:1.85}.markdown-body table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.markdown-body blockquote{margin:16px 0;border-left:4px solid #93c5fd;background:#eff6ff;padding:10px 15px;color:#475569}.markdown-body pre{overflow:auto;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px}
+    footer{padding:24px 0 45px;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:680px){.top-inner{min-height:58px}main{padding-top:18px}.hero,.article-header{padding:21px}.history-card{padding:17px}.reader-version>summary{align-items:flex-start;padding:17px}.version-head,.article-section,.markdown-body{padding:18px}.article-section p,.article-section li{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell top-inner"><a class="brand" href="index.html">Serenity 往日报告</a><a class="back" href="../index.html#daily-article">返回当前首页</a></div></header>
+  <main class="shell">
+    <article class="article-header panel">
+      <span class="eyebrow">Approved Homepage Archive</span>
+      <h1>同一块GPU，为什么微软比Neocloud更不怕过剩？AI Capex真正的分水岭</h1>
+      <p>微软一个季度投入410亿美元资本开支，下季度还要超过500亿美元；Azure增长43%，但FY2026传统口径自由现金流反而下降约6%。真正的分水岭不是谁买的GPU更多，而是谁能在折旧到来前，把GPU持续变成云账单、软件订阅和股东现金流。</p>
+      <div class="meta"><span class="chip blue">截至 2026-07-30</span><span class="chip">批准于 2026-07-30T23:42:55+08:00</span><span class="chip">归档 ID：2026-07-30_234255_e3d72b7984</span></div>
+      <div class="topics"><span class="chip">微软AI资本开支与资产结构</span><span class="chip">GPU租赁、模型API与全栈变现</span><span class="chip">Azure需求、RPO与供给约束</span><span class="chip">Neocloud利用率、融资与客户集中度</span><span class="chip">公司逻辑、股票估值与证伪条件分层</span></div>
+      <div class="history-actions"><a href="index.html">← 返回历史文章列表</a></div>
+    </article>
+    <section class="versions"><details class="reader-version" open><summary><span><strong>研究版 A</strong><small>适合希望用通俗单位经济框架理解微软、Neocloud和AI硬件资本回报差异的读者。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>同一块GPU，为什么微软比Neocloud更不怕过剩？AI Capex真正的分水岭</h2><p>微软一个季度投入410亿美元资本开支，下季度还要超过500亿美元；Azure增长43%，但FY2026传统口径自由现金流反而下降约6%。真正的分水岭不是谁买的GPU更多，而是谁能在折旧到来前，把GPU持续变成云账单、软件订阅和股东现金流。</p></div><section class="article-section"><span class="part">Part 01</span><h3>先说结论：判断AI泡沫，别先数GPU，先问谁能把GPU变成账单</h3><p>微软这份财报看起来很矛盾：季度收入900.07亿美元，同比增长18%；Azure及其他云服务增长43%；但公司同期资本开支达到410亿美元，微软云毛利率降到65%。【1】【2】如果只看支出，会觉得这是一场越来越昂贵的军备竞赛；如果只看Azure增速，又容易忽略折旧、电力和芯片价格正在侵蚀利润。</p><p>真正的分水岭不是谁买的GPU更多，而是谁能把GPU装进一个持续收费的商业系统。微软不只出租算力，它还销售模型API、GitHub Copilot、Microsoft 365 Copilot、数据库、安全和企业工作流；同一份基础设施可以被多个产品和客户反复使用。它因此比只卖GPU小时的公司多出几层价值捕获，也拥有更大的调度空间。</p><p>市场数据补齐后，结论反而更清楚：截至2026年7月30日23:31，微软股价约445.27美元、总市值约3.306万亿美元、滚动市盈率约24.72倍；S&amp;P Global汇总的FY2027调整后EPS一致预期为19.55美元，对应约22.8倍前瞻市盈率。【7】【8】这不是一个只要证明需求存在就能轻松赚钱的价格。公司逻辑增强，但股票仍要回答资本开支何时转成自由现金流。</p><ul><li>核心判断：AI资本开支最终要由利用率、定价权、软件收入和现金流共同证明。</li><li>关键边界：好公司不等于任何价格都是好股票。</li></ul></section><section class="article-section"><span class="part">Part 02</span><h3>同一块GPU，装进三种生意，回报可以完全不同</h3><p>第一种生意是裸租GPU。公司先买芯片和机房，再按小时出租。它像开酒店：房间越贵，越怕空置；客户一旦压价、转移工作负载或供给转松，收入会立刻受影响，但折旧和融资成本不会跟着消失。</p><p>第二种生意是模型API，但基础设施来自第三方。模型公司可以按Token收费，却要把相当一部分收入交给云厂商或算力供应商。模型价格下降时，如果调用量增长不够快，利润会先被挤压。用户提供的《开源的ROI到底怎么样》正是从这个单位经济问题切入；本文只借用问题框架，具体判断全部回到微软官方数据核验。【4】</p><p>第三种生意是微软式全栈：自有或长期控制基础设施，同时拥有云平台、模型选择、企业数据、软件入口和收费关系。它既能收GPU租赁的钱，也能收API、订阅和用量的钱。更重要的是，一类客户暂时用不完的容量，可以调度给其他地区、行业、模型或微软自己的Copilot产品。决定回报的不是GPU本身，而是每块GPU一年能被调用多少次、每次调用能带来多少收入，以及公司能留下多少毛利。</p><ul><li>裸租算力的核心变量：利用率、租金、折旧和融资成本。</li><li>模型API的核心变量：Token价格下降速度能否慢于调用量增长速度。</li><li>全栈平台的核心变量：能否跨产品提高利用率，并把效率提升转成新增使用和收入。</li></ul></section><section class="article-section"><span class="part">Part 03</span><h3>微软这季最重要的证据：新增算力几乎可以立刻卖出去</h3><p>微软管理层表示，客户需求仍然超过可用供给。公司本季新增31座数据中心，全年新增88座；单季又增加约1GW容量，并计划在两年内把整体容量大致翻倍。【2】这不是证明未来永远短缺，而是说明当前新增机房和芯片并没有大面积闲置。</p><p>更关键的是，效率提高可以迅速变成收入。管理层称，CPU和GPU的效率改善、设备从到货到上线时间缩短，都在本季度很快被客户需求消化，推动Azure增长43%；下一季度Azure固定汇率增速指引约45%。【1】【2】当一块GPU多跑出10%的有效任务，而市场仍在排队，这10%不是抽象技术指标，而可能直接成为当季账单。</p><p>订单可见度也不只来自OpenAI。微软商业剩余履约义务达到6780亿美元，同比增长84%；剔除OpenAI后仍增长25%，而且本季环比新增的商业RPO全部来自前沿模型公司以外的客户。【2】约30%的RPO预计在未来12个月确认收入。它不能等同现金，也不能保证客户永不调整合同，但至少说明需求已经从少数模型实验室扩散到更广的企业客户。</p><ul><li>支持项：需求大于供给、效率增量快速变现、非前沿模型客户RPO继续增长。</li><li>保留项：RPO仍需按期转化为收入和现金，不能直接当作已实现利润。</li></ul></section><section class="article-section"><span class="part">Part 04</span><h3>真正的考题不在收入表，而在现金流量表</h3><p>微软FY2026全年收入3318.39亿美元，同比增长17.8%；经营现金流达到1829.35亿美元，同比增长34.4%。只看到这里，会觉得AI投入已经被强劲现金创造完全覆盖。但同期购置物业和设备的现金支出从645.51亿美元升至1159.48亿美元，增长79.6%，远快于收入和经营现金流。【1】按经营现金流减现金购置物业和设备计算，传统口径自由现金流从716.11亿美元降至669.87亿美元，反而减少约6.5%。</p><p>单看第四季度，反差更明显：经营现金流从426.47亿美元增至554.41亿美元，但现金资本开支从170.79亿美元翻到358.02亿美元，传统口径自由现金流因此从255.68亿美元降至196.39亿美元，下降约23.2%。管理层所说的410亿美元季度资本开支包含租赁等口径，现金流量表中的358.02亿美元是当季实际支付的物业和设备现金，两者不能混为一谈。【1】【2】</p><p>这组数字揭示了一个很深但通俗的道理：收入增长证明客户愿意付钱，自由现金流才证明公司在付完建设成本后还剩多少钱。微软现在已经证明了前半句，却仍在验证后半句。FY2026现金资本开支相当于收入的34.9%，上一年只有22.9%；也就是说，每创造100美元收入，用于购置物业和设备的现金从约23美元升到约35美元。</p><p>而且折旧的压力通常晚于采购发生。微软净物业和设备一年内从2049.66亿美元升至3130.76亿美元，增长52.7%；折旧、摊销及其他项目从294.33亿美元升至385.34亿美元，增长30.9%。【1】今天买入的GPU和数据中心，会在未来多个季度进入成本。若Azure和Copilot收入继续高速增长，这些折旧会被规模吸收；若收入减速，折旧不会同步消失，利润率和自由现金流就会成为最先暴露问题的地方。</p><ul><li>已经证明：需求、收入和经营现金流都很强。</li><li>仍待证明：资本开支增速回落后，自由现金流能否重新快于利润增长。</li><li>最容易误判：把RPO、经营现金流或GAAP EPS直接当作已经兑现的资本回报。</li></ul></section><section class="article-section"><span class="part">Part 05</span><h3>效率越来越高，为什么GPU需求不一定下降</h3><p>很多人直觉上认为，模型和芯片效率提高以后，所需GPU会减少。这只在使用量不变时成立。现实更像高速公路：道路扩宽以后，每辆车更快通过，但如果出行成本下降吸引了更多车辆，总车流量反而可能上升。AI也是一样，单位Token变便宜，企业就可能把它从少数聊天机器人扩展到代码、客服、安全、财务和长期运行的Agent。</p><p>微软已经提供了这种需求弹性的早期证据。公司称Copilot工作负载吞吐量年初以来提高4倍；MAI模型运行在Maia 200上，每瓦性能提高40%；Dynamics 365部分工作负载的GPU成本下降89%，PowerPoint部分图像工作负载最多下降84%。【2】这些效率提升没有伴随需求消失：Microsoft 365 Copilot付费席位超过3000万，单用户对话次数同比接近翻倍；Foundry客户达到10万，收入同比增长超过一倍，达到万亿Token年化使用量的客户数量同比增长4倍。【2】</p><p>但这里不能直接得出“效率越高，GPU永远越缺”。真正需要观察的是三个量：单位任务成本下降多少、任务数量增长多少、每个任务的计算强度如何变化。只有总计算量和收入增长持续快于单位价格下降，效率革命才会转化为更大的资本回报。</p><ul><li>通俗公式：总算力需求≈用户数×人均任务数×单任务Token和计算量÷软硬件效率。</li><li>证伪条件：单位成本下降很快，但使用量、收入和毛利没有同步增长。</li></ul></section><section class="article-section"><span class="part">Part 06</span><h3>微软为什么更不怕过剩：它买的不是一座不能转身的水泥工厂</h3><p>微软季度资本开支为410亿美元，其中约三分之二是CPU、GPU等短周期资产，剩余部分才是土地、机房等长周期资产。【2】管理层在问答中明确表示，如果需求环境改变，公司可以放慢最昂贵的CPU和GPU采购；土地和数据中心建设占成本结构较小，建设时间也可以调整，还能在较晚阶段决定具体装入哪些芯片。</p><p>这就是“过剩保护”的第一层：大部分新增支出不是十几年都不能动的资产，而是可以通过采购节奏调整。第二层是微软拥有Azure之外的第一方应用，闲置容量可以被Copilot、GitHub、安全、数据库和模型服务共同吸收。第三层是客户足够分散，地区、行业和工作负载之间可以互相平滑波动。</p><p>保护并不等于没有风险。微软预计下一季度资本开支将超过500亿美元，FY27资本开支仍会同比增长；公司把2026日历年资本开支预期调整为约1750亿美元，主要涉及租赁分类变化。【2】微软云毛利率降到65%，公司总毛利率也受到Azure收入占比提高、AI基础设施投资和产品使用量上升的压力。若收入增长放慢，而折旧、电力和融资成本继续上升，全栈平台同样会承受利润压力。</p><p>还要注意EPS质量。微软本季GAAP稀释EPS为4.81美元，同比增长32%；剔除OpenAI投资影响后为4.74美元，同比增长23%。【1】管理层同时披露了32亿美元Anthropic投资收益等离散项目，但没有给出完全剔除所有投资收益的标准化经营EPS。因此判断主营温度时，应优先看收入、经营利润、云毛利率和现金流，而不是只看表面EPS增速。</p><ul><li>微软的优势：短周期资产可调整、工作负载多元、第一方应用吸收容量。</li><li>微软的风险：资本开支继续加速，毛利率和自由现金流必须证明投入回报。</li></ul></section><section class="article-section"><span class="part">Part 07</span><h3>估值真正押注的，不是今年需求，而是两年后的现金流拐点</h3><p>截至2026年7月30日23:31，东方财富妙想金融数据显示微软股价约445.27美元、总市值约3.306万亿美元、滚动市盈率约24.72倍。【7】S&amp;P Global经StockAnalysis展示的FY2027一致预期为收入3891.2亿美元、同比增长17.3%，调整后EPS为19.55美元、同比增长13.2%，对应约22.8倍前瞻市盈率；一致预期同时认为总毛利率将从FY2026的67.94%降至FY2027的66.23%。【8】换句话说，市场已经预期微软继续高增长，也已经预期AI基础设施会继续压低毛利率。</p><p>因此，真正的预期差不再是“Azure会不会增长”。43%的当季增速和下一季度约45%的固定汇率指引已经把强需求摆在桌面上。更重要的问题是：收入增长17%左右时，调整后EPS为什么只增长13%左右；资本开支何时不再比经营现金流增长得更快；云毛利率何时停止下降。只要这三件事没有改善，收入超预期也可能只是在替未来折旧争取时间。</p><p>用最朴素的现金回报看，3.306万亿美元市值对应FY2026约669.87亿美元传统口径自由现金流，市值/自由现金流约49倍，自由现金流收益率约2.0%。这不代表微软一定高估，因为当前自由现金流正被扩张期资本开支压低；但它说明投资者事实上在预付未来的现金流修复。若只用3%的自由现金流收益率作示意，公司需要接近992亿美元自由现金流；若用4%，需要约1322亿美元，分别比FY2026高约48%和97%。这不是目标价模型，而是把当前价格要求的现金流量级说清楚。</p><p>乐观情形是Azure维持高增速、云毛利率在65%左右企稳、资本开支增速先于收入增速回落，自由现金流重新接近或超过1000亿美元；中性情形是收入和EPS大致达到一致预期，但资本开支继续高位，自由现金流恢复较慢，股票回报更多依赖估值倍数不收缩；悲观情形则是供给约束缓解后Azure减速、云毛利率继续下降、非OpenAI客户RPO转化放慢，而折旧仍上升，此时公司仍可能增长，股票却会因为现金流和估值同时承压。</p><p>所以这篇文章不会把445美元简单定义为便宜或昂贵。更准确的结论是：微软的商业模式比裸租GPU更有防御力，但当前估值已经要求这种防御力最终兑现为更高自由现金流。现在最合理的研究动作不是追逐一个分析师目标价，而是等待现金流拐点给出证明。</p><ul><li>市场已经计入：FY2027收入继续约17%的高增长。</li><li>市场仍在等待：毛利率企稳、资本开支增速下降和自由现金流修复。</li><li>当前判断：公司逻辑增强，股票处于“等待现金流证明”而非无条件便宜。</li></ul></section><section class="article-section"><span class="part">Part 08</span><h3>对投资者最有用的结论：AI产业链不能再一篮子买</h3><p>对于微软，财报增强的是“企业AI平台可以把算力转成收入”的公司逻辑。Azure、RPO、Copilot席位和用量计费共同证明价值捕获正在形成。但FY2026自由现金流下降、现金资本开支占收入比例大幅上升，说明股东回报还没有与经营叙事同步。最合理的动作是把微软列为等待现金流证明的高质量公司，而不是因为Azure强就忽略价格。</p><p>对于Neocloud，Serenity一直强调这是一场与时间赛跑的生意：早期供给紧张给了它们窗口，但长期必须提高客户多样性、利用率和软件层价值，否则裸租GPU终会面对价格竞争、折旧和融资压力。【5】【6】所以不能只看公司拥有多少GW电力，还要问GPU由谁出钱、客户是否预付、合同期限多长、取消责任如何，以及平台是否能从租赁走向编排、模型API或行业解决方案。</p><p>对于NVIDIA、AMD、内存、光模块、电力和冷却，微软继续扩容仍是强需求信号。但资本开支不是任何一家供应商的确定收入。采购份额、产品代际、客户认证、ASP、交付、良率和毛利率，决定上游能拿走多少价值。特别是存储和光链，出货增长与股东利润之间仍隔着价格、成本和竞争格局。</p><ul><li>平台层：看收入、用量和毛利能否跑赢资本开支。</li><li>Neocloud：看利用率、客户集中、融资成本和软件价值。</li><li>硬件层：看订单能否变成交付、毛利和现金流。</li></ul></section><section class="article-section"><span class="part">Part 09</span><h3>接下来只盯七件事，微软的AI投入就不会再只是宏大叙事</h3><p>这篇文章并不试图证明AI一定没有泡沫。它只提供一个更有效的判断方法：当一家公司继续增加GPU时，不要先问数字有多大，而要问新增算力是否快速上线、是否有客户排队、是否能跨产品调度、是否能转成收入、毛利和现金流。</p><p>下一次财报重点核对七项：Azure增速是否维持高位；微软云毛利率是否在65%左右企稳；剔除OpenAI后的RPO是否继续增长并按期转化；Copilot和Foundry的用量收入是否快于席位增长；现金资本开支增速是否开始低于经营现金流增速；传统口径自由现金流能否重新同比增长；以及Neocloud客户的利用率、融资和合同质量是否同步增强。</p><p>如果Azure增速明显放缓、毛利率持续下行、非OpenAI客户RPO转弱，同时资本开支和折旧继续上升，那么“全栈可以消化巨额算力”的判断就需要下调。反过来，如果效率提升持续转成用量收入，云毛利率企稳，新增RPO更加分散，微软将证明AI资本开支不是简单买设备，而是在建设一台能够反复收费的企业智能机器。</p><ul><li>经营逻辑增强的条件：效率转成用量收入、毛利率企稳、RPO分散并按期兑现。</li><li>核心反证：资本开支持续快于收入和现金流，容量约束消失后利用率与定价同时下降。</li><li>本文为公开资料研究框架，不构成投资建议。</li></ul></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast" target="_blank" rel="noopener noreferrer">微软｜FY2026 Q4财报公告与财务表</a><p>核实季度收入、经营利润、Azure增速、商业RPO及GAAP/剔除OpenAI投资影响后的EPS口径。</p><small>Microsoft Investor Relations · 2026-07-29 · Earnings PR与财务表 · 公司官方披露；未来展望仍属于前瞻性陈述</small></article><article class="source-card"><a href="https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4" target="_blank" rel="noopener noreferrer">微软｜FY2026 Q4财报电话会</a><p>核实资本开支、短周期资产比例、Azure与毛利率指引、容量建设、效率提升、RPO结构及管理层问答。</p><small>Microsoft官方电话会全文 · Satya Nadella / Amy Hood · 2026-07-29 · 财务数字优先回到财报表；电话会中的未来判断为管理层口径</small></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/AowX6iXturX-jD6JqkQ7fA" target="_blank" rel="noopener noreferrer">参考文章｜微软FY2026 Q4深度</a><p>提供Azure增长、云毛利率与资本开支并读的文章结构。</p><small>公众号研报平权 · 用户提供参考 · 只用于编辑对照；所有财务数字回到微软官方材料</small></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/yRcZXPdJOwkgrMi2qcscTQ" target="_blank" rel="noopener noreferrer">参考文章｜开源的ROI到底怎么样</a><p>提供GPU租赁、自有基础设施模型API和第三方基础设施模型API的单位经济比较问题。</p><small>公众号2030 · 用户提供参考 · 只学习问题框架与模型拆分；具体数字和结论不作为公司事实</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/1995192101261471838" target="_blank" rel="noopener noreferrer">Serenity｜Neocloud必须从裸租走向全栈</a><p>讨论NBIS、IREN和CRWV的客户多样性、全栈能力、融资与长期脆弱性。</p><small>Serenity公开推文 · 投资者观点与公司比较框架，不是公司官方财务披露</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/1990815562558308858" target="_blank" rel="noopener noreferrer">Serenity｜Hyperscaler CapEx向Neocloud传导</a><p>讨论微软等Hyperscaler长期算力合同对Neocloud和上游建设的传导。</p><small>Serenity公开推文 · 合同质量、金额和履约仍需回到公司披露核验</small></article><article class="source-card"><a href="https://dl.dfcfs.com/m/itc4" target="_blank" rel="noopener noreferrer">东方财富妙想金融数据｜MSFT实时行情与估值</a><p>核实2026年7月30日23:31的MSFT最新价、总市值、滚动市盈率和市净率；查询ID 10aff56e-e8dd-47bd-9b02-734adab1b1ca。</p><small>东方财富权威金融数据库 · 2026-07-30 23:31 +08:00 · 行情数据具有时点性；不同数据商的调整后盈利和预测市盈率口径不可直接混用</small></article><article class="source-card"><a href="https://stockanalysis.com/stocks/msft/forecast/" target="_blank" rel="noopener noreferrer">StockAnalysis / S&amp;P Global｜微软一致预期</a><p>核实FY2027收入、调整后EPS、毛利率和前瞻市盈率一致预期，以及数据更新时间。</p><small>S&amp;P Global Market Intelligence经StockAnalysis展示 · Last updated 2026-07-30 · 二手聚合的一致预期；EPS与前瞻PE为非GAAP调整口径，不能与微软GAAP EPS或东方财富不同口径预测直接拼接</small></article></section></details></section>
+    <details class="deep-report"><summary>展开归档深度报告</summary><div class="markdown-body"><h1>同一块GPU，为什么微软比Neocloud更不怕过剩？</h1>
+<blockquote>
+<p>AI Capex真正的分水岭，不是谁买的GPU更多，而是谁能把算力变成可持续收费的业务系统。</p>
+</blockquote>
+<ul>
+<li>候选 ID：<code>2026-07-30_msft_gpu_monetization</code></li>
+<li>内容日期：2026-07-30</li>
+<li>状态：候选稿，等待用户对具体正文作首页批准</li>
+<li>自动发布：否</li>
+<li>研究用途：Serenity V9 首页深度文章候选</li>
+</ul>
+<h2>先说结论：判断AI泡沫，别先数GPU，先问谁能把GPU变成账单</h2>
+<p>微软这份财报看起来很矛盾。</p>
+<p>季度收入达到900.07亿美元，同比增长18%；Azure及其他云服务增长43%。与此同时，公司季度资本开支达到410亿美元，微软云毛利率降到65%。【1】【2】如果只看资本开支，会觉得这是一场越来越昂贵的军备竞赛；如果只看Azure增速，又容易忽略折旧、电力和芯片价格正在侵蚀利润。</p>
+<p>真正的分水岭不是谁买的GPU更多，而是谁能把GPU装进一个持续收费的商业系统。</p>
+<p>微软不只出租算力。它还销售模型API、GitHub Copilot、Microsoft 365 Copilot、数据库、安全产品和企业工作流。同一份基础设施可以被多个产品和客户反复使用。它因此比只卖GPU小时的公司多出几层价值捕获，也拥有更大的容量调度空间。</p>
+<p>市场数据补齐后，结论反而更清楚：截至2026年7月30日23:31，微软股价约445.27美元、总市值约3.306万亿美元、滚动市盈率约24.72倍；S&amp;P Global汇总的FY2027调整后EPS一致预期为19.55美元，对应约22.8倍前瞻市盈率。【7】【8】</p>
+<p>这不是一个只要证明需求存在就能轻松赚钱的价格。公司逻辑增强，但股票仍要回答资本开支何时转成自由现金流。</p>
+<h2>同一块GPU，装进三种生意，回报可以完全不同</h2>
+<p>第一种生意是裸租GPU。</p>
+<p>公司先买芯片和机房，再按小时出租。它像开酒店：房间越贵，越怕空置；客户一旦压价、转移工作负载或供给转松，收入会立刻受到影响，但折旧和融资成本不会跟着消失。</p>
+<p>第二种生意是模型API，但基础设施来自第三方。</p>
+<p>模型公司可以按Token收费，却需要把相当一部分收入交给云厂商或算力供应商。模型价格下降时，如果调用量增长不够快，利润会先被挤压。用户提供的《开源的ROI到底怎么样》正是从这个单位经济问题切入；本文只借用问题框架，具体判断全部回到微软官方数据核验。【4】</p>
+<p>第三种生意是微软式全栈。</p>
+<p>微软自有或长期控制基础设施，同时拥有云平台、模型选择、企业数据、软件入口和收费关系。它既能收GPU租赁的钱，也能收API、订阅和用量的钱。更重要的是，一类客户暂时用不完的容量，可以调度给其他地区、行业、模型或微软自己的Copilot产品。</p>
+<p>决定回报的不是GPU本身，而是每块GPU一年能被调用多少次、每次调用能带来多少收入，以及公司最后能留下多少毛利。</p>
+<h2>微软这季最重要的证据：新增算力几乎可以立刻卖出去</h2>
+<p>微软管理层表示，客户需求仍然超过可用供给。公司本季新增31座数据中心，全年新增88座；单季又增加约1GW容量，并计划在两年内把整体容量大致翻倍。【2】这不是证明未来永远短缺，而是说明当前新增机房和芯片并没有大面积闲置。</p>
+<p>更关键的是，效率提高可以迅速变成收入。</p>
+<p>管理层称，CPU和GPU的效率改善、设备从到货到上线时间缩短，都在本季度很快被客户需求消化，推动Azure增长43%；下一季度Azure固定汇率增速指引约45%。【1】【2】当一块GPU多跑出10%的有效任务，而市场仍在排队，这10%就不是抽象的技术指标，而可能直接成为当季账单。</p>
+<p>订单可见度也不只来自OpenAI。</p>
+<p>微软商业剩余履约义务达到6780亿美元，同比增长84%；剔除OpenAI后仍增长25%，而且本季环比新增的商业RPO全部来自前沿模型公司以外的客户。【2】约30%的RPO预计在未来12个月确认收入。</p>
+<p>RPO不能等同现金，也不能保证客户永不调整合同。但它至少说明需求已经从少数模型实验室扩散到更广的企业客户。</p>
+<h2>真正的考题不在收入表，而在现金流量表</h2>
+<p>微软FY2026全年收入3318.39亿美元，同比增长17.8%；经营现金流达到1829.35亿美元，同比增长34.4%。只看到这里，会觉得AI投入已经被强劲现金创造完全覆盖。</p>
+<p>但同期购置物业和设备的现金支出从645.51亿美元升至1159.48亿美元，增长79.6%，远快于收入和经营现金流。【1】按经营现金流减现金购置物业和设备计算，传统口径自由现金流从716.11亿美元降至669.87亿美元，反而减少约6.5%。</p>
+<p>单看第四季度，反差更明显：</p>
+<ul>
+<li>经营现金流从426.47亿美元增至554.41亿美元。</li>
+<li>现金资本开支从170.79亿美元翻到358.02亿美元。</li>
+<li>传统口径自由现金流从255.68亿美元降至196.39亿美元，下降约23.2%。</li>
+</ul>
+<p>管理层所说的410亿美元季度资本开支包含租赁等口径，现金流量表中的358.02亿美元是当季实际支付的物业和设备现金，两者不能混为一谈。【1】【2】</p>
+<p>这组数字揭示了一个很深但通俗的道理：收入增长证明客户愿意付钱，自由现金流才证明公司在付完建设成本后还剩多少钱。微软现在已经证明了前半句，却仍在验证后半句。</p>
+<p>FY2026现金资本开支相当于收入的34.9%，上一年只有22.9%。换句话说，每创造100美元收入，用于购置物业和设备的现金从约23美元升到约35美元。</p>
+<p>而且折旧的压力通常晚于采购发生。微软净物业和设备一年内从2049.66亿美元升至3130.76亿美元，增长52.7%；折旧、摊销及其他项目从294.33亿美元升至385.34亿美元，增长30.9%。【1】</p>
+<p>今天买入的GPU和数据中心，会在未来多个季度进入成本。若Azure和Copilot收入继续高速增长，这些折旧会被规模吸收；若收入减速，折旧不会同步消失，利润率和自由现金流就会成为最先暴露问题的地方。</p>
+<h2>效率越来越高，为什么GPU需求不一定下降</h2>
+<p>很多人直觉上认为，模型和芯片效率提高以后，所需GPU会减少。这只在使用量不变时成立。</p>
+<p>现实更像高速公路：道路扩宽以后，每辆车更快通过，但如果出行成本下降吸引了更多车辆，总车流量反而可能上升。AI也是一样，单位Token变便宜，企业就可能把它从少数聊天机器人扩展到代码、客服、安全、财务和长期运行的Agent。</p>
+<p>微软已经提供了这种需求弹性的早期证据。</p>
+<p>公司称Copilot工作负载吞吐量年初以来提高4倍；MAI模型运行在Maia 200上，每瓦性能提高40%；Dynamics 365部分工作负载的GPU成本下降89%，PowerPoint部分图像工作负载最多下降84%。【2】</p>
+<p>这些效率提升没有伴随需求消失：Microsoft 365 Copilot付费席位超过3000万，单用户对话次数同比接近翻倍；Foundry客户达到10万，收入同比增长超过一倍，达到万亿Token年化使用量的客户数量同比增长4倍。【2】</p>
+<p>但这里不能直接得出“效率越高，GPU永远越缺”。真正需要观察的是三个量：单位任务成本下降多少、任务数量增长多少、每个任务的计算强度如何变化。只有总计算量和收入增长持续快于单位价格下降，效率革命才会转化为更大的资本回报。</p>
+<p>可以把它写成一个通俗公式：</p>
+<blockquote>
+<p>总算力需求 ≈ 用户数 × 人均任务数 × 单任务Token和计算量 ÷ 软硬件效率</p>
+</blockquote>
+<p>效率在分母，但用户、任务和单次任务复杂度都可能更快增长。</p>
+<h2>微软为什么更不怕过剩：它买的不是一座不能转身的水泥工厂</h2>
+<p>微软季度资本开支为410亿美元，其中约三分之二是CPU、GPU等短周期资产，剩余部分才是土地、机房等长周期资产。【2】</p>
+<p>管理层在问答中明确表示，如果需求环境改变，公司可以放慢最昂贵的CPU和GPU采购；土地和数据中心建设占成本结构较小，建设时间也可以调整，还能在较晚阶段决定具体装入哪些芯片。【2】</p>
+<p>这就是“过剩保护”的第一层：大部分新增支出不是十几年都不能动的资产，而是可以通过采购节奏调整。</p>
+<p>第二层是微软拥有Azure之外的第一方应用。闲置容量可以被Copilot、GitHub、安全、数据库和模型服务共同吸收。</p>
+<p>第三层是客户足够分散。地区、行业和工作负载之间可以互相平滑波动。</p>
+<p>保护并不等于没有风险。</p>
+<p>微软预计下一季度资本开支将超过500亿美元，FY27资本开支仍会同比增长；公司把2026日历年资本开支预期调整为约1750亿美元，主要涉及租赁分类变化。【2】微软云毛利率降到65%，公司总毛利率也受到Azure收入占比提高、AI基础设施投资和产品使用量上升的压力。</p>
+<p>若收入增长放慢，而折旧、电力和融资成本继续上升，全栈平台同样会承受利润压力。</p>
+<p>还要注意EPS质量。</p>
+<p>微软本季GAAP稀释EPS为4.81美元，同比增长32%；剔除OpenAI投资影响后为4.74美元，同比增长23%。【1】管理层同时披露了32亿美元Anthropic投资收益等离散项目，但没有给出完全剔除所有投资收益的标准化经营EPS。【2】</p>
+<p>因此判断主营温度时，应优先看收入、经营利润、云毛利率和现金流，而不是只看表面EPS增速。</p>
+<h2>估值真正押注的，不是今年需求，而是两年后的现金流拐点</h2>
+<p>截至2026年7月30日23:31，东方财富妙想金融数据显示微软股价约445.27美元、总市值约3.306万亿美元、滚动市盈率约24.72倍。【7】</p>
+<p>S&amp;P Global经StockAnalysis展示的FY2027一致预期为：</p>
+<ul>
+<li>收入3891.2亿美元，同比增长17.3%。</li>
+<li>调整后EPS 19.55美元，同比增长13.2%。</li>
+<li>约22.8倍前瞻市盈率。</li>
+<li>总毛利率从FY2026的67.94%降至FY2027的66.23%。【8】</li>
+</ul>
+<p>换句话说，市场已经预期微软继续高增长，也已经预期AI基础设施会继续压低毛利率。</p>
+<p>因此，真正的预期差不再是“Azure会不会增长”。43%的当季增速和下一季度约45%的固定汇率指引已经把强需求摆在桌面上。更重要的问题是：收入增长17%左右时，调整后EPS为什么只增长13%左右；资本开支何时不再比经营现金流增长得更快；云毛利率何时停止下降。</p>
+<p>只要这三件事没有改善，收入超预期也可能只是在替未来折旧争取时间。</p>
+<p>用最朴素的现金回报看，3.306万亿美元市值对应FY2026约669.87亿美元传统口径自由现金流，市值/自由现金流约49倍，自由现金流收益率约2.0%。这不代表微软一定高估，因为当前自由现金流正被扩张期资本开支压低；但它说明投资者事实上在预付未来的现金流修复。</p>
+<p>如果只用自由现金流收益率作示意：</p>
+<ul>
+<li>3%的收益率要求自由现金流接近992亿美元，比FY2026高约48%。</li>
+<li>4%的收益率要求自由现金流接近1322亿美元，比FY2026高约97%。</li>
+</ul>
+<p>这不是目标价模型，而是把当前价格要求的现金流量级说清楚。</p>
+<p>三种情形可以这样理解：</p>
+<ol>
+<li><strong>乐观情形</strong>：Azure维持高增速，云毛利率在65%左右企稳，资本开支增速先于收入增速回落，自由现金流重新接近或超过1000亿美元。</li>
+<li><strong>中性情形</strong>：收入和EPS大致达到一致预期，但资本开支继续高位，自由现金流恢复较慢，股票回报更多依赖估值倍数不收缩。</li>
+<li><strong>悲观情形</strong>：供给约束缓解后Azure减速，云毛利率继续下降，非OpenAI客户RPO转化放慢，而折旧仍上升。公司仍可能增长，股票却会因为现金流和估值同时承压。</li>
+</ol>
+<p>所以这篇文章不会把445美元简单定义为便宜或昂贵。更准确的结论是：微软的商业模式比裸租GPU更有防御力，但当前估值已经要求这种防御力最终兑现为更高自由现金流。现在最合理的研究动作不是追逐一个分析师目标价，而是等待现金流拐点给出证明。</p>
+<h2>对投资者最有用的结论：AI产业链不能再一篮子买</h2>
+<p>对于微软，财报增强的是“企业AI平台可以把算力转成收入”的公司逻辑。Azure、RPO、Copilot席位和用量计费共同证明价值捕获正在形成。</p>
+<p>但FY2026自由现金流下降、现金资本开支占收入比例大幅上升，说明股东回报还没有与经营叙事同步。最合理的动作是把微软列为等待现金流证明的高质量公司，而不是只因为Azure增长43%就忽略价格。</p>
+<p>对于Neocloud，Serenity一直强调这是一场与时间赛跑的生意：早期供给紧张给了它们窗口，但长期必须提高客户多样性、利用率和软件层价值，否则裸租GPU终会面对价格竞争、折旧和融资压力。【5】【6】</p>
+<p>所以不能只看公司拥有多少GW电力，还要问：</p>
+<ul>
+<li>GPU由谁出钱？</li>
+<li>客户是否预付？</li>
+<li>合同期限多长？</li>
+<li>取消责任如何？</li>
+<li>平台能否从租赁走向编排、模型API或行业解决方案？</li>
+</ul>
+<p>对于NVIDIA、AMD、内存、光模块、电力和冷却，微软继续扩容仍是强需求信号。但资本开支不是任何一家供应商的确定收入。采购份额、产品代际、客户认证、ASP、交付、良率和毛利率，决定上游能拿走多少价值。</p>
+<p>特别是存储和光链，出货增长与股东利润之间仍隔着价格、成本和竞争格局。</p>
+<h2>接下来只盯七件事</h2>
+<p>这篇文章并不试图证明AI一定没有泡沫。它只提供一个更有效的判断方法：当一家公司继续增加GPU时，不要先问数字有多大，而要问新增算力是否快速上线、是否有客户排队、是否能跨产品调度、是否能转成收入、毛利和现金流。</p>
+<p>下一次财报重点核对七项：</p>
+<ol>
+<li>Azure增速是否维持高位。</li>
+<li>微软云毛利率能否在65%左右企稳。</li>
+<li>剔除OpenAI后的RPO是否继续增长并按期转化。</li>
+<li>Copilot和Foundry的用量收入是否快于席位增长。</li>
+<li>现金资本开支增速是否开始低于经营现金流增速。</li>
+<li>传统口径自由现金流能否重新同比增长。</li>
+<li>Neocloud客户的利用率、融资和合同质量是否同步增强。</li>
+</ol>
+<p>如果Azure增速明显放缓、毛利率持续下行、非OpenAI客户RPO转弱，同时资本开支和折旧继续上升，那么“全栈可以消化巨额算力”的判断就需要下调。</p>
+<p>反过来，如果效率提升持续转成用量收入，云毛利率企稳，新增RPO更加分散，微软将证明AI资本开支不是简单买设备，而是在建设一台能够反复收费的企业智能机器。</p>
+<hr>
+<h2>证据与来源</h2>
+<p>【1】Microsoft Investor Relations，《FY26 Q4 Press Release and Financial Tables》，2026-07-29：<a href="https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast">官方财报公告</a>。用于核实收入、经营利润、Azure增速、RPO与GAAP/剔除OpenAI投资影响后的EPS。</p>
+<p>【2】Microsoft Investor Relations，《Microsoft FY26 Fourth Quarter Earnings Conference Call》，2026-07-29：<a href="https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4">官方电话会全文</a>。用于核实资本开支、资产结构、容量、毛利率、效率、用量与管理层问答。电话会中的未来表述属于管理层前瞻性判断。</p>
+<p>【3】公众号“研报平权”，《微软FY2026 Q4深度：Azure增速升至43%，云毛利率降至65%》：<a href="https://mp.weixin.qq.com/s/AowX6iXturX-jD6JqkQ7fA">原文</a>。只用于编辑结构对照，财务数字均回到微软官方材料。</p>
+<p>【4】公众号“2030”，《开源的ROI到底怎么样》：<a href="https://mp.weixin.qq.com/s/yRcZXPdJOwkgrMi2qcscTQ">原文</a>。只用于GPU租赁与模型API单位经济的提问框架，不使用其图表数字作为公司事实。</p>
+<p>【5】Serenity，《Neocloud必须从裸租走向全栈》：<a href="https://x.com/aleabitoreddit/status/1995192101261471838">公开推文</a>。属于投资者观点与公司比较框架。</p>
+<p>【6】Serenity，《Hyperscaler CapEx向Neocloud传导》：<a href="https://x.com/aleabitoreddit/status/1990815562558308858">公开推文</a>。合同金额与履约仍需回到公司披露核验。</p>
+<p>【7】东方财富妙想金融数据，MSFT实时行情与估值，2026-07-30 23:31 +08:00：<a href="https://dl.dfcfs.com/m/itc4">数据服务说明</a>。查询ID：<code>10aff56e-e8dd-47bd-9b02-734adab1b1ca</code>。用于核实最新价、总市值和滚动市盈率；行情具有时点性。</p>
+<p>【8】StockAnalysis / S&amp;P Global Market Intelligence，Microsoft Forecast，Last updated 2026-07-30：<a href="https://stockanalysis.com/stocks/msft/forecast/">一致预期页面</a>。用于核实FY2027收入、调整后EPS、毛利率和前瞻市盈率预期。调整后EPS不能与微软GAAP EPS或其他数据商的不同口径直接混用。</p>
+<h2>审核边界</h2>
+<ul>
+<li>事实、管理层表述和本文推断已分层。</li>
+<li>本文使用了冻结于2026-07-30的行情与一致预期，但没有建立完整DCF或目标价模型，因此只判断估值要求和现金流门槛，不给出具体买入价。</li>
+<li>东方财富返回的另一组FY2027预测市盈率与同批净利润预测无法直接勾稽，本文未使用该异常字段。</li>
+<li>RPO、规划容量和资本开支不能直接等同已确认收入、利润或供应商订单。</li>
+<li>当前文件是候选稿，尚未获得用户对具体正文的首页发布批准。</li>
+<li>本文不构成投资建议。</li>
+</ul></div></details>
+    </main>
+  <footer class="shell">历史文章来自本地不可变批准归档；页面用于研究回溯，不构成投资建议。</footer>
+</body>
+</html>
