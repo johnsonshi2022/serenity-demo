@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="美光预计2026年DRAM位元出货增长低到中20%、NAND增长约20%，却仍判断供需紧张将延续到2027年以后；三星和SK海力士也称增产后需求仍超过供给。原因是晶圆投入不等于可卖、可交付、未被长协锁定的位元。">
+  <title>存储厂都在扩产，为什么还是缺货？真正该看的是“有效供给” - Serenity 往日报告</title>
+  <style>
+    :root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(1060px,calc(100vw - 28px));margin:0 auto}.top{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(246,248,251,.94);backdrop-filter:blur(10px)}
+    .top-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{color:var(--ink);font-weight:900;text-decoration:none}.back{display:inline-flex;align-items:center;min-height:36px;border:1px solid #bfdbfe;border-radius:999px;background:#fff;padding:0 13px;text-decoration:none;font-size:13px;font-weight:800}
+    main{padding:34px 0 72px}.hero,.panel,.history-card,.reader-version{border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hero{padding:30px}.eyebrow,.part{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:900px;margin:10px 0 0;color:var(--ink);font-size:clamp(30px,5vw,52px);line-height:1.13;letter-spacing:-.035em}.hero>p{max-width:850px;margin:14px 0 0;color:#475569;font-size:15px;line-height:1.85}
+    .meta,.topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#f8fafc;padding:5px 9px;color:#475569;font-size:11px;font-weight:750}.chip.blue{border-color:#bfdbfe;background:var(--blue-soft);color:#1d4ed8}
+    .search{width:100%;margin-top:18px;border:1px solid #cbd5e1;border-radius:13px;background:#fff;padding:13px 15px;color:var(--ink);font:inherit;outline:none}.search:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}
+    .history-list{display:grid;gap:14px;margin-top:18px}.history-card{padding:20px}.history-card h2{margin:8px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.history-card p{margin:9px 0 0;line-height:1.75}.history-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.history-actions a{font-weight:850;text-decoration:none}
+    .empty{display:none;margin-top:18px;border:1px dashed #cbd5e1;border-radius:14px;background:#fff;padding:24px;text-align:center;color:var(--muted)}
+    .article-header{padding:28px}.article-header h1{font-size:clamp(28px,4vw,45px)}.versions{display:grid;gap:16px;margin-top:18px}.reader-version{overflow:hidden}.reader-version>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;cursor:pointer;list-style:none}.reader-version>summary::-webkit-details-marker{display:none}.reader-version>summary span{min-width:0}.reader-version>summary strong{display:block;color:var(--ink);font-size:17px}.reader-version>summary small{display:block;margin-top:5px;color:var(--muted);line-height:1.55}.reader-version>summary b{color:var(--blue);font-size:12px;white-space:nowrap}
+    .version-head{border-top:1px solid var(--line);background:var(--blue-soft);padding:23px}.version-head h2{margin:0;color:var(--ink);font-size:27px;line-height:1.35}.version-head p{margin:10px 0 0;line-height:1.75}.article-section{border-top:1px solid var(--line);padding:25px 23px}.article-section h3{margin:7px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.article-section p,.article-section li{font-size:15px;line-height:1.9}.article-section ul{padding-left:22px}code{border-radius:5px;background:#eef2f7;padding:2px 5px}
+    .sources{display:grid;gap:10px}.sources h3{margin-bottom:2px}.source-card{border:1px solid var(--line);border-radius:12px;background:#f8fafc;padding:13px}.source-card a,.source-card strong{font-weight:850}.source-card p{margin:7px 0 0;font-size:13px;line-height:1.7}.source-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.55}
+    .deep-report{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}.deep-report>summary{padding:19px 21px;cursor:pointer;color:var(--ink);font-weight:900}.markdown-body{border-top:1px solid var(--line);padding:24px;overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{color:var(--ink);line-height:1.4}.markdown-body h1{font-size:28px}.markdown-body h2{margin-top:34px;font-size:23px}.markdown-body h3{margin-top:27px;font-size:19px}.markdown-body p,.markdown-body li{line-height:1.85}.markdown-body table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.markdown-body blockquote{margin:16px 0;border-left:4px solid #93c5fd;background:#eff6ff;padding:10px 15px;color:#475569}.markdown-body pre{overflow:auto;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px}
+    footer{padding:24px 0 45px;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:680px){.top-inner{min-height:58px}main{padding-top:18px}.hero,.article-header{padding:21px}.history-card{padding:17px}.reader-version>summary{align-items:flex-start;padding:17px}.version-head,.article-section,.markdown-body{padding:18px}.article-section p,.article-section li{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell top-inner"><a class="brand" href="index.html">Serenity 往日报告</a><a class="back" href="../index.html#daily-article">返回当前首页</a></div></header>
+  <main class="shell">
+    <article class="article-header panel">
+      <span class="eyebrow">Approved Homepage Archive</span>
+      <h1>存储厂都在扩产，为什么还是缺货？真正该看的是“有效供给”</h1>
+      <p>美光预计2026年DRAM位元出货增长低到中20%、NAND增长约20%，却仍判断供需紧张将延续到2027年以后；三星和SK海力士也称增产后需求仍超过供给。原因是晶圆投入不等于可卖、可交付、未被长协锁定的位元。</p>
+      <div class="meta"><span class="chip blue">截至 2026-07-31</span><span class="chip">批准于 2026-08-01T00:41:53+08:00</span><span class="chip">归档 ID：2026-07-31_004153_a938842601</span></div>
+      <div class="topics"><span class="chip">名义晶圆产能与有效位元供给</span><span class="chip">HBM良率、封装与产品组合挤压</span><span class="chip">LTA与战略客户协议改变周期传导</span><span class="chip">涨价如何进入毛利率与现金流</span><span class="chip">周期二阶导、估值与证伪条件</span></div>
+      <div class="history-actions"><a href="index.html">← 返回历史文章列表</a></div>
+    </article>
+    <section class="versions"><details class="reader-version" open><summary><span><strong>研究版 A</strong><small>适合希望理解存储扩产、HBM、长协、利润二阶导与股票估值差异的读者。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>存储厂都在扩产，为什么还是缺货？真正该看的是“有效供给”</h2><p>美光预计2026年DRAM位元出货增长低到中20%、NAND增长约20%，却仍判断供需紧张将延续到2027年以后；三星和SK海力士也称增产后需求仍超过供给。原因是晶圆投入不等于可卖、可交付、未被长协锁定的位元。</p></div><section class="article-section"><span class="part">Part 01</span><h3>先说结论：扩产不等于供给宽松，投资者要数的是“有效供给”</h3><p>存储行业现在出现了一个看似违反常识的现象：三星、SK海力士和美光都在增加设备、洁净室和先进封装投入，DRAM与NAND位元出货也在增长，但三家公司仍然公开表示供给紧张。三星预计服务器DRAM、企业级SSD和HBM需求会让下半年市场继续供不应求；SK海力士称客户需求超过供给能力；美光则判断DRAM与NAND紧张状态将延续到2027年以后。【1】【2】【3】</p><p>矛盾的答案不在“有没有扩产”，而在“扩产最后变成多少可卖、可按时交付、尚未被合同锁定的位元”。晶圆只是起点。新工艺需要爬良率，HBM要消耗更多DRAM裸片和先进封装资源，高价值产品会挤走普通产品，客户认证会延迟交付，长期协议又提前分走未来产量。名义上的晶圆和位元增长，经过这些环节后，真正进入现货市场的增量可能小得多。</p><p>可以把有效供给写成一个通俗公式：有效供给≈晶圆投入×良率×每片可售位元×产品组合调整×可自由销售比例。任何一项下降，都可能让“扩产”与“缺货”同时发生。本文真正要解决的不是存储还能涨多久，而是怎样用公开数据判断短缺是否仍在强化、利润二阶导何时转弱。</p><ul><li>核心判断：晶圆投入是名义产能，可售位元和未被锁定的供给才决定价格与利润。</li><li>投资边界：行业仍缺货，不等于所有存储股票在任何价格都值得买。</li></ul></section><section class="article-section"><span class="part">Part 02</span><h3>为什么多了晶圆，位元却没有同比例增加</h3><p>传统直觉是，新工厂和更多晶圆投入会快速增加供给。但先进存储不是把同一块产品简单复制更多次。每一代DRAM和NAND工艺都更复杂，新设备从安装、调试、认证到稳定量产需要时间；新节点即使理论密度更高，也要先经历良率爬坡。美光在FY2026第三季度电话会中明确表示，存储工艺复杂度持续上升，技术迁移带来的位元增长正在变慢，而增加晶圆需要更多洁净室和新建工厂。【3】</p><p>这就是第一层错位：投资发生在今天，稳定产出可能在一年甚至更久以后。美光的爱达荷ID1工厂计划到2027年中才有首批晶圆，ID2预计到2028年末；新加坡HBM先进封装设施预计2027年上半年才形成有意义的产能。SK海力士也在加快M15X量产，并等待龙仁一期洁净室于2027年初启用。【2】【3】在这些节点真正爬坡前，资本开支只是未来供给，不是今天可以交货的产品。</p><p>第二层错位是“位元增长”和“产品数量增长”不同。美光预计2026年行业DRAM位元出货增长低到中20%区间，NAND增长约20%，但同时判断供需仍将紧张到2027年以后。【4】这并不矛盾：AI服务器的单机内存、带宽和存储需求增长更快，新增位元被更高配置迅速吸收。美光还预计2026年数据中心DRAM与NAND位元出货量将达到两年前的两倍以上，服务器台数增长预期也被上调到高十几百分比。【3】</p><p>因此，判断供给不能只看资本开支、晶圆厂数量或位元增长。更有效的问题是：新产能何时通过客户认证；良率提升有多快；新增位元流向HBM、服务器DRAM还是消费电子；以及需求端每台服务器的配置是否仍在上升。</p><ul><li>名义扩产：工厂、洁净室、设备和晶圆投入。</li><li>有效扩产：通过良率、认证和封装后，真正可交付的位元。</li><li>时间差：2026年的资本开支，很多要到2027—2028年才成为稳定供给。</li></ul></section><section class="article-section"><span class="part">Part 03</span><h3>HBM为什么会让“扩产”看起来比实际更大</h3><p>HBM不是普通DRAM换一个名字，而是把多层DRAM裸片与逻辑底座堆叠、互连和封装成高带宽系统。相同的晶圆投入转向HBM后，需要更多裸片、更多测试、更复杂的封装和更严格的良率控制。只要其中一层失败，整颗高价值产品的可售产出都会受到影响。</p><p>美光把这种现象称为HBM的trade ratio：随着每一代HBM升级，它对非HBM供给的挤压会继续增加。公司同时指出，HBM增长、复杂工艺和有限洁净室共同压制普通DRAM供给；NAND厂商又把部分洁净室从NAND转向DRAM，进一步限制NAND位元增长。【3】这意味着同一笔扩产可以增加高价值HBM收入，却不一定增加同等数量的普通服务器或消费级内存。</p><p>三星的二季度材料也给出了相同方向的证据。公司在产能有限的情况下优先服务AI服务器需求，DRAM和NAND位元销量均创历史新高，HBM4销售扩大，并已向主要客户发送HBM4E样品；但公司仍预计下半年服务器DRAM、企业级SSD和HBM需求增长会让市场保持供不应求，即使手机和PC需求有所放缓。【1】</p><p>SK海力士则披露HBM4已在二季度开始量产出货，下半年继续扩大生产；公司强调高良率、稳定供货和成本竞争力是HBM竞争的核心，并表示在客户需求超过供给能力的环境里，能否按时交付本身已经成为竞争优势。【2】</p><p>所以，分析HBM不能只看宣布了多少产能。真正需要跟踪的是综合良率、12层或更高堆叠的量产速度、先进封装瓶颈、客户认证，以及每生产一单位HBM会挤出多少普通DRAM。这些数据决定的是有效供给，而不是新闻标题里的名义扩产。</p><ul><li>HBM增加高价值收入，也会消耗更多DRAM裸片和先进封装能力。</li><li>综合良率与客户认证，比单纯晶圆投片更接近真实供给。</li><li>HBM扩产可能让普通DRAM和NAND更紧，而不是立即缓解全行业短缺。</li></ul></section><section class="article-section"><span class="part">Part 04</span><h3>三家原厂都在说同一件事，但证据强弱并不相同</h3><p>三星、SK海力士和美光的官方材料都支持当前供给紧张，但投资者不能只摘一句“需求强劲”。更有用的是比较三家公司分别拿出了什么证据。</p><p>三星二季度存储业务收入达到120.8万亿韩元，设备解决方案部门营业利润89.2万亿韩元；公司称服务器收入占比创历史新高，DRAM与NAND位元销量均创纪录，并延续行业涨价趋势。【1】这说明利润已经兑现，但三星没有在材料中给出公众号文章所引用的具体HBM良率和所有晶圆产能数字，因此这些外部估算不能直接写成公司事实。</p><p>SK海力士二季度收入79.32万亿韩元、营业利润60.54万亿韩元，营业利润率76%；公司称HBM、AI服务器DRAM和企业级SSD推动价格与产品组合，HBM4已量产出货，约10家客户完成长期协议讨论或签约。【2】这证明高端产品与合同正在支撑利润，但“需求将长期持续”仍属于管理层前瞻判断。</p><p>美光的证据最适合解释“为什么扩产仍短缺”。公司预计2026年DRAM位元出货增长低到中20%、NAND增长约20%，却仍看紧到2027年以后；公司还披露技术迁移降低位元增速、HBM挤压非HBM供给、NAND洁净室转向DRAM，以及新建工厂的漫长时间表。【3】【4】这是一套从物理产能到可售供给的完整解释。</p><p>三家公司共同证明的是当前供需和利润都强；它们没有共同证明的是价格永远上涨、扩产永远无效，或任何一家股票都存在足够安全边际。文章后半部分必须把行业事实、管理层预期和投资判断分开。</p><ul><li>三星：位元销量、服务器产品组合和利润已兑现。</li><li>SK海力士：HBM4量产、LTA和交付能力已进入经营数据。</li><li>美光：位元增速、trade ratio、洁净室和新厂时间表解释有效供给。</li></ul></section><section class="article-section"><span class="part">Part 05</span><h3>长协真正改变的不是周期，而是利润如何穿过周期</h3><p>过去的存储合同通常更短，价格下跌时客户可以快速压价、削减订单，原厂利润因此剧烈波动。这一轮最大的结构变化，是客户担心拿不到高端内存，愿意用更长期、更强约束的合同交换供货保证。</p><p>美光披露已签署16份战略客户协议，通常覆盖2026年至2030年的五年期限；这些协议约覆盖同期20%的DRAM量和三分之一NAND量，并采用take-or-pay，即客户对特定数量承担具有约束力的采购责任。【3】【4】其中14份协议按合同最低价格计算的剩余累计收入约1000亿美元，公司预计获得220亿美元现金存款及相关财务承诺。最大的协议通常以2026年二季度市场价作为现有产品价格上限，同时设置贯穿合同期的价格下限。【3】</p><p>这套合同的经济意义很清楚：价格上限帮助客户避免极端涨价，价格下限和最低采购量帮助原厂保护毛利和现金流。美光称带有价格区间的协议，其底价足以支持高于以往任何周期季度峰值的强劲毛利率；但这是管理层关于合同未来表现的判断，仍需用后续收入确认、客户存款和自由现金流验证。【3】</p><p>SK海力士也表示已与约10家客户完成LTA，并继续与主要客户讨论，以提高中长期供货稳定性。【2】三星则强调在有限产能下优化客户和产品组合。三家公司都在把过去完全暴露于现货周期的生意，改造成一部分产量提前锁定、价格存在边界、客户承担更多承诺的生意。</p><p>但长协不会消灭周期。第一，协议只覆盖部分产量；第二，价格上下限可能让原厂在极端涨价阶段无法享受全部现货收益；第三，客户信用、产品替代和合同执行仍有风险；第四，2028年后新产能增加时，未被锁定的产量仍会影响市场价格。更准确的说法是：LTA可能降低利润下限的波动，但不能保证股价和ASP永远单向上涨。</p><ul><li>物理短缺决定客户为什么愿意签约。</li><li>take-or-pay、价格底线和存款决定利润如何被保护。</li><li>LTA降低周期波动，不等于取消周期。</li></ul></section><section class="article-section"><span class="part">Part 06</span><h3>这轮利润到底来自出货，还是来自涨价</h3><p>判断存储周期最容易犯的错误，是看到收入和利润暴增，就认为需求与出货同比例增长。美光FY2026第三季度给了一个非常清楚的拆解：DRAM位元出货环比只增长低个位数，但ASP环比上涨低60%；NAND位元出货环比增长中个位数，ASP却上涨中80%。DRAM收入因此环比增长67%，NAND收入增长99%。【4】</p><p>换句话说，本季度利润爆发的主要增量不是多卖了六成或八成位元，而是每个位元卖得贵得多。美光季度收入414.56亿美元，非GAAP毛利率84.9%，经营现金流253.9亿美元；扣除净资本开支71亿美元后，调整后自由现金流183亿美元。【5】这些数字说明涨价和产品组合已经从报价表进入利润表与现金流量表。</p><p>三星和SK海力士同样显示价格、服务器产品组合和高价值存储推动利润。但这也解释了为什么投资者必须关注二阶导：价格仍在上涨时，只要涨幅开始收窄，收入和利润增速就可能先见顶；等到价格真正下跌，股票往往已经提前反应。</p><p>因此，文章不能把“供不应求”直接翻译成“利润继续同速增长”。更重要的是观察三条曲线：合约价格涨幅是否放缓；位元出货能否接替价格成为增长来源；资本开支和库存是否开始快于需求增长。若ASP增速下降而位元增长不足，利润二阶导就会转弱，即使绝对价格仍处高位。</p><ul><li>本季美光利润弹性主要来自ASP，而不是位元出货。</li><li>周期股的拐点通常出现在涨价速度变慢，而不是价格已经下跌之后。</li><li>现金流已兑现，但未来持续性要看量能否接棒价格。</li></ul></section><section class="article-section"><span class="part">Part 07</span><h3>谁可能受益，谁可能只是承担更高成本</h3><p>第一类潜在受益者是拥有先进HBM、服务器DRAM、企业级SSD和稳定良率的原厂。短缺让它们拥有更强的产品组合和合同谈判能力；若LTA底价、客户存款和预付款逐步兑现，收入和现金流可见度会高于历史周期。</p><p>第二类受益者是先进封装、量检测、测试、刻蚀、沉积和关键材料。有效供给受制于良率、堆叠、洁净室和设备交付时，客户不仅需要更多晶圆，也需要更多测试与过程控制。美光已经签署多年EUV设备供应协议，并加快新厂和封装设施；三星、SK海力士也在增加先进存储和封装产能。【1】【2】【3】设备收入可能领先新增位元兑现，但必须用订单、验收、毛利和经营现金流验证。</p><p>承担成本的则是议价能力较弱的模组厂、手机与PC厂商，以及依赖短期采购的客户。原厂把产能优先分给AI服务器和高毛利产品后，普通DRAM、NAND和终端设备可能面临更高成本。美光甚至表示，客户为了在内存紧张环境下最大化服务器出货，正在适度降低单台服务器的平均DRAM内容增长。【3】这说明短缺已经开始影响下游产品配置，而不仅是供应商利润。</p><p>还有一类风险最高：在高价阶段才大规模扩产、没有领先产品或长协保护的后来者。它们可能承担最贵的设备和建设成本，却在2028年后供给改善时进入市场。行业景气与公司竞争力必须分开，不能因为存储涨价就把所有上游、模组和设备公司视为同一弹性。</p><ul><li>原厂受益取决于高端产品、良率、合同和现金流，不只取决于名义产能。</li><li>设备受益取决于订单能否转成交付、验收和服务收入。</li><li>下游成本承担方可能通过降低配置、提价或延后需求反向削弱周期。</li></ul></section><section class="article-section"><span class="part">Part 08</span><h3>低市盈率可能是最危险的错觉：公司逻辑和股票逻辑要分开</h3><p>截至2026年7月31日，东方财富妙想金融数据显示，美光股价约820.22美元，滚动市盈率约18.35倍、市净率约9.19倍；SK海力士美国存托凭证约145.77美元，滚动市盈率约9.69倍、市净率约6.03倍。【11】这组数据只是一张时点快照，SKHY还存在ADR相对韩国本地股溢价、转换和流动性问题，不应与美光直接横向比较。</p><p>更重要的是，周期股在利润高峰附近经常显得市盈率很低。分母中的盈利被高ASP和高毛利迅速放大，PE自然下降；如果投资者用峰值利润外推未来，就会把周期顶部误认成便宜。相反，市净率和企业价值相对正常化现金流，往往更能提醒市场已经为紧缺支付了多少价格。</p><p>当前市场已经知道AI服务器需要更多内存、三家原厂利润创新高、长期合同正在增加。真正可能形成预期差的不是“存储很重要”，而是三件更细的事：有效供给是否继续低于名义扩产；LTA能否把价格底线转成稳定现金流；当ASP涨幅放缓后，位元出货能否接棒利润增长。</p><p>因此，本文不根据当前PE给出买入结论。更合理的研究动作是等待证明：合约价和毛利率仍强、库存没有积累、客户存款和LTA收入按期兑现，同时新厂投产没有明显提前。公司逻辑可以继续增强，但股票若已计入两年短缺和峰值利润，回报仍可能受到估值压缩。</p><ul><li>低PE可能来自峰值利润，不自动代表便宜。</li><li>SKHY ADR与韩国本地股存在结构差异，不能只看表面倍数。</li><li>当前动作：等待价格、库存、合同和现金流继续证明，而不是只追逐涨价新闻。</li></ul></section><section class="article-section"><span class="part">Part 09</span><h3>接下来只盯七个数据，就能判断存储二阶导是否到来</h3><p>第一，现货价和合约价必须分开。现货溢价代表边际抢货，不能等同原厂全部收入按同样幅度重定价；真正决定利润的是下一轮合约价和公司ASP。第二，看ASP涨幅的速度。如果价格仍涨但涨幅连续收窄，利润二阶导可能已经转弱。</p><p>第三，看位元出货与晶圆投入。如果晶圆快速增加，但位元出货没有同比例增长，说明良率、产品组合或封装仍在限制有效供给；如果位元增速突然超过需求，短缺将更快缓解。第四，看库存。原厂、模组和客户库存若同步上升，说明allocation正在从抢货转向补库结束。</p><p>第五，看HBM综合良率、先进封装和客户认证。HBM4量产不等于所有客户、所有规格已经顺利交付。第六，看LTA与战略客户协议：覆盖比例是否提高、价格底线是否执行、客户存款是否到账、RPO是否转成收入和经营现金流。第七，看资本开支和新厂时间表，尤其是2027—2028年洁净室、晶圆和封装产能是否提前。</p><p>基准情形是供需紧张延续到2027年，ASP仍高但涨幅逐步放缓，原厂保持高利润，设备与封装继续兑现订单。更乐观的情形是Agent与AI服务器需求继续超预期，新增位元被迅速吸收，LTA底价和预付款提高现金流稳定性。悲观情形则是新产能提前、良率快速改善、手机PC需求疲弱向服务器扩散，合约价和库存同时转弱；此时低PE会暴露为峰值利润陷阱。</p><p>这篇文章的核心不是证明存储周期已经消失。恰恰相反，真正深刻的变化是：周期仍在，但物理瓶颈、产品组合和长期合同改变了供给释放速度与利润下限。只要有效供给仍低于需求，扩产与缺货就能并存；一旦位元、库存和合同价格同时反转，就必须承认短缺正在结束。</p><ul><li>证明条件：合约价、毛利率、现金流和LTA兑现继续强于位元供给增长。</li><li>核心反证：库存上升、价格涨幅转负、新产能提前、合同约束变弱。</li><li>本文为公开资料研究候选稿，不构成投资建议。</li></ul></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf" target="_blank" rel="noopener noreferrer">三星电子｜2Q 2026 Earnings Call官方材料</a><p>核实存储收入、DRAM/NAND位元销量、服务器产品组合、HBM4进展，以及增产后下半年仍预计供不应求的公司表述。</p><small>Samsung Electronics Investor Relations · 2026 Q2 · 官方业绩PDF · 公司官方披露；下半年需求与供给判断属于前瞻性陈述</small></article><article class="source-card"><a href="https://news.skhynix.com/en/q2-2026-business-results/" target="_blank" rel="noopener noreferrer">SK海力士｜2Q26 Financial Results</a><p>核实季度收入与营业利润、HBM4量产出货、约10家客户LTA、需求超过供给及扩产计划。</p><small>SK hynix Newsroom · 2026-07-29 · 官方业绩公告 · 公司官方披露且财务结果仍属初步数据；未来需求判断具有不确定性</small></article><article class="source-card"><a href="https://investors.micron.com/static-files/631b1a32-5537-46ae-8f40-82e42fc79dfe" target="_blank" rel="noopener noreferrer">美光｜Fiscal Q3 2026 Earnings Call Prepared Remarks</a><p>核实技术迁移降低位元增速、HBM trade ratio、洁净室约束、16份战略客户协议、take-or-pay、价格区间、客户存款及新厂时间表。</p><small>Micron Investor Relations · 2026-06-24 · 官方电话会准备稿 · 公司管理层口径；合同未来收入、毛利与供需判断仍需后续财报验证</small></article><article class="source-card"><a href="https://investors.micron.com/static-files/2354ecda-77a0-4ddd-8462-a631eb491356" target="_blank" rel="noopener noreferrer">美光｜Fiscal Q3 2026 Earnings Presentation</a><p>核实2026年DRAM/NAND位元增速、ASP变化、业务收入与毛利、战略客户协议覆盖和资本开支。</p><small>Micron Investor Relations · 2026-06-24 · 官方业绩演示 · 部分指标为非GAAP或管理层行业估算，不能与其他公司口径直接混用</small></article><article class="source-card"><a href="https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-record-results-third-quarter" target="_blank" rel="noopener noreferrer">美光｜Fiscal Q3 2026 Press Release</a><p>核实季度收入、经营现金流、净资本开支、调整后自由现金流及HBM4产品进展。</p><small>Micron Investor Relations · 2026-06-24 · 官方业绩公告 · 调整后自由现金流与非GAAP毛利率需按公司定义理解</small></article><article class="source-card"><a href="https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report" target="_blank" rel="noopener noreferrer">Amazon｜Q2 2026 Results</a><p>用于核实AWS与AI业务增长、AI相关资产投入和Trainium长期承诺，作为存储需求端的一手旁证。</p><small>Amazon official newsroom · 2026 Q2 · 证明云端AI投入仍强，不直接证明某家存储供应商订单</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2083088870942642391" target="_blank" rel="noopener noreferrer">Serenity｜Amazon资本开支、内存成本与容量约束</a><p>把Amazon资本开支、内存成本和容量不足连接为上游存储需求线索。</p><small>Serenity public X post · 2026-07-31 · 投资者解读；具体资本开支和预订数据仍应以Amazon官方电话会为准</small></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2081472671129501729" target="_blank" rel="noopener noreferrer">Serenity｜DDR5现货溢价与多层LTA线索</a><p>提供服务器DRAM现货、基板LTA与预付款的边际线索，提醒现货价和合约价必须分开。</p><small>Serenity public X post · 2026-07-27 · 二手市场与渠道线索，不能替代原厂合约价和合同原文</small></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/UdIRFcDc1a5k4k8cwpqugw" target="_blank" rel="noopener noreferrer">投研先机｜产能扩了近两成，为什么存储还在缺货？</a><p>提供名义晶圆产能与有效位元供给错位的问题意识，以及HBM良率和先进封装的研究方向。</p><small>外部公众号 · 2026-07-31 · 仅用于发现问题；文中具体产能、良率、份额和价格数字未作为公司事实</small></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/2HqxTZwQ9vtlkZhkEni9IA" target="_blank" rel="noopener noreferrer">北向牧风｜存储二阶导到了？</a><p>提供价格仍上涨但涨幅放缓可能先压制利润和股价的周期研究框架。</p><small>外部公众号 · 2026-07-07 · 只采用二阶导研究方法，不采用文章中的券商预测或专家判断作为事实</small></article><article class="source-card"><a href="https://dl.dfcfs.com/m/itc4" target="_blank" rel="noopener noreferrer">东方财富妙想金融数据｜MU与SKHY估值快照</a><p>截至2026-07-31的美光与SK海力士ADR最新价、总市值、滚动市盈率和市净率；查询ID 241d5d85-5b54-47cb-9712-cb5ffcf8e970。</p><small>东方财富妙想 · 2026-07-31 · 时点性行情数据 · SKHY为ADR且可能存在相对本地股溢价；不同市场和会计口径不可直接比较</small></article></section></details></section>
+    <details class="deep-report"><summary>展开归档深度报告</summary><div class="markdown-body"><h1>存储厂都在扩产，为什么还是缺货？真正该看的是“有效供给”</h1>
+<p>美光预计2026年DRAM位元出货增长低到中20%、NAND增长约20%，却仍判断供需紧张将延续到2027年以后；三星和SK海力士也称增产后需求仍超过供给。原因是晶圆投入不等于可卖、可交付、未被长协锁定的位元。</p>
+<h2>候选状态</h2>
+<ul>
+<li>候选 ID：<code>2026-07-31_memory_effective_supply</code></li>
+<li>内容日期：2026-07-31</li>
+<li>状态：候选稿，等待用户对具体正文作首页批准</li>
+<li>自动发布：<code>false</code></li>
+<li>审批边界：本文尚未写入 <code>data/daily_article_v9_approved.json</code>，未归档，未发布。</li>
+</ul>
+<h2>先说结论：扩产不等于供给宽松，投资者要数的是“有效供给”</h2>
+<p>存储行业现在出现了一个看似违反常识的现象：三星、SK海力士和美光都在增加设备、洁净室和先进封装投入，DRAM与NAND位元出货也在增长，但三家公司仍然公开表示供给紧张。三星预计服务器DRAM、企业级SSD和HBM需求会让下半年市场继续供不应求；SK海力士称客户需求超过供给能力；美光则判断DRAM与NAND紧张状态将延续到2027年以后。【1】【2】【3】</p>
+<p>矛盾的答案不在“有没有扩产”，而在“扩产最后变成多少可卖、可按时交付、尚未被合同锁定的位元”。晶圆只是起点。新工艺需要爬良率，HBM要消耗更多DRAM裸片和先进封装资源，高价值产品会挤走普通产品，客户认证会延迟交付，长期协议又提前分走未来产量。名义上的晶圆和位元增长，经过这些环节后，真正进入现货市场的增量可能小得多。</p>
+<p>可以把有效供给写成一个通俗公式：有效供给≈晶圆投入×良率×每片可售位元×产品组合调整×可自由销售比例。任何一项下降，都可能让“扩产”与“缺货”同时发生。本文真正要解决的不是存储还能涨多久，而是怎样用公开数据判断短缺是否仍在强化、利润二阶导何时转弱。</p>
+<ul>
+<li>核心判断：晶圆投入是名义产能，可售位元和未被锁定的供给才决定价格与利润。</li>
+<li>投资边界：行业仍缺货，不等于所有存储股票在任何价格都值得买。</li>
+</ul>
+<h2>为什么多了晶圆，位元却没有同比例增加</h2>
+<p>传统直觉是，新工厂和更多晶圆投入会快速增加供给。但先进存储不是把同一块产品简单复制更多次。每一代DRAM和NAND工艺都更复杂，新设备从安装、调试、认证到稳定量产需要时间；新节点即使理论密度更高，也要先经历良率爬坡。美光在FY2026第三季度电话会中明确表示，存储工艺复杂度持续上升，技术迁移带来的位元增长正在变慢，而增加晶圆需要更多洁净室和新建工厂。【3】</p>
+<p>这就是第一层错位：投资发生在今天，稳定产出可能在一年甚至更久以后。美光的爱达荷ID1工厂计划到2027年中才有首批晶圆，ID2预计到2028年末；新加坡HBM先进封装设施预计2027年上半年才形成有意义的产能。SK海力士也在加快M15X量产，并等待龙仁一期洁净室于2027年初启用。【2】【3】在这些节点真正爬坡前，资本开支只是未来供给，不是今天可以交货的产品。</p>
+<p>第二层错位是“位元增长”和“产品数量增长”不同。美光预计2026年行业DRAM位元出货增长低到中20%区间，NAND增长约20%，但同时判断供需仍将紧张到2027年以后。【4】这并不矛盾：AI服务器的单机内存、带宽和存储需求增长更快，新增位元被更高配置迅速吸收。美光还预计2026年数据中心DRAM与NAND位元出货量将达到两年前的两倍以上，服务器台数增长预期也被上调到高十几百分比。【3】</p>
+<p>因此，判断供给不能只看资本开支、晶圆厂数量或位元增长。更有效的问题是：新产能何时通过客户认证；良率提升有多快；新增位元流向HBM、服务器DRAM还是消费电子；以及需求端每台服务器的配置是否仍在上升。</p>
+<ul>
+<li>名义扩产：工厂、洁净室、设备和晶圆投入。</li>
+<li>有效扩产：通过良率、认证和封装后，真正可交付的位元。</li>
+<li>时间差：2026年的资本开支，很多要到2027—2028年才成为稳定供给。</li>
+</ul>
+<h2>HBM为什么会让“扩产”看起来比实际更大</h2>
+<p>HBM不是普通DRAM换一个名字，而是把多层DRAM裸片与逻辑底座堆叠、互连和封装成高带宽系统。相同的晶圆投入转向HBM后，需要更多裸片、更多测试、更复杂的封装和更严格的良率控制。只要其中一层失败，整颗高价值产品的可售产出都会受到影响。</p>
+<p>美光把这种现象称为HBM的trade ratio：随着每一代HBM升级，它对非HBM供给的挤压会继续增加。公司同时指出，HBM增长、复杂工艺和有限洁净室共同压制普通DRAM供给；NAND厂商又把部分洁净室从NAND转向DRAM，进一步限制NAND位元增长。【3】这意味着同一笔扩产可以增加高价值HBM收入，却不一定增加同等数量的普通服务器或消费级内存。</p>
+<p>三星的二季度材料也给出了相同方向的证据。公司在产能有限的情况下优先服务AI服务器需求，DRAM和NAND位元销量均创历史新高，HBM4销售扩大，并已向主要客户发送HBM4E样品；但公司仍预计下半年服务器DRAM、企业级SSD和HBM需求增长会让市场保持供不应求，即使手机和PC需求有所放缓。【1】</p>
+<p>SK海力士则披露HBM4已在二季度开始量产出货，下半年继续扩大生产；公司强调高良率、稳定供货和成本竞争力是HBM竞争的核心，并表示在客户需求超过供给能力的环境里，能否按时交付本身已经成为竞争优势。【2】</p>
+<p>所以，分析HBM不能只看宣布了多少产能。真正需要跟踪的是综合良率、12层或更高堆叠的量产速度、先进封装瓶颈、客户认证，以及每生产一单位HBM会挤出多少普通DRAM。这些数据决定的是有效供给，而不是新闻标题里的名义扩产。</p>
+<ul>
+<li>HBM增加高价值收入，也会消耗更多DRAM裸片和先进封装能力。</li>
+<li>综合良率与客户认证，比单纯晶圆投片更接近真实供给。</li>
+<li>HBM扩产可能让普通DRAM和NAND更紧，而不是立即缓解全行业短缺。</li>
+</ul>
+<h2>三家原厂都在说同一件事，但证据强弱并不相同</h2>
+<p>三星、SK海力士和美光的官方材料都支持当前供给紧张，但投资者不能只摘一句“需求强劲”。更有用的是比较三家公司分别拿出了什么证据。</p>
+<p>三星二季度存储业务收入达到120.8万亿韩元，设备解决方案部门营业利润89.2万亿韩元；公司称服务器收入占比创历史新高，DRAM与NAND位元销量均创纪录，并延续行业涨价趋势。【1】这说明利润已经兑现，但三星没有在材料中给出公众号文章所引用的具体HBM良率和所有晶圆产能数字，因此这些外部估算不能直接写成公司事实。</p>
+<p>SK海力士二季度收入79.32万亿韩元、营业利润60.54万亿韩元，营业利润率76%；公司称HBM、AI服务器DRAM和企业级SSD推动价格与产品组合，HBM4已量产出货，约10家客户完成长期协议讨论或签约。【2】这证明高端产品与合同正在支撑利润，但“需求将长期持续”仍属于管理层前瞻判断。</p>
+<p>美光的证据最适合解释“为什么扩产仍短缺”。公司预计2026年DRAM位元出货增长低到中20%、NAND增长约20%，却仍看紧到2027年以后；公司还披露技术迁移降低位元增速、HBM挤压非HBM供给、NAND洁净室转向DRAM，以及新建工厂的漫长时间表。【3】【4】这是一套从物理产能到可售供给的完整解释。</p>
+<p>三家公司共同证明的是当前供需和利润都强；它们没有共同证明的是价格永远上涨、扩产永远无效，或任何一家股票都存在足够安全边际。文章后半部分必须把行业事实、管理层预期和投资判断分开。</p>
+<ul>
+<li>三星：位元销量、服务器产品组合和利润已兑现。</li>
+<li>SK海力士：HBM4量产、LTA和交付能力已进入经营数据。</li>
+<li>美光：位元增速、trade ratio、洁净室和新厂时间表解释有效供给。</li>
+</ul>
+<h2>长协真正改变的不是周期，而是利润如何穿过周期</h2>
+<p>过去的存储合同通常更短，价格下跌时客户可以快速压价、削减订单，原厂利润因此剧烈波动。这一轮最大的结构变化，是客户担心拿不到高端内存，愿意用更长期、更强约束的合同交换供货保证。</p>
+<p>美光披露已签署16份战略客户协议，通常覆盖2026年至2030年的五年期限；这些协议约覆盖同期20%的DRAM量和三分之一NAND量，并采用take-or-pay，即客户对特定数量承担具有约束力的采购责任。【3】【4】其中14份协议按合同最低价格计算的剩余累计收入约1000亿美元，公司预计获得220亿美元现金存款及相关财务承诺。最大的协议通常以2026年二季度市场价作为现有产品价格上限，同时设置贯穿合同期的价格下限。【3】</p>
+<p>这套合同的经济意义很清楚：价格上限帮助客户避免极端涨价，价格下限和最低采购量帮助原厂保护毛利和现金流。美光称带有价格区间的协议，其底价足以支持高于以往任何周期季度峰值的强劲毛利率；但这是管理层关于合同未来表现的判断，仍需用后续收入确认、客户存款和自由现金流验证。【3】</p>
+<p>SK海力士也表示已与约10家客户完成LTA，并继续与主要客户讨论，以提高中长期供货稳定性。【2】三星则强调在有限产能下优化客户和产品组合。三家公司都在把过去完全暴露于现货周期的生意，改造成一部分产量提前锁定、价格存在边界、客户承担更多承诺的生意。</p>
+<p>但长协不会消灭周期。第一，协议只覆盖部分产量；第二，价格上下限可能让原厂在极端涨价阶段无法享受全部现货收益；第三，客户信用、产品替代和合同执行仍有风险；第四，2028年后新产能增加时，未被锁定的产量仍会影响市场价格。更准确的说法是：LTA可能降低利润下限的波动，但不能保证股价和ASP永远单向上涨。</p>
+<ul>
+<li>物理短缺决定客户为什么愿意签约。</li>
+<li>take-or-pay、价格底线和存款决定利润如何被保护。</li>
+<li>LTA降低周期波动，不等于取消周期。</li>
+</ul>
+<h2>这轮利润到底来自出货，还是来自涨价</h2>
+<p>判断存储周期最容易犯的错误，是看到收入和利润暴增，就认为需求与出货同比例增长。美光FY2026第三季度给了一个非常清楚的拆解：DRAM位元出货环比只增长低个位数，但ASP环比上涨低60%；NAND位元出货环比增长中个位数，ASP却上涨中80%。DRAM收入因此环比增长67%，NAND收入增长99%。【4】</p>
+<p>换句话说，本季度利润爆发的主要增量不是多卖了六成或八成位元，而是每个位元卖得贵得多。美光季度收入414.56亿美元，非GAAP毛利率84.9%，经营现金流253.9亿美元；扣除净资本开支71亿美元后，调整后自由现金流183亿美元。【5】这些数字说明涨价和产品组合已经从报价表进入利润表与现金流量表。</p>
+<p>三星和SK海力士同样显示价格、服务器产品组合和高价值存储推动利润。但这也解释了为什么投资者必须关注二阶导：价格仍在上涨时，只要涨幅开始收窄，收入和利润增速就可能先见顶；等到价格真正下跌，股票往往已经提前反应。</p>
+<p>因此，文章不能把“供不应求”直接翻译成“利润继续同速增长”。更重要的是观察三条曲线：合约价格涨幅是否放缓；位元出货能否接替价格成为增长来源；资本开支和库存是否开始快于需求增长。若ASP增速下降而位元增长不足，利润二阶导就会转弱，即使绝对价格仍处高位。</p>
+<ul>
+<li>本季美光利润弹性主要来自ASP，而不是位元出货。</li>
+<li>周期股的拐点通常出现在涨价速度变慢，而不是价格已经下跌之后。</li>
+<li>现金流已兑现，但未来持续性要看量能否接棒价格。</li>
+</ul>
+<h2>谁可能受益，谁可能只是承担更高成本</h2>
+<p>第一类潜在受益者是拥有先进HBM、服务器DRAM、企业级SSD和稳定良率的原厂。短缺让它们拥有更强的产品组合和合同谈判能力；若LTA底价、客户存款和预付款逐步兑现，收入和现金流可见度会高于历史周期。</p>
+<p>第二类受益者是先进封装、量检测、测试、刻蚀、沉积和关键材料。有效供给受制于良率、堆叠、洁净室和设备交付时，客户不仅需要更多晶圆，也需要更多测试与过程控制。美光已经签署多年EUV设备供应协议，并加快新厂和封装设施；三星、SK海力士也在增加先进存储和封装产能。【1】【2】【3】设备收入可能领先新增位元兑现，但必须用订单、验收、毛利和经营现金流验证。</p>
+<p>承担成本的则是议价能力较弱的模组厂、手机与PC厂商，以及依赖短期采购的客户。原厂把产能优先分给AI服务器和高毛利产品后，普通DRAM、NAND和终端设备可能面临更高成本。美光甚至表示，客户为了在内存紧张环境下最大化服务器出货，正在适度降低单台服务器的平均DRAM内容增长。【3】这说明短缺已经开始影响下游产品配置，而不仅是供应商利润。</p>
+<p>还有一类风险最高：在高价阶段才大规模扩产、没有领先产品或长协保护的后来者。它们可能承担最贵的设备和建设成本，却在2028年后供给改善时进入市场。行业景气与公司竞争力必须分开，不能因为存储涨价就把所有上游、模组和设备公司视为同一弹性。</p>
+<ul>
+<li>原厂受益取决于高端产品、良率、合同和现金流，不只取决于名义产能。</li>
+<li>设备受益取决于订单能否转成交付、验收和服务收入。</li>
+<li>下游成本承担方可能通过降低配置、提价或延后需求反向削弱周期。</li>
+</ul>
+<h2>低市盈率可能是最危险的错觉：公司逻辑和股票逻辑要分开</h2>
+<p>截至2026年7月31日，东方财富妙想金融数据显示，美光股价约820.22美元，滚动市盈率约18.35倍、市净率约9.19倍；SK海力士美国存托凭证约145.77美元，滚动市盈率约9.69倍、市净率约6.03倍。【11】这组数据只是一张时点快照，SKHY还存在ADR相对韩国本地股溢价、转换和流动性问题，不应与美光直接横向比较。</p>
+<p>更重要的是，周期股在利润高峰附近经常显得市盈率很低。分母中的盈利被高ASP和高毛利迅速放大，PE自然下降；如果投资者用峰值利润外推未来，就会把周期顶部误认成便宜。相反，市净率和企业价值相对正常化现金流，往往更能提醒市场已经为紧缺支付了多少价格。</p>
+<p>当前市场已经知道AI服务器需要更多内存、三家原厂利润创新高、长期合同正在增加。真正可能形成预期差的不是“存储很重要”，而是三件更细的事：有效供给是否继续低于名义扩产；LTA能否把价格底线转成稳定现金流；当ASP涨幅放缓后，位元出货能否接棒利润增长。</p>
+<p>因此，本文不根据当前PE给出买入结论。更合理的研究动作是等待证明：合约价和毛利率仍强、库存没有积累、客户存款和LTA收入按期兑现，同时新厂投产没有明显提前。公司逻辑可以继续增强，但股票若已计入两年短缺和峰值利润，回报仍可能受到估值压缩。</p>
+<ul>
+<li>低PE可能来自峰值利润，不自动代表便宜。</li>
+<li>SKHY ADR与韩国本地股存在结构差异，不能只看表面倍数。</li>
+<li>当前动作：等待价格、库存、合同和现金流继续证明，而不是只追逐涨价新闻。</li>
+</ul>
+<h2>接下来只盯七个数据，就能判断存储二阶导是否到来</h2>
+<p>第一，现货价和合约价必须分开。现货溢价代表边际抢货，不能等同原厂全部收入按同样幅度重定价；真正决定利润的是下一轮合约价和公司ASP。第二，看ASP涨幅的速度。如果价格仍涨但涨幅连续收窄，利润二阶导可能已经转弱。</p>
+<p>第三，看位元出货与晶圆投入。如果晶圆快速增加，但位元出货没有同比例增长，说明良率、产品组合或封装仍在限制有效供给；如果位元增速突然超过需求，短缺将更快缓解。第四，看库存。原厂、模组和客户库存若同步上升，说明allocation正在从抢货转向补库结束。</p>
+<p>第五，看HBM综合良率、先进封装和客户认证。HBM4量产不等于所有客户、所有规格已经顺利交付。第六，看LTA与战略客户协议：覆盖比例是否提高、价格底线是否执行、客户存款是否到账、RPO是否转成收入和经营现金流。第七，看资本开支和新厂时间表，尤其是2027—2028年洁净室、晶圆和封装产能是否提前。</p>
+<p>基准情形是供需紧张延续到2027年，ASP仍高但涨幅逐步放缓，原厂保持高利润，设备与封装继续兑现订单。更乐观的情形是Agent与AI服务器需求继续超预期，新增位元被迅速吸收，LTA底价和预付款提高现金流稳定性。悲观情形则是新产能提前、良率快速改善、手机PC需求疲弱向服务器扩散，合约价和库存同时转弱；此时低PE会暴露为峰值利润陷阱。</p>
+<p>这篇文章的核心不是证明存储周期已经消失。恰恰相反，真正深刻的变化是：周期仍在，但物理瓶颈、产品组合和长期合同改变了供给释放速度与利润下限。只要有效供给仍低于需求，扩产与缺货就能并存；一旦位元、库存和合同价格同时反转，就必须承认短缺正在结束。</p>
+<ul>
+<li>证明条件：合约价、毛利率、现金流和LTA兑现继续强于位元供给增长。</li>
+<li>核心反证：库存上升、价格涨幅转负、新产能提前、合同约束变弱。</li>
+<li>本文为公开资料研究候选稿，不构成投资建议。</li>
+</ul>
+<h2>证据与来源</h2>
+<p>【1】<a href="https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf">三星电子｜2Q 2026 Earnings Call官方材料</a>：核实存储收入、DRAM/NAND位元销量、服务器产品组合、HBM4进展，以及增产后下半年仍预计供不应求的公司表述。</p>
+<blockquote>
+<p>证据边界：公司官方披露；下半年需求与供给判断属于前瞻性陈述</p>
+</blockquote>
+<p>【2】<a href="https://news.skhynix.com/en/q2-2026-business-results/">SK海力士｜2Q26 Financial Results</a>：核实季度收入与营业利润、HBM4量产出货、约10家客户LTA、需求超过供给及扩产计划。</p>
+<blockquote>
+<p>证据边界：公司官方披露且财务结果仍属初步数据；未来需求判断具有不确定性</p>
+</blockquote>
+<p>【3】<a href="https://investors.micron.com/static-files/631b1a32-5537-46ae-8f40-82e42fc79dfe">美光｜Fiscal Q3 2026 Earnings Call Prepared Remarks</a>：核实技术迁移降低位元增速、HBM trade ratio、洁净室约束、16份战略客户协议、take-or-pay、价格区间、客户存款及新厂时间表。</p>
+<blockquote>
+<p>证据边界：公司管理层口径；合同未来收入、毛利与供需判断仍需后续财报验证</p>
+</blockquote>
+<p>【4】<a href="https://investors.micron.com/static-files/2354ecda-77a0-4ddd-8462-a631eb491356">美光｜Fiscal Q3 2026 Earnings Presentation</a>：核实2026年DRAM/NAND位元增速、ASP变化、业务收入与毛利、战略客户协议覆盖和资本开支。</p>
+<blockquote>
+<p>证据边界：部分指标为非GAAP或管理层行业估算，不能与其他公司口径直接混用</p>
+</blockquote>
+<p>【5】<a href="https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-record-results-third-quarter">美光｜Fiscal Q3 2026 Press Release</a>：核实季度收入、经营现金流、净资本开支、调整后自由现金流及HBM4产品进展。</p>
+<blockquote>
+<p>证据边界：调整后自由现金流与非GAAP毛利率需按公司定义理解</p>
+</blockquote>
+<p>【6】<a href="https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report">Amazon｜Q2 2026 Results</a>：用于核实AWS与AI业务增长、AI相关资产投入和Trainium长期承诺，作为存储需求端的一手旁证。</p>
+<blockquote>
+<p>证据边界：证明云端AI投入仍强，不直接证明某家存储供应商订单</p>
+</blockquote>
+<p>【7】<a href="https://x.com/aleabitoreddit/status/2083088870942642391">Serenity｜Amazon资本开支、内存成本与容量约束</a>：把Amazon资本开支、内存成本和容量不足连接为上游存储需求线索。</p>
+<blockquote>
+<p>证据边界：投资者解读；具体资本开支和预订数据仍应以Amazon官方电话会为准</p>
+</blockquote>
+<p>【8】<a href="https://x.com/aleabitoreddit/status/2081472671129501729">Serenity｜DDR5现货溢价与多层LTA线索</a>：提供服务器DRAM现货、基板LTA与预付款的边际线索，提醒现货价和合约价必须分开。</p>
+<blockquote>
+<p>证据边界：二手市场与渠道线索，不能替代原厂合约价和合同原文</p>
+</blockquote>
+<p>【9】<a href="https://mp.weixin.qq.com/s/UdIRFcDc1a5k4k8cwpqugw">投研先机｜产能扩了近两成，为什么存储还在缺货？</a>：提供名义晶圆产能与有效位元供给错位的问题意识，以及HBM良率和先进封装的研究方向。</p>
+<blockquote>
+<p>证据边界：仅用于发现问题；文中具体产能、良率、份额和价格数字未作为公司事实</p>
+</blockquote>
+<p>【10】<a href="https://mp.weixin.qq.com/s/2HqxTZwQ9vtlkZhkEni9IA">北向牧风｜存储二阶导到了？</a>：提供价格仍上涨但涨幅放缓可能先压制利润和股价的周期研究框架。</p>
+<blockquote>
+<p>证据边界：只采用二阶导研究方法，不采用文章中的券商预测或专家判断作为事实</p>
+</blockquote>
+<p>【11】<a href="https://dl.dfcfs.com/m/itc4">东方财富妙想金融数据｜MU与SKHY估值快照</a>：截至2026-07-31的美光与SK海力士ADR最新价、总市值、滚动市盈率和市净率；查询ID 241d5d85-5b54-47cb-9712-cb5ffcf8e970。</p>
+<blockquote>
+<p>证据边界：SKHY为ADR且可能存在相对本地股溢价；不同市场和会计口径不可直接比较</p>
+</blockquote>
+<h2>审核边界</h2>
+<ul>
+<li>事实、管理层前瞻陈述、外部估算与本文判断已分层。</li>
+<li>外部公众号只用于发现问题和研究方法，未复制原句，也未将专家判断升级为公司事实。</li>
+<li>行情与估值为时点快照，不能替代完整估值模型。</li>
+<li>当前文件是候选稿，尚未获得用户对具体正文的首页发布批准。</li>
+<li>本文不构成投资建议。</li>
+</ul></div></details>
+    </main>
+  <footer class="shell">历史文章来自本地不可变批准归档；页面用于研究回溯，不构成投资建议。</footer>
+</body>
+</html>
