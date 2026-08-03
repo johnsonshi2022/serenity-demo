@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NVIDIA已经把CPO交换机推向1.6Tb/s端口和更高能效，却在同一份官方公告中明确写到：硅光CPO将与可插拔光收发技术一起支撑AI工厂。ASMPT上半年可插拔光收发方案收入同比接近三倍，FormFactor又确认CPO推动Systems收入环比增长。真正的投资问题不是谁立刻消灭谁，而是不同网络层级如何分配端口，以及激光器、InP、硅光、封装和测试环节谁能跨两条路线收钱。">
+  <title>CPO开始量产，可插拔光模块为什么还可能再活十年？ - Serenity 往日报告</title>
+  <style>
+    :root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(1060px,calc(100vw - 28px));margin:0 auto}.top{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(246,248,251,.94);backdrop-filter:blur(10px)}
+    .top-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{color:var(--ink);font-weight:900;text-decoration:none}.back{display:inline-flex;align-items:center;min-height:36px;border:1px solid #bfdbfe;border-radius:999px;background:#fff;padding:0 13px;text-decoration:none;font-size:13px;font-weight:800}
+    main{padding:34px 0 72px}.hero,.panel,.history-card,.reader-version{border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hero{padding:30px}.eyebrow,.part{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:900px;margin:10px 0 0;color:var(--ink);font-size:clamp(30px,5vw,52px);line-height:1.13;letter-spacing:-.035em}.hero>p{max-width:850px;margin:14px 0 0;color:#475569;font-size:15px;line-height:1.85}
+    .meta,.topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#f8fafc;padding:5px 9px;color:#475569;font-size:11px;font-weight:750}.chip.blue{border-color:#bfdbfe;background:var(--blue-soft);color:#1d4ed8}
+    .search{width:100%;margin-top:18px;border:1px solid #cbd5e1;border-radius:13px;background:#fff;padding:13px 15px;color:var(--ink);font:inherit;outline:none}.search:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}
+    .history-list{display:grid;gap:14px;margin-top:18px}.history-card{padding:20px}.history-card h2{margin:8px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.history-card p{margin:9px 0 0;line-height:1.75}.history-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.history-actions a{font-weight:850;text-decoration:none}
+    .empty{display:none;margin-top:18px;border:1px dashed #cbd5e1;border-radius:14px;background:#fff;padding:24px;text-align:center;color:var(--muted)}
+    .article-header{padding:28px}.article-header h1{font-size:clamp(28px,4vw,45px)}.versions{display:grid;gap:16px;margin-top:18px}.reader-version{overflow:hidden}.reader-version>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;cursor:pointer;list-style:none}.reader-version>summary::-webkit-details-marker{display:none}.reader-version>summary span{min-width:0}.reader-version>summary strong{display:block;color:var(--ink);font-size:17px}.reader-version>summary small{display:block;margin-top:5px;color:var(--muted);line-height:1.55}.reader-version>summary b{color:var(--blue);font-size:12px;white-space:nowrap}
+    .version-head{border-top:1px solid var(--line);background:var(--blue-soft);padding:23px}.version-head h2{margin:0;color:var(--ink);font-size:27px;line-height:1.35}.version-head p{margin:10px 0 0;line-height:1.75}.article-section{border-top:1px solid var(--line);padding:25px 23px}.article-section h3{margin:7px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.article-section p,.article-section li{font-size:15px;line-height:1.9}.article-section ul{padding-left:22px}code{border-radius:5px;background:#eef2f7;padding:2px 5px}
+    .sources{display:grid;gap:10px}.sources h3{margin-bottom:2px}.source-card{border:1px solid var(--line);border-radius:12px;background:#f8fafc;padding:13px}.source-card a,.source-card strong{font-weight:850}.source-card p{margin:7px 0 0;font-size:13px;line-height:1.7}.source-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.55}
+    .deep-report{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}.deep-report>summary{padding:19px 21px;cursor:pointer;color:var(--ink);font-weight:900}.markdown-body{border-top:1px solid var(--line);padding:24px;overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{color:var(--ink);line-height:1.4}.markdown-body h1{font-size:28px}.markdown-body h2{margin-top:34px;font-size:23px}.markdown-body h3{margin-top:27px;font-size:19px}.markdown-body p,.markdown-body li{line-height:1.85}.markdown-body table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.markdown-body blockquote{margin:16px 0;border-left:4px solid #93c5fd;background:#eff6ff;padding:10px 15px;color:#475569}.markdown-body pre{overflow:auto;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px}
+    footer{padding:24px 0 45px;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:680px){.top-inner{min-height:58px}main{padding-top:18px}.hero,.article-header{padding:21px}.history-card{padding:17px}.reader-version>summary{align-items:flex-start;padding:17px}.version-head,.article-section,.markdown-body{padding:18px}.article-section p,.article-section li{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell top-inner"><a class="brand" href="index.html">Serenity 往日报告</a><a class="back" href="../index.html#daily-article">返回当前首页</a></div></header>
+  <main class="shell">
+    <article class="article-header panel">
+      <span class="eyebrow">Approved Homepage Archive</span>
+      <h1>CPO开始量产，可插拔光模块为什么还可能再活十年？</h1>
+      <p>NVIDIA已经把CPO交换机推向1.6Tb/s端口和更高能效，却在同一份官方公告中明确写到：硅光CPO将与可插拔光收发技术一起支撑AI工厂。ASMPT上半年可插拔光收发方案收入同比接近三倍，FormFactor又确认CPO推动Systems收入环比增长。真正的投资问题不是谁立刻消灭谁，而是不同网络层级如何分配端口，以及激光器、InP、硅光、封装和测试环节谁能跨两条路线收钱。</p>
+      <div class="meta"><span class="chip blue">截至 2026-08-03</span><span class="chip">批准于 2026-08-03T22:03:50+08:00</span><span class="chip">归档 ID：2026-08-03_220350_aa43797f18</span></div>
+      <div class="topics"><span class="chip">CPO架构与能效</span><span class="chip">可插拔的标准化与可维护性</span><span class="chip">按网络层级分配端口</span><span class="chip">跨架构上游瓶颈</span><span class="chip">订单、ASP、良率与现金流证伪</span></div>
+      <div class="history-actions"><a href="index.html">← 返回历史文章列表</a></div><div class="history-actions"><a href="visual/2026-08-03_220350_aa43797f18_visual_report.html">阅读图文深度版 →</a></div>
+    </article>
+    <section class="versions"><details class="reader-version" open><summary><span><strong>研究版</strong><small>完整保留获批时的研究结论、证据边界与跟踪指标。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>CPO开始量产，可插拔光模块为什么还可能再活十年？</h2><p>NVIDIA已经把CPO交换机推向1.6Tb/s端口和更高能效，却在同一份官方公告中明确写到：硅光CPO将与可插拔光收发技术一起支撑AI工厂。ASMPT上半年可插拔光收发方案收入同比接近三倍，FormFactor又确认CPO推动Systems收入环比增长。真正的投资问题不是谁立刻消灭谁，而是不同网络层级如何分配端口，以及激光器、InP、硅光、封装和测试环节谁能跨两条路线收钱。</p></div><section class="article-section"><span class="part">Part 01</span><h3>先说结论：CPO增长最快，不等于可插拔立刻归零</h3><p>市场喜欢把技术迁移写成一场淘汰赛：CPO把光学器件放到交换芯片旁边，功耗更低、带宽更高，所以可插拔光模块迟早要像功能机一样消失。这个方向只说对了一半。CPO确实解决了AI网络最紧迫的电互连损耗和端口密度问题，但数据中心不是只有一种距离、一种交换层级和一种维修方式。</p><p>NVIDIA在官方发布中给出的CPO优势很强：Spectrum-X和Quantum-X Photonics最高面向1.6Tb/s端口，公司称相对传统方法可实现3.5倍能效、10倍网络韧性，并减少激光器数量。【1】但同一份公告也明确表示，NVIDIA硅光产品将与Coherent、Eoptolink、Fabrinet和Innolight等厂商支持的可插拔光收发技术一起推动AI工厂增长。【1】这句话比任何卖方预测都重要，因为平台方自己没有把未来描述成单一路线。</p><p>更合理的判断是分层共存：CPO先进入功耗、带宽密度和端口数量最紧张的交换位置；可插拔继续覆盖需要标准化、多供应商、快速更换和更广距离的链路。两者的份额会变化，但总需求也在扩大，因此CPO端口增加与800G、1.6T可插拔收入增长可以在同一时期出现。</p><p>投资上最危险的错误有两个：一是把CPO的高增长自动写成所有可插拔公司的收入崩塌；二是看到可插拔继续增长，就认为CPO只是实验室概念。当前最合适的姿态是等待证明：按网络层级、订单、ASP、良率、维修成本和现金流逐季验证，而不是押注一句‘全面替代’。</p><ul><li>已确认：NVIDIA已给出CPO产品、性能和供货时间表。</li><li>已确认：NVIDIA官方同时保留可插拔技术的增长位置。</li><li>待验证：不同网络层级的CPO端口比例和商业化速度。</li></ul></section><section class="article-section"><span class="part">Part 02</span><h3>为什么CPO必须出现：高速电信号走不远了</h3><p>AI集群扩大后，问题不再只是GPU算得够不够快，而是数万乃至更多加速器能否高效交换数据。交换芯片带宽持续上升时，传统做法需要把高速电信号从芯片送到面板上的可插拔模块。距离虽然不长，但速率越高，电损耗、散热和信号完整性压力越大。</p><p>CPO的核心是把光学引擎和交换芯片放得更近，让更多高速传输尽早从电信号转为光信号。NVIDIA称其Photonics交换机通过电子电路与光通信融合，提高功率效率、信号完整性、网络韧性和部署速度。【1】这是明确的系统价值，不依赖某一家模块公司的市场叙事。</p><p>因此CPO最可能率先渗透的，不是所有光连接，而是那些继续使用可插拔会付出最高功耗、散热和端口密度代价的节点。NVIDIA公开的Quantum-X Photonics为144个800Gb/s InfiniBand端口，Spectrum-X Photonics则提供100Tb/s和400Tb/s等配置，说明平台首先瞄准超大规模AI计算网络。【1】</p><p>但性能优势不等于经济上立刻通吃。把光器件放进交换系统，会把良率、封装、热管理、测试和现场维护变得更复杂。一旦光学部分失效，维修边界不再像拔掉一个标准模块那么简单。因此CPO能否从最高端节点向更广网络扩张，取决于整机可靠性、生产良率、备件与维修体系，而不仅是实验室带宽。</p><ul><li>CPO先解决：电损耗、功耗、端口密度和超大规模网络韧性。</li><li>CPO新增难题：联合封装、光电测试、良率、热管理和维修。</li><li>渗透顺序比终局份额更重要。</li></ul></section><section class="article-section"><span class="part">Part 03</span><h3>为什么可插拔仍有生命力：它卖的不只是带宽，也是维修和标准</h3><p>可插拔模块最容易被低估的价值，不是技术领先，而是运营简单。模块出现故障时，数据中心可以更换单个器件；客户可以在标准接口下选择多个供应商；库存、备件、升级和现场维护也更容易管理。这些优势在网络规模扩大后反而更重要，因为任何停机和维修复杂度都会转化为真实运营成本。</p><p>不同链路对功耗和可维护性的权重并不相同。最高密度的计算网络愿意为能效和带宽付出更复杂的封装代价；更广距离、需要灵活部署或频繁升级的链路，则可能继续偏好可插拔。本文不把具体距离比例写成公司事实，因为云厂采购拆分尚未公开，但‘不同问题需要不同工具’是当前证据最一致的解释。</p><p>ASMPT的2026年中期业绩给出了财务层面的直接验证。公司披露，1H26可插拔光收发解决方案收入同比接近三倍，驱动来自800G及以上高速光收发器的客户扩产；与此同时，公司又表示已加强与多家全球领先CPO企业合作，提供高精度光子、热压键合和混合键合方案。【2】同一家公司、同一时期，两条路线都在增长。</p><p>这组数据不能证明可插拔还能增长十年，也不能证明ASMPT最终会拿到多大CPO份额。但它足以否定一个过度简单的判断：CPO出现，传统模块链就必须立刻收缩。至少在当前阶段，AI基础设施总需求和产品升级速度足以让过渡路线与下一代路线并行扩张。</p><ul><li>可插拔的护城河：标准化、可更换、多供应商、运维简单。</li><li>ASMPT官方数据：可插拔方案收入同比接近三倍。</li><li>同一时期：ASMPT也在扩大CPO合作。</li></ul></section><section class="article-section"><span class="part">Part 04</span><h3>最硬的交叉证据：模块在扩产，CPO设备也已经进报表</h3><p>如果共存只是理论，我们应该看不到两条路线同时转化为订单和财务数据。现在已经出现三个层面的验证：NVIDIA明确保留两种架构；ASMPT看到可插拔收入高速增长并推进CPO合作；FormFactor则确认CPO已经推动Systems业务收入环比增长。</p><p>FormFactor向SEC提交的二季度业绩稿显示，季度收入2.582亿美元，同比增长31.9%；公司称HBM和CPO分别推动Probe Cards和Systems业务收入环比增长。季度经营现金流6180万美元，自由现金流5260万美元，三季度收入指引为2.70亿美元上下1000万美元。【3】这说明CPO复杂度不再只停留在路线图，已经开始让测试系统供应商收到收入。</p><p>ASMPT的先进封装业务上半年收入为3.39亿美元，同比增长17%，占集团收入30%；可插拔方案收入接近三倍增长，而CPO合作覆盖高精度光子、TCB和混合键合。【2】这里最重要的不是比较两家公司谁更便宜，而是理解收入顺序：模块扩产反映当前端口需求，测试和封装设备收入则可能领先下一代CPO量产。</p><p>AAOI的SEC文件还显示，公司为休斯敦OMD3/FAB4洁净室建设签订约9410万美元设计施工协议，付款与工程进度挂钩。【6】该文件没有披露产品和客户，因此不能直接把9410万美元全部写成800G或1.6T产能；但它至少说明光器件制造扩张仍是重资本、长周期过程，产能兑现必须经过建设、验收和客户需求。</p><ul><li>当前需求信号：可插拔客户扩产和收入增长。</li><li>领先需求信号：CPO测试、封装和系统设备收入。</li><li>共同限制：建设、良率、认证、设备利用率和现金回收。</li></ul></section><section class="article-section"><span class="part">Part 05</span><h3>真正可能跨路线收钱的，是激光器、材料、封装和测试</h3><p>如果模块架构长期共存，最有研究价值的就不是只押一种终局，而是寻找两条路线都需要、供给扩张又慢的节点。可插拔和CPO使用的具体激光器形态、封装方式和单位价值量不同，不能机械相加；但先进激光、InP材料、硅光晶圆、精密封装和光电联合测试都可能从总端口和复杂度上升中受益。</p><p>NVIDIA在2026年3月分别宣布与Lumentum和Coherent签订非独家多年战略协议。两份公告都包含数十亿美元级采购承诺和未来产能使用权，NVIDIA还分别向两家公司投资20亿美元，用于研发、产能和美国制造扩张。【4】【5】这不是CPO或可插拔某一条路线的份额证明，但它是先进激光和光网络产品供给重要性的强一手信号。</p><p>更关键的是风险分配。采购承诺和产能使用权能降低激光器厂扩产的不确定性，却不能自动保证良率、交付和最终利润。Lumentum公告明确把扩产、质量和交付能力列为风险；Coherent协议同样是非独家安排。【4】【5】所以‘供给紧张’只有在价格、产品组合、毛利率和现金流同步改善时，才真正转化为股东价值。</p><p>封装测试链也不能一篮子处理。FormFactor已经有CPO推动Systems收入的硬证据；ASMPT则同时覆盖可插拔光子设备和CPO封装方案。【2】【3】其他被市场贴上CPO标签的设备商，若只有送样、联合开发或单台验证设备，还不能与重复订单、批量工具和持续服务收入相提并论。</p><ul><li>强证据：NVIDIA对Lumentum、Coherent各20亿美元投资。</li><li>强证据：两份非独家多年协议含采购承诺与产能权。</li><li>判断边界：合同不等于利润，仍要验证良率、价格和现金流。</li></ul></section><section class="article-section"><span class="part">Part 06</span><h3>利润怎么传导：先看端口，再看单位价值量，最后看现金流</h3><p>这条产业链最容易出现重复计算。云厂增加一笔网络资本开支，可能同时被模块厂、激光器厂、晶圆厂、封装厂和设备商描述为自己的TAM。如果把每一层的收入机会简单相加，就会得到一个远大于实际终端预算的数字。正确方法是先数端口，再拆每个端口的BOM和生产设备。</p><p>可插拔路径大致是：AI集群扩张，800G/1.6T端口增加，模块厂采购DSP、EML或其他光源、连接器和封装服务，随后通过出货量、ASP和良率进入收入与毛利率。CPO路径则是：交换平台采用光电共封装，增加硅光、外部激光、精密贴装、键合、探针和系统测试需求，设备收入可能早于光引擎批量出货。</p><p>对上市公司，第一张表应跟踪量：端口数、模块出货、设备订单、激光器产能和客户认证。第二张表跟踪价：ASP、产品组合、采购承诺和单位端口价值量。第三张表才是股东回报：毛利率、经营现金流、资本开支和自由现金流。只有三张表方向一致，技术趋势才进入每股价值。</p><p>这也是公众号文章最有用的地方。高斯的钟摆把800G、1.6T、2.4T、NPO和CPO放在产品接棒路线中；盘盘的投研笔记把DSP、EML、CW激光器、硅光晶圆和封装环节串成BOM。【7】【8】本文只采用这种拆解方法，文中的卖方出货量、目标价和毛利率预测不作为公司事实。</p><ul><li>避免重复计算：终端预算不能在每层供应链重复相加。</li><li>先看量：端口、订单、认证和产能。</li><li>再看股东价值：毛利率、经营现金流和自由现金流。</li></ul></section><section class="article-section"><span class="part">Part 07</span><h3>谁可能受益，谁可能受损：不是按CPO标签，而是按证据分层</h3><p>第一类是已有采购承诺、产能权和制造能力的先进光学供应商。Lumentum和Coherent获得NVIDIA多年非独家协议、采购承诺及资本投入，属于直接受益候选；但估值能否继续提升，要看新产能、产品组合、毛利率和自由现金流，而不能只重复20亿美元投资标题。【4】【5】</p><p>第二类是量产前置的测试与封装设备商。FormFactor已有CPO推动Systems收入的明确披露，ASMPT同时看到可插拔收入和CPO合作增强，证据层级高于只有合作备忘录的概念公司。【2】【3】但设备收入可能领先终端量产数季，如果后续没有重复订单、耗材、服务和客户扩机，领先收入也会出现空档。</p><p>第三类是可插拔模块和制造服务商。NVIDIA官方点名Coherent、Eoptolink、Fabrinet和Innolight支持可插拔光收发技术继续增长。【1】这证明产业位置仍在，但不是个股评级。真正需要验证的是800G/1.6T订单、客户集中、ASP、激光器自制率、资本开支和现金流，尤其要区分出货增长与价格竞争。</p><p>潜在受损者主要有两种：一种是估值完全依赖CPO在短期内通吃所有端口，却没有量产、订单或良率证据的公司；另一种是只做可插拔组装、缺少光源或封装差异化，在出货增长时仍被价格竞争压低毛利率的公司。技术路线正确，不代表每一层都能保住利润。</p><ul><li>直接研究候选：LITE、COHR、FORM、ASMPT。</li><li>需补证券级证据：模块厂、硅光代工、InP和小型CPO概念公司。</li><li>当前动作：watchlist / wait for proof，而非一篮子追涨。</li></ul></section><section class="article-section"><span class="part">Part 08</span><h3>市场预期差：最大的误判不是方向，而是时间和利润归属</h3><p>CPO的方向已经不是秘密。NVIDIA给出产品、合作伙伴和供货时间，FormFactor和ASMPT开始报告相关收入或合作，光学龙头也拿到多年采购承诺。【1】【2】【3】【4】【5】如果只写‘CPO是未来’，很难形成新的投资判断。</p><p>真正可能被低估的是共存期的长度和利润归属。市场可能低估可插拔在标准化、维护和更广链路中的寿命，也可能低估CPO复杂度给测试、封装和激光器带来的单位价值量。换句话说，模块路线的份额变化和上游瓶颈的利润变化不一定同步。</p><p>当前还不能严格判断哪些股票已经完全计入共存，因为本文没有使用同一时点的价格、估值和一致预期数据。Serenity最新推文把Lumentum的InP激光器缺口和FormFactor的CPO收入视为供应链强信号，但这仍是投资者解读，不是估值结论。【9】【10】因此正文不提供目标价，也不把行业高景气直接写成买入建议。</p><p>更可执行的研究方法是观察预期修正顺序：先看管理层是否上调光学和CPO收入；再看订单、产能和客户认证；随后看毛利率、现金流和资本开支；最后才讨论估值倍数。若收入增长却现金流恶化，市场可能已经把远期价值提前支付。</p><ul><li>已被普遍认识：CPO是AI网络的重要方向。</li><li>可能仍有预期差：共存期、上游单位价值量和现金流兑现。</li><li>缺口：同口径市场价格、估值与一致预期。</li></ul></section><section class="article-section"><span class="part">Part 09</span><h3>三种情景：不是预测终局，而是规定什么数据会让观点改变</h3><p>基准情景（示意概率55%）：CPO在最高密度的scale-up和部分scale-out节点加速，可插拔800G/1.6T继续在更广网络放量。模块、激光器和测试封装收入同时增长，但价格竞争和资本开支使股票回报分化。跨架构上游供应商和已有重复订单的设备商更容易获得稳定利润。</p><p>CPO加速情景（示意概率25%）：NVIDIA等平台的能效、可靠性和维护体系成熟得更快，CPO从最高端节点向更多交换层级扩张。硅光、CW激光、精密封装和测试价值量上升，传统可插拔端口增长显著放缓，缺少差异化的模块厂面临ASP和毛利率双重压力。</p><p>可插拔延寿情景（示意概率20%）：CPO良率、现场维修、标准和供应链爬坡慢于计划，云厂继续依靠800G、1.6T及后续可插拔产品补充容量。模块厂和EML链获得更长兑现窗口，CPO设备收入可能出现验证后空档，远期估值较高的CPO纯概念承压。</p><p>这些概率不是统计预测，而是把变量关系透明化。未来一至四个季度最关键的数据是NVIDIA CPO客户部署、模块与光学厂订单、FormFactor Systems收入、ASMPT Photonics订单、激光器产能利用率、模块ASP、良率和自由现金流。</p><ul><li>基准：两条路线共同增长，利润向跨架构瓶颈集中。</li><li>CPO加速：传统模块利润先受压，硅光和封测价值量提高。</li><li>可插拔延寿：模块链兑现更久，CPO纯概念等待期拉长。</li></ul></section><section class="article-section"><span class="part">Part 10</span><h3>最终判断：不要问谁消灭谁，先盯八个可以证伪的指标</h3><p>这篇文章的答案很明确：CPO开始量产，并不意味着可插拔光模块即将归零。NVIDIA官方已经把两条路线放在同一增长框架中；ASMPT同时看到可插拔收入接近三倍增长和CPO合作加深；FormFactor则证明CPO测试需求开始进入报表。【1】【2】【3】</p><p>真正的产业变化是端口重新分层。CPO解决最高密度网络的能效和带宽问题，可插拔继续提供标准化、可维护性和部署灵活性。总端口快速扩张时，两条路线可以同时增长；份额变化决定模块收入，复杂度变化决定激光器、硅光、封装和测试的单位价值量。</p><p>接下来只需盯八个指标：CPO实际客户部署与端口数；800G/1.6T可插拔订单；两类产品ASP；模块和CPO良率；现场故障与维修成本；激光器产能和价格；测试封装重复订单；毛利率、经营现金流与自由现金流。若CPO端口扩张同时可插拔订单连续下降、毛利率恶化，替代速度快于本文判断；若两边订单和现金流都增长，共存主线得到验证。</p><p>对上市公司，当前最合适的动作是分层研究和等待证明。Lumentum、Coherent、FormFactor与ASMPT有较强的一手暴露证据；模块厂、材料、代工和小型CPO公司还需逐家核验客户、订单、产能和估值。本文为公开资料研究框架，不构成投资建议。</p><ul><li>核心结论：CPO与可插拔更可能分层共存，而非短期零和。</li><li>核心赢家条件：跨架构、已认证、有重复订单、能转化现金流。</li><li>核心证伪：端口、ASP、良率和现金流出现持续单向替代。</li></ul></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://nvidianews.nvidia.com/news/nvidia-spectrum-x-co-packaged-optics-networking-switches-ai-factories" target="_blank" rel="noopener noreferrer">NVIDIA：Spectrum-X与Quantum-X Photonics CPO交换机</a></article><article class="source-card"><a href="https://www.asmpt.com/en/investor-relations/news-events/asmpt-announces-2026-interim-results/" target="_blank" rel="noopener noreferrer">ASMPT 2026年中期官方业绩</a></article><article class="source-card"><a href="https://www.sec.gov/Archives/edgar/data/1039399/000103939926000030/ex9901-earningsreleasexq226.htm" target="_blank" rel="noopener noreferrer">FormFactor 2026年二季度业绩（SEC）</a></article><article class="source-card"><a href="https://nvidianews.nvidia.com/news/nvidia-announces-strategic-partnership-with-lumentum-to-develop-state-of-the-art-optics-technology" target="_blank" rel="noopener noreferrer">NVIDIA与Lumentum多年先进光学合作</a></article><article class="source-card"><a href="https://nvidianews.nvidia.com/news/nvidia-and-coherent-announce-strategic-partnership-to-develop-optics-technology-to-scale-next-generation-data-center-architecture" target="_blank" rel="noopener noreferrer">NVIDIA与Coherent多年先进光学合作</a></article><article class="source-card"><a href="https://www.sec.gov/Archives/edgar/data/1158114/000168316826005221/aaoi_8k.htm" target="_blank" rel="noopener noreferrer">AAOI OMD3/FAB4洁净室建设协议（SEC 8-K）</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/nTc8vKFd4ew-zFQCpHpflw" target="_blank" rel="noopener noreferrer">高斯的钟摆：野村上调中际旭创</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/D20piE0tSOyGT75k3l7nqg" target="_blank" rel="noopener noreferrer">盘盘的投研笔记：光通信核心公司报告汇总</a></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2083438823548293140" target="_blank" rel="noopener noreferrer">Serenity：Lumentum InP激光器供给缺口</a></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2082720873908494456" target="_blank" rel="noopener noreferrer">Serenity：FormFactor CPO收入与测试领先指标</a></article></section></details></section>
+    <details class="deep-report"><summary>展开归档深度报告</summary><div class="markdown-body"><h1>CPO开始量产，可插拔光模块为什么还可能再活十年？</h1>
+<ul>
+<li>候选 ID：<code>2026-08-03_pluggable_cpo_coexistence</code></li>
+<li>状态：完整候选稿，等待用户对具体正文明确批准</li>
+<li>自动发布：<code>false</code></li>
+<li>研究截止：2026-08-03 21:05（北京时间）</li>
+<li>正文字数：约5500字</li>
+<li>证据姿态：研究级候选；NVIDIA、ASMPT、FormFactor及SEC文件承担公司事实，公众号和Serenity推文仅作为研究方法与线索</li>
+</ul>
+<blockquote>
+<p>本稿不构成投资建议。它尚未写入 <code>data/daily_article_v9_approved.json</code>，未归档、未构建或同步网站，也未生成、上传或发布小红书与视频。</p>
+</blockquote>
+<h2>Executive Call</h2>
+<p>CPO更可能先渗透功耗、带宽密度和端口数量最紧张的AI交换节点，而可插拔光模块继续覆盖强调标准化、多供应商、快速维修和更广距离的链路。NVIDIA官方一面给出1.6Tb/s端口、3.5倍能效和10倍网络韧性等CPO指标，一面明确表示硅光CPO将与可插拔光收发技术共同支撑AI工厂。ASMPT又在同一报告期披露可插拔方案收入同比接近三倍并扩大CPO合作，FormFactor确认CPO已推动Systems收入环比增长。当前最可执行的投资框架不是押注“谁消灭谁”，而是按端口、ASP、良率、维修成本、重复订单、毛利率和自由现金流判断利润最终落在哪一层。</p>
+<h2>Event Status And Market Baseline</h2>
+<ul>
+<li>已确认：NVIDIA已公布Spectrum-X与Quantum-X Photonics CPO产品、性能指标、合作伙伴和供货路线。</li>
+<li>已确认：NVIDIA官方明确写明CPO与可插拔光收发技术共同支撑AI工厂增长。</li>
+<li>已确认：ASMPT 1H26可插拔光收发解决方案收入同比接近三倍，同时扩大CPO封装合作。</li>
+<li>已确认：FormFactor Q2 2026收入2.582亿美元，同比增长31.9%，CPO推动Systems业务收入环比增长；自由现金流5260万美元。</li>
+<li>研究截止：2026-08-03 21:05（北京时间）。</li>
+<li>市场基线：CPO方向已被广泛讨论，但主要云厂尚未公开同口径CPO与可插拔端口采购拆分。</li>
+<li>主要缺口：缺少同一时点的个股估值、一致预期、现场故障率、维修成本和标准化进度，因此不提供目标价或证券级结论。</li>
+</ul>
+<h2>Source And Freshness</h2>
+<ul>
+<li>Data cut-off: 2026-08-03 21:05（北京时间）。</li>
+<li>Sources used: NVIDIA官方发布、ASMPT官方业绩、FormFactor与AAOI SEC文件、NVIDIA与Lumentum/Coherent官方合作公告、两篇公众号方法论文章及Serenity公开推文。</li>
+<li>Evidence posture: <code>research_grade_candidate</code>；6项一手来源、2项二手方法来源、2项投资者解读来源。</li>
+<li>Stale or missing data: 缺主要云厂端口采购拆分、同口径估值与一致预期、CPO现场维修成本和故障率、部分供应商客户路径。</li>
+<li>Source conflicts: 未发现一手来源直接冲突；公众号卖方预测、目标价和出货量不作为公司事实。</li>
+<li>发布限制：上述缺口不妨碍形成研究框架，但在人工审批前，本稿必须保持候选状态。</li>
+</ul>
+<h2>What Is New Vs. Expected</h2>
+<p>市场早已知道CPO会提高AI交换网络的能效和端口密度。真正的新证据是两条路线正在同一时期进入报表：NVIDIA没有把未来描述为单一路线，ASMPT同时获得可插拔扩产收入和CPO合作，FormFactor已收到CPO测试系统收入。问题因此从“CPO是不是未来”转为“CPO先进入哪些节点、可插拔保留哪些链路、哪类上游供应商能跨架构兑现利润”。</p>
+<h2>Why Now</h2>
+<p>未来一至四个季度将出现更多NVIDIA CPO实际部署、800G/1.6T可插拔订单、激光器扩产、封装测试重复订单和现金流数据，可以第一次系统检验“端口分层共存”。设备和测试收入可能领先终端量产，模块收入则更接近当前端口需求；若不区分时间顺序，容易把设备订单、模块出货与最终云厂预算重复计算。</p>
+<h2>Event-To-Equity Transmission Map</h2>
+<ol>
+<li>AI集群扩大 → 交换带宽和端口密度上升 → 最高密度节点采用CPO → 硅光、外部激光、精密封装和系统测试需求 → 设备订单、收入、毛利率和现金流。</li>
+<li>更广距离、标准化和快速维修需求 → 800G/1.6T可插拔继续升级 → 模块、EML/DSP、连接器与封装需求 → 出货量、ASP、良率和模块厂现金流。</li>
+<li>两条架构并存 → 先进激光、InP、硅光、封装和测试成为跨路线瓶颈 → 采购承诺与产能扩张 → 只有在价格、产品组合、毛利率和自由现金流同步改善时形成股东价值。</li>
+</ol>
+<h2>Public Equity Framing</h2>
+<p>没有提供持仓、基准和风险预算，因此本文只建立代表性研究队列，不给出加仓、减仓或对冲建议。当前动作姿态是“等待证明”：优先研究已有一手订单、采购承诺、收入或现金流证据的公司；对只有合作、送样或路线图的CPO概念公司保持观察。</p>
+<h2>Ranked Equity Impact Map</h2>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>代表性研究队列</th>
+<th>方向</th>
+<th>机制</th>
+<th>首个财务指标</th>
+<th>时间</th>
+<th>置信度</th>
+<th>当前动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lumentum、Coherent</td>
+<td>条件性正面</td>
+<td>多年非独家协议、采购承诺、产能权与资本投入支持先进光学扩产</td>
+<td>产能、ASP、毛利率、FCF</td>
+<td>1—6季度</td>
+<td>中高</td>
+<td>等待利润兑现</td>
+</tr>
+<tr>
+<td>2</td>
+<td>FormFactor、ASMPT</td>
+<td>条件性正面</td>
+<td>CPO复杂度提高测试和封装价值；已有收入或合作证据</td>
+<td>Systems/Photonics订单、重复订单、服务收入</td>
+<td>1—6季度</td>
+<td>中高</td>
+<td>跟踪重复订单</td>
+</tr>
+<tr>
+<td>3</td>
+<td>可插拔模块及制造服务商</td>
+<td>双向、偏正面</td>
+<td>800G/1.6T端口继续增长，但ASP竞争与CPO份额变化可能压制利润</td>
+<td>出货、ASP、良率、毛利率、FCF</td>
+<td>1—4季度</td>
+<td>中</td>
+<td>逐家公司核验</td>
+</tr>
+<tr>
+<td>4</td>
+<td>硅光、InP材料及小型CPO供应商</td>
+<td>高弹性双向</td>
+<td>跨架构需求可能扩大，但客户、量产和单位价值量证据不完整</td>
+<td>认证、订单、良率、现金流</td>
+<td>2—8季度</td>
+<td>中低</td>
+<td>等待一手证明</td>
+</tr>
+</tbody>
+</table>
+<p>以上均为代表性暴露候选，不是证券级推荐；没有同口径估值和持仓信息时，最合适的姿态是研究队列和等待证明。</p>
+<h2>What Is Priced In Vs. What Requires Proof</h2>
+<ul>
+<li>已广泛计入预期：CPO是最高密度AI网络的重要方向，800G/1.6T可插拔仍处升级周期。</li>
+<li>可能尚未充分拆分：CPO份额上升不必等于可插拔收入立刻下降；跨架构上游利润可能比模块路线份额更重要。</li>
+<li>仍需证明：CPO实际客户端口、主要云厂采购拆分、两类产品ASP与良率、现场维修成本、重复设备订单及现金流。</li>
+<li>本稿未执行同口径实时估值和一致预期分析，因此不声称任何具体股票存在明确错价。</li>
+</ul>
+<h2>Earnings, Valuation, And Positioning Read-Through</h2>
+<p>模块厂最先变化的是订单、出货和ASP，随后是良率、毛利率与自由现金流；激光器供应商先看产能和采购承诺，再看价格、产品组合和现金流；测试封装设备商可能在终端量产前确认收入，但必须用重复订单、耗材和服务验证持续性。CPO主题可能形成拥挤交易，而当前公司级证据高度不均衡。没有最新估值、共识修订和持仓数据时，不能把产业趋势直接翻译为买入结论。</p>
+<h2>Scenario Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">示意概率</th>
+<th>核心假设</th>
+<th>公共股权影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基准共存</td>
+<td style="text-align: right;">55%</td>
+<td>CPO先进入最高密度节点；可插拔继续在更广网络升级</td>
+<td>两条路线同时拉动上游，股票回报按订单、良率和现金流分化</td>
+</tr>
+<tr>
+<td>CPO加速</td>
+<td style="text-align: right;">25%</td>
+<td>可靠性、维修体系和标准化成熟更快，CPO侵入更多交换层级</td>
+<td>硅光、CW激光、封装测试受益，缺少差异化的可插拔模块厂承压</td>
+</tr>
+<tr>
+<td>可插拔延寿</td>
+<td style="text-align: right;">20%</td>
+<td>CPO良率、维修或标准爬坡慢于计划</td>
+<td>模块与EML链兑现期延长，只有验证收入的CPO概念估值承压</td>
+</tr>
+</tbody>
+</table>
+<p>概率仅用于展示变量关系，不是统计预测。</p>
+<h2>Strongest Counterargument</h2>
+<p>最强反方观点是：CPO可靠性、标准和维修体系成熟速度可能远快于当前预期，平台方凭借系统级能效优势会快速把CPO推向更多网络层级；同时800G/1.6T可插拔价格竞争可能让出货增长无法转成利润。若主要云厂明确削减可插拔采购、模块订单连续下降且CPO端口快速扩展到更广距离，应下调共存期长度，并重新评估传统模块链。</p>
+<h2>What Would Change The View</h2>
+<p>如果CPO实际部署快速扩展、可插拔订单和毛利率连续下降、现场维修与多供应商标准提前成熟，应把基准情景转向“CPO加速”。反过来，如果CPO良率、维修或供应链进展反复，而800G/1.6T订单、模块现金流和激光器需求继续增长，则“可插拔延寿”权重上升。若两条路线订单和现金流同时改善，分层共存主线获得更强验证。</p>
+<h2>Monitoring Triggers And Research Queue</h2>
+<p>未来一至四个季度重点跟踪：NVIDIA CPO实际客户部署与端口数；800G/1.6T可插拔订单和出货；两类产品ASP；模块与CPO良率；现场故障率和维修成本；先进激光器产能、价格和交付；测试封装设备重复订单、耗材和服务收入；毛利率、经营现金流、资本开支和自由现金流。</p>
+<h2>完整候选正文</h2>
+<h3>先说结论：CPO增长最快，不等于可插拔立刻归零</h3>
+<p>市场喜欢把技术迁移写成一场淘汰赛：CPO把光学器件放到交换芯片旁边，功耗更低、带宽更高，所以可插拔光模块迟早要像功能机一样消失。这个方向只说对了一半。CPO确实解决了AI网络最紧迫的电互连损耗和端口密度问题，但数据中心不是只有一种距离、一种交换层级和一种维修方式。</p>
+<p>NVIDIA在官方发布中给出的CPO优势很强：Spectrum-X和Quantum-X Photonics最高面向1.6Tb/s端口，公司称相对传统方法可实现3.5倍能效、10倍网络韧性，并减少激光器数量。【1】但同一份公告也明确表示，NVIDIA硅光产品将与Coherent、Eoptolink、Fabrinet和Innolight等厂商支持的可插拔光收发技术一起推动AI工厂增长。【1】这句话比任何卖方预测都重要，因为平台方自己没有把未来描述成单一路线。</p>
+<p>更合理的判断是分层共存：CPO先进入功耗、带宽密度和端口数量最紧张的交换位置；可插拔继续覆盖需要标准化、多供应商、快速更换和更广距离的链路。两者的份额会变化，但总需求也在扩大，因此CPO端口增加与800G、1.6T可插拔收入增长可以在同一时期出现。</p>
+<p>投资上最危险的错误有两个：一是把CPO的高增长自动写成所有可插拔公司的收入崩塌；二是看到可插拔继续增长，就认为CPO只是实验室概念。当前最合适的姿态是等待证明：按网络层级、订单、ASP、良率、维修成本和现金流逐季验证，而不是押注一句‘全面替代’。</p>
+<h3>为什么CPO必须出现：高速电信号走不远了</h3>
+<p>AI集群扩大后，问题不再只是GPU算得够不够快，而是数万乃至更多加速器能否高效交换数据。交换芯片带宽持续上升时，传统做法需要把高速电信号从芯片送到面板上的可插拔模块。距离虽然不长，但速率越高，电损耗、散热和信号完整性压力越大。</p>
+<p>CPO的核心是把光学引擎和交换芯片放得更近，让更多高速传输尽早从电信号转为光信号。NVIDIA称其Photonics交换机通过电子电路与光通信融合，提高功率效率、信号完整性、网络韧性和部署速度。【1】这是明确的系统价值，不依赖某一家模块公司的市场叙事。</p>
+<p>因此CPO最可能率先渗透的，不是所有光连接，而是那些继续使用可插拔会付出最高功耗、散热和端口密度代价的节点。NVIDIA公开的Quantum-X Photonics为144个800Gb/s InfiniBand端口，Spectrum-X Photonics则提供100Tb/s和400Tb/s等配置，说明平台首先瞄准超大规模AI计算网络。【1】</p>
+<p>但性能优势不等于经济上立刻通吃。把光器件放进交换系统，会把良率、封装、热管理、测试和现场维护变得更复杂。一旦光学部分失效，维修边界不再像拔掉一个标准模块那么简单。因此CPO能否从最高端节点向更广网络扩张，取决于整机可靠性、生产良率、备件与维修体系，而不仅是实验室带宽。</p>
+<h3>为什么可插拔仍有生命力：它卖的不只是带宽，也是维修和标准</h3>
+<p>可插拔模块最容易被低估的价值，不是技术领先，而是运营简单。模块出现故障时，数据中心可以更换单个器件；客户可以在标准接口下选择多个供应商；库存、备件、升级和现场维护也更容易管理。这些优势在网络规模扩大后反而更重要，因为任何停机和维修复杂度都会转化为真实运营成本。</p>
+<p>不同链路对功耗和可维护性的权重并不相同。最高密度的计算网络愿意为能效和带宽付出更复杂的封装代价；更广距离、需要灵活部署或频繁升级的链路，则可能继续偏好可插拔。本文不把具体距离比例写成公司事实，因为云厂采购拆分尚未公开，但‘不同问题需要不同工具’是当前证据最一致的解释。</p>
+<p>ASMPT的2026年中期业绩给出了财务层面的直接验证。公司披露，1H26可插拔光收发解决方案收入同比接近三倍，驱动来自800G及以上高速光收发器的客户扩产；与此同时，公司又表示已加强与多家全球领先CPO企业合作，提供高精度光子、热压键合和混合键合方案。【2】同一家公司、同一时期，两条路线都在增长。</p>
+<p>这组数据不能证明可插拔还能增长十年，也不能证明ASMPT最终会拿到多大CPO份额。但它足以否定一个过度简单的判断：CPO出现，传统模块链就必须立刻收缩。至少在当前阶段，AI基础设施总需求和产品升级速度足以让过渡路线与下一代路线并行扩张。</p>
+<h3>最硬的交叉证据：模块在扩产，CPO设备也已经进报表</h3>
+<p>如果共存只是理论，我们应该看不到两条路线同时转化为订单和财务数据。现在已经出现三个层面的验证：NVIDIA明确保留两种架构；ASMPT看到可插拔收入高速增长并推进CPO合作；FormFactor则确认CPO已经推动Systems业务收入环比增长。</p>
+<p>FormFactor向SEC提交的二季度业绩稿显示，季度收入2.582亿美元，同比增长31.9%；公司称HBM和CPO分别推动Probe Cards和Systems业务收入环比增长。季度经营现金流6180万美元，自由现金流5260万美元，三季度收入指引为2.70亿美元上下1000万美元。【3】这说明CPO复杂度不再只停留在路线图，已经开始让测试系统供应商收到收入。</p>
+<p>ASMPT的先进封装业务上半年收入为3.39亿美元，同比增长17%，占集团收入30%；可插拔方案收入接近三倍增长，而CPO合作覆盖高精度光子、TCB和混合键合。【2】这里最重要的不是比较两家公司谁更便宜，而是理解收入顺序：模块扩产反映当前端口需求，测试和封装设备收入则可能领先下一代CPO量产。</p>
+<p>AAOI的SEC文件还显示，公司为休斯敦OMD3/FAB4洁净室建设签订约9410万美元设计施工协议，付款与工程进度挂钩。【6】该文件没有披露产品和客户，因此不能直接把9410万美元全部写成800G或1.6T产能；但它至少说明光器件制造扩张仍是重资本、长周期过程，产能兑现必须经过建设、验收和客户需求。</p>
+<h3>真正可能跨路线收钱的，是激光器、材料、封装和测试</h3>
+<p>如果模块架构长期共存，最有研究价值的就不是只押一种终局，而是寻找两条路线都需要、供给扩张又慢的节点。可插拔和CPO使用的具体激光器形态、封装方式和单位价值量不同，不能机械相加；但先进激光、InP材料、硅光晶圆、精密封装和光电联合测试都可能从总端口和复杂度上升中受益。</p>
+<p>NVIDIA在2026年3月分别宣布与Lumentum和Coherent签订非独家多年战略协议。两份公告都包含数十亿美元级采购承诺和未来产能使用权，NVIDIA还分别向两家公司投资20亿美元，用于研发、产能和美国制造扩张。【4】【5】这不是CPO或可插拔某一条路线的份额证明，但它是先进激光和光网络产品供给重要性的强一手信号。</p>
+<p>更关键的是风险分配。采购承诺和产能使用权能降低激光器厂扩产的不确定性，却不能自动保证良率、交付和最终利润。Lumentum公告明确把扩产、质量和交付能力列为风险；Coherent协议同样是非独家安排。【4】【5】所以‘供给紧张’只有在价格、产品组合、毛利率和现金流同步改善时，才真正转化为股东价值。</p>
+<p>封装测试链也不能一篮子处理。FormFactor已经有CPO推动Systems收入的硬证据；ASMPT则同时覆盖可插拔光子设备和CPO封装方案。【2】【3】其他被市场贴上CPO标签的设备商，若只有送样、联合开发或单台验证设备，还不能与重复订单、批量工具和持续服务收入相提并论。</p>
+<h3>利润怎么传导：先看端口，再看单位价值量，最后看现金流</h3>
+<p>这条产业链最容易出现重复计算。云厂增加一笔网络资本开支，可能同时被模块厂、激光器厂、晶圆厂、封装厂和设备商描述为自己的TAM。如果把每一层的收入机会简单相加，就会得到一个远大于实际终端预算的数字。正确方法是先数端口，再拆每个端口的BOM和生产设备。</p>
+<p>可插拔路径大致是：AI集群扩张，800G/1.6T端口增加，模块厂采购DSP、EML或其他光源、连接器和封装服务，随后通过出货量、ASP和良率进入收入与毛利率。CPO路径则是：交换平台采用光电共封装，增加硅光、外部激光、精密贴装、键合、探针和系统测试需求，设备收入可能早于光引擎批量出货。</p>
+<p>对上市公司，第一张表应跟踪量：端口数、模块出货、设备订单、激光器产能和客户认证。第二张表跟踪价：ASP、产品组合、采购承诺和单位端口价值量。第三张表才是股东回报：毛利率、经营现金流、资本开支和自由现金流。只有三张表方向一致，技术趋势才进入每股价值。</p>
+<p>这也是公众号文章最有用的地方。高斯的钟摆把800G、1.6T、2.4T、NPO和CPO放在产品接棒路线中；盘盘的投研笔记把DSP、EML、CW激光器、硅光晶圆和封装环节串成BOM。【7】【8】本文只采用这种拆解方法，文中的卖方出货量、目标价和毛利率预测不作为公司事实。</p>
+<h3>谁可能受益，谁可能受损：不是按CPO标签，而是按证据分层</h3>
+<p>第一类是已有采购承诺、产能权和制造能力的先进光学供应商。Lumentum和Coherent获得NVIDIA多年非独家协议、采购承诺及资本投入，属于直接受益候选；但估值能否继续提升，要看新产能、产品组合、毛利率和自由现金流，而不能只重复20亿美元投资标题。【4】【5】</p>
+<p>第二类是量产前置的测试与封装设备商。FormFactor已有CPO推动Systems收入的明确披露，ASMPT同时看到可插拔收入和CPO合作增强，证据层级高于只有合作备忘录的概念公司。【2】【3】但设备收入可能领先终端量产数季，如果后续没有重复订单、耗材、服务和客户扩机，领先收入也会出现空档。</p>
+<p>第三类是可插拔模块和制造服务商。NVIDIA官方点名Coherent、Eoptolink、Fabrinet和Innolight支持可插拔光收发技术继续增长。【1】这证明产业位置仍在，但不是个股评级。真正需要验证的是800G/1.6T订单、客户集中、ASP、激光器自制率、资本开支和现金流，尤其要区分出货增长与价格竞争。</p>
+<p>潜在受损者主要有两种：一种是估值完全依赖CPO在短期内通吃所有端口，却没有量产、订单或良率证据的公司；另一种是只做可插拔组装、缺少光源或封装差异化，在出货增长时仍被价格竞争压低毛利率的公司。技术路线正确，不代表每一层都能保住利润。</p>
+<h3>市场预期差：最大的误判不是方向，而是时间和利润归属</h3>
+<p>CPO的方向已经不是秘密。NVIDIA给出产品、合作伙伴和供货时间，FormFactor和ASMPT开始报告相关收入或合作，光学龙头也拿到多年采购承诺。【1】【2】【3】【4】【5】如果只写‘CPO是未来’，很难形成新的投资判断。</p>
+<p>真正可能被低估的是共存期的长度和利润归属。市场可能低估可插拔在标准化、维护和更广链路中的寿命，也可能低估CPO复杂度给测试、封装和激光器带来的单位价值量。换句话说，模块路线的份额变化和上游瓶颈的利润变化不一定同步。</p>
+<p>当前还不能严格判断哪些股票已经完全计入共存，因为本文没有使用同一时点的价格、估值和一致预期数据。Serenity最新推文把Lumentum的InP激光器缺口和FormFactor的CPO收入视为供应链强信号，但这仍是投资者解读，不是估值结论。【9】【10】因此正文不提供目标价，也不把行业高景气直接写成买入建议。</p>
+<p>更可执行的研究方法是观察预期修正顺序：先看管理层是否上调光学和CPO收入；再看订单、产能和客户认证；随后看毛利率、现金流和资本开支；最后才讨论估值倍数。若收入增长却现金流恶化，市场可能已经把远期价值提前支付。</p>
+<h3>三种情景：不是预测终局，而是规定什么数据会让观点改变</h3>
+<p>基准情景（示意概率55%）：CPO在最高密度的scale-up和部分scale-out节点加速，可插拔800G/1.6T继续在更广网络放量。模块、激光器和测试封装收入同时增长，但价格竞争和资本开支使股票回报分化。跨架构上游供应商和已有重复订单的设备商更容易获得稳定利润。</p>
+<p>CPO加速情景（示意概率25%）：NVIDIA等平台的能效、可靠性和维护体系成熟得更快，CPO从最高端节点向更多交换层级扩张。硅光、CW激光、精密封装和测试价值量上升，传统可插拔端口增长显著放缓，缺少差异化的模块厂面临ASP和毛利率双重压力。</p>
+<p>可插拔延寿情景（示意概率20%）：CPO良率、现场维修、标准和供应链爬坡慢于计划，云厂继续依靠800G、1.6T及后续可插拔产品补充容量。模块厂和EML链获得更长兑现窗口，CPO设备收入可能出现验证后空档，远期估值较高的CPO纯概念承压。</p>
+<p>这些概率不是统计预测，而是把变量关系透明化。未来一至四个季度最关键的数据是NVIDIA CPO客户部署、模块与光学厂订单、FormFactor Systems收入、ASMPT Photonics订单、激光器产能利用率、模块ASP、良率和自由现金流。</p>
+<h3>最终判断：不要问谁消灭谁，先盯八个可以证伪的指标</h3>
+<p>这篇文章的答案很明确：CPO开始量产，并不意味着可插拔光模块即将归零。NVIDIA官方已经把两条路线放在同一增长框架中；ASMPT同时看到可插拔收入接近三倍增长和CPO合作加深；FormFactor则证明CPO测试需求开始进入报表。【1】【2】【3】</p>
+<p>真正的产业变化是端口重新分层。CPO解决最高密度网络的能效和带宽问题，可插拔继续提供标准化、可维护性和部署灵活性。总端口快速扩张时，两条路线可以同时增长；份额变化决定模块收入，复杂度变化决定激光器、硅光、封装和测试的单位价值量。</p>
+<p>接下来只需盯八个指标：CPO实际客户部署与端口数；800G/1.6T可插拔订单；两类产品ASP；模块和CPO良率；现场故障与维修成本；激光器产能和价格；测试封装重复订单；毛利率、经营现金流与自由现金流。若CPO端口扩张同时可插拔订单连续下降、毛利率恶化，替代速度快于本文判断；若两边订单和现金流都增长，共存主线得到验证。</p>
+<p>对上市公司，当前最合适的动作是分层研究和等待证明。Lumentum、Coherent、FormFactor与ASMPT有较强的一手暴露证据；模块厂、材料、代工和小型CPO公司还需逐家核验客户、订单、产能和估值。本文为公开资料研究框架，不构成投资建议。</p>
+<h2>主要来源</h2>
+<ol>
+<li>NVIDIA：Spectrum-X与Quantum-X Photonics CPO交换机——https://nvidianews.nvidia.com/news/nvidia-spectrum-x-co-packaged-optics-networking-switches-ai-factories ——官方产品、性能与共存表述。</li>
+<li>ASMPT 2026年中期官方业绩——https://www.asmpt.com/en/investor-relations/news-events/asmpt-announces-2026-interim-results/ ——官方业务和财务数据。</li>
+<li>FormFactor 2026年二季度业绩（SEC）——https://www.sec.gov/Archives/edgar/data/1039399/000103939926000030/ex9901-earningsreleasexq226.htm ——SEC一手财务与CPO收入说明。</li>
+<li>NVIDIA与Lumentum多年先进光学合作——https://nvidianews.nvidia.com/news/nvidia-announces-strategic-partnership-with-lumentum-to-develop-state-of-the-art-optics-technology ——官方非独家协议、采购承诺与投资。</li>
+<li>NVIDIA与Coherent多年先进光学合作——https://nvidianews.nvidia.com/news/nvidia-and-coherent-announce-strategic-partnership-to-develop-optics-technology-to-scale-next-generation-data-center-architecture ——官方非独家协议、采购承诺与投资。</li>
+<li>AAOI OMD3/FAB4洁净室建设协议（SEC 8-K）——https://www.sec.gov/Archives/edgar/data/1158114/000168316826005221/aaoi_8k.htm ——只证明建设协议，不推断产品或客户分配。</li>
+<li>高斯的钟摆：野村上调中际旭创——https://mp.weixin.qq.com/s/nTc8vKFd4ew-zFQCpHpflw ——只采用产品路线拆解方法。</li>
+<li>盘盘的投研笔记：光通信核心公司报告汇总——https://mp.weixin.qq.com/s/D20piE0tSOyGT75k3l7nqg ——只采用BOM拆解方法。</li>
+<li>Serenity：Lumentum InP激光器供给缺口——https://x.com/aleabitoreddit/status/2083438823548293140 ——投资者解读线索。</li>
+<li>Serenity：FormFactor CPO收入与测试领先指标——https://x.com/aleabitoreddit/status/2082720873908494456 ——投资者解读线索。</li>
+</ol>
+<h2>Bottom-Line Judgment</h2>
+<p>这篇稿件的核心结论是“CPO与可插拔更可能按网络层级重新分配端口，而不是一夜替代”。当前最强证据来自NVIDIA、ASMPT和FormFactor，最弱环节是云厂采购拆分、现场维修成本、故障率、同口径估值与一致预期。建议保持候选状态，等待用户对具体正文反馈；若继续深化，最高价值增量是补充真实部署端口、订单、ASP、良率和现金流数据。</p>
+<h2>批准边界</h2>
+<p>本稿当前仅为完整候选稿。只有用户明确批准这份具体正文后，才可写入V9批准文件并执行不可变归档；在此之前不得构建、同步或发布首页，也不得生成、上传或发布小红书与视频。用户此前已要求“小红书”，该工作已记录为批准后的本地生成步骤，完整可粘贴文案必须控制在1000字以内，且永不自动上传或发布。</p></div></details>
+    </main>
+  <footer class="shell">历史文章来自本地不可变批准归档；页面用于研究回溯，不构成投资建议。</footer>
+</body>
+</html>
