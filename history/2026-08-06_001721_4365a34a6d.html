@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="8月6日，DeepSeek 预告将对全部 API 服务整体上调价格、且涨幅较大；同一周，第三方测算显示每吉瓦推理容量的年化收入已升至约 300 亿美元。一边是涨价，一边是需求二次加速，token 的定价权到底在谁手里？本文用官方公告、官方技术报告、公开价目表与公众号测算四条线索，拆解这个可以证伪的问题：涨价是价格战的终点，还是长期成本下行中的一次插曲。">
+  <title>推理定价权：DeepSeek 涨价与 300 亿美元/吉瓦的 ARR 意味着什么 - Serenity 往日报告</title>
+  <style>
+    :root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(1060px,calc(100vw - 28px));margin:0 auto}.top{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(246,248,251,.94);backdrop-filter:blur(10px)}
+    .top-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{color:var(--ink);font-weight:900;text-decoration:none}.back{display:inline-flex;align-items:center;min-height:36px;border:1px solid #bfdbfe;border-radius:999px;background:#fff;padding:0 13px;text-decoration:none;font-size:13px;font-weight:800}
+    main{padding:34px 0 72px}.hero,.panel,.history-card,.reader-version{border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hero{padding:30px}.eyebrow,.part{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:900px;margin:10px 0 0;color:var(--ink);font-size:clamp(30px,5vw,52px);line-height:1.13;letter-spacing:-.035em}.hero>p{max-width:850px;margin:14px 0 0;color:#475569;font-size:15px;line-height:1.85}
+    .meta,.topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#f8fafc;padding:5px 9px;color:#475569;font-size:11px;font-weight:750}.chip.blue{border-color:#bfdbfe;background:var(--blue-soft);color:#1d4ed8}
+    .search{width:100%;margin-top:18px;border:1px solid #cbd5e1;border-radius:13px;background:#fff;padding:13px 15px;color:var(--ink);font:inherit;outline:none}.search:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}
+    .history-list{display:grid;gap:14px;margin-top:18px}.history-card{padding:20px}.history-card h2{margin:8px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.history-card p{margin:9px 0 0;line-height:1.75}.history-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.history-actions a{font-weight:850;text-decoration:none}
+    .empty{display:none;margin-top:18px;border:1px dashed #cbd5e1;border-radius:14px;background:#fff;padding:24px;text-align:center;color:var(--muted)}
+    .article-header{padding:28px}.article-header h1{font-size:clamp(28px,4vw,45px)}.versions{display:grid;gap:16px;margin-top:18px}.reader-version{overflow:hidden}.reader-version>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;cursor:pointer;list-style:none}.reader-version>summary::-webkit-details-marker{display:none}.reader-version>summary span{min-width:0}.reader-version>summary strong{display:block;color:var(--ink);font-size:17px}.reader-version>summary small{display:block;margin-top:5px;color:var(--muted);line-height:1.55}.reader-version>summary b{color:var(--blue);font-size:12px;white-space:nowrap}
+    .version-head{border-top:1px solid var(--line);background:var(--blue-soft);padding:23px}.version-head h2{margin:0;color:var(--ink);font-size:27px;line-height:1.35}.version-head p{margin:10px 0 0;line-height:1.75}.article-section{border-top:1px solid var(--line);padding:25px 23px}.article-section h3{margin:7px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.article-section p,.article-section li{font-size:15px;line-height:1.9}.article-section ul{padding-left:22px}code{border-radius:5px;background:#eef2f7;padding:2px 5px}
+    .sources{display:grid;gap:10px}.sources h3{margin-bottom:2px}.source-card{border:1px solid var(--line);border-radius:12px;background:#f8fafc;padding:13px}.source-card a,.source-card strong{font-weight:850}.source-card p{margin:7px 0 0;font-size:13px;line-height:1.7}.source-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.55}
+    .deep-report{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}.deep-report>summary{padding:19px 21px;cursor:pointer;color:var(--ink);font-weight:900}.markdown-body{border-top:1px solid var(--line);padding:24px;overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{color:var(--ink);line-height:1.4}.markdown-body h1{font-size:28px}.markdown-body h2{margin-top:34px;font-size:23px}.markdown-body h3{margin-top:27px;font-size:19px}.markdown-body p,.markdown-body li{line-height:1.85}.markdown-body table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.markdown-body blockquote{margin:16px 0;border-left:4px solid #93c5fd;background:#eff6ff;padding:10px 15px;color:#475569}.markdown-body pre{overflow:auto;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px}
+    footer{padding:24px 0 45px;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:680px){.top-inner{min-height:58px}main{padding-top:18px}.hero,.article-header{padding:21px}.history-card{padding:17px}.reader-version>summary{align-items:flex-start;padding:17px}.version-head,.article-section,.markdown-body{padding:18px}.article-section p,.article-section li{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell top-inner"><a class="brand" href="index.html">Serenity 往日报告</a><a class="back" href="../index.html#daily-article">返回当前首页</a></div></header>
+  <main class="shell">
+    <article class="article-header panel">
+      <span class="eyebrow">Approved Homepage Archive</span>
+      <h1>推理定价权：DeepSeek 涨价与 300 亿美元/吉瓦的 ARR 意味着什么</h1>
+      <p>8月6日，DeepSeek 预告将对全部 API 服务整体上调价格、且涨幅较大；同一周，第三方测算显示每吉瓦推理容量的年化收入已升至约 300 亿美元。一边是涨价，一边是需求二次加速，token 的定价权到底在谁手里？本文用官方公告、官方技术报告、公开价目表与公众号测算四条线索，拆解这个可以证伪的问题：涨价是价格战的终点，还是长期成本下行中的一次插曲。</p>
+      <div class="meta"><span class="chip blue">截至 2026-08-06</span><span class="chip">批准于 2026-08-07T00:17:21+08:00</span><span class="chip">归档 ID：2026-08-06_001721_4365a34a6d</span></div>
+      <div class="topics"><span class="chip">推理 token 定价权归属</span><span class="chip">DeepSeek 成本与毛利率曲线</span><span class="chip">推理需求弹性与杰文斯效应</span><span class="chip">MoE 与开源工程效率</span><span class="chip">产业链利润传导与预期差</span></div>
+      <div class="history-actions"><a href="index.html">← 返回历史文章列表</a></div>
+    </article>
+    <section class="versions"><details class="reader-version" open><summary><span><strong>研究版</strong><small>完整保留获批时的研究结论、证据边界与跟踪指标。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>推理定价权：DeepSeek 涨价与 300 亿美元/吉瓦的 ARR 意味着什么</h2><p>8月6日，DeepSeek 预告将对全部 API 服务整体上调价格、且涨幅较大；同一周，第三方测算显示每吉瓦推理容量的年化收入已升至约 300 亿美元。一边是涨价，一边是需求二次加速，token 的定价权到底在谁手里？本文用官方公告、官方技术报告、公开价目表与公众号测算四条线索，拆解这个可以证伪的问题：涨价是价格战的终点，还是长期成本下行中的一次插曲。</p></div><section class="article-section"><span class="part">Part 01</span><h3>先说结论：涨价是真的，但更可能是长期成本下行中的一次短暂再定价</h3><p>8月6日，DeepSeek 在官方渠道预告，计划近期对 API 服务整体上调价格，预计涨幅较大，具体方案以正式通知为准。【1】同一天前后，市场开始用“token 定价权”重新讲述这个故事：有的测算 V4-Pro 名义毛利率可达 90% 至 97%、扣除免费流量后真实毛利率约 72% 至 81%【4】；有的转述第三方估算称，每吉瓦推理容量对应的年化收入今年已上升约 50%、达到约 300 亿美元【5】。两条线索合在一起，最自然的解读是“价格战结束、涨价周期开启”。</p><p>本文的判断是：DeepSeek 涨价是真实信号，但它更像“算力稀缺乘以需求二次加速”下的短期再定价，而不是单位 token 成本长期下行趋势的逆转。模型架构、芯片代际和推理工程仍在快速降本——MoE 训练吞吐刚刚被开源工程证明还能再提高 40% 以上【6】【7】。真正决定产业链价值分配的，不是某一次涨价，而是用量弹性能否持续跑赢价格波动，以及谁能把效率提升变成利润，而不是只让利给用户。</p><p>因此，本文要回答一个可证伪的问题：DeepSeek 涨价与 300 亿美元/吉瓦的 ARR，究竟是“价格战结束的拐点”，还是“长期成本下行曲线上的一次短暂再定价”？如果涨价落地后付费调用量显著下滑，说明定价权只是暂时的；如果涨价同时用量仍增长、头部实验室 ARR 持续上修，说明稀缺算力确实拥有了定价权。两种结果对应完全不同的投资含义。</p><ul><li>官方事实：涨价预告属实，但幅度与生效时间未定。【1】</li><li>关键推断：短期定价权来自稀缺，不改变长期单位成本下行。</li><li>证伪锚点：涨价后的调用量弹性与 ARR/吉瓦 环比方向。</li></ul></section><section class="article-section"><span class="part">Part 02</span><h3>官方事实：涨价预告、现行价目表与尚未生效的峰谷定价</h3><p>按公开转述的官方口径，DeepSeek 于 8 月 6 日预告将对全部 API 服务整体上调价格，并强调“预计涨幅较大”，具体方案以正式通知为准。本次运行中，官方价格页无法直接访问（访问被限制），涨价预告与价目表经中新网、财联社等媒体转述核对，因此全部标注为“官方公告/媒体转述”层级，最终以官方正式通知为准。【1】</p><p>现行价目表（媒体转述口径，截至 2026-08-06）：V4-Flash 为每百万 tokens 0.02 元（缓存命中）、1 元（缓存未命中输入）、2 元（输出）；V4-Pro 为每百万 tokens 0.025 元、3 元、6 元。另有媒体转述的峰谷定价方案：北京时间 9:00 至 12:00、14:00 至 18:00 为高峰时段，价格约为基础价的 2 倍；该方案尚未生效。【1】</p><p>从量看，第三方统计口径显示，V4-Flash 在 8 月 1 日单日处理约 8 万亿 tokens，其中约 5 万亿为免费流量、3 万亿为付费流量【第三方口径，原始链接待核】；8 月 4 日又因访问量空前出现容量压力，官方确认了当日服务压力【媒体转述】。若按此拆算，免费流量占比仍然很高，这也解释了为何市场普遍推断涨价的重要动机之一是“过滤低价与免费调用、把稀缺算力留给付费能力更强的用户”——该动机属于市场推断，不是官方表述。</p><p>融资与估值背景同样重要：8 月 5 日，21财经与《财经》等媒体报道 DeepSeek 新一轮融资前估值约 5000 亿元人民币、拟融资约 500 亿元【媒体转述，原始链接未归档】。对一家仍需要持续购买算力、扩大集群的私营公司，涨价与融资可以看作同一件事的两面：让 API 业务更接近自我造血，同时为下一轮资本开支定价。</p><ul><li>已确认：涨价预告（官方公告，媒体转述）；具体幅度与生效时间未定。【1】</li><li>现行价：V4-Flash 0.02/1/2 元、V4-Pro 0.025/3/6 元每百万 tokens（转述口径）。【1】</li><li>背景：单日约 8 万亿 tokens（第三方统计）、8/4 容量承压、约 5000 亿元融资前估值（媒体转述）。</li></ul></section><section class="article-section"><span class="part">Part 03</span><h3>账本拆解：官方 545% 口径与 V4-Pro 的名义/真实毛利率</h3><p>讨论定价权之前，先看成本账。DeepSeek 官方系统论文（2025 年 3 月，V3/R1 线上推理系统）披露：日均使用约 226.75 个 H800 节点，单日处理约 6080 亿输入 tokens 与 1680 亿输出 tokens；按每张卡每小时 2 美元的租赁价格测算，单日 GPU 成本约 8.7 万美元；若全部按当时 R1 的 API 价格计费，理论日收入约 56.2 万美元，对应理论收入成本利润率约 545%。【3】</p><p>官方论文同时强调，545% 是理论口径：网页端与 App 免费、夜间折扣、低价版本与未完全计费流量，都会大幅压低真实收入。【3】因此 545% 不能直接当真实利润率，但它证明了一个方向性事实：DeepSeek 的推理成本远低于名义牌价，账面并不存在“每卖一个 token 就亏钱”的困境。</p><p>到 V4，公开测算进一步放大这个结论。公众号《傅里叶的猫》按 V4-Pro 名义牌价、模型推理计算量下降与缓存机制改善推算，名义毛利率可达 90% 至 97%；把免费流量、折扣等因素扣除后，作者估计真实毛利率约在 72% 至 81% 区间。【4】这是作者推断而非官方披露，但即使取下限 72%，也意味着涨价并非因为“无法覆盖成本”，而是主动选择让价格与未来资本开支、稀缺算力对齐。</p><p>账本结论：涨价更多是“利润再分配”与“需求筛选”，而不是“成本倒逼”。这决定了后续观察重点应从“DeepSeek 亏不亏钱”转向“涨价之后，付费调用量还能不能继续增长”。</p><ul><li>官方口径：R1 时代理论收入成本利润率约 545%，但含大量免费流量，非真实利润率。【3】</li><li>作者测算：V4-Pro 名义 90% 至 97%、真实约 72% 至 81%（公众号推断，未官方确认）。【4】</li><li>解读：涨价更像主动定价与需求筛选，而非成本倒逼。</li></ul></section><section class="article-section"><span class="part">Part 04</span><h3>token 定价权落到数字上：8T tokens/日与 300 亿美元/吉瓦的 ARR</h3><p>定价权的前提，是稀缺与需求同时存在。需求侧，第三方统计显示 V4-Flash 单日已处理约 8 万亿 tokens，8 月 4 日甚至因访问量空前出现容量压力；供给侧，研报平权转述的海外分析师测算称，每吉瓦推理容量对应的年化收入（ARR）今年已上升约 50%，达到约 300 亿美元/吉瓦，其中企业 API 口径可能更高，约 500 亿美元/吉瓦。【5】</p><p>300 亿美元/吉瓦是一个估算，不是官方数据，而且口径差异很大：消费者订阅、企业 API、内部训练占用会给出完全不同的数字。它的价值在于把“推理需求”翻译成“每单位算力能产生多少收入”，这是把 token 定价权落到产业链上的关键换算。按同一测算，2027 年推理算力可能从约 8 吉瓦增至约 31.5 吉瓦：若 ARR/吉瓦维持约 340 亿美元，实验室年化收入可达约 1.1 万亿美元；若效率提升继续推高 ARR/吉瓦，总盘子更高；若供给追上需求，ARR/吉瓦则可能回落至约 276 亿美元，对应约 8700 亿美元年化收入。【5】</p><p>三种情景的共同点是“推理收入体量巨大”，分歧在于价格与用量如何分配。DeepSeek 涨价正是在这个节点发生的：当推理需求经历第二次加速（Claude Code 之后，Fable/Codex 带来新一轮增长），撞上交付周期长达 12 至 18 个月的算力供给，掌握稀缺算力的实验室与云厂商自然获得短期定价权。【5】</p><p>对投资者而言，300 亿美元/吉瓦不是“利好标签”，而是一个需要逐季验证的换算系数：它上升，说明需求跑赢算力投放；它回落，说明供给开始追上、价格战可能重新开始。后者同样可能发生在 2027 年大规模算力集中上线之后。</p><ul><li>需求侧：V4-Flash 单日约 8 万亿 tokens（第三方统计）；8/4 容量承压（官方确认，媒体转述）。</li><li>估值锚：ARR/吉瓦 约 300 亿美元，年内上升约 50%（第三方估算）。【5】</li><li>情景：2027 算力 8 至 31.5 吉瓦时，ARR/吉瓦决定总盘子是 1.1 万亿、2.8 万亿还是 8700 亿美元级。【5】</li></ul></section><section class="article-section"><span class="part">Part 05</span><h3>杰文斯悖论与用量弹性：降价 10% 换 12% 至 18% 用量，涨价呢？</h3><p>支持“涨价只是插曲”的最强证据，是需求弹性。美股AI投研速递引述 Exponential View 的研究：token 价格每下降 10%，用量上升 12% 至 18%，总 token 收入反而上升。【8】如果这个弹性系数成立，降价的净效果是薄利多销甚至薄利多赚，那么任何一次涨价都在给竞争对手让出份额，长期反而不可持续。</p><p>杰文斯悖论的关键前提，是“降价释放了原本负担不起的应用场景”。在 Agent 与编程场景里，成本从一次问答变成一条任务链：一个目标可能对应几十次模型调用与工具执行。单位 token 越便宜，开发者越愿意让 Agent 全天候运行、自我纠错、反复重试，总调用量呈非线性放大——这正是研报平权文章中“两次推理需求加速（Claude Code 与 Fable/Codex）”的直接含义。【5】</p><p>但弹性系数本身需要被验证，不能当作常数。12% 至 18% 的用量弹性来自第三方研究引用，而且“用量增长”不等于“收入增长”：降价 10% 只带来 12% 增量时，收入确实微增；如果涨价 50%（DeepSeek 峰谷 2 倍方案的上限），即使用量只回落 15%，收入仍大幅上升。这解释了为什么涨价与“用量仍在增长”可以同时成立——短期收入弹性主要由供给与定价权决定，长期才由杰文斯式的需求创造决定。</p><p>因此，杰文斯悖论不是“永远看多算力”的免检证书，而是一个需要逐季跟踪的弹性区间：调用量、任务时长、付费转化率与单 token 价格的乘积，才是真正的收入。</p><ul><li>引用弹性：价格每下降 10%，用量上升 12% 至 18%（Exponential View，第三方研究引用）。【8】</li><li>结构因素：Agent 任务链把一次问答放大为几十次模型调用与工具执行。【5】</li><li>关键区分：用量增长不等于收入增长，要看价格乘以用量的净乘积。</li></ul></section><section class="article-section"><span class="part">Part 06</span><h3>开源与工程效率：MoK 把 MoE 训练吞吐提升 41%，成本曲线还在往下走</h3><p>成本曲线另一侧是工程效率。8 月 4 日，Cursor 开源 Mixture-of-Kittens（MoK）：一个面向 GB200/GB300 NVL72 机架的 MoE 训练 megakernel，官方称在其生产训练栈中把端到端 tokens/s 提升 1.41 倍；单层基准中，MXFP8 前向最快比公开基线快 2.37 倍。【6】【7】第三方转述的测试口径为：跨 512 块 GPU、多个 NVL72 机架的测试中，每 GPU tokens/s 从约 760.9 提升到 1070.2。【6】</p><p>MoK 的意义不在“训练快了 41%”本身，而在于它把 MoE 训练瓶颈从计算转向通信：当专家并行规模扩大，token 在不同 GPU 之间搬运的开销成为主约束。DeepSeek-V3 正是 671B 总参数、37B 激活参数的 MoE 架构，arXiv 技术报告披露其训练耗用约 278.8 万 H800 GPU 小时。【2】MoK 证明这类架构仍能通过软件工程继续挖出 40% 级吞吐，而且这条路与 NVL72 硬件形态深度绑定——效率提升与特定硬件深度绑定，既是机会也是门槛。</p><p>对成本曲线的含义：单位 token 成本的下行不仅来自芯片代际（H800 到 Blackwell 再到 Rubin），还来自把通信、调度、同步压进单个 kernel 的软件层。这类开源工程会加速“同代硬件处理更多 token”，也就是在名义涨价背后进一步压低真实单位成本。短期定价权来自稀缺，长期成本下行来自这些工程进步，两者并不矛盾。</p><p>需要保留的证据边界：MoK 的吞吐数字是 Cursor 自测口径，外部团队能否在不同负载下复现 2.37 倍与 1.41 倍仍需验证；且 MoK 面向 NVL72 专有硬件，不等于通用 MoE 效率的整体提升。【6】【7】</p><ul><li>事实：MoK 端到端 tokens/s 提升 1.41 倍，单层 MXFP8 前向最高 2.37 倍（Cursor 自测）。【6】【7】</li><li>机制：MoE 训练瓶颈从计算转向通信，效率与 NVL72 深度绑定。【6】</li><li>边界：自测口径，外部复现待验证。</li></ul></section><section class="article-section"><span class="part">Part 07</span><h3>通胀与通缩并存：短期定价权在卖方，长期定价权回到成本曲线</h3><p>把前面各节放回同一条时间轴：短期（1 至 2 个季度）是“算力通胀”——稀缺供给、翻倍的高峰定价方案、约 5000 亿元的融资前估值；长期（2 至 3 年）是“单位成本通缩”——芯片代际、缓存命中率提升、MoE 通信优化与开源工程扩散，全部指向“完成同一任务所需算力与成本下降”。【1】【4】【5】【7】</p><p>两者的分界点不是某个价格事件，而是算力供给曲线。只要交付周期长达 12 至 18 个月、新增吉瓦跟不上需求，定价权就在卖方；当 2027 年新算力集中上线、ARR/吉瓦开始回落时，价格战可能以“降价加用量扩张”的形式重新开始。【5】DeepSeek 的涨价更接近前者：用价格筛选需求、为资本开支定价，而不是宣告成本曲线逆转。</p><p>对“AI 资本开支是否过热”的争论，这条时间轴给出了更精确的问题：不是“Capex 太多”，而是“Capex 在 2026 至 2027 年上线时，ARR/吉瓦能否守住 200 亿美元以上”。守得住，硬件投入可持续；守不住，第一轮价格战会先在推理 API 与裸算力租售中出现，再传导到 GPU 与内存订单。</p><p>这也是 Serenity 近期把 NVIDIA/OpenAI 融资结构概括为“信用与循环融资成为新约束”的同一逻辑：AI 基建的可持续性，最终由“算力到 token、token 到收入、收入到现金流”的转化效率决定，而不是由某一轮融资或某一次涨价决定。</p><ul><li>短期：稀缺驱动通胀，定价权在卖方。</li><li>长期：效率驱动通缩，定价权回到谁成本低、谁生态强。</li><li>分界：2027 供给集中上线时，ARR/吉瓦 是核心观测点。</li></ul></section><section class="article-section"><span class="part">Part 08</span><h3>收益传导：谁拿到涨价红利，谁在承担涨价成本</h3><p>如果“涨价加用量增长”同时成立，收益首先流向掌握稀缺算力与定价权的环节：头部模型实验室（API 提价直接增厚收入）、GPU 与 ASIC 供应商（需求仍在增长），以及能把单位算力卖出更高 ARR 的云厂商。Serenity 公开推文曾转述市场信息，称 DeepSeek 与智谱正在开发定制 ASIC 以绕开对单一供应商的依赖【9】；这条线属于投资者解读，需要公司披露验证，但它指向定制芯片、先进封装与配套网络的结构性机会。</p><p>其次是内存带宽与互联：DeepSeek 模型以长上下文、大专家并行著称，推理对 HBM/DRAM 容量与 NVLink/光互联带宽敏感。Serenity 此前把“DeepSeek Engram v4”与 CXL 内存池联系在一起，指向 CXL 控制器与互联环节（如 Astera、博通、Marvell 所在的美国供应链）【10】；这是投资者推演的受益路径，不是公司事实，必须用订单与财报验证。</p><p>受益的还有工程效率环节：MoK 这类开源工程把效率红利绑定在 NVL72 机架与配套网络（NVLink、光模块、液冷）上；凡是能帮助实验室“同瓦数卖出更多 token”的软硬件，都会在 ARR/吉瓦 上升期获得结构性需求。【6】【7】</p><p>受压环节：纯裸算力租售（Neocloud）与依赖低价 API 的下游应用。若头部实验室持续提价并自行消化高价值调用，裸算力中间商的价差会被压缩；依赖 DeepSeek 低价 API 的套壳应用，则要承受成本上升或被迫涨价。存储与 PCB 等环节更多跟随总算力投放，属于“总量受益、价格分化”。</p><ul><li>受益：稀缺算力持有者、GPU/ASIC、内存带宽与互联、NVL72 配套。</li><li>受压：裸算力 Neocloud、低价 API 套壳应用。</li><li>边界：公司级映射需用订单与财报验证，本文不提供买入清单。</li></ul></section><section class="article-section"><span class="part">Part 09</span><h3>市场预期差与证伪条件</h3><p>市场当前最容易犯的两个错误：一是把“DeepSeek 涨价”直接外推成“AI 硬件价格战结束、涨价周期开启”，忽略单位成本长期下行与 2027 年供给集中；二是把“300 亿美元/吉瓦 ARR”当作实验室盈利能力的现成证明，忽略它只是第三方估算，且不同口径差异巨大。【4】【5】</p><p>真正的预期差在于：定价权从“模型能力”单点转移到“算力稀缺加成本曲线控制”的组合。DeepSeek 涨价的意义不是“它赚了更多钱”，而是它第一次用价格信号表明，头部实验室认为自己有资格筛选用户、为资本开支定价。这种定价权一旦被验证（涨价后付费调用量仍增长），会重塑云厂商、Neocloud 与上游硬件之间的利润分配。</p><p>证伪条件（满足任一即应下调判断）：其一，涨价正式生效后，付费调用量或 API 收入环比显著下滑；其二，ARR/吉瓦 环比回落，或 2027 年算力集中上线后价格战重启；其三，头部实验室真实毛利率被证明远低于估算，例如免费流量占比远超预期；其四，涨价引发用户大规模迁移到国产替代模型，DeepSeek 份额不升反降。反向强化条件：涨价后用量仍增长、实验室 ARR 持续上修、云厂商推理收入增速同步抬升。</p><ul><li>错误一：把短期涨价当长期拐点。</li><li>错误二：把第三方 ARR/吉瓦 估算当公司事实。</li><li>核心观测：涨价后的调用量弹性、ARR/吉瓦 环比、免费流量占比。</li></ul></section><section class="article-section"><span class="part">Part 10</span><h3>风险与来源边界</h3><p>本文的事实基础分为四层。官方事实层：DeepSeek 涨价预告（官方公告，媒体转述）、V3/R1 官方系统论文与 V3 技术报告；媒体转述层：现行价目表、峰谷 2 倍方案、8/4 容量压力、约 5000 亿元融资前估值；第三方测算层：300 亿美元/吉瓦 ARR、8 万亿 tokens/日、Exponential View 弹性系数、V4-Pro 72% 至 81% 真实毛利率、MoK 吞吐；投资者解读层：Serenity 关于 ASIC 与 CXL 的推文。【1】至【11】公众号文章只用于发现问题与研究方法，不复制原句，不把作者推断写成公司事实。</p><p>关键风险：官方尚未公布涨价幅度与生效时间，峰谷 2 倍定价可能被修改；价目表、8 万亿 tokens/日与融资估值均为转述或估算，未逐一取得原始一手文件；ARR/吉瓦、MoK 吞吐与弹性系数来自第三方或公司自测，存在口径与复现风险；官方价格页本次直接访问受限，未经原始页面逐条核对。【1】【5】【7】</p><p>本文不是投资建议，不构成买入或卖出清单。文中所有“受益与受压环节”均指产业链逻辑，不代表任何目标价或仓位建议。决策前请回到公司公告、SEC/交易所文件、公司 IR、电话会与官方价目表，并用涨价后的真实调用量、收入与毛利率数据验证本判断。</p><p>一句话收尾：DeepSeek 涨价不是故事的结局，而是把问题从“模型谁更强”切换成“算力谁更稀缺、成本谁更低、用量弹性谁更能兑现”。这三个变量，才是未来 12 至 18 个月 AI 产业链定价权的真正来源。</p><ul><li>来源分层：官方事实、媒体转述、第三方测算、投资者解读。</li><li>主要风险：方案未定、口径未验、自测数据未复现。</li><li>明确边界：非投资建议；验证请回到一手文件与后续财报。</li></ul></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://platform.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek 官方公告：计划近期整体上调 API 定价（媒体转述：中新网/财联社等）</a></article><article class="source-card"><a href="https://arxiv.org/abs/2412.19437" target="_blank" rel="noopener noreferrer">DeepSeek-V3 Technical Report（arXiv 2412.19437）</a></article><article class="source-card"><a href="https://github.com/deepseek-ai/DeepSeek-R1" target="_blank" rel="noopener noreferrer">DeepSeek-R1 官方发布与线上推理系统设计（GitHub）</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/ihwZGH4TAv9iNoYqss_McQ" target="_blank" rel="noopener noreferrer">傅里叶的猫公众号：DeepSeek 为什么要涨价</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/Ae1qahvnSvuDUxS5shIBtg" target="_blank" rel="noopener noreferrer">研报平权公众号：推理需求二次加速：算力增长 10 倍之后会发生什么</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/p1TDuJOZbiO5nqP6NkmFIw" target="_blank" rel="noopener noreferrer">Zen Trading 公众号：Cursor 开源 MoK</a></article><article class="source-card"><a href="https://github.com/cursor/mixture-of-kittens" target="_blank" rel="noopener noreferrer">Cursor 官方：Mixture-of-Kittens 开源仓库</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/tbX2GD0oDC2gGF13OS1VRA" target="_blank" rel="noopener noreferrer">美股AI投研速递公众号：AI 投资的第二幕</a></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2076467953995071881" target="_blank" rel="noopener noreferrer">Serenity 推文：DeepSeek 与智谱开发定制 ASIC</a></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2023600495353622546" target="_blank" rel="noopener noreferrer">Serenity 推文：DeepSeek Engram v4 与 CXL 内存池</a></article><article class="source-card"><a href="https://github.com/Benboerba620/ai-signal" target="_blank" rel="noopener noreferrer">AI Signal（Benboerba620/ai-signal）</a></article></section></details></section>
+    <details class="deep-report"><summary>展开归档深度报告</summary><div class="markdown-body"><h1>推理定价权：DeepSeek 涨价与 300 亿美元/吉瓦的 ARR 意味着什么</h1>
+<p>8月6日，DeepSeek 预告将对全部 API 服务整体上调价格、且涨幅较大；同一周，第三方测算显示每吉瓦推理容量的年化收入已升至约 300 亿美元。一边是涨价，一边是需求二次加速，token 的定价权到底在谁手里？本文用官方公告、官方技术报告、公开价目表与公众号测算四条线索，拆解这个可以证伪的问题：涨价是价格战的终点，还是长期成本下行中的一次插曲。</p>
+<h2>????</h2>
+<ul>
+<li>?? ID?<code>2026-08-06_inference_token_pricing</code></li>
+<li>?????2026-08-06</li>
+<li>?????????????????????</li>
+<li>?????<code>false</code></li>
+<li>??????????? <code>data/daily_article_v9_approved.json</code>?????????</li>
+</ul>
+<h2>先说结论：涨价是真的，但更可能是长期成本下行中的一次短暂再定价</h2>
+<p>8月6日，DeepSeek 在官方渠道预告，计划近期对 API 服务整体上调价格，预计涨幅较大，具体方案以正式通知为准。【1】同一天前后，市场开始用“token 定价权”重新讲述这个故事：有的测算 V4-Pro 名义毛利率可达 90% 至 97%、扣除免费流量后真实毛利率约 72% 至 81%【4】；有的转述第三方估算称，每吉瓦推理容量对应的年化收入今年已上升约 50%、达到约 300 亿美元【5】。两条线索合在一起，最自然的解读是“价格战结束、涨价周期开启”。</p>
+<p>本文的判断是：DeepSeek 涨价是真实信号，但它更像“算力稀缺乘以需求二次加速”下的短期再定价，而不是单位 token 成本长期下行趋势的逆转。模型架构、芯片代际和推理工程仍在快速降本——MoE 训练吞吐刚刚被开源工程证明还能再提高 40% 以上【6】【7】。真正决定产业链价值分配的，不是某一次涨价，而是用量弹性能否持续跑赢价格波动，以及谁能把效率提升变成利润，而不是只让利给用户。</p>
+<p>因此，本文要回答一个可证伪的问题：DeepSeek 涨价与 300 亿美元/吉瓦的 ARR，究竟是“价格战结束的拐点”，还是“长期成本下行曲线上的一次短暂再定价”？如果涨价落地后付费调用量显著下滑，说明定价权只是暂时的；如果涨价同时用量仍增长、头部实验室 ARR 持续上修，说明稀缺算力确实拥有了定价权。两种结果对应完全不同的投资含义。</p>
+<ul>
+<li>官方事实：涨价预告属实，但幅度与生效时间未定。【1】</li>
+<li>关键推断：短期定价权来自稀缺，不改变长期单位成本下行。</li>
+<li>证伪锚点：涨价后的调用量弹性与 ARR/吉瓦 环比方向。</li>
+</ul>
+<h2>官方事实：涨价预告、现行价目表与尚未生效的峰谷定价</h2>
+<p>按公开转述的官方口径，DeepSeek 于 8 月 6 日预告将对全部 API 服务整体上调价格，并强调“预计涨幅较大”，具体方案以正式通知为准。本次运行中，官方价格页无法直接访问（访问被限制），涨价预告与价目表经中新网、财联社等媒体转述核对，因此全部标注为“官方公告/媒体转述”层级，最终以官方正式通知为准。【1】</p>
+<p>现行价目表（媒体转述口径，截至 2026-08-06）：V4-Flash 为每百万 tokens 0.02 元（缓存命中）、1 元（缓存未命中输入）、2 元（输出）；V4-Pro 为每百万 tokens 0.025 元、3 元、6 元。另有媒体转述的峰谷定价方案：北京时间 9:00 至 12:00、14:00 至 18:00 为高峰时段，价格约为基础价的 2 倍；该方案尚未生效。【1】</p>
+<p>从量看，第三方统计口径显示，V4-Flash 在 8 月 1 日单日处理约 8 万亿 tokens，其中约 5 万亿为免费流量、3 万亿为付费流量【第三方口径，原始链接待核】；8 月 4 日又因访问量空前出现容量压力，官方确认了当日服务压力【媒体转述】。若按此拆算，免费流量占比仍然很高，这也解释了为何市场普遍推断涨价的重要动机之一是“过滤低价与免费调用、把稀缺算力留给付费能力更强的用户”——该动机属于市场推断，不是官方表述。</p>
+<p>融资与估值背景同样重要：8 月 5 日，21财经与《财经》等媒体报道 DeepSeek 新一轮融资前估值约 5000 亿元人民币、拟融资约 500 亿元【媒体转述，原始链接未归档】。对一家仍需要持续购买算力、扩大集群的私营公司，涨价与融资可以看作同一件事的两面：让 API 业务更接近自我造血，同时为下一轮资本开支定价。</p>
+<ul>
+<li>已确认：涨价预告（官方公告，媒体转述）；具体幅度与生效时间未定。【1】</li>
+<li>现行价：V4-Flash 0.02/1/2 元、V4-Pro 0.025/3/6 元每百万 tokens（转述口径）。【1】</li>
+<li>背景：单日约 8 万亿 tokens（第三方统计）、8/4 容量承压、约 5000 亿元融资前估值（媒体转述）。</li>
+</ul>
+<h2>账本拆解：官方 545% 口径与 V4-Pro 的名义/真实毛利率</h2>
+<p>讨论定价权之前，先看成本账。DeepSeek 官方系统论文（2025 年 3 月，V3/R1 线上推理系统）披露：日均使用约 226.75 个 H800 节点，单日处理约 6080 亿输入 tokens 与 1680 亿输出 tokens；按每张卡每小时 2 美元的租赁价格测算，单日 GPU 成本约 8.7 万美元；若全部按当时 R1 的 API 价格计费，理论日收入约 56.2 万美元，对应理论收入成本利润率约 545%。【3】</p>
+<p>官方论文同时强调，545% 是理论口径：网页端与 App 免费、夜间折扣、低价版本与未完全计费流量，都会大幅压低真实收入。【3】因此 545% 不能直接当真实利润率，但它证明了一个方向性事实：DeepSeek 的推理成本远低于名义牌价，账面并不存在“每卖一个 token 就亏钱”的困境。</p>
+<p>到 V4，公开测算进一步放大这个结论。公众号《傅里叶的猫》按 V4-Pro 名义牌价、模型推理计算量下降与缓存机制改善推算，名义毛利率可达 90% 至 97%；把免费流量、折扣等因素扣除后，作者估计真实毛利率约在 72% 至 81% 区间。【4】这是作者推断而非官方披露，但即使取下限 72%，也意味着涨价并非因为“无法覆盖成本”，而是主动选择让价格与未来资本开支、稀缺算力对齐。</p>
+<p>账本结论：涨价更多是“利润再分配”与“需求筛选”，而不是“成本倒逼”。这决定了后续观察重点应从“DeepSeek 亏不亏钱”转向“涨价之后，付费调用量还能不能继续增长”。</p>
+<ul>
+<li>官方口径：R1 时代理论收入成本利润率约 545%，但含大量免费流量，非真实利润率。【3】</li>
+<li>作者测算：V4-Pro 名义 90% 至 97%、真实约 72% 至 81%（公众号推断，未官方确认）。【4】</li>
+<li>解读：涨价更像主动定价与需求筛选，而非成本倒逼。</li>
+</ul>
+<h2>token 定价权落到数字上：8T tokens/日与 300 亿美元/吉瓦的 ARR</h2>
+<p>定价权的前提，是稀缺与需求同时存在。需求侧，第三方统计显示 V4-Flash 单日已处理约 8 万亿 tokens，8 月 4 日甚至因访问量空前出现容量压力；供给侧，研报平权转述的海外分析师测算称，每吉瓦推理容量对应的年化收入（ARR）今年已上升约 50%，达到约 300 亿美元/吉瓦，其中企业 API 口径可能更高，约 500 亿美元/吉瓦。【5】</p>
+<p>300 亿美元/吉瓦是一个估算，不是官方数据，而且口径差异很大：消费者订阅、企业 API、内部训练占用会给出完全不同的数字。它的价值在于把“推理需求”翻译成“每单位算力能产生多少收入”，这是把 token 定价权落到产业链上的关键换算。按同一测算，2027 年推理算力可能从约 8 吉瓦增至约 31.5 吉瓦：若 ARR/吉瓦维持约 340 亿美元，实验室年化收入可达约 1.1 万亿美元；若效率提升继续推高 ARR/吉瓦，总盘子更高；若供给追上需求，ARR/吉瓦则可能回落至约 276 亿美元，对应约 8700 亿美元年化收入。【5】</p>
+<p>三种情景的共同点是“推理收入体量巨大”，分歧在于价格与用量如何分配。DeepSeek 涨价正是在这个节点发生的：当推理需求经历第二次加速（Claude Code 之后，Fable/Codex 带来新一轮增长），撞上交付周期长达 12 至 18 个月的算力供给，掌握稀缺算力的实验室与云厂商自然获得短期定价权。【5】</p>
+<p>对投资者而言，300 亿美元/吉瓦不是“利好标签”，而是一个需要逐季验证的换算系数：它上升，说明需求跑赢算力投放；它回落，说明供给开始追上、价格战可能重新开始。后者同样可能发生在 2027 年大规模算力集中上线之后。</p>
+<ul>
+<li>需求侧：V4-Flash 单日约 8 万亿 tokens（第三方统计）；8/4 容量承压（官方确认，媒体转述）。</li>
+<li>估值锚：ARR/吉瓦 约 300 亿美元，年内上升约 50%（第三方估算）。【5】</li>
+<li>情景：2027 算力 8 至 31.5 吉瓦时，ARR/吉瓦决定总盘子是 1.1 万亿、2.8 万亿还是 8700 亿美元级。【5】</li>
+</ul>
+<h2>杰文斯悖论与用量弹性：降价 10% 换 12% 至 18% 用量，涨价呢？</h2>
+<p>支持“涨价只是插曲”的最强证据，是需求弹性。美股AI投研速递引述 Exponential View 的研究：token 价格每下降 10%，用量上升 12% 至 18%，总 token 收入反而上升。【8】如果这个弹性系数成立，降价的净效果是薄利多销甚至薄利多赚，那么任何一次涨价都在给竞争对手让出份额，长期反而不可持续。</p>
+<p>杰文斯悖论的关键前提，是“降价释放了原本负担不起的应用场景”。在 Agent 与编程场景里，成本从一次问答变成一条任务链：一个目标可能对应几十次模型调用与工具执行。单位 token 越便宜，开发者越愿意让 Agent 全天候运行、自我纠错、反复重试，总调用量呈非线性放大——这正是研报平权文章中“两次推理需求加速（Claude Code 与 Fable/Codex）”的直接含义。【5】</p>
+<p>但弹性系数本身需要被验证，不能当作常数。12% 至 18% 的用量弹性来自第三方研究引用，而且“用量增长”不等于“收入增长”：降价 10% 只带来 12% 增量时，收入确实微增；如果涨价 50%（DeepSeek 峰谷 2 倍方案的上限），即使用量只回落 15%，收入仍大幅上升。这解释了为什么涨价与“用量仍在增长”可以同时成立——短期收入弹性主要由供给与定价权决定，长期才由杰文斯式的需求创造决定。</p>
+<p>因此，杰文斯悖论不是“永远看多算力”的免检证书，而是一个需要逐季跟踪的弹性区间：调用量、任务时长、付费转化率与单 token 价格的乘积，才是真正的收入。</p>
+<ul>
+<li>引用弹性：价格每下降 10%，用量上升 12% 至 18%（Exponential View，第三方研究引用）。【8】</li>
+<li>结构因素：Agent 任务链把一次问答放大为几十次模型调用与工具执行。【5】</li>
+<li>关键区分：用量增长不等于收入增长，要看价格乘以用量的净乘积。</li>
+</ul>
+<h2>开源与工程效率：MoK 把 MoE 训练吞吐提升 41%，成本曲线还在往下走</h2>
+<p>成本曲线另一侧是工程效率。8 月 4 日，Cursor 开源 Mixture-of-Kittens（MoK）：一个面向 GB200/GB300 NVL72 机架的 MoE 训练 megakernel，官方称在其生产训练栈中把端到端 tokens/s 提升 1.41 倍；单层基准中，MXFP8 前向最快比公开基线快 2.37 倍。【6】【7】第三方转述的测试口径为：跨 512 块 GPU、多个 NVL72 机架的测试中，每 GPU tokens/s 从约 760.9 提升到 1070.2。【6】</p>
+<p>MoK 的意义不在“训练快了 41%”本身，而在于它把 MoE 训练瓶颈从计算转向通信：当专家并行规模扩大，token 在不同 GPU 之间搬运的开销成为主约束。DeepSeek-V3 正是 671B 总参数、37B 激活参数的 MoE 架构，arXiv 技术报告披露其训练耗用约 278.8 万 H800 GPU 小时。【2】MoK 证明这类架构仍能通过软件工程继续挖出 40% 级吞吐，而且这条路与 NVL72 硬件形态深度绑定——效率提升与特定硬件深度绑定，既是机会也是门槛。</p>
+<p>对成本曲线的含义：单位 token 成本的下行不仅来自芯片代际（H800 到 Blackwell 再到 Rubin），还来自把通信、调度、同步压进单个 kernel 的软件层。这类开源工程会加速“同代硬件处理更多 token”，也就是在名义涨价背后进一步压低真实单位成本。短期定价权来自稀缺，长期成本下行来自这些工程进步，两者并不矛盾。</p>
+<p>需要保留的证据边界：MoK 的吞吐数字是 Cursor 自测口径，外部团队能否在不同负载下复现 2.37 倍与 1.41 倍仍需验证；且 MoK 面向 NVL72 专有硬件，不等于通用 MoE 效率的整体提升。【6】【7】</p>
+<ul>
+<li>事实：MoK 端到端 tokens/s 提升 1.41 倍，单层 MXFP8 前向最高 2.37 倍（Cursor 自测）。【6】【7】</li>
+<li>机制：MoE 训练瓶颈从计算转向通信，效率与 NVL72 深度绑定。【6】</li>
+<li>边界：自测口径，外部复现待验证。</li>
+</ul>
+<h2>通胀与通缩并存：短期定价权在卖方，长期定价权回到成本曲线</h2>
+<p>把前面各节放回同一条时间轴：短期（1 至 2 个季度）是“算力通胀”——稀缺供给、翻倍的高峰定价方案、约 5000 亿元的融资前估值；长期（2 至 3 年）是“单位成本通缩”——芯片代际、缓存命中率提升、MoE 通信优化与开源工程扩散，全部指向“完成同一任务所需算力与成本下降”。【1】【4】【5】【7】</p>
+<p>两者的分界点不是某个价格事件，而是算力供给曲线。只要交付周期长达 12 至 18 个月、新增吉瓦跟不上需求，定价权就在卖方；当 2027 年新算力集中上线、ARR/吉瓦开始回落时，价格战可能以“降价加用量扩张”的形式重新开始。【5】DeepSeek 的涨价更接近前者：用价格筛选需求、为资本开支定价，而不是宣告成本曲线逆转。</p>
+<p>对“AI 资本开支是否过热”的争论，这条时间轴给出了更精确的问题：不是“Capex 太多”，而是“Capex 在 2026 至 2027 年上线时，ARR/吉瓦能否守住 200 亿美元以上”。守得住，硬件投入可持续；守不住，第一轮价格战会先在推理 API 与裸算力租售中出现，再传导到 GPU 与内存订单。</p>
+<p>这也是 Serenity 近期把 NVIDIA/OpenAI 融资结构概括为“信用与循环融资成为新约束”的同一逻辑：AI 基建的可持续性，最终由“算力到 token、token 到收入、收入到现金流”的转化效率决定，而不是由某一轮融资或某一次涨价决定。</p>
+<ul>
+<li>短期：稀缺驱动通胀，定价权在卖方。</li>
+<li>长期：效率驱动通缩，定价权回到谁成本低、谁生态强。</li>
+<li>分界：2027 供给集中上线时，ARR/吉瓦 是核心观测点。</li>
+</ul>
+<h2>收益传导：谁拿到涨价红利，谁在承担涨价成本</h2>
+<p>如果“涨价加用量增长”同时成立，收益首先流向掌握稀缺算力与定价权的环节：头部模型实验室（API 提价直接增厚收入）、GPU 与 ASIC 供应商（需求仍在增长），以及能把单位算力卖出更高 ARR 的云厂商。Serenity 公开推文曾转述市场信息，称 DeepSeek 与智谱正在开发定制 ASIC 以绕开对单一供应商的依赖【9】；这条线属于投资者解读，需要公司披露验证，但它指向定制芯片、先进封装与配套网络的结构性机会。</p>
+<p>其次是内存带宽与互联：DeepSeek 模型以长上下文、大专家并行著称，推理对 HBM/DRAM 容量与 NVLink/光互联带宽敏感。Serenity 此前把“DeepSeek Engram v4”与 CXL 内存池联系在一起，指向 CXL 控制器与互联环节（如 Astera、博通、Marvell 所在的美国供应链）【10】；这是投资者推演的受益路径，不是公司事实，必须用订单与财报验证。</p>
+<p>受益的还有工程效率环节：MoK 这类开源工程把效率红利绑定在 NVL72 机架与配套网络（NVLink、光模块、液冷）上；凡是能帮助实验室“同瓦数卖出更多 token”的软硬件，都会在 ARR/吉瓦 上升期获得结构性需求。【6】【7】</p>
+<p>受压环节：纯裸算力租售（Neocloud）与依赖低价 API 的下游应用。若头部实验室持续提价并自行消化高价值调用，裸算力中间商的价差会被压缩；依赖 DeepSeek 低价 API 的套壳应用，则要承受成本上升或被迫涨价。存储与 PCB 等环节更多跟随总算力投放，属于“总量受益、价格分化”。</p>
+<ul>
+<li>受益：稀缺算力持有者、GPU/ASIC、内存带宽与互联、NVL72 配套。</li>
+<li>受压：裸算力 Neocloud、低价 API 套壳应用。</li>
+<li>边界：公司级映射需用订单与财报验证，本文不提供买入清单。</li>
+</ul>
+<h2>市场预期差与证伪条件</h2>
+<p>市场当前最容易犯的两个错误：一是把“DeepSeek 涨价”直接外推成“AI 硬件价格战结束、涨价周期开启”，忽略单位成本长期下行与 2027 年供给集中；二是把“300 亿美元/吉瓦 ARR”当作实验室盈利能力的现成证明，忽略它只是第三方估算，且不同口径差异巨大。【4】【5】</p>
+<p>真正的预期差在于：定价权从“模型能力”单点转移到“算力稀缺加成本曲线控制”的组合。DeepSeek 涨价的意义不是“它赚了更多钱”，而是它第一次用价格信号表明，头部实验室认为自己有资格筛选用户、为资本开支定价。这种定价权一旦被验证（涨价后付费调用量仍增长），会重塑云厂商、Neocloud 与上游硬件之间的利润分配。</p>
+<p>证伪条件（满足任一即应下调判断）：其一，涨价正式生效后，付费调用量或 API 收入环比显著下滑；其二，ARR/吉瓦 环比回落，或 2027 年算力集中上线后价格战重启；其三，头部实验室真实毛利率被证明远低于估算，例如免费流量占比远超预期；其四，涨价引发用户大规模迁移到国产替代模型，DeepSeek 份额不升反降。反向强化条件：涨价后用量仍增长、实验室 ARR 持续上修、云厂商推理收入增速同步抬升。</p>
+<ul>
+<li>错误一：把短期涨价当长期拐点。</li>
+<li>错误二：把第三方 ARR/吉瓦 估算当公司事实。</li>
+<li>核心观测：涨价后的调用量弹性、ARR/吉瓦 环比、免费流量占比。</li>
+</ul>
+<h2>风险与来源边界</h2>
+<p>本文的事实基础分为四层。官方事实层：DeepSeek 涨价预告（官方公告，媒体转述）、V3/R1 官方系统论文与 V3 技术报告；媒体转述层：现行价目表、峰谷 2 倍方案、8/4 容量压力、约 5000 亿元融资前估值；第三方测算层：300 亿美元/吉瓦 ARR、8 万亿 tokens/日、Exponential View 弹性系数、V4-Pro 72% 至 81% 真实毛利率、MoK 吞吐；投资者解读层：Serenity 关于 ASIC 与 CXL 的推文。【1】至【11】公众号文章只用于发现问题与研究方法，不复制原句，不把作者推断写成公司事实。</p>
+<p>关键风险：官方尚未公布涨价幅度与生效时间，峰谷 2 倍定价可能被修改；价目表、8 万亿 tokens/日与融资估值均为转述或估算，未逐一取得原始一手文件；ARR/吉瓦、MoK 吞吐与弹性系数来自第三方或公司自测，存在口径与复现风险；官方价格页本次直接访问受限，未经原始页面逐条核对。【1】【5】【7】</p>
+<p>本文不是投资建议，不构成买入或卖出清单。文中所有“受益与受压环节”均指产业链逻辑，不代表任何目标价或仓位建议。决策前请回到公司公告、SEC/交易所文件、公司 IR、电话会与官方价目表，并用涨价后的真实调用量、收入与毛利率数据验证本判断。</p>
+<p>一句话收尾：DeepSeek 涨价不是故事的结局，而是把问题从“模型谁更强”切换成“算力谁更稀缺、成本谁更低、用量弹性谁更能兑现”。这三个变量，才是未来 12 至 18 个月 AI 产业链定价权的真正来源。</p>
+<ul>
+<li>来源分层：官方事实、媒体转述、第三方测算、投资者解读。</li>
+<li>主要风险：方案未定、口径未验、自测数据未复现。</li>
+<li>明确边界：非投资建议；验证请回到一手文件与后续财报。</li>
+</ul>
+<h2>?????</h2>
+<p>?1?<a href="https://platform.deepseek.com/">DeepSeek 官方公告：计划近期整体上调 API 定价（媒体转述：中新网/财联社等）</a></p>
+<blockquote>
+<p>?????涨价预告、现行价目表（V4-Flash 0.02/1/2 元、V4-Pro 0.025/3/6 元）、峰谷 2 倍定价方案（未生效）；官方价格页本次直接访问受限</p>
+</blockquote>
+<p>?2?<a href="https://arxiv.org/abs/2412.19437">DeepSeek-V3 Technical Report（arXiv 2412.19437）</a></p>
+<blockquote>
+<p>?????671B 总参数/37B 激活参数 MoE 架构、约 278.8 万 H800 GPU 小时训练</p>
+</blockquote>
+<p>?3?<a href="https://github.com/deepseek-ai/DeepSeek-R1">DeepSeek-R1 官方发布与线上推理系统设计（GitHub）</a></p>
+<blockquote>
+<p>?????日均约 226.75 个 H800 节点、6080 亿输入/1680 亿输出 tokens、单日 GPU 成本约 8.7 万美元、理论收入成本利润率约 545%（理论口径，含大量免费流量）</p>
+</blockquote>
+<p>?4?<a href="https://mp.weixin.qq.com/s/ihwZGH4TAv9iNoYqss_McQ">傅里叶的猫公众号：DeepSeek 为什么要涨价</a></p>
+<blockquote>
+<p>?????V4-Pro 名义毛利率 90%-97%、真实约 72%-81%（作者推断）；涨价动机的四种海外观点；8/4 容量承压（媒体转述）</p>
+</blockquote>
+<p>?5?<a href="https://mp.weixin.qq.com/s/Ae1qahvnSvuDUxS5shIBtg">研报平权公众号：推理需求二次加速：算力增长 10 倍之后会发生什么</a></p>
+<blockquote>
+<p>?????ARR/吉瓦 约 300 亿美元且年内 +50%（第三方估算）、2027 三种情景（1.1 万亿/2.8 万亿/8700 亿美元）、两次推理需求加速、交付周期 12-18 个月</p>
+</blockquote>
+<p>?6?<a href="https://mp.weixin.qq.com/s/p1TDuJOZbiO5nqP6NkmFIw">Zen Trading 公众号：Cursor 开源 MoK</a></p>
+<blockquote>
+<p>?????MoK 端到端 tokens/s +1.41 倍、单层 MXFP8 前向最高 2.37 倍、512 块 GPU 测试口径 760.9→1070.2 tokens/s、NVL72 硬件门槛</p>
+</blockquote>
+<p>?7?<a href="https://github.com/cursor/mixture-of-kittens">Cursor 官方：Mixture-of-Kittens 开源仓库</a></p>
+<blockquote>
+<p>?????MoK 面向 NVL72 的 MoE 训练 megakernel、生产训练栈端到端 1.41 倍、单层基准倍数（自测口径，外部复现待验证）</p>
+</blockquote>
+<p>?8?<a href="https://mp.weixin.qq.com/s/tbX2GD0oDC2gGF13OS1VRA">美股AI投研速递公众号：AI 投资的第二幕</a></p>
+<blockquote>
+<p>?????杰文斯悖论、Exponential View 测算：token 价格每降 10% 用量上升 12%-18%、估值锚从 Capex 转向 ARR</p>
+</blockquote>
+<p>?9?<a href="https://x.com/aleabitoreddit/status/2076467953995071881">Serenity 推文：DeepSeek 与智谱开发定制 ASIC</a></p>
+<blockquote>
+<p>?????中国头部实验室绕开单一 GPU 供应商的产业推断；不作为公司事实</p>
+</blockquote>
+<p>?10?<a href="https://x.com/aleabitoreddit/status/2023600495353622546">Serenity 推文：DeepSeek Engram v4 与 CXL 内存池</a></p>
+<blockquote>
+<p>?????长上下文推理对内存带宽/互联的需求推断（CXL 控制器、互联环节）；不作为公司事实</p>
+</blockquote>
+<p>?11?<a href="https://github.com/Benboerba620/ai-signal">AI Signal（Benboerba620/ai-signal）</a></p>
+<blockquote>
+<p>?????推理轨迹/长程推理等 40 条弱信号，仅用于选题雷达与技术方向，不改变投资池</p>
+</blockquote>
+<h2>????</h2>
+<ul>
+<li>????????????????????????????/??????????????????????</li>
+<li>?????????????????????????????????????</li>
+<li>?????????ARR/???????? MoK ???????????????????????????????</li>
+<li>????????????????????????????</li>
+<li>??????????</li>
+</ul></div></details>
+    </main>
+  <footer class="shell">历史文章来自本地不可变批准归档；页面用于研究回溯，不构成投资建议。</footer>
+</body>
+</html>
