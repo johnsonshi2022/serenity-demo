@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AAOI 第二季度营收 1.919 亿美元、重回非 GAAP 盈利，并给出 Q3 2.55 亿至 2.9 亿美元指引；管理层预计 Q4 可交付超 5 亿美元，同时把 DSP 和 TIA 列为最大挑战。本文拆开收入曲线、产能爬坡和关键器件约束，回答一个可证伪的问题：瓶颈何时从“需求不存在”变成“订单太多但交不出来”，又会在哪一季转成收入与利润。">
+  <title>AAOI 说 Q4 能超 5 亿美元，DSP/TIA 又不够用，光模块这轮增长到底卡在哪？ - Serenity 往日报告</title>
+  <style>
+    :root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(1060px,calc(100vw - 28px));margin:0 auto}.top{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(246,248,251,.94);backdrop-filter:blur(10px)}
+    .top-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{color:var(--ink);font-weight:900;text-decoration:none}.back{display:inline-flex;align-items:center;min-height:36px;border:1px solid #bfdbfe;border-radius:999px;background:#fff;padding:0 13px;text-decoration:none;font-size:13px;font-weight:800}
+    main{padding:34px 0 72px}.hero,.panel,.history-card,.reader-version{border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hero{padding:30px}.eyebrow,.part{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:900px;margin:10px 0 0;color:var(--ink);font-size:clamp(30px,5vw,52px);line-height:1.13;letter-spacing:-.035em}.hero>p{max-width:850px;margin:14px 0 0;color:#475569;font-size:15px;line-height:1.85}
+    .meta,.topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#f8fafc;padding:5px 9px;color:#475569;font-size:11px;font-weight:750}.chip.blue{border-color:#bfdbfe;background:var(--blue-soft);color:#1d4ed8}
+    .search{width:100%;margin-top:18px;border:1px solid #cbd5e1;border-radius:13px;background:#fff;padding:13px 15px;color:var(--ink);font:inherit;outline:none}.search:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}
+    .history-list{display:grid;gap:14px;margin-top:18px}.history-card{padding:20px}.history-card h2{margin:8px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.history-card p{margin:9px 0 0;line-height:1.75}.history-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.history-actions a{font-weight:850;text-decoration:none}
+    .empty{display:none;margin-top:18px;border:1px dashed #cbd5e1;border-radius:14px;background:#fff;padding:24px;text-align:center;color:var(--muted)}
+    .article-header{padding:28px}.article-header h1{font-size:clamp(28px,4vw,45px)}.versions{display:grid;gap:16px;margin-top:18px}.reader-version{overflow:hidden}.reader-version>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;cursor:pointer;list-style:none}.reader-version>summary::-webkit-details-marker{display:none}.reader-version>summary span{min-width:0}.reader-version>summary strong{display:block;color:var(--ink);font-size:17px}.reader-version>summary small{display:block;margin-top:5px;color:var(--muted);line-height:1.55}.reader-version>summary b{color:var(--blue);font-size:12px;white-space:nowrap}
+    .version-head{border-top:1px solid var(--line);background:var(--blue-soft);padding:23px}.version-head h2{margin:0;color:var(--ink);font-size:27px;line-height:1.35}.version-head p{margin:10px 0 0;line-height:1.75}.article-section{border-top:1px solid var(--line);padding:25px 23px}.article-section h3{margin:7px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.article-section p,.article-section li{font-size:15px;line-height:1.9}.article-section ul{padding-left:22px}code{border-radius:5px;background:#eef2f7;padding:2px 5px}
+    .sources{display:grid;gap:10px}.sources h3{margin-bottom:2px}.source-card{border:1px solid var(--line);border-radius:12px;background:#f8fafc;padding:13px}.source-card a,.source-card strong{font-weight:850}.source-card p{margin:7px 0 0;font-size:13px;line-height:1.7}.source-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.55}
+    .deep-report{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}.deep-report>summary{padding:19px 21px;cursor:pointer;color:var(--ink);font-weight:900}.markdown-body{border-top:1px solid var(--line);padding:24px;overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{color:var(--ink);line-height:1.4}.markdown-body h1{font-size:28px}.markdown-body h2{margin-top:34px;font-size:23px}.markdown-body h3{margin-top:27px;font-size:19px}.markdown-body p,.markdown-body li{line-height:1.85}.markdown-body table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.markdown-body blockquote{margin:16px 0;border-left:4px solid #93c5fd;background:#eff6ff;padding:10px 15px;color:#475569}.markdown-body pre{overflow:auto;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px}
+    footer{padding:24px 0 45px;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:680px){.top-inner{min-height:58px}main{padding-top:18px}.hero,.article-header{padding:21px}.history-card{padding:17px}.reader-version>summary{align-items:flex-start;padding:17px}.version-head,.article-section,.markdown-body{padding:18px}.article-section p,.article-section li{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell top-inner"><a class="brand" href="index.html">Serenity 往日报告</a><a class="back" href="../index.html#daily-article">返回当前首页</a></div></header>
+  <main class="shell">
+    <article class="article-header panel">
+      <span class="eyebrow">Approved Homepage Archive</span>
+      <h1>AAOI 说 Q4 能超 5 亿美元，DSP/TIA 又不够用，光模块这轮增长到底卡在哪？</h1>
+      <p>AAOI 第二季度营收 1.919 亿美元、重回非 GAAP 盈利，并给出 Q3 2.55 亿至 2.9 亿美元指引；管理层预计 Q4 可交付超 5 亿美元，同时把 DSP 和 TIA 列为最大挑战。本文拆开收入曲线、产能爬坡和关键器件约束，回答一个可证伪的问题：瓶颈何时从“需求不存在”变成“订单太多但交不出来”，又会在哪一季转成收入与利润。</p>
+      <div class="meta"><span class="chip blue">截至 2026-08-08</span><span class="chip">批准于 2026-08-09T01:51:24+08:00</span><span class="chip">归档 ID：2026-08-08_015124_4f92d20aea</span></div>
+      <div class="topics"><span class="chip">AAOI Q2 2026 财报与 Q3 指引</span><span class="chip">DSP/TIA 关键器件约束</span><span class="chip">800G/1.6T 收入爬坡</span><span class="chip">20 万到 93 万片产能执行</span><span class="chip">非 GAAP 毛利与资本开支</span></div>
+      <div class="history-actions"><a href="index.html">← 返回历史文章列表</a></div><div class="history-actions"><a href="visual/2026-08-08_015124_4f92d20aea_visual_report.html">阅读图文深度版 →</a></div>
+    </article>
+    <section class="versions"><details class="reader-version" open><summary><span><strong>研究版</strong><small>适合希望阅读完整财报、电话会证据边界、验证清单与风险分层的读者。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>AAOI 说 Q4 能超 5 亿美元，DSP/TIA 又不够用，光模块这轮增长到底卡在哪？</h2><p>AAOI 第二季度营收 1.919 亿美元、重回非 GAAP 盈利，并给出 Q3 2.55 亿至 2.9 亿美元指引；管理层预计 Q4 可交付超 5 亿美元，同时把 DSP 和 TIA 列为最大挑战。本文拆开收入曲线、产能爬坡和关键器件约束，回答一个可证伪的问题：瓶颈何时从“需求不存在”变成“订单太多但交不出来”，又会在哪一季转成收入与利润。</p></div><section class="article-section"><span class="part">Part 01</span><h3>先给结论：收入曲线是管理层的承诺，DSP/TIA 是执行风险</h3><p>AAOI 在 8 月 6 日盘后交出一份市场期待已久的财报：第二季度营收 1.919 亿美元，同比增长 86%，环比增长 27%；非 GAAP 毛利率 29.8%，非 GAAP EPS 0.06 美元，重回季度盈利。但真正引发讨论的不是这组数字，而是管理层给出的下一段收入曲线：Q3 指引 2.55 亿至 2.9 亿美元，全年维持约 11 亿美元，并预计 Q4 基于产能可以交付超过 5 亿美元。</p><p>如果这条曲线兑现，AAOI 将从一家季度收入不到 2 亿美元的公司，在一个季度内跳到 5 亿美元以上，意味着 Q3 到 Q4 环比增长约 60%。支撑这个数字的，是 800G 继续放量、1.6T 认证落地、德州新产能上线，以及 DSP/TIA 等关键器件的供应不再成为硬约束。</p><p>本文的判断是：AAOI 的需求端已经不需要再被怀疑，管理层明确表示短期收入几乎完全受制于产能和关键器件供应；真正的风险在于供给端执行，尤其是 DSP/TIA。DSP/TIA 短缺目前是管理层在电话会里明确承认的最大挑战，但还没有变成 Marvell、MaxLinear、MACOM 或 Semtech 的公开订单与收入证明。因此，这篇稿子的核心问题是：AAOI 的收入曲线能不能按时兑现，DSP/TIA 瓶颈会在 2026Q4 成为收入拖累，还是在 2027 年成为连接芯片公司的利润增量。</p><ul><li>Q2 2026 营收 1.919 亿美元，+86% YoY，+27% QoQ。</li><li>Q3 指引 2.55 亿至 2.9 亿美元；全年维持约 11 亿美元。</li><li>管理层预计 Q4 可交付超 5 亿美元；DSP/TIA 是当前最大挑战之一。</li></ul></section><section class="article-section"><span class="part">Part 02</span><h3>Q2 官方数字：连续第五个季度创纪录，GAAP 仍亏损</h3><p>AAOI Q2 收入 1.919 亿美元，处于此前 1.8 亿至 1.98 亿美元指引区间内；非 GAAP 毛利率 29.8%，符合 29%-30% 指引；非 GAAP EPS 0.06 美元，高于亏损 0.03 至盈利 0.03 美元的指引区间。按 GAAP 口径，公司仍亏损 2,280 万美元，每股亏损 0.28 美元，原因是股权薪酬和一次性费用。</p><p>收入结构上，数据中心业务首次超过 CATV，Q2 收入 1.077 亿美元，同比增长 140.4%，占总收入 56%；CATV 收入创纪录达 8,060 万美元，同比增长 43.8%，占 42%；FTTH、电信和其他占 2%。前十大客户占收入 99%，其中三家客户收入占比超过 10%，CATV 大客户占 42%，两家数据中心客户分别占 26% 和 24%。</p><p>这些数字说明两件事：一是 AAOI 已经不再是“只有故事没有收入”的光模块公司，800G 和 400G 都进入了财报；二是客户集中度极高，任何一家大客户的认证、排产或采购节奏变化，都会直接影响公司收入，这在估值里必须被扣分。</p><ul><li>数据中心收入 1.077 亿美元，+140.4% YoY，占总收入 56%。</li><li>CATV 收入 8,060 万美元，+43.8% YoY，创纪录。</li><li>GAAP 净亏损 2,280 万美元，EPS -0.28 美元；非 GAAP 盈利 550 万美元。</li><li>前十大客户占收入 99%；三家客户占比超过 10%。</li></ul></section><section class="article-section"><span class="part">Part 03</span><h3>800G/1.6T 爬坡：从 1,280 万美元到 Q4 3.3 亿美元</h3><p>Q2 数据中心的增长主要来自 400G 和 800G。400G 收入 4,840 万美元，占数据中心收入 45%，同比增长超四倍，环比增长 27.4%；800G 收入 1,280 万美元，占数据中心收入 11.9%，同比增长超十倍，环比翻倍。管理层预计 800G 收入 Q3 环比增长接近五倍，Q4 继续受产能和器件供应制约。</p><p>问答环节中，分析师按指引推算，Q4 800G 与 1.6T 组合收入约为 3.3 亿美元，CFO 表示大致正确。管理层随后给出更整体的口径：基于产能，Q4 总营收可交付超过 5 亿美元，Q3 到 Q4 增长约 60%。这里的 3.3 亿美元不是公司直接给出的分项指引，而是分析师基于组合与总盘推算出的数字，但它说明 800G/1.6T 已成为下一段收入曲线的绝对主力。</p><p>如果只看 Q2 的 800G 收入 1,280 万美元，市场很容易低估爬坡斜率。管理层说 Q3 800G 环比接近五倍，Q4 继续放量，1.6T 从 Q3 末开始交付，Q4 目标超过 7,000 万美元。把这些放在一起，AAOI 的收入故事已经从“验证需求”进入“验证交付”阶段。</p><ul><li>800G 收入 1,280 万美元，占数据中心收入 11.9%，Q3 预计环比接近 5 倍。</li><li>400G 收入 4,840 万美元，占数据中心收入 45%。</li><li>Q4 800G/1.6T 组合约 3.3 亿美元是分析师推算，管理层确认大致正确。</li><li>Q4 总营收可交付超 5 亿美元，Q3 到 Q4 环比约 60%。</li></ul></section><section class="article-section"><span class="part">Part 04</span><h3>产能：20 万到 65 万再到 93 万，交付能力成为股价变量</h3><p>AAOI 当前总产能接近每月 20 万台，高于一季度末约 10 万台的 800G/1.6T 产能。管理层预计今年底月产能超过 65 万台，2027 年底超过 93 万台，其中超过一半来自德州。配合这个目标，公司已在大休斯顿地区锁定超过 160 万平方英尺制造空间，21 万平方英尺的新厂预计 Q3 末开始初步生产，Pearland 和 Houston 扩产预计 2027 年初上线。</p><p>产能扩张是 AAOI 故事里最硬的一部分，因为它意味着收入不是靠压榨现有产线，而是靠新建产能接住已经被预定的需求。管理层还明确表示，目前客户需求比公司可供产能高 20%-40%，订单已经排到明年第二季度，甚至 800G 产能爬坡才刚刚开始。</p><p>但产能计划不是收入。建设、设备安装、客户认证、良率和关键器件供应都会影响实际爬坡。市场目前愿意给高估值，是因为管理层给出了一个可追踪的数字路径：Q4 超 5 亿美元，2027 年中月度收发器收入 4.71 亿美元。这个路径一旦因为某个环节延后，股价反应会先于财报。</p><ul><li>当前月产能接近 20 万台；2026 年底目标超 65 万台；2027 年底超 93 万台。</li><li>休斯顿地区制造空间超 160 万平方英尺，21 万平方英尺新厂 Q3 末启动。</li><li>客户需求较供应高 20%-40%，订单排到 2027Q2。</li><li>产能目标不等于收入；建设、认证、良率、器件缺一不可。</li></ul></section><section class="article-section"><span class="part">Part 05</span><h3>DSP/TIA：为什么是最大挑战，受益链不能直接兑现</h3><p>AAOI 的瓶颈不只是自己的厂房。CEO 林宗男在电话会明确说，当前大挑战是用于 800G 或 1.6T 收发器的 DSP 和 TIA；1.6T 供应链尤其紧张，管理层正与关键供应商保持紧密合作。中文财经媒体也把“DSP 和 TIA 是关键限制因素”作为电话会重点。</p><p>这里需要严格区分事实层级。AAOI 官方披露的是公司自己受 DSP/TIA 供应约束，以及 Q4 1.6T 目标可能因材料供应而只能承诺 7,000 万至 8,000 万美元。Serenity 在此基础上把受益方向映射到 MaxLinear、Semtech 和 MACOM，并认为这是连接芯片的正面读透。前者是公司电话会事实，后者是投资者解读，中间还隔着这些芯片公司是否真的拿到新增订单、交期是否拉长、收入是否已经反映。</p><p>如果 DSP/TIA 供应真的持续紧张，AAOI 无法完成 Q4 指引，最先受损的是公司自身；如果供应商成功扩产并拿到订单，受益环节是 Marvell、Broadcom、MaxLinear、MACOM、Semtech 中已经认证并具备产能的公司。但“瓶颈存在”不等于“所有芯片公司都赚钱”，必须用分产品收入、在手订单、交期和毛利率验证。</p><ul><li>AAOI 官方口径：DSP/TIA 是 800G/1.6T 交付的最大挑战之一。</li><li>1.6T 供应链非常紧张；Q4 材料供应可能限制出货。</li><li>Serenity 将受益映射到 MXL/SMTC/MTSI，属于投资者解读。</li><li>芯片公司订单与收入仍需官方财报验证，不能从 AAOI 瓶颈直接推断。</li></ul></section><section class="article-section"><span class="part">Part 06</span><h3>1.6T 订单：2 亿美元在手订单与第四供应商认证</h3><p>AAOI 预计在 2-3 周内完成某大型超大规模数据中心客户的首款 1.6T 认证，成为该客户的第四家 1.6T 收发器供应商。Q3 末开始发货，Q4 放量；管理层相信 Q4 1.6T 收入可超过 7,000 万美元，Q1 2027 可能翻倍。当前 1.6T 在手订单超过 2 亿美元，目标在 2027Q2 前完成。</p><p>这个订单最有价值的地方不是绝对值，而是首次把 1.6T 从“送样”推进到“可确认收入”。但也要注意三点：第一，2 亿美元订单可能需要跨多个季度交付；第二，客户表示愿意要更多，公司因材料限制只能先承诺 7,000 万至 8,000 万美元；第三，Q4 能不能兑现，直接取决于 DSP/TIA 供应。</p><p>市场容易把“在手订单 2 亿美元”解读为 1.6T 已成功，但更准确的表达是：AAOI 已经拿到了第一波可交付订单，并进入客户认证最后阶段，真正决定估值的是这波订单能否按期转收入、后续客户能否跟进。</p><ul><li>1.6T 在手订单超 2 亿美元，目标 2027Q2 前完成。</li><li>预计 2-3 周内完成超大规模客户认证，成为第四家供应商。</li><li>Q4 1.6T 目标超 7,000 万美元；Q1 2027 可能翻倍。</li><li>在手订单不等于当期收入，交付节奏受器件供应影响。</li></ul></section><section class="article-section"><span class="part">Part 07</span><h3>利润与现金流：非 GAAP 毛利率 29.8%，长期 40% 但需要时间</h3><p>AAOI Q2 非 GAAP 毛利率 29.8%，去年同期 30.4%，指引 Q3 为 29%-30.5%。管理层维持长期非 GAAP 毛利率约 40% 的目标，路径包括 1.6T 占比提升、激光器和 CPO 相关模块放量、制造效率改善。Q4 因需要向关键供应商支付授权费，管理层预计毛利率约 32%-33%，高于短期水平但低于长期目标。</p><p>利润改善的另一个支柱是产品结构。管理层表示激光器毛利率约 55%-65%，ELSFP 毛利率预计超过 50%，但真正量产要到明年 Q3/Q4。也就是说，2026 年下半年的毛利率主要靠 1.6T 占比提升，2027 年才轮到激光器和 CPO 模块对毛利率形成更明显贡献。</p><p>现金流方面，Q2 资本开支高达 5.655 亿美元，其中约 2.8 亿美元是设备预付款；期末现金、现金等价物、短期投资和受限现金合计 5.088 亿美元。公司通过 ATM 发行已净融资 5.388 亿美元。这是一个高资本开支、高股权融资、高客户集中度的扩张模型，收入增长即使兑现，也还要看折旧、营运资金和后续融资是否侵蚀自由现金流。</p><ul><li>Q2 非 GAAP 毛利率 29.8%；Q3 指引 29%-30.5%。</li><li>长期目标约 40%；Q4 因供应商授权费预计约 32%-33%。</li><li>Q2 资本开支 5.655 亿美元，含设备预付款 2.8 亿美元。</li><li>期末现金等合计 5.088 亿美元；ATM 净融资 5.388 亿美元。</li></ul></section><section class="article-section"><span class="part">Part 08</span><h3>美国制造与政策：结构性催化，但客户集中度很高</h3><p>AAOI 管理层在电话会表示，美国本土制造一直是吸引客户的重要因素，近期光模块出口政策讨论明显增强了这一点；客户反馈积极，倾向于增加美国制造采购。公司自研激光器也被视为避开行业激光器短缺的差异化能力，并已与约五家 CPO 客户合作。</p><p>从产业逻辑看，美国制造、自研激光器和本土产能确实构成 AAOI 的差异化，但政策红利不会自动变成收入。公司订单已排到 2027Q2，短期新增产能上线前，政策带来的更多是份额优先级和客户信心，而不是立刻可交付的增量。</p><p>风险同样明显：前十大客户占收入 99%，CATV 大客户占 42%。一旦客户集中、政策变化或认证节奏扰动，AAOI 的收入波动会很大。出口政策若落地，美国本土供应商可能受益，但具体受益程度要等正式规则、客户订单和产能排产数据，不能把传闻直接当成利好。</p><ul><li>美国制造近期增强客户吸引力，管理层称客户反馈积极。</li><li>自研激光器缓解行业激光器短缺，CPO 合作约五家客户。</li><li>政策红利需转化为订单和收入，正式规则与排产数据仍待验证。</li><li>前十大客户占收入 99%，CATV 大客户占 42%。</li></ul></section><section class="article-section"><span class="part">Part 09</span><h3>市场预期差与验证清单</h3><p>市场对 AAOI 最大的分歧，已经从“需求是不是真的”变成“收入能不能按时兑现”。乐观者会把 Q4 超 5 亿美元、2027 年中月度收发器收入 4.71 亿美元当成已接近确定的路径；谨慎者会把产能建设、1.6T 认证、DSP/TIA 供应和毛利率压力当成足以让股价大幅波动的执行风险。</p><p>真正的预期差有三个。第一，DSP/TIA 瓶颈是否会缓解：如果 AAOI Q4 5 亿美元兑现，说明供应链顶住了；如果 Q4 实际收入显著低于指引，说明器件供应比管理层预期更紧。第二，1.6T 的定价和毛利：7,000 万美元只是第一波，2027 年能否持续翻倍，决定毛利率能否从 30% 附近走向 40%。第三，美国制造红利：政策能否转化为份额和排产优先权，而不是只停留在叙事。</p><p>后续需要逐项核验的指标包括：Q3 实际收入、800G 环比增速、1.6T 认证与交付时间、DSP/TIA 供应商的订单和交期、德州新厂投产进度、季度资本开支与自由现金流、客户集中度，以及 Marvell/MaxLinear/MACOM/Semtech 是否在后续财报中出现可验证的光模块器件订单和毛利贡献。</p><ul><li>预期差一：DSP/TIA 供给是否支持 Q4 超 5 亿美元。</li><li>预期差二：1.6T 第一波订单能否在 2027 年持续翻倍。</li><li>预期差三：美国制造红利能否转化为排产优先和份额。</li><li>验证重点：Q3 收入、1.6T 认证、德州产能、器件交期、芯片公司订单。</li></ul></section><section class="article-section"><span class="part">Part 10</span><h3>风险与来源边界</h3><p>本文事实层以 AAOI 官方财报和电话会为主，辅以媒体电话会整理和 Serenity 投资者解读。Q2 收入、毛利率、EPS、Q3 指引、全年约 11 亿美元、产能目标、1.6T 在手订单、DSP/TIA 表述均来自公司电话会或公司财报摘要；Q4 超过 5 亿美元属于管理层前瞻；2027 年中月度收发器收入 4.71 亿美元是管理层月度口径，若折算季度约 14.1 亿美元，属于计算口径，不是公司直接给出的季度指引。</p><p>关键风险包括：Q4 指引可能因器件供应和产能爬坡延后；GAAP 仍亏损，非 GAAP 盈利依赖外部税收优惠和政府补贴；客户集中度极高；Q2 资本开支 5.655 亿美元大幅高于收入，现金流仍需要股权和债务融资支持；DSP/TIA 受益方向是 Serenity 的投资者解读，未由相关芯片公司确认；美国出口政策未正式落地，不能把传闻当事实。</p><p>本文不是投资建议，不构成买入或卖出清单。所有“受益与受损环节”均指产业链逻辑，不代表目标价或仓位建议。决策前请回到 AAOI 官方财报、10-Q、SEC 文件、公司 IR 和电话会，并用后续订单、出货、毛利和现金流验证本文判断。</p><p>一句话收尾：AAOI 已经把“需求不存在”这个问题从桌面上拿掉了，现在的问题是它能不能在 12 个月内把 20 万片月产能变成 65 万片、把 5 亿美元 Q4 承诺变成收入，并让 DSP/TIA 从管理层的风险提示变成连接芯片公司的可验证利润。</p><ul><li>来源分层：AAOI 官方财报/电话会、媒体电话会整理、Serenity 投资者解读、本地公众号方法线索。</li><li>主要风险：Q4 执行、DSP/TIA 供应、GAAP 亏损、客户集中、高资本开支、政策未落地。</li><li>明确边界：非投资建议；验证请回到 SEC 文件、公司 IR、电话会和后续财报。</li></ul></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://au.finance.yahoo.com/news/applied-optoelectronics-reports-second-quarter-201000270.html" target="_blank" rel="noopener noreferrer">AAOI 官方 Q2 2026 财报摘要（Yahoo Finance 转载公司稿）</a></article><article class="source-card"><a href="https://stockanalysis.com/stocks/aaoi/transcripts/662748-q2-2026/" target="_blank" rel="noopener noreferrer">AAOI Q2 2026 电话会逐字稿</a></article><article class="source-card"><a href="https://news.qq.com/rain/a/20260807A0EYDJ00" target="_blank" rel="noopener noreferrer">财报见闻：美国光模块龙头 AAOI 电话会详细整理</a></article><article class="source-card"><a href="https://statementdog.com/news/17343" target="_blank" rel="noopener noreferrer">財報狗：祥茂光電（AAOI）Q2 電話會重點</a></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2085711500875116887" target="_blank" rel="noopener noreferrer">Serenity：AAOI DSP/TIA 与收入曲线</a></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2085603590903902621" target="_blank" rel="noopener noreferrer">Serenity：AAOI 激光器与关键器件瓶颈</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/_995vfWbMMx4-jg7nHCO0A" target="_blank" rel="noopener noreferrer">本地公众号：投研先锋《别被产能规划骗了 1.6T PCB 真实出货就这点》</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/cbktjyTpDBZ_k4cgFzVNpA" target="_blank" rel="noopener noreferrer">本地公众号：研报平权《AI产业链周报》</a></article></section></details><details class="reader-version"><summary><span><strong>活人版</strong><small>适合希望先看一个研究者怎样把 AAOI 财报、产能和 DSP/TIA 串起来再下判断的读者。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>AAOI 把 Q4 5 亿美元写在墙上了，现在要盯 DSP/TIA</h2><p>把财报摘要、电话会逐字稿和中文财经媒体的电话会整理放在一起看，真正要验证的是 Q4 超过 5 亿美元这条收入曲线能不能按时兑现。</p></div><section class="article-section"><span class="part">Part 01</span><h3>我为什么停下来</h3><p>我把 AAOI 的财报摘要、电话会逐字稿和中文财经媒体的电话会整理放在一起看，最想弄清楚一件事。Q4 超过 5 亿美元到底是能兑现的收入，还是管理层在给市场画一条线。目前能核实的是 Q2 收入 1.919 亿美元，同比增长 86%，非 GAAP 毛利率 29.8%，Q3 指引 2.55 亿到 2.9 亿美元，全年约 11 亿美元。</p><p>管理层还说 Q4 基于产能可以交付超过 5 亿美元，同时又把 800G/1.6T 的 DSP 和 TIA 列为最大挑战。这两句话放在一起，才让我停下来。</p></section><section class="article-section"><span class="part">Part 02</span><h3>先算一笔账</h3><p>Q2 的 800G 收入只有 1,280 万美元，占数据中心收入 11.9%。管理层预期 Q3 800G 环比接近五倍，分析师按指引推算 Q4 800G 加 1.6T 组合约 3.3 亿美元，CFO 说大致正确。3.3 亿这个数字来自分析师推算，不是公司分项指引，但这个规模已经说明，Q4 的 5 亿美元主要靠 800G 和 1.6T 撑起来，不再是 CATV 的旧故事。</p></section><section class="article-section"><span class="part">Part 03</span><h3>产能与器件</h3><p>AAOI 目前月产能接近 20 万台，年底目标超 65 万台，2027 年底超 93 万台。订单已经排到明年 Q2，客户需求比可供应能力高 20% 到 40%。听起来很满，但我更关心两件具体的事。德州 21 万平方英尺新厂能不能按计划投产，DSP 和 TIA 的交期会不会卡住出货。</p><p>管理层自己说 1.6T 供应链特别紧，Q4 材料供应可能只支持 7,000 万到 8,000 万美元的 1.6T 出货。把这条放在 2 亿美元在手订单旁边看，订单是真实的，转化却有时间差。</p></section><section class="article-section"><span class="part">Part 04</span><h3>受益链需要验证</h3><p>目前能确认的是 AAOI 自己受器件供应约束，以及公司预计 2 到 3 周内完成一家超大规模客户的 1.6T 认证，成为第四家供应商。Serenity 把受益方向指向 MaxLinear、Semtech、MACOM，这是基于行业逻辑的解读。Marvell 和 Broadcom 也常被列进来。</p><p>这些公司到底有没有拿到新订单、交期有没有拉长、收入有没有进财报，我还没看到足够直接的披露。瓶颈存在和利润落在谁身上是两件事。</p></section><section class="article-section"><span class="part">Part 05</span><h3>利润和现金流要分开看</h3><p>Q2 非 GAAP 毛利率 29.8%，Q4 预计因为供应商授权费到 32% 到 33%，长期目标约 40%。方向顺，但 Q2 资本开支 5.655 亿美元，期末现金 5.088 亿美元，通过按市价发行融资 5.388 亿美元。高增长要用这么多钱去铺产能，收入兑现后还要看折旧、库存和现金流能不能跟上。</p></section><section class="article-section"><span class="part">Part 06</span><h3>验证链与美国制造</h3><p>我最担心的一条验证链是这样。Q3 实际收入、800G 环比增速、1.6T 认证进度、DSP/TIA 供应商财报、德州新厂投产时间。如果 AAOI Q4 真的超过 5 亿美元，同时连接芯片公司开始出现光模块器件订单和交期信号，这轮曲线就可以从管理层承诺升级成行业事实。如果 Q4 明显低于 5 亿美元，或者供应商财报里找不到对应收入，最该反思的是把 AAOI 的瓶颈直接等同于所有连接芯片公司都受益的那句推断。</p><p>美国制造近期被市场当成催化剂，但正式出口规则还没落地，政策红利要等订单、排产和份额数据。客户集中度也很高，前十大客户占 99%，CATV 大客户占 42%。这类股票涨得快，单一客户或供应链的扰动也会很快传回股价。</p></section><section class="article-section"><span class="part">Part 07</span><h3>结论</h3><p>AAOI 已经把需求问题讲清楚了，接下来要盯的是交付，尤其是 DSP/TIA 这条线。我会把验证点放在 Q3 财报、1.6T 出货和芯片公司订单上，等材料再多一点再更新判断。</p></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://au.finance.yahoo.com/news/applied-optoelectronics-reports-second-quarter-201000270.html" target="_blank" rel="noopener noreferrer">AAOI 官方 Q2 2026 财报摘要（Yahoo Finance 转载公司稿）</a></article><article class="source-card"><a href="https://stockanalysis.com/stocks/aaoi/transcripts/662748-q2-2026/" target="_blank" rel="noopener noreferrer">AAOI Q2 2026 电话会逐字稿</a></article><article class="source-card"><a href="https://news.qq.com/rain/a/20260807A0EYDJ00" target="_blank" rel="noopener noreferrer">财报见闻：美国光模块龙头 AAOI 电话会详细整理</a></article><article class="source-card"><a href="https://statementdog.com/news/17343" target="_blank" rel="noopener noreferrer">財報狗：祥茂光電（AAOI）Q2 電話會重點</a></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2085711500875116887" target="_blank" rel="noopener noreferrer">Serenity：AAOI DSP/TIA 与收入曲线</a></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2085603590903902621" target="_blank" rel="noopener noreferrer">Serenity：AAOI 激光器与关键器件瓶颈</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/_995vfWbMMx4-jg7nHCO0A" target="_blank" rel="noopener noreferrer">本地公众号：投研先锋《别被产能规划骗了 1.6T PCB 真实出货就这点》</a></article><article class="source-card"><a href="https://mp.weixin.qq.com/s/cbktjyTpDBZ_k4cgFzVNpA" target="_blank" rel="noopener noreferrer">本地公众号：研报平权《AI产业链周报》</a></article></section></details></section>
+    <details class="deep-report"><summary>展开归档深度报告</summary><div class="markdown-body"><h1>AAOI 说 Q4 能超 5 亿美元，DSP/TIA 又不够用，光模块这轮增长到底卡在哪？</h1>
+<p>AAOI 第二季度营收 1.919 亿美元、重回非 GAAP 盈利，并给出 Q3 2.55 亿至 2.9 亿美元指引；管理层预计 Q4 可交付超 5 亿美元，同时把 DSP 和 TIA 列为最大挑战。本文拆开收入曲线、产能爬坡和关键器件约束，回答一个可证伪的问题：瓶颈何时从“需求不存在”变成“订单太多但交不出来”，又会在哪一季转成收入与利润。</p>
+<h2>候选状态</h2>
+<ul>
+<li>候选 ID：<code>2026-08-08_aaoi_dsp_tia_revenue_verification</code></li>
+<li>内容日期：2026-08-08</li>
+<li>状态：候选稿，等待用户对具体正文作首页批准</li>
+<li>自动发布：<code>false</code></li>
+<li>审批边界：本文尚未写入 <code>data/daily_article_v9_approved.json</code>，未归档，未发布。</li>
+</ul>
+<h2>先给结论：收入曲线是管理层的承诺，DSP/TIA 是执行风险</h2>
+<p>AAOI 在 8 月 6 日盘后交出一份市场期待已久的财报：第二季度营收 1.919 亿美元，同比增长 86%，环比增长 27%；非 GAAP 毛利率 29.8%，非 GAAP EPS 0.06 美元，重回季度盈利。但真正引发讨论的不是这组数字，而是管理层给出的下一段收入曲线：Q3 指引 2.55 亿至 2.9 亿美元，全年维持约 11 亿美元，并预计 Q4 基于产能可以交付超过 5 亿美元。</p>
+<p>如果这条曲线兑现，AAOI 将从一家季度收入不到 2 亿美元的公司，在一个季度内跳到 5 亿美元以上，意味着 Q3 到 Q4 环比增长约 60%。支撑这个数字的，是 800G 继续放量、1.6T 认证落地、德州新产能上线，以及 DSP/TIA 等关键器件的供应不再成为硬约束。</p>
+<p>本文的判断是：AAOI 的需求端已经不需要再被怀疑，管理层明确表示短期收入几乎完全受制于产能和关键器件供应；真正的风险在于供给端执行，尤其是 DSP/TIA。DSP/TIA 短缺目前是管理层在电话会里明确承认的最大挑战，但还没有变成 Marvell、MaxLinear、MACOM 或 Semtech 的公开订单与收入证明。因此，这篇稿子的核心问题是：AAOI 的收入曲线能不能按时兑现，DSP/TIA 瓶颈会在 2026Q4 成为收入拖累，还是在 2027 年成为连接芯片公司的利润增量。</p>
+<ul>
+<li>Q2 2026 营收 1.919 亿美元，+86% YoY，+27% QoQ。</li>
+<li>Q3 指引 2.55 亿至 2.9 亿美元；全年维持约 11 亿美元。</li>
+<li>管理层预计 Q4 可交付超 5 亿美元；DSP/TIA 是当前最大挑战之一。</li>
+</ul>
+<h2>Q2 官方数字：连续第五个季度创纪录，GAAP 仍亏损</h2>
+<p>AAOI Q2 收入 1.919 亿美元，处于此前 1.8 亿至 1.98 亿美元指引区间内；非 GAAP 毛利率 29.8%，符合 29%-30% 指引；非 GAAP EPS 0.06 美元，高于亏损 0.03 至盈利 0.03 美元的指引区间。按 GAAP 口径，公司仍亏损 2,280 万美元，每股亏损 0.28 美元，原因是股权薪酬和一次性费用。</p>
+<p>收入结构上，数据中心业务首次超过 CATV，Q2 收入 1.077 亿美元，同比增长 140.4%，占总收入 56%；CATV 收入创纪录达 8,060 万美元，同比增长 43.8%，占 42%；FTTH、电信和其他占 2%。前十大客户占收入 99%，其中三家客户收入占比超过 10%，CATV 大客户占 42%，两家数据中心客户分别占 26% 和 24%。</p>
+<p>这些数字说明两件事：一是 AAOI 已经不再是“只有故事没有收入”的光模块公司，800G 和 400G 都进入了财报；二是客户集中度极高，任何一家大客户的认证、排产或采购节奏变化，都会直接影响公司收入，这在估值里必须被扣分。</p>
+<ul>
+<li>数据中心收入 1.077 亿美元，+140.4% YoY，占总收入 56%。</li>
+<li>CATV 收入 8,060 万美元，+43.8% YoY，创纪录。</li>
+<li>GAAP 净亏损 2,280 万美元，EPS -0.28 美元；非 GAAP 盈利 550 万美元。</li>
+<li>前十大客户占收入 99%；三家客户占比超过 10%。</li>
+</ul>
+<h2>800G/1.6T 爬坡：从 1,280 万美元到 Q4 3.3 亿美元</h2>
+<p>Q2 数据中心的增长主要来自 400G 和 800G。400G 收入 4,840 万美元，占数据中心收入 45%，同比增长超四倍，环比增长 27.4%；800G 收入 1,280 万美元，占数据中心收入 11.9%，同比增长超十倍，环比翻倍。管理层预计 800G 收入 Q3 环比增长接近五倍，Q4 继续受产能和器件供应制约。</p>
+<p>问答环节中，分析师按指引推算，Q4 800G 与 1.6T 组合收入约为 3.3 亿美元，CFO 表示大致正确。管理层随后给出更整体的口径：基于产能，Q4 总营收可交付超过 5 亿美元，Q3 到 Q4 增长约 60%。这里的 3.3 亿美元不是公司直接给出的分项指引，而是分析师基于组合与总盘推算出的数字，但它说明 800G/1.6T 已成为下一段收入曲线的绝对主力。</p>
+<p>如果只看 Q2 的 800G 收入 1,280 万美元，市场很容易低估爬坡斜率。管理层说 Q3 800G 环比接近五倍，Q4 继续放量，1.6T 从 Q3 末开始交付，Q4 目标超过 7,000 万美元。把这些放在一起，AAOI 的收入故事已经从“验证需求”进入“验证交付”阶段。</p>
+<ul>
+<li>800G 收入 1,280 万美元，占数据中心收入 11.9%，Q3 预计环比接近 5 倍。</li>
+<li>400G 收入 4,840 万美元，占数据中心收入 45%。</li>
+<li>Q4 800G/1.6T 组合约 3.3 亿美元是分析师推算，管理层确认大致正确。</li>
+<li>Q4 总营收可交付超 5 亿美元，Q3 到 Q4 环比约 60%。</li>
+</ul>
+<h2>产能：20 万到 65 万再到 93 万，交付能力成为股价变量</h2>
+<p>AAOI 当前总产能接近每月 20 万台，高于一季度末约 10 万台的 800G/1.6T 产能。管理层预计今年底月产能超过 65 万台，2027 年底超过 93 万台，其中超过一半来自德州。配合这个目标，公司已在大休斯顿地区锁定超过 160 万平方英尺制造空间，21 万平方英尺的新厂预计 Q3 末开始初步生产，Pearland 和 Houston 扩产预计 2027 年初上线。</p>
+<p>产能扩张是 AAOI 故事里最硬的一部分，因为它意味着收入不是靠压榨现有产线，而是靠新建产能接住已经被预定的需求。管理层还明确表示，目前客户需求比公司可供产能高 20%-40%，订单已经排到明年第二季度，甚至 800G 产能爬坡才刚刚开始。</p>
+<p>但产能计划不是收入。建设、设备安装、客户认证、良率和关键器件供应都会影响实际爬坡。市场目前愿意给高估值，是因为管理层给出了一个可追踪的数字路径：Q4 超 5 亿美元，2027 年中月度收发器收入 4.71 亿美元。这个路径一旦因为某个环节延后，股价反应会先于财报。</p>
+<ul>
+<li>当前月产能接近 20 万台；2026 年底目标超 65 万台；2027 年底超 93 万台。</li>
+<li>休斯顿地区制造空间超 160 万平方英尺，21 万平方英尺新厂 Q3 末启动。</li>
+<li>客户需求较供应高 20%-40%，订单排到 2027Q2。</li>
+<li>产能目标不等于收入；建设、认证、良率、器件缺一不可。</li>
+</ul>
+<h2>DSP/TIA：为什么是最大挑战，受益链不能直接兑现</h2>
+<p>AAOI 的瓶颈不只是自己的厂房。CEO 林宗男在电话会明确说，当前大挑战是用于 800G 或 1.6T 收发器的 DSP 和 TIA；1.6T 供应链尤其紧张，管理层正与关键供应商保持紧密合作。中文财经媒体也把“DSP 和 TIA 是关键限制因素”作为电话会重点。</p>
+<p>这里需要严格区分事实层级。AAOI 官方披露的是公司自己受 DSP/TIA 供应约束，以及 Q4 1.6T 目标可能因材料供应而只能承诺 7,000 万至 8,000 万美元。Serenity 在此基础上把受益方向映射到 MaxLinear、Semtech 和 MACOM，并认为这是连接芯片的正面读透。前者是公司电话会事实，后者是投资者解读，中间还隔着这些芯片公司是否真的拿到新增订单、交期是否拉长、收入是否已经反映。</p>
+<p>如果 DSP/TIA 供应真的持续紧张，AAOI 无法完成 Q4 指引，最先受损的是公司自身；如果供应商成功扩产并拿到订单，受益环节是 Marvell、Broadcom、MaxLinear、MACOM、Semtech 中已经认证并具备产能的公司。但“瓶颈存在”不等于“所有芯片公司都赚钱”，必须用分产品收入、在手订单、交期和毛利率验证。</p>
+<ul>
+<li>AAOI 官方口径：DSP/TIA 是 800G/1.6T 交付的最大挑战之一。</li>
+<li>1.6T 供应链非常紧张；Q4 材料供应可能限制出货。</li>
+<li>Serenity 将受益映射到 MXL/SMTC/MTSI，属于投资者解读。</li>
+<li>芯片公司订单与收入仍需官方财报验证，不能从 AAOI 瓶颈直接推断。</li>
+</ul>
+<h2>1.6T 订单：2 亿美元在手订单与第四供应商认证</h2>
+<p>AAOI 预计在 2-3 周内完成某大型超大规模数据中心客户的首款 1.6T 认证，成为该客户的第四家 1.6T 收发器供应商。Q3 末开始发货，Q4 放量；管理层相信 Q4 1.6T 收入可超过 7,000 万美元，Q1 2027 可能翻倍。当前 1.6T 在手订单超过 2 亿美元，目标在 2027Q2 前完成。</p>
+<p>这个订单最有价值的地方不是绝对值，而是首次把 1.6T 从“送样”推进到“可确认收入”。但也要注意三点：第一，2 亿美元订单可能需要跨多个季度交付；第二，客户表示愿意要更多，公司因材料限制只能先承诺 7,000 万至 8,000 万美元；第三，Q4 能不能兑现，直接取决于 DSP/TIA 供应。</p>
+<p>市场容易把“在手订单 2 亿美元”解读为 1.6T 已成功，但更准确的表达是：AAOI 已经拿到了第一波可交付订单，并进入客户认证最后阶段，真正决定估值的是这波订单能否按期转收入、后续客户能否跟进。</p>
+<ul>
+<li>1.6T 在手订单超 2 亿美元，目标 2027Q2 前完成。</li>
+<li>预计 2-3 周内完成超大规模客户认证，成为第四家供应商。</li>
+<li>Q4 1.6T 目标超 7,000 万美元；Q1 2027 可能翻倍。</li>
+<li>在手订单不等于当期收入，交付节奏受器件供应影响。</li>
+</ul>
+<h2>利润与现金流：非 GAAP 毛利率 29.8%，长期 40% 但需要时间</h2>
+<p>AAOI Q2 非 GAAP 毛利率 29.8%，去年同期 30.4%，指引 Q3 为 29%-30.5%。管理层维持长期非 GAAP 毛利率约 40% 的目标，路径包括 1.6T 占比提升、激光器和 CPO 相关模块放量、制造效率改善。Q4 因需要向关键供应商支付授权费，管理层预计毛利率约 32%-33%，高于短期水平但低于长期目标。</p>
+<p>利润改善的另一个支柱是产品结构。管理层表示激光器毛利率约 55%-65%，ELSFP 毛利率预计超过 50%，但真正量产要到明年 Q3/Q4。也就是说，2026 年下半年的毛利率主要靠 1.6T 占比提升，2027 年才轮到激光器和 CPO 模块对毛利率形成更明显贡献。</p>
+<p>现金流方面，Q2 资本开支高达 5.655 亿美元，其中约 2.8 亿美元是设备预付款；期末现金、现金等价物、短期投资和受限现金合计 5.088 亿美元。公司通过 ATM 发行已净融资 5.388 亿美元。这是一个高资本开支、高股权融资、高客户集中度的扩张模型，收入增长即使兑现，也还要看折旧、营运资金和后续融资是否侵蚀自由现金流。</p>
+<ul>
+<li>Q2 非 GAAP 毛利率 29.8%；Q3 指引 29%-30.5%。</li>
+<li>长期目标约 40%；Q4 因供应商授权费预计约 32%-33%。</li>
+<li>Q2 资本开支 5.655 亿美元，含设备预付款 2.8 亿美元。</li>
+<li>期末现金等合计 5.088 亿美元；ATM 净融资 5.388 亿美元。</li>
+</ul>
+<h2>美国制造与政策：结构性催化，但客户集中度很高</h2>
+<p>AAOI 管理层在电话会表示，美国本土制造一直是吸引客户的重要因素，近期光模块出口政策讨论明显增强了这一点；客户反馈积极，倾向于增加美国制造采购。公司自研激光器也被视为避开行业激光器短缺的差异化能力，并已与约五家 CPO 客户合作。</p>
+<p>从产业逻辑看，美国制造、自研激光器和本土产能确实构成 AAOI 的差异化，但政策红利不会自动变成收入。公司订单已排到 2027Q2，短期新增产能上线前，政策带来的更多是份额优先级和客户信心，而不是立刻可交付的增量。</p>
+<p>风险同样明显：前十大客户占收入 99%，CATV 大客户占 42%。一旦客户集中、政策变化或认证节奏扰动，AAOI 的收入波动会很大。出口政策若落地，美国本土供应商可能受益，但具体受益程度要等正式规则、客户订单和产能排产数据，不能把传闻直接当成利好。</p>
+<ul>
+<li>美国制造近期增强客户吸引力，管理层称客户反馈积极。</li>
+<li>自研激光器缓解行业激光器短缺，CPO 合作约五家客户。</li>
+<li>政策红利需转化为订单和收入，正式规则与排产数据仍待验证。</li>
+<li>前十大客户占收入 99%，CATV 大客户占 42%。</li>
+</ul>
+<h2>市场预期差与验证清单</h2>
+<p>市场对 AAOI 最大的分歧，已经从“需求是不是真的”变成“收入能不能按时兑现”。乐观者会把 Q4 超 5 亿美元、2027 年中月度收发器收入 4.71 亿美元当成已接近确定的路径；谨慎者会把产能建设、1.6T 认证、DSP/TIA 供应和毛利率压力当成足以让股价大幅波动的执行风险。</p>
+<p>真正的预期差有三个。第一，DSP/TIA 瓶颈是否会缓解：如果 AAOI Q4 5 亿美元兑现，说明供应链顶住了；如果 Q4 实际收入显著低于指引，说明器件供应比管理层预期更紧。第二，1.6T 的定价和毛利：7,000 万美元只是第一波，2027 年能否持续翻倍，决定毛利率能否从 30% 附近走向 40%。第三，美国制造红利：政策能否转化为份额和排产优先权，而不是只停留在叙事。</p>
+<p>后续需要逐项核验的指标包括：Q3 实际收入、800G 环比增速、1.6T 认证与交付时间、DSP/TIA 供应商的订单和交期、德州新厂投产进度、季度资本开支与自由现金流、客户集中度，以及 Marvell/MaxLinear/MACOM/Semtech 是否在后续财报中出现可验证的光模块器件订单和毛利贡献。</p>
+<ul>
+<li>预期差一：DSP/TIA 供给是否支持 Q4 超 5 亿美元。</li>
+<li>预期差二：1.6T 第一波订单能否在 2027 年持续翻倍。</li>
+<li>预期差三：美国制造红利能否转化为排产优先和份额。</li>
+<li>验证重点：Q3 收入、1.6T 认证、德州产能、器件交期、芯片公司订单。</li>
+</ul>
+<h2>风险与来源边界</h2>
+<p>本文事实层以 AAOI 官方财报和电话会为主，辅以媒体电话会整理和 Serenity 投资者解读。Q2 收入、毛利率、EPS、Q3 指引、全年约 11 亿美元、产能目标、1.6T 在手订单、DSP/TIA 表述均来自公司电话会或公司财报摘要；Q4 超过 5 亿美元属于管理层前瞻；2027 年中月度收发器收入 4.71 亿美元是管理层月度口径，若折算季度约 14.1 亿美元，属于计算口径，不是公司直接给出的季度指引。</p>
+<p>关键风险包括：Q4 指引可能因器件供应和产能爬坡延后；GAAP 仍亏损，非 GAAP 盈利依赖外部税收优惠和政府补贴；客户集中度极高；Q2 资本开支 5.655 亿美元大幅高于收入，现金流仍需要股权和债务融资支持；DSP/TIA 受益方向是 Serenity 的投资者解读，未由相关芯片公司确认；美国出口政策未正式落地，不能把传闻当事实。</p>
+<p>本文不是投资建议，不构成买入或卖出清单。所有“受益与受损环节”均指产业链逻辑，不代表目标价或仓位建议。决策前请回到 AAOI 官方财报、10-Q、SEC 文件、公司 IR 和电话会，并用后续订单、出货、毛利和现金流验证本文判断。</p>
+<p>一句话收尾：AAOI 已经把“需求不存在”这个问题从桌面上拿掉了，现在的问题是它能不能在 12 个月内把 20 万片月产能变成 65 万片、把 5 亿美元 Q4 承诺变成收入，并让 DSP/TIA 从管理层的风险提示变成连接芯片公司的可验证利润。</p>
+<ul>
+<li>来源分层：AAOI 官方财报/电话会、媒体电话会整理、Serenity 投资者解读、本地公众号方法线索。</li>
+<li>主要风险：Q4 执行、DSP/TIA 供应、GAAP 亏损、客户集中、高资本开支、政策未落地。</li>
+<li>明确边界：非投资建议；验证请回到 SEC 文件、公司 IR、电话会和后续财报。</li>
+</ul>
+<h2>证据与来源</h2>
+<p>【1】<a href="https://au.finance.yahoo.com/news/applied-optoelectronics-reports-second-quarter-201000270.html">AAOI 官方 Q2 2026 财报摘要（Yahoo Finance 转载公司稿）</a></p>
+<p>【2】<a href="https://stockanalysis.com/stocks/aaoi/transcripts/662748-q2-2026/">AAOI Q2 2026 电话会逐字稿</a></p>
+<p>【3】<a href="https://news.qq.com/rain/a/20260807A0EYDJ00">财报见闻：美国光模块龙头 AAOI 电话会详细整理</a></p>
+<p>【4】<a href="https://statementdog.com/news/17343">財報狗：祥茂光電（AAOI）Q2 電話會重點</a></p>
+<p>【5】<a href="https://x.com/aleabitoreddit/status/2085711500875116887">Serenity：AAOI DSP/TIA 与收入曲线</a></p>
+<p>【6】<a href="https://x.com/aleabitoreddit/status/2085603590903902621">Serenity：AAOI 激光器与关键器件瓶颈</a></p>
+<p>【7】<a href="https://mp.weixin.qq.com/s/_995vfWbMMx4-jg7nHCO0A">本地公众号：投研先锋《别被产能规划骗了 1.6T PCB 真实出货就这点》</a></p>
+<p>【8】<a href="https://mp.weixin.qq.com/s/cbktjyTpDBZ_k4cgFzVNpA">本地公众号：研报平权《AI产业链周报》</a></p>
+<h2>审核边界</h2>
+<ul>
+<li>事实、管理层前瞻陈述、外部估算与本文判断已分层。</li>
+<li>外部公众号只用于发现问题和研究方法，未复制原句，也未将专家判断升级为公司事实。</li>
+<li>行情与估值为时点快照，不能替代完整估值模型。</li>
+<li>当前文件是候选稿，尚未获得用户对具体正文的首页发布批准。</li>
+<li>本文不构成投资建议。</li>
+</ul></div></details>
+    </main>
+  <footer class="shell">历史文章来自本地不可变批准归档；页面用于研究回溯，不构成投资建议。</footer>
+</body>
+</html>
