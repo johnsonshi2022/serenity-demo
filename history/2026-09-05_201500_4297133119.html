@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="多年协议锁住数量和利润下限，也可能截住部分现货涨幅。9月30日要看合约价、毛利和现金能否同步。">
+  <title>存储现货还在涨，Micron的合约上限会挡住多少利润 - Serenity 往日报告</title>
+  <style>
+    :root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(1060px,calc(100vw - 28px));margin:0 auto}.top{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(246,248,251,.94);backdrop-filter:blur(10px)}
+    .top-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{color:var(--ink);font-weight:900;text-decoration:none}.back{display:inline-flex;align-items:center;min-height:36px;border:1px solid #bfdbfe;border-radius:999px;background:#fff;padding:0 13px;text-decoration:none;font-size:13px;font-weight:800}
+    main{padding:34px 0 72px}.hero,.panel,.history-card,.reader-version{border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hero{padding:30px}.eyebrow,.part{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:900px;margin:10px 0 0;color:var(--ink);font-size:clamp(30px,5vw,52px);line-height:1.13;letter-spacing:-.035em}.hero>p{max-width:850px;margin:14px 0 0;color:#475569;font-size:15px;line-height:1.85}
+    .meta,.topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#f8fafc;padding:5px 9px;color:#475569;font-size:11px;font-weight:750}.chip.blue{border-color:#bfdbfe;background:var(--blue-soft);color:#1d4ed8}
+    .search{width:100%;margin-top:18px;border:1px solid #cbd5e1;border-radius:13px;background:#fff;padding:13px 15px;color:var(--ink);font:inherit;outline:none}.search:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}
+    .history-list{display:grid;gap:14px;margin-top:18px}.history-card{padding:20px}.history-card h2{margin:8px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.history-card p{margin:9px 0 0;line-height:1.75}.history-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.history-actions a{font-weight:850;text-decoration:none}
+    .empty{display:none;margin-top:18px;border:1px dashed #cbd5e1;border-radius:14px;background:#fff;padding:24px;text-align:center;color:var(--muted)}
+    .article-header{padding:28px}.article-header h1{font-size:clamp(28px,4vw,45px)}.versions{display:grid;gap:16px;margin-top:18px}.reader-version{overflow:hidden}.reader-version>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;cursor:pointer;list-style:none}.reader-version>summary::-webkit-details-marker{display:none}.reader-version>summary span{min-width:0}.reader-version>summary strong{display:block;color:var(--ink);font-size:17px}.reader-version>summary small{display:block;margin-top:5px;color:var(--muted);line-height:1.55}.reader-version>summary b{color:var(--blue);font-size:12px;white-space:nowrap}
+    .version-head{border-top:1px solid var(--line);background:var(--blue-soft);padding:23px}.version-head h2{margin:0;color:var(--ink);font-size:27px;line-height:1.35}.version-head p{margin:10px 0 0;line-height:1.75}.article-section{border-top:1px solid var(--line);padding:25px 23px}.article-section h3{margin:7px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.article-section p,.article-section li{font-size:15px;line-height:1.9}.article-section ul{padding-left:22px}code{border-radius:5px;background:#eef2f7;padding:2px 5px}
+    .sources{display:grid;gap:10px}.sources h3{margin-bottom:2px}.source-card{border:1px solid var(--line);border-radius:12px;background:#f8fafc;padding:13px}.source-card a,.source-card strong{font-weight:850}.source-card p{margin:7px 0 0;font-size:13px;line-height:1.7}.source-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.55}
+    .deep-report{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}.deep-report>summary{padding:19px 21px;cursor:pointer;color:var(--ink);font-weight:900}.markdown-body{border-top:1px solid var(--line);padding:24px;overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{color:var(--ink);line-height:1.4}.markdown-body h1{font-size:28px}.markdown-body h2{margin-top:34px;font-size:23px}.markdown-body h3{margin-top:27px;font-size:19px}.markdown-body p,.markdown-body li{line-height:1.85}.markdown-body table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.markdown-body blockquote{margin:16px 0;border-left:4px solid #93c5fd;background:#eff6ff;padding:10px 15px;color:#475569}.markdown-body pre{overflow:auto;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px}
+    footer{padding:24px 0 45px;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:680px){.top-inner{min-height:58px}main{padding-top:18px}.hero,.article-header{padding:21px}.history-card{padding:17px}.reader-version>summary{align-items:flex-start;padding:17px}.version-head,.article-section,.markdown-body{padding:18px}.article-section p,.article-section li{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell top-inner"><a class="brand" href="index.html">Serenity 往日报告</a><a class="back" href="../index.html#daily-article">返回当前首页</a></div></header>
+  <main class="shell">
+    <article class="article-header panel">
+      <span class="eyebrow">Approved Homepage Archive</span>
+      <h1>存储现货还在涨，Micron的合约上限会挡住多少利润</h1>
+      <p>多年协议锁住数量和利润下限，也可能截住部分现货涨幅。9月30日要看合约价、毛利和现金能否同步。</p>
+      <div class="meta"><span class="chip blue">截至 2026-09-05</span><span class="chip">批准于 2026-09-05T20:15:00+08:00</span><span class="chip">归档 ID：2026-09-05_201500_4297133119</span></div>
+      <div class="topics"><span class="chip">Micron</span><span class="chip">DRAM</span><span class="chip">NAND</span><span class="chip">长期供货协议</span></div>
+      <div class="history-actions"><a href="index.html">← 返回历史文章列表</a></div>
+    </article>
+    <section class="versions"><details class="reader-version" open><summary><span><strong>研究版</strong><small>完整保留获批时的研究结论、证据边界与跟踪指标。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>存储现货还在涨，Micron的合约上限会挡住多少利润</h2><p>多年协议锁住数量和利润下限，也可能截住部分现货涨幅。9月30日要看合约价、毛利和现金能否同步。</p></div><section class="article-section"><span class="part">Part 01</span><h3>缺货与利润之间隔着合同</h3><p>9月5日下午，Serenity写了一条存储帖。几小时后，浏览量约17.5万，点赞680个，回复54条。帖子谈到MU和SNDK股价修复，也判断存储瓶颈没有改变。我顺着这条线索去翻Micron的10-Q，最值得研究的地方藏在合同条款里。</p><p>存储现货越贵，芯片厂当然更容易挣钱。Micron已经签下多份多年战略客户协议。客户承诺购买约定数量，合同带有take-or-pay条款，白话讲就是拿不拿货都要按约定承担付款义务。这个安排给Micron锁住了销量，也给客户锁住供给。</p><p>数量锁住以后，价格怎样走，决定了利润还能向上弹多少。Micron披露，多数协议采用固定价格，或者设最低价和最高价。少数协议才跟随市场。大型协议对既有产品的价格上限，大致参照2026年第二季度市场价，价格下限则贯穿协议期。现货继续冲高时，落在这些合同里的货未必同步涨价。</p></section><section class="article-section"><span class="part">Part 02</span><h3>五十亿美元能说明什么</h3><p>截至5月28日，Micron披露的剩余履约义务约50亿美元，其中4.22亿美元已经形成合同负债，约三分之一预计在未来十二个月确认收入。剩余履约义务常被简称为RPO，可以把它理解成合同里还没有完成的最低承诺。</p><p>这个数字留了不少缺口。Micron按最低承诺量和最低价格计算RPO。没有固定价或价格带的协议没有算进去，原始期限不超过一年的合同也被排除。50亿美元给出了合同收入的一条下限线索，它没有覆盖全部协议，更不能代表现货再涨以后Micron一定拿到的钱。</p><p>Micron还说，即使按价格下限，这些带价格区间的协议也会带来高于以往周期季度峰值的毛利率。这句话分量很重，身份仍是管理层判断。接下来的财报要看实际毛利、合同负债和自由现金流是否一起兑现。</p></section><section class="article-section"><span class="part">Part 03</span><h3>涨价已经开始遇到需求边界</h3><p>TrendForce在7月3日预计，2026年第三季度传统DRAM合约价环比上涨13%至18%，NAND Flash合约价环比上涨10%至15%。这份调查也提到另一面。PC和智能手机客户开始碰到承受上限，高基数会让涨幅放慢。AI推理和大型数据中心继续支撑NAND需求，消费端却可能先缩量。</p><p>这正是当前最有力的反方。供给仍紧，不等于价格能一直加速。价格太高会推迟换机，客户也会减少库存。竞争者增加可售产量以后，渠道现货通常先松动。Micron又有一部分货落在价格上限内，报表增速可能早于缺货叙事转弯。</p><p>从钱的路径看，现货只在第一站。大客户按合约价付款，Micron再按DRAM、NAND和HBM的实际交付确认收入。产品组合、良率与制造成本决定毛利。应收账款、库存和资本开支最后决定利润能留下多少现金。任何一站放慢，现货涨幅都不能原样走到自由现金流。</p></section><section class="article-section"><span class="part">Part 04</span><h3>9月30日该查什么</h3><p>Micron下一次财报提供了很清楚的验证点。先看战略协议覆盖多少DRAM和NAND数量，价格带有没有调整。再看RPO与合同负债怎样变化，库存和应收账款有没有抬高。毛利如果继续扩张，自由现金流也要跟上。</p><p>合约实际价格若继续随现货上调，毛利与现金同步增加，库存没有堆起来，价格上限压住利润弹性的担忧就该下调。收入维持高位，毛利或现金却先回落，市场把现货涨幅直接年化进估值的做法就需要收敛。</p><p>当前材料支持一个有限判断。Micron的多年协议让销量和利润下限更容易看清，也削弱了部分现货上涨带来的额外弹性。它说明经营韧性正在改善，无法单独证明MU的股价便宜，更没有给出买入时点或仓位答案。</p><ul><li>战略客户协议覆盖的产品与数量比例</li><li>实际合约价和现货价的差距</li><li>RPO、合同负债、库存和应收账款</li><li>毛利、自由现金流和资本开支</li><li>消费电子需求与新增可售产量</li></ul></section><section class="article-section"><span class="part">Part 05</span><h3>来源边界</h3><p>社媒帖子只用于发现市场正在争论什么。合同结构与财务口径以Micron提交给SEC的文件为准，行业价格采用TrendForce调查。渠道所称40%至60%缺口没有在本轮找到对应一手文件，因此没有写入结论。本文只讨论公开资料里的经营与合同结构，不构成投资建议。</p></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm" target="_blank" rel="noopener noreferrer">Micron 2026年第三财季10-Q</a></article><article class="source-card"><a href="https://www.trendforce.com/presscenter/news/20260703-13134.html" target="_blank" rel="noopener noreferrer">TrendForce 2026年第三季度存储价格调查</a></article><article class="source-card"><a href="https://x.com/aleabitoreddit/status/2096149203278037407" target="_blank" rel="noopener noreferrer">Serenity 9月5日存储观点与热度记录</a></article><article class="source-card"><a href="https://x.com/Schulz_Research/status/2096167578318287343" target="_blank" rel="noopener noreferrer">Schulz Research对合约价格上限的反方提示</a></article></section></details></section>
+    <details class="deep-report"><summary>展开归档深度报告</summary><div class="markdown-body"><h1>存储现货还在涨，Micron 的合约上限会挡住多少利润</h1>
+<p>9 月 5 日下午，Serenity 写了一条存储帖。几小时后，浏览量约 17.5 万，点赞 680 个，回复 54 条。帖子谈到 MU 和 SNDK 股价修复，也判断存储瓶颈没有改变。我顺着这条线索去翻 Micron 的 10-Q，最值得研究的地方藏在合同条款里。</p>
+<p>存储现货越贵，芯片厂当然更容易挣钱。Micron 已经签下多份多年战略客户协议。客户承诺购买约定数量，合同带有 take-or-pay 条款，白话讲就是拿不拿货都要按约定承担付款义务。这个安排给 Micron 锁住了销量，也给客户锁住供给。</p>
+<p>数量锁住以后，价格怎样走，决定了利润还能向上弹多少。Micron 披露，多数协议采用固定价格，或者设最低价和最高价。少数协议才跟随市场。大型协议对既有产品的价格上限，大致参照 2026 年第二季度市场价，价格下限则贯穿协议期。现货继续冲高时，落在这些合同里的货未必同步涨价。</p>
+<h2>五十亿美元能说明什么</h2>
+<p>截至 5 月 28 日，Micron 披露的剩余履约义务约 50 亿美元，其中 4.22 亿美元已经形成合同负债，约三分之一预计在未来十二个月确认收入。剩余履约义务常被简称为 RPO，可以把它理解成合同里还没有完成的最低承诺。</p>
+<p>这个数字留了不少缺口。Micron 按最低承诺量和最低价格计算 RPO。没有固定价或价格带的协议没有算进去，原始期限不超过一年的合同也被排除。50 亿美元给出了合同收入的一条下限线索，它没有覆盖全部协议，更不能代表现货再涨以后 Micron 一定拿到的钱。</p>
+<p>Micron 还说，即使按价格下限，这些带价格区间的协议也会带来高于以往周期季度峰值的毛利率。这句话分量很重，身份仍是管理层判断。接下来的财报要看实际毛利、合同负债和自由现金流是否一起兑现。</p>
+<h2>涨价已经开始遇到需求边界</h2>
+<p>TrendForce 在 7 月 3 日预计，2026 年第三季度传统 DRAM 合约价环比上涨 13% 至 18%，NAND Flash 合约价环比上涨 10% 至 15%。这份调查也提到另一面。PC 和智能手机客户开始碰到承受上限，高基数会让涨幅放慢。AI 推理和大型数据中心继续支撑 NAND 需求，消费端却可能先缩量。</p>
+<p>这正是当前最有力的反方。供给仍紧，不等于价格能一直加速。价格太高会推迟换机，客户也会减少库存。竞争者增加可售产量以后，渠道现货通常先松动。Micron 又有一部分货落在价格上限内，报表增速可能早于缺货叙事转弯。</p>
+<p>从钱的路径看，现货只在第一站。大客户按合约价付款，Micron 再按 DRAM、NAND 和 HBM 的实际交付确认收入。产品组合、良率与制造成本决定毛利。应收账款、库存和资本开支最后决定利润能留下多少现金。任何一站放慢，现货涨幅都不能原样走到自由现金流。</p>
+<h2>9 月 30 日该查什么</h2>
+<p>Micron 下一次财报提供了很清楚的验证点。先看战略协议覆盖多少 DRAM 和 NAND 数量，价格带有没有调整。再看 RPO 与合同负债怎样变化，库存和应收账款有没有抬高。毛利如果继续扩张，自由现金流也要跟上。</p>
+<p>合约实际价格若继续随现货上调，毛利与现金同步增加，库存没有堆起来，价格上限压住利润弹性的担忧就该下调。收入维持高位，毛利或现金却先回落，市场把现货涨幅直接年化进估值的做法就需要收敛。</p>
+<p>当前材料支持一个有限判断。Micron 的多年协议让销量和利润下限更容易看清，也削弱了部分现货上涨带来的额外弹性。它说明经营韧性正在改善，无法单独证明 MU 的股价便宜，更没有给出买入时点或仓位答案。</p>
+<h2>关键来源</h2>
+<ul>
+<li><a href="https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm">Micron 2026 年第三财季 10-Q</a></li>
+<li><a href="https://www.trendforce.com/presscenter/news/20260703-13134.html">TrendForce 2026 年第三季度存储价格调查</a></li>
+<li><a href="https://x.com/aleabitoreddit/status/2096149203278037407">Serenity 9 月 5 日存储观点</a></li>
+<li><a href="https://x.com/Schulz_Research/status/2096167578318287343">Schulz Research 对合约价格上限的反方提示</a></li>
+</ul>
+<h2>后续验证清单</h2>
+<ul>
+<li>战略客户协议覆盖的产品与数量比例</li>
+<li>实际合约价和现货价的差距</li>
+<li>RPO、合同负债、库存和应收账款</li>
+<li>毛利、自由现金流和资本开支</li>
+<li>消费电子需求与新增可售产量</li>
+</ul>
+<p>本文只讨论公开资料里的经营与合同结构，不构成投资建议。</p></div></details>
+    </main>
+  <footer class="shell">历史文章来自本地不可变批准归档；页面用于研究回溯，不构成投资建议。</footer>
+</body>
+</html>
