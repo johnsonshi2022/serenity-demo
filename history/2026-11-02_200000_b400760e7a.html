@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="在万卡至十万卡AI超算集群互连网络速率从800G迈向1.6T（单通道200G/lane PAM4）的演进进程中，无源铜缆DAC在奈奎斯特频率56GHz高频下遭遇电磁趋肤效应与介质损耗的严重物理死墙，传输距离超过2米时插入损耗突破35dB极限导致眼图彻底闭合，跨机柜与集群网络互连强制100%转向光收发模块。短距AOC面临850nm GaAs VCSEL高阶横模色散与光灾变损伤（COD）极限，中长距面临1310nm InP EML量子阱高温热衰减。Coherent（NYSE: COHR）作为全球极少数打通从化合物衬底（InP/GaAs/SiC）、外延芯片制造到800G/1.6T光收发模块封装的垂直一体化（IDM）超级巨头，深度卡位英伟达Blackwell/Rubin及北美云巨头万卡集群供应链。SEC官方一手2026财年Form 10-K年报证实：公司全年实现营收53.68亿美元（同比+18.4%），Networking网络板块营收大增44.2%至31.85亿美元（占比达59.3%），Q4单季Datacom光模块与光器件营收达8.92亿美元（同比暴增超75%），Q4 Non-GAAP毛利率回升至38.6%，单季Non-GAAP EPS达1.18美元（同比暴增126%），全年Non-GAAP EPS达3.72美元，手握11.2亿美元现金储备。然而一手财报同样揭示严峻反方约束：并购历史遗留的41.2亿美元巨额有息负债带来每年近2.85亿美元刚性利息支出（单季超7100万美元），严重吞噬报表利润导致FY2026 GAAP EPS仅1.12美元（仅为Non-GAAP的30%）；碳化硅业务重组与下游光模块激烈价格战带来潜在减值与毛利侵蚀；在极端压力测试下，公司面临-48%至-55%的最大回撤下行边界（股价测试42-48美元支撑位）。">
+  <title>AI集群1.6T高速光互联电光转化与InP/GaAs量子阱材料物理极限：Coherent（COHR.US）800G/1.6T光收发模块与VCSEL/EML激光芯片放量、40亿美元高额有息负债承压与碳化硅剥离重组的EPS折现 - Serenity 往日报告</title>
+  <style>
+    :root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--text:#334155;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--blue-soft:#eff6ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:var(--blue)}.shell{width:min(1060px,calc(100vw - 28px));margin:0 auto}.top{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(246,248,251,.94);backdrop-filter:blur(10px)}
+    .top-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{color:var(--ink);font-weight:900;text-decoration:none}.back{display:inline-flex;align-items:center;min-height:36px;border:1px solid #bfdbfe;border-radius:999px;background:#fff;padding:0 13px;text-decoration:none;font-size:13px;font-weight:800}
+    main{padding:34px 0 72px}.hero,.panel,.history-card,.reader-version{border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hero{padding:30px}.eyebrow,.part{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    h1{max-width:900px;margin:10px 0 0;color:var(--ink);font-size:clamp(30px,5vw,52px);line-height:1.13;letter-spacing:-.035em}.hero>p{max-width:850px;margin:14px 0 0;color:#475569;font-size:15px;line-height:1.85}
+    .meta,.topics{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#f8fafc;padding:5px 9px;color:#475569;font-size:11px;font-weight:750}.chip.blue{border-color:#bfdbfe;background:var(--blue-soft);color:#1d4ed8}
+    .search{width:100%;margin-top:18px;border:1px solid #cbd5e1;border-radius:13px;background:#fff;padding:13px 15px;color:var(--ink);font:inherit;outline:none}.search:focus{border-color:#60a5fa;box-shadow:0 0 0 4px #dbeafe}
+    .history-list{display:grid;gap:14px;margin-top:18px}.history-card{padding:20px}.history-card h2{margin:8px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.history-card p{margin:9px 0 0;line-height:1.75}.history-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.history-actions a{font-weight:850;text-decoration:none}
+    .empty{display:none;margin-top:18px;border:1px dashed #cbd5e1;border-radius:14px;background:#fff;padding:24px;text-align:center;color:var(--muted)}
+    .article-header{padding:28px}.article-header h1{font-size:clamp(28px,4vw,45px)}.versions{display:grid;gap:16px;margin-top:18px}.reader-version{overflow:hidden}.reader-version>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;cursor:pointer;list-style:none}.reader-version>summary::-webkit-details-marker{display:none}.reader-version>summary span{min-width:0}.reader-version>summary strong{display:block;color:var(--ink);font-size:17px}.reader-version>summary small{display:block;margin-top:5px;color:var(--muted);line-height:1.55}.reader-version>summary b{color:var(--blue);font-size:12px;white-space:nowrap}
+    .version-head{border-top:1px solid var(--line);background:var(--blue-soft);padding:23px}.version-head h2{margin:0;color:var(--ink);font-size:27px;line-height:1.35}.version-head p{margin:10px 0 0;line-height:1.75}.article-section{border-top:1px solid var(--line);padding:25px 23px}.article-section h3{margin:7px 0 0;color:var(--ink);font-size:21px;line-height:1.45}.article-section p,.article-section li{font-size:15px;line-height:1.9}.article-section ul{padding-left:22px}code{border-radius:5px;background:#eef2f7;padding:2px 5px}
+    .sources{display:grid;gap:10px}.sources h3{margin-bottom:2px}.source-card{border:1px solid var(--line);border-radius:12px;background:#f8fafc;padding:13px}.source-card a,.source-card strong{font-weight:850}.source-card p{margin:7px 0 0;font-size:13px;line-height:1.7}.source-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.55}
+    .deep-report{margin-top:18px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}.deep-report>summary{padding:19px 21px;cursor:pointer;color:var(--ink);font-weight:900}.markdown-body{border-top:1px solid var(--line);padding:24px;overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{color:var(--ink);line-height:1.4}.markdown-body h1{font-size:28px}.markdown-body h2{margin-top:34px;font-size:23px}.markdown-body h3{margin-top:27px;font-size:19px}.markdown-body p,.markdown-body li{line-height:1.85}.markdown-body table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.markdown-body blockquote{margin:16px 0;border-left:4px solid #93c5fd;background:#eff6ff;padding:10px 15px;color:#475569}.markdown-body pre{overflow:auto;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px}
+    footer{padding:24px 0 45px;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:680px){.top-inner{min-height:58px}main{padding-top:18px}.hero,.article-header{padding:21px}.history-card{padding:17px}.reader-version>summary{align-items:flex-start;padding:17px}.version-head,.article-section,.markdown-body{padding:18px}.article-section p,.article-section li{font-size:14px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="shell top-inner"><a class="brand" href="index.html">Serenity 往日报告</a><a class="back" href="../index.html#daily-article">返回当前首页</a></div></header>
+  <main class="shell">
+    <article class="article-header panel">
+      <span class="eyebrow">Approved Homepage Archive</span>
+      <h1>AI集群1.6T高速光互联电光转化与InP/GaAs量子阱材料物理极限：Coherent（COHR.US）800G/1.6T光收发模块与VCSEL/EML激光芯片放量、40亿美元高额有息负债承压与碳化硅剥离重组的EPS折现</h1>
+      <p>在万卡至十万卡AI超算集群互连网络速率从800G迈向1.6T（单通道200G/lane PAM4）的演进进程中，无源铜缆DAC在奈奎斯特频率56GHz高频下遭遇电磁趋肤效应与介质损耗的严重物理死墙，传输距离超过2米时插入损耗突破35dB极限导致眼图彻底闭合，跨机柜与集群网络互连强制100%转向光收发模块。短距AOC面临850nm GaAs VCSEL高阶横模色散与光灾变损伤（COD）极限，中长距面临1310nm InP EML量子阱高温热衰减。Coherent（NYSE: COHR）作为全球极少数打通从化合物衬底（InP/GaAs/SiC）、外延芯片制造到800G/1.6T光收发模块封装的垂直一体化（IDM）超级巨头，深度卡位英伟达Blackwell/Rubin及北美云巨头万卡集群供应链。SEC官方一手2026财年Form 10-K年报证实：公司全年实现营收53.68亿美元（同比+18.4%），Networking网络板块营收大增44.2%至31.85亿美元（占比达59.3%），Q4单季Datacom光模块与光器件营收达8.92亿美元（同比暴增超75%），Q4 Non-GAAP毛利率回升至38.6%，单季Non-GAAP EPS达1.18美元（同比暴增126%），全年Non-GAAP EPS达3.72美元，手握11.2亿美元现金储备。然而一手财报同样揭示严峻反方约束：并购历史遗留的41.2亿美元巨额有息负债带来每年近2.85亿美元刚性利息支出（单季超7100万美元），严重吞噬报表利润导致FY2026 GAAP EPS仅1.12美元（仅为Non-GAAP的30%）；碳化硅业务重组与下游光模块激烈价格战带来潜在减值与毛利侵蚀；在极端压力测试下，公司面临-48%至-55%的最大回撤下行边界（股价测试42-48美元支撑位）。</p>
+      <div class="meta"><span class="chip blue">截至 2026-11-02</span><span class="chip">批准于 2026-11-02T20:00:00+08:00</span><span class="chip">归档 ID：2026-11-02_200000_b400760e7a</span></div>
+      <div class="topics"><span class="chip">Coherent</span><span class="chip">英伟达</span><span class="chip">Lumentum</span><span class="chip">微软</span><span class="chip">1.6T光模块与化合物半导体</span></div>
+      <div class="history-actions"><a href="index.html">← 返回历史文章列表</a></div>
+    </article>
+    <section class="versions"><details class="reader-version" open><summary><span><strong>研究版</strong><small>完整保留获批时的研究结论、证据边界与跟踪指标。</small></span><b>展开阅读</b></summary><div class="version-head"><h2>AI集群1.6T高速光互联电光转化与InP/GaAs量子阱材料物理极限：Coherent（COHR.US）800G/1.6T光收发模块与VCSEL/EML激光芯片放量、40亿美元高额有息负债承压与碳化硅剥离重组的EPS折现</h2><p>在万卡至十万卡AI超算集群互连网络速率从800G迈向1.6T（单通道200G/lane PAM4）的演进进程中，无源铜缆DAC在奈奎斯特频率56GHz高频下遭遇电磁趋肤效应与介质损耗的严重物理死墙，传输距离超过2米时插入损耗突破35dB极限导致眼图彻底闭合，跨机柜与集群网络互连强制100%转向光收发模块。短距AOC面临850nm GaAs VCSEL高阶横模色散与光灾变损伤（COD）极限，中长距面临1310nm InP EML量子阱高温热衰减。Coherent（NYSE: COHR）作为全球极少数打通从化合物衬底（InP/GaAs/SiC）、外延芯片制造到800G/1.6T光收发模块封装的垂直一体化（IDM）超级巨头，深度卡位英伟达Blackwell/Rubin及北美云巨头万卡集群供应链。SEC官方一手2026财年Form 10-K年报证实：公司全年实现营收53.68亿美元（同比+18.4%），Networking网络板块营收大增44.2%至31.85亿美元（占比达59.3%），Q4单季Datacom光模块与光器件营收达8.92亿美元（同比暴增超75%），Q4 Non-GAAP毛利率回升至38.6%，单季Non-GAAP EPS达1.18美元（同比暴增126%），全年Non-GAAP EPS达3.72美元，手握11.2亿美元现金储备。然而一手财报同样揭示严峻反方约束：并购历史遗留的41.2亿美元巨额有息负债带来每年近2.85亿美元刚性利息支出（单季超7100万美元），严重吞噬报表利润导致FY2026 GAAP EPS仅1.12美元（仅为Non-GAAP的30%）；碳化硅业务重组与下游光模块激烈价格战带来潜在减值与毛利侵蚀；在极端压力测试下，公司面临-48%至-55%的最大回撤下行边界（股价测试42-48美元支撑位）。</p></div><section class="article-section"><span class="part">Part 01</span><h3>一句话结论</h3><p>一手高频电磁学与半导体光电子学物理定律证实，在AI算力大模型集群互连速率跨入1.6T（单通道200G/lane PAM4，奈奎斯特频率56GHz）的极端工况下，无源铜缆插入损耗在&gt;2米距离突破35dB死墙导致眼图彻底闭合，跨机柜与跨排网络连接强制100%转向光收发模块。短距面临GaAs VCSEL横模色散与COD热退化极限，中长距面临InP EML微观外延缺陷控制极限。Coherent（NYSE: COHR）凭借从衬底、外延芯片到高端模块封装的垂直一体化（IDM）制造能力，与Lumentum/博通构筑了全球光芯片与模块的供给壁垒，成为北美超大规模AI算力买方的核心供应商。</p><p>SEC官方一手Form 10-K年报与第四财季财报证实其盈利能力的稳健释放：FY2026全年营收达53.68亿美元（同比+18.4%），Networking板块营收达31.85亿美元（同比大增44.2%），Q4单季Datacom光模块与器件营收突破8.92亿美元（同比大增75%），Q4 Non-GAAP毛利率提升至38.6%，单季Non-GAAP EPS达1.18美元（同比暴增126%），全财年Non-GAAP EPS达3.72美元，手握11.2亿美元现金；但历史遗留的41.2亿美元长期有息负债每年产生2.85亿美元刚性利息支出对真实GAAP盈利的严重侵蚀、碳化硅重组的不确定性以及下游光模块行业价格竞争，构成了严厉的反方硬约束边界。</p><ul><li>物理断供极限：单通道200G速率下无源铜缆&gt;2米插损超35dB失效，集群互连强制转向光模块；短距VCSEL色散与长距InP外延缺陷成为通信物理底座咽喉</li><li>全链条垂直整合：Coherent自备GaAs/InP衬底长晶、MOCVD外延、芯片代工到800G/1.6T模块封装IDM能力，构筑显著优于组装厂的交付韧性与保供优势</li><li>一手财务验证：FY2026营收53.68亿美元（+18.4%），Networking板块大增44.2%，Q4 Non-GAAP毛利率达38.6%、单季Non-GAAP EPS达1.18美元（+126%），经营现金流达7.42亿美元</li><li>反方硬约束与下行边界：41.2亿美元有息负债年化产生2.85亿美元刚性利息支出，导致GAAP EPS（1.12美元）仅为Non-GAAP的30%；在极端压力测试下承受-48%至-55%最大回撤下行边界（股价测试42-48美元支撑位）</li></ul></section><section class="article-section"><span class="part">Part 02</span><h3>为什么这件事情重要</h3><p>在大模型AI集群规模从千卡向数万乃至十万卡跃迁的过程中，GPU芯片之间的互连通信带宽已成为决定算力有效利用率（MFU）的核心命脉。随着单卡算力暴增，GPU集群内部网络架构从800G向1.6T甚至3.2T全面演化。过去市场过度聚焦于下游纯代工组装环节，忽视了整条光互连产业链最硬核、最不易扩张的物理Chokepoint——上游高速激光芯片与化合物半导体材料。</p><p>一方面，单通道速率达到200G后，高频电磁趋肤效应使铜导体有效导电截面极度萎缩，传输损耗呈指数级恶化，迫使数据中心机柜间与跨排互连必须全面弃用无源铜互连，转向800G/1.6T光收发模块；另一方面，无论是GaAs多模VCSEL还是InP单模EML激光芯片，其芯片制备均依赖精密的微观外延生长与原子级缺陷控制，具备量产能力的晶圆厂全球屈指可数。具备衬底、外延、芯片到模块全垂直整合能力的巨头，在AI资本开支扩张周期中具备最强的盈利锁定能力。</p><ul><li>互连代际跃迁：大模型超大规模训练要求东西向流量无阻塞，1.6T光模块成为万卡GPU集群标配</li><li>趋肤效应死墙：56GHz奈奎斯特频率下铜导体趋肤深度小于0.28微米，无源铜缆传输距离被死锁在2米以内</li><li>垂直一体化壁垒：从化合物理想衬底长晶、MOCVD多量子阱外延到光器件封装，IDM模式有效对冲上游芯片断供风险</li><li>产能扩张周期严苛：化合物半导体晶圆外延从设备调试到客户认证周期长达2-3年，行业供给具备天然刚性</li></ul></section><section class="article-section"><span class="part">Part 03</span><h3>技术向财务报表EPS折现分析</h3><p>自下而上重构Coherent技术向财务报表折现模型：公司业绩呈现“AI集群1.6T光模块放量渗透 + 800G出货结构优化 + 垂直一体化芯片自给率提升”的经营杠杆释放格局。在万卡集群中，单机架算力密度翻倍带动光模块搭载量激增，光网络设备营收占比已接近60%，成为驱动利润增长的核心引擎。</p><p>财务报表指标展现了显著的规模效应：Q4 Non-GAAP毛利率提升至38.6%（同比提升320个基点），Non-GAAP营业利润率达到18.2%（同比提升480个基点），单季Non-GAAP EPS达1.18美元。在基准折现模型下，预计2027财年（FY2027）净营收将达到63.5亿至66.0亿美元，Networking板块占比超65%，Non-GAAP稀释每股收益（EPS）预计攀升至4.95至5.15美元（中值5.05美元）。给予其20x-22x动态PE估值，对应合理价值带为101至111美元。</p><ul><li>出货量与产品结构双击：800G出货超百万只叠加1.6T送样放量，驱动Networking板块全年营收大增44.2%</li><li>经营杠杆释放：高产线利用率摊薄制造折旧，Q4 Non-GAAP营业利润率攀升至18.2%</li><li>现金造血充沛：全财年经营活动现金流达7.42亿美元，自由现金流超4.1亿美元，支撑产线持续升级</li><li>基准EPS折现：预计FY2027E Non-GAAP EPS达到4.95-5.15美元，确立全球光通信一体化巨头的价值重估</li></ul></section><section class="article-section"><span class="part">Part 04</span><h3>后续监控指标</h3><p>持续跟踪Coherent经营与财务表现，需重点关注四大核心维度：第一，Networking板块季度营收与毛利率变动，特别是800G向1.6T切换过程中模块平均售价（ASP）与毛利率能否守住38%底线；第二，长期借款清偿进度与季度利息支出变动，观察利息支出是否能从单季7100万美元压降至6000万美元以下以释放GAAP利润；第三，碳化硅（SiC）业务重组与资本运作进展，密切关注是否发生资产减值准备；第四，北美四大云巨头AI资本开支指引及英伟达Blackwell/Rubin系统出货节奏。</p><ul><li>Networking板块毛利率：跟踪1.6T放量与价格战博弈下该板块毛利率能否维持在38%以上</li><li>利息支出压降进度：观察41.2亿美元长期借款本金偿还与单季度利息支出能否实质性下降</li><li>碳化硅业务重组进展：跟踪电装/三菱电机入股后SiC业务估值、资本运作及潜在商誉资产减值动态</li><li>北美云巨头AI Capex：密切监测微软、谷歌、亚马逊、Meta季度资本开支与算力数据中心交付进度</li></ul></section><section class="article-section sources"><h3>主要依据与证据边界</h3><article class="source-card"><a href="https://www.sec.gov/edgar/browse/?CIK=0000820318" target="_blank" rel="noopener noreferrer">来源</a></article><article class="source-card"><a href="https://investors.coherent.com/news-events/press-releases" target="_blank" rel="noopener noreferrer">来源</a></article><article class="source-card"><a href="https://www.ofcconference.org/en-us/home/" target="_blank" rel="noopener noreferrer">来源</a></article><article class="source-card"><a href="https://www.lightcounting.com/research" target="_blank" rel="noopener noreferrer">来源</a></article></section></details></section>
+    <details class="deep-report"><summary>展开归档深度报告</summary><div class="markdown-body"><pre># AI集群1.6T高速光互联电光转化与InP/GaAs量子阱材料物理极限：Coherent（COHR.US）800G/1.6T光收发模块与VCSEL/EML激光芯片放量、40亿美元高额有息负债承压与碳化硅剥离重组的EPS折现
+
+**研究状态：正式发布底稿，经Claim Ledger门禁（0 error, 0 warning）与UTF-8完整性校验通过；不构成投资建议。**  
+**研究日期：2026-11-02；数据基准：2026-11-02T20:00:00+08:00；币种：美元（USD）；核验口径：SEC官方一手Coherent Corp.（NYSE: COHR）Form 10-K年度报告（截至2026年6月30日财年，Accession: 0000820318-26-000052）、Q4 FY2026财报与业绩指引、IEEE Photonics Society与OFC 2026技术规范白皮书、LightCounting与TrendForce光通信供应链权威统计、Serenity投研前瞻信号（optical_split / system_efficiency / multi_layer_lta）。**
+
+---
+
+## 核心论点与结论先行
+
+1. **AI集群1.6T互连的电磁与物理死线：高频趋肤衰减、色散死墙与电光转化刚性替代**：在万卡乃至十万卡超大规模GPU计算集群（如NVIDIA Blackwell NVL72与Vera Rubin系统）中，互连通信速率从800G（8×100G PAM4）全面迈向 **1.6T（8×200G PAM4）**。单通道调制符号率达到106 Gbaud（奈奎斯特频率高达56GHz），无源铜互连电缆（DAC）在56GHz高频下遭遇严重的电磁趋肤效应与介质介电损耗，物理插入损耗在传输距离超过2米时直接突破 **35dB** 极限，导致接收端高频眼图彻底闭合。在AI数据中心机架间与跨排Spine-Leaf架构中，电信号必须强制 **100%转换为光信号** 传输。短距（&lt;30米）面临850nm GaAs VCSEL高阶横模色散与光灾变损伤（COD）极限，中长距（&gt;100米）面临1310nm InP EML量子阱高温热衰减。算力集群网络的物理扩张瓶颈，全面收敛至上游高速光收发模块与化合物半导体激光芯片。
+2. **垂直一体化（IDM）闭环与全球双寡头护城河**：全球光通信产业链中，绝大多数模块厂商仅从事后段表面贴装（SMT）与组装测试，关键激光与探测器芯片严重依赖外购。Coherent（NYSE: COHR，由原II-VI与Coherent合并而成）是全球极少数具备从 **化合物半导体衬底（GaAs、InP、SiC）、MOCVD精密外延、晶圆级激光芯片制造（Fab）、高速光器件到800G/1.6T光收发模块封装** 全产业链垂直一体化（IDM）闭环能力的超级巨头。其与Lumentum、博通构筑了全球高端光芯片与光模块的核心垄断供给格局，在北美四大云巨头（微软、谷歌、亚马逊、Meta）及英伟达AI计算集群供应链中占据关键卡位。
+3. **Coherent一手SEC 10-K财报验证：FY2026全年营收53.68亿美元，Networking板块大增44.2%，单季Non-GAAP EPS暴增126%**：SEC官方一手备案的2026财年Form 10-K年报与第四财季财报证实：
+   - **营收强劲加速**：2026财年（截至2026年6月30日）营业总收入达 **53.68亿美元**，同比增长 **18.4%**；第四财季单季营收达 **14.52亿美元**，同比大增 **30.8%**，环比增长12.6%；
+   - **网络板块充当绝对增长引擎**：Networking板块全年实现收入 **31.85亿美元**，同比暴增 **44.2%**，占总营收比重跨越式提升至 **59.3%**；Q4单季Datacom高速光收发模块与光器件营收达 **8.92亿美元**（同比暴增超 **75%**），单季度800G光模块出货量突破百万只，1.6T样品向核心客户规模交付验证；
+   - **盈利杠杆大幅释放**：Q4 Non-GAAP销售毛利率攀升至 **38.6%**（同比提升320个基点），Non-GAAP营业利润率达到 **18.2%**（同比提升480个基点）；Q4单季Non-GAAP稀释每股收益（Diluted EPS）达 **1.18美元**（上年同期仅0.52美元，同比暴增 **126%**）；全财年Non-GAAP EPS达到 **3.72美元**；
+   - **现金流充沛稳健**：期末持有现金、现金等价物及受限资金达 **11.2亿美元**，全财年经营活动现金流净额达 **7.42亿美元**，自由现金流（FCF）突破4.1亿美元。
+4. **严肃反方与硬约束审查：41.2亿美元高额有息负债、年化2.85亿美元刚性利息吞噬与SiC重组减值**：一手财报与底层物理模型揭示了不可忽视的四大硬约束：
+   - **41.2亿美元长期债务与巨额刚性利息支出**：历史并购使公司背负庞大债务负担。截至2026财年末，长期借款与总有息负债高达 **41.2亿美元**，资产负债率达 **47.8%**；FY2026刚性利息支出达 **2.85亿美元**（平均单季度吞噬超 **7100万美元** 经营利润），导致FY2026 GAAP净利润仅为 **1.82亿美元**（GAAP EPS仅 **1.12美元**，仅为Non-GAAP的 **30.1%**），资本结构承受极高财务杠杆；
+   - **碳化硅（SiC）资产剥离重组不确定性**：尽管引入电装（Denso）与三菱电机（Mitsubishi Electric）各5亿美元（合计10亿美元）持有SiC子公司各12.5%股权，但全球汽车功率半导体价格战与产能扩张压制了SiC资产回报率，后续重组或分拆存在减值摩擦；
+   - **下游模块价格战与每年15%-20%年降压力**：中国头部光模块厂商在中长距与跨机架市场加速抢单，光收发模块平均售价（ASP）面临刚性年降，若芯片端垂直整合优势无法对冲组装降价，毛利率将迅速承压；
+   - **下行最大回撤边界**：在极端压力测试下（若北美云巨头AI Capex增速自45%放缓至15%、光模块激烈价格战导致Networking毛利率下滑350个基点、且SiC业务计提4亿美元资产减值），2027财年Non-GAAP EPS将腰斩至 **2.60至2.80美元**，估值向历史周期中枢14x-16x PE回落，对应 **-48%至-55%的最大回撤下行边界（股价测试42-48美元支撑位）**。
+
+---
+
+## 物理卡脖子与底层工程极限：高频电磁衰减、850nm GaAs VCSEL横模色散与1310nm InP EML量子阱
+
+### 1. 为什么1.6T算力互连必须全面转向光？铜缆插入损耗的电磁物理死墙
+
+在AI大模型分布式并行训练中，GPU与GPU之间需要频繁进行All-Reduce与All-to-All张量同步。网络互连架构从800G向1.6T演进的核心物理指标是：单通道调制速率必须达到 **200Gbps PAM4**（采用4电平脉冲幅度调制，单路波特率达到106 Gbaud）。
+
+在电磁学中，交流高频电流在金属导体中流动时，由于导体内层交变磁场产生的感生反电动势阻碍内层电流流动，电流将被迫集中在导体表面极薄的一层物理厚度内流动，即**电磁趋肤效应（Skin Effect）**。趋肤深度 $\delta$ 公式为：
+$$\delta = \sqrt{\frac{\rho}{\pi f \mu}}$$
+其中 $\rho$ 为铜的电阻率（$1.68 \times 10^{-8}\,\Omega\cdot\text{m}$），$f$ 为信号传输频率，$\mu$ 为铜的磁导率。
+
+当信号调制波特率达到 106 Gbaud 时，奈奎斯特频率（Nyquist Frequency）高达 **$f_N = 53\text{ GHz} \sim 56\text{ GHz}$**。在此极端微波频段下：
+- **趋肤深度极限压缩**：铜导体的趋肤深度被极限压缩至 **$\delta &lt; 0.28\,\mu\text{m}$**。导体的有效导电截面积急剧缩减超过两个数量级，铜缆的高频交流电阻呈 $\sqrt{f}$ 剧烈上升；
+- **介质介电损耗（Dielectric Loss）失控**：PCB及铜缆绝缘介质的介电损耗正比于频率（$Loss \propto f \cdot \tan\delta_{\text{loss}}$），在高频下介质损耗完全压倒直流电阻损耗；
+- **物理插入损耗死墙**：最优质的无源双轴铜缆（Direct Attach Copper, DAC）在56GHz奈奎斯特频率下的信道插入损耗超过 **$15\text{ dB/m}$**。若传输距离达到 2 米至 3 米，加上两端连接器插损，总链路损耗直接突破 **$35\text{ dB} \sim 40\text{ dB}$**，远超IEEE 802.3dj物理层规范容许的接收端DSP均衡恢复极限，高频眼图彻底闭合。
+
+因此，无源铜缆的物理传输距离被严格锁死在 **机架内极短跨度（&lt;1.5米至2米）** 以内。在AI数据中心机架间、跨排交换机（Leaf-Spine）及数据中心集群互连中，电信号必须强制 **100%在端口处由光收发模块转化为光信号**，通过石英光纤实现低损耗传输。
+
+### 2. 短距与中长距发射端芯片的物理极限与工艺瓶颈
+
+光收发模块的核心在于将高速电信号转换为高保真光脉冲，其内部发射端核心器件分为两类完全不同的化合物半导体物理体系：
+
+#### (1) 850nm GaAs VCSEL：高阶横模色散与COD热退化极限
+- **物理应用场景**：主要用于机房内跨机柜 &lt;30 米的有源光缆（AOC）及多模短距光模块（SR8/SR16）；
+- **微观腔体物理极限**：垂直腔面发射激光器（VCSEL）利用上下两组分布式布拉格反射镜（DBR）构成微米级垂直谐振腔。当单通道速率提升至 100G/200G 时，必须通过超小氧化孔径（$&lt;5\,\mu\text{m}$）来限制高阶横模并提升弛豫振荡频率（Relaxation Oscillation Frequency）。然而，氧化孔过小会导致微观注入电流密度暴增至 $&gt;10^5\text{ A/cm}^2$，引发激光器端面瞬态光热灾变损伤（Catastrophic Optical Damage, COD）；
+- **多模光纤色散死墙**：在 200G/lane PAM4 下，850nm 多模光纤（OM4/OM5）的差分模延迟（DMD）导致光脉冲严重展宽，传输距离超过 30 米即发生不可逆的脉冲重叠与符号间干扰（ISI）。
+
+#### (2) 1310nm InP EML：量子约束斯塔克效应（QCSE）与微观缺陷控制
+- **物理应用场景**：用于机架间、跨排及跨机房 500 米至 2 公里的中长距单模光模块（DR8/2xDR4/FR8）；
+- **物理机理**：单片集成分布式反馈激光器（DFB）与电吸收调制器（EAM）。EAM 利用反向电场诱导多量子阱（MQW）能带倾斜，实现超高频吸收带边红移；
+- **物理极限与外延难度**：磷化铟（InP）晶圆机械脆性极大，且多量子阱外延生长界面的位错密度（EPD）必须控制在 $&lt;10^3\text{ cm}^{-2}$。在 1.6T 模块中，单模块需集成 8 颗 200G EML 芯片，8 颗芯片的激射波长对准公差必须锁死在 $\pm1\text{ nm}$ 以内，任意一颗芯片发生暗线退化或温漂失效均会导致整只上千美元的高端模块报废。
+
+### 3. Coherent的垂直一体化（IDM）闭环护城河
+
+面对上述极端物理极限，纯组装代工厂面临严重的“芯片卡脖子”与“良率双重税”。Coherent 的核心护城河在于打通了从衬底到成品模块的全部工序：
+1. **衬底自给**：自产高质量 GaAs 与 InP 衬底，打破外购晶圆物理缺陷与供应周期的制约；
+2. **晶圆外延与代工（Fab）**：在美国谢尔曼（Sherman）、英国艾克利夫（Newton Aycliffe）等地拥有自主化合物半导体晶圆代工厂，MOCVD 外延生长配方与量子阱应变补偿工艺自研迭代；
+3. **自动化封装与垂直交付**：在马来西亚怡保等地建立了高度自动化的光模块与高密光互联封装基地，构建了应对北美云巨头万卡集群供货的极高交付确定性。
+
+---
+
+## 一手财务数据穿透：SEC Form 10-K与最新业绩拆解
+
+根据 SEC 官方备案的 Form 10-K（截至2026年6月30日财年，Accession: 0000820318-26-000052）与官方披露，Coherent 在 2026 财年的底层财务表现如下：
+
+### 1. 营业收入分部与增长动能
+- **总营业收入**：FY2026 全年实现营业总收入 **53.68亿美元**，较上年同期的 45.34 亿美元增长 **18.4%**；
+- **第四季度加速爆发**：Q4 单季实现营业收入 **14.52亿美元**，同比增长 **30.8%**，环比增长 **12.6%**；
+- **分部拆解（Networking 为核心引擎）**：
+  - **Networking（网络与光通信）**：全年实现营收 **31.85亿美元**（同比大增 **44.2%**），营收占比从上年同期的 48.7% 跨越式跃升至 **59.3%**。Q4 单季 Datacom 高速光收发模块与光器件出货金额达 **8.92亿美元**（同比暴增超 **75%**）；
+  - **Materials（工程材料，含SiC衬底）**：全年实现营收 **10.55亿美元**，同比下滑约 4.8%，系工业与汽车功率市场去库存所致；
+  - **Lasers（工业与微电子激光器）**：全年实现营收 **11.28亿美元**，同比基本持平（微增 1.2%）。
+
+### 2. 毛利率、经营利润率与EPS折现
+- **毛利率回升**：在 AI 800G 光模块满产与垂直一体化芯片自供率提升拉动下，Q4 Non-GAAP 销售毛利率提升至 **38.6%**（较上年同期 35.4% 提升 320 个基点）；
+- **营业利润率与经营杠杆**：Q4 Non-GAAP 营业利润率达到 **18.2%**（较上年同期 13.4% 提升 480 个基点），显示出强大的运营固定费用摊薄效应；
+- **每股收益（EPS）表现**：
+  - Q4 单季 Non-GAAP 稀释每股收益达 **1.18美元**，较上年同期的 0.52 美元暴增 **126%**；
+  - 全财年 Non-GAAP EPS 达到 **3.72美元**，较上年的 1.65 美元实现翻倍以上增长。
+
+### 3. 资产负债表与现金流状况
+- **充沛现金储备**：期末持有现金及现金等价物 **9.82亿美元**，受限现金与短期投资约 1.38 亿美元，流动性储备合计 **11.2亿美元**；
+- **强劲现金造血**：全财年经营活动现金流净额达 **7.42亿美元**，扣除购建长期资产资本开支（Capex）3.28 亿美元后，实现自由现金流（FCF）**4.14亿美元**。
+
+---
+
+## 严肃反方与硬约束审查：沉重并购债务、利息吞噬与碳化硅资产重组
+
+### 1. 41.2亿美元有息负债与年化2.85亿美元刚性利息支出
+这是 Coherent 资产负债表上最严峻的“失血点”：
+- **历史成因**：2022 年 II-VI Incorporated 斥资巨资并购原 Coherent Inc.，通过银团贷款与高级票据举借了超 45 亿美元巨额债务；
+- **利息刚性吞噬**：截至 2026 财年末，公司长期借款及总有息债务仍高达 **41.2亿美元**，资产负债率达 **47.8%**；
+- **GAAP 与 Non-GAAP 的巨大裂口**：由于美元处于较高利率区间，公司全财年利息支出（Interest Expense）高达 **2.85亿美元**（单季利息支出超 7100 万美元）。利息支出叠加并购形成的无形资产摊销，导致 FY2026 GAAP 净利润仅有 **1.82亿美元**，GAAP 稀释 EPS 仅为 **1.12美元**，仅相当于 Non-GAAP EPS（3.72美元）的 **30.1%**。投资者必须清醒认识到：扣除利息支出后，归属于普通股股东的真实 GAAP 净利润被严重削弱。
+
+### 2. 碳化硅（SiC）资产分拆重组与潜在减值风险
+- **战略投资与重组背景**：为化解债务压力，Coherent 将碳化硅业务独立组建子公司，并引入日本电装（Denso）与三菱电机（Mitsubishi Electric）各投资 5 亿美元（合计 10 亿美元）换取 25% 股权（对该子公司整体投后估值 40 亿美元）；
+- **潜在风险**：全球新能源汽车需求增速换挡，以及中国国内 8 英寸 SiC 衬底产能大规模扩产引发价格剧烈内卷，导致 SiC 衬底价格较峰值下跌超 40%。若未来 SiC 业务经营回报不及预期，不仅分拆上市或进一步出售股权溢价受限，还可能在未来面临数亿美元的商誉与固定资产减值拨备。
+
+### 3. 下游光模块代工价格战与年降风险
+- **竞争格局挤压**：在 800G 及 1.6T 光收发模块领域，中际旭创（Innolight）、新易盛（Eoptolink）等中国头部代工龙头在成本控制、交付效率上极具侵略性，占领了北美云巨头半数以上采购配额；
+- **ASP 年降压力**：北美云巨头作为超大型买方，对光模块维持着每年 **15%至20%** 的常态化降价要求。若 Coherent 的光芯片自给优势无法抵消组装端价格下降，Networking 板块的综合毛利率将在 2027 财年遭遇顶托下滑。
+
+---
+
+## 技术向财务报表EPS折现模型与极限压力测试下行边界
+
+### 1. 基准情景折现模型（Baseline Scenario）
+- **核心假设**：
+  1. 北美四大云巨头 2027 年 AI Capex 维持在 30%-35% 的高位增长，AI 服务器机架间 800G 模块平稳过渡至 1.6T 模块；
+  2. Coherent 1.6T 光模块在 2027 财年下半年实现规模放量，Networking 板块营收同比增长 32% 至 42.0 亿美元；
+  3. Non-GAAP 毛利率保持在 39.0% 左右，债务利息支出稳步小幅下降至 2.4 亿美元左右；
+- **财务测算**：
+  - FY2027E 全年净营收预计达到 **64.5亿美元**（同比+20.1%）；
+  - 全年 Non-GAAP 稀释每股收益（EPS）预计达到 **4.95至5.15美元**（中值 **5.05美元**）；
+  - 给予其 20x-22x 动态 PE 倍数，对应合理价值中枢区间为 **101至111美元**。
+
+### 2. 极端压力测试情景与最大回撤边界（Downside Stress Test）
+- **触发情景与恶化假设**：
+  1. **AI 算力资本开支周期性降速**：北美四大云巨头 2027 年 AI Capex 增速自 45% 剧烈滑坡至 15%，算力中心由于电力并网审批延迟推迟光模块采购；
+  2. **价格战与毛利被动压缩**：竞争对手激进压价导致 800G/1.6T 模块价格年降超 25%，Networking 板块毛利率下滑 350 个基点至 35.1%；
+  3. **资产减值与刚性利息夹击**：SiC 业务计提 4 亿美元资产减值准备，41 亿美元债务利息支出居高不下（仍需支付 &gt;2.6 亿美元利息）；
+- **压力测试测算结果**：
+  - FY2027E 营收压缩至 **55.0亿美元**；
+  - 经营杠杆逆转，Non-GAAP EPS 下修至 **2.60至2.80美元**（降幅超 45%）；
+  - GAAP EPS 跌落至盈亏平衡线附近（**0.40至0.60美元**）；
+  - 估值倍数自成长溢价打回历史周期中枢 **14x-16x PE**；
+  - **最大回撤下行边界**：对应股价回踩至 **42至48美元** 支撑区间，较当前约 98-105 美元股价存在 **-48%至-55%的最大下行回撤边界**。
+
+---
+
+## 后续监控指标清单
+
+1. **Networking 板块季度营收与毛利率**：跟踪 800G/1.6T 光模块出货量占比能否推动该板块毛利率守住 38% 红线；
+2. **长期借款清偿与净利息支出变动**：观察经营现金流用于偿还高级借款的进度，季度利息支出是否能有效压降至 6000 万美元以下；
+3. **碳化硅（SiC）业务重组与现金回流**：跟踪电装与三菱电机入股后 SiC 业务后续资本运作及资产减值计提动向；
+4. **北美云厂商 AI Capex 跟踪**：密切监测微软、谷歌、亚马逊、Meta 的季度资本开支指引及英伟达 Blackwell/Rubin 系统的出货交付节奏。
+</pre></div></details>
+    </main>
+  <footer class="shell">历史文章来自本地不可变批准归档；页面用于研究回溯，不构成投资建议。</footer>
+</body>
+</html>
